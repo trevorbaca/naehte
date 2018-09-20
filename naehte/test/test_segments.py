@@ -31,6 +31,10 @@ def test_segments_02(directory):
         ly_old = directory / 'illustration.old.ly'
         if ly.exists():
             shutil.copyfile(ly, ly_old)
+        ily = directory / 'illustration.ily'
+        ily_old = directory / 'illustration.old.ily'
+        if ily.exists():
+            shutil.copyfile(ily, ily_old)
         exit_code = abjad_ide.make_illustration_pdf(
             directory,
             open_after=False,
@@ -45,4 +49,13 @@ def test_segments_02(directory):
             ly_old_text = ly_old.read_text().splitlines(keepends=True)
             ly_text = ly.read_text().splitlines(keepends=True)
             print(''.join(difflib.ndiff(ly_old_text, ly_text)))
+            sys.exit(1)
+        if not ily_old.exists():
+            return
+        assert ily.exists()
+        assert ily_old.exists()
+        if not abjad.TestManager.compare_files(ily_old, ily):
+            ily_old_text = ily_old.read_text().splitlines(keepends=True)
+            ily_text = ily.read_text().splitlines(keepends=True)
+            print(''.join(difflib.ndiff(ily_old_text, ily_text)))
             sys.exit(1)
