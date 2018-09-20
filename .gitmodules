@@ -1,0 +1,3 @@
+[submodule "naehte/test"]
+	path = naehte/test
+	url = https://github.com/trevorbaca/test.git
