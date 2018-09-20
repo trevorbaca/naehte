@@ -33,9 +33,9 @@ class ScoreTemplate(baca.ScoreTemplate):
             >>                                                                         %! _make_global_context
             \context MusicContext = "Music_Context"                                    %! ScoreTemplate
             {                                                                          %! ScoreTemplate
-                \context CelloMusicStaff = "Cello_Music_Staff"                         %! ScoreTemplate
+                \context Staff = "Cello_Music_Staff"                                   %! ScoreTemplate
                 {                                                                      %! ScoreTemplate
-                    \context CelloMusicVoice = "Cello_Music_Voice"                     %! ScoreTemplate
+                    \context Voice = "Cello_Music_Voice"                               %! ScoreTemplate
                     {                                                                  %! ScoreTemplate
                         \clef "bass"                                                   %! attach_defaults
                         s1                                                             %! ScoreTemplate.__illustrate__
