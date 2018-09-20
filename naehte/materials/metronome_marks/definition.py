@@ -3,15 +3,15 @@ import abjad
 
 metronome_marks = abjad.OrderedDict([
     (
-        'largo',
+        '52',
         abjad.MetronomeMark((1, 4), 52),
         ),
     (
-        'andante',
+        '91',
         abjad.MetronomeMark((1, 4), 91),
         ),
     (
-        'allegro',
+        '117',
         abjad.MetronomeMark((1, 4), 117),
         ),
     ])

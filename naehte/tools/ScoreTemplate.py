@@ -73,13 +73,11 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # cello
         cello_music_voice = abjad.Voice(
-            lilypond_type='CelloMusicVoice',
             name='Cello_Music_Voice',
             tag=tag,
             )
         cello_music_staff = abjad.Staff(
             [cello_music_voice],
-            lilypond_type='CelloMusicStaff',
             name='Cello_Music_Staff',
             tag=tag,
             )

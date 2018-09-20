@@ -77,12 +77,10 @@
             \override #'(font-name . "Palatino")
             \fontsize #16
             NÄHTE
-            }
             " "
             \override #'(font-name . "Palatino Italic")
             \fontsize #3
             \line {
-                \hspace #2
                 for \hspace #0.75
                 Ashely \hspace #0.75
                 Walters
