@@ -1,6 +1,9 @@
+import abjad
+import difflib
 import ide
 import pathlib
 import pytest
+import shutil
 import sys
 
 
@@ -19,6 +22,23 @@ def test_materials_01(directory):
 
 @pytest.mark.parametrize('directory', directories)
 def test_materials_02(directory):
-    exit_code = abjad_ide.make_illustration_pdf(directory, open_after=False)
-    if exit_code != 0:
-        sys.exit(exit_code)
+    with abjad.FilesystemState(keep=[directory]):
+        ly = directory / 'illustration.ly'
+        ly_old = directory / 'illustration.old.ly'
+        if ly.exists():
+            shutil.copyfile(ly, ly_old)
+        exit_code = abjad_ide.make_illustration_pdf(
+            directory,
+            open_after=False,
+            )
+        if exit_code != 0:
+            sys.exit(exit_code)
+        if not ly_old.exists():
+            return
+        assert ly.exists()
+        assert ly_old.exists()
+        if not abjad.TestManager.compare_files(ly_old, ly):
+            ly_old_text = ly_old.read_text().splitlines(keepends=True)
+            ly_text = ly.read_text().splitlines(keepends=True)
+            print(''.join(difflib.ndiff(ly_old_text, ly_text)))
+            sys.exit(1)
