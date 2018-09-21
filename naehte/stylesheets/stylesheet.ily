@@ -1,4 +1,4 @@
-#(set-default-paper-size "11x17landscape")
+#(set-default-paper-size "arch a")
 #(set-global-staff-size 12)
 
 \include "/Users/trevorbaca/baca/lilypond/baca.ily"
