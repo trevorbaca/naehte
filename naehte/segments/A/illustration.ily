@@ -144,21 +144,29 @@ A_Cello_Music_Voice = {                                                        %
     \times 7/9 {
 
         % [A Cello_Music_Voice measure 1]                                      %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         \clef "bass"                                                           %! DEFAULT_CLEF:_set_status_tag:attach_defaults
         \once \override Staff.Clef.color = #(x11-color 'DarkViolet)            %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set Staff.forceClef = ##t                                             %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
         <g d'>8
-        - \tweak DynamicLineSpanner.staff-padding #7                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
+        \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         ^ \baca-default-indicator-markup "(“Cello”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         [
         \glissando                                                             %! baca_glissando
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "II + III"                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "ord."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #13                                             %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanTwo                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "II+III"                                %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak style #'trill                                                 %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
@@ -182,10 +190,36 @@ A_Cello_Music_Voice = {                                                        %
         ]
         \glissando                                                             %! baca_glissando
 
-        ef'!4.
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        \revert TupletBracket.staff-padding                                    %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 3/4 {
+
+            ef'!4.
+            \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "P"                                 %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-right-text "T"                                %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #0.5                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.stencil-align-dir-y #center           %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #13                                         %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanTwo                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-hook                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "vib."                              %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #6.25                         %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+
+            ef'!8
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \mf                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            - \marcato                                                         %! baca_marcato:IndicatorCommand
+            \repeatTie                                                         %! TieCorrectionCommand
+            \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(2)
+            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+            \revert TupletBracket.staff-padding                                %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+
+        }
 
     }
 
@@ -197,6 +231,7 @@ A_Cello_Music_Voice = {                                                        %
             % [A Cello_Music_Voice measure 2]                                  %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! _make_multimeasure_rest_container
 

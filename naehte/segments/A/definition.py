@@ -31,13 +31,19 @@ maker(
 
 maker(
     ('vc', 1),
-    baca.dynamic(
-        'pp',
-        abjad.tweak('red').color,
-        abjad.tweak(7).DynamicLineSpanner__staff_padding,
+    baca.dls_staff_padding(7),
+    baca.hairpin(
+        'pp <| mf',
         ),
-    baca.rhythm(r"\times 7/9 { c'8 [ c'8 c'8 c'8 c'8 c'8 ] c'4. } "),
+    baca.marcato(selector=baca.leaf(-1)),
     baca.suite(
+        baca.rhythm(
+            r"\times 7/9 { c'8 [ c'8 c'8 c'8 c'8 c'8 ]"
+            r" \times 3/4 { c'4. c'8 } }"
+            ),
+        baca.repeat_tie_to(
+            selector=baca.leaf(-1),
+            ),
         baca.pitches(
             '<G3 D4>'
             ' <A3 E4>'
@@ -52,17 +58,31 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'II + III =|',
+        r'ord. -> P -> T',
+        abjad.tweak(13).staff_padding,
+        lilypond_id=2,
+        piece_selector=baca.lparts([6, 2]),
+        ),
+    baca.text_spanner(
+        r'II+III ->',
         abjad.tweak(10.5).staff_padding,
+        abjad.tweak("#'trill").style,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves(),
+        selector=baca.leaves()[:-1],
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=baca.leaves(),
+        selector=baca.leaves()[:-1],
+        ),
+    baca.text_spanner(
+        r'vib. -|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        selector=baca.leaves()[-2:].rleak(),
         ),
     baca.tuplet_bracket_staff_padding(1),
     )

@@ -143,7 +143,6 @@
 
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-to-extent = ##f
-        \override TupletBracket.padding = 2
 
         \override TupletNumber.font-size = 1
 
