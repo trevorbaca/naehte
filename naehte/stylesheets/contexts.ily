@@ -48,7 +48,6 @@
         \consists Bar_number_engraver
         % prevents LilyPond cyclic chain in pure-Y-offset callbacks warning:
         \consists Staff_collecting_engraver
-        \consists Time_signature_engraver
         \accepts GlobalSkips
         \accepts GlobalRests
         \accepts PageLayout
@@ -59,14 +58,6 @@
         \override BarNumber.extra-offset = #'(-4 . -4)
         \override BarNumber.font-size = 1
         \override BarNumber.stencil = ##f
-
-        % prevents StaffSymbol from starting too early after cut-away measures:
-        \override TimeSignature.X-extent = ##f
-        \override TimeSignature.break-align-symbol = #'left-edge
-        \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = 3
-        \override TimeSignature.space-alist.clef = #'(extra-space . 0.5)
-        \override TimeSignature.style = #'numbered
 
     }
 
@@ -79,7 +70,14 @@
     % STAFF
     \context {
         \Staff
-        \remove Time_signature_engraver
+        %\remove Time_signature_engraver
+
+        %\override TimeSignature.X-extent = ##f
+        %\override TimeSignature.break-align-symbol = #'left-edge
+        \override TimeSignature.break-visibility = #end-of-line-invisible
+        %\override TimeSignature.font-size = 3
+        \override TimeSignature.space-alist.clef = #'(extra-space . 0.5)
+        \override TimeSignature.style = #'numbered
     }
 
     % MUSIC CONTEXT

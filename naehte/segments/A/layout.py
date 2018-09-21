@@ -3,7 +3,22 @@ import baca
 
 breaks = baca.breaks(
     baca.page(
-        [1, 60, (10,)],
+        baca.system(
+            12,
+            measure=1,
+            y_offset=75,
+            ),
+        baca.system(
+            0,
+            measure=4,
+            y_offset=125,
+            ),
+        baca.system(
+            0,
+            measure=7,
+            y_offset=175,
+            ),
+        number=1,
         ),
     )
 spacing = baca.scorewide_spacing(
