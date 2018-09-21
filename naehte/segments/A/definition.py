@@ -79,10 +79,41 @@ maker(
         ),
     baca.text_spanner(
         r'vib. -|',
-        abjad.tweak(6.25).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.leaves()[-2:],
+        ),
+    baca.tuplet_bracket_staff_padding(1),
+    )
+
+maker(
+    ('vc', 2),
+    baca.dls_staff_padding(5),
+    baca.hairpin(
+        'pp > pppp',
+        ),
+    baca.suite(
+        baca.rhythm(
+            r"\times 6/7 { c'2 c'4. }"
+            ),
+        baca.pitch('Eb4'),
+        baca.repeat_tie_to(
+            selector=baca.leaves(),
+            ),
+        ),
+    baca.text_spanner(
+        r'\naehte-very-wide-circles-markup =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        selector=baca.leaves()[:2],
+        ),
+    baca.text_spanner(
+        r'spazz. -|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        abjad.tweak("#'zigzag").style,
+        bookend=False,
+        selector=baca.leaves()[-1:].rleak(),
         ),
     baca.tuplet_bracket_staff_padding(1),
     )
