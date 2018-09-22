@@ -180,11 +180,39 @@ maker(
     baca.tuplet_bracket_staff_padding(1),
     )
 
-#maker(
-#    ('vc', 4),
-#    baca.suite(
-#        baca.rhythm(
-#            r"{ c'2. }"
-#            ),
-#        ),
-#    )
+maker(
+    ('vc', 4),
+    baca.suite(
+        baca.rhythm(
+            r"\times 6/11 { \times 4/5 { c'8 [ c' c' c' c' ] }"
+            r" c'2 \times 3/4 { c'8 c'4. } }"
+            ),
+        baca.pitches(
+            'Db4 F4 G3 E4 F3',
+            selector=baca.leaves()[:-2],
+            ),
+        baca.pitch(
+            'Db4',
+            selector=baca.leaves()[-2:],
+            ),
+        baca.new(
+            baca.repeat_tie_to(),
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            ),
+        baca.glissando(
+            selector=baca.leaves()[:5],
+            zero_padding=True,
+            ),
+        ),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[-3:-1],
+        ),
+    baca.note_head_style_harmonic_black(
+        selector=baca.leaf(-2),
+        ),
+    baca.trill_spanner(
+        'D4',
+        abjad.tweak(6.25).bound_details__right__padding,
+        selector=baca.leaves()[-1:].rleak(),
+        ),
+    )

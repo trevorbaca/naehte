@@ -359,29 +359,79 @@ A_Cello_Music_Voice = {                                                        %
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/11 {
+
+        \times 4/5 {
+
+            % [A Cello_Music_Voice measure 4]                                  %! _comment_measure_numbers
+            \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+            df'!8
+            \repeatTie                                                         %! TieCorrectionCommand
+            [
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            f'8
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            g8
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            e'8
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            f8
+            ]
+
+        }
+
+        df'!2
+        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
+        \glissando                                                             %! baca_finger_pressure_transition
+
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 3/4 {
+
+            \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+            df'!8
+
+            \pitchedTrill                                                      %! baca_trill_spanner:SpannerIndicatorCommand(1)
+            df'!4.
+            - \tweak bound-details.right.padding #6.25                         %! baca_trill_spanner:SpannerIndicatorCommand(1)
+            \startTrillSpan d'                                                 %! baca_trill_spanner:SpannerIndicatorCommand(1)
+
+        }
+
+    }
+
     <<                                                                         %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [A Cello_Music_Voice measure 4]                                  %! _comment_measure_numbers
+            % [A Cello_Music_Voice measure 5]                                  %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+            \stopTrillSpan                                                     %! baca_trill_spanner:SpannerIndicatorCommand(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [A Cello_Rest_Voice measure 4]                                   %! _comment_measure_numbers
-            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+            % [A Cello_Rest_Voice measure 5]                                   %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [A Cello_Music_Voice measure 5]                                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [A Cello_Music_Voice measure 6]                                          %! _comment_measure_numbers
     R1 * 1                                                                     %! _make_measure_silences
