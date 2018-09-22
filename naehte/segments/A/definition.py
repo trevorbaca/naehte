@@ -73,16 +73,15 @@ maker(
         selector=baca.leaves()[:-1],
         ),
     baca.text_spanner(
-        r'vib. -|',
+        r'vibiss. =|',
         abjad.tweak(13).staff_padding,
         bookend=False,
         lilypond_id=2,
         selector=baca.leaves()[-2:],
         ),
     baca.text_spanner(
-        r'II+III ->',
+        r'II / III mod. =|',
         abjad.tweak(10.5).staff_padding,
-        abjad.tweak("#'trill").style,
         bookend=False,
         lilypond_id=1,
         selector=baca.leaves()[:-1],
@@ -120,9 +119,8 @@ maker(
         selector=baca.leaves()[:2],
         ),
     baca.text_spanner(
-        r'spazz. -|',
+        r'spazz. larg. =|',
         abjad.tweak(8).staff_padding,
-        abjad.tweak("#'zigzag").style,
         bookend=False,
         selector=baca.leaves()[-1:].rleak().rleak(),
         ),
@@ -212,27 +210,88 @@ maker(
         baca.dls_staff_padding(7),
         selector=baca.leaves()[:6].lleak(),
         ),
+    baca.new(
+        baca.hairpin('<| mf'),
+        baca.dls_staff_padding(7),
+        selector=baca.leaves()[-3:-1],
+        ),
     baca.note_head_style_harmonic_black(
         selector=baca.leaf(-2),
         ),
     baca.text_spanner(
-        r'rip -> XFB -|',
+        r'rip -> XFB =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         piece_selector=baca.lparts([5, 2]),
         selector=baca.leaves()[:7],
         ),
     baca.text_spanner(
-        r'spazz. -|',
-        abjad.tweak(6.25).bound_details__right__padding,
+        r'spazz. strett. =|',
         abjad.tweak(8).staff_padding,
-        abjad.tweak("#'zigzag").style,
         bookend=False,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     baca.trill_spanner(
         'D4',
-        abjad.tweak(6.25).bound_details__right__padding,
-        selector=baca.leaves()[-1:].rleak(),
+        abjad.tweak(1.25).bound_details__right__padding,
+        selector=baca.leaves()[-1:].rleak().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', (5, 7)),
+    baca.suite(
+        baca.rhythm(
+            "{"
+            r" c'4 c'1"
+            r" \times 4/5 { c'4 c'1 }"
+            r" c'2"
+            " }"
+            ),
+        baca.pitches(
+            'Db4 <B3 F4> <C4 G4> <A3 E4> <Bb3 F4>',
+            ),
+        baca.new(
+            baca.repeat_tie_to(),
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            ),
+        baca.glissando(
+            zero_padding=True,
+            ),
+        ),
+    baca.new(
+        baca.hairpin(
+            'p |> pp <| "f" pp <| "f"',
+            piece_selector=baca.lparts([2, 1, 1, 2]),
+            ),
+        baca.dls_staff_padding(7),
+        selector=baca.leaves().lleak(),
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(10.5).staff_padding,
+        (abjad.tweak(6.25).bound_details__right__padding, -1),
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[1:].rleak(),
+        ),
+    baca.text_spanner(
+        r'II / III largo -> strett. || largo -> strettiss. =|',
+        abjad.tweak(8).staff_padding,
+        (abjad.tweak(6.25).bound_details__right__padding, -1),
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 1, 2]),
+        selector=baca.leaves()[1:].rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 8),
+    baca.suite(
+        baca.rhythm(
+            "{"
+            r" c'1"
+            " }"
+            ),
         ),
     )
