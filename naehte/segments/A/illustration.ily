@@ -209,6 +209,7 @@ A_Cello_Music_Voice = {                                                        %
             - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
+            \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca_repeat_tie_extra_offset:OverrideCommand(1)
             ef'!8
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \mf                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
@@ -228,6 +229,7 @@ A_Cello_Music_Voice = {                                                        %
 
         % [A Cello_Music_Voice measure 2]                                      %! _comment_measure_numbers
         \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         ef'!2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -252,7 +254,69 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak style #'zigzag                                                %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+        \revert RepeatTie.extra-offset                                         %! baca_repeat_tie_extra_offset:OverrideCommand(2)
         \revert TupletBracket.staff-padding                                    %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }
+
+    {
+
+        \times 4/5 {
+
+            % [A Cello_Music_Voice measure 3]                                  %! _comment_measure_numbers
+            \override DynamicLineSpanner.staff-padding = #'5                   %! baca_dls_staff_padding:OverrideCommand(1)
+            \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+            \override TupletBracket.staff-padding = #1                         %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
+            ef'!8
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \ppppp                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
+            \repeatTie                                                         %! TieCorrectionCommand
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            [
+            \glissando                                                         %! baca_glissando
+
+            \override NoteHead.style = #'harmonic                              %! baca_note_head_style_harmonic:OverrideCommand(1)
+            g'8
+            \glissando                                                         %! baca_glissando
+
+            f'8
+            \glissando                                                         %! baca_glissando
+
+            g'8
+            \glissando                                                         %! baca_glissando
+
+            f'8
+            ]
+            \glissando                                                         %! baca_glissando
+
+        }
+
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
+
+            g'8
+            [
+            \glissando                                                         %! baca_glissando
+
+            e8
+            \glissando                                                         %! baca_glissando
+
+            f'8
+            \glissando                                                         %! baca_glissando
+
+            e8
+            \glissando                                                         %! baca_glissando
+
+            f'8
+            ]
+            \glissando                                                         %! baca_glissando
+
+            df'!4
+            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
+            \revert TupletBracket.staff-padding                                %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+
+        }
 
     }
 
@@ -261,25 +325,21 @@ A_Cello_Music_Voice = {                                                        %
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [A Cello_Music_Voice measure 3]                                  %! _comment_measure_numbers
+            % [A Cello_Music_Voice measure 4]                                  %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
-            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [A Cello_Rest_Voice measure 3]                                   %! _comment_measure_numbers
-            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+            % [A Cello_Rest_Voice measure 4]                                   %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [A Cello_Music_Voice measure 4]                                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [A Cello_Music_Voice measure 5]                                          %! _comment_measure_numbers
     R1 * 5/4                                                                   %! _make_measure_silences
