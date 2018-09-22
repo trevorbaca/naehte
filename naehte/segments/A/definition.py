@@ -257,6 +257,7 @@ maker(
             ),
         baca.glissando(
             zero_padding=True,
+            selector=baca.rleaves(),
             ),
         ),
     baca.new(
@@ -290,8 +291,9 @@ maker(
     baca.suite(
         baca.rhythm(
             "{"
-            r" c'1"
+            r" \times 4/5 { c'1 r4 }"
             " }"
             ),
         ),
+        baca.pitch('<G3 D4>'),
     )
