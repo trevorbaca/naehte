@@ -57,6 +57,7 @@ maker(
             ),
         baca.glissando(
             selector=baca.leaves(),
+            zero_padding=True,
             ),
         ),
     baca.text_spanner(
@@ -127,17 +128,24 @@ maker(
     baca.dls_staff_padding(5),
     baca.dynamic('ppppp'),
     baca.note_head_style_harmonic(
-        selector=baca.leaves()[1:],
+        selector=baca.leaves()[1:-1],
         ),
     baca.suite(
         baca.rhythm(
-            r"{ \times 4/5 { c'8 [ c' c' c' c' ] }"
-            r" \times 6/7 { c' [ c' c' c' c' ] c'4 } }"
+            r"{ c'4 \times 6/7 { c'8 [ c' c' c' c' c' c' ] } c'4 }"
             ),
-        baca.pitches('Eb4 G4 F4 G4 F4 G4 E3 F4 E3 F4 Db4'),
+        baca.pitches('Eb4 G4 A3 G4 F4 G4 A3 G4 Db4'),
         baca.repeat_tie_to(),
         baca.repeat_tie_extra_offset((-1.5, 0)),
-        baca.glissando(),
+        baca.glissando(
+            selector=baca.leaves()[1:-1],
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.leaves()[:2],
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.leaves()[-2:],
+            ),
         ),
 #    baca.text_spanner(
 #        r'\naehte-very-wide-circles-markup =|',
