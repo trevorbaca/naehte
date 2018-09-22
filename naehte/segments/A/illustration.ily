@@ -289,9 +289,19 @@ A_Cello_Music_Voice = {                                                        %
             g'8
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \ppppp                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
             [
             \glissando                                                         %! baca_glissando
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "ord."                              %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-right-text "scr."                             %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #0.5                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.stencil-align-dir-y #center           %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
             a8
             \glissando                                                         %! baca_glissando
@@ -320,6 +330,9 @@ A_Cello_Music_Voice = {                                                        %
         }
 
         df'!4
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
         \revert TupletBracket.staff-padding                                    %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
 

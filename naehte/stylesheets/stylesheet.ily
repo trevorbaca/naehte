@@ -82,7 +82,7 @@
             \fontsize #3
             \line {
                 for \hspace #0.75
-                Ashely \hspace #0.75
+                Ashley \hspace #0.75
                 Walters
             }
         }
