@@ -207,8 +207,28 @@ maker(
     baca.finger_pressure_transition(
         selector=baca.leaves()[-3:-1],
         ),
+    baca.new(
+        baca.hairpin('ff |> p'),
+        baca.dls_staff_padding(7),
+        selector=baca.leaves()[:6].lleak(),
+        ),
     baca.note_head_style_harmonic_black(
         selector=baca.leaf(-2),
+        ),
+    baca.text_spanner(
+        r'rip -> XFB -|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([5, 2]),
+        selector=baca.leaves()[:7],
+        ),
+    baca.text_spanner(
+        r'spazz. -|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        abjad.tweak("#'zigzag").style,
+        bookend=False,
+        selector=baca.leaves()[-1:].rleak(),
         ),
     baca.trill_spanner(
         'D4',
