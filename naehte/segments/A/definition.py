@@ -276,7 +276,7 @@ maker(
         selector=baca.leaves()[1:].rleak(),
         ),
     baca.text_spanner(
-        r'II / III largo -> strett. || largo -> strettiss. =| largo -> strett.',
+        r'II / III largo -> strett. =| largo -> strett. =| largo -> strett.',
         abjad.tweak(8).staff_padding,
         (abjad.tweak(6.25).bound_details__right__padding, -1),
         piece_selector=baca.lparts([1, 1, 1, 1, 2]),
@@ -299,7 +299,7 @@ maker(
         baca.pitch('<G3 D4>'),
         ),
     baca.text_spanner(
-        r'x / xx ->',
+        r'\baca-diamond-parenthesized-double-diamond-markup ->',
         abjad.tweak(10.5).staff_padding,
         abjad.tweak("#'trill").style,
         bookend=False,
