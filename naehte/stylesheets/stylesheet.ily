@@ -90,7 +90,8 @@
 }
 
 \layout {
-    \accidentalStyle neo-modern
+    %\accidentalStyle neo-modern
+    \accidentalStyle forget
     indent = 0
     ragged-bottom = ##t
     ragged-last = ##t

@@ -41,7 +41,9 @@ maker(
             r"\times 7/9 { c'8 [ c'8 c'8 c'8 c'8 c'8 ]"
             r" \times 3/4 { c'4. c'8 } }"
             ),
-        baca.repeat_tie_to(
+        baca.new(
+            baca.repeat_tie_to(),
+            baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(-1),
             ),
         baca.pitches(
@@ -97,7 +99,9 @@ maker(
             r"\times 6/7 { c'2 c'4. }"
             ),
         baca.pitch('Eb4'),
-        baca.repeat_tie_to(
+        baca.new(
+            baca.repeat_tie_to(),
+            baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaves(),
             ),
         ),
@@ -115,5 +119,39 @@ maker(
         bookend=False,
         selector=baca.leaves()[-1:].rleak(),
         ),
+    baca.tuplet_bracket_staff_padding(1),
+    )
+
+maker(
+    ('vc', 3),
+    baca.dls_staff_padding(5),
+    baca.dynamic('ppppp'),
+    baca.note_head_style_harmonic(
+        selector=baca.leaves()[1:],
+        ),
+    baca.suite(
+        baca.rhythm(
+            r"{ \times 4/5 { c'8 [ c' c' c' c' ] }"
+            r" \times 6/7 { c' [ c' c' c' c' ] c'4 } }"
+            ),
+        baca.pitches('Eb4 G4 F4 G4 F4 G4 E3 F4 E3 F4 Db4'),
+        baca.repeat_tie_to(),
+        baca.repeat_tie_extra_offset((-1.5, 0)),
+        baca.glissando(),
+        ),
+#    baca.text_spanner(
+#        r'\naehte-very-wide-circles-markup =|',
+#        abjad.tweak(8).staff_padding,
+#        bookend=False,
+#        selector=baca.leaves()[:2],
+#        ),
+#    baca.text_spanner(
+#        r'spazz. -|',
+#        abjad.tweak(6.25).bound_details__right__padding,
+#        abjad.tweak(8).staff_padding,
+#        abjad.tweak("#'zigzag").style,
+#        bookend=False,
+#        selector=baca.leaves()[-1:].rleak(),
+#        ),
     baca.tuplet_bracket_staff_padding(1),
     )
