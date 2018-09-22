@@ -30,6 +30,11 @@ maker(
     )
 
 maker(
+    'vc',
+    baca.start_markup('Cello', hcenter_in=10),
+    )
+
+maker(
     ('vc', 1),
     baca.dls_staff_padding(7),
     baca.hairpin(
@@ -92,7 +97,7 @@ maker(
 
 maker(
     ('vc', 2),
-    baca.dls_staff_padding(5),
+    baca.dls_staff_padding(7),
     baca.hairpin(
         'pp > ppppp',
         selector=baca.rleaves().rleak(),

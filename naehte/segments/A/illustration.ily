@@ -144,6 +144,12 @@ A_Cello_Music_Voice = {                                                        %
     \times 7/9 {
 
         % [A Cello_Music_Voice measure 1]                                      %! _comment_measure_numbers
+        \set Staff.instrumentName =                                            %! baca_start_markup:-PARTS:IndicatorCommand
+        \markup {                                                              %! baca_start_markup:-PARTS:IndicatorCommand
+            \hcenter-in                                                        %! baca_start_markup:-PARTS:IndicatorCommand
+                #10                                                            %! baca_start_markup:-PARTS:IndicatorCommand
+                Cello                                                          %! baca_start_markup:-PARTS:IndicatorCommand
+            }                                                                  %! baca_start_markup:-PARTS:IndicatorCommand
         \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         \clef "bass"                                                           %! DEFAULT_CLEF:_set_status_tag:attach_defaults
@@ -234,7 +240,7 @@ A_Cello_Music_Voice = {                                                        %
     \times 6/7 {
 
         % [A Cello_Music_Voice measure 2]                                      %! _comment_measure_numbers
-        \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
         \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         ef'!2.
