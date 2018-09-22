@@ -40,6 +40,16 @@ metadata = abjad.OrderedDict(
                             ],
                         ),
                     (
+                        'Cello_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Cello_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='pppp',
+                                ),
+                            ],
+                        ),
+                    (
                         'Score',
                         [
                             abjad.Momento(
