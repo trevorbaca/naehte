@@ -61,10 +61,18 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'ord. -> P -> T',
+        r'\baca-damp-markup =|',
         abjad.tweak(13).staff_padding,
+        bookend=False,
         lilypond_id=2,
-        piece_selector=baca.lparts([6, 2]),
+        selector=baca.leaves()[:-1],
+        ),
+    baca.text_spanner(
+        r'vib. -|',
+        abjad.tweak(13).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[-2:],
         ),
     baca.text_spanner(
         r'II+III ->',
@@ -75,16 +83,9 @@ maker(
         selector=baca.leaves()[:-1],
         ),
     baca.text_spanner(
-        r'\baca-damp-markup =|',
+        r'ord. -> P -> T',
         abjad.tweak(8).staff_padding,
-        bookend=False,
-        selector=baca.leaves()[:-1],
-        ),
-    baca.text_spanner(
-        r'vib. -|',
-        abjad.tweak(8).staff_padding,
-        bookend=False,
-        selector=baca.leaves()[-2:],
+        piece_selector=baca.lparts([6, 2]),
         ),
     baca.tuplet_bracket_staff_padding(1),
     )
@@ -93,11 +94,12 @@ maker(
     ('vc', 2),
     baca.dls_staff_padding(5),
     baca.hairpin(
-        'pp > pppp',
+        'pp > ppppp',
+        selector=baca.rleaves().rleak(),
         ),
     baca.suite(
         baca.rhythm(
-            r"\times 6/7 { c'2 c'4. }"
+            r"\times 6/7 { c'2. c'8 }"
             ),
         baca.pitch('Eb4'),
         baca.new(
@@ -114,11 +116,11 @@ maker(
         ),
     baca.text_spanner(
         r'spazz. -|',
-        abjad.tweak(6.25).bound_details__right__padding,
+        #abjad.tweak(6.25).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
         abjad.tweak("#'zigzag").style,
         bookend=False,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     baca.tuplet_bracket_staff_padding(1),
     )
@@ -126,7 +128,6 @@ maker(
 maker(
     ('vc', 3),
     baca.dls_staff_padding(5),
-    baca.dynamic('ppppp'),
     baca.note_head_style_harmonic(
         selector=baca.leaves()[1:-1],
         ),
