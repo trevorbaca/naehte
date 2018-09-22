@@ -482,7 +482,7 @@ A_Cello_Music_Voice = {                                                        %
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
-            - \abjad-invisible-line                                            %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "strett."                           %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
@@ -511,7 +511,7 @@ A_Cello_Music_Voice = {                                                        %
         - \abjad-zero-padding-glissando                                        %! baca_glissando
         \glissando                                                             %! baca_glissando
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "strettiss."                            %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "strett."                               %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
@@ -543,7 +543,7 @@ A_Cello_Music_Voice = {                                                        %
             - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
             - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
-            - \baca-text-spanner-left-text "x / xx"                            %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-diamond-parenthesized-double-diamond-markup %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak style #'trill                                             %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
