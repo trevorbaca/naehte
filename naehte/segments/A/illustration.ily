@@ -509,6 +509,8 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-effort-f                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "strettiss."                            %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #6.25                             %! baca_text_spanner:PiecewiseCommand(1)
@@ -520,10 +522,16 @@ A_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [A Cello_Music_Voice measure 8]                                      %! _comment_measure_numbers
-        c'1
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        \times 4/5 {
+
+            % [A Cello_Music_Voice measure 8]                                  %! _comment_measure_numbers
+            <g d'>1
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+
+            r4
+
+        }
 
     }
 
