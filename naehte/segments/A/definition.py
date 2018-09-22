@@ -271,29 +271,38 @@ maker(
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(10.5).staff_padding,
-        (abjad.tweak(6.25).bound_details__right__padding, -1),
         bookend=False,
         lilypond_id=1,
         selector=baca.leaves()[1:].rleak(),
         ),
     baca.text_spanner(
-        r'II / III largo -> strett. || largo -> strettiss. =|',
+        r'II / III largo -> strett. || largo -> strettiss. =| largo -> strett.',
         abjad.tweak(8).staff_padding,
         (abjad.tweak(6.25).bound_details__right__padding, -1),
-        bookend=False,
-        piece_selector=baca.lparts([1, 1, 1, 2]),
-        selector=baca.leaves()[1:].rleak(),
+        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
+        selector=baca.leaves()[1:].rleak().rleak().rleak(),
         ),
     )
 
 maker(
     ('vc', 8),
+    baca.breathe(),
+    baca.dls_staff_padding(7),
+    baca.hairpin('f |>o niente'),
+    baca.note_head_style_harmonic(),
     baca.suite(
         baca.rhythm(
             "{"
             r" \times 4/5 { c'1 r4 }"
             " }"
             ),
-        ),
         baca.pitch('<G3 D4>'),
+        ),
+    baca.text_spanner(
+        r'x / xx ->',
+        abjad.tweak(10.5).staff_padding,
+        abjad.tweak("#'trill").style,
+        bookend=False,
+        lilypond_id=1,
+        ),
     )
