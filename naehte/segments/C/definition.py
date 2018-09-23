@@ -45,4 +45,59 @@ maker(
 
 maker(
     ('vc', 1),
+    baca.rhythm(
+        r"{ c'4 c' \times 3/4 { c' c' \times 2/3 { c' c'2 } } }"
+        ),
+    baca.hairpin(
+        r"p > ppp <",
+        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
+        ),
+    baca.suite(
+        baca.pitches('Eb2 B3 F2 A3 G2 F#3'),
+        baca.glissando(
+            selector=baca.leaves()[:-1],
+            zero_padding=True,
+            ),
+        baca.glissando(
+            abjad.tweak(0).bound_details__left__padding,
+            selector=baca.leaves()[-2:],
+            ),
+        ),
+    baca.text_spanner(
+        r'\naehte-very-wide-circles-markup =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[:5],
+        ),
+    baca.text_spanner(
+        'spz. =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[4:6],
+        ),
+    baca.text_spanner(
+        'ord. =|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[-1:].rleak(),
+        ),
+    baca.text_spanner(
+        'vibtiss. =|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves()[-1:].rleak(),
+        ),
+    )
+
+maker(
+    'vc',
+    baca.new(
+        baca.dls_staff_padding(5),
+        measures=1,
+        ),
     )
