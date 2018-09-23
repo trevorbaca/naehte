@@ -224,8 +224,12 @@ B_Cello_Music_Voice = {                                                        %
         \times 6/7 {
 
             % [B Cello_Music_Voice measure 10 / measure 2]                     %! _comment_measure_numbers
+            \override DynamicLineSpanner.staff-padding = #'9                   %! baca_dls_staff_padding:OverrideCommand(1)
             \once \override NoteHead.style = #'harmonic                        %! baca_note_head_style_harmonic:OverrideCommand(1)
             f2
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak circled-tip ##t                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
             - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
             - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
             - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
@@ -236,28 +240,38 @@ B_Cello_Music_Voice = {                                                        %
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
                 f16
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak stencil #abjad-flared-hairpin                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
                 [
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 \override NoteHead.style = #'harmonic                          %! baca_note_head_style_harmonic:OverrideCommand(1)
                 d16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 f16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 d16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 f16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 a,16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 ]
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
@@ -265,6 +279,8 @@ B_Cello_Music_Voice = {                                                        %
             }
 
             e1
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \ppp                                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
@@ -272,6 +288,10 @@ B_Cello_Music_Voice = {                                                        %
 
         % [B Cello_Music_Voice measure 12 / measure 4]                         %! _comment_measure_numbers
         ds!2
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
         - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
         - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
@@ -283,6 +303,11 @@ B_Cello_Music_Voice = {                                                        %
 
             \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             ds!16
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \f                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
             [
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
@@ -308,6 +333,12 @@ B_Cello_Music_Voice = {                                                        %
         }
 
         c2...
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
         - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
         - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
@@ -317,6 +348,9 @@ B_Cello_Music_Voice = {                                                        %
 
         \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
         d''16
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
 

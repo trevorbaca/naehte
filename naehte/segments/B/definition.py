@@ -94,6 +94,11 @@ maker(
             ' }'
             ),
         ),
+    baca.dls_staff_padding(9),
+    baca.hairpin(
+        'o< f |> ppp ppp < f |> ppp >o niente',
+        piece_selector=baca.lparts([1, 6, 1, 1, 5, 2]),
+        ),
     baca.suite(
         baca.new(
             baca.pitch('F3'),
@@ -142,6 +147,10 @@ maker(
             selector=baca.leaves()[-7:-1:],
             zero_padding=True,
             ),
+        ),
+    baca.stem_tremolo(
+        selector=baca.leaves()[2:7],
+        tremolo_flags=64,
         ),
     )
 
