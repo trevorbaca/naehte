@@ -54,9 +54,6 @@ maker(
         'o< f >o niente',
         piece_selector=baca.lparts([1, 5]),
         ),
-    baca.stem_down(
-        selector=baca.leaves()[-4:],
-        ),
     baca.suite(
         baca.pitches("F#3 A2 F3 D3"),
         baca.glissando(
@@ -79,4 +76,42 @@ maker(
         bookend=False,
         piece_selector=baca.lparts([1, 1, 4]),
         ),
+    )
+
+maker(
+    ('vc', (2, 4)),
+    baca.suite(
+        baca.rhythm(
+            '{'
+            r" \times 6/7 { c'2 \times 4/6 { c'16 [ c' c' c' c' c' ] } c'1 }"
+            r" c'2 \times 4/5 { c'16 [ c' c' c' c' ] } c'2... c'16"
+            ' }'
+            ),
+        baca.repeat_tie_to(
+            selector=baca.leaf(1),
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(9),
+            ),
+        ),
+    baca.suite(
+        baca.pitches(
+            'F3 D3 F3 D3 F3 A2 E3'
+            ' D#3 B2 D3 B2 E4 C3'  
+            ),
+        baca.glissando(
+            selector=baca.leaves()[:-1],
+            zero_padding=True,
+            ),
+        baca.glissando(
+            selector=baca.leaves()[-2:],
+            ),
+        ),
+    )
+
+maker(
+    'vc',
+    baca.stem_down(),
     )
