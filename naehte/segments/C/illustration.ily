@@ -281,12 +281,10 @@ C_Cello_Music_Voice = {                                                        %
                 \stopTextSpanOne                                               %! baca_text_spanner:PiecewiseCommand(3)
                 - \abjad-dashed-line-with-hook                                 %! baca_text_spanner:PiecewiseCommand(1)
                 - \baca-text-spanner-left-text "ord."                          %! baca_text_spanner:PiecewiseCommand(1)
-                - \tweak bound-details.right.padding #6.25                     %! baca_text_spanner:PiecewiseCommand(1)
                 - \tweak staff-padding #8                                      %! baca_text_spanner:PiecewiseCommand(1)
                 \startTextSpanOne                                              %! baca_text_spanner:PiecewiseCommand(1)
                 - \abjad-dashed-line-with-hook                                 %! baca_text_spanner:PiecewiseCommand(1)
                 - \baca-text-spanner-left-text "vibtiss."                      %! baca_text_spanner:PiecewiseCommand(1)
-                - \tweak bound-details.right.padding #6.25                     %! baca_text_spanner:PiecewiseCommand(1)
                 - \tweak staff-padding #5.5                                    %! baca_text_spanner:PiecewiseCommand(1)
                 \startTextSpan                                                 %! baca_text_spanner:PiecewiseCommand(1)
                 \revert DynamicLineSpanner.staff-padding                       %! baca_dls_staff_padding:OverrideCommand(2)
@@ -297,31 +295,57 @@ C_Cello_Music_Voice = {                                                        %
 
     }
 
+    {
+
+        % [C Cello_Music_Voice measure 16 / measure 2]                         %! _comment_measure_numbers
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        fs!4
+        \repeatTie                                                             %! TieCorrectionCommand
+
+        <fs! cs'!>4
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanTwo                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "II / III"                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        fs!4
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpanTwo                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+
+        fs!4
+        \repeatTie                                                             %! TieCorrectionCommand
+        \revert RepeatTie.extra-offset                                         %! baca_repeat_tie_extra_offset:OverrideCommand(2)
+
+    }
+
     <<                                                                         %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [C Cello_Music_Voice measure 16 / measure 2]                     %! _comment_measure_numbers
+            % [C Cello_Music_Voice measure 17 / measure 3]                     %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 1                                                            %! _make_multimeasure_rest_container
-            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
-            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            c'1 * 3/8                                                          %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [C Cello_Rest_Voice measure 16 / measure 2]                      %! _comment_measure_numbers
-            R1 * 1                                                             %! _make_multimeasure_rest_container
+            % [C Cello_Rest_Voice measure 17 / measure 3]                      %! _comment_measure_numbers
+            R1 * 3/8                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [C Cello_Music_Voice measure 17 / measure 3]                             %! _comment_measure_numbers
-    R1 * 3/8                                                                   %! _make_measure_silences
 
     % [C Cello_Music_Voice measure 18 / measure 4]                             %! _comment_measure_numbers
     R1 * 1                                                                     %! _make_measure_silences
