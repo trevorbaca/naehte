@@ -164,16 +164,74 @@ maker(
             ),
         ),
     baca.text_spanner(
-        "(ord.) -> scr'iss.",
+        "(ord.) -> scr.iss.",
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[:2],
         ),
     ),
 
 maker(
+    ('vc', (4, 5)),
+    baca.hairpin(
+        'p <| fff |> p',
+        piece_selector=baca.cmgroups(),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaves()[:2],
+        ),
+    baca.suite(
+        baca.rhythm(
+            '{'
+            r" \times 4/5 { c'1 c'4 }"
+            r" \times 3/4 { c'8 [ c' c' c' ] }"
+            ' }'
+            ),
+        ),
+    baca.suite(
+        baca.pitches(
+            '<G3 D4> <G3 D4> <A2 E3> <F3 C4> <G2 D3> Ab2',
+            allow_repeats=True,
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.leaves()[1:3],
+            ),
+        baca.glissando(
+            selector=baca.leaves()[-4:],
+            ),
+        ),
+    baca.text_spanner(
+        r'\baca-double-diamond-markup =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[:2],
+        ),
+    baca.text_spanner(
+        'II / III largo -> strett. -> larg. =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 3]),
+        selector=baca.leaves()[:5],
+        ),
+    baca.trill_spanner(
+        'M2',
+        selector=baca.leaves()[-1:].rleak(),
+        ),
+    )
+
+maker(
     'vc',
     baca.new(
-        baca.dls_staff_padding(5),
+        baca.dls_staff_padding(8),
         measures=(1, 3),
+        ),
+    baca.new(
+        baca.stem_down(),
+        measures=(2, -1),
+        ),
+    baca.tuplet_bracket_down(),
+    baca.new(
+        baca.tuplet_bracket_staff_padding(1.5),
+        measures=1,
         ),
     )
