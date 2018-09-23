@@ -148,6 +148,10 @@ maker(
             zero_padding=True,
             ),
         ),
+    baca.beam_positions(
+        -5.5,
+        selector=baca.leaves()[1:7],
+        ),
     baca.stem_tremolo(
         selector=baca.leaves()[2:7],
         tremolo_flags=64,
