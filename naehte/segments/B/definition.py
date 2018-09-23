@@ -156,8 +156,16 @@ maker(
         -5.5,
         selector=baca.leaves()[1:7],
         ),
+    baca.beam_positions(
+        -5.5,
+        selector=baca.leaves()[9:14],
+        ),
     baca.stem_tremolo(
         selector=baca.leaves()[2:7],
+        tremolo_flags=64,
+        ),
+    baca.stem_tremolo(
+        selector=baca.leaves()[10:14],
         tremolo_flags=64,
         ),
     baca.text_spanner(
@@ -175,6 +183,21 @@ maker(
         selector=baca.leaves()[7:9],
         ),
     baca.text_spanner(
+        r'II / III strett. -> larg.',
+        abjad.tweak(5.5).bound_details__right__padding,
+        abjad.tweak(10.5).staff_padding,
+        lilypond_id=2,
+        selector=baca.leaves()[8:10],
+        ),
+    baca.text_spanner(
+        r'XFB =|',
+        abjad.tweak(2.75).bound_details__right__padding,
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[-2:].rleak(),
+        ),
+    baca.text_spanner(
         r'T -> P -> T =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
@@ -183,17 +206,27 @@ maker(
         selector=baca.leaves()[:9],
         ),
     baca.text_spanner(
-        r'(T) -> P -> T',
+        r'(T) -> P -> T =|',
+        (abjad.tweak(2.75).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
+        bookend=False,
         lilypond_id=1,
-        piece_selector=baca.lparts([1, 6]),
-        selector=baca.leaves()[8:-1],
+        piece_selector=baca.lparts([1, 5, 3]),
+        selector=baca.leaves()[8:].rleak(),
         ),
     baca.text_spanner(
         r'trem. -> larg.',
-        abjad.tweak(3.5).bound_details__right__padding,
+        abjad.tweak(-1.5).bound_details__left__padding,
+        abjad.tweak(2.5).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:7],
+        selector=baca.leaves()[2:7],
+        ),
+    baca.text_spanner(
+        r'trem. -> larg.',
+        abjad.tweak(-1.5).bound_details__left__padding,
+        abjad.tweak(2.5).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[10:14],
         ),
     )
 
