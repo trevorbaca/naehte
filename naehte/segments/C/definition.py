@@ -144,15 +144,36 @@ maker(
         ),
     baca.trill_spanner(
         'm2',
-        abjad.tweak(6.25).bound_details__right__padding,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     )
+
+maker(
+    ('vc', 3),
+    baca.hairpin(
+        'ppp <| fff',
+        selector=baca.pleaves(),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c'16 r }"),
+        baca.pitch('F#3'),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaves()[:2],
+            ),
+        ),
+    baca.text_spanner(
+        "(ord.) -> scr'iss.",
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[:2],
+        ),
+    ),
 
 maker(
     'vc',
     baca.new(
         baca.dls_staff_padding(5),
-        measures=(1, 2),
+        measures=(1, 3),
         ),
     )
