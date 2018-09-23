@@ -79,18 +79,51 @@ maker(
         ),
     baca.text_spanner(
         'ord. =|',
-        abjad.tweak(6.25).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     baca.text_spanner(
         'vibtiss. =|',
-        abjad.tweak(6.25).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-1:].rleak().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 2),
+    baca.suite(
+        baca.rhythm("{ c'4 c' c' c' }"),
+        baca.pitches(
+            'F#3 <F#3 C#4> F#3 F#3',
+            allow_repeats=True,
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(0),
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaves()[-2:],
+            ),
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[1:3],
+        ),
+    baca.text_spanner(
+        'II / III =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[1:3],
         ),
     )
 
