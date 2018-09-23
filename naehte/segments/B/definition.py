@@ -93,26 +93,54 @@ maker(
             r" c'2 \times 4/5 { c'16 [ c' c' c' c' ] } c'2... c'16"
             ' }'
             ),
-        baca.repeat_tie_to(
-            selector=baca.leaf(1),
-            ),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
-            selector=baca.leaf(9),
-            ),
         ),
     baca.suite(
+        baca.new(
+            baca.pitch('F3'),
+            baca.finger_pressure_transition(),
+            selector=baca.leaves()[:2],
+            ),
         baca.pitches(
-            'F3 D3 F3 D3 F3 A2 E3'
-            ' D#3 B2 D3 B2 E4 C3'  
+            'D3 F3 D3 F3 A2 E3',
+            selector=baca.leaves()[2:8],
+            ),
+        baca.new(
+            baca.pitch('D#3'),
+            baca.finger_pressure_transition(),
+            selector=baca.leaves()[8:10],
+            ),
+        baca.pitches(
+            'B2 D3 B2 E4 C3 D5',
+            selector=baca.leaves()[10:],
+            ),
+        baca.note_head_style_harmonic(
+            selector=baca.leaf(0),
+            ),
+        baca.note_head_style_harmonic_black(
+            selector=baca.leaf(1),
+            ),
+        baca.note_head_style_harmonic(
+            selector=baca.leaves()[2:9],
+            ),
+        baca.note_head_style_harmonic_black(
+            selector=baca.leaf(9),
+            ),
+        baca.note_head_style_harmonic(
+            selector=baca.leaves()[-6:-1],
+            ),
+        baca.note_head_style_harmonic_black(
+            selector=baca.leaf(-1),
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.leaves()[-2:],
             ),
         baca.glissando(
-            selector=baca.leaves()[:-1],
+            selector=baca.leaves()[1:9],
             zero_padding=True,
             ),
         baca.glissando(
-            selector=baca.leaves()[-2:],
+            selector=baca.leaves()[-7:-1:],
+            zero_padding=True,
             ),
         ),
     )
