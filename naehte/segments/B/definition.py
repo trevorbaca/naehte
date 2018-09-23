@@ -105,7 +105,7 @@ maker(
         ),
     baca.suite(
         baca.new(
-            baca.pitch('F3'),
+            baca.pitch('<F3 A3>'),
             baca.finger_pressure_transition(),
             selector=baca.leaves()[:2],
             ),
@@ -114,7 +114,7 @@ maker(
             selector=baca.leaves()[2:8],
             ),
         baca.new(
-            baca.pitch('D#3'),
+            baca.pitch('<D#3 F#3>'),
             baca.finger_pressure_transition(),
             selector=baca.leaves()[8:10],
             ),
@@ -159,6 +159,41 @@ maker(
     baca.stem_tremolo(
         selector=baca.leaves()[2:7],
         tremolo_flags=64,
+        ),
+    baca.text_spanner(
+        r'II / III strett. -> larg.',
+        abjad.tweak(5.5).bound_details__right__padding,
+        abjad.tweak(10.5).staff_padding,
+        lilypond_id=2,
+        selector=baca.leaves()[:2],
+        ),
+    baca.text_spanner(
+        r'XFB =|',
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[7:9],
+        ),
+    baca.text_spanner(
+        r'T -> P -> T =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 6, 2]),
+        selector=baca.leaves()[:9],
+        ),
+    baca.text_spanner(
+        r'(T) -> P -> T',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 6]),
+        selector=baca.leaves()[8:-1],
+        ),
+    baca.text_spanner(
+        r'trem. -> larg.',
+        abjad.tweak(3.5).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[1:7],
         ),
     )
 
