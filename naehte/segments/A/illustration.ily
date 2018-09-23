@@ -1,3 +1,32 @@
+A_Global_Rests = {                                                             %! extern
+
+    % [A Global_Rests measure 1]                                               %! _comment_measure_numbers
+    R1 * 7/8                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 2]                                               %! _comment_measure_numbers
+    R1 * 3/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 3]                                               %! _comment_measure_numbers
+    R1 * 5/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 4]                                               %! _comment_measure_numbers
+    R1 * 3/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 5]                                               %! _comment_measure_numbers
+    R1 * 5/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 6]                                               %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests
+
+    % [A Global_Rests measure 7]                                               %! _comment_measure_numbers
+    R1 * 1/2                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 8]                                               %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests
+
+}                                                                              %! extern
+
+
 A_Global_Skips = {                                                             %! extern
 
     % [A Global_Skips measure 1]                                               %! _comment_measure_numbers

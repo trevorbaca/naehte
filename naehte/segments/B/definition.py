@@ -18,9 +18,10 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (5, 8),
         (3, 4), (3, 4), (7, 4),
+        (1, 4),
         (7, 8),
         ],
-    validate_measure_count=5,
+    validate_measure_count=6,
     )
 
 maker(
@@ -33,6 +34,11 @@ maker(
         'B',
         abjad.tweak((0, 10)).extra_offset,
         ),
+    )
+
+maker(
+    'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(-2)),
     )
 
 maker(
