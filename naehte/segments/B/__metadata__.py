@@ -8,6 +8,7 @@ metadata = abjad.OrderedDict(
             [
                 'Score',
                 'Global_Context',
+                'Global_Rests',
                 'Global_Skips',
                 'Music_Context',
                 'Cello_Music_Staff',
@@ -19,8 +20,12 @@ metadata = abjad.OrderedDict(
             'bol_measure_numbers',
             [9, 12],
             ),
+        (
+            'fermata_measure_numbers',
+            [13],
+            ),
         ('first_measure_number', 9),
-        ('last_measure_number', 13),
+        ('last_measure_number', 14),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -81,7 +86,7 @@ metadata = abjad.OrderedDict(
             ),
         (
             'time_signatures',
-            ['5/8', '3/4', '3/4', '7/4', '7/8'],
+            ['5/8', '3/4', '3/4', '7/4', '1/4', '7/8'],
             ),
         ]
     )

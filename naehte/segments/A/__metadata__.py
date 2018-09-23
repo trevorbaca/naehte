@@ -8,6 +8,7 @@ metadata = abjad.OrderedDict(
             [
                 'Score',
                 'Global_Context',
+                'Global_Rests',
                 'Global_Skips',
                 'Music_Context',
                 'Cello_Music_Staff',
