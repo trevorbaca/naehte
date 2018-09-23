@@ -16,7 +16,8 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
-        (5, 8), (3, 4), (3, 4), (7, 4),
+        (5, 8),
+        (3, 4), (3, 4), (7, 4),
         (7, 8),
         ],
     validate_measure_count=5,
@@ -25,6 +26,12 @@ maker = baca.SegmentMaker(
 maker(
     'Global_Skips',
     baca.metronome_mark('52', selector=baca.leaf(1 - 1)),
+    #baca.metronome_mark('52', selector=baca.leaf(2 - 1)),
+    baca.metronome_mark(
+        baca.Accelerando(tweaks=abjad.tweak((0, 6)).extra_offset),
+        selector=baca.leaf(2 - 1),
+        ),
+    baca.metronome_mark('117', selector=baca.leaf(4 - 1)),
     baca.rehearsal_mark(
         'B',
         abjad.tweak((0, 10)).extra_offset,

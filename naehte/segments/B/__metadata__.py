@@ -16,7 +16,7 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [9],
+            [9, 12],
             ),
         ('first_measure_number', 9),
         ('last_measure_number', 13),
@@ -55,7 +55,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Global_Skips',
                                 manifest='metronome_marks',
-                                value='52',
+                                value='117',
                                 ),
                             abjad.Momento(
                                 context='Global_Skips',
