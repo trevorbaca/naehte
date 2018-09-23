@@ -36,6 +36,47 @@ maker(
     )
 
 maker(
-    'vc',
-    baca.make_notes(),
+    ('vc', 1),
+    baca.suite(
+        baca.rhythm(
+            r"{ c'4. c'8 c'32 [ c' c' c' ] }"
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            baca.repeat_tie_up(),
+            selector=baca.leaves()[1:3],
+            ),
+        ),
+    baca.breathe(),
+    baca.dls_staff_padding(7),
+    baca.hairpin(
+        'o< f >o niente',
+        piece_selector=baca.lparts([1, 5]),
+        ),
+    baca.stem_down(
+        selector=baca.leaves()[-4:],
+        ),
+    baca.suite(
+        baca.pitches("F#3 A2 F3 D3"),
+        baca.glissando(
+            selector=baca.leaves()[1:],
+            zero_padding=True,
+            ),
+        ),
+    baca.text_spanner(
+        'RH vib. =|',
+        abjad.tweak(-2).bound_details__right__padding,
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[-4:],
+        ),
+    baca.text_spanner(
+        'ord. -> scr. -> ord. =|',
+        (abjad.tweak(-2).bound_details__right__padding, -1),
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 4]),
+        ),
     )
