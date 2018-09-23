@@ -16,9 +16,12 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
-        (7, 8), (6, 8), 
+        (7, 8),
+        (6, 8), 
         (5, 4),
-        (6, 8), (5, 4), (4, 4), (2, 4), (4, 4),
+        (6, 8),
+        (5, 4), (4, 4), (2, 4),
+        (4, 4),
         ],
     validate_measure_count=8,
     )
