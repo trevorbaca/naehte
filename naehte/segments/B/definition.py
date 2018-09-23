@@ -32,7 +32,7 @@ maker(
     baca.metronome_mark('117', selector=baca.leaf(4 - 1)),
     baca.rehearsal_mark(
         'B',
-        abjad.tweak((0, 10)).extra_offset,
+        abjad.tweak((0, 12)).extra_offset,
         ),
     )
 
@@ -231,14 +231,58 @@ maker(
     )
 
 maker(
+    ('vc', 6),
+    baca.hairpin(
+        'o<| fff',
+        bookend=False,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves()[1:],
+        ),
+    baca.suite(
+        baca.rhythm(
+            "{ r8 c'2 c'8. c'16 }"
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(-1),
+            ),
+        baca.pitches('C5 Db2'),
+        baca.glissando(),
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[1:3],
+        ),
+    baca.text_spanner(
+        'ord. -> scr. mtiss. =|',
+        (abjad.tweak(1).bound_details__right__padding, 0),
+        (abjad.tweak(-2).bound_details__right__padding, -1),
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves()[1:],
+        ),
+    )
+
+maker(
     'vc',
-    baca.stem_down(),
+    baca.stem_down(
+        selector=baca.leaves()[:-2],
+        ),
     baca.new(
         baca.dls_staff_padding(11),
         measures=(1, 3),
         ),
     baca.new(
         baca.dls_staff_padding(9),
-        measures=(4, -1),
+        measures=4,
+        ),
+    baca.new(
+        baca.dls_staff_padding(7),
+        measures=-1,
         ),
     )

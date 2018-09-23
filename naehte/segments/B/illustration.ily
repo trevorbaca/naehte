@@ -30,7 +30,7 @@ B_Global_Skips = {                                                             %
     \bar ""                                                                    %! _make_global_skips(3):+SEGMENT:EMPTY_START_BAR
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 5/8                                                                   %! _make_global_skips(1)
-    - \tweak extra-offset #'(0 . 10)                                           %! baca_rehearsal_mark:IndicatorCommand
+    - \tweak extra-offset #'(0 . 12)                                           %! baca_rehearsal_mark:IndicatorCommand
     - \baca-rehearsal-mark-markup "B"                                          %! baca_rehearsal_mark:IndicatorCommand
 %@% - \baca-start-lmi-left-only "0"                                            %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
@@ -432,6 +432,7 @@ B_Cello_Music_Voice = {                                                        %
         d''16
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
 
@@ -445,7 +446,6 @@ B_Cello_Music_Voice = {                                                        %
             c'1 * 1/4                                                          %! _make_multimeasure_rest_container
             \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
             \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
-            \revert Stem.direction                                             %! baca_stem_down:OverrideCommand(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -459,9 +459,47 @@ B_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! _make_multimeasure_rest_container
 
-    % [B Cello_Music_Voice measure 14 / measure 6]                             %! _comment_measure_numbers
-    R1 * 7/8                                                                   %! _make_measure_silences
-    \revert DynamicLineSpanner.staff-padding                                   %! baca_dls_staff_padding:OverrideCommand(2)
+    {
+
+        % [B Cello_Music_Voice measure 14 / measure 6]                         %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
+        r8
+
+        c''2
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \glissando                                                             %! baca_glissando
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "ord."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #1                                %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        \revert Stem.direction                                                 %! baca_stem_down:OverrideCommand(2)
+
+        df,!8.
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr. mtiss."                           %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #-2                               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        df,!16
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+
+    }
 
 }                                                                              %! extern
 
