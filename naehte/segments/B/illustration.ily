@@ -224,16 +224,23 @@ B_Cello_Music_Voice = {                                                        %
         \times 6/7 {
 
             % [B Cello_Music_Voice measure 10 / measure 2]                     %! _comment_measure_numbers
+            \once \override NoteHead.style = #'harmonic                        %! baca_note_head_style_harmonic:OverrideCommand(1)
             f2
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
 
             \times 2/3 {
 
+                \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
                 f16
-                \repeatTie                                                     %! TieCorrectionCommand
                 [
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
+                \override NoteHead.style = #'harmonic                          %! baca_note_head_style_harmonic:OverrideCommand(1)
                 d16
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
@@ -265,16 +272,22 @@ B_Cello_Music_Voice = {                                                        %
 
         % [B Cello_Music_Voice measure 12 / measure 4]                         %! _comment_measure_numbers
         ds!2
+        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
+        \glissando                                                             %! baca_finger_pressure_transition
+        \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
 
         \times 4/5 {
 
-            \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+            \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             ds!16
-            \repeatTie                                                         %! TieCorrectionCommand
             [
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
+            \override NoteHead.style = #'harmonic                              %! baca_note_head_style_harmonic:OverrideCommand(1)
             b,16
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
@@ -295,9 +308,15 @@ B_Cello_Music_Voice = {                                                        %
         }
 
         c2...
-        \glissando                                                             %! baca_glissando
+        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
+        \glissando                                                             %! baca_finger_pressure_transition
+        \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
 
-        f16
+        \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+        d''16
 
     }
 
