@@ -55,7 +55,6 @@ maker(
             ),
         ),
     baca.breathe(),
-    baca.dls_staff_padding(7),
     baca.hairpin(
         'o< f >o niente',
         piece_selector=baca.lparts([1, 5]),
@@ -94,10 +93,15 @@ maker(
             ' }'
             ),
         ),
-    baca.dls_staff_padding(9),
     baca.hairpin(
-        'o< f |> ppp ppp < f |> ppp >o niente',
-        piece_selector=baca.lparts([1, 6, 1, 1, 5, 2]),
+        'o< f |> ppp',
+        piece_selector=baca.lparts([1, 6]),
+        selector=baca.leaves()[:8],
+        ),
+    baca.hairpin(
+        'ppp < f |> ppp >o niente',
+        piece_selector=baca.lparts([1, 5, 2]),
+        selector=baca.leaves()[8:],
         ),
     baca.suite(
         baca.new(
@@ -161,4 +165,12 @@ maker(
 maker(
     'vc',
     baca.stem_down(),
+    baca.new(
+        baca.dls_staff_padding(11),
+        measures=(1, 3),
+        ),
+    baca.new(
+        baca.dls_staff_padding(9),
+        measures=(4, -1),
+        ),
     )
