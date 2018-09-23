@@ -239,6 +239,7 @@ B_Cello_Music_Voice = {                                                        %
             \times 2/3 {
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+                \override Beam.positions = #'(-5.5 . -5.5)                     %! baca_beam_positions:OverrideCommand(1)
                 f16
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 \f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -275,6 +276,7 @@ B_Cello_Music_Voice = {                                                        %
                 ]
                 - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
+                \revert Beam.positions                                         %! baca_beam_positions:OverrideCommand(2)
 
             }
 
