@@ -213,7 +213,7 @@ maker(
             selector=baca.leaf(-1),
             ),
         baca.glissando(
-            selector=baca.leaves()[-3:],
+            selector=baca.leaves()[-3:].rleak(),
             zero_padding=True,
             ),
         baca.literal(
@@ -244,11 +244,33 @@ maker(
     baca.text_spanner(
         r'XFB =| \naehte-circles-markup =| spz. =|',
         (abjad.tweak(4.25).bound_details__right__padding, -1),
-        abjad.tweak(10.5).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         bookend=False,
-        lilypond_id=1,
         piece_selector=baca.lparts([1, 2, 2]),
         selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 6),
+    baca.hairpin(
+        '<| f |> p', 
+        piece_selector=baca.lparts([1, 2]),
+        ),
+    baca.pitch('A3'),
+    baca.rhythm(
+        r"\times 4/5 { c'4. c'8 [ c' ] }",
+        ),
+    baca.text_spanner(
+        r'non scr. -> scr. =|',
+        (abjad.tweak(-4.25).bound_details__right__padding, -1),
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 2]),
+        ),
+    baca.trill_spanner(
+        'm2',
+        selector=baca.leaves()[:2],
         ),
     )
 
