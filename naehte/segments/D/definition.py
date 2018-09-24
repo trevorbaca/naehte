@@ -149,14 +149,47 @@ maker(
 
 maker(
     ('vc', 4),
-    baca.pitch('C#3'),
+    baca.hairpin(
+        'p <| "mf" > pp < "mf" >o niente',
+        measures=(4, 5),
+        piece_selector=baca.lparts([1, 1, 1, 3]),
+        ),
+    baca.pitch('C#3', selector=baca.leaf(0)),
+    baca.pitch('<C#3 A3>', selector=baca.leaves()[1:]),
     baca.rhythm(r"{ c'4 c'2.. c' }"),
+    baca.text_spanner(
+        r'I / II larg. -> strett. -> larg.',
+        (abjad.tweak(6.25).bound_details__right__padding, -1),
+        abjad.tweak(9).staff_padding,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves()[1:].rleak(),
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves()[1:].rleak(),
+        ),
     )
 
 maker(
     ('vc', 5),
-    baca.pitch('C#3'),
-    baca.rhythm(r"{ c'1 c' }"),
+    baca.pitch('<C#3 A3>'),
+    baca.rhythm(r"{ c'1 c'2... r16 }"),
+    baca.text_spanner(
+        r'trill larg. -> strett. -> larg.',
+        (abjad.tweak(5.25).bound_details__right__padding, -1),
+        abjad.tweak(9).staff_padding,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 2]),
+        ),
+    baca.text_spanner(
+        r'\baca-triple-diamond-parenthesized-top-markup ->',
+        abjad.tweak(5.5).staff_padding,
+        abjad.tweak("#'trill").style,
+        bookend=False,
+        ),
     )
 
 maker(
