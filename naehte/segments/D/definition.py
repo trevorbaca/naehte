@@ -109,24 +109,47 @@ maker(
             selector=baca.leaf(0),
             ),
         ),
-    baca.new(
-        baca.text_spanner(
-            r'RH NV -> RH vib.iss.',
-            abjad.tweak(8).staff_padding,
-            lilypond_id=1,
-            ),
-        baca.text_spanner(
-            r'scr. -> non scr.',
-            abjad.tweak(5.5).staff_padding,
-            ),
-        selector=baca.leaves()[:2],
+    baca.text_spanner(
+        r'RH NV -> RH vib. =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 5]),
+        selector=baca.rleaves(),
+        ),
+    baca.text_spanner(
+        r'scr. -> non scr. -> XFB ->',
+        abjad.tweak(5.5).staff_padding,
+        measures=(2, 3),
+        piece_selector=baca.lparts([1, 5, 2]),
+        selector=baca.rleaves(),
         ),
     )
 
 maker(
     ('vc', 3),
-    baca.pitch('D3'),
+    baca.hairpin(
+        'mf |> p',
+        ),
     baca.rhythm(r"{ c'2 c'8 }"),
+    baca.suite(
+        baca.pitch('D3'),
+        baca.glissando(
+            abjad.tweak(0).bound_details__left__padding,
+            selector=baca.leaves()[-1:].rleak(),
+            ),
+        ),
+    baca.trill_spanner(
+        'P1',
+        abjad.tweak(0.5).bound_details__right__padding,
+        selector=baca.leaves()[:2], 
+        ),
+    )
+
+maker(
+    ('vc', 4),
+    baca.pitch('C#3'),
+    baca.rhythm(r"{ c'4 c'1.. }"),
     )
 
 maker(
