@@ -74,6 +74,10 @@ maker(
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
+    baca.hairpin(
+        'p <| f',
+        selector=baca.leaves().rleak(),
+        ),
     baca.rhythm(
         r"\times 6/7 { \times 4/5 { c'4 c' c' c' c' } c' c' c' }",
         ),
@@ -98,4 +102,41 @@ maker(
         bookend=False,
         selector=baca.leaves().rleak(),
         ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.hairpin(
+        '|> p <| ff',
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.suite(
+        baca.pitch('D#3'),
+        baca.glissando(
+            selector=baca.leaves()[:1].lleak(),
+            ),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c'8 }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(-1),
+            ),
+        ),
+    baca.text_spanner(
+        'non scr. -> scr.',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        'vib.tiss. -> NV',
+        abjad.tweak(5.5).staff_padding,
+        ),
+    )
+
+maker(
+    'vc',
+    baca.dls_staff_padding(6),
     )
