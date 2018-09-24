@@ -251,31 +251,23 @@ D_Cello_Music_Voice = {                                                        %
         cs!4
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
 
-        cs!1..
+        cs!1.
+
+        cs!4
 
     }
 
-    <<                                                                         %! _make_multimeasure_rest_container
+    {
 
-        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+        % [D Cello_Music_Voice measure 28 / measure 5]                         %! _comment_measure_numbers
+        cs!4
 
-            % [D Cello_Music_Voice measure 28 / measure 5]                     %! _comment_measure_numbers
-            \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 9/4                                                          %! _make_multimeasure_rest_container
-            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+        cs!1..
 
-        }                                                                      %! _make_multimeasure_rest_container
+        cs!4
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
-        \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
-
-            % [D Cello_Rest_Voice measure 28 / measure 5]                      %! _comment_measure_numbers
-            R1 * 9/4                                                           %! _make_multimeasure_rest_container
-
-        }                                                                      %! _make_multimeasure_rest_container
-
-    >>                                                                         %! _make_multimeasure_rest_container
+    }
 
 }                                                                              %! extern
 
