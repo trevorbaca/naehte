@@ -182,9 +182,55 @@ F_Cello_Music_Voice = {                                                        %
             :32                                                                %! baca_stem_tremolo:IndicatorCommand
             - \espressivo                                                      %! baca_espressivo:IndicatorCommand
             ]
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
             \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
 
         }
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/7 {
+
+        \times 4/5 {
+
+            % [F Cello_Music_Voice measure 36 / measure 2]                     %! _comment_measure_numbers
+            <b fs'!>4
+            \glissando                                                         %! baca_glissando
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+
+            <e' b'>4
+            \glissando                                                         %! baca_glissando
+
+            <af! ef'!>4
+            \glissando                                                         %! baca_glissando
+
+            <d' a'>4
+            \glissando                                                         %! baca_glissando
+
+            <f c'>4
+            \glissando                                                         %! baca_glissando
+
+        }
+
+        <bf! f'>4
+        \glissando                                                             %! baca_glissando
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "II / III mod."                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        <e b>4
+        \glissando                                                             %! baca_glissando
+
+        <g d'>4
 
     }
 
@@ -193,24 +239,23 @@ F_Cello_Music_Voice = {                                                        %
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [F Cello_Music_Voice measure 36 / measure 2]                     %! _comment_measure_numbers
+            % [F Cello_Music_Voice measure 37 / measure 3]                     %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 3/2                                                          %! _make_multimeasure_rest_container
+            c'1 * 3/8                                                          %! _make_multimeasure_rest_container
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [F Cello_Rest_Voice measure 36 / measure 2]                      %! _comment_measure_numbers
-            R1 * 3/2                                                           %! _make_multimeasure_rest_container
+            % [F Cello_Rest_Voice measure 37 / measure 3]                      %! _comment_measure_numbers
+            R1 * 3/8                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [F Cello_Music_Voice measure 37 / measure 3]                             %! _comment_measure_numbers
-    R1 * 3/8                                                                   %! _make_measure_silences
 
     % [F Cello_Music_Voice measure 38 / measure 4]                             %! _comment_measure_numbers
     R1 * 5/8                                                                   %! _make_measure_silences
