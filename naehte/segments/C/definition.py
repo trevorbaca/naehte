@@ -230,6 +230,10 @@ maker(
         abjad.tweak('left').self_alignment_X,
         selector=baca.leaf(1),
         ),
+    baca.hairpin(
+        'pppp >o niente',
+        selector=baca.leaves()[-1:].rleak(),
+        ),
     baca.suite(
         baca.rhythm(
             '{'
@@ -265,15 +269,33 @@ maker(
             ),
         ),
     baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(2.75).bound_details__right__padding,
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[3:].rleak(),
+        ),
+    baca.text_spanner(
         'vib. mod. -> NV',
         abjad.tweak(8).staff_padding,
         lilypond_id=1,
         selector=baca.leaves()[1:3],
         ),
     baca.text_spanner(
-        'no scr. -> scr. poss.',
+        'II / III mod. =| (mod.) -> strettiss. =|',
+        (abjad.tweak(2.75).bound_details__right__padding, -1),
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([4, 7, 2]),
+        selector=baca.leaves()[3:].rleak(),
+        ),
+    baca.text_spanner(
+        'no scr. -> scr. poss. -> no scr.',
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:3],
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves()[1:4],
         ),
     )
 
