@@ -54,3 +54,17 @@ maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(-1)),
     )
+
+maker(
+    ('vc', 1),
+    baca.new(
+        baca.espressivo(),
+        baca.note_head_style_harmonic(),
+        baca.stem_tremolo(),
+        selector=baca.pleaves(),
+        ),
+    baca.pitch('<B3 F#4>'),
+    baca.rhythm(
+        r"{ c'8 [ c' c' c' \times 4/5 { c' c' c' c' c' ] } }",
+        ),
+    )

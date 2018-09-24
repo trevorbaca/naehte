@@ -131,28 +131,92 @@ F_Global_Skips = {                                                             %
 
 F_Cello_Music_Voice = {                                                        %! extern
 
-    % [F Cello_Music_Voice measure 35 / measure 1]                             %! _comment_measure_numbers
-    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 1/1                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    {
 
-    % [F Cello_Music_Voice measure 36 / measure 2]                             %! _comment_measure_numbers
-    R1 * 3/2                                                                   %! _call_rhythm_commands
+        % [F Cello_Music_Voice measure 35 / measure 1]                         %! _comment_measure_numbers
+        \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
+        \clef "bass"                                                           %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+        \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+        <b fs'!>8
+        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \p                                                                     %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+        ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+        [
+        \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+        <b fs'!>8
+        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+
+        <b fs'!>8
+        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+
+        <b fs'!>8
+        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+
+        \times 4/5 {
+
+            <b fs'!>8
+            :32                                                                %! baca_stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+
+            <b fs'!>8
+            :32                                                                %! baca_stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+
+            <b fs'!>8
+            :32                                                                %! baca_stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+
+            <b fs'!>8
+            :32                                                                %! baca_stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+
+            <b fs'!>8
+            :32                                                                %! baca_stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            ]
+            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
+
+        }
+
+    }
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Cello_Music_Voice measure 36 / measure 2]                     %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 3/2                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Cello_Rest_Voice measure 36 / measure 2]                      %! _comment_measure_numbers
+            R1 * 3/2                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Cello_Music_Voice measure 37 / measure 3]                             %! _comment_measure_numbers
-    R1 * 3/8                                                                   %! _call_rhythm_commands
+    R1 * 3/8                                                                   %! _make_measure_silences
 
     % [F Cello_Music_Voice measure 38 / measure 4]                             %! _comment_measure_numbers
-    R1 * 5/8                                                                   %! _call_rhythm_commands
+    R1 * 5/8                                                                   %! _make_measure_silences
 
     % [F Cello_Music_Voice measure 39 / measure 5]                             %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
 }                                                                              %! extern
 
