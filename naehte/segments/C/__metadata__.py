@@ -18,7 +18,7 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [15, 18, 20, 22],
+            [15, 18, 22],
             ),
         (
             'fermata_measure_numbers',
@@ -52,7 +52,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='p',
+                                value='\\baca-pppp-sempre',
                                 ),
                             ],
                         ),
