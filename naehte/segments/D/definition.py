@@ -36,6 +36,10 @@ maker(
 #            after=True,
 #            selector=baca.skip(-1),
 #            ),
+        baca.new(
+            baca.bar_line_x_extent((0, 3.5)),
+            selector=baca.skip(0),
+            ),
         baca.volta(),
         measures=(2, 3),
         ),
@@ -49,8 +53,13 @@ maker(
         selector=baca.rleaves(),
         ),
     baca.pitch('C#3'),
-    baca.rhythm(
-        r"{ c'8 c'2 }"
+    baca.suite(
+        baca.rhythm(r"{ c'8 c'2 }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(1),
+            ),
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
@@ -71,6 +80,35 @@ maker(
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[-1:].rleak(),
         ),
+    )
+
+maker(
+    ('vc', 2),
+    baca.pitch('C#3'),
+    baca.suite(
+        baca.rhythm(r"{ c'2 c'8 }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaves(),
+            ),
+        ),
+    baca.text_spanner(
+        r'RH NV -> RH vib.iss.',
+        abjad.tweak(6).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        r'scr. -> non scr.',
+        abjad.tweak(4).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.rhythm(r"{ c'2 c'8 }"),
     )
 
 maker(

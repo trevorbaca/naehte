@@ -46,6 +46,7 @@ D_Global_Skips = {                                                             %
     {
 
         % [D Global_Skips measure 25 / measure 2]                              %! _comment_measure_numbers
+        \once \override Score.BarLine.X-extent = #'(0 . 3.5)                   %! baca_bar_line_x_extent:OverrideCommand(1)
         s1 * 5/8                                                               %! _make_global_skips(1)
     %@% \bacaStopTextSpanLMI                                                   %! LOCAL_MEASURE_INDEX_MARKUP
         \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER_MARKUP
@@ -134,11 +135,13 @@ D_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
         cs!2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-effort-f                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \repeatTie                                                             %! TieCorrectionCommand
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "spazz. larg."                          %! baca_text_spanner:PiecewiseCommand(1)
@@ -150,36 +153,74 @@ D_Cello_Music_Voice = {                                                        %
 
     }
 
+    {
+
+        % [D Cello_Music_Voice measure 25 / measure 2]                         %! _comment_measure_numbers
+        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        cs!2
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "RH NV"                                 %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "RH vib.iss."                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #6                                %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "non scr."                             %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #4                                %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+
+        cs!8
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
+        \revert RepeatTie.extra-offset                                         %! baca_repeat_tie_extra_offset:OverrideCommand(2)
+
+    }
+
+    {
+
+        % [D Cello_Music_Voice measure 26 / measure 3]                         %! _comment_measure_numbers
+        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
+        c'2
+        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
+        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+
+        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
+        c'8
+        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
+        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+
+    }
+
     <<                                                                         %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [D Cello_Music_Voice measure 25 / measure 2]                     %! _comment_measure_numbers
+            % [D Cello_Music_Voice measure 27 / measure 4]                     %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 5/8                                                          %! _make_multimeasure_rest_container
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
-            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
-            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(2)
+            c'1 * 2                                                            %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [D Cello_Rest_Voice measure 25 / measure 2]                      %! _comment_measure_numbers
-            R1 * 5/8                                                           %! _make_multimeasure_rest_container
+            % [D Cello_Rest_Voice measure 27 / measure 4]                      %! _comment_measure_numbers
+            R1 * 2                                                             %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [D Cello_Music_Voice measure 26 / measure 3]                             %! _comment_measure_numbers
-    R1 * 5/8                                                                   %! _make_measure_silences
-
-    % [D Cello_Music_Voice measure 27 / measure 4]                             %! _comment_measure_numbers
-    R1 * 2                                                                     %! _make_measure_silences
 
     % [D Cello_Music_Voice measure 28 / measure 5]                             %! _comment_measure_numbers
     R1 * 9/4                                                                   %! _make_measure_silences
