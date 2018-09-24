@@ -215,7 +215,65 @@ maker(
         ),
     baca.trill_spanner(
         'M2',
-        selector=baca.leaves()[-1:].rleak(),
+        abjad.tweak(2).bound_details__right__padding,
+        selector=baca.leaves()[-1:].rleak().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', (6, 8)),
+    baca.breathe(
+        selector=baca.leaf(0),
+        ),
+    baca.dynamic(
+        'pppp-sempre',
+        abjad.tweak('left').self_alignment_X,
+        selector=baca.leaf(1),
+        ),
+    baca.suite(
+        baca.rhythm(
+            '{'
+            r" c'4 c'\breve"
+            " c'2"
+            r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
+            " c'4 c'8 [ c' ] c'2 }"
+            ' }'
+            ),
+        baca.pitches(
+            'Ab2 Bbb2 Bbb2'
+            ' <B3 F4> <B3 F4> <C3 G3>'
+            ' <B3 F4> <B3 F4> <E3 A3> <B3 F4> <D3 A3>'
+            ' <B3 F4> <B3 F4> <C3 G3>'
+            ' <B3 F4>',
+            allow_repeats=True,
+            ),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            ),
+        baca.glissando(
+            selector=baca.leaves()[:2],
+            ),
+        baca.glissando(
+            selector=baca.leaves()[2:4],
+            ),
+        baca.new(
+            baca.glissando(
+                zero_padding=True,
+                ),
+            measures=8,
+            ),
+        ),
+    baca.text_spanner(
+        'vib. mod. -> NV',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        selector=baca.leaves()[1:3],
+        ),
+    baca.text_spanner(
+        'no scr. -> scr. poss.',
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[1:3],
         ),
     )
 
@@ -223,7 +281,7 @@ maker(
     'vc',
     baca.new(
         baca.dls_staff_padding(8),
-        measures=(1, 3),
+        measures=(1, -1),
         ),
     baca.new(
         baca.stem_down(),
