@@ -16,7 +16,7 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
-        (4, 4),
+        (5, 4),
         (7, 4), (5, 8), (4, 8),
         (3, 4), (4, 8),
         ],
@@ -44,5 +44,25 @@ maker(
             ),
         baca.volta(),
         measures=(2, 4),
+        ),
+    )
+
+maker(
+    ('vc', 1),
+    baca.breathe(),
+    baca.note_head_transparent(
+        selector=baca.leaves()[1:-1],
+        ),
+    baca.rhythm(
+        r"{ \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] } c'1 }",
+        ),
+    baca.suite(
+        baca.pitches(
+            'F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2',
+            ),
+        baca.glissando(
+            selector=baca.leaves(),
+            zero_padding=True,
+            ),
         ),
     )
