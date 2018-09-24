@@ -50,11 +50,26 @@ maker(
 maker(
     ('vc', 1),
     baca.breathe(),
+    baca.dynamic_text_self_alignment_x(
+        abjad.Right,
+        selector=baca.leaf(-1),
+        ),
+    baca.hairpin(
+        'o< pp > ppp < mp',
+        piece_selector=baca.lparts([6, 6, 2]),
+        ),
+    baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
-        selector=baca.leaves()[1:-1],
+        selector=baca.pleaves()[1:-1],
+        ),
+    baca.note_head_x_extent_zero(
+        selector=baca.pleaves()[:-1],
         ),
     baca.rhythm(
-        r"{ \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] } c'1 }",
+        '{'
+        r" \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] }"
+        " c'2.... r32"
+        ' }'
         ),
     baca.suite(
         baca.pitches(
@@ -65,4 +80,25 @@ maker(
             zero_padding=True,
             ),
         ),
+    baca.text_spanner(
+        'RH vibr. strettiss. -> RH NV',
+        abjad.tweak(8.25).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        lilypond_id=1,
+        selector=baca.leaves()[-2:],
+        ),
+    baca.text_spanner(
+        'non scr. -> scr. poss.',
+        abjad.tweak(9.25).bound_details__right__padding,
+        abjad.tweak(3).staff_padding,
+        selector=baca.leaves()[-2:],
+        ),
+    baca.tuplet_bracket_padding(1.75),
+    )
+
+maker(
+    'vc',
+    baca.dls_staff_padding(5),
+    #baca.stem_down(),
+    #baca.tuplet_bracket_down(),
     )
