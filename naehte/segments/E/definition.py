@@ -144,9 +144,11 @@ maker(
         bookend=False,
         ),
     baca.text_spanner(
-        'I / II (trem.) mod. -> strett.',
+        'I / II (trem.) mod. -> strett. =|',
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[-1:].rleak(),
+        bookend=False,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     )
 
@@ -164,21 +166,40 @@ maker(
             '<D4 Bb4> <C4 Ab4>',
             allow_repeats=True,
             ),
-        baca.glissando(),
+        baca.glissando(
+            selector=baca.leaves().rleak(),
+            ),
+        measures=(3, 4),
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
+        measures=(3, 4),
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
     ('vc', 4),
-    baca.pitch('Eb4'),
-    baca.rhythm("{ c'2 }")
+    baca.hairpin(
+        '> ppppp',
+        selector=baca.leaves().rleak(),
+        ),
+    baca.rhythm("{ c'2 }"),
+    baca.text_spanner(
+        'spazz. strett. -> larg.',
+        abjad.tweak(5.75).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves().lleak().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 5),
+    baca.pitch('Gb2'),
+    baca.rhythm("{ c'2. }"),
     )
 
 maker(
