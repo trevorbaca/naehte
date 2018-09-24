@@ -159,7 +159,7 @@ E_Cello_Music_Voice = {                                                        %
             \once \override NoteHead.extra-offset = #'(-1.25 . 0)              %! baca_note_head_extra_offset:OverrideCommand(1)
             \override NoteHead.X-extent = #'(0 . 0)                            %! baca_note_head_x_extent_zero:OverrideCommand(1)
             \override TupletBracket.padding = #1.75                            %! baca_tuplet_bracket_down:OverrideCommand(1)
-            \override DynamicLineSpanner.staff-padding = #'6                   %! baca_dls_staff_padding:OverrideCommand(1)
+            \override DynamicLineSpanner.staff-padding = #'8                   %! baca_dls_staff_padding:OverrideCommand(1)
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
             \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
         %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
@@ -381,7 +381,8 @@ E_Cello_Music_Voice = {                                                        %
 
     }
 
-    {
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 3/4 {
 
         % [E Cello_Music_Voice measure 33 / measure 5]                         %! _comment_measure_numbers
         gf,!2.
@@ -389,6 +390,30 @@ E_Cello_Music_Voice = {                                                        %
         \ppppp                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
+
+        \times 2/3 {
+
+            \once \override Glissando.bound-details.left.X-offset = 4          %! baca_literal:IndicatorCommand
+            \override Stem.direction = #down                                   %! baca_stem_down:OverrideCommand(1)
+            \once \override TupletBracket.padding = #1.5                       %! baca_tuplet_bracket_down:OverrideCommand(1)
+            gf,!8
+            [
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            \once \override Glissando.bound-details.right.end-on-accidental = ##f %! baca_literal:IndicatorCommand
+            \once \override NoteHead.transparent = ##t                         %! baca_note_head_transparent:OverrideCommand(1)
+            \once \override NoteHead.X-extent = #'(0 . 0)                      %! baca_note_head_x_extent_zero:OverrideCommand(1)
+            g'8
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            \once \override Accidental.extra-offset = #'(-0.25 . 0)            %! baca_accidental_extra_offset:OverrideCommand(1)
+            gf,!8
+            ]
+            \revert Stem.direction                                             %! baca_stem_down:OverrideCommand(2)
+
+        }
 
     }
 
