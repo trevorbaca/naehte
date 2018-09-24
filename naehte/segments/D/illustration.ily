@@ -114,23 +114,39 @@ D_Cello_Music_Voice = {                                                        %
     {
 
         % [D Cello_Music_Voice measure 24 / measure 1]                         %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
         \clef "bass"                                                           %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
         \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
-        c'4
-        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+        cs!8
         ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
-        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \naehte-circles-markup                %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
-        c'16
-        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
-        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+        cs!2
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \baca-effort-f                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "spazz. larg."                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "strett."                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #8.25                             %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
     }
 
@@ -139,22 +155,25 @@ D_Cello_Music_Voice = {                                                        %
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
+            % [D Cello_Music_Voice measure 25 / measure 2]                     %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 5/16                                                         %! _make_multimeasure_rest_container
+            c'1 * 5/8                                                          %! _make_multimeasure_rest_container
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            R1 * 5/16                                                          %! _make_multimeasure_rest_container
+            % [D Cello_Rest_Voice measure 25 / measure 2]                      %! _comment_measure_numbers
+            R1 * 5/8                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [D Cello_Music_Voice measure 25 / measure 2]                             %! _comment_measure_numbers
-    R1 * 5/8                                                                   %! _make_measure_silences
 
     % [D Cello_Music_Voice measure 26 / measure 3]                             %! _comment_measure_numbers
     R1 * 5/8                                                                   %! _make_measure_silences
@@ -164,6 +183,7 @@ D_Cello_Music_Voice = {                                                        %
 
     % [D Cello_Music_Voice measure 28 / measure 5]                             %! _comment_measure_numbers
     R1 * 9/4                                                                   %! _make_measure_silences
+    \revert DynamicLineSpanner.staff-padding                                   %! baca_dls_staff_padding:OverrideCommand(2)
 
 }                                                                              %! extern
 
