@@ -84,30 +84,48 @@ maker(
 
 maker(
     ('vc', 2),
-    baca.pitch('C#3'),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[:2],
+        ),
+    baca.hairpin(
+        '<| f',
+        selector=baca.leaves()[:2],
+        ),
     baca.suite(
-        baca.rhythm(r"{ c'2 c'8 }"),
+        baca.pitches('C#3 C#3 E4 D3 E3', allow_repeats=True),
+        baca.new(
+            baca.glissando(
+                zero_padding=True,
+                ),
+            baca.note_head_style_harmonic(),
+            selector=baca.leaves()[1:].rleak(),
+            ),
+        ),
+    baca.suite(
+        baca.rhythm(r"{ c'2 c'32 [ c' c' c' ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie_to(),
-            selector=baca.leaves(),
+            selector=baca.leaf(0),
             ),
         ),
-    baca.text_spanner(
-        r'RH NV -> RH vib.iss.',
-        abjad.tweak(6).bound_details__right__padding,
-        abjad.tweak(8).staff_padding,
-        lilypond_id=1,
-        ),
-    baca.text_spanner(
-        r'scr. -> non scr.',
-        abjad.tweak(4).bound_details__right__padding,
-        abjad.tweak(5.5).staff_padding,
+    baca.new(
+        baca.text_spanner(
+            r'RH NV -> RH vib.iss.',
+            abjad.tweak(8).staff_padding,
+            lilypond_id=1,
+            ),
+        baca.text_spanner(
+            r'scr. -> non scr.',
+            abjad.tweak(5.5).staff_padding,
+            ),
+        selector=baca.leaves()[:2],
         ),
     )
 
 maker(
     ('vc', 3),
+    baca.pitch('D3'),
     baca.rhythm(r"{ c'2 c'8 }"),
     )
 
