@@ -149,7 +149,13 @@ maker(
 maker(
     ('vc', 4),
     baca.pitch('C#3'),
-    baca.rhythm(r"{ c'4 c'1.. }"),
+    baca.rhythm(r"{ c'4 c'1. c'4 }"),
+    )
+
+maker(
+    ('vc', 5),
+    baca.pitch('C#3'),
+    baca.rhythm(r"{ c'4 c'1.. c'4 }"),
     )
 
 maker(
