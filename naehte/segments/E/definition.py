@@ -198,6 +198,11 @@ maker(
 
 maker(
     ('vc', 5),
+    baca.hairpin(
+        '<| p |> pp',
+        piece_selector=baca.lparts([2, 3]),
+        selector=baca.leaves().rleak(),
+        ),
     baca.suite(
         baca.pitches(
             'Gb2 Gb2 G4 Gb2',
@@ -235,6 +240,15 @@ maker(
         ),
     baca.rhythm(
         r"\times 3/4 { c'2. \times 2/3 { c'8 [ c' c' ] } }"
+        ),
+    baca.text_spanner(
+        r'XFB =| \naehte-circles-markup =| spz. =|',
+        (abjad.tweak(4.25).bound_details__right__padding, -1),
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 2, 2]),
+        selector=baca.leaves().rleak(),
         ),
     )
 
