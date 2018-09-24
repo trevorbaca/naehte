@@ -198,11 +198,47 @@ maker(
 
 maker(
     ('vc', 5),
-    baca.pitch('Gb2'),
-    baca.rhythm("{ c'2. }"),
+    baca.suite(
+        baca.pitches(
+            'Gb2 Gb2 G4 Gb2',
+            allow_repeats=True,
+            ),
+        baca.accidental_extra_offset(
+            (-0.25, 0),
+            selector=baca.leaf(-1),
+            ),
+        baca.glissando(
+            selector=baca.leaves()[-3:],
+            zero_padding=True,
+            ),
+        baca.literal(
+            r'\once \override Glissando.bound-details.left.X-offset = 4',
+            selector=baca.leaf(-3),
+            ),
+        baca.literal(
+            r'\once \override Glissando.bound-details.right.end-on-accidental = ##f',
+            selector=baca.leaf(-2),
+            ),
+        baca.note_head_transparent(
+            selector=baca.leaf(-2),
+            ),
+        baca.note_head_x_extent_zero(
+            selector=baca.leaves()[-2:-1],
+            ),
+        baca.stem_down(
+            selector=baca.leaves()[-3:],
+            ),
+        baca.tuplet_bracket_padding(
+            1.5,
+            selector=baca.leaf(-3),
+            ),
+        ),
+    baca.rhythm(
+        r"\times 3/4 { c'2. \times 2/3 { c'8 [ c' c' ] } }"
+        ),
     )
 
 maker(
     'vc',
-    baca.dls_staff_padding(6),
+    baca.dls_staff_padding(8),
     )
