@@ -126,13 +126,40 @@ maker(
             ),
         ),
     baca.text_spanner(
-        'non scr. -> scr.',
+        'non scr. -> scr. =|',
         abjad.tweak(8).staff_padding,
+        bookend=False,
         lilypond_id=1,
+        piece_selector=baca.lparts([2, 2]),
+        measures=(3, 4),
         ),
     baca.text_spanner(
         'vib.tiss. -> NV',
         abjad.tweak(5.5).staff_padding,
+        ),
+    )
+
+maker(
+    ('vc', 4),
+    baca.hairpin(
+        '|> pp',
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c'4. }"),
+        baca.pitch('D#3'),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaves(),
+            ),
+        ),
+    baca.text_spanner(
+        r'\naehte-very-wide-circles-markup =|',
+        abjad.tweak(4.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves()[-1:].rleak(),
         ),
     )
 
