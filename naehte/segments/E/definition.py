@@ -152,8 +152,33 @@ maker(
 
 maker(
     ('vc', 3),
+    baca.hairpin(
+        '> pppp < ppp',
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.rhythm("{ c'2 c'8 }"),
+    baca.stem_tremolo(),
+    baca.suite(
+        baca.pitches(
+            '<D4 Bb4> <C4 Ab4>',
+            allow_repeats=True,
+            ),
+        baca.glissando(),
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(10.5).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 4),
     baca.pitch('Eb4'),
-    baca.rhythm("{ c'2 c'8 }")
+    baca.rhythm("{ c'2 }")
     )
 
 maker(
