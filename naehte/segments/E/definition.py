@@ -258,8 +258,13 @@ maker(
         piece_selector=baca.lparts([1, 2]),
         ),
     baca.pitch('A3'),
-    baca.rhythm(
-        r"\times 4/5 { c'4. c'8 [ c' ] }",
+    baca.suite(
+        baca.rhythm(
+            r"\times 4/5 { c'4. c'8 [ c' ] }",
+            ),
+        baca.repeat_tie_to(
+            selector=baca.leaves()[-2:],
+            ),
         ),
     baca.text_spanner(
         r'non scr. -> scr. =|',
