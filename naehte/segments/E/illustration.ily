@@ -159,7 +159,7 @@ E_Cello_Music_Voice = {                                                        %
             \once \override NoteHead.extra-offset = #'(-1.25 . 0)              %! baca_note_head_extra_offset:OverrideCommand(1)
             \override NoteHead.X-extent = #'(0 . 0)                            %! baca_note_head_x_extent_zero:OverrideCommand(1)
             \override TupletBracket.padding = #1.75                            %! baca_tuplet_bracket_down:OverrideCommand(1)
-            \override DynamicLineSpanner.staff-padding = #'5                   %! baca_dls_staff_padding:OverrideCommand(1)
+            \override DynamicLineSpanner.staff-padding = #'6                   %! baca_dls_staff_padding:OverrideCommand(1)
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
             \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
         %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
@@ -267,44 +267,83 @@ E_Cello_Music_Voice = {                                                        %
         \times 3/5 {
 
             % [E Cello_Music_Voice measure 30 / measure 2]                     %! _comment_measure_numbers
+            \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             <f, df!>4
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
+            \once \override NoteHead.style = #'harmonic                        %! baca_note_head_style_harmonic:OverrideCommand(1)
             <e c'>4
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
 
+            \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             <b, g>4
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
 
+            \once \override NoteHead.style = #'harmonic                        %! baca_note_head_style_harmonic:OverrideCommand(1)
             <a f'>4
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
 
+            \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             <e c'>4
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
 
         }
 
+        \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
         <d' bf'!>1
+        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "I / II (trem.) mod."                   %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "strett."                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
     }
 
     {
 
         % [E Cello_Music_Voice measure 31 / measure 3]                         %! _comment_measure_numbers
-        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
-        c'2
-        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
-        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+        ef'!2
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
 
-        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
-        c'8
-        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
-        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+        ef'!8
 
     }
 

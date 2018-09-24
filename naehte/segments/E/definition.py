@@ -98,6 +98,29 @@ maker(
 
 maker(
     ('vc', 2),
+    baca.hairpin(
+        'p > ppp < pp',
+        piece_selector=baca.lparts([5, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.note_head_style_harmonic_black(
+        selector=baca.leaf(0),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaf(1),
+        ),
+    baca.note_head_style_harmonic_black(
+        selector=baca.leaf(2),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaf(3),
+        ),
+    baca.note_head_style_harmonic_black(
+        selector=baca.leaf(4),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaf(5),
+        ),
     baca.rhythm(
         '{'
         r" \times 3/5 { c'4 c' c' c' c' }"
@@ -108,21 +131,32 @@ maker(
         baca.pitches(
             '<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>',
             ),
-        baca.glissando(
+        baca.finger_pressure_transition(
             selector=baca.leaves(),
-            zero_padding=True,
             ),
+        ),
+    baca.stem_tremolo(
+        selector=baca.leaf(-1),
+        ),
+    baca.text_spanner(
+        'XFB =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        ),
+    baca.text_spanner(
+        'I / II (trem.) mod. -> strett.',
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[-1:].rleak(),
         ),
     )
 
 maker(
     ('vc', 3),
+    baca.pitch('Eb4'),
     baca.rhythm("{ c'2 c'8 }")
     )
 
 maker(
     'vc',
-    baca.dls_staff_padding(5),
-    #baca.stem_down(),
-    #baca.tuplet_bracket_down(),
+    baca.dls_staff_padding(6),
     )
