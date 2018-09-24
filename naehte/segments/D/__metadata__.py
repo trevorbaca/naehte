@@ -66,7 +66,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Global_Skips',
                                 prototype='abjad.TimeSignature',
-                                value='9/4',
+                                value='8/4',
                                 ),
                             ],
                         ),
@@ -85,7 +85,7 @@ metadata = abjad.OrderedDict(
             ),
         (
             'time_signatures',
-            ['5/8', '5/8', '5/8', '8/4', '9/4'],
+            ['5/8', '5/8', '5/8', '8/4', '8/4'],
             ),
         ]
     )

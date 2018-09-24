@@ -17,7 +17,7 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (5, 8), (5, 8), (5, 8),
-        (8, 4), (9, 4),
+        (8, 4), (8, 4),
         ],
     validate_measure_count=5,
     )
@@ -118,11 +118,12 @@ maker(
         selector=baca.rleaves(),
         ),
     baca.text_spanner(
-        r'scr. -> non scr. -> XFB ->',
+        r'scr. -> non scr. -> XFB -> scr. =|',
         abjad.tweak(5.5).staff_padding,
+        bookend=False,
         measures=(2, 3),
-        piece_selector=baca.lparts([1, 5, 2]),
-        selector=baca.rleaves(),
+        piece_selector=baca.lparts([1, 5, 1, 2]),
+        selector=baca.rleaves().rleak(),
         ),
     )
 
@@ -149,13 +150,13 @@ maker(
 maker(
     ('vc', 4),
     baca.pitch('C#3'),
-    baca.rhythm(r"{ c'4 c'1. c'4 }"),
+    baca.rhythm(r"{ c'4 c'2.. c' }"),
     )
 
 maker(
     ('vc', 5),
     baca.pitch('C#3'),
-    baca.rhythm(r"{ c'4 c'1.. c'4 }"),
+    baca.rhythm(r"{ c'1 c' }"),
     )
 
 maker(

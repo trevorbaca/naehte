@@ -13,7 +13,7 @@ D_Global_Rests = {                                                             %
     R1 * 2                                                                     %! _make_global_rests
 
     % [D Global_Rests measure 28 / measure 5]                                  %! _comment_measure_numbers
-    R1 * 9/4                                                                   %! _make_global_rests
+    R1 * 2                                                                     %! _make_global_rests
 
 }                                                                              %! extern
 
@@ -96,9 +96,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 28 / measure 5]                                  %! _comment_measure_numbers
-    \time 9/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 9/4                                                                   %! _make_global_skips(1)
+    s1 * 2                                                                     %! _make_global_skips(1)
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
@@ -235,9 +233,6 @@ D_Cello_Music_Voice = {                                                        %
         \stopTrillSpan                                                         %! baca_trill_spanner:SpannerIndicatorCommand(2)
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "XFB"                                   %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-right-text "scr."                                 %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.left.padding #0                                 %! baca_glissando
@@ -249,22 +244,25 @@ D_Cello_Music_Voice = {                                                        %
 
         % [D Cello_Music_Voice measure 27 / measure 4]                         %! _comment_measure_numbers
         cs!4
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
-        cs!1.
+        cs!2..
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
 
-        cs!4
+        cs!2..
 
     }
 
     {
 
         % [D Cello_Music_Voice measure 28 / measure 5]                         %! _comment_measure_numbers
-        cs!4
+        cs!1
 
-        cs!1..
-
-        cs!4
+        cs!1
         \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
