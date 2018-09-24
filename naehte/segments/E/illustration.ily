@@ -261,32 +261,73 @@ E_Cello_Music_Voice = {                                                        %
 
     }
 
+    {
+
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 3/5 {
+
+            % [E Cello_Music_Voice measure 30 / measure 2]                     %! _comment_measure_numbers
+            <f, df!>4
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            <e c'>4
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            <b, g>4
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            <a f'>4
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+            <e c'>4
+            - \abjad-zero-padding-glissando                                    %! baca_glissando
+            \glissando                                                         %! baca_glissando
+
+        }
+
+        <d' bf'!>1
+
+    }
+
+    {
+
+        % [E Cello_Music_Voice measure 31 / measure 3]                         %! _comment_measure_numbers
+        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
+        c'2
+        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
+        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+
+        \baca-repeat-pitch-class-warning                                       %! _color_repeat_pitch_classes_
+        c'8
+        - \tweak color #red                                                    %! _color_repeat_pitch_classes_
+        ^ \markup { @ }                                                        %! _color_repeat_pitch_classes_
+
+    }
+
     <<                                                                         %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [E Cello_Music_Voice measure 30 / measure 2]                     %! _comment_measure_numbers
+            % [E Cello_Music_Voice measure 32 / measure 4]                     %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 7/4                                                          %! _make_multimeasure_rest_container
+            c'1 * 1/2                                                          %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [E Cello_Rest_Voice measure 30 / measure 2]                      %! _comment_measure_numbers
-            R1 * 7/4                                                           %! _make_multimeasure_rest_container
+            % [E Cello_Rest_Voice measure 32 / measure 4]                      %! _comment_measure_numbers
+            R1 * 1/2                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [E Cello_Music_Voice measure 31 / measure 3]                             %! _comment_measure_numbers
-    R1 * 5/8                                                                   %! _make_measure_silences
-
-    % [E Cello_Music_Voice measure 32 / measure 4]                             %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _make_measure_silences
 
     % [E Cello_Music_Voice measure 33 / measure 5]                             %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _make_measure_silences

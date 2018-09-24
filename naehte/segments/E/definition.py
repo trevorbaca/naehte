@@ -97,6 +97,30 @@ maker(
     )
 
 maker(
+    ('vc', 2),
+    baca.rhythm(
+        '{'
+        r" \times 3/5 { c'4 c' c' c' c' }"
+        " c'1"
+        ' }'
+        ),
+    baca.suite(
+        baca.pitches(
+            '<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>',
+            ),
+        baca.glissando(
+            selector=baca.leaves(),
+            zero_padding=True,
+            ),
+        ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.rhythm("{ c'2 c'8 }")
+    )
+
+maker(
     'vc',
     baca.dls_staff_padding(5),
     #baca.stem_down(),
