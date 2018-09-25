@@ -13,11 +13,12 @@ metadata = abjad.OrderedDict(
                 'Music_Context',
                 'Cello_Music_Staff',
                 'Cello_Music_Voice',
+                'Cello_Rest_Voice',
                 ],
             ),
         (
             'bol_measure_numbers',
-            [46, 47, 49],
+            [46, 48],
             ),
         (
             'fermata_measure_numbers',
@@ -79,7 +80,8 @@ metadata = abjad.OrderedDict(
             'sounds_during_segment',
             abjad.OrderedDict(
                 [
-                    ('Cello_Music_Voice', False),
+                    ('Cello_Music_Voice', True),
+                    ('Cello_Rest_Voice', False),
                     ]
                 ),
             ),
