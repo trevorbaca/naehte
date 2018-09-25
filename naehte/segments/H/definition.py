@@ -14,6 +14,7 @@ maker = baca.SegmentMaker(
         abjad.Tags().LOCAL_MEASURE_NUMBER_MARKUP,
         abjad.Tags().STAGE_NUMBER_MARKUP,
         ],
+    last_segment=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (9, 4), (9, 4),
@@ -74,6 +75,26 @@ maker(
         abjad.tweak(3).staff_padding,
         bookend=False,
         selector=baca.leaves()[-2:],
+        ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.breathe(),
+    baca.hairpin(
+        'p <| mp',
+        ),
+    baca.suite(
+        baca.rhythm("{ c'2 c'8 }"),
+        baca.pitches('C2 B1'),
+        baca.glissando(),
+        ),
+    baca.text_spanner(
+        'XFB =|',
+        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.tweak(3).staff_padding,
+        bookend=False,
+        selector=baca.leaves().rleak(),
         ),
     )
 
