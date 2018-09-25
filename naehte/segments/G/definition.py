@@ -25,8 +25,8 @@ maker = baca.SegmentMaker(
 
 maker(
     'Global_Skips',
-    baca.metronome_mark('52', selector=baca.leaf(1 - 1)),
-    baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(1 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(2 - 1)),
+    baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(2 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
     baca.rehearsal_mark(
         'G',
@@ -170,5 +170,35 @@ maker(
         abjad.tweak(5.5).staff_padding,
         abjad.tweak("#'trill").style,
         bookend=False,
+        ),
+    )
+
+maker(
+    ('vc', 5),
+    baca.hairpin(
+        '|> ppp <| mf',
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().lleak(),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'2.. c'8 }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_to(),
+            selector=baca.leaf(-1),
+            ),
+        baca.pitch('Eb2'),
+        ),
+    baca.text_spanner(
+        'RH vib. poss. -> NV',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        'non scr. -> scr. =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
         ),
     )
