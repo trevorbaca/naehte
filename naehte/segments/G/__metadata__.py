@@ -13,7 +13,6 @@ metadata = abjad.OrderedDict(
                 'Music_Context',
                 'Cello_Music_Staff',
                 'Cello_Music_Voice',
-                'Cello_Rest_Voice',
                 ],
             ),
         (
@@ -52,7 +51,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='mf',
+                                value='ppp',
                                 ),
                             ],
                         ),
@@ -81,7 +80,6 @@ metadata = abjad.OrderedDict(
             abjad.OrderedDict(
                 [
                     ('Cello_Music_Voice', True),
-                    ('Cello_Rest_Voice', False),
                     ]
                 ),
             ),

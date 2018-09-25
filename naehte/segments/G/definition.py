@@ -180,6 +180,9 @@ maker(
         piece_selector=baca.lparts([1, 2]),
         selector=baca.leaves().lleak(),
         ),
+    baca.glissando(
+        selector=baca.leaves()[:1].lleak(),
+        ),
     baca.suite(
         baca.rhythm("{ c'2.. c'8 }"),
         baca.new(
@@ -195,10 +198,53 @@ maker(
         lilypond_id=1,
         ),
     baca.text_spanner(
-        'non scr. -> scr. =|',
+        'non scr. -> scr. -> XFB =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        piece_selector=baca.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        piece_selector=baca.lparts([1, 1, 3]),
+        selector=baca.leaves().rleak().rleak().rleak(),
         ),
+    )
+
+maker(
+    ('vc', 6),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[:1].lleak(),
+        ),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[-2:],
+        ),
+    baca.hairpin(
+        '|> ppp <| p |> ppp',
+        piece_selector=baca.lparts([1, 1, 2]),
+        selector=baca.leaves().lleak(),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaves()[:2],
+        ),
+    baca.note_head_style_harmonic_black(
+        selector=baca.leaves()[-1:],
+        ),
+    baca.stem_tremolo(
+        selector=baca.leaf(-1),
+        ),
+    baca.suite(
+        baca.rhythm(r"\times 7/6 { c'2. c'2 c'4 }"),
+        baca.pitches(
+            'D2 <D2 Bb2> D2',
+            allow_repeats=True,
+            ),
+        ),
+    baca.text_spanner(
+        'I / II larg. -> strett.',
+        abjad.tweak(7.25).bound_details__right__padding,
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        selector=baca.leaves()[-2:],
+        ),
+    )
+
+maker(
+    'vc',
+    baca.dls_staff_padding(7),
     )
