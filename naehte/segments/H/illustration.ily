@@ -220,34 +220,116 @@ H_Cello_Music_Voice = {                                                        %
 
     }
 
-    <<                                                                         %! _make_multimeasure_rest_container
+    {
 
-        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
 
             % [H Cello_Music_Voice measure 49 / measure 4]                     %! _comment_measure_numbers
-            \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \once \override DynamicText.self-alignment-X = #left               %! baca_dynamic_text_self_alignment_x:OverrideCommand(1)
+            <f c'>2.
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \baca-pppp-sempre                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "II / III mod."                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #12.5                                       %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanTwo                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "non. scr"                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #9                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-triple-diamond-parenthesized-top-markup %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.left.padding #-0.5                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #1.25                         %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak style #'trill                                             %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
-        }                                                                      %! _make_multimeasure_rest_container
+            <f c'>8
+            \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "scr."                              %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #9                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-damp-markup                 %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #2                            %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
-        \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+        }
 
-            % [H Cello_Rest_Voice measure 49 / measure 4]                      %! _comment_measure_numbers
-            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
 
-        }                                                                      %! _make_multimeasure_rest_container
+            % [H Cello_Music_Voice measure 50 / measure 5]                     %! _comment_measure_numbers
+            <f c'>2.
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "II / III mod."                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #12.5                                       %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanTwo                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "non scr."                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #9                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.left.padding #-0.5                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #1.25                         %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak style #'trill                                             %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
-    >>                                                                         %! _make_multimeasure_rest_container
+            <f c'>8
+            \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "scr."                              %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #9                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-double-diamond-markup       %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
-    % [H Cello_Music_Voice measure 50 / measure 5]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+        }
 
-    % [H Cello_Music_Voice measure 51 / measure 6]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
-    \revert DynamicLineSpanner.staff-padding                                   %! baca_dls_staff_padding:OverrideCommand(2)
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
+
+            % [H Cello_Music_Voice measure 51 / measure 6]                     %! _comment_measure_numbers
+            ef!2.
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-invisible-line                                            %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "non scr."                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #9                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+
+            r8
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+
+        }
+
+    }
 
 }                                                                              %! extern
 

@@ -99,6 +99,73 @@ maker(
     )
 
 maker(
+    ('vc', (4, 6)),
+    baca.dynamic('pppp-sempre'),
+    baca.dynamic_text_self_alignment_x(
+        abjad.Left,
+        ),
+    baca.suite(
+        baca.rhythm(
+            '{'
+            r" \times 6/7 { c'2. c'8 }"
+            r" \times 6/7 { c'2. c'8 }"
+            r" \times 6/7 { c'2. r8 }"
+            ' }'
+            ),
+        baca.pitches(
+            '<F3 C4>',
+            allow_repeats=True,
+            selector=baca.pleaves()[:-1],
+            ),
+        baca.pitch(
+            'Eb3',
+            selector=baca.pleaf(-1),
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.pleaves()[-2:],
+            ),
+        ),
+    baca.text_spanner(
+        r'II / III mod. =|',
+        abjad.tweak(12.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[:2],
+        ),
+    baca.text_spanner(
+        r'II / III mod. =|',
+        abjad.tweak(12.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        selector=baca.leaves()[2:4],
+        ),
+    baca.text_spanner(
+        r'non. scr -> scr. -> non scr. -> scr. -> non scr. ||',
+        abjad.tweak(9).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
+        ),
+    baca.text_spanner(
+        r'\baca-triple-diamond-parenthesized-top-markup ->'
+        r' \baca-damp-markup =|' 
+        r' \baca-double-diamond-parenthesized-top-markup ->'
+        r' \baca-double-diamond-markup =|'
+        ' XFB =|',
+        (abjad.tweak(-0.5).bound_details__left__padding, 0),
+        (abjad.tweak(1.25).bound_details__right__padding, 0),
+        (abjad.tweak("#'trill").style, 0),
+        (abjad.tweak(2).bound_details__right__padding, 1),
+        (abjad.tweak(-0.5).bound_details__left__padding, 2),
+        (abjad.tweak(1.25).bound_details__right__padding, 2),
+        (abjad.tweak("#'trill").style, 2),
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
+        ),
+    )
+
+maker(
     'vc',
     baca.dls_staff_padding(6),
     )
