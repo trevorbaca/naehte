@@ -138,3 +138,37 @@ maker(
         selector=baca.leaves()[-1:].rleak(),
         ),
     )
+
+maker(
+    ('vc', 4),
+    baca.hairpin(
+        '|> ppp <| fff',
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().lleak(),
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaf(0),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c'8 }"),
+        baca.pitches(
+            '<E2 C3> E2',
+            allow_repeats=True,
+            ),
+        baca.repeat_tie_to(
+            selector=baca.leaf(-1),
+            ),
+        ),
+    baca.text_spanner(
+        'I / II str. =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        r'\baca-double-diamond-parenthesized-top-markup ->',
+        abjad.tweak(5.5).staff_padding,
+        abjad.tweak("#'trill").style,
+        bookend=False,
+        ),
+    )
