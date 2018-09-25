@@ -79,6 +79,9 @@ maker(
 
 maker(
     ('vc', 2),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[:1].lleak(),
+        ),
     baca.hairpin(
         '|> ppp <| p',
         piece_selector=baca.lparts([1, 2]),
@@ -88,9 +91,50 @@ maker(
         selector=baca.leaf(0),
         ),
     baca.pitch('E2'),
-    baca.rhythm("{ c'4 c'8 }"),
+    baca.suite(
+        baca.rhythm("{ c'4 c'8 }"),
+        baca.repeat_tie_to(
+            selector=baca.leaf(-1),
+            ),
+        ),
     baca.trill_spanner(
         'P1',
         selector=baca.leaves()[:2],
+        ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.hairpin(
+        '|> ppp <| fff',
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().lleak(),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c'8 }"),
+        baca.pitches(
+            '<E2 C3> E2',
+            allow_repeats=True,
+            ),
+        baca.repeat_tie_to(
+            selector=baca.leaf(-1),
+            ),
+        ),
+    baca.text_spanner(
+        'I / II str. =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        r'\baca-damp-markup =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        ),
+    baca.text_spanner(
+        r'scr. =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves()[-1:].rleak(),
         ),
     )
