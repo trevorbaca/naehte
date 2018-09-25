@@ -13,6 +13,7 @@ metadata = abjad.OrderedDict(
                 'Music_Context',
                 'Cello_Music_Staff',
                 'Cello_Music_Voice',
+                'Cello_Rest_Voice',
                 ],
             ),
         (
@@ -79,13 +80,14 @@ metadata = abjad.OrderedDict(
             'sounds_during_segment',
             abjad.OrderedDict(
                 [
-                    ('Cello_Music_Voice', False),
+                    ('Cello_Music_Voice', True),
+                    ('Cello_Rest_Voice', False),
                     ]
                 ),
             ),
         (
             'time_signatures',
-            ['8/4', '3/8', '3/8', '3/8', '4/4', '7/4'],
+            ['9/4', '3/8', '3/8', '3/8', '4/4', '7/4'],
             ),
         ]
     )

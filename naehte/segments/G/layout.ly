@@ -1,4 +1,4 @@
-% time_signatures = ['8/4', '3/8', '3/8', '3/8', '4/4', '7/4']
+% time_signatures = ['9/4', '3/8', '3/8', '3/8', '4/4', '7/4']
 % measure_count = 6
 
 
@@ -22,7 +22,7 @@
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
             \baca-lbsd #40 #'(16)                                                        %! BREAK:IndicatorCommand
             \pageBreak                                                                   %! BREAK:IndicatorCommand
-            s1 * 2                                                                       %! _make_global_skips(1)
+            s1 * 9/4                                                                     %! _make_global_skips(1)
         %@% - \baca-start-spm-left-only "[1/32]"                                         %! SPACING_MARKUP
         %@% \bacaStartTextSpanSPM                                                        %! SPACING_MARKUP
 
