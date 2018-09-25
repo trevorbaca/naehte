@@ -302,7 +302,7 @@ maker(
         baca.pitch('<G3 D4>'),
         ),
     baca.text_spanner(
-        r'\baca-diamond-parenthesized-double-diamond-markup ->',
+        r'\baca-double-diamond-parenthesized-top-markup ->',
         abjad.tweak(10.5).staff_padding,
         abjad.tweak("#'trill").style,
         bookend=False,
