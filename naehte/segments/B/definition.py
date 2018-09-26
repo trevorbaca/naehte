@@ -21,9 +21,10 @@ maker = baca.SegmentMaker(
         (2, 4), (1, 4), (5, 4),
         (1, 4),
         (10, 4),
+        (1, 4),
         (7, 8),
         ],
-    validate_measure_count=10,
+    validate_measure_count=11,
     )
 
 maker(
@@ -44,6 +45,7 @@ maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(6 - 1)),
     baca.global_fermata('fermata', selector=baca.leaf(8 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(10 - 1)),
     )
 
 maker(
@@ -347,6 +349,8 @@ maker(
     baca.dls_staff_padding(5),
     baca.hairpin(
         'ppp -- niente',
+        abjad.tweak(True).to_barline,
+        selector=baca.leaves().rleak(),
         ),
     baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' }"),
     baca.suite(
@@ -359,14 +363,15 @@ maker(
         ),
     baca.text_spanner(
         r'XFB =|',
-        #abjad.tweak(2).bound_details__right__padding,
+        abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
+        bookend=False,
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
-    ('vc', 10),
+    ('vc', 11),
     baca.clef('bass'),
     baca.hairpin(
         'o<| fff',
