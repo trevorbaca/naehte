@@ -330,6 +330,7 @@ B_Cello_Music_Voice = {                                                        %
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
                 \override Beam.positions = #'(-5.5 . -5.5)                     %! baca_beam_positions:OverrideCommand(1)
+                \once \override TupletBracket.padding = #1.75                  %! baca_tuplet_bracket_down:OverrideCommand(1)
                 <f a>16
                 :64                                                            %! baca_stem_tremolo:IndicatorCommand
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -340,7 +341,6 @@ B_Cello_Music_Voice = {                                                        %
                 \stopTextSpanTwo                                               %! baca_text_spanner:PiecewiseCommand(1)
                 \stopTextSpanOne                                               %! baca_text_spanner:PiecewiseCommand(1)
                 [
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
                 - \abjad-dashed-line-with-hook                                 %! baca_text_spanner:PiecewiseCommand(1)
                 - \baca-text-spanner-left-text "larg."                         %! baca_text_spanner:PiecewiseCommand(1)
@@ -359,24 +359,20 @@ B_Cello_Music_Voice = {                                                        %
                 \startTextSpan                                                 %! baca_text_spanner:PiecewiseCommand(1)
 
                 \override NoteHead.style = #'harmonic                          %! baca_note_head_style_harmonic:OverrideCommand(1)
-                d16
+                <d f>16
                 :64                                                            %! baca_stem_tremolo:IndicatorCommand
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
-                f16
+                <f a>16
                 :64                                                            %! baca_stem_tremolo:IndicatorCommand
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
-                d16
+                <d f>16
                 :64                                                            %! baca_stem_tremolo:IndicatorCommand
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
-                f16
+                <f a>16
                 :64                                                            %! baca_stem_tremolo:IndicatorCommand
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
 
                 a,16
@@ -385,7 +381,6 @@ B_Cello_Music_Voice = {                                                        %
                 \ppp                                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
                 \stopTextSpan                                                  %! baca_text_spanner:PiecewiseCommand(2)
                 ]
-                - \abjad-zero-padding-glissando                                %! baca_glissando
                 \glissando                                                     %! baca_glissando
                 \revert Beam.positions                                         %! baca_beam_positions:OverrideCommand(2)
 
@@ -394,6 +389,7 @@ B_Cello_Music_Voice = {                                                        %
             e1
             \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
             \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \glissando                                                         %! baca_glissando
             - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
@@ -439,6 +435,7 @@ B_Cello_Music_Voice = {                                                        %
 
             \once \override NoteHead.style = #'harmonic-black                  %! baca_note_head_style_harmonic_black:OverrideCommand(1)
             \override Beam.positions = #'(-5.5 . -5.5)                         %! baca_beam_positions:OverrideCommand(1)
+            \once \override TupletBracket.padding = #1.75                      %! baca_tuplet_bracket_down:OverrideCommand(1)
             <ds! fs!>16
             :64                                                                %! baca_stem_tremolo:IndicatorCommand
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -449,7 +446,6 @@ B_Cello_Music_Voice = {                                                        %
             \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(1)
             \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
             [
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
             - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "larg."                             %! baca_text_spanner:PiecewiseCommand(1)
@@ -468,26 +464,22 @@ B_Cello_Music_Voice = {                                                        %
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
             \override NoteHead.style = #'harmonic                              %! baca_note_head_style_harmonic:OverrideCommand(1)
-            b,16
+            <b, d>16
             :64                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
-            d16
+            <d f>16
             :64                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
-            b,16
+            <b, d>16
             :64                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
             e'16
             :64                                                                %! baca_stem_tremolo:IndicatorCommand
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(2)
             ]
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
 
         }
