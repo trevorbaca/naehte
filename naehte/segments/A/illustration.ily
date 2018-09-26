@@ -494,7 +494,7 @@ A_Cello_Music_Voice = {                                                        %
         - \abjad-zero-padding-glissando                                        %! baca_glissando
         \glissando                                                             %! baca_glissando
 
-        <b f'>1
+        <b fs'!>1
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)

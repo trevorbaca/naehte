@@ -20,9 +20,10 @@ maker = baca.SegmentMaker(
         (3, 4), (3, 4),
         (2, 4), (1, 4), (5, 4),
         (1, 4),
+        (10, 4),
         (7, 8),
         ],
-    validate_measure_count=9,
+    validate_measure_count=10,
     )
 
 maker(
@@ -31,6 +32,8 @@ maker(
     baca.metronome_mark('52', selector=baca.leaf(3 - 1)),
     baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(3 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(5 - 1)),
+    baca.metronome_mark('39', selector=baca.leaf(9 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(10 - 1)),
     baca.rehearsal_mark(
         'B',
         abjad.tweak((0, 12)).extra_offset,
@@ -40,7 +43,7 @@ maker(
 maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(6 - 1)),
-    baca.global_fermata('fermata', selector=baca.leaf(-2)),
+    baca.global_fermata('fermata', selector=baca.leaf(8 - 1)),
     )
 
 maker(
@@ -340,6 +343,31 @@ maker(
 
 maker(
     ('vc', 9),
+    baca.clef('treble'),
+    baca.dls_staff_padding(5),
+    baca.hairpin(
+        'ppp -- niente',
+        ),
+    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.suite(
+        baca.glissando(
+            allow_repeats=True,
+            stems=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions('D#5', 'F5'),
+        ),
+    baca.text_spanner(
+        r'XFB =|',
+        #abjad.tweak(2).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 10),
+    baca.clef('bass'),
     baca.hairpin(
         'o<| fff',
         selector=baca.leaves()[:2],
