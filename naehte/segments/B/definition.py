@@ -18,13 +18,11 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (5, 8), (5, 8),
         (3, 4), (3, 4),
-        #(2, 4), (1, 4),
-        #(7, 4),
-        (2, 4), (5, 4),
+        (2, 4), (1, 4), (5, 4),
         (1, 4),
         (7, 8),
         ],
-    validate_measure_count=8,
+    validate_measure_count=9,
     )
 
 maker(
@@ -41,7 +39,7 @@ maker(
 
 maker(
     'Global_Rests',
-    #baca.global_fermata('fermata', selector=baca.leaf(5 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(6 - 1)),
     baca.global_fermata('fermata', selector=baca.leaf(-2)),
     )
 
@@ -266,7 +264,7 @@ maker(
     )
 
 maker(
-    ('vc', 6),
+    ('vc', 7),
     baca.suite(
         baca.rhythm(
             '{'
@@ -341,7 +339,7 @@ maker(
     )
 
 maker(
-    ('vc', 8),
+    ('vc', 9),
     baca.hairpin(
         'o<| fff',
         selector=baca.leaves()[:2],
@@ -385,7 +383,7 @@ maker(
         ),
     baca.new(
         baca.dls_staff_padding(11),
-        measures=(3, 6),
+        measures=(3, 7),
         ),
     baca.new(
         baca.dls_staff_padding(7),
