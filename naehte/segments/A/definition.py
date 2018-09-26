@@ -254,7 +254,7 @@ maker(
             " }"
             ),
         baca.pitches(
-            'Db4 <B3 F4> <C4 G4> <A3 E4> <Bb3 F4>',
+            'Db4 <B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>',
             ),
         baca.new(
             baca.repeat_tie_to(),

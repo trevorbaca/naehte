@@ -29,6 +29,9 @@ B_Global_Rests = {                                                             %
     ^ \baca-fermata-markup                                                     %! baca_global_fermata:GlobalFermataCommand(1)
 
     % [B Global_Rests measure 17 / measure 9]                                  %! _comment_measure_numbers
+    R1 * 5/2                                                                   %! _make_global_rests
+
+    % [B Global_Rests measure 18 / measure 10]                                 %! _comment_measure_numbers
     R1 * 7/8                                                                   %! _make_global_rests
 
 }                                                                              %! extern
@@ -178,23 +181,55 @@ B_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
-%@% - \baca-start-lmi-both "7" "8"                                             %! LOCAL_MEASURE_INDEX_MARKUP
+%@% - \baca-start-lmi-left-only "7"                                            %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
-    - \baca-start-lmn-both "8" "9"                                             %! LOCAL_MEASURE_NUMBER_MARKUP
+    - \baca-start-lmn-left-only "8"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-both "16" "17"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "16"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-both "[0'16'']" "[0'17'']"                                %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'16'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [B Global_Skips measure 17 / measure 9]                                  %! _comment_measure_numbers
+    \time 10/4                                                                 %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+    s1 * 5/2                                                                   %! _make_global_skips(1)
+%@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
+    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
+%@% - \baca-start-lmi-both "8" "9"                                             %! LOCAL_MEASURE_INDEX_MARKUP
+%@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
+    - \baca-start-lmn-both "9" "10"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
+    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-both "17" "18"                                            %! MEASURE_NUMBER_MARKUP
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
+%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \tweak bound-details.right.text \markup {                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@%     \abjad-metronome-mark-markup #2 #0 #1 #"117"                           %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@%     }                                                                      %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue         %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+    - \tweak bound-details.right.text \markup {                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+        \with-color                                                            %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+            #(x11-color 'blue)                                                 %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+            \abjad-metronome-mark-markup #2 #0 #1 #"117"                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+        }                                                                      %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(3)
+%@% - \baca-start-ct-both "[0'17'']" "[0'32'']"                                %! CLOCK_TIME_MARKUP
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
+
+    % [B Global_Skips measure 18 / measure 10]                                 %! _comment_measure_numbers
     \time 7/8                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 7/8                                                                   %! _make_global_skips(1)
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
-    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(4)
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(4)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
     \baca-bar-line-visible                                                     %! _attach_final_bar_line
     \bar "|"                                                                   %! _attach_final_bar_line
@@ -618,18 +653,112 @@ B_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! _make_multimeasure_rest_container
 
+    {
+
+        % [B Cello_Music_Voice measure 17 / measure 9]                         %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
+    %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_17:SHIFTED_CLEF:baca_clef_shift:OverrideCommand(1)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_17:SHIFTED_CLEF:baca_clef_shift:OverrideCommand(1)
+        \clef "treble"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca_clef:IndicatorCommand
+        \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca_clef:IndicatorCommand
+        ds''!4
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak stencil #constante-hairpin                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "XFB"                                   %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.text \markup {                            %! baca_text_spanner:PiecewiseCommand(1)
+            \concat                                                            %! baca_text_spanner:PiecewiseCommand(1)
+                {                                                              %! baca_text_spanner:PiecewiseCommand(1)
+                    \raise                                                     %! baca_text_spanner:PiecewiseCommand(1)
+                        #-1                                                    %! baca_text_spanner:PiecewiseCommand(1)
+                        \draw-line                                             %! baca_text_spanner:PiecewiseCommand(1)
+                            #'(0 . -1)                                         %! baca_text_spanner:PiecewiseCommand(1)
+                    \hspace                                                    %! baca_text_spanner:PiecewiseCommand(1)
+                        #0.75                                                  %! baca_text_spanner:PiecewiseCommand(1)
+                    \general-align                                             %! baca_text_spanner:PiecewiseCommand(1)
+                        #Y                                                     %! baca_text_spanner:PiecewiseCommand(1)
+                        #1                                                     %! baca_text_spanner:PiecewiseCommand(1)
+                        \upright                                               %! baca_text_spanner:PiecewiseCommand(1)
+                            XFB                                                %! baca_text_spanner:PiecewiseCommand(1)
+                }                                                              %! baca_text_spanner:PiecewiseCommand(1)
+            }                                                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #1.25                             %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+        \hide NoteHead                                                         %! baca_glissando
+        \override Accidental.stencil = ##f                                     %! baca_glissando
+        \override NoteColumn.glissando-skip = ##t                              %! baca_glissando
+        \override NoteHead.no-ledgers = ##t                                    %! baca_glissando
+        d''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        d''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        e''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        e''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        e''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        e''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        f''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        f''4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        \revert Accidental.stencil                                             %! baca_glissando
+        \revert NoteColumn.glissando-skip                                      %! baca_glissando
+        \revert NoteHead.no-ledgers                                            %! baca_glissando
+        \undo \hide NoteHead                                                   %! baca_glissando
+        f''4
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+
+    }
+
     \tweak text #tuplet-number::calc-fraction-text
     \times 7/6 {
 
-        % [B Cello_Music_Voice measure 17 / measure 9]                         %! _comment_measure_numbers
+        % [B Cello_Music_Voice measure 18 / measure 10]                        %! _comment_measure_numbers
         \override TupletBracket.direction = #down                              %! baca_tuplet_bracket_down:OverrideCommand(1)
         \override TupletBracket.staff-padding = #2.5                           %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca_clef:IndicatorCommand
+        \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca_clef:IndicatorCommand
         c''2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
         \glissando                                                             %! baca_glissando
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
@@ -641,6 +770,7 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \revert Stem.direction                                                 %! baca_stem_down:OverrideCommand(2)
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         df,!8.
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
