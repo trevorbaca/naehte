@@ -170,7 +170,8 @@ maker(
             selector=baca.leaves()[:2],
             ),
         baca.pitches(
-            'D3 F3 D3 F3 A2 E3',
+            '<D3 F3> <F3 A3> <D3 F3> <F3 A3> A2 E3',
+            allow_repeats=True,
             selector=baca.leaves()[2:8],
             ),
         baca.note_head_style_harmonic(
@@ -184,7 +185,9 @@ maker(
             ),
         baca.glissando(
             selector=baca.leaves()[1:9],
-            zero_padding=True,
+            ),
+        baca.glissando(
+            selector=baca.leaves()[-1:].rleak(),
             ),
         ),
     baca.beam_positions(
@@ -224,6 +227,10 @@ maker(
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[1:7],
         ),
+    baca.tuplet_bracket_padding(
+        1.75,
+        selector=baca.leaf(1),
+        ),
     )
 
 maker(
@@ -246,7 +253,8 @@ maker(
             selector=baca.leaves()[:2],
             ),
         baca.pitches(
-            'B2 D3 B2 E4 C3 D5',
+            '<B2 D3> <D3 F3> <B2 D3> E4 C3 D5',
+            allow_repeats=True,
             selector=baca.leaves()[2:],
             ),
         baca.note_head_style_harmonic(
@@ -266,7 +274,6 @@ maker(
             ),
         baca.glissando(
             selector=baca.leaves()[1:-1:],
-            zero_padding=True,
             ),
         ),
     baca.beam_positions(
@@ -307,6 +314,10 @@ maker(
         abjad.tweak(2).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[1:6],
+        ),
+    baca.tuplet_bracket_padding(
+        1.75,
+        selector=baca.leaf(1),
         ),
     )
 
