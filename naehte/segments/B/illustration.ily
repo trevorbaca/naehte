@@ -394,8 +394,6 @@ B_Cello_Music_Voice = {                                                        %
             e1
             \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
             \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
-            - \abjad-zero-padding-glissando                                    %! baca_glissando
-            \glissando                                                         %! baca_glissando
             - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
@@ -404,11 +402,17 @@ B_Cello_Music_Voice = {                                                        %
             - \baca-text-spanner-left-text "T"                                 %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
             \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
 
         }
 
+    }
+
+    {
+
         % [B Cello_Music_Voice measure 13 / measure 5]                         %! _comment_measure_numbers
+        \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #'9                       %! baca_dls_staff_padding:OverrideCommand(1)
         <ds! fs!>2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -430,7 +434,6 @@ B_Cello_Music_Voice = {                                                        %
         - \baca-text-spanner-left-text "(T)"                                   %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
 
         \times 4/5 {
 
@@ -486,7 +489,6 @@ B_Cello_Music_Voice = {                                                        %
             ]
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
-            \revert Beam.positions                                             %! baca_beam_positions:OverrideCommand(2)
 
         }
 
@@ -515,6 +517,7 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
         \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
+        \revert Beam.positions                                                 %! baca_beam_positions:OverrideCommand(2)
 
         \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
         d''16

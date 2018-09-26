@@ -17,7 +17,9 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (5, 8), (5, 8),
-        (3, 4), (3, 4), (7, 4),
+        (3, 4), (3, 4),
+        #(2, 4), (1, 4),
+        (7, 4),
         (1, 4),
         (7, 8),
         ],
@@ -38,6 +40,7 @@ maker(
 
 maker(
     'Global_Rests',
+    #baca.global_fermata('fermata', selector=baca.leaf(5 - 1)),
     baca.global_fermata('fermata', selector=baca.leaf(-2)),
     )
 
@@ -147,12 +150,11 @@ maker(
     )
 
 maker(
-    ('vc', (3, 5)),
+    ('vc', (3, 4)),
     baca.suite(
         baca.rhythm(
             '{'
             r" \times 6/7 { c'2 \times 4/6 { c'16 [ c' c' c' c' c' ] } c'1 }"
-            r" c'2 \times 4/5 { c'16 [ c' c' c' c' ] } c'2... c'16"
             ' }'
             ),
         ),
@@ -160,11 +162,6 @@ maker(
         'o< f |> ppp',
         piece_selector=baca.lparts([1, 6]),
         selector=baca.leaves()[:8],
-        ),
-    baca.hairpin(
-        'ppp < f |> ppp >o niente',
-        piece_selector=baca.lparts([1, 5, 2]),
-        selector=baca.leaves()[8:],
         ),
     baca.suite(
         baca.new(
@@ -176,15 +173,6 @@ maker(
             'D3 F3 D3 F3 A2 E3',
             selector=baca.leaves()[2:8],
             ),
-        baca.new(
-            baca.pitch('<D#3 F#3>'),
-            baca.finger_pressure_transition(),
-            selector=baca.leaves()[8:10],
-            ),
-        baca.pitches(
-            'B2 D3 B2 E4 C3 D5',
-            selector=baca.leaves()[10:],
-            ),
         baca.note_head_style_harmonic(
             selector=baca.leaf(0),
             ),
@@ -194,41 +182,17 @@ maker(
         baca.note_head_style_harmonic(
             selector=baca.leaves()[2:9],
             ),
-        baca.note_head_style_harmonic_black(
-            selector=baca.leaf(9),
-            ),
-        baca.note_head_style_harmonic(
-            selector=baca.leaves()[-6:-1],
-            ),
-        baca.note_head_style_harmonic_black(
-            selector=baca.leaf(-1),
-            ),
-        baca.finger_pressure_transition(
-            selector=baca.leaves()[-2:],
-            ),
         baca.glissando(
             selector=baca.leaves()[1:9],
             zero_padding=True,
             ),
-        baca.glissando(
-            selector=baca.leaves()[-7:-1:],
-            zero_padding=True,
-            ),
         ),
     baca.beam_positions(
         -5.5,
         selector=baca.leaves()[1:7],
         ),
-    baca.beam_positions(
-        -5.5,
-        selector=baca.leaves()[9:14],
-        ),
     baca.stem_tremolo(
         selector=baca.leaves()[1:7],
-        tremolo_flags=64,
-        ),
-    baca.stem_tremolo(
-        selector=baca.leaves()[9:14],
         tremolo_flags=64,
         ),
     baca.text_spanner(
@@ -237,14 +201,81 @@ maker(
         bookend=False,
         lilypond_id=2,
         piece_selector=baca.lparts([1, 7]),
-        selector=baca.leaves()[:-1],
+        selector=baca.leaves()[:],
         ),
     baca.text_spanner(
         r'XFB =|',
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[7:9],
+        selector=baca.leaves()[-1:].rleak(),
+        ),
+    baca.text_spanner(
+        r'T -> P -> T =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 6, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        r'trem. -> larg.',
+        abjad.tweak(2.5).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[1:7],
+        ),
+    )
+
+maker(
+    ('vc', 5),
+    baca.suite(
+        baca.rhythm(
+            '{'
+            r" c'2 \times 4/5 { c'16 [ c' c' c' c' ] } c'2... c'16"
+            ' }'
+            ),
+        ),
+    baca.hairpin(
+        'ppp < f |> ppp >o niente',
+        piece_selector=baca.lparts([1, 5, 2]),
+        ),
+    baca.suite(
+        baca.new(
+            baca.pitch('<D#3 F#3>'),
+            baca.finger_pressure_transition(),
+            selector=baca.leaves()[:2],
+            ),
+        baca.pitches(
+            'B2 D3 B2 E4 C3 D5',
+            selector=baca.leaves()[2:],
+            ),
+        baca.note_head_style_harmonic(
+            selector=baca.leaf(0),
+            ),
+        baca.note_head_style_harmonic_black(
+            selector=baca.leaf(1),
+            ),
+        baca.note_head_style_harmonic(
+            selector=baca.leaves()[2:-1],
+            ),
+        baca.note_head_style_harmonic_black(
+            selector=baca.leaf(-1),
+            ),
+        baca.finger_pressure_transition(
+            selector=baca.leaves()[-2:],
+            ),
+        baca.glissando(
+            selector=baca.leaves()[1:-1:],
+            zero_padding=True,
+            ),
+        ),
+    baca.beam_positions(
+        -5.5,
+        selector=baca.leaves()[1:7],
+        ),
+    baca.stem_tremolo(
+        selector=baca.leaves()[1:6],
+        tremolo_flags=64,
         ),
     baca.text_spanner(
         r'II / III strett. -> larg. =|',
@@ -252,7 +283,7 @@ maker(
         bookend=False,
         lilypond_id=2,
         piece_selector=baca.lparts([1, 6]),
-        selector=baca.leaves()[8:15],
+        selector=baca.leaves()[:7],
         ),
     baca.text_spanner(
         r'XFB =|',
@@ -263,33 +294,19 @@ maker(
         selector=baca.leaves()[-2:].rleak(),
         ),
     baca.text_spanner(
-        r'T -> P -> T =|',
-        abjad.tweak(8).staff_padding,
-        bookend=False,
-        lilypond_id=1,
-        piece_selector=baca.lparts([1, 6, 2]),
-        selector=baca.leaves()[:9],
-        ),
-    baca.text_spanner(
         r'(T) -> P -> T =|',
         (abjad.tweak(2.75).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
         piece_selector=baca.lparts([1, 5, 3]),
-        selector=baca.leaves()[8:].rleak(),
-        ),
-    baca.text_spanner(
-        r'trem. -> larg.',
-        abjad.tweak(2.5).bound_details__right__padding,
-        abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:7],
+        selector=baca.leaves().rleak(),
         ),
     baca.text_spanner(
         r'trem. -> larg.',
         abjad.tweak(2).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[9:14],
+        selector=baca.leaves()[1:6],
         ),
     )
 
