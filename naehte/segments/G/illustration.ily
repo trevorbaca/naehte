@@ -1,21 +1,21 @@
 G_Global_Rests = {                                                             %! extern
 
-    % [G Global_Rests measure 49 / measure 1]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 53 / measure 1]                                  %! _comment_measure_numbers
     R1 * 9/4                                                                   %! _make_global_rests
 
-    % [G Global_Rests measure 50 / measure 2]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 54 / measure 2]                                  %! _comment_measure_numbers
     R1 * 3/8                                                                   %! _make_global_rests
 
-    % [G Global_Rests measure 51 / measure 3]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 55 / measure 3]                                  %! _comment_measure_numbers
     R1 * 3/8                                                                   %! _make_global_rests
 
-    % [G Global_Rests measure 52 / measure 4]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 56 / measure 4]                                  %! _comment_measure_numbers
     R1 * 3/8                                                                   %! _make_global_rests
 
-    % [G Global_Rests measure 53 / measure 5]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 57 / measure 5]                                  %! _comment_measure_numbers
     R1 * 1                                                                     %! _make_global_rests
 
-    % [G Global_Rests measure 54 / measure 6]                                  %! _comment_measure_numbers
+    % [G Global_Rests measure 58 / measure 6]                                  %! _comment_measure_numbers
     R1 * 7/4                                                                   %! _make_global_rests
 
 }                                                                              %! extern
@@ -23,7 +23,7 @@ G_Global_Rests = {                                                             %
 
 G_Global_Skips = {                                                             %! extern
 
-    % [G Global_Skips measure 49 / measure 1]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 53 / measure 1]                                  %! _comment_measure_numbers
     \time 9/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \bar ""                                                                    %! _make_global_skips(3):+SEGMENT:EMPTY_START_BAR
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
@@ -34,7 +34,7 @@ G_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
     - \baca-start-lmn-left-only "1"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-left-only "49"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "53"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
 %@% - \abjad-invisible-line                                                    %! REAPPLIED_METRONOME_MARK:_set_status_tag:_reapply_persistent_indicators(2):_attach_metronome_marks(2)
 %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"                       %! REAPPLIED_METRONOME_MARK:_set_status_tag:_reapply_persistent_indicators(2):_attach_metronome_marks(2)
@@ -45,7 +45,7 @@ G_Global_Skips = {                                                             %
 %@% - \baca-start-ct-left-only "[0'00'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
-    % [G Global_Skips measure 50 / measure 2]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 54 / measure 2]                                  %! _comment_measure_numbers
     \time 3/8                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 3/8                                                                   %! _make_global_skips(1)
@@ -58,7 +58,7 @@ G_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
     - \baca-start-lmn-left-only "2"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-left-only "50"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "54"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
 %@% - \abjad-dashed-line-with-arrow                                            %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
@@ -77,7 +77,7 @@ G_Global_Skips = {                                                             %
 %@% - \baca-start-ct-left-only "[0'04'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
-    % [G Global_Skips measure 51 / measure 3]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 55 / measure 3]                                  %! _comment_measure_numbers
     s1 * 3/8                                                                   %! _make_global_skips(1)
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
@@ -87,12 +87,12 @@ G_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
     - \baca-start-lmn-left-only "3"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-left-only "51"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "55"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
 %@% - \baca-start-ct-left-only "[0'06'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
-    % [G Global_Skips measure 52 / measure 4]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 56 / measure 4]                                  %! _comment_measure_numbers
     s1 * 3/8                                                                   %! _make_global_skips(1)
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
@@ -102,12 +102,12 @@ G_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
     - \baca-start-lmn-left-only "4"                                            %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-left-only "52"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "56"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
 %@% - \baca-start-ct-left-only "[0'08'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
-    % [G Global_Skips measure 53 / measure 5]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 57 / measure 5]                                  %! _comment_measure_numbers
     \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 1                                                                     %! _make_global_skips(1)
@@ -119,12 +119,12 @@ G_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
     - \baca-start-lmn-both "5" "6"                                             %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-both "53" "54"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-both "57" "58"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
 %@% - \baca-start-ct-both "[0'09'']" "[0'14'']"                                %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
-    % [G Global_Skips measure 54 / measure 6]                                  %! _comment_measure_numbers
+    % [G Global_Skips measure 58 / measure 6]                                  %! _comment_measure_numbers
     \time 7/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 7/4                                                                   %! _make_global_skips(1)
@@ -143,7 +143,7 @@ G_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [G Cello_Music_Voice measure 49 / measure 1]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 53 / measure 1]                         %! _comment_measure_numbers
         \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
         \override TupletBracket.staff-padding = #2                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
@@ -251,7 +251,7 @@ G_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [G Cello_Music_Voice measure 50 / measure 2]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 54 / measure 2]                         %! _comment_measure_numbers
         \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
         \pitchedTrill                                                          %! baca_trill_spanner:SpannerIndicatorCommand(1)
         e,4
@@ -280,7 +280,7 @@ G_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [G Cello_Music_Voice measure 51 / measure 3]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 55 / measure 3]                         %! _comment_measure_numbers
         <e, c>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -315,7 +315,7 @@ G_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [G Cello_Music_Voice measure 52 / measure 4]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 56 / measure 4]                         %! _comment_measure_numbers
         \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
         <e, c>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -349,7 +349,7 @@ G_Cello_Music_Voice = {                                                        %
 
     {
 
-        % [G Cello_Music_Voice measure 53 / measure 5]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 57 / measure 5]                         %! _comment_measure_numbers
         ef,!2..
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -393,7 +393,7 @@ G_Cello_Music_Voice = {                                                        %
     \tweak text #tuplet-number::calc-fraction-text
     \times 7/6 {
 
-        % [G Cello_Music_Voice measure 54 / measure 6]                         %! _comment_measure_numbers
+        % [G Cello_Music_Voice measure 58 / measure 6]                         %! _comment_measure_numbers
         \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
         d,2.
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
