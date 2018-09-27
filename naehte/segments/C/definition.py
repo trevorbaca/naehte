@@ -17,18 +17,20 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (5, 4), (4, 4), (3, 8),
+        (8, 4),
         (4, 4), (3, 8),
         (9, 4), (2, 4), (7, 4),
         (1, 4),
         ],
-    validate_measure_count=9,
+    validate_measure_count=10,
     )
 
 maker(
     'Global_Skips',
     baca.metronome_mark('91', selector=baca.leaf(1 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(4 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(6 - 1)),
+    baca.metronome_mark('39', selector=baca.leaf(4 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(5 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
     baca.rehearsal_mark(
         'C',
         abjad.tweak((0, 12)).extra_offset,
@@ -171,50 +173,37 @@ maker(
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[:2],
         ),
-    ),
+    )
 
 maker(
-    ('vc', (4, 5)),
+    ('vc', 5),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[-1:].rleak(),
+        ),
     baca.hairpin(
-        'p <| fff |> p',
-        piece_selector=baca.cmgroups(),
+        'p <| fff',
+        selector=baca.leaves().rleak(),
         ),
-    baca.note_head_style_harmonic(
-        selector=baca.leaves()[:2],
-        ),
-    baca.suite(
-        baca.rhythm(
-            '{'
-            r" \times 4/5 { c'1 c'4 }"
-            r" \times 3/4 { c'8 [ c' c' c' ] }"
-            ' }'
-            ),
-        ),
-    baca.suite(
-        baca.pitches(
-            '<G3 D4> <G3 D4> <A2 E3> <F3 C4> <G2 D3> Ab2',
-            allow_repeats=True,
-            ),
-        baca.finger_pressure_transition(
-            selector=baca.leaves()[1:3],
-            ),
-        baca.glissando(
-            selector=baca.leaves()[-4:],
-            ),
-        ),
+    baca.note_head_style_harmonic(),
+    baca.pitch('<G3 D4>'),
+    baca.rhythm(r" \times 4/5 { c'1 c'4 }"),
     baca.text_spanner(
         r'\baca-double-diamond-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[:2],
         ),
-    baca.text_spanner(
-        'II / III largo -> strett. -> larg. =|',
-        abjad.tweak(5.5).staff_padding,
-        bookend=False,
-        piece_selector=baca.lparts([1, 1, 3]),
-        selector=baca.leaves()[:5],
+    )
+
+maker(
+    ('vc', 6),
+    baca.hairpin(
+        '|> p',
+        ),
+    baca.rhythm( r"\times 3/4 { c'8 [ c' c' c' ] }"),
+    baca.suite(
+        baca.pitches('<A2 E3> <F3 C4> <G2 D3> Ab2'),
+        baca.glissando(),
         ),
     baca.trill_spanner(
         'M2',
@@ -224,7 +213,18 @@ maker(
     )
 
 maker(
-    ('vc', (6, 8)),
+    ('vc', (5, 6)),
+    baca.text_spanner(
+        'II / III largo -> strett. -> larg. =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 3]),
+        selector=baca.leaves()[:5],
+        ),
+    )
+
+maker(
+    ('vc', (7, 9)),
     baca.breathe(
         selector=baca.leaf(0),
         ),
@@ -268,7 +268,7 @@ maker(
             baca.glissando(
                 zero_padding=True,
                 ),
-            measures=8,
+            measures=9,
             ),
         ),
     baca.text_spanner(
