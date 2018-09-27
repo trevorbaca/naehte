@@ -18,8 +18,8 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (5, 4), (4, 4), (3, 8),
         (8, 4),
-        (4, 4), (3, 8),
-        (9, 4), (2, 4), (7, 4),
+        (4, 4), (4, 8),
+        (8, 4), (2, 4), (7, 4),
         (1, 4),
         ],
     validate_measure_count=10,
@@ -197,19 +197,20 @@ maker(
 
 maker(
     ('vc', 6),
+    baca.breathe(),
     baca.hairpin(
         '|> p',
         ),
-    baca.rhythm( r"\times 3/4 { c'8 [ c' c' c' ] }"),
+    baca.rhythm(r"{ \times 3/4 { c'8 [ c' c' c' ~ ] } c'8 }"),
     baca.suite(
-        baca.pitches('<A2 E3> <F3 C4> <G2 D3> Ab2'),
+        baca.pitches('<A2 E3> <F3 C4> <G2 D3> Ab2', allow_repeats=True),
         baca.glissando(),
         ),
-    baca.trill_spanner(
-        'M2',
-        abjad.tweak(2).bound_details__right__padding,
-        selector=baca.leaves()[-1:].rleak().rleak(),
-        ),
+#    baca.trill_spanner(
+#        'M2',
+#        abjad.tweak(2).bound_details__right__padding,
+#        selector=baca.leaves()[-1:].rleak().rleak(),
+#        ),
     )
 
 maker(
@@ -224,66 +225,76 @@ maker(
     )
 
 maker(
-    ('vc', (7, 9)),
-    baca.breathe(
-        selector=baca.leaf(0),
-        ),
+    ('vc', 7),
     baca.dynamic(
         'pppp-sempre',
         abjad.tweak('left').self_alignment_X,
-        selector=baca.leaf(1),
+        selector=baca.leaf(0),
         ),
+    baca.pitch('A2'),
+    baca.rhythm(r"{ c'\breve }"),
+    baca.text_spanner(
+        'vib. mod. -> NV',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 8),
+    baca.rhythm(r"{ c'2 }"),
+    baca.suite(
+        baca.pitch('A2'),
+        baca.glissando(
+            selector=baca.leaves()[-1:].rleak(),
+            ),
+        ),
+    )
+
+maker(
+    ('vc', 9),
     baca.hairpin(
         'pppp >o niente',
         selector=baca.leaves()[-1:].rleak(),
         ),
+    baca.rhythm(
+        r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
+        " c'4 c'8 [ c' ] c'2 }"
+        ),
     baca.suite(
-        baca.rhythm(
-            '{'
-            r" c'4 c'\breve"
-            " c'2"
-            r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
-            " c'4 c'8 [ c' ] c'2 }"
-            ' }'
-            ),
         baca.pitches(
-            'Ab2 Bbb2 Bbb2'
             ' <B3 F4> <B3 F4> <C3 G3>'
             ' <B3 F4> <B3 F4> <E3 A3> <B3 F4> <D3 A3>'
             ' <B3 F4> <B3 F4> <C3 G3>'
             ' <B3 F4>',
             allow_repeats=True,
             ),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
-            ),
         baca.glissando(
-            selector=baca.leaves()[:2],
-            ),
-        baca.glissando(
-            selector=baca.leaves()[2:4],
-            ),
-        baca.new(
-            baca.glissando(
-                zero_padding=True,
-                ),
-            measures=9,
+            zero_padding=True,
             ),
         ),
+    )
+
+maker(
+    ('vc', (7, 8)),
+    baca.text_spanner(
+        'no scr. -> scr. poss. -> no scr.',
+        abjad.tweak(5.5).staff_padding,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    ),
+
+maker(
+    ('vc', (7, 9)),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(2.75).bound_details__right__padding,
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[3:].rleak(),
-        ),
-    baca.text_spanner(
-        'vib. mod. -> NV',
-        abjad.tweak(8).staff_padding,
-        lilypond_id=1,
-        selector=baca.leaves()[1:3],
+        selector=baca.leaves()[2:].rleak(),
         ),
     baca.text_spanner(
         'II / III mod. =| II / III mod. -> strettiss. =|',
@@ -292,13 +303,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         piece_selector=baca.lparts([4, 7, 2]),
-        selector=baca.leaves()[3:].rleak(),
-        ),
-    baca.text_spanner(
-        'no scr. -> scr. poss. -> no scr.',
-        abjad.tweak(5.5).staff_padding,
-        piece_selector=baca.lparts([1, 2]),
-        selector=baca.leaves()[1:4],
+        selector=baca.leaves()[2:].rleak(),
         ),
     )
 
