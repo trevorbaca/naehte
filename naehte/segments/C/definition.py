@@ -85,13 +85,6 @@ maker(
         lilypond_id=1,
         selector=baca.leaves()[4:6],
         ),
-#    baca.text_spanner(
-#        'ord. =|',
-#        abjad.tweak(8).staff_padding,
-#        bookend=False,
-#        lilypond_id=1,
-#        selector=baca.leaves()[-1:].rleak().rleak(),
-#        ),
     baca.text_spanner(
         '(LH) vib. molto =|',
         abjad.tweak(8).staff_padding,
@@ -176,23 +169,38 @@ maker(
     )
 
 maker(
+    ('vc', 4),
+    baca.note_head_style_harmonic(),
+    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' }"),
+    baca.suite(
+        baca.pitches(
+            '<E3 B3>'
+            ' <E3 B3>'
+            ' <E3 B3>'
+            ' <F3 C4>'
+            ' <F3 C4>'
+            ' <F3 C4>'
+            ' <G3 D4>'
+            ' <G3 D4>',
+            allow_repeats=True,
+            ),
+        baca.glissando(
+            allow_repeats=True,
+            selector=baca.leaves().rleak(),
+            stems=True,
+            zero_padding=True,
+            ),
+        ),
+    )
+
+maker(
     ('vc', 5),
     baca.finger_pressure_transition(
         selector=baca.leaves()[-1:].rleak(),
         ),
-    baca.hairpin(
-        'p <| fff',
-        selector=baca.leaves().rleak(),
-        ),
     baca.note_head_style_harmonic(),
     baca.pitch('<G3 D4>'),
     baca.rhythm(r" \times 4/5 { c'1 c'4 }"),
-    baca.text_spanner(
-        r'\baca-double-diamond-markup =|',
-        abjad.tweak(8).staff_padding,
-        bookend=False,
-        lilypond_id=1,
-        ),
     )
 
 maker(
@@ -206,21 +214,35 @@ maker(
         baca.pitches('<A2 E3> <F3 C4> <G2 D3> Ab2', allow_repeats=True),
         baca.glissando(),
         ),
-#    baca.trill_spanner(
-#        'M2',
-#        abjad.tweak(2).bound_details__right__padding,
-#        selector=baca.leaves()[-1:].rleak().rleak(),
-#        ),
+    baca.trill_spanner(
+        'M2',
+        abjad.tweak(6.25).bound_details__right__padding,
+        selector=baca.leaves()[-2:].rleak(),
+        ),
     )
 
 maker(
-    ('vc', (5, 6)),
+    ('vc', (4, 5)),
+    baca.hairpin(
+        'ppp <| fff',
+        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        r'\baca-double-diamond-markup =|',
+        abjad.tweak(8).staff_padding,
+        bookend=False,
+        lilypond_id=1,
+        ),
+    )
+
+maker(
+    ('vc', (4, 6)),
     baca.text_spanner(
         'II / III largo -> strett. -> larg. =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        piece_selector=baca.lparts([1, 1, 3]),
-        selector=baca.leaves()[:5],
+        piece_selector=baca.lparts([9, 1, 3]),
+        selector=baca.leaves()[:-2],
         ),
     )
 

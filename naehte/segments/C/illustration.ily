@@ -403,37 +403,18 @@ C_Cello_Music_Voice = {                                                        %
 
     }
 
-    <<                                                                         %! _make_multimeasure_rest_container
+    {
 
-        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
-
-            % [C Cello_Music_Voice measure 31 / measure 4]                     %! _comment_measure_numbers
-            \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 2                                                            %! _make_multimeasure_rest_container
-
-        }                                                                      %! _make_multimeasure_rest_container
-
-        \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
-
-            % [C Cello_Rest_Voice measure 31 / measure 4]                      %! _comment_measure_numbers
-            R1 * 2                                                             %! _make_multimeasure_rest_container
-
-        }                                                                      %! _make_multimeasure_rest_container
-
-    >>                                                                         %! _make_multimeasure_rest_container
-
-    \times 4/5 {
-
-        % [C Cello_Music_Voice measure 32 / measure 5]                         %! _comment_measure_numbers
+        % [C Cello_Music_Voice measure 31 / measure 4]                         %! _comment_measure_numbers
         \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
-        <g d'>1
+        <e b>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-double-diamond-markup           %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
@@ -442,6 +423,51 @@ C_Cello_Music_Voice = {                                                        %
         - \baca-text-spanner-left-text "II / III largo"                        %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+
+        \hide NoteHead                                                         %! baca_glissando
+        \override Accidental.stencil = ##f                                     %! baca_glissando
+        \override NoteColumn.glissando-skip = ##t                              %! baca_glissando
+        \override NoteHead.no-ledgers = ##t                                    %! baca_glissando
+        <e b>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <e b>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <f c'>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <f c'>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <f c'>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <g d'>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+
+        <g d'>4
+        - \abjad-zero-padding-glissando                                        %! baca_glissando
+        \glissando                                                             %! baca_glissando
+        \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
+
+    }
+
+    \times 4/5 {
+
+        % [C Cello_Music_Voice measure 32 / measure 5]                         %! _comment_measure_numbers
+        \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
+        \revert Accidental.stencil                                             %! baca_glissando
+        \revert NoteColumn.glissando-skip                                      %! baca_glissando
+        \revert NoteHead.no-ledgers                                            %! baca_glissando
+        \undo \hide NoteHead                                                   %! baca_glissando
+        <g d'>1
 
         <g d'>4
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
@@ -486,9 +512,12 @@ C_Cello_Music_Voice = {                                                        %
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
             \glissando                                                         %! baca_glissando
 
+            \pitchedTrill                                                      %! baca_trill_spanner:SpannerIndicatorCommand(1)
             af,!8
             ~
             ]
+            - \tweak bound-details.right.padding #6.25                         %! baca_trill_spanner:SpannerIndicatorCommand(1)
+            \startTrillSpan bf,                                                %! baca_trill_spanner:SpannerIndicatorCommand(1)
 
         }
 
@@ -506,6 +535,7 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak self-alignment-X #left                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
         \baca-pppp-sempre                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
+        \stopTrillSpan                                                         %! baca_trill_spanner:SpannerIndicatorCommand(2)
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "vib. mod."                             %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-right-text "NV"                                   %! baca_text_spanner:PiecewiseCommand(1)
