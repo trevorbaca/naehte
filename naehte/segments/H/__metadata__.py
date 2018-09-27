@@ -17,15 +17,15 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [61, 63],
+            [62, 64],
             ),
         (
             'fermata_measure_numbers',
             [39],
             ),
-        ('first_measure_number', 62),
+        ('first_measure_number', 69),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 67),
+        ('last_measure_number', 74),
         (
             'persistent_indicators',
             abjad.OrderedDict(

@@ -20,10 +20,15 @@ maker = baca.SegmentMaker(
         (8, 4),
         (4, 4), (4, 8),
         (1, 4),
-        (8, 4), (2, 4), (7, 4), (7, 4),
+        (8, 4),
+
+        (3, 4), (3, 4), (2, 4), (1, 4),
+        (6, 4), (4, 4), (3, 8),
+
+        (2, 4), (7, 4), (7, 4),
         (1, 4),
         ],
-    validate_measure_count=12,
+    validate_measure_count=19,
     )
 
 maker(
@@ -51,6 +56,7 @@ maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(-1)),
     baca.global_fermata('fermata', selector=baca.leaf(7 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(12 - 1)),
     )
 
 maker(
@@ -273,7 +279,7 @@ maker(
     )
 
 maker(
-    ('vc', 9),
+    ('vc', 16),
     baca.dynamic(
         'pppp-sempre',
         selector=baca.leaf(0),
@@ -288,24 +294,12 @@ maker(
     baca.text_spanner(
         'scr. poss. -> no scr.',
         abjad.tweak(5.5).staff_padding,
-        #piece_selector=baca.lparts([1, 2]),
         selector=baca.leaves().rleak(),
         ),
     )
 
-#maker(
-#    ('vc', (8, 9)),
-#    baca.text_spanner(
-#        'no scr. -> scr. poss. -> no scr.',
-#        abjad.tweak(5.5).staff_padding,
-#        piece_selector=baca.lparts([1, 2]),
-#        selector=baca.leaves().rleak(),
-#        ),
-#    ),
-
-
 maker(
-    ('vc', 10),
+    ('vc', 17),
     baca.rhythm(
         r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
         " c'4 c'8 [ c' ] c'2 }"
@@ -323,7 +317,7 @@ maker(
     )
 
 maker(
-    ('vc', 11),
+    ('vc', 18),
     baca.hairpin(
         'pppp >o niente',
         selector=baca.leaves()[-1:].rleak(),
@@ -345,7 +339,7 @@ maker(
     )
 
 maker(
-    ('vc', (10, 11)),
+    ('vc', (17, 18)),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(2.75).bound_details__right__padding,
@@ -377,7 +371,7 @@ maker(
         ),
     baca.new(
         baca.dls_staff_padding(6),
-        measures=11,
+        measures=18,
         ),
     baca.new(
         baca.stem_down(),
