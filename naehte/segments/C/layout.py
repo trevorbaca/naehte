@@ -15,7 +15,7 @@ breaks = baca.breaks(
             ),
         baca.system(
             16,
-            measure=8,
+            measure=9,
             y_offset=40 + 2 * 30 + 2 * 16,
             ),
         ),
@@ -27,5 +27,5 @@ spacing = baca.scorewide_spacing(
     )
 spacing.override(4, (1, 12))
 spacing.override(5, (1, 16))
-spacing.override(7, (1, 12))
-spacing.override(9, (1, 48))
+spacing.override(8, (1, 12))
+spacing.override(10, (1, 48))

@@ -19,10 +19,11 @@ maker = baca.SegmentMaker(
         (5, 4), (4, 4), (3, 8),
         (8, 4),
         (4, 4), (4, 8),
+        (1, 4),
         (8, 4), (2, 4), (7, 4),
         (1, 4),
         ],
-    validate_measure_count=10,
+    validate_measure_count=11,
     )
 
 maker(
@@ -30,7 +31,7 @@ maker(
     baca.metronome_mark('91', selector=baca.leaf(1 - 1)),
     baca.metronome_mark('39', selector=baca.leaf(4 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(5 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(8 - 1)),
     baca.rehearsal_mark(
         'C',
         abjad.tweak((0, 12)).extra_offset,
@@ -49,6 +50,7 @@ maker(
 maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(-1)),
+    baca.global_fermata('fermata', selector=baca.leaf(7 - 1)),
     )
 
 maker(
@@ -247,7 +249,7 @@ maker(
     )
 
 maker(
-    ('vc', 7),
+    ('vc', 8),
     baca.dynamic(
         'pppp-sempre',
         abjad.tweak('left').self_alignment_X,
@@ -264,7 +266,7 @@ maker(
     )
 
 maker(
-    ('vc', 8),
+    ('vc', 9),
     baca.rhythm(r"{ c'2 }"),
     baca.suite(
         baca.pitch('A2'),
@@ -275,7 +277,7 @@ maker(
     )
 
 maker(
-    ('vc', (7, 8)),
+    ('vc', (8, 9)),
     baca.text_spanner(
         'no scr. -> scr. poss. -> no scr.',
         abjad.tweak(5.5).staff_padding,
@@ -286,7 +288,7 @@ maker(
 
 
 maker(
-    ('vc', 9),
+    ('vc', 10),
     baca.hairpin(
         'pppp >o niente',
         selector=baca.leaves()[-1:].rleak(),
