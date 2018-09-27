@@ -83,17 +83,18 @@ maker(
         lilypond_id=1,
         selector=baca.leaves()[4:6],
         ),
+#    baca.text_spanner(
+#        'ord. =|',
+#        abjad.tweak(8).staff_padding,
+#        bookend=False,
+#        lilypond_id=1,
+#        selector=baca.leaves()[-1:].rleak().rleak(),
+#        ),
     baca.text_spanner(
-        'ord. =|',
+        '(LH) vib. molto =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak().rleak(),
-        ),
-    baca.text_spanner(
-        'vibtiss. =|',
-        abjad.tweak(5.5).staff_padding,
-        bookend=False,
         selector=baca.leaves()[-1:].rleak().rleak(),
         ),
     )
@@ -137,8 +138,9 @@ maker(
         selector=baca.leaves()[1:4],
         ),
     baca.text_spanner(
-        'ord. -> scr. -> ord.',
+        'no scr. -> scr. =|',
         abjad.tweak(5.5).staff_padding,
+        bookend=False,
         piece_selector=baca.lparts([1, 2]),
         selector=baca.leaves()[1:4],
         ),
@@ -150,12 +152,13 @@ maker(
 
 maker(
     ('vc', 3),
+    baca.breathe(),
     baca.hairpin(
         'ppp <| fff',
         selector=baca.pleaves(),
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c'16 r }"),
+        baca.rhythm("{ c'8. c'8. }"),
         baca.pitch('F#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -164,7 +167,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        "(ord.) -> scr.iss.",
+        "no scr. -> scr. poss.",
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[:2],
         ),
@@ -283,7 +286,7 @@ maker(
         selector=baca.leaves()[1:3],
         ),
     baca.text_spanner(
-        'II / III mod. =| (mod.) -> strettiss. =|',
+        'II / III mod. =| II / III mod. -> strettiss. =|',
         (abjad.tweak(2.75).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
         bookend=False,
