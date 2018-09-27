@@ -33,6 +33,9 @@ C_Global_Rests = {                                                             %
     R1 * 7/4                                                                   %! _make_global_rests
 
     % [C Global_Rests measure 38 / measure 11]                                 %! _comment_measure_numbers
+    R1 * 7/4                                                                   %! _make_global_rests
+
+    % [C Global_Rests measure 39 / measure 12]                                 %! _comment_measure_numbers
     \baca-fermata-measure                                                      %! baca_global_fermata:GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! _make_global_rests
     ^ \baca-fermata-markup                                                     %! baca_global_fermata:GlobalFermataCommand(1)
@@ -235,16 +238,31 @@ C_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
-%@% - \baca-start-lmi-both "9" "10"                                            %! LOCAL_MEASURE_INDEX_MARKUP
+%@% - \baca-start-lmi-left-only "9"                                            %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
-    - \baca-start-lmn-both "10" "11"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
+    - \baca-start-lmn-left-only "10"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-both "37" "38"                                            %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "37"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-both "[0'34'']" "[0'42'']"                                %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'34'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [C Global_Skips measure 38 / measure 11]                                 %! _comment_measure_numbers
+    s1 * 7/4                                                                   %! _make_global_skips(1)
+%@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
+    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
+%@% - \baca-start-lmi-both "10" "11"                                           %! LOCAL_MEASURE_INDEX_MARKUP
+%@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
+    - \baca-start-lmn-both "11" "12"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
+    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-both "38" "39"                                            %! MEASURE_NUMBER_MARKUP
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-ct-both "[0'42'']" "[0'50'']"                                %! CLOCK_TIME_MARKUP
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
+
+    % [C Global_Skips measure 39 / measure 12]                                 %! _comment_measure_numbers
     \time 1/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 1/4                                                                   %! _make_global_skips(1)
@@ -265,6 +283,7 @@ C_Cello_Music_Voice = {                                                        %
 
         % [C Cello_Music_Voice measure 28 / measure 1]                         %! _comment_measure_numbers
         \override DynamicLineSpanner.staff-padding = #'8                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \override Stem.direction = #down                                       %! baca_stem_down:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1.5                           %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
         \override TupletBracket.direction = #down                              %! baca_tuplet_bracket_down:OverrideCommand(1)
         \clef "bass"                                                           %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
@@ -338,6 +357,7 @@ C_Cello_Music_Voice = {                                                        %
                 - \baca-text-spanner-left-text "(LH) vib. molto"               %! baca_text_spanner:PiecewiseCommand(1)
                 - \tweak staff-padding #8                                      %! baca_text_spanner:PiecewiseCommand(1)
                 \startTextSpanOne                                              %! baca_text_spanner:PiecewiseCommand(1)
+                \revert Stem.direction                                         %! baca_stem_down:OverrideCommand(2)
                 \revert TupletBracket.staff-padding                            %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
 
             }
@@ -350,7 +370,6 @@ C_Cello_Music_Voice = {                                                        %
 
         % [C Cello_Music_Voice measure 29 / measure 2]                         %! _comment_measure_numbers
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
-        \override Stem.direction = #down                                       %! baca_stem_down:OverrideCommand(1)
         fs!4
         \repeatTie                                                             %! TieCorrectionCommand
 
@@ -547,6 +566,7 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
         \breathe                                                               %! baca_breathe:IndicatorCommand
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
 
@@ -575,9 +595,9 @@ C_Cello_Music_Voice = {                                                        %
     {
 
         % [C Cello_Music_Voice measure 35 / measure 8]                         %! _comment_measure_numbers
+        \once \override DynamicLineSpanner.staff-padding = #'3                 %! baca_dls_staff_padding:OverrideCommand(1)
         a,\breve
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak self-alignment-X #left                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
         \baca-pppp-sempre                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "vib. mod."                             %! baca_text_spanner:PiecewiseCommand(1)
@@ -597,6 +617,7 @@ C_Cello_Music_Voice = {                                                        %
 
         % [C Cello_Music_Voice measure 36 / measure 9]                         %! _comment_measure_numbers
         a,2
+        \repeatTie                                                             %! TieCorrectionCommand
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(2)
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
         \glissando                                                             %! baca_glissando
@@ -614,66 +635,118 @@ C_Cello_Music_Voice = {                                                        %
     \times 7/8 {
 
         % [C Cello_Music_Voice measure 37 / measure 10]                        %! _comment_measure_numbers
-        <b f'>4
+        <b fs'!>4
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #2.75                             %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanTwo                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "II / III mod."                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-
-        <b f'>8
-        [
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        <c g>8
-        ]
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        <b f'>4
-
-        <b f'>16
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
-        [
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "II / III mod."                         %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
 
-        <e a>16
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        <b f'>16
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        <d a>16
-        ]
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        <b f'>4
-
-        <b f'>8
+        <b fs'!>8
         [
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
         \glissando                                                             %! baca_glissando
 
         <c g>8
         ]
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
         \glissando                                                             %! baca_glissando
 
-        <b f'>2
+        <b fs'!>4
+
+        <b fs'!>16
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
+        [
+        \glissando                                                             %! baca_glissando
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "strett."                               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        <e b>16
+        \glissando                                                             %! baca_glissando
+
+        <b fs'!>16
+        \glissando                                                             %! baca_glissando
+
+        <d a>16
+        ]
+        \glissando                                                             %! baca_glissando
+
+        <b fs'!>4
+
+        <b fs'!>8
+        [
+        \glissando                                                             %! baca_glissando
+
+        <c g>8
+        ]
+        \glissando                                                             %! baca_glissando
+
+        <b fs'!>2
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "mod."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+    }
+
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 7/8 {
+
+        % [C Cello_Music_Voice measure 38 / measure 11]                        %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'6                       %! baca_dls_staff_padding:OverrideCommand(1)
+        <a e'>4
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "strett."                               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        <a e'>8
+        [
+        \glissando                                                             %! baca_glissando
+
+        <c g>8
+        ]
+        \glissando                                                             %! baca_glissando
+
+        <a e'>4
+
+        <a e'>16
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
+        [
+        \glissando                                                             %! baca_glissando
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "mod."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        <e b>16
+        \glissando                                                             %! baca_glissando
+
+        <a e'>16
+        \glissando                                                             %! baca_glissando
+
+        <d a>16
+        ]
+        \glissando                                                             %! baca_glissando
+
+        <a e'>4
+
+        <a e'>8
+        [
+        \glissando                                                             %! baca_glissando
+
+        <c g>8
+        ]
+        \glissando                                                             %! baca_glissando
+
+        <a e'>2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -682,10 +755,11 @@ C_Cello_Music_Voice = {                                                        %
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "strettiss."                            %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "strett."                               %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #2.75                             %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
 
@@ -694,15 +768,13 @@ C_Cello_Music_Voice = {                                                        %
         \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [C Cello_Music_Voice measure 38 / measure 11]                    %! _comment_measure_numbers
+            % [C Cello_Music_Voice measure 39 / measure 12]                    %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             c'1 * 1/4                                                          %! _make_multimeasure_rest_container
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
             \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
             \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
-            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
-            \revert Stem.direction                                             %! baca_stem_down:OverrideCommand(2)
             \revert TupletBracket.direction                                    %! baca_tuplet_bracket_down:OverrideCommand(2)
 
         }                                                                      %! _make_multimeasure_rest_container
@@ -710,7 +782,7 @@ C_Cello_Music_Voice = {                                                        %
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [C Cello_Rest_Voice measure 38 / measure 11]                     %! _comment_measure_numbers
+            % [C Cello_Rest_Voice measure 39 / measure 12]                     %! _comment_measure_numbers
             R1 * 1/4                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
