@@ -20,10 +20,10 @@ maker = baca.SegmentMaker(
         (8, 4),
         (4, 4), (4, 8),
         (1, 4),
-        (8, 4), (2, 4), (7, 4),
+        (8, 4), (2, 4), (7, 4), (7, 4),
         (1, 4),
         ],
-    validate_measure_count=11,
+    validate_measure_count=12,
     )
 
 maker(
@@ -252,7 +252,6 @@ maker(
     ('vc', 8),
     baca.dynamic(
         'pppp-sempre',
-        abjad.tweak('left').self_alignment_X,
         selector=baca.leaf(0),
         ),
     baca.pitch('A2'),
@@ -267,9 +266,10 @@ maker(
 
 maker(
     ('vc', 9),
-    baca.rhythm(r"{ c'2 }"),
     baca.suite(
+        baca.rhythm(r"{ c'2 }"),
         baca.pitch('A2'),
+        baca.repeat_tie_to(),
         baca.glissando(
             selector=baca.leaves()[-1:].rleak(),
             ),
@@ -289,6 +289,24 @@ maker(
 
 maker(
     ('vc', 10),
+    baca.rhythm(
+        r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
+        " c'4 c'8 [ c' ] c'2 }"
+        ),
+    baca.suite(
+        baca.pitches(
+            ' <B3 F#4> <B3 F#4> <C3 G3>'
+            ' <B3 F#4> <B3 F#4> <E3 B3> <B3 F#4> <D3 A3>'
+            ' <B3 F#4> <B3 F#4> <C3 G3>'
+            ' <B3 F#4>',
+            allow_repeats=True,
+            ),
+        baca.glissando(),
+        ),
+    )
+
+maker(
+    ('vc', 11),
     baca.hairpin(
         'pppp >o niente',
         selector=baca.leaves()[-1:].rleak(),
@@ -299,16 +317,18 @@ maker(
         ),
     baca.suite(
         baca.pitches(
-            ' <B3 F4> <B3 F4> <C3 G3>'
-            ' <B3 F4> <B3 F4> <E3 A3> <B3 F4> <D3 A3>'
-            ' <B3 F4> <B3 F4> <C3 G3>'
-            ' <B3 F4>',
+            ' <A3 E4> <A3 E4> <C3 G3>'
+            ' <A3 E4> <A3 E4> <E3 B3> <A3 E4> <D3 A3>'
+            ' <A3 E4> <A3 E4> <C3 G3>'
+            ' <A3 E4>',
             allow_repeats=True,
             ),
-        baca.glissando(
-            zero_padding=True,
-            ),
+        baca.glissando(),
         ),
+    )
+
+maker(
+    ('vc', (10, 11)),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(2.75).bound_details__right__padding,
@@ -318,22 +338,33 @@ maker(
         selector=baca.leaves().rleak(),
         ),
     baca.text_spanner(
-        'II / III mod. =| II / III mod. -> strettiss. =|',
+        'II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|',
         (abjad.tweak(2.75).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        piece_selector=baca.lparts([4, 7, 2]),
+        piece_selector=baca.lparts([4, 7, 1, 4, 7, 2]),
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
     'vc',
-    baca.dls_staff_padding(8),
+    baca.new(
+        baca.dls_staff_padding(8),
+        measures=(1, 6),
+        ),
+    baca.new(
+        baca.dls_staff_padding(3),
+        measures=8,
+        ),
+    baca.new(
+        baca.dls_staff_padding(6),
+        measures=11,
+        ),
     baca.new(
         baca.stem_down(),
-        measures=(2, -1),
+        measures=1,
         ),
     baca.new(
         baca.tuplet_bracket_staff_padding(1.5),
