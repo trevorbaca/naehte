@@ -17,7 +17,7 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [53, 55, 58],
+            [54, 56, 59],
             ),
         (
             'fermata_measure_numbers',

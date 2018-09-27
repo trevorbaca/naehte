@@ -1,4 +1,4 @@
-% time_signatures = ['5/4', '4/4', '3/8', '8/4', '4/4', '3/8', '9/4', '2/4', '7/4', '1/4']
+% time_signatures = ['5/4', '4/4', '3/8', '8/4', '4/4', '4/8', '8/4', '2/4', '7/4', '1/4']
 % measure_count = 10
 
 
@@ -63,7 +63,7 @@
             % [Page_Layout measure 33]                                                   %! _comment_measure_numbers
             \baca-new-spacing-section #1 #32                                             %! HorizontalSpacingSpecifier(1):SPACING
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            s1 * 3/8                                                                     %! _make_global_skips(1)
+            s1 * 1/2                                                                     %! _make_global_skips(1)
         %@% \bacaStopTextSpanSPM                                                         %! SPACING_MARKUP
         %@% - \baca-start-spm-left-only "[1/32]"                                         %! SPACING_MARKUP
         %@% \bacaStartTextSpanSPM                                                        %! SPACING_MARKUP
@@ -71,7 +71,7 @@
             % [Page_Layout measure 34]                                                   %! _comment_measure_numbers
             \baca-new-spacing-section #35 #288                                           %! HorizontalSpacingSpecifier(1):SPACING
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
-            s1 * 9/4                                                                     %! _make_global_skips(1)
+            s1 * 2                                                                       %! _make_global_skips(1)
         %@% \bacaStopTextSpanSPM                                                         %! SPACING_MARKUP
         %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"                               %! SPACING_MARKUP
         %@% \bacaStartTextSpanSPM                                                        %! SPACING_MARKUP
