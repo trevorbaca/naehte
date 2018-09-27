@@ -253,6 +253,17 @@ maker(
     )
 
 maker(
+    ('vc', (7, 8)),
+    baca.text_spanner(
+        'no scr. -> scr. poss. -> no scr.',
+        abjad.tweak(5.5).staff_padding,
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    ),
+
+
+maker(
     ('vc', 9),
     baca.hairpin(
         'pppp >o niente',
@@ -274,27 +285,13 @@ maker(
             zero_padding=True,
             ),
         ),
-    )
-
-maker(
-    ('vc', (7, 8)),
-    baca.text_spanner(
-        'no scr. -> scr. poss. -> no scr.',
-        abjad.tweak(5.5).staff_padding,
-        piece_selector=baca.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
-        ),
-    ),
-
-maker(
-    ('vc', (7, 9)),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(2.75).bound_details__right__padding,
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[2:].rleak(),
+        selector=baca.leaves().rleak(),
         ),
     baca.text_spanner(
         'II / III mod. =| II / III mod. -> strettiss. =|',
@@ -303,23 +300,20 @@ maker(
         bookend=False,
         lilypond_id=1,
         piece_selector=baca.lparts([4, 7, 2]),
-        selector=baca.leaves()[2:].rleak(),
+        selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
     'vc',
-    baca.new(
-        baca.dls_staff_padding(8),
-        measures=(1, -1),
-        ),
+    baca.dls_staff_padding(8),
     baca.new(
         baca.stem_down(),
         measures=(2, -1),
         ),
-    baca.tuplet_bracket_down(),
     baca.new(
         baca.tuplet_bracket_staff_padding(1.5),
         measures=1,
         ),
+    baca.tuplet_bracket_down(),
     )
