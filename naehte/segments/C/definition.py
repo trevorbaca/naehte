@@ -255,36 +255,53 @@ maker(
         selector=baca.leaf(0),
         ),
     baca.pitch('A2'),
-    baca.rhythm(r"{ c'\breve }"),
+    baca.suite(
+        baca.rhythm(r"{ c'1.. c'4 }"),
+        baca.repeat_tie_to(
+            selector=baca.leaf(-1),
+            ),
+        ),
     baca.text_spanner(
         'vib. mod. -> NV',
         abjad.tweak(8).staff_padding,
         lilypond_id=1,
-        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        'no scr. -> scr. poss.',
+        abjad.tweak(5.5).staff_padding,
         ),
     )
 
 maker(
     ('vc', 9),
+    baca.dynamic(
+        'pppp-sempre',
+        selector=baca.leaf(0),
+        ),
     baca.suite(
         baca.rhythm(r"{ c'2 }"),
         baca.pitch('A2'),
-        baca.repeat_tie_to(),
         baca.glissando(
             selector=baca.leaves()[-1:].rleak(),
             ),
         ),
-    )
-
-maker(
-    ('vc', (8, 9)),
     baca.text_spanner(
-        'no scr. -> scr. poss. -> no scr.',
+        'scr. poss. -> no scr.',
         abjad.tweak(5.5).staff_padding,
-        piece_selector=baca.lparts([1, 2]),
+        #piece_selector=baca.lparts([1, 2]),
         selector=baca.leaves().rleak(),
         ),
-    ),
+    )
+
+#maker(
+#    ('vc', (8, 9)),
+#    baca.text_spanner(
+#        'no scr. -> scr. poss. -> no scr.',
+#        abjad.tweak(5.5).staff_padding,
+#        piece_selector=baca.lparts([1, 2]),
+#        selector=baca.leaves().rleak(),
+#        ),
+#    ),
 
 
 maker(
