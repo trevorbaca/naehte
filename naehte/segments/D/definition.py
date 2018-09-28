@@ -16,10 +16,20 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
-        (5, 8), (5, 8), (5, 8),
+        (5, 8),
+        
+        (6, 8), (5, 4), (6, 8),
+
+        (5, 8), (5, 8),
+
+        (3, 4), (3, 4), (2, 4), (1, 4),
+        (6, 4), (4, 4),
+
+        (9, 4), (10, 4),
+
         (8, 4), (8, 4),
         ],
-    validate_measure_count=5,
+    validate_measure_count=16,
     )
 
 maker(
@@ -31,18 +41,18 @@ maker(
         abjad.tweak((0, 12)).extra_offset,
         ),
     baca.new(
-#        baca.new(
-#            baca.bar_line_x_extent((0, 2)),
-#            after=True,
-#            selector=baca.skip(-1),
-#            ),
         baca.new(
             baca.bar_line_x_extent((0, 3.5)),
             selector=baca.skip(0),
             ),
         baca.volta(),
-        measures=(2, 3),
+        measures=(5, 6),
         ),
+    )
+
+maker(
+    'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(10 - 1)),
     )
 
 maker(
@@ -83,7 +93,7 @@ maker(
     )
 
 maker(
-    ('vc', 2),
+    ('vc', 5),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:2],
         ),
@@ -103,11 +113,6 @@ maker(
         ),
     baca.suite(
         baca.rhythm(r"{ c'2 c'32 [ c' c' c' ] }"),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
-            selector=baca.leaf(0),
-            ),
         ),
     baca.text_spanner(
         r'RH NV -> RH vib. =|',
@@ -121,14 +126,14 @@ maker(
         r'scr. -> non scr. -> XFB -> scr. =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        measures=(2, 3),
+        measures=(5, 6),
         piece_selector=baca.lparts([1, 5, 1, 2]),
         selector=baca.rleaves().rleak(),
         ),
     )
 
 maker(
-    ('vc', 3),
+    ('vc', 6),
     baca.hairpin(
         'mf |> p',
         ),
@@ -148,10 +153,10 @@ maker(
     )
 
 maker(
-    ('vc', 4),
+    ('vc', 15),
     baca.hairpin(
         'p <| "mf" > pp < "mf" >o niente',
-        measures=(4, 5),
+        measures=(7, 8),
         piece_selector=baca.lparts([1, 1, 1, 3]),
         ),
     baca.pitch('C#3', selector=baca.leaf(0)),
@@ -174,7 +179,7 @@ maker(
     )
 
 maker(
-    ('vc', 5),
+    ('vc', 16),
     baca.pitch('<C#3 A3>'),
     baca.rhythm(r"{ c'1 c'2... r16 }"),
     baca.text_spanner(
