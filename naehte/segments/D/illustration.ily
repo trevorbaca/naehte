@@ -84,6 +84,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
 %@% - \baca-start-lmi-left-only "1"                                            %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
@@ -91,6 +92,12 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "47"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
+%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
 %@% - \baca-start-ct-left-only "[0'02'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
@@ -108,7 +115,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "48"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'06'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'04'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 49 / measure 4]                                  %! _comment_measure_numbers
@@ -125,7 +132,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "49"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'12'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'06'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     \repeat volta 2
@@ -139,6 +146,7 @@ D_Global_Skips = {                                                             %
     %@% \bacaStopTextSpanLMI                                                   %! LOCAL_MEASURE_INDEX_MARKUP
         \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER_MARKUP
     %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER_MARKUP
+        \bacaStopTextSpanMM                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
     %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME_MARKUP
     %@% - \baca-start-lmi-left-only "4"                                        %! LOCAL_MEASURE_INDEX_MARKUP
     %@% \bacaStartTextSpanLMI                                                  %! LOCAL_MEASURE_INDEX_MARKUP
@@ -146,7 +154,13 @@ D_Global_Skips = {                                                             %
         \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER_MARKUP
     %@% - \baca-start-mn-left-only "50"                                        %! MEASURE_NUMBER_MARKUP
     %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER_MARKUP
-    %@% - \baca-start-ct-left-only "[0'15'']"                                  %! CLOCK_TIME_MARKUP
+    %@% - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+        - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue     %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    %@% - \baca-start-ct-left-only "[0'08'']"                                  %! CLOCK_TIME_MARKUP
     %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME_MARKUP
 
         % [D Global_Skips measure 51 / measure 6]                              %! _comment_measure_numbers
@@ -161,7 +175,7 @@ D_Global_Skips = {                                                             %
         \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER_MARKUP
     %@% - \baca-start-mn-left-only "51"                                        %! MEASURE_NUMBER_MARKUP
     %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER_MARKUP
-    %@% - \baca-start-ct-left-only "[0'18'']"                                  %! CLOCK_TIME_MARKUP
+    %@% - \baca-start-ct-left-only "[0'11'']"                                  %! CLOCK_TIME_MARKUP
     %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME_MARKUP
 
     }
@@ -180,7 +194,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "52"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'21'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'14'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 53 / measure 8]                                  %! _comment_measure_numbers
@@ -195,7 +209,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "53"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'24'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'17'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 54 / measure 9]                                  %! _comment_measure_numbers
@@ -212,7 +226,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "54"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'28'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'21'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 55 / measure 10]                                 %! _comment_measure_numbers
@@ -229,7 +243,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "55"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'30'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'23'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 56 / measure 11]                                 %! _comment_measure_numbers
@@ -239,6 +253,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
 %@% - \baca-start-lmi-left-only "10"                                           %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
@@ -246,7 +261,13 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "56"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'31'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "91" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%@% - \baca-start-ct-left-only "[0'24'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 57 / measure 12]                                 %! _comment_measure_numbers
@@ -263,7 +284,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "57"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'38'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'28'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 58 / measure 13]                                 %! _comment_measure_numbers
@@ -273,6 +294,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
 %@% - \baca-start-lmi-left-only "12"                                           %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
@@ -280,7 +302,13 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "58"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'43'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%@% - \baca-start-ct-left-only "[0'31'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 59 / measure 14]                                 %! _comment_measure_numbers
@@ -297,7 +325,7 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "59"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[0'53'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[0'45'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 60 / measure 15]                                 %! _comment_measure_numbers
@@ -307,6 +335,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(1)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
 %@% - \baca-start-lmi-both "14" "15"                                           %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
@@ -314,7 +343,13 @@ D_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-both "60" "61"                                            %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-both "[1'05'']" "[1'14'']"                                %! CLOCK_TIME_MARKUP
+%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"                        %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%@% - \baca-start-ct-both "[1'00'']" "[1'09'']"                                %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [D Global_Skips measure 61 / measure 16]                                 %! _comment_measure_numbers
@@ -322,7 +357,7 @@ D_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
-    \bacaStopTextSpanMM                                                        %! REAPPLIED_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(4)
+    \bacaStopTextSpanMM                                                        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(4)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
     \baca-bar-line-visible                                                     %! _attach_final_bar_line
     \bar "|"                                                                   %! _attach_final_bar_line
@@ -335,6 +370,7 @@ D_Cello_Music_Voice = {                                                        %
     {
 
         % [D Cello_Music_Voice measure 46 / measure 1]                         %! _comment_measure_numbers
+        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
         \clef "bass"                                                           %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
         \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
@@ -345,6 +381,7 @@ D_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+    %@% \repeatTie                                                             %! SHOW_TO_JOIN_BROKEN_SPANNERS %! TieCorrectionCommand
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
@@ -355,8 +392,7 @@ D_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
-        cs!2
+        cs!4.
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-effort-f                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -364,45 +400,209 @@ D_Cello_Music_Voice = {                                                        %
         \repeatTie                                                             %! TieCorrectionCommand
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "spazz. larg."                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-right-text "strett."                              %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #8.25                             %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "spz. larg."                            %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #1                                %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
+        cs!8
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
+        \glissando                                                             %! baca_glissando
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "str."                                  %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        \revert RepeatTie.extra-offset                                         %! baca_repeat_tie_extra_offset:OverrideCommand(2)
+
     }
 
-    <<                                                                         %! _make_multimeasure_rest_container
+    \tweak text #tuplet-number::calc-fraction-text
+    \times 6/7 {
 
-        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+        % [D Cello_Music_Voice measure 47 / measure 2]                         %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
+        ef'!2.
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \naehte-very-wide-circles-markup      %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
-            % [D Cello_Music_Voice measure 47 / measure 2]                     %! _comment_measure_numbers
-            \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        ef'!8
+        \repeatTie                                                             %! TieCorrectionCommand
+        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "spazz. larg."                          %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }
+
+    {
+
+        % [D Cello_Music_Voice measure 48 / measure 3]                         %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #'5                       %! baca_dls_staff_padding:OverrideCommand(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
+        ef'!4
+        \repeatTie                                                             %! TieCorrectionCommand
+        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
+        \glissando                                                             %! baca_finger_pressure_transition
+
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
+
+            \override NoteHead.style = #'harmonic                              %! baca_note_head_style_harmonic:OverrideCommand(1)
+            g'8
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
-            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(3)
-            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(2)
+            \ppppp                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            [
+            \glissando                                                         %! baca_glissando
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "RH vib. molto"                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-right-text "NV"                               %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.padding #0.5                          %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak bound-details.right.stencil-align-dir-y #center           %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "no scr."                           %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
 
-        }                                                                      %! _make_multimeasure_rest_container
+            a8
+            \glissando                                                         %! baca_glissando
 
-        \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+            g'8
+            \glissando                                                         %! baca_glissando
 
-            % [D Cello_Rest_Voice measure 47 / measure 2]                      %! _comment_measure_numbers
-            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+            f'8
+            \glissando                                                         %! baca_glissando
 
-        }                                                                      %! _make_multimeasure_rest_container
+            g'8
+            \glissando                                                         %! baca_glissando
 
-    >>                                                                         %! _make_multimeasure_rest_container
+            a8
+            \glissando                                                         %! baca_glissando
 
-    % [D Cello_Music_Voice measure 48 / measure 3]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+            g'8
+            ]
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
+            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
 
-    % [D Cello_Music_Voice measure 49 / measure 4]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+        }
+
+        \times 2/3 {
+
+            df'!4
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \f                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(2)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "scr."                              %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+
+            \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+            \override DynamicLineSpanner.staff-padding = #'7                   %! baca_dls_staff_padding:OverrideCommand(1)
+            df'!8
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \ff                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \repeatTie                                                         %! TieCorrectionCommand
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "poss."                             %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+            \revert TupletBracket.staff-padding                                %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+
+        }
+
+    }
+
+    {
+
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/11 {
+
+            \times 4/5 {
+
+                % [D Cello_Music_Voice measure 49 / measure 4]                 %! _comment_measure_numbers
+                \once \override RepeatTie.extra-offset = #'(-1.5 . 0)          %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+                df'!8
+                \repeatTie                                                     %! TieCorrectionCommand
+                [
+                - \abjad-zero-padding-glissando                                %! baca_glissando
+                \glissando                                                     %! baca_glissando
+
+                f'8
+                - \abjad-zero-padding-glissando                                %! baca_glissando
+                \glissando                                                     %! baca_glissando
+
+                g8
+                - \abjad-zero-padding-glissando                                %! baca_glissando
+                \glissando                                                     %! baca_glissando
+
+                e'8
+                - \abjad-zero-padding-glissando                                %! baca_glissando
+                \glissando                                                     %! baca_glissando
+
+                f8
+                \stopTextSpan                                                  %! baca_text_spanner:PiecewiseCommand(3)
+                ]
+
+            }
+
+            {
+
+                \override DynamicLineSpanner.staff-padding = #'7               %! baca_dls_staff_padding:OverrideCommand(1)
+                df'!2.
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \p                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak stencil #abjad-flared-hairpin                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \<                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak arrow-length #2                                       %! baca_finger_pressure_transition
+                - \tweak arrow-width #0.5                                      %! baca_finger_pressure_transition
+                - \tweak bound-details.right.arrow ##t                         %! baca_finger_pressure_transition
+                - \tweak thickness #3                                          %! baca_finger_pressure_transition
+                \glissando                                                     %! baca_finger_pressure_transition
+                \revert DynamicLineSpanner.staff-padding                       %! baca_dls_staff_padding:OverrideCommand(2)
+
+                \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+                df'!8
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \mf                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+                \breathe                                                       %! baca_breathe:IndicatorCommand
+                \revert DynamicLineSpanner.staff-padding                       %! baca_dls_staff_padding:OverrideCommand(2)
+
+            }
+
+        }
+
+    }
 
     {
 
@@ -487,14 +687,14 @@ D_Cello_Music_Voice = {                                                        %
 
     }
 
-    <<                                                                         %! _make_multimeasure_rest_container
+    {
 
-        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
-        {                                                                      %! _make_multimeasure_rest_container
+        \tweak text #tuplet-number::calc-fraction-text
+        \times 6/7 {
 
             % [D Cello_Music_Voice measure 52 / measure 7]                     %! _comment_measure_numbers
-            \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \once \override NoteHead.style = #'harmonic                        %! baca_note_head_style_harmonic:OverrideCommand(1)
+            <f a>2
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -505,32 +705,167 @@ D_Cello_Music_Voice = {                                                        %
             - \baca-text-spanner-left-text "scr."                              %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
+            - \tweak thickness #3                                              %! baca_finger_pressure_transition
+            \glissando                                                         %! baca_finger_pressure_transition
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "II / III strett."                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanTwo                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-solid-line-with-arrow                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "T"                                 %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+
+            \times 2/3 {
+
+                \once \override NoteHead.style = #'harmonic-black              %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+                \override Beam.positions = #'(-5.5 . -5.5)                     %! baca_beam_positions:OverrideCommand(1)
+                <f a>16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \baca-effort-mf                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \stopTextSpan                                                  %! baca_text_spanner:PiecewiseCommand(3)
+                \stopTextSpanTwo                                               %! baca_text_spanner:PiecewiseCommand(1)
+                \stopTextSpanOne                                               %! baca_text_spanner:PiecewiseCommand(1)
+                [
+                \glissando                                                     %! baca_glissando
+                - \abjad-dashed-line-with-hook                                 %! baca_text_spanner:PiecewiseCommand(1)
+                - \baca-text-spanner-left-text "larg."                         %! baca_text_spanner:PiecewiseCommand(1)
+                - \tweak staff-padding #10.5                                   %! baca_text_spanner:PiecewiseCommand(1)
+                \startTextSpanTwo                                              %! baca_text_spanner:PiecewiseCommand(1)
+                - \abjad-solid-line-with-arrow                                 %! baca_text_spanner:PiecewiseCommand(1)
+                - \baca-text-spanner-left-text "P"                             %! baca_text_spanner:PiecewiseCommand(1)
+                - \tweak staff-padding #8                                      %! baca_text_spanner:PiecewiseCommand(1)
+                \startTextSpanOne                                              %! baca_text_spanner:PiecewiseCommand(1)
+                - \abjad-solid-line-with-arrow                                 %! baca_text_spanner:PiecewiseCommand(1)
+                - \baca-text-spanner-left-text "trem."                         %! baca_text_spanner:PiecewiseCommand(1)
+                - \baca-text-spanner-right-text "larg."                        %! baca_text_spanner:PiecewiseCommand(1)
+                - \tweak bound-details.right.padding #2.5                      %! baca_text_spanner:PiecewiseCommand(1)
+                - \tweak bound-details.right.stencil-align-dir-y #center       %! baca_text_spanner:PiecewiseCommand(1)
+                - \tweak staff-padding #5.5                                    %! baca_text_spanner:PiecewiseCommand(1)
+                \startTextSpan                                                 %! baca_text_spanner:PiecewiseCommand(1)
+
+                \override NoteHead.style = #'harmonic                          %! baca_note_head_style_harmonic:OverrideCommand(1)
+                <d f>16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \pp                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \<                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \glissando                                                     %! baca_glissando
+
+                <f a>16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \baca-effort-mf                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak to-barline ##t                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                - \tweak circled-tip ##t                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \glissando                                                     %! baca_glissando
+
+                <d f>16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                \glissando                                                     %! baca_glissando
+
+                <f a>16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                \!                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+                \glissando                                                     %! baca_glissando
+
+                a,16
+                :64                                                            %! baca_stem_tremolo:IndicatorCommand
+                \stopTextSpan                                                  %! baca_text_spanner:PiecewiseCommand(2)
+                ]
+                \glissando                                                     %! baca_glissando
+                \revert Beam.positions                                         %! baca_beam_positions:OverrideCommand(2)
+
+            }
+
+            e1
+            \stopTextSpanTwo                                                   %! baca_text_spanner:PiecewiseCommand(3)
+            \stopTextSpanOne                                                   %! baca_text_spanner:PiecewiseCommand(1)
+            \glissando                                                         %! baca_glissando
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #10.5                                       %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanTwo                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "T"                                 %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #8                                          %! baca_text_spanner:PiecewiseCommand(1)
+            \startTextSpanOne                                                  %! baca_text_spanner:PiecewiseCommand(1)
+            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
+
+        }
+
+    }
+
+    {
+
+        % [D Cello_Music_Voice measure 54 / measure 9]                         %! _comment_measure_numbers
+        \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
+        <ds! fs!>4..
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \stopTextSpanTwo                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
+        \glissando                                                             %! baca_finger_pressure_transition
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "II / III strett."                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "larg."                                %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanTwo                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "(T)"                                   %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "P"                                    %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+
+        \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+        <ds! fs!>16
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \stopTextSpanTwo                                                       %! baca_text_spanner:PiecewiseCommand(2)
+        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(2)
+
+    }
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_Music_Voice measure 55 / measure 10]                    %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
         \context Voice = "Cello_Rest_Voice"                                    %! _make_multimeasure_rest_container
         {                                                                      %! _make_multimeasure_rest_container
 
-            % [D Cello_Rest_Voice measure 52 / measure 7]                      %! _comment_measure_numbers
-            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+            % [D Cello_Rest_Voice measure 55 / measure 10]                     %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
-
-    % [D Cello_Music_Voice measure 53 / measure 8]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \baca-effort-mf                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca_text_spanner:PiecewiseCommand(3)
-
-    % [D Cello_Music_Voice measure 54 / measure 9]                             %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _make_measure_silences
-
-    % [D Cello_Music_Voice measure 55 / measure 10]                            %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Cello_Music_Voice measure 56 / measure 11]                            %! _comment_measure_numbers
     R1 * 3/2                                                                   %! _make_measure_silences
