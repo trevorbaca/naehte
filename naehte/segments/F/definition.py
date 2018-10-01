@@ -377,15 +377,19 @@ maker(
         abjad.tweak(True).to_barline,
         selector=baca.leaves().rleak(),
         ),
+    baca.new(
+        baca.note_head_x_extent_zero(),
+        baca.note_head_transparent(),
+        selector=baca.leaves()[1:],
+        ),
     baca.suite(
         baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' c' }"),
         baca.pitch('E3'),
         ),
     baca.suite(
         baca.glissando(
-            #(abjad.tweak('red').color, -1),
+            (abjad.tweak(2.75).bound_details__right__padding, -1),
             allow_repeats=True,
-            stems=True,
             zero_padding=True,
             ),
         baca.interpolate_staff_positions('E3', 'E3'),
