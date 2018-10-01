@@ -16,47 +16,35 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
+        (4, 4), (4, 4), (4, 4), (5, 4),
         (4, 4),
-        (6, 4), (3, 8), (5, 8),
+        (6, 4),
+        (3, 4), (1, 4), (4, 8), (6, 4),
+        (3, 8), (5, 8),
         (1, 4),
+        (11, 4), (1, 4),
         ],
-    validate_measure_count=5,
+    validate_measure_count=15,
     )
 
 maker(
     'Global_Skips',
-    baca.metronome_mark('117', selector=baca.leaf(2 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
     baca.rehearsal_mark(
         'F',
         abjad.tweak((0, 12)).extra_offset,
-        ),
-    baca.new(
-        baca.new(
-            baca.bar_line_x_extent((0, 3.5)),
-            after=True,
-            selector=baca.skip(-1),
-            ),
-        baca.volta(),
-        measures=1,
-        ),
-    baca.new(
-        baca.new(
-            baca.bar_line_x_extent((0, 2)),
-            after=True,
-            selector=baca.skip(-1),
-            ),
-        baca.volta(),
-        measures=(2, 4),
         ),
     )
 
 maker(
     'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(8 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(-3)),
     baca.global_fermata('fermata', selector=baca.leaf(-1)),
     )
 
 maker(
-    ('vc', 1),
+    ('vc', 5),
     baca.new(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
@@ -70,7 +58,7 @@ maker(
     )
 
 maker(
-    ('vc', 2),
+    ('vc', 6),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
@@ -105,7 +93,7 @@ maker(
     )
 
 maker(
-    ('vc', 3),
+    ('vc', 11),
     baca.hairpin(
         '|> p <| ff',
         piece_selector=baca.lparts([1, 2]),
@@ -131,7 +119,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         piece_selector=baca.lparts([2, 2]),
-        measures=(3, 4),
+        measures=(11, 12),
         ),
     baca.text_spanner(
         'vib.tiss. -> NV',
@@ -140,7 +128,7 @@ maker(
     )
 
 maker(
-    ('vc', 4),
+    ('vc', 12),
     baca.hairpin(
         '|> pp',
         ),
