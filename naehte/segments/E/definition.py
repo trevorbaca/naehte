@@ -318,7 +318,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        measures=(8, 10),
+        measures=(8, 9),
         selector=baca.leaves().rleak(),
         ),
     )
