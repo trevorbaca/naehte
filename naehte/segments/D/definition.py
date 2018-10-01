@@ -499,8 +499,7 @@ maker(
 maker(
     ('vc', 12),
     baca.hairpin(
-        '"f" "f" >',
-        bookend=False,
+        '"f" "f" > ppp',
         piece_selector=baca.lparts([1, 2]),
         selector=baca.leaves()[1:],
         ),
@@ -550,6 +549,52 @@ maker(
     )
 
 maker(
+    ('vc', 13),
+    baca.hairpin(
+        '< mp',
+        selector=baca.leaves().lleak().rleak(),
+        ),
+    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' }"),
+    baca.suite(
+        baca.glissando(
+            allow_repeats=True,
+            stems=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions('D3', 'C#3'),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        'no scr. ->',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 14),
+    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.new(
+        baca.accidental_stencil_false(),
+        baca.pitch('C#3'),
+        selector=baca.leaves()[1:],
+        ),
+    baca.glissando(
+        allow_repeats=True,
+        selector=baca.leaves().rleak(),
+        stems=True,
+        zero_padding=True,
+        ),
+    baca.text_spanner(
+        'scr. poss. =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves().rleak().rleak(),
+        ),
+    )
+
+maker(
     ('vc', 15),
     baca.pitch('C#3', selector=baca.leaf(0)),
     baca.pitch('<C#3 A3>', selector=baca.leaves()[1:]),
@@ -591,9 +636,13 @@ maker(
 
 maker(
     ('vc', (15, 16)),
+    baca.breathe(
+        selector=baca.leaf(0),
+        ),
     baca.hairpin(
-        'p <| "mf" > pp < "mf" >o niente',
-        piece_selector=baca.lparts([1, 1, 1, 3]),
+        '"mf" > pp < "mf" >o niente',
+        piece_selector=baca.lparts([1, 1, 3]),
+        selector=baca.leaves()[1:],
         ),
     )
 
