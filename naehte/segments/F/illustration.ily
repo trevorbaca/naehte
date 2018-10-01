@@ -1006,10 +1006,8 @@ F_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
-        \hide NoteHead                                                         %! baca_glissando
-        \override Accidental.stencil = ##f                                     %! baca_glissando
-        \override NoteColumn.glissando-skip = ##t                              %! baca_glissando
-        \override NoteHead.no-ledgers = ##t                                    %! baca_glissando
+        \override NoteHead.X-extent = #'(0 . 0)                                %! baca_note_head_x_extent_zero:OverrideCommand(1)
+        \override NoteHead.transparent = ##t                                   %! baca_note_head_transparent:OverrideCommand(1)
         e4
         - \abjad-zero-padding-glissando                                        %! baca_glissando
         \glissando                                                             %! baca_glissando
@@ -1048,7 +1046,10 @@ F_Cello_Music_Voice = {                                                        %
 
         e4
         - \abjad-zero-padding-glissando                                        %! baca_glissando
+        - \tweak bound-details.right.padding #2.75                             %! baca_glissando
         \glissando                                                             %! baca_glissando
+        \revert NoteHead.X-extent                                              %! baca_note_head_x_extent_zero:OverrideCommand(2)
+        \revert NoteHead.transparent                                           %! baca_note_head_transparent:OverrideCommand(2)
 
     }
 
@@ -1059,10 +1060,6 @@ F_Cello_Music_Voice = {                                                        %
 
             % [F Cello_Music_Voice measure 88 / measure 15]                    %! _comment_measure_numbers
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
-            \revert Accidental.stencil                                         %! baca_glissando
-            \revert NoteColumn.glissando-skip                                  %! baca_glissando
-            \revert NoteHead.no-ledgers                                        %! baca_glissando
-            \undo \hide NoteHead                                               %! baca_glissando
             e1 * 1/4                                                           %! _make_multimeasure_rest_container
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             - \tweak to-barline ##t                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
