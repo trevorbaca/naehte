@@ -19,9 +19,9 @@ maker = baca.SegmentMaker(
         (5, 4),
         (8, 4), (10, 4),
         (7, 4), (5, 8), (4, 8),
-        (3, 4), (4, 8),
+        (3, 4), (1, 4), (4, 8),
         ],
-    validate_measure_count=8,
+    validate_measure_count=9,
     )
 
 maker(
@@ -34,14 +34,14 @@ maker(
         abjad.tweak((0, 12)).extra_offset,
         ),
     baca.new(
-#        baca.new(
-#            baca.bar_line_x_extent((0, 2)),
-#            after=True,
-#            selector=baca.skip(-1),
-#            ),
         baca.volta(),
         measures=(4, 6),
         ),
+    )
+
+maker(
+    'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(8 - 1)),
     )
 
 maker(
@@ -174,6 +174,7 @@ maker(
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
+        abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
@@ -200,7 +201,7 @@ maker(
 maker(
     ('vc', 7),
     baca.hairpin(
-        '<| p |> pp',
+        '<| p |>o niente',
         piece_selector=baca.lparts([2, 3]),
         selector=baca.leaves().rleak(),
         ),
@@ -217,7 +218,7 @@ maker(
             selector=baca.leaf(-1),
             ),
         baca.glissando(
-            selector=baca.leaves()[-3:].rleak(),
+            selector=baca.leaves()[-3:],
             zero_padding=True,
             ),
         baca.literal(
@@ -247,18 +248,19 @@ maker(
         ),
     baca.text_spanner(
         r'XFB =| \naehte-circles-markup =| spz. =|',
+        (abjad.tweak(0.5).bound_details__right__padding, 1),
         (abjad.tweak(4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        piece_selector=baca.lparts([1, 2, 2]),
+        piece_selector=baca.lparts([1, 1, 3]),
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
-    ('vc', 8),
+    ('vc', 9),
     baca.hairpin(
-        '<| f |> p', 
+        'o<| f |> p', 
         piece_selector=baca.lparts([1, 2]),
         ),
     baca.pitch('A3'),
