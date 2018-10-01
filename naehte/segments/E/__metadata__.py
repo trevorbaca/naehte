@@ -13,11 +13,12 @@ metadata = abjad.OrderedDict(
                 'Music_Context',
                 'Cello_Music_Staff',
                 'Cello_Music_Voice',
+                'Cello_Rest_Voice',
                 ],
             ),
         (
             'bol_measure_numbers',
-            [62, 64],
+            [62, 65, 68],
             ),
         (
             'fermata_measure_numbers',
@@ -25,7 +26,7 @@ metadata = abjad.OrderedDict(
             ),
         ('first_measure_number', 62),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 67),
+        ('last_measure_number', 69),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -80,12 +81,22 @@ metadata = abjad.OrderedDict(
             abjad.OrderedDict(
                 [
                     ('Cello_Music_Voice', True),
+                    ('Cello_Rest_Voice', False),
                     ]
                 ),
             ),
         (
             'time_signatures',
-            ['5/4', '7/4', '5/8', '4/8', '3/4', '4/8'],
+            [
+                '5/4',
+                '8/4',
+                '10/4',
+                '7/4',
+                '5/8',
+                '4/8',
+                '3/4',
+                '4/8',
+                ],
             ),
         ]
     )
