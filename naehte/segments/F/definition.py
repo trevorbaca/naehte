@@ -371,6 +371,36 @@ maker(
     )
 
 maker(
+    ('vc', 14),
+    baca.hairpin(
+        'ppp -- niente',
+        abjad.tweak(True).to_barline,
+        selector=baca.leaves().rleak(),
+        ),
+    baca.suite(
+        baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' c' }"),
+        baca.pitch('E3'),
+        ),
+    baca.suite(
+        baca.glissando(
+            #(abjad.tweak('red').color, -1),
+            allow_repeats=True,
+            stems=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions('E3', 'E3'),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        r'\naehte-very-wide-circles-markup =|',
+        abjad.tweak(3.25).bound_details__right__padding,
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
     'vc',
     baca.dls_staff_padding(6),
     )
