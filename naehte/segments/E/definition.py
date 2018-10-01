@@ -48,14 +48,10 @@ maker(
 
 maker(
     ('vc', 1),
-    baca.breathe(),
-    baca.dynamic_text_self_alignment_x(
-        abjad.Right,
-        selector=baca.leaf(-1),
-        ),
     baca.hairpin(
-        'o< pp > ppp < mp',
+        'o< pp > ppp < f',
         piece_selector=baca.lparts([6, 6, 2]),
+        selector=baca.leaves().rleak(),
         ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
@@ -67,7 +63,7 @@ maker(
     baca.rhythm(
         '{'
         r" \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] }"
-        " c'2.... r32"
+        " c'1"
         ' }'
         ),
     baca.suite(
@@ -81,18 +77,56 @@ maker(
         ),
     baca.text_spanner(
         'RH vibr. strettiss. -> RH NV',
-        abjad.tweak(8.25).bound_details__right__padding,
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(8).staff_padding,
         lilypond_id=1,
-        selector=baca.leaves()[-2:],
-        ),
-    baca.text_spanner(
-        'non scr. -> scr. poss.',
-        abjad.tweak(9.25).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
-        selector=baca.leaves()[-2:],
+        selector=baca.leaves()[-1:].rleak(),
         ),
     baca.tuplet_bracket_padding(1.75),
+    )
+
+maker(
+    ('vc', 2),
+    baca.suite(
+        baca.rhythm(r"{ c'\breve }"),
+        baca.pitch('E2'),
+        baca.repeat_tie_to(),
+        ),
+    )
+
+maker(
+    ('vc', 3),
+    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.suite(
+        baca.glissando(
+            allow_repeats=True,
+            selector=baca.leaves().rleak(),
+            stems=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions(
+            'E2', 'C#3',
+            selector=baca.leaves().rleak(),
+            ),
+        baca.repeat_tie_to(),
+        ),
+    )
+
+maker(
+    ('vc', (2, 3)),
+    baca.hairpin(
+        '>o',
+        bookend=False,
+        selector=baca.leaves().rleak(),
+        ),
+    baca.text_spanner(
+        'no scr. -> scr. poss. -> XFB =|',
+        (abjad.tweak(1).bound_details__right__padding, 0),
+        (abjad.tweak(2.25).bound_details__right__padding, -1),
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 11]),
+        selector=baca.leaves().lleak().rleak(),
+        ),
     )
 
 maker(
