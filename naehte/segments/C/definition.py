@@ -37,6 +37,8 @@ maker(
     baca.metronome_mark('39', selector=baca.leaf(4 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(5 - 1)),
     baca.metronome_mark('52', selector=baca.leaf(8 - 1)),
+    baca.metronome_mark('91', selector=baca.leaf(13 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(15 - 1)),
     baca.rehearsal_mark(
         'C',
         abjad.tweak((0, 12)).extra_offset,

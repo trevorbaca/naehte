@@ -35,7 +35,6 @@ spacing = baca.scorewide_spacing(
     breaks=breaks,
     fallback_duration=(1, 32),
     )
-spacing.override(5, (1, 64))
-spacing.override(6, (1, 48))
+spacing.override(7, (1, 48))
 spacing.override((13, 14), (1, 12))
 spacing.override((15, 16), (1, 24))
