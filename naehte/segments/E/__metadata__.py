@@ -18,15 +18,15 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [62, 65, 68],
+            [62, 65, 68, 71],
             ),
         (
             'fermata_measure_numbers',
-            [69],
+            [72],
             ),
         ('first_measure_number', 62),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 70),
+        ('last_measure_number', 73),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -91,6 +91,9 @@ metadata = abjad.OrderedDict(
                 '5/4',
                 '8/4',
                 '10/4',
+                '5/8',
+                '5/8',
+                '5/8',
                 '7/4',
                 '5/8',
                 '4/8',

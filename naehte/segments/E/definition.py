@@ -18,30 +18,32 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (5, 4),
         (8, 4), (10, 4),
+        (5, 8), (5, 8), (5, 8),
         (7, 4), (5, 8), (4, 8),
         (3, 4), (1, 4), (4, 8),
         ],
-    validate_measure_count=9,
+    validate_measure_count=12,
     )
 
 maker(
     'Global_Skips',
     baca.metronome_mark('39', selector=baca.leaf(1 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(4 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(4 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(7 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(10 - 1)),
     baca.rehearsal_mark(
         'E',
         abjad.tweak((0, 12)).extra_offset,
         ),
     baca.new(
         baca.volta(),
-        measures=(4, 6),
+        measures=(7, 9),
         ),
     )
 
 maker(
     'Global_Rests',
-    baca.global_fermata('fermata', selector=baca.leaf(8 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(11 - 1)),
     )
 
 maker(
@@ -94,7 +96,7 @@ maker(
     )
 
 maker(
-    ('vc', 4),
+    ('vc', 7),
     baca.hairpin(
         'p > ppp < pp',
         piece_selector=baca.lparts([5, 2]),
@@ -154,7 +156,7 @@ maker(
     )
 
 maker(
-    ('vc', 5),
+    ('vc', 8),
     baca.hairpin(
         '> pppp < ppp',
         piece_selector=baca.lparts([1, 2]),
@@ -170,7 +172,7 @@ maker(
         baca.glissando(
             selector=baca.leaves().rleak(),
             ),
-        measures=(5, 6),
+        measures=(8, 9),
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
@@ -178,13 +180,13 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        measures=(5, 7),
+        measures=(8, 10),
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
-    ('vc', 6),
+    ('vc', 9),
     baca.hairpin(
         '> ppppp',
         selector=baca.leaves().rleak(),
@@ -199,7 +201,7 @@ maker(
     )
 
 maker(
-    ('vc', 7),
+    ('vc', 10),
     baca.hairpin(
         '<| p |>o niente',
         piece_selector=baca.lparts([2, 3]),
@@ -258,7 +260,7 @@ maker(
     )
 
 maker(
-    ('vc', 9),
+    ('vc', 12),
     baca.hairpin(
         'o<| f |> p', 
         piece_selector=baca.lparts([1, 2]),
