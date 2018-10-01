@@ -17,33 +17,30 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (5, 4),
+        (8, 4), (10, 4),
         (7, 4), (5, 8), (4, 8),
         (3, 4), (4, 8),
         ],
-    validate_measure_count=6,
+    validate_measure_count=8,
     )
 
 maker(
     'Global_Skips',
     baca.metronome_mark('39', selector=baca.leaf(1 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(2 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(5 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(4 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
     baca.rehearsal_mark(
         'E',
         abjad.tweak((0, 12)).extra_offset,
         ),
     baca.new(
-        baca.new(
-            baca.bar_line_x_extent((0, 2.5)),
-            selector=baca.skip(0),
-            ),
-        baca.new(
-            baca.bar_line_x_extent((0, 2)),
-            after=True,
-            selector=baca.skip(-1),
-            ),
+#        baca.new(
+#            baca.bar_line_x_extent((0, 2)),
+#            after=True,
+#            selector=baca.skip(-1),
+#            ),
         baca.volta(),
-        measures=(2, 4),
+        measures=(4, 6),
         ),
     )
 
@@ -97,11 +94,15 @@ maker(
     )
 
 maker(
-    ('vc', 2),
+    ('vc', 4),
     baca.hairpin(
         'p > ppp < pp',
         piece_selector=baca.lparts([5, 2]),
         selector=baca.leaves().rleak(),
+        ),
+    baca.literal(
+        r"\once \override Staff.BarLine.space-alist.first-note"
+        " = #'(minimum-space . 4)"
         ),
     baca.note_head_style_harmonic_black(
         selector=baca.leaf(0),
@@ -144,7 +145,7 @@ maker(
         bookend=False,
         ),
     baca.text_spanner(
-        'I / II (trem.) mod. -> strett. =|',
+        'I / II mod. -> strett. =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         piece_selector=baca.lparts([1, 2]),
@@ -153,7 +154,7 @@ maker(
     )
 
 maker(
-    ('vc', 3),
+    ('vc', 5),
     baca.hairpin(
         '> pppp < ppp',
         piece_selector=baca.lparts([1, 2]),
@@ -169,20 +170,20 @@ maker(
         baca.glissando(
             selector=baca.leaves().rleak(),
             ),
-        measures=(3, 4),
+        measures=(5, 6),
         ),
     baca.text_spanner(
         r'\baca-damp-markup =|',
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        measures=(3, 4),
+        measures=(5, 7),
         selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
-    ('vc', 4),
+    ('vc', 6),
     baca.hairpin(
         '> ppppp',
         selector=baca.leaves().rleak(),
@@ -197,11 +198,14 @@ maker(
     )
 
 maker(
-    ('vc', 5),
+    ('vc', 7),
     baca.hairpin(
         '<| p |> pp',
         piece_selector=baca.lparts([2, 3]),
         selector=baca.leaves().rleak(),
+        ),
+    baca.literal(
+        r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)"
         ),
     baca.suite(
         baca.pitches(
@@ -252,7 +256,7 @@ maker(
     )
 
 maker(
-    ('vc', 6),
+    ('vc', 8),
     baca.hairpin(
         '<| f |> p', 
         piece_selector=baca.lparts([1, 2]),
