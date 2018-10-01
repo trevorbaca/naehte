@@ -1,5 +1,5 @@
-% time_signatures = ['5/4', '8/4', '10/4', '7/4', '5/8', '4/8', '3/4', '4/8']
-% measure_count = 8
+% time_signatures = ['5/4', '8/4', '10/4', '7/4', '5/8', '4/8', '3/4', '1/4', '4/8']
+% measure_count = 9
 
 
 
@@ -75,10 +75,18 @@
             \break                                                                       %! BREAK:IndicatorCommand
             s1 * 3/4                                                                     %! _make_global_skips(1)
         %@% \bacaStopTextSpanSPM                                                         %! SPACING_MARKUP
-        %@% - \baca-start-spm-both "[1/48]" "[[1/32 * 35/24]]"                           %! SPACING_MARKUP
+        %@% - \baca-start-spm-left-only "[1/48]"                                         %! SPACING_MARKUP
         %@% \bacaStartTextSpanSPM                                                        %! SPACING_MARKUP
 
             % [Page_Layout measure 69]                                                   %! _comment_measure_numbers
+            \baca-new-spacing-section #1 #4                                              %! HorizontalSpacingSpecifier(1):SPACING
+            \noBreak                                                                     %! BreakMeasureMap(2):BREAK
+            s1 * 1/4                                                                     %! _make_global_skips(1)
+        %@% \bacaStopTextSpanSPM                                                         %! SPACING_MARKUP
+        %@% - \baca-start-spm-both "[1/4]" "[[1/32 * 35/24]]"                            %! SPACING_MARKUP
+        %@% \bacaStartTextSpanSPM                                                        %! SPACING_MARKUP
+
+            % [Page_Layout measure 70]                                                   %! _comment_measure_numbers
             \baca-new-spacing-section #35 #768                                           %! HorizontalSpacingSpecifier(1):SPACING
             \noBreak                                                                     %! BreakMeasureMap(2):BREAK
             s1 * 1/2                                                                     %! _make_global_skips(1)
