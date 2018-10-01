@@ -18,3 +18,11 @@ TO-DO
     Replace baca.repeat_tie_to(), baca.repeat_tie_from() with baca.repeat_tie().
 
 6.  Teach repeat ties to ignore trill pitch.
+
+7.  Allow trend-initial text spanners:
+        baca.text_spanner(
+            r'-> XFB =|',
+            bookend=False,
+            piece_selector=baca.lparts([2, 4]),
+            selector=baca.leaves().lleak(),
+            )
