@@ -13,6 +13,11 @@ breaks = baca.breaks(
             measure=3,
             y_offset=40 + 30 + 16,
             ),
+        baca.system(
+            16,
+            measure=8,
+            y_offset=40 + 2 * 30 + 2 * 16,
+            ),
         ),
     )
 spacing = baca.scorewide_spacing(
@@ -21,4 +26,5 @@ spacing = baca.scorewide_spacing(
     fallback_duration=(1, 32),
     )
 spacing.override((1, 2), (1, 24))
-spacing.override((4, 5), (1, 36))
+spacing.override(6, (1, 20)),
+spacing.override((7, 8), (1, 36))
