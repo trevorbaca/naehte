@@ -21,9 +21,10 @@ maker = baca.SegmentMaker(
         (5, 8),
         (1, 4),
         (6, 8), (6, 8),
+        (1, 4),
         (6, 8),
         ],
-    validate_measure_count=7,
+    validate_measure_count=8,
     )
 
 maker(
@@ -38,6 +39,7 @@ maker(
 maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(4 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(7 - 1)),
     )
 
 maker(
@@ -107,31 +109,35 @@ maker(
     )
 
 maker(
-    ('vc', (5, 7)),
+    ('vc', 5),
+    baca.pitch('<F3 C4>'),
+    baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    )
+
+maker(
+    ('vc', 6),
+    baca.pitch('<F3 C4>'),
+    baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    )
+
+maker(
+    ('vc', (5, 6)),
+    baca.text_spanner(
+        r'no scr -> scr. -> no scr. -> scr. =|',
+        abjad.tweak(9).staff_padding,
+        (abjad.tweak(3.25).bound_details__right__padding, -1),
+        bookend=False,
+        lilypond_id=1,
+        piece_selector=baca.lparts([1, 1, 1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', (5, 6)),
     baca.dynamic('pppp-sempre'),
     baca.dynamic_text_self_alignment_x(
         abjad.Left,
-        ),
-    baca.suite(
-        baca.rhythm(
-            '{'
-            r" \times 6/7 { c'2. c'8 }"
-            r" \times 6/7 { c'2. c'8 }"
-            r" \times 6/7 { c'2. r8 }"
-            ' }'
-            ),
-        baca.pitches(
-            '<F3 C4>',
-            allow_repeats=True,
-            selector=baca.pleaves()[:-1],
-            ),
-        baca.pitch(
-            'Eb3',
-            selector=baca.pleaf(-1),
-            ),
-        baca.finger_pressure_transition(
-            selector=baca.pleaves()[-2:],
-            ),
         ),
     baca.text_spanner(
         r'II / III mod. =|',
@@ -148,18 +154,10 @@ maker(
         selector=baca.leaves()[2:4],
         ),
     baca.text_spanner(
-        r'non. scr -> scr. -> non scr. -> scr. -> non scr. ||',
-        abjad.tweak(9).staff_padding,
-        bookend=False,
-        lilypond_id=1,
-        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
-        ),
-    baca.text_spanner(
         r'\baca-triple-diamond-parenthesized-top-markup ->'
         r' \baca-damp-markup =|' 
         r' \baca-double-diamond-parenthesized-top-markup ->'
-        r' \baca-double-diamond-markup =|'
-        ' XFB =|',
+        r' \baca-double-diamond-markup =|',
         (abjad.tweak(-0.5).bound_details__left__padding, 0),
         (abjad.tweak(1.25).bound_details__right__padding, 0),
         (abjad.tweak("#'trill").style, 0),
@@ -167,9 +165,22 @@ maker(
         (abjad.tweak(-0.5).bound_details__left__padding, 2),
         (abjad.tweak(1.25).bound_details__right__padding, 2),
         (abjad.tweak("#'trill").style, 2),
+        (abjad.tweak(3.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        piece_selector=baca.lparts([1, 1, 1, 1, 2]),
+        piece_selector=baca.lparts([1, 1, 1, 2]),
+        selector=baca.leaves().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 8),
+    baca.pitch('Eb3'),
+    baca.rhythm(r"\times 6/7 { c'2. r8 }"),
+    baca.text_spanner(
+        'XFB =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
         ),
     )
 

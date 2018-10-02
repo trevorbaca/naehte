@@ -22,11 +22,11 @@ metadata = abjad.OrderedDict(
             ),
         (
             'fermata_measure_numbers',
-            [106],
+            [106, 109],
             ),
         ('first_measure_number', 103),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 109),
+        ('last_measure_number', 110),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -87,7 +87,16 @@ metadata = abjad.OrderedDict(
             ),
         (
             'time_signatures',
-            ['9/4', '9/4', '5/8', '1/4', '6/8', '6/8', '6/8'],
+            [
+                '9/4',
+                '9/4',
+                '5/8',
+                '1/4',
+                '6/8',
+                '6/8',
+                '1/4',
+                '6/8',
+                ],
             ),
         ]
     )
