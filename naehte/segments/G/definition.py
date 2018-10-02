@@ -227,26 +227,23 @@ maker(
         lilypond_id=1,
         ),
     baca.text_spanner(
-        'non scr. -> scr. -> XFB =|',
+        'non scr. -> scr. =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        piece_selector=baca.lparts([1, 1, 3]),
-        selector=baca.leaves().rleak().rleak().rleak(),
+        piece_selector=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
         ),
     )
 
 maker(
     ('vc', 10),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[:1].lleak(),
-        ),
-    baca.finger_pressure_transition(
         selector=baca.leaves()[-2:],
         ),
     baca.hairpin(
-        '|> ppp <| p |> ppp',
+        'ppp <| p |> ppp',
         piece_selector=baca.lparts([1, 1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.leaves(),
         ),
     baca.note_head_style_harmonic(
         selector=baca.leaves()[:2],
