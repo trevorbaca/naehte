@@ -43,6 +43,7 @@ maker(
     baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
     baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(8 - 1)),
+    baca.metronome_mark('39', selector=baca.leaf(12 - 1)),
     baca.rehearsal_mark(
         'G',
         abjad.tweak((0, 12)).extra_offset,
@@ -311,7 +312,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        'non scr. -> scr. =|',
+        'no scr. -> scr. =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
@@ -319,7 +320,7 @@ maker(
         measures=(9, 10),
         ),
     baca.text_spanner(
-        'vib.tiss. -> NV',
+        'vib. -> NV',
         abjad.tweak(5.5).staff_padding,
         ),
     )
@@ -355,7 +356,8 @@ maker(
         selector=baca.leaves()[-2:],
         ),
     baca.hairpin(
-        'ppp <| p |> ppp',
+        'ppp <| p |>',
+        bookend=False,
         piece_selector=baca.lparts([1, 2]),
         ),
     baca.note_head_style_harmonic(
@@ -375,11 +377,43 @@ maker(
             ),
         ),
     baca.text_spanner(
-        'I / II larg. -> strett.',
-        abjad.tweak(7.25).bound_details__right__padding,
+        'I / II larg. =|',
         abjad.tweak(8).staff_padding,
+        bookend=False,
         lilypond_id=1,
         selector=baca.leaves()[-2:],
+        ),
+    )
+
+maker(
+    ('vc', 12),
+    baca.dynamic('ppp'),
+    baca.finger_pressure_transition(
+        selector=baca.leaves()[:1].lleak(),
+        ),
+    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' }")
+    )
+
+maker(
+    ('vc', 13),
+    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' c' }")
+    )
+
+maker(
+    ('vc', (12, 13)),
+    baca.new(
+        baca.note_head_x_extent_zero(),
+        baca.note_head_transparent(),
+        selector=baca.leaves()[1:],
+        ),
+    baca.suite(
+        baca.glissando(
+            (abjad.tweak(2.75).bound_details__right__padding, -1),
+            allow_repeats=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions('D2', 'D2'),
+        selector=baca.leaves().rleak(),
         ),
     )
 
