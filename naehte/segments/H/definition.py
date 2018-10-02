@@ -19,17 +19,25 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (9, 4), (9, 4),
         (5, 8),
-        (6, 8), (6, 8), (6, 8),
+        (1, 4),
+        (6, 8), (6, 8),
+        (6, 8),
         ],
-    validate_measure_count=6,
+    validate_measure_count=7,
     )
 
 maker(
     'Global_Skips',
+    baca.metronome_mark('117', selector=baca.leaf(1 - 1)),
     baca.rehearsal_mark(
         'H',
         abjad.tweak((0, 12)).extra_offset,
         ),
+    )
+
+maker(
+    'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(4 - 1)),
     )
 
 maker(
@@ -99,7 +107,7 @@ maker(
     )
 
 maker(
-    ('vc', (4, 6)),
+    ('vc', (5, 7)),
     baca.dynamic('pppp-sempre'),
     baca.dynamic_text_self_alignment_x(
         abjad.Left,
