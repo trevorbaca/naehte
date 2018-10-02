@@ -18,15 +18,15 @@ metadata = abjad.OrderedDict(
             ),
         (
             'bol_measure_numbers',
-            [89, 92, 96, 99],
+            [89, 92, 96, 100],
             ),
         (
             'fermata_measure_numbers',
-            [101],
+            [102],
             ),
         ('first_measure_number', 89),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 101),
+        ('last_measure_number', 102),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -51,8 +51,8 @@ metadata = abjad.OrderedDict(
                         [
                             abjad.Momento(
                                 context='Cello_Music_Voice',
-                                prototype='abjad.HairpinIndicator',
-                                value='|>',
+                                prototype='abjad.Dynamic',
+                                value='ppp',
                                 ),
                             ],
                         ),
@@ -97,6 +97,7 @@ metadata = abjad.OrderedDict(
                 '4/4',
                 '6/4',
                 '3/8',
+                '5/8',
                 '7/4',
                 '9/4',
                 '10/4',
