@@ -16,18 +16,19 @@ maker = baca.SegmentMaker(
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
-        (9, 4), (3, 8),
+        (4, 4), (5, 4), (3, 8),
         (3, 8),
         (3, 8), (4, 4), (7, 4),
         ],
-    validate_measure_count=6,
+    validate_measure_count=7,
     )
 
 maker(
     'Global_Skips',
-    baca.metronome_mark('52', selector=baca.leaf(2 - 1)),
-    baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(2 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(1 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(3 - 1)),
+    baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(3 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(7 - 1)),
     baca.rehearsal_mark(
         'G',
         abjad.tweak((0, 12)).extra_offset,
@@ -36,49 +37,55 @@ maker(
 
 maker(
     ('vc', 1),
-    baca.finger_pressure_transition(
-        selector=baca.leaves()[-2:],
-        ),
     baca.hairpin(
-        'ppp < p > pp < mp > p < mf > mp <| fff',
-        piece_selector=baca.lparts([1, 1, 1, 1, 1, 1, 2]),
+        'ppp < p > pp < mp > p < mf >',
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 1, 1, 1, 1]),
         ),
-    baca.note_head_style_harmonic(
-        selector=baca.leaves()[:-1],
-        ),
+    baca.note_head_style_harmonic(),
     baca.suite(
         baca.rhythm(
             '{'
             r" c'4 \times 3/4 { c'4 c' \times 2/3 { c' c' c' } }"
-            " c'1 c'4"
             ' }'
             ),
         baca.pitches(
-            'F5 G3 A4 B2 C4 D2 E2 E2',
-            allow_repeats=True,
+            'F5 G3 A4 B2 C4 D2',
             ),
-        baca.glissando(
-            selector=baca.leaves()[:-1],
-            ),
-        ),
-    baca.text_spanner(
-        'RH vib. poss. -> NV',
-        abjad.tweak(8).staff_padding,
-        lilypond_id=1,
-        selector=baca.leaves()[-2:],
-        ),
-    baca.text_spanner(
-        'non scr. -> scr.iss. -> XFB =|',
-        abjad.tweak(5.5).staff_padding,
-        bookend=False,
-        piece_selector=baca.lparts([1, 1, 3]),
-        selector=baca.leaves()[-2:].rleak().rleak().rleak(),
+        baca.glissando(),
         ),
     baca.tuplet_bracket_staff_padding(2),
     )
 
 maker(
     ('vc', 2),
+    baca.finger_pressure_transition(),
+    baca.hairpin(
+        'mp <| fff',
+        ),
+    baca.note_head_style_harmonic(
+        selector=baca.leaf(-1),
+        ),
+    baca.pitch('E2'),
+    baca.rhythm(
+        "{ c'1 c'4 }"
+        ),
+    baca.text_spanner(
+        'RH vib. molto -> NV',
+        abjad.tweak(8).staff_padding,
+        lilypond_id=1,
+        ),
+    baca.text_spanner(
+        'non scr. -> scr. poss. -> XFB =|',
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([1, 1, 3]),
+        selector=baca.leaves().rleak().rleak().rleak(),
+        ),
+    )
+
+maker(
+    ('vc', 3),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
@@ -104,7 +111,7 @@ maker(
     )
 
 maker(
-    ('vc', 3),
+    ('vc', 4),
     baca.hairpin(
         '|> ppp <| fff',
         piece_selector=baca.lparts([1, 2]),
@@ -140,7 +147,7 @@ maker(
     )
 
 maker(
-    ('vc', 4),
+    ('vc', 5),
     baca.hairpin(
         '|> ppp <| fff',
         piece_selector=baca.lparts([1, 2]),
@@ -174,7 +181,7 @@ maker(
     )
 
 maker(
-    ('vc', 5),
+    ('vc', 6),
     baca.hairpin(
         '|> ppp <| mf',
         piece_selector=baca.lparts([1, 2]),
@@ -207,7 +214,7 @@ maker(
     )
 
 maker(
-    ('vc', 6),
+    ('vc', 7),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
