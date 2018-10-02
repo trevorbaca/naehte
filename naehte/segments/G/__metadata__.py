@@ -52,7 +52,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ppp',
+                                value='niente',
                                 ),
                             ],
                         ),
@@ -99,8 +99,8 @@ metadata = abjad.OrderedDict(
                 '3/8',
                 '5/8',
                 '7/4',
-                '9/4',
                 '10/4',
+                '11/4',
                 '1/4',
                 ],
             ),

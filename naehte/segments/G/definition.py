@@ -21,7 +21,7 @@ maker = baca.SegmentMaker(
         (3, 8), (4, 4),
         (4, 4), (6, 4), (3, 8), (5, 8),
         (7, 4),
-        (9, 4), (10, 4),
+        (10, 4), (11, 4),
         (1, 4),
         ],
     validate_measure_count=14,
@@ -205,6 +205,7 @@ maker(
 
 maker(
     ('vc', 6),
+    baca.breathe(),
     baca.hairpin(
         '|> ppp <| mf',
         piece_selector=baca.lparts([1, 2]),
@@ -387,20 +388,35 @@ maker(
 
 maker(
     ('vc', 12),
-    baca.dynamic('ppp'),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
-    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' }")
-    )
-
-maker(
-    ('vc', 13),
     baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' c' }")
     )
 
 maker(
+    ('vc', 13),
+    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' c' c' }")
+    )
+
+maker(
     ('vc', (12, 13)),
+    baca.accent(
+        selector=baca.leaves()[
+            abjad.index([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
+            ],
+        ),
+    baca.hairpin(
+        'pppp -- pppp >o niente',
+        abjad.tweak(True).to_barline,
+        piece_selector=baca.lparts([14, 8]),
+        selector=baca.leaves().rleak(),
+        ),
+    baca.markup(
+        'degrees of ponticello',
+        abjad.tweak(8).staff_padding,
+        boxed=True,
+        ),
     baca.new(
         baca.note_head_x_extent_zero(),
         baca.note_head_transparent(),
@@ -415,9 +431,31 @@ maker(
         baca.interpolate_staff_positions('D2', 'D2'),
         selector=baca.leaves().rleak(),
         ),
+    baca.stem_tremolo(
+        selector=baca.leaves(),
+        ),
+    baca.text_spanner(
+        '0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|',
+        (abjad.tweak(3.25).bound_details__right__padding, -1),
+        abjad.tweak(3).staff_padding,
+        bookend=False,
+        piece_selector=baca.lparts([2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]),
+        selector=baca.leaves().rleak(),
+        ),
     )
 
 maker(
     'vc',
-    baca.dls_staff_padding(7),
+    baca.new(
+        baca.dls_staff_padding(7),
+        measures=(1, 6),
+        ),
+    baca.new(
+        baca.dls_staff_padding(3),
+        measures=7,
+        ),
+    baca.new(
+        baca.dls_staff_padding(7),
+        measures=(8, 13),
+        ),
     )
