@@ -23,9 +23,9 @@ maker = baca.SegmentMaker(
         (4, 4), (5, 4),
         (6, 8), (6, 8),
         (1, 4),
-        (6, 8),
+        (6, 8), (6, 8), (7, 8), (6, 8), (1, 4),
         ],
-    validate_measure_count=10,
+    validate_measure_count=14,
     )
 
 maker(
@@ -43,6 +43,7 @@ maker(
     'Global_Rests',
     baca.global_fermata('fermata', selector=baca.leaf(4 - 1)),
     baca.global_fermata('fermata', selector=baca.leaf(9 - 1)),
+    baca.global_fermata('fermata', selector=baca.leaf(-1)),
     )
 
 maker(
@@ -130,7 +131,14 @@ maker(
             ),
         baca.glissando(),
         ),
-    baca.tuplet_bracket_staff_padding(2),
+    baca.tuplet_bracket_staff_padding(
+        2,
+        selector=baca.leaf(1),
+        ),
+    baca.tuplet_bracket_staff_padding(
+        2.5,
+        selector=baca.leaf(3),
+        ),
     )
 
 maker(
@@ -225,13 +233,38 @@ maker(
     )
 
 maker(
-    ('vc', 10),
-    baca.pitch('Eb3'),
-    baca.rhythm(r"\times 6/7 { c'2. r8 }"),
+    ('vc', (10, 13)),
+    baca.dynamic_text_self_alignment_x(-0.45),
+    baca.hairpin(
+        'appena-udibile -- niente',
+        abjad.tweak(True).to_barline,
+        selector=baca.leaves().rleak(),
+        ),
+    baca.new(
+        baca.note_head_x_extent_zero(),
+        baca.note_head_transparent(),
+        selector=baca.leaves()[1:],
+        ),
+    baca.suite(
+        baca.rhythm(r"{ c'2. c2. c2.. c2. }"),
+        ),
+    baca.suite(
+        baca.dots_extra_offset((0.5, 1)),
+        baca.glissando(
+            (abjad.tweak(1.25).bound_details__right__padding, -1),
+            allow_repeats=True,
+            zero_padding=True,
+            ),
+        baca.interpolate_staff_positions('Eb3', 'Eb3'),
+        selector=baca.leaves().rleak(),
+        ),
     baca.text_spanner(
         'XFB =|',
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(-2).bound_details__left__padding,
+        abjad.tweak(3.25).bound_details__right__padding,
+        abjad.tweak(3).staff_padding,
         bookend=False,
+        selector=baca.leaves().rleak(),
         ),
     )
 
@@ -247,6 +280,10 @@ maker(
         ),
     baca.new(
         baca.dls_staff_padding(4.5),
-        measures=(7, -1),
+        measures=(7, 8),
+        ),
+    baca.new(
+        baca.dls_staff_padding(3.5),
+        measures=(10, 14),
         ),
     )

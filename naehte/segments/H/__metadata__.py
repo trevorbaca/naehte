@@ -22,11 +22,11 @@ metadata = abjad.OrderedDict(
             ),
         (
             'fermata_measure_numbers',
-            [106, 111],
+            [106, 111, 116],
             ),
         ('first_measure_number', 103),
         ('last_measure_is_fermata', True),
-        ('last_measure_number', 112),
+        ('last_measure_number', 116),
         (
             'persistent_indicators',
             abjad.OrderedDict(
@@ -52,7 +52,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='\\baca-pppp-sempre',
+                                value='niente',
                                 ),
                             ],
                         ),
@@ -67,7 +67,7 @@ metadata = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Global_Skips',
                                 prototype='abjad.TimeSignature',
-                                value='6/8',
+                                value='1/4',
                                 ),
                             ],
                         ),
@@ -98,6 +98,10 @@ metadata = abjad.OrderedDict(
                 '6/8',
                 '1/4',
                 '6/8',
+                '6/8',
+                '7/8',
+                '6/8',
+                '1/4',
                 ],
             ),
         ]
