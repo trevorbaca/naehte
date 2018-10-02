@@ -18,21 +18,43 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (4, 4), (5, 4), (3, 8),
         (3, 8),
-        (3, 8), (4, 4), (7, 4),
+        (3, 8), (4, 4),
+        (4, 4), (6, 4), (3, 8),
+        (7, 4),
+        (9, 4), (10, 4),
+        (1, 4),
         ],
-    validate_measure_count=7,
+    validate_measure_count=13,
     )
 
 maker(
     'Global_Skips',
+    baca.bar_line_x_extent(
+        (0, 2.75),
+        selector=baca.skip(1),
+        ),
+    baca.bar_line_x_extent(
+        (0, 2),
+        selector=baca.skip(5),
+        ),
     baca.metronome_mark('52', selector=baca.leaf(1 - 1)),
     baca.metronome_mark('52', selector=baca.leaf(3 - 1)),
     baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(3 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(7 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
+    baca.metronome_mark('52', selector=baca.leaf(8 - 1)),
+    baca.metronome_mark('117', selector=baca.leaf(9 - 1)),
     baca.rehearsal_mark(
         'G',
         abjad.tweak((0, 12)).extra_offset,
         ),
+    baca.volta(
+        selector=baca.leaves()[1:5],
+        ),
+    )
+
+maker(
+    'Global_Rests',
+    baca.global_fermata('fermata', selector=baca.leaf(-1)),
     )
 
 maker(
@@ -214,7 +236,7 @@ maker(
     )
 
 maker(
-    ('vc', 7),
+    ('vc', 10),
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
         ),
