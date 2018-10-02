@@ -102,7 +102,7 @@
         % necessary for uniform overlapping polyrhythms with accidentals
         \override Accidental.X-extent = ##f
 
-        \override BarLine.hair-thickness = 0.5
+        %\override BarLine.hair-thickness = 0.5
         \override BarLine.space-alist = #'(
             (time-signature extra-space . 0.0)
             (custos minimum-space . 0.0) 
