@@ -110,14 +110,30 @@ maker(
 
 maker(
     ('vc', 5),
+    baca.dynamic('pppp-sempre'),
+    baca.dynamic_text_self_alignment_x(
+        abjad.Left,
+        ),
     baca.pitch('<F3 C4>'),
     baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    baca.text_spanner(
+        r'II / III mod. =|',
+        abjad.tweak(12.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        ),
     )
 
 maker(
     ('vc', 6),
     baca.pitch('<F3 C4>'),
     baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    baca.text_spanner(
+        r'II / III mod. =|',
+        abjad.tweak(12.5).staff_padding,
+        bookend=False,
+        lilypond_id=2,
+        ),
     )
 
 maker(
@@ -130,28 +146,6 @@ maker(
         lilypond_id=1,
         piece_selector=baca.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
-        ),
-    )
-
-maker(
-    ('vc', (5, 6)),
-    baca.dynamic('pppp-sempre'),
-    baca.dynamic_text_self_alignment_x(
-        abjad.Left,
-        ),
-    baca.text_spanner(
-        r'II / III mod. =|',
-        abjad.tweak(12.5).staff_padding,
-        bookend=False,
-        lilypond_id=2,
-        selector=baca.leaves()[:2],
-        ),
-    baca.text_spanner(
-        r'II / III mod. =|',
-        abjad.tweak(12.5).staff_padding,
-        bookend=False,
-        lilypond_id=2,
-        selector=baca.leaves()[2:4],
         ),
     baca.text_spanner(
         r'\baca-triple-diamond-parenthesized-top-markup ->'
