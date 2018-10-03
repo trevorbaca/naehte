@@ -31,10 +31,10 @@ maker(
     baca.metronome_mark('52', selector=baca.leaf(4 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(7 - 1)),
     baca.metronome_mark('52', selector=baca.leaf(10 - 1)),
-    baca.rehearsal_mark(
-        'E',
-        abjad.tweak((0, 12)).extra_offset,
-        ),
+#    baca.rehearsal_mark(
+#        'E',
+#        abjad.tweak((0, 12)).extra_offset,
+#        ),
     baca.new(
         baca.volta(),
         measures=(7, 9),
