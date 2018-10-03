@@ -9,14 +9,14 @@ breaks = baca.breaks(
             y_offset=75,
             ),
         baca.system(
-            4,
+            16,
             measure=4,
-            y_offset=115 + 16 + 4,
+            y_offset=75 + 30 + 16,
             ),
         baca.system(
-            4,
+            16,
             measure=7,
-            y_offset=155 + 16 + 4,
+            y_offset=75 + 2 * 30 + 2 * 16,
             ),
         number=1,
         ),
