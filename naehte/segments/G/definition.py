@@ -44,10 +44,10 @@ maker(
     baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
     baca.metronome_mark('117', selector=baca.leaf(8 - 1)),
     baca.metronome_mark('39', selector=baca.leaf(12 - 1)),
-    baca.rehearsal_mark(
-        'G',
-        abjad.tweak((0, 12)).extra_offset,
-        ),
+#    baca.rehearsal_mark(
+#        'G',
+#        abjad.tweak((0, 12)).extra_offset,
+#        ),
     baca.volta(
         selector=baca.leaves()[1:5],
         ),

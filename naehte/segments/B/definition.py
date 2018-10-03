@@ -40,10 +40,10 @@ maker(
     baca.metronome_mark('117', selector=baca.leaf(15 - 1)),
     baca.metronome_mark(baca.Ritardando(), selector=baca.leaf(15 - 1)),
     baca.metronome_mark('39', selector=baca.leaf(16 - 1)),
-    baca.rehearsal_mark(
-        'B',
-        abjad.tweak((0, 12)).extra_offset,
-        ),
+#    baca.rehearsal_mark(
+#        'B',
+#        abjad.tweak((0, 12)).extra_offset,
+#        ),
     )
 
 maker(
