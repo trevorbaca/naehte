@@ -264,7 +264,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'non scr. -> scr. =|',
+        r'no scr. -> scr. =|',
         (abjad.tweak(-4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
@@ -333,7 +333,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        'non scr. -> scr. =|',
+        'no scr. -> scr. =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
@@ -341,7 +341,7 @@ maker(
         measures=(11, 12),
         ),
     baca.text_spanner(
-        'vib.tiss. -> NV',
+        'vib. molto -> NV',
         abjad.tweak(5.5).staff_padding,
         ),
     )
