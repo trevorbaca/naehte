@@ -181,10 +181,10 @@ A_Cello_Music_Voice = {                                                        %
             }                                                                  %! baca_start_markup:-PARTS:IndicatorCommand
         \override DynamicLineSpanner.staff-padding = #'7                       %! baca_dls_staff_padding:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
-        \clef "bass"                                                           %! DEFAULT_CLEF:_set_status_tag:attach_defaults
-        \once \override Staff.Clef.color = #(x11-color 'DarkViolet)            %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
-    %@% \override Staff.Clef.color = ##f                                       %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):attach_defaults
+        \clef "bass"                                                           %! REDUNDANT_CLEF:_set_status_tag:baca_clef:IndicatorCommand
+        \once \override Staff.Clef.color = #(x11-color 'DeepPink1)             %! REDUNDANT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! REDUNDANT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! REDUNDANT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca_clef:IndicatorCommand
         <g d'>8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -207,7 +207,7 @@ A_Cello_Music_Voice = {                                                        %
         - \baca-text-spanner-left-text "ord."                                  %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
-        \override Staff.Clef.color = #(x11-color 'violet)                      %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+        \override Staff.Clef.color = #(x11-color 'DeepPink4)                   %! REDUNDANT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         <a e'>8
         - \abjad-zero-padding-glissando                                        %! baca_glissando
