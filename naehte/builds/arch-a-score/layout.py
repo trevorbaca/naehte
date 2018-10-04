@@ -1,46 +1,44 @@
 import baca
 
 
+first_start = 68
+metronome_adjustment = 2
+
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            16,
+            16 + metronome_adjustment, 16,
             measure=1,
-            y_offset=75,
+            y_offset=first_start,
             ),
         baca.system(
             16,
             measure=4,
-            y_offset=75 + 30 + 16,
+            y_offset=first_start + metronome_adjustment + 20 + 16,
             ),
-        baca.system(
-            16,
-            measure=7,
-            y_offset=75 + 2 * 30 + 2 * 16,
-            ),
-        number=1,
-        ),
-    baca.page(
         baca.system(
             16,
             measure=9,
-            y_offset=40,
+            y_offset=first_start + metronome_adjustment + 2 * 20 + 2 * 16,
             ),
         baca.system(
             16,
             measure=12,
-            y_offset=40 + 30 + 16,
+            y_offset=first_start + metronome_adjustment + 3 * 20 + 3 * 16,
             ),
         baca.system(
             16,
             measure=17,
-            y_offset=40 + 2 * 30 + 2 * 16,
+            y_offset=first_start + metronome_adjustment + 4 * 20 + 4 * 16,
             ),
         baca.system(
             16,
             measure=20,
-            y_offset=40 + 3 * 30 + 3 * 16,
+            y_offset=first_start + metronome_adjustment + 5 * 20 + 5 * 16,
             ),
+        number=1,
+        ),
+    baca.page(
         baca.system(
             16,
             measure=24,
@@ -199,6 +197,9 @@ spacing = baca.scorewide_spacing(
     )
 spacing.override(1, (1, 48))
 spacing.override(4, (1, 48))
+spacing.override(5, (1, 16))
+spacing.override(7, (1, 8))
+spacing.override(8, (1, 12))
 
 spacing.override(9, (1, 56))
 spacing.override(10, (1, 56))
