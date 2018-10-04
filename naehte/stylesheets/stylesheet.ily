@@ -101,5 +101,5 @@
     indent = 0
     ragged-bottom = ##t
     ragged-last = ##t
-    ragged-right = ##t
+    %ragged-right = ##t
 }

@@ -3,6 +3,16 @@ import baca
 
 first_start = 68
 metronome_adjustment = 2
+def first_page_y_offset(system_number):
+    first_separation = 20
+    y_offset = first_start + metronome_adjustment
+    y_offset += (system_number - 1) * (first_separation + 16)
+    return y_offset
+
+nonfirst_start = 10
+def nonfirst_page_y_offset(system_number):
+    nonfirst_separation = 23
+    return nonfirst_start + (system_number - 1) * (nonfirst_separation + 16)
 
 breaks = baca.breaks(
     baca.page(
@@ -14,27 +24,27 @@ breaks = baca.breaks(
         baca.system(
             16,
             measure=4,
-            y_offset=first_start + metronome_adjustment + 20 + 16,
+            y_offset=first_page_y_offset(2),
             ),
         baca.system(
             16,
             measure=9,
-            y_offset=first_start + metronome_adjustment + 2 * 20 + 2 * 16,
+            y_offset=first_page_y_offset(3),
             ),
         baca.system(
             16,
             measure=12,
-            y_offset=first_start + metronome_adjustment + 3 * 20 + 3 * 16,
+            y_offset=first_page_y_offset(4),
             ),
         baca.system(
             16,
             measure=17,
-            y_offset=first_start + metronome_adjustment + 4 * 20 + 4 * 16,
+            y_offset=first_page_y_offset(5),
             ),
         baca.system(
             16,
             measure=20,
-            y_offset=first_start + metronome_adjustment + 5 * 20 + 5 * 16,
+            y_offset=first_page_y_offset(6),
             ),
         number=1,
         ),
@@ -42,154 +52,146 @@ breaks = baca.breaks(
         baca.system(
             16,
             measure=24,
-            y_offset=40 + 4 * 30 + 4 * 16,
+            y_offset=nonfirst_page_y_offset(1),
+            ),
+        baca.system(
+            16,
+            measure=28,
+            y_offset=nonfirst_page_y_offset(2),
+            ),
+        baca.system(
+            16,
+            measure=31,
+            y_offset=nonfirst_page_y_offset(3),
+            ),
+        baca.system(
+            16,
+            measure=36,
+            y_offset=nonfirst_page_y_offset(4),
+            ),
+        baca.system(
+            16,
+            measure=40,
+            y_offset=nonfirst_page_y_offset(5),
+            ),
+        baca.system(
+            16,
+            measure=43,
+            y_offset=nonfirst_page_y_offset(6),
+            ),
+        baca.system(
+            16,
+            measure=46,
+            y_offset=nonfirst_page_y_offset(7),
             ),
         number=2,
         ),
     baca.page(
         baca.system(
             16,
-            measure=28,
-            y_offset=40,
+            measure=49,
+            y_offset=nonfirst_page_y_offset(1),
             ),
         baca.system(
             16,
-            measure=31,
-            y_offset=40 + 30 + 16,
+            measure=53,
+            y_offset=nonfirst_page_y_offset(2),
             ),
         baca.system(
             16,
-            measure=36,
-            y_offset=40 + 2 * 30 + 2 * 16,
+            measure=57,
+            y_offset=nonfirst_page_y_offset(3),
             ),
         baca.system(
             16,
-            measure=40,
-            y_offset=40 + 3 * 30 + 3 * 16,
+            measure=60,
+            y_offset=nonfirst_page_y_offset(4),
             ),
         baca.system(
             16,
-            measure=43,
-            y_offset=40 + 4 * 30 + 4 * 16,
+            measure=62,
+            y_offset=nonfirst_page_y_offset(5),
+            ),
+        baca.system(
+            16,
+            measure=65,
+            y_offset=nonfirst_page_y_offset(6),
+            ),
+        baca.system(
+            16,
+            measure=68,
+            y_offset=nonfirst_page_y_offset(7),
             ),
         number=3,
         ),
     baca.page(
         baca.system(
             16,
-            measure=46,
-            y_offset=40,
+            measure=71,
+            y_offset=nonfirst_page_y_offset(1),
             ),
         baca.system(
             16,
-            measure=49,
-            y_offset=40 + 30 + 16,
+            measure=74,
+            y_offset=nonfirst_page_y_offset(2),
             ),
         baca.system(
             16,
-            measure=53,
-            y_offset=40 + 2 * 30 + 2 * 16,
+            measure=77,
+            y_offset=nonfirst_page_y_offset(3),
             ),
         baca.system(
             16,
-            measure=57,
-            y_offset=40 + 3 * 30 + 3 * 16,
+            measure=80,
+            y_offset=nonfirst_page_y_offset(4),
             ),
         baca.system(
             16,
-            measure=60,
-            y_offset=40 + 4 * 30 + 4 * 16,
+            measure=84,
+            y_offset=nonfirst_page_y_offset(5),
+            ),
+        baca.system(
+            16,
+            measure=89,
+            y_offset=nonfirst_page_y_offset(6),
+            ),
+        baca.system(
+            16,
+            measure=92,
+            y_offset=nonfirst_page_y_offset(7),
             ),
         number=4,
         ),
     baca.page(
         baca.system(
             16,
-            measure=62,
-            y_offset=40,
-            ),
-        baca.system(
-            16,
-            measure=65,
-            y_offset=40 + 30 + 16,
-            ),
-        baca.system(
-            16,
-            measure=68,
-            y_offset=40 + 2 * 30 + 2 * 16,
-            ),
-        baca.system(
-            16,
-            measure=71,
-            y_offset=40 + 3 * 30 + 3 * 16,
-            ),
-        number=5,
-        ),
-    baca.page(
-        baca.system(
-            16,
-            measure=74,
-            y_offset=40,
-            ),
-        baca.system(
-            16,
-            measure=77,
-            y_offset=40 + 30 + 16,
-            ),
-        baca.system(
-            16,
-            measure=80,
-            y_offset=40 + 2 * 30 + 2 * 16,
-            ),
-        baca.system(
-            16,
-            measure=84,
-            y_offset=40 + 3 * 30 + 3 * 16,
-            ),
-        number=6,
-        ),
-    baca.page(
-        baca.system(
-            16,
-            measure=89,
-            y_offset=40,
-            ),
-        baca.system(
-            16,
-            measure=92,
-            y_offset=40 + 30 + 16,
-            ),
-        baca.system(
-            16,
             measure=96,
-            y_offset=40 + 2 * 30 + 2 * 16,
+            y_offset=nonfirst_page_y_offset(1),
             ),
         baca.system(
             16,
             measure=100,
-            y_offset=40 + 3 * 30 + 3 * 16,
+            y_offset=nonfirst_page_y_offset(2),
             ),
-        number=7,
-        ),
-    baca.page(
         baca.system(
             16,
             measure=103,
-            y_offset=40,
+            y_offset=nonfirst_page_y_offset(3),
             ),
         baca.system(
             16,
             measure=105,
-            y_offset=40 + 30 + 16,
+            y_offset=nonfirst_page_y_offset(4),
             ),
         baca.system(
             16,
             measure=110,
-            y_offset=40 + 2 * 30 + 2 * 16,
+            y_offset=nonfirst_page_y_offset(5),
             ),
-        number=8,
+        number=5,
         ),
     )
+
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
