@@ -37,7 +37,7 @@
     print-page-number = ##t
     ragged-bottom = ##t
     ragged-last-bottom = ##t
-    right-margin = 5\mm
+    right-margin = 15\mm
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 60)
@@ -69,7 +69,8 @@
     composer = \markup {
         \override #'(font-name . "Palatino")
         \fontsize #5
-        \line { Trevor Bača (*1975) \hspace #15 }
+        %\line { Trevor Bača (*1975) \hspace #15 }
+        \line { Trevor Bača (*1975) }
     }
     tagline = \markup { "" }
     title = \markup \column {
@@ -78,6 +79,8 @@
             \fontsize #16
             NÄHTE
             " "
+            " "
+            " "
             \override #'(font-name . "Palatino Italic")
             \fontsize #3
             \line {
@@ -85,6 +88,9 @@
                 Ashley \hspace #0.75
                 Walters
             }
+            " "
+            " "
+            " "
         }
     }
 }

@@ -8,7 +8,6 @@ metadata = abjad.OrderedDict(
             [
                 1,
                 4,
-                7,
                 9,
                 12,
                 17,
