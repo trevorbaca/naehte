@@ -39,6 +39,7 @@ maker(
 
 maker(
     ('vc', 1),
+    baca.clef('bass'),
     baca.dls_staff_padding(7),
     baca.hairpin(
         'pp <| mf',
