@@ -54,7 +54,7 @@
 
         \override BarNumber.Y-extent = ##f
         % TODO: hide in score:
-        \override BarNumber.break-visibility = #end-of-line-invisible
+        %\override BarNumber.break-visibility = #end-of-line-invisible
         \override BarNumber.extra-offset = #'(-4 . -12)
         \override BarNumber.font-size = 1
         %\override BarNumber.stencil = ##f
