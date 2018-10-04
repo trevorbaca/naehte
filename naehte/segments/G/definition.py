@@ -99,7 +99,7 @@ maker(
         lilypond_id=1,
         ),
     baca.text_spanner(
-        'non scr. -> scr. poss. -> XFB =|',
+        'no scr. -> scr. poss. -> XFB =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         piece_selector=baca.lparts([1, 1, 3]),
@@ -229,7 +229,7 @@ maker(
         lilypond_id=1,
         ),
     baca.text_spanner(
-        'non scr. -> scr. =|',
+        'no scr. -> scr. =|',
         abjad.tweak(2.75).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         bookend=False,

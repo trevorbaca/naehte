@@ -71,7 +71,7 @@ maker(
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie_to(),
-            selector=baca.leaves(),
+            selector=baca.leaves()[1:],
             ),
         ),
     baca.suite(
@@ -279,7 +279,7 @@ maker(
 maker(
     ('vc', (5, 6)),
     baca.text_spanner(
-        r'scr. -> non scr. -> XFB =|',
+        r'scr. -> no scr. -> XFB =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         piece_selector=baca.lparts([1, 5, 2]),

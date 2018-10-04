@@ -284,7 +284,7 @@ maker(
 maker(
     ('vc', (5, 7)),
     baca.text_spanner(
-        'scr. -> non scr. -> XFB =|',
+        'scr. -> no scr. -> XFB =|',
         (abjad.tweak(3.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
@@ -413,7 +413,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'non scr. -> scr. =|',
+        r'no scr. -> scr. =|',
         (abjad.tweak(-4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
