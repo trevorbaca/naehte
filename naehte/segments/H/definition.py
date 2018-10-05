@@ -14,6 +14,11 @@ maker = baca.SegmentMaker(
         abjad.Tags().LOCAL_MEASURE_NUMBER_MARKUP,
         abjad.Tags().STAGE_NUMBER_MARKUP,
         ],
+    final_markup=(
+        ['Madison, WI.',],
+        ['August', 'October 2018.'],
+        ),
+    final_markup_extra_offset=(-15, -5),
     last_segment=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
