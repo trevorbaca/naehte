@@ -698,7 +698,32 @@ H_Cello_Music_Voice = {                                                        %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [H Cello_Rest_Voice measure 116 / measure 14]                    %! _comment_measure_numbers
+            \once \override MultiMeasureRestText.extra-offset = #'(-15 . -5)
             R1 * 1/4                                                           %! _make_multimeasure_rest_container
+            _ \markup {                                                        %! SCORE_2
+                \override                                                      %! SCORE_2
+                    #'(font-name . "Palatino")                                 %! SCORE_2
+                    \with-color                                                %! SCORE_2
+                        #black                                                 %! SCORE_2
+                        \right-column                                          %! SCORE_2
+                            {                                                  %! SCORE_2
+                                \line                                          %! SCORE_2
+                                    {                                          %! SCORE_2
+                                        "Madison, WI."                         %! SCORE_2
+                                    }                                          %! SCORE_2
+                                \line                                          %! SCORE_2
+                                    {                                          %! SCORE_2
+                                        August                                 %! SCORE_2
+                                        \hspace                                %! SCORE_2
+                                            #0.75                              %! SCORE_2
+                                        –                                      %! SCORE_2
+                                        \hspace                                %! SCORE_2
+                                            #0.75                              %! SCORE_2
+                                        October                                %! SCORE_2
+                                        2018.                                  %! SCORE_2
+                                    }                                          %! SCORE_2
+                            }                                                  %! SCORE_2
+                }                                                              %! SCORE_2
 
         }                                                                      %! _make_multimeasure_rest_container
 
