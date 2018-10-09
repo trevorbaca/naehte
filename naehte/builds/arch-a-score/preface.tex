@@ -1,29 +1,27 @@
 \documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
-%\usepackage[papersize={9in, 12in}, margin=3in]{geometry}
-\usepackage[papersize={9in, 12in}, margin=1in]{geometry}
-\usepackage{array, booktabs, fontspec, nopageno, xltxtra, xunicode}
-\usepackage{xfrac}
-%\parindent=0pt
-%\parskip=12pt
+\usepackage[
+    papersize={9in, 12in}, left=0.5in, right=0.75in, top=0.75in]{geometry}
+\usepackage{array, booktabs, fontspec, nopageno, xfrac, xltxtra, xunicode}
+\usepackage[
+    %activate={true,nocompatibility},tracking=true,kerning=true,spacing=true,
+    final, factor=1100, stretch=10, shrink=10]{microtype}
 \setmainfont{Adobe Garamond Pro}
 \begin{document}
 
-%\begin{center}
-%{\huge PREFACE}
-%\end{center}
-%\input{../_assets/preface-body.tex}
-%\vfill
-%\input{../_assets/preface-colophon.tex}
-%\vfill
-
 \begin{center}
 
-{\huge Playing techniques.}
+{\huge \textsc{Playing Techniques}}
 
 \end{center}
 
-\begin{tabular}[t]{p{3.5cm} p{5cm}}
+\vspace*{1\baselineskip}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{2cm} }
+\newcolumntype{W}{>{\centering\arraybackslash} m{8cm} }
+\renewcommand{\arraystretch}{2.5}
+
+\begin{tabular}[t]{Vm{8cm}}
 \textbf{XFB}
     & 
     ``extremely fast bow'': very pronounced flautando;
@@ -31,63 +29,69 @@
     resulting color almost `fluorescent';
     prolong the color with irregular retakes of the bow as necessary;
     only occurs at quiet dynamics.
-    \\[3.5cm] 
-\textbf{spazzolato} \newline (\textbf{spazz.}, \textbf{spz.})
+    \\
+
+\textbf{spazz.}
     &
-    `sweep' bow repeatedly up and down string in $\sfrac{1}{2}$ clt position;
-    technique is reiterative.
+    spazzolato:
+    sweep bow repeatedly up and down string in $\sfrac{1}{2}$ clt position;
+    also `spz.'
     \\
-\textbf{spazz. strett.} \textbf{$\longrightarrow$} \textbf{larg.}
+
+\end{tabular}
+
+\vspace*{5\baselineskip}
+
+\begin{tabular}[t]{Wm{8cm}}
+\includegraphics{../_assets/circle.pdf}
     &
-    spazzolato allargando: tight spazzolato becoming looser.
-    \\
-\textbf{spazz. larg.} \textbf{$\longrightarrow$} \textbf{strett.}
+    circle bowing;
+    one complete circle per duration;
+    five circles shown here.
+    \\[1.75cm]
+\includegraphics{../_assets/circle.pdf}
     &
-    spazzolato stringendo: loose spazzolato becoming tighter.
-    \\[1cm]
-\textbf{trem. strett.} \textbf{$\longrightarrow$} \textbf{larg.}
+    circle bowing.
+    \\[1.75cm]
+\includegraphics{../_assets/circle.pdf}
     &
-    tremolo allargando: tight tremolo becoming looser.
+    circle bowing;
+    one complete circle per duration;
+    five circles shown here;
+    even more explanatory text;
+    several additional words.
+    \\ 
+\end{tabular}
+
+\vspace*{2.5\baselineskip}
+
+\begin{center}
+
+{\huge \textsc{String Contact Points}}
+
+\end{center}
+
+\begin{tabular}[t]{Vm{8cm}}
+
+\textbf{T} & tasto
     \\
-\textbf{trem. larg.} \textbf{$\longrightarrow$} \textbf{strett.}
-    &
-    tremolo stringendo: loose tremolo becoming tighter.
+
+\textbf{P} & ponticello
     \\
-\textbf{T} & tasto (string contact point)
-    \\
-\textbf{P} & ponticello (string contact point)
-    \\
+
 \textbf{DZ}
     &
     ``dead zone'': last 1 cm of string closest to bridge (but not yet touching
     bridge); pitch almost (but not completely) effaced.
     \\
+
 \textbf{OB}
     &
     ``on bridge'': bow directly on wood of bridge;
     pitch completely effaced;
     resultant sound gives snowlike whitenoise.
-    \\[2cm]
-\includegraphics{../_assets/xfb-trimmed.png}
-    &
-    ``extremely fast bow'' spanner.
-    \\[0.5cm]
-\includegraphics{../_assets/circle-trimmed.png}
-    &
-    circle bowing;
-    one complete circle per notated duration.
     \\
-\end{tabular}
-%
-\hfill
-%
-\begin{tabular}[t]{p{2cm} p{5cm}}
-\textbf{XFB} & ``extremely fast bow'': very pronounced flautando;
-    play with generous amounts of bow lightly skimming the string;
-    retake bow irregularly as necessary;
-    resulting color almost `fluorescent';
-    only occurs at quiet dynamics.
-    \\ 
+
 \end{tabular}
 
 \end{document}
