@@ -1,22 +1,38 @@
 \version "2.19.82"
 \language "english"
-
-\include "../../stylesheets/stylesheet.ily"
-\include "../../stylesheets/nonfirst-segment.ily"
 \include "../../stylesheets/markups.ily"
+\paper { tagline = ##f }
 
 
 \new Staff {
+    \override Staff.BarLine.transparent = ##t
     \override Staff.Clef.stencil = ##f
+    \override Staff.StaffSymbol.transparent = ##t
     \override Staff.TimeSignature.stencil = ##f
+    \override TupletBracket.staff-padding = #1.5
+    \override TupletNumber.text = #tuplet-number::calc-fraction-text
     \set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
+    \set tupletFullLength = ##t
 
-    s2.
-    - \abjad-dashed-line-with-hook
-    - \baca-text-spanner-left-markup \naehte-very-wide-circles-markup
-    \startTextSpan
+    \times 4/5 {
 
-    s4
+        c''4
+        - \abjad-dashed-line-with-hook
+        - \baca-text-spanner-left-markup \naehte-circles-markup
+        - \tweak bound-details.right.padding #2.75
+        - \tweak staff-padding #1
+        \startTextSpan
+
+        c''4
+        c''4
+        c''4
+        c''4
+
+    }
+
+    \hide NoteHead
+    \hide Stem
+    c''4
     \stopTextSpan
 
 }
