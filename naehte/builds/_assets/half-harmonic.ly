@@ -14,25 +14,7 @@
     \set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
     \set tupletFullLength = ##t
 
-    \times 4/5 {
-
-        c''4
-        - \abjad-dashed-line-with-hook
-        - \baca-text-spanner-left-markup \naehte-circles-markup
-        - \tweak bound-details.right.padding #2.75
-        - \tweak staff-padding #1
-        \startTextSpan
-
-        c''4
-        c''4
-        c''4
-        c''4
-
-    }
-
-    \hide NoteHead
-    \hide Stem
+    \once \override NoteHead.style = #'harmonic-black
     c''4
-    \stopTextSpan
 
 }
