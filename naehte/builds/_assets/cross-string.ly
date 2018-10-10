@@ -16,23 +16,29 @@
 
     \times 4/5 {
 
-        c''4
+        %c''4
+        s4
         - \abjad-dashed-line-with-hook
-        - \baca-text-spanner-left-markup \naehte-circles-markup
+        - \baca-text-spanner-left-text "II / III"
         - \tweak bound-details.right.padding #2.75
         - \tweak staff-padding #1
         \startTextSpan
 
-        c''4
-        c''4
-        c''4
-        c''4
+        s4
+        s4
+        s4
+        s4
+        %c''4
+        %c''4
+        %c''4
+        %c''4
 
     }
 
-    \hide NoteHead
-    \hide Stem
-    c''4
+    %\hide NoteHead
+    %\hide Stem
+    %c''4
+    s4
     \stopTextSpan
 
 }
