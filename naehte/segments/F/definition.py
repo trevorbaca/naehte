@@ -238,7 +238,7 @@ maker(
         r"\times 3/4 { c'2. \times 2/3 { c'8 [ c' c' ] } }"
         ),
     baca.text_spanner(
-        r'XFB =| \naehte-circles-markup =| spz. =|',
+        r'XFB =| \baca-circles-markup =| spz. =|',
         (abjad.tweak(0.5).bound_details__right__padding, 1),
         (abjad.tweak(4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
@@ -361,7 +361,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'\naehte-very-wide-circles-markup =|',
+        r'\baca-very-wide-circles-markup =|',
         abjad.tweak(4.25).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
         bookend=False,
@@ -396,7 +396,7 @@ maker(
         selector=baca.leaves().rleak(),
         ),
     baca.text_spanner(
-        r'\naehte-very-wide-circles-markup =|',
+        r'\baca-very-wide-circles-markup =|',
         abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         bookend=False,
