@@ -75,7 +75,7 @@ maker(
         baca.glissando(),
         ),
     baca.text_spanner(
-        r'\baca-very-wide-circles-markup =|',
+        r'\baca-circle-very-wide-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
@@ -447,7 +447,7 @@ maker(
         selector=baca.leaves()[:6],
         ),
     baca.text_spanner(
-        r'\baca-very-wide-circles-markup =|',
+        r'\baca-circle-very-wide-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,

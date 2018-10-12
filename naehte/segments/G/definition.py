@@ -342,7 +342,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'\baca-very-wide-circles-markup =|',
+        r'\baca-circle-very-wide-markup =|',
         abjad.tweak(4.25).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
         bookend=False,

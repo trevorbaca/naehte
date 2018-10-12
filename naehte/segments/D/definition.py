@@ -88,7 +88,7 @@ maker(
         selector=baca.rleaves(),
         ),
     baca.text_spanner(
-        r'\baca-circles-markup =|',
+        r'\baca-circle-markup =|',
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         selector=baca.leaves()[:2],
@@ -117,7 +117,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'\baca-very-wide-circles-markup =|',
+        r'\baca-circle-very-wide-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         selector=baca.leaves()[:2],
@@ -460,7 +460,7 @@ maker(
         selector=baca.leaves()[:6],
         ),
     baca.text_spanner(
-        r'\baca-very-wide-circles-markup =|',
+        r'\baca-circle-very-wide-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
