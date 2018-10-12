@@ -73,6 +73,6 @@ TO-DO
         baca.text_spanner(
             r'-> XFB =|',
             bookend=False,
-            piece_selector=baca.lparts([2, 4]),
+            pieces=baca.lparts([2, 4]),
             selector=baca.leaves().lleak(),
             )
