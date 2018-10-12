@@ -384,7 +384,7 @@ D_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \naehte-circles-markup                %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-circles-markup                  %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
@@ -424,7 +424,7 @@ D_Cello_Music_Voice = {                                                        %
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \naehte-very-wide-circles-markup      %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-very-wide-circles-markup        %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
@@ -922,7 +922,7 @@ D_Cello_Music_Voice = {                                                        %
         \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
         \glissando                                                             %! baca_glissando
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \naehte-very-wide-circles-markup      %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-very-wide-circles-markup        %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
 

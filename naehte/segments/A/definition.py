@@ -125,7 +125,7 @@ maker(
             ),
         ),
     baca.text_spanner(
-        r'\naehte-very-wide-circles-markup =|',
+        r'\baca-very-wide-circles-markup =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         selector=baca.leaves()[:2],

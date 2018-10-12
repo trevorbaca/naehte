@@ -463,7 +463,7 @@ E_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \naehte-circles-markup                %! baca_text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-circles-markup                  %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
 
@@ -727,7 +727,7 @@ E_Cello_Music_Voice = {                                                        %
             - \abjad-zero-padding-glissando                                    %! baca_glissando
             \glissando                                                         %! baca_glissando
             - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
-            - \baca-text-spanner-left-markup \naehte-circles-markup            %! baca_text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-markup \baca-circles-markup              %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak bound-details.right.padding #0.5                          %! baca_text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
