@@ -1,32 +1,3 @@
-A_Global_Rests = {                                                             %! extern
-
-    % [A Global_Rests measure 1]                                               %! _comment_measure_numbers
-    R1 * 7/8                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 2]                                               %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 3]                                               %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 4]                                               %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 5]                                               %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 6]                                               %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_global_rests
-
-    % [A Global_Rests measure 7]                                               %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _make_global_rests
-
-    % [A Global_Rests measure 8]                                               %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_global_rests
-
-}                                                                              %! extern
-
-
 A_Global_Skips = {                                                             %! extern
 
     % [A Global_Skips measure 1]                                               %! _comment_measure_numbers
@@ -163,6 +134,35 @@ A_Global_Skips = {                                                             %
     \revert TextSpanner.staff-padding                                          %! baca_text_spanner_staff_padding:OverrideCommand(2)
     \baca-bar-line-visible                                                     %! _attach_final_bar_line
     \bar "|"                                                                   %! _attach_final_bar_line
+
+}                                                                              %! extern
+
+
+A_Global_Rests = {                                                             %! extern
+
+    % [A Global_Rests measure 1]                                               %! _comment_measure_numbers
+    R1 * 7/8                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 2]                                               %! _comment_measure_numbers
+    R1 * 3/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 3]                                               %! _comment_measure_numbers
+    R1 * 5/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 4]                                               %! _comment_measure_numbers
+    R1 * 3/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 5]                                               %! _comment_measure_numbers
+    R1 * 5/4                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 6]                                               %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests
+
+    % [A Global_Rests measure 7]                                               %! _comment_measure_numbers
+    R1 * 1/2                                                                   %! _make_global_rests
+
+    % [A Global_Rests measure 8]                                               %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests
 
 }                                                                              %! extern
 
@@ -598,9 +598,12 @@ A_Cello_Music_Voice = {                                                        %
 }                                                                              %! extern
 
 
-A_Cello_Music_Staff = {                                                        %! extern
+A_Cello_Music_Staff = <<                                                       %! extern
+
+    \context GlobalRests = "Global_Rests"                                      %! _make_global_context
+    \A_Global_Rests                                                            %! extern
 
     \context Voice = "Cello_Music_Voice"                                       %! ScoreTemplate
     \A_Cello_Music_Voice                                                       %! extern
 
-}                                                                              %! extern
+>>                                                                             %! extern
