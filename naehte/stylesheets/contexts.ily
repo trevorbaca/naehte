@@ -24,7 +24,8 @@
 
         \override MultiMeasureRest.transparent = ##t
 
-        \override MultiMeasureRestText.extra-offset = #'(0 . -7)
+        %%%\override MultiMeasureRestText.extra-offset = #'(0 . -7)
+        \override MultiMeasureRestText.staff-padding = 2
         \override MultiMeasureRestText.font-size = 3
         \override MultiMeasureRestText.outside-staff-priority = 0
         \override MultiMeasureRestText.padding = 0
@@ -70,6 +71,7 @@
     % STAFF
     \context {
         \Staff
+        \accepts GlobalRests
         %\remove Time_signature_engraver
 
         %\override TimeSignature.X-extent = ##f
