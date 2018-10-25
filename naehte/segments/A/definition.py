@@ -327,5 +327,6 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         lilypond_id=1,
+        selector=baca.leaves().rleak(),
         ),
     )

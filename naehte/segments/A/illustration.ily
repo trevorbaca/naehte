@@ -628,14 +628,13 @@ A_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! baca_text_spanner:PiecewiseCommand(1):autodetect
+        - \tweak bound-details.right.padding #2.5                              %! baca_text_spanner:PiecewiseCommand(1):autodetect
         - \tweak staff-padding #10.5                                           %! baca_text_spanner:PiecewiseCommand(1)
         - \tweak style #'trill                                                 %! baca_text_spanner:PiecewiseCommand(1)
         \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
 
         r16
         \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
         \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
 
     }
@@ -650,6 +649,7 @@ A_Cello_Music_Voice = {                                                        %
             c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \!                                                                 %! PHANTOM:_style_phantom_measures(5):EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            \stopTextSpanOne                                                   %! PHANTOM:_style_phantom_measures(5):baca_text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -657,10 +657,11 @@ A_Cello_Music_Voice = {                                                        %
         {                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
             % [A Cello_Rest_Voice measure 9]                                   %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
-            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(6)
-            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(7)
-            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(7)
-            \startStaff                                                        %! PHANTOM:_style_phantom_measures(7)
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
             R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container

@@ -742,10 +742,11 @@ H_Cello_Music_Voice = {                                                        %
 
             % [H Cello_Rest_Voice measure 117 / measure 15]                    %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \once \override MultiMeasureRestText.extra-offset = #'(-15 . -5)
-            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(6)
-            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(7)
-            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(7)
-            \startStaff                                                        %! PHANTOM:_style_phantom_measures(7)
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
             R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
             _ \markup {                                                        %! PHANTOM:_style_phantom_measures(5):SCORE_2
                 \override                                                      %! PHANTOM:_style_phantom_measures(5):SCORE_2
