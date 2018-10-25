@@ -32,7 +32,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "104"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[6'59'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[6'55'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 105 / measure 3]                                 %! _comment_measure_numbers
@@ -49,7 +49,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "105"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'04'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[6'59'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 106 / measure 4]                                 %! _comment_measure_numbers
@@ -66,7 +66,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "106"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'05'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[6'59'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 107 / measure 5]                                 %! _comment_measure_numbers
@@ -90,7 +90,7 @@ H_Global_Skips = {                                                             %
     - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
     \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-%@% - \baca-start-ct-left-only "[7'06'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'04'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 108 / measure 6]                                 %! _comment_measure_numbers
@@ -107,7 +107,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "108"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'10'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'04'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 109 / measure 7]                                 %! _comment_measure_numbers
@@ -131,7 +131,7 @@ H_Global_Skips = {                                                             %
     - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
     \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-%@% - \baca-start-ct-left-only "[7'16'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'05'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 110 / measure 8]                                 %! _comment_measure_numbers
@@ -146,7 +146,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "110"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'17'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'05'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 111 / measure 9]                                 %! _comment_measure_numbers
@@ -163,7 +163,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "111"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'19'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'06'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 112 / measure 10]                                %! _comment_measure_numbers
@@ -180,7 +180,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "112"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'20'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'06'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 113 / measure 11]                                %! _comment_measure_numbers
@@ -195,7 +195,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "113"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'21'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'10'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 114 / measure 12]                                %! _comment_measure_numbers
@@ -212,7 +212,7 @@ H_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% - \baca-start-mn-left-only "114"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-left-only "[7'23'']"                                      %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'10'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 115 / measure 13]                                %! _comment_measure_numbers
@@ -223,13 +223,13 @@ H_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
-%@% - \baca-start-lmi-both "12" "13"                                           %! LOCAL_MEASURE_INDEX_MARKUP
+%@% - \baca-start-lmi-left-only "12"                                           %! LOCAL_MEASURE_INDEX_MARKUP
 %@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
-    - \baca-start-lmn-both "13" "14"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
+    - \baca-start-lmn-left-only "13"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
-%@% - \baca-start-mn-both "115" "116"                                          %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "115"                                           %! MEASURE_NUMBER_MARKUP
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
-%@% - \baca-start-ct-both "[7'24'']" "[7'26'']"                                %! CLOCK_TIME_MARKUP
+%@% - \baca-start-ct-left-only "[7'16'']"                                      %! CLOCK_TIME_MARKUP
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
 
     % [H Global_Skips measure 116 / measure 14]                                %! _comment_measure_numbers
@@ -239,10 +239,29 @@ H_Global_Skips = {                                                             %
 %@% \bacaStopTextSpanLMI                                                       %! LOCAL_MEASURE_INDEX_MARKUP
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER_MARKUP
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER_MARKUP
-    \bacaStopTextSpanMM                                                        %! _attach_metronome_marks(4)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME_MARKUP
+%@% - \baca-start-lmi-left-only "13"                                           %! LOCAL_MEASURE_INDEX_MARKUP
+%@% \bacaStartTextSpanLMI                                                      %! LOCAL_MEASURE_INDEX_MARKUP
+    - \baca-start-lmn-left-only "14"                                           %! LOCAL_MEASURE_NUMBER_MARKUP
+    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER_MARKUP
+%@% - \baca-start-mn-left-only "116"                                           %! MEASURE_NUMBER_MARKUP
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER_MARKUP
+%@% - \baca-start-ct-both "[7'16'']" "[7'26'']"                                %! CLOCK_TIME_MARKUP
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME_MARKUP
     \baca-bar-line-visible                                                     %! _attach_final_bar_line
     \bar "|."                                                                  %! _attach_final_bar_line
+
+    % [H Global_Skips measure 117 / measure 15]                                %! PHANTOM:_style_phantom_measures(1):_comment_measure_numbers
+    \time 1/4                                                                  %! PHANTOM:_style_phantom_measures(1):REDUNDANT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(3)
+    \baca-time-signature-transparent                                           %! PHANTOM:_style_phantom_measures(2)
+    s1 * 1/4                                                                   %! PHANTOM:_make_global_skips(3)
+%@% \bacaStopTextSpanLMI                                                       %! PHANTOM:_style_phantom_measures(1):LOCAL_MEASURE_INDEX_MARKUP
+    \bacaStopTextSpanLMN                                                       %! PHANTOM:_style_phantom_measures(1):LOCAL_MEASURE_NUMBER_MARKUP
+%@% \bacaStopTextSpanMN                                                        %! PHANTOM:_style_phantom_measures(1):MEASURE_NUMBER_MARKUP
+    \bacaStopTextSpanMM                                                        %! PHANTOM:_style_phantom_measures(1):_attach_metronome_marks(4)
+%@% \bacaStopTextSpanCT                                                        %! PHANTOM:_style_phantom_measures(1):CLOCK_TIME_MARKUP
+    \once \override Score.BarLine.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
+    \once \override Score.SpanBar.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
 
 }                                                                              %! extern
 
@@ -296,6 +315,9 @@ H_Global_Rests = {                                                             %
     \baca-fermata-measure                                                      %! baca_global_fermata:GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! _make_global_rests
     ^ \baca-fermata-markup                                                     %! baca_global_fermata:GlobalFermataCommand(1)
+
+    % [H Global_Rests measure 117 / measure 15]                                %! PHANTOM:_style_phantom_measures(4):_comment_measure_numbers
+    R1 * 1/4                                                                   %! PHANTOM:_make_global_rests(2)
 
 }                                                                              %! extern
 
@@ -698,36 +720,61 @@ H_Cello_Music_Voice = {                                                        %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [H Cello_Rest_Voice measure 116 / measure 14]                    %! _comment_measure_numbers
-            \once \override MultiMeasureRestText.extra-offset = #'(-15 . -5)
             R1 * 1/4                                                           %! _make_multimeasure_rest_container
-            _ \markup {                                                        %! SCORE_2
-                \override                                                      %! SCORE_2
-                    #'(font-name . "Palatino")                                 %! SCORE_2
-                    \with-color                                                %! SCORE_2
-                        #black                                                 %! SCORE_2
-                        \right-column                                          %! SCORE_2
-                            {                                                  %! SCORE_2
-                                \line                                          %! SCORE_2
-                                    {                                          %! SCORE_2
-                                        "Madison, WI."                         %! SCORE_2
-                                    }                                          %! SCORE_2
-                                \line                                          %! SCORE_2
-                                    {                                          %! SCORE_2
-                                        August                                 %! SCORE_2
-                                        \hspace                                %! SCORE_2
-                                            #0.75                              %! SCORE_2
-                                        –                                      %! SCORE_2
-                                        \hspace                                %! SCORE_2
-                                            #0.75                              %! SCORE_2
-                                        October                                %! SCORE_2
-                                        2018.                                  %! SCORE_2
-                                    }                                          %! SCORE_2
-                            }                                                  %! SCORE_2
-                }                                                              %! SCORE_2
 
         }                                                                      %! _make_multimeasure_rest_container
 
     >>                                                                         %! _make_multimeasure_rest_container
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_Music_Voice"                                   %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [H Cello_Music_Voice measure 117 / measure 15]                   %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_Rest_Voice"                                    %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [H Cello_Rest_Voice measure 117 / measure 15]                    %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override MultiMeasureRestText.extra-offset = #'(-15 . -5)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(6)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(7)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(7)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(7)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            _ \markup {                                                        %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                \override                                                      %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                    #'(font-name . "Palatino")                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                    \with-color                                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                        #black                                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                        \right-column                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                            {                                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                \line                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                    {                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        "Madison, WI."                         %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                    }                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                \line                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                    {                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        August                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        \hspace                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                            #0.75                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        –                                      %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        \hspace                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                            #0.75                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        October                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                        2018.                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                                    }                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                            }                                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
+                }                                                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
 }                                                                              %! extern
 

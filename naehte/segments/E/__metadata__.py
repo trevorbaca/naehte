@@ -75,6 +75,7 @@ metadata = abjad.OrderedDict(
                     ]
                 ),
             ),
+        ('phantom', True),
         ('segment_name', 'E'),
         ('segment_number', 5),
         (
