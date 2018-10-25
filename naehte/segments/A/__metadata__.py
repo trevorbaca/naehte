@@ -13,6 +13,7 @@ metadata = abjad.OrderedDict(
                 'Cello_Music_Staff',
                 'Global_Rests',
                 'Cello_Music_Voice',
+                'Cello_Rest_Voice',
                 ],
             ),
         (
@@ -69,6 +70,7 @@ metadata = abjad.OrderedDict(
                     ]
                 ),
             ),
+        ('phantom', True),
         ('segment_name', 'A'),
         ('segment_number', 1),
         (
@@ -76,6 +78,7 @@ metadata = abjad.OrderedDict(
             abjad.OrderedDict(
                 [
                     ('Cello_Music_Voice', True),
+                    ('Cello_Rest_Voice', False),
                     ]
                 ),
             ),
