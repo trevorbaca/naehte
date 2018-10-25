@@ -9,6 +9,17 @@ from abjadext import rmakers
 ##################################### [A] #####################################
 ###############################################################################
 
+stage_markup = (
+    ('[A.1]', 1),
+    ('[A.2]', 2),
+    ('[A.3]', 3),
+    ('[A.4]', 4),
+    ('[A.5]', 5),
+    ('[A.6]', 6),
+    ('[A.7]', 7),
+    ('[A.8]', 8),
+    )
+
 maker = baca.SegmentMaker(
     activate=[
         abjad.Tags().LOCAL_MEASURE_NUMBER_MARKUP,
@@ -16,6 +27,7 @@ maker = baca.SegmentMaker(
         ],
     phantom=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
+    stage_markup=stage_markup,
     time_signatures=[
         (7, 8),
         (6, 8), 
@@ -233,7 +245,8 @@ maker(
     baca.note_head_style_harmonic_black(
         selector=baca.leaf(-2),
         ),
-    baca.text_spanner( r'spazz. strett. =|',
+    baca.text_spanner(
+        r'spazz. strett. =|',
         abjad.tweak(8).staff_padding,
         bookend=False,
         selector=baca.leaves()[-1:].rleak().rleak(),
@@ -294,7 +307,10 @@ maker(
 maker(
     ('vc', 8),
     baca.dls_staff_padding(7),
-    baca.hairpin('f |>o niente'),
+    baca.hairpin(
+        'f |>o niente',
+        selector=baca.leaves().rleak(),
+        ),
     baca.note_head_style_harmonic(),
     baca.suite(
         baca.rhythm(
@@ -308,6 +324,7 @@ maker(
         r'\baca-double-diamond-parenthesized-top-markup ->',
         abjad.tweak(10.5).staff_padding,
         abjad.tweak("#'trill").style,
+        autodetect_right_padding=True,
         bookend=False,
         lilypond_id=1,
         ),
