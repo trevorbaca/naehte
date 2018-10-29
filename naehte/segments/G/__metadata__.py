@@ -78,15 +78,6 @@ metadata = abjad.OrderedDict(
         ('phantom', True),
         ('segment_name', 'G'),
         ('segment_number', 7),
-        (
-            'sounds_during_segment',
-            abjad.OrderedDict(
-                [
-                    ('Cello_Music_Voice', True),
-                    ('Cello_Rest_Voice', False),
-                    ]
-                ),
-            ),
         ('start_clock_time', "5'51''"),
         ('stop_clock_time', "6'55''"),
         (
