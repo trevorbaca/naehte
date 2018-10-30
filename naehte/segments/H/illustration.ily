@@ -748,30 +748,7 @@ H_Cello_Music_Voice = {                                                        %
             \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
             \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
             R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
-            _ \markup {                                                        %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                \override                                                      %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                    #'(font-name . "Palatino")                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                    \with-color                                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                        #black                                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                        \right-column                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                            {                                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                \line                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                    {                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        "Madison, WI."                         %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                    }                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                \line                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                    {                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        August                                 %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        \hspace                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                            #0.75                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        –                                      %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        \hspace                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                            #0.75                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        October                                %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                        2018.                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                                    }                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                            }                                                  %! PHANTOM:_style_phantom_measures(5):SCORE_2
-                }                                                              %! PHANTOM:_style_phantom_measures(5):SCORE_2
+            _ \naehte-colophon-markup                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
