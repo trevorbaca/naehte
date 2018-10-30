@@ -14,11 +14,6 @@ maker = baca.SegmentMaker(
         abjad.Tags().LOCAL_MEASURE_NUMBER_MARKUP,
         abjad.Tags().STAGE_NUMBER_MARKUP,
         ],
-    final_markup=abjad.Markup.from_literal(
-        r'\naehte-colophon-markup',
-        literal=True,
-        ),
-    final_markup_extra_offset=(-15, -5),
     final_segment=True,
     phantom=True,
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
@@ -291,5 +286,16 @@ maker(
     baca.new(
         baca.dls_staff_padding(3.5),
         measures=(10, 14),
+        ),
+    )
+
+maker(
+    ('vc', -1),
+    baca.markup(
+        abjad.Markup.from_literal(
+            r'\naehte-colophon-markup',
+            literal=True,
+            ),
+        abjad.tweak((-20, -17.5)).extra_offset,
         ),
     )

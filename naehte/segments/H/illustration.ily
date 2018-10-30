@@ -710,6 +710,8 @@ H_Cello_Music_Voice = {                                                        %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             - \tweak to-barline ##t                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
             \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+            - \tweak extra-offset #'(-20 . -17.5)                              %! baca_markup:IndicatorCommand
+            ^ \naehte-colophon-markup                                          %! baca_markup:IndicatorCommand
             \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
             \revert Dots.extra-offset                                          %! baca_dots_extra_offset:OverrideCommand(2)
             \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
@@ -741,14 +743,12 @@ H_Cello_Music_Voice = {                                                        %
         {                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
             % [H Cello_Rest_Voice measure 117 / measure 15]                    %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
-            \once \override MultiMeasureRestText.extra-offset = #'(-15 . -5)
             \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
             \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
             \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
             \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
             \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
             R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
-            _ \naehte-colophon-markup                                          %! PHANTOM:_style_phantom_measures(5):SCORE_2
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
