@@ -1,5 +1,5 @@
 \paper {
-    print-page-number = ##f
+    print-first-page-number = ##t
 }
 
 \header {
