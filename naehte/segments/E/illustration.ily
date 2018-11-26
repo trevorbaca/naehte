@@ -302,7 +302,7 @@ E_Cello_Music_Voice = {                                                        %
             \once \override NoteHead.extra-offset = #'(-1.25 . 0)              %! baca_note_head_extra_offset:OverrideCommand(1)
             \override NoteHead.X-extent = #'(0 . 0)                            %! baca_note_head_x_extent_zero:OverrideCommand(1)
             \override TupletBracket.padding = #1.75                            %! baca_tuplet_bracket_down:OverrideCommand(1)
-            \override DynamicLineSpanner.staff-padding = #'8                   %! baca_dls_staff_padding:OverrideCommand(1)
+            \override DynamicLineSpanner.staff-padding = #8                    %! baca_dls_staff_padding:OverrideCommand(1)
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
             \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
         %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
