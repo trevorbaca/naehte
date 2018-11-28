@@ -559,7 +559,7 @@ maker(
     baca.suite(
         baca.glissando(
             allow_repeats=True,
-            stems=True,
+            hide_middle_note_heads=True,
             zero_padding=True,
             ),
         baca.interpolate_staff_positions('D3', 'C#3'),
@@ -583,8 +583,8 @@ maker(
         ),
     baca.glissando(
         allow_repeats=True,
+        hide_middle_note_heads=True,
         selector=baca.leaves().rleak(),
-        stems=True,
         zero_padding=True,
         ),
     baca.text_spanner(
