@@ -361,7 +361,7 @@ maker(
     baca.suite(
         baca.glissando(
             allow_repeats=True,
-            stems=True,
+            hide_middle_note_heads=True,
             zero_padding=True,
             ),
         baca.interpolate_staff_positions('D#5', 'F5'),
@@ -542,7 +542,7 @@ maker(
     baca.suite(
         baca.glissando(
             allow_repeats=True,
-            stems=True,
+            hide_middle_note_heads=True,
             zero_padding=True,
             ),
         baca.interpolate_staff_positions('Db2', 'Eb2'),

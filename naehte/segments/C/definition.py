@@ -198,8 +198,8 @@ maker(
             ),
         baca.glissando(
             allow_repeats=True,
+            hide_middle_note_heads=True,
             selector=baca.leaves().rleak(),
-            stems=True,
             zero_padding=True,
             ),
         ),
