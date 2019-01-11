@@ -38,17 +38,40 @@ maker(
         (0, 2),
         selector=baca.skip(5),
         ),
-    baca.metronome_mark('52', selector=baca.leaf(1 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(3 - 1)),
-    baca.metronome_mark(baca.Accelerando(), selector=baca.leaf(3 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(6 - 1)),
-    baca.metronome_mark('52', selector=baca.leaf(7 - 1)),
-    baca.metronome_mark('117', selector=baca.leaf(8 - 1)),
-    baca.metronome_mark('39', selector=baca.leaf(12 - 1)),
-#    baca.rehearsal_mark(
-#        'G',
-#        abjad.tweak((0, 12)).extra_offset,
-#        ),
+    baca.metronome_mark(
+        '52',
+        selector=baca.leaf(1 - 1),
+        ),
+    baca.metronome_mark(
+        '52',
+        selector=baca.leaf(3 - 1),
+        ),
+    baca.metronome_mark(
+        baca.Accelerando(),
+        selector=baca.leaf(3 - 1),
+        ),
+    baca.metronome_mark(
+        '117',
+        selector=baca.leaf(6 - 1),
+        ),
+    baca.metronome_mark(
+        '52',
+        selector=baca.leaf(7 - 1),
+        ),
+    baca.metronome_mark(
+        '117',
+        selector=baca.leaf(8 - 1),
+        ),
+    baca.metronome_mark(
+        '39',
+        selector=baca.leaf(12 - 1),
+        ),
+    baca.only_segment(
+        baca.rehearsal_mark(
+            'G',
+            abjad.tweak((0, 12)).extra_offset,
+            ),
+        ),
     baca.volta(
         selector=baca.leaves()[1:5],
         ),
@@ -56,7 +79,10 @@ maker(
 
 maker(
     'Global_Rests',
-    baca.global_fermata('fermata', selector=baca.leaf(-1)),
+    baca.global_fermata(
+        'fermata',
+        selector=baca.leaf(-1),
+        ),
     )
 
 maker(

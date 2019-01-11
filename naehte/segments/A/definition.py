@@ -41,13 +41,19 @@ maker = baca.SegmentMaker(
 
 maker(
     'Global_Skips',
-    baca.metronome_mark('117', selector=baca.leaf(1 - 1)),
+    baca.metronome_mark(
+        '117',
+        selector=baca.leaf(1 - 1),
+        ),
     baca.text_spanner_staff_padding(10),
     )
 
 maker(
     'vc',
-    baca.start_markup('Cello', hcenter_in=10),
+    baca.start_markup(
+        'Cello',
+        hcenter_in=10,
+        ),
     )
 
 maker(
