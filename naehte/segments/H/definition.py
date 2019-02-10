@@ -312,10 +312,8 @@ maker(
 maker(
     ('vc', -1),
     baca.markup(
-        abjad.Markup.from_literal(
-            r'\naehte-colophon-markup',
-            literal=True,
-            ),
+        r'\naehte-colophon-markup',
         abjad.tweak((-20, -17.5)).extra_offset,
+        literal=True,
         ),
     )
