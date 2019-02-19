@@ -18,13 +18,13 @@
         \context Score = "Score"                                               %! ScoreTemplate
         <<                                                                     %! ScoreTemplate
 
-            \context GlobalContext = "Global_Context"                          %! _make_global_context
-            <<                                                                 %! _make_global_context
+            \context GlobalContext = "Global_Context"                          %! abjad.ScoreTemplate._make_global_context
+            <<                                                                 %! abjad.ScoreTemplate._make_global_context
 
-                \context GlobalSkips = "Global_Skips"                          %! _make_global_context
+                \context GlobalSkips = "Global_Skips"                          %! abjad.ScoreTemplate._make_global_context
                 \E_Global_Skips                                                %! extern
 
-            >>                                                                 %! _make_global_context
+            >>                                                                 %! abjad.ScoreTemplate._make_global_context
 
             \context MusicContext = "Music_Context"                            %! ScoreTemplate
             {                                                                  %! ScoreTemplate
