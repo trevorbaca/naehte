@@ -11,8 +11,8 @@ from abjadext import rmakers
 
 maker = baca.SegmentMaker(
     activate=[
-        abjad.Tags().LOCAL_MEASURE_NUMBER_MARKUP,
-        abjad.Tags().STAGE_NUMBER_MARKUP,
+        abjad.const.LOCAL_MEASURE_NUMBER,
+        abjad.const.STAGE_NUMBER,
         ],
     final_segment=True,
     phantom=True,
