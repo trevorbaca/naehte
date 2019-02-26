@@ -1,4 +1,54 @@
 import abjad
 
 
-persist = abjad.OrderedDict()
+persist = abjad.OrderedDict(
+    [
+        (
+            'persistent_indicators',
+            abjad.OrderedDict(
+                [
+                    (
+                        'Cello_Music_Staff',
+                        [
+                            abjad.Momento(
+                                context='Cello_Music_Voice',
+                                manifest='instruments',
+                                value='Cello',
+                                ),
+                            abjad.Momento(
+                                context='Cello_Music_Voice',
+                                prototype='abjad.Clef',
+                                value='bass',
+                                ),
+                            ],
+                        ),
+                    (
+                        'Cello_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Cello_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='pppp',
+                                ),
+                            ],
+                        ),
+                    (
+                        'Score',
+                        [
+                            abjad.Momento(
+                                context='Global_Skips',
+                                manifest='metronome_marks',
+                                value='39',
+                                ),
+                            abjad.Momento(
+                                context='Global_Skips',
+                                prototype='abjad.TimeSignature',
+                                value='4/4',
+                                ),
+                            ],
+                        ),
+                    ]
+                ),
+            ),
+        ]
+    )
