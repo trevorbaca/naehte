@@ -1,4 +1,4 @@
-A_Global_Skips = {                                                             %! extern
+A_Global_Skips = {                                                             %! abjad.Path.extern
 
     % [A Global_Skips measure 1]                                               %! _comment_measure_numbers
     \override TextSpanner.staff-padding = #10                                  %! baca_text_spanner_staff_padding:OverrideCommand(1)
@@ -178,10 +178,10 @@ A_Global_Skips = {                                                             %
     \once \override Score.BarLine.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
     \once \override Score.SpanBar.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-A_Global_Rests = {                                                             %! extern
+A_Global_Rests = {                                                             %! abjad.Path.extern
 
     % [A Global_Rests measure 1]                                               %! _comment_measure_numbers
     R1 * 7/8                                                                   %! _make_global_rests(1)
@@ -210,10 +210,10 @@ A_Global_Rests = {                                                             %
     % [A Global_Rests measure 9]                                               %! PHANTOM:_style_phantom_measures(4):_comment_measure_numbers
     R1 * 1/4                                                                   %! PHANTOM:_make_global_rests(2)
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-A_Cello_Music_Voice = {                                                        %! extern
+A_Cello_Music_Voice = {                                                        %! abjad.Path.extern
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 7/9 {
@@ -668,15 +668,15 @@ A_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-A_Cello_Music_Staff = <<                                                       %! extern
+A_Cello_Music_Staff = <<                                                       %! abjad.Path.extern
 
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context
-    \A_Global_Rests                                                            %! extern
+    \A_Global_Rests                                                            %! abjad.Path.extern
 
     \context Voice = "Cello_Music_Voice"                                       %! ScoreTemplate
-    \A_Cello_Music_Voice                                                       %! extern
+    \A_Cello_Music_Voice                                                       %! abjad.Path.extern
 
->>                                                                             %! extern
+>>                                                                             %! abjad.Path.extern
