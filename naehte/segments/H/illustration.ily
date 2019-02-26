@@ -764,7 +764,7 @@ H_Cello_Music_Staff = <<                                                       %
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context
     \H_Global_Rests                                                            %! abjad.Path.extern
 
-    \context Voice = "Cello_Music_Voice"                                       %! ScoreTemplate
+    \context Voice = "Cello_Music_Voice"                                       %! naehte.ScoreTemplate.__call__
     \H_Cello_Music_Voice                                                       %! abjad.Path.extern
 
 >>                                                                             %! abjad.Path.extern
