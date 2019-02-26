@@ -1,4 +1,4 @@
-C_Global_Skips = {                                                             %! extern
+C_Global_Skips = {                                                             %! abjad.Path.extern
 
     \repeat volta 2
     {
@@ -362,10 +362,10 @@ C_Global_Skips = {                                                             %
     \once \override Score.BarLine.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
     \once \override Score.SpanBar.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-C_Global_Rests = {                                                             %! extern
+C_Global_Rests = {                                                             %! abjad.Path.extern
 
     % [C Global_Rests measure 28 / measure 1]                                  %! _comment_measure_numbers
     R1 * 5/4                                                                   %! _make_global_rests(1)
@@ -430,10 +430,10 @@ C_Global_Rests = {                                                             %
     % [C Global_Rests measure 46 / measure 19]                                 %! PHANTOM:_style_phantom_measures(4):_comment_measure_numbers
     R1 * 1/4                                                                   %! PHANTOM:_make_global_rests(2)
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-C_Cello_Music_Voice = {                                                        %! extern
+C_Cello_Music_Voice = {                                                        %! abjad.Path.extern
 
     {
 
@@ -1308,15 +1308,15 @@ C_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
-}                                                                              %! extern
+}                                                                              %! abjad.Path.extern
 
 
-C_Cello_Music_Staff = <<                                                       %! extern
+C_Cello_Music_Staff = <<                                                       %! abjad.Path.extern
 
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context
-    \C_Global_Rests                                                            %! extern
+    \C_Global_Rests                                                            %! abjad.Path.extern
 
     \context Voice = "Cello_Music_Voice"                                       %! ScoreTemplate
-    \C_Cello_Music_Voice                                                       %! extern
+    \C_Cello_Music_Voice                                                       %! abjad.Path.extern
 
->>                                                                             %! extern
+>>                                                                             %! abjad.Path.extern
