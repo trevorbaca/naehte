@@ -6,21 +6,22 @@ breaks = baca.breaks(
         baca.system(
             16,
             measure=1,
-            y_offset=75,
+            y_offset=90 + 0 * (50 + 16),
             ),
         baca.system(
             16,
             measure=4,
-            y_offset=75 + 30 + 16,
+            y_offset=90 + 1 * (50 + 16),
             ),
         baca.system(
             16,
             measure=7,
-            y_offset=75 + 2 * 30 + 2 * 16,
+            y_offset=90 + 2 * (50 + 16),
             ),
         number=1,
         ),
     )
+
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,

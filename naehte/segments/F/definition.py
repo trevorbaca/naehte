@@ -12,7 +12,6 @@ from abjadext import rmakers
 maker = baca.SegmentMaker(
     activate=[
         abjad.const.LOCAL_MEASURE_NUMBER,
-        abjad.const.STAGE_NUMBER,
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
