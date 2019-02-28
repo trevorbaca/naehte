@@ -9,24 +9,11 @@ from abjadext import rmakers
 ##################################### [A] #####################################
 ###############################################################################
 
-stage_markup = (
-    ('[A.1]', 1),
-    ('[A.2]', 2),
-    ('[A.3]', 3),
-    ('[A.4]', 4),
-    ('[A.5]', 5),
-    ('[A.6]', 6),
-    ('[A.7]', 7),
-    ('[A.8]', 8),
-    )
-
 maker = baca.SegmentMaker(
     activate=[
         abjad.const.LOCAL_MEASURE_NUMBER,
-        abjad.const.STAGE_NUMBER,
         ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
-    stage_markup=stage_markup,
     time_signatures=[
         (7, 8),
         (6, 8), 
