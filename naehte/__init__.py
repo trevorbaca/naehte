@@ -8,5 +8,6 @@ if not (
 del distutils
 del platform
 from naehte.tools import *
-from naehte.materials import *
+from naehte.materials.instruments.definition import instruments
+from naehte.materials.metronome_marks.definition import metronome_marks
 from naehte import segments
