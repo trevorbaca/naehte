@@ -60,9 +60,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
     def __init__(self):
         super(ScoreTemplate, self).__init__()
-        self.voice_abbreviations.update({
-            'vc': 'Cello_Music_Voice',
-            })
+        self.voice_abbreviations.update({"vc": "Cello_Music_Voice"})
 
     ### SPECIAL METHODS ###
 
@@ -70,44 +68,33 @@ class ScoreTemplate(baca.ScoreTemplate):
         """
         Calls score template.
         """
-        tag = 'naehte.ScoreTemplate.__call__'
+        tag = "naehte.ScoreTemplate.__call__"
 
         # GLOBAL CONTEXT
         global_context = self._make_global_context()
 
         # cello
-        cello_music_voice = abjad.Voice(
-            name='Cello_Music_Voice',
-            tag=tag,
-            )
+        cello_music_voice = abjad.Voice(name="Cello_Music_Voice", tag=tag)
         cello_music_staff = abjad.Staff(
-            [cello_music_voice],
-            name='Cello_Music_Staff',
-            tag=tag,
-            )
+            [cello_music_voice], name="Cello_Music_Staff", tag=tag
+        )
         abjad.annotate(
             cello_music_staff,
-            'default_instrument',
-            naehte.instruments['Cello'],
-            )
-        abjad.annotate(
-            cello_music_staff,
-            'default_clef',
-            abjad.Clef('bass'),
-            )
+            "default_instrument",
+            naehte.instruments["Cello"],
+        )
+        abjad.annotate(cello_music_staff, "default_clef", abjad.Clef("bass"))
 
         # SCORE
         music_context = abjad.Context(
             [cello_music_staff],
-            lilypond_type='MusicContext',
-            name='Music_Context',
+            lilypond_type="MusicContext",
+            name="Music_Context",
             tag=tag,
-            )
+        )
         score = abjad.Score(
-            [global_context, music_context],
-            name='Score',
-            tag=tag,
-            )
+            [global_context, music_context], name="Score", tag=tag
+        )
         self._assert_lilypond_identifiers(score)
         self._assert_unique_context_names(score)
         self._assert_matching_custom_context_names(score)
