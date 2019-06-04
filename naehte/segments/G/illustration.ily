@@ -5,8 +5,8 @@ G_Global_Skips = {                                                             %
     \bar ""                                                                    %! _make_global_skips(3):+SEGMENT:EMPTY_START_BAR
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 1                                                                     %! _make_global_skips(1)
-    - \tweak extra-offset #'(0 . 12)                                           %! baca_rehearsal_mark:+SEGMENT:IndicatorCommand
-    - \baca-rehearsal-mark-markup "G"                                          %! baca_rehearsal_mark:+SEGMENT:IndicatorCommand
+    - \tweak extra-offset #'(0 . 12)                                           %! baca.rehearsal_mark:+SEGMENT:IndicatorCommand
+    - \baca-rehearsal-mark-markup "G"                                          %! baca.rehearsal_mark:+SEGMENT:IndicatorCommand
     - \baca-start-lmn-left-only "1"                                            %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "89"                                            %! MEASURE_NUMBER
@@ -24,7 +24,7 @@ G_Global_Skips = {                                                             %
     {
 
         % [G Global_Skips measure 90 / measure 2]                              %! _comment_measure_numbers
-        \once \override Score.BarLine.X-extent = #'(0 . 2.75)                  %! baca_bar_line_x_extent:OverrideCommand(1)
+        \once \override Score.BarLine.X-extent = #'(0 . 2.75)                  %! baca.bar_line_x_extent:OverrideCommand(1)
         \time 5/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
         \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
         s1 * 5/4                                                               %! _make_global_skips(1)
@@ -86,7 +86,7 @@ G_Global_Skips = {                                                             %
     }
 
     % [G Global_Skips measure 94 / measure 6]                                  %! _comment_measure_numbers
-    \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! baca_bar_line_x_extent:OverrideCommand(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! baca.bar_line_x_extent:OverrideCommand(1)
     \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
     s1 * 1                                                                     %! _make_global_skips(1)
@@ -295,9 +295,9 @@ G_Global_Rests = {                                                             %
     R1 * 11/4                                                                  %! _make_global_rests(1)
 
     % [G Global_Rests measure 102 / measure 14]                                %! _comment_measure_numbers
-    \baca-fermata-measure                                                      %! baca_global_fermata:GlobalFermataCommand(2)
+    \baca-fermata-measure                                                      %! baca.global_fermata:GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! _make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca_global_fermata:GlobalFermataCommand(1)
+    ^ \baca-fermata-markup                                                     %! baca.global_fermata:GlobalFermataCommand(1)
 
     % [G Global_Rests measure 103 / measure 15]                                %! PHANTOM:_style_phantom_measures(4):_comment_measure_numbers
     R1 * 1/4                                                                   %! PHANTOM:_make_global_rests(2)
@@ -310,20 +310,20 @@ G_Cello_Music_Voice = {                                                        %
     {
 
         % [G Cello_Music_Voice measure 89 / measure 1]                         %! _comment_measure_numbers
-        \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
-        \override TupletBracket.staff-padding = #2                             %! baca_tuplet_bracket_staff_padding:OverrideCommand(1)
-        \override DynamicLineSpanner.staff-padding = #7                        %! baca_dls_staff_padding:OverrideCommand(1)
+        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #2                             %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        \override DynamicLineSpanner.staff-padding = #7                        %! baca.dls_staff_padding:OverrideCommand(1)
         \clef "bass"                                                           %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
         \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
         \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
         f''4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \glissando                                                             %! baca_glissando
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \glissando                                                             %! baca.glissando
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         \tweak text #tuplet-number::calc-fraction-text
@@ -331,41 +331,41 @@ G_Cello_Music_Voice = {                                                        %
 
             g4
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-            \glissando                                                         %! baca_glissando
+            \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+            \glissando                                                         %! baca.glissando
 
             a'4
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \pp                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \pp                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-            \glissando                                                         %! baca_glissando
+            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+            \glissando                                                         %! baca.glissando
 
             \times 2/3 {
 
                 b,4
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \mp                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \mp                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-                \glissando                                                     %! baca_glissando
+                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+                \glissando                                                     %! baca.glissando
 
                 c'4
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \p                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \p                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \<                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-                \glissando                                                     %! baca_glissando
+                \<                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+                \glissando                                                     %! baca.glissando
 
                 d,4
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \mf                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+                \mf                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-                \revert NoteHead.style                                         %! baca_note_head_style_harmonic:OverrideCommand(2)
-                \revert TupletBracket.staff-padding                            %! baca_tuplet_bracket_staff_padding:OverrideCommand(2)
+                \>                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+                \revert NoteHead.style                                         %! baca.note_head_style_harmonic:OverrideCommand(2)
+                \revert TupletBracket.staff-padding                            %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
 
             }
 
@@ -378,74 +378,74 @@ G_Cello_Music_Voice = {                                                        %
         % [G Cello_Music_Voice measure 90 / measure 2]                         %! _comment_measure_numbers
         e,1
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
-        \glissando                                                             %! baca_finger_pressure_transition
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "RH vib. molto"                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-right-text "NV"                                   %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "no scr."                               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
+        \glissando                                                             %! baca.finger_pressure_transition
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "RH vib. molto"                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "NV"                                   %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
+        \once \override NoteHead.style = #'harmonic                            %! baca.note_head_style_harmonic:OverrideCommand(1)
         e,4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(2)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "scr. poss."                            %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
-        \glissando                                                             %! baca_finger_pressure_transition
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr. poss."                            %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
+        \glissando                                                             %! baca.finger_pressure_transition
 
     }
 
     {
 
         % [G Cello_Music_Voice measure 91 / measure 3]                         %! _comment_measure_numbers
-        \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
-        \pitchedTrill                                                          %! baca_trill_spanner:SpannerIndicatorCommand(1)
+        \once \override NoteHead.style = #'harmonic-black                      %! baca.note_head_style_harmonic_black:OverrideCommand(1)
+        \pitchedTrill                                                          %! baca.trill_spanner:SpannerIndicatorCommand(1)
         e,4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "XFB"                                   %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
-        \startTrillSpan e,                                                     %! baca_trill_spanner:SpannerIndicatorCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "XFB"                                   %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
+        \startTrillSpan e,                                                     %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         \repeatTie                                                             %! TieCorrectionCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTrillSpan                                                         %! baca_trill_spanner:SpannerIndicatorCommand(2)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTrillSpan                                                         %! baca.trill_spanner:SpannerIndicatorCommand(2)
 
     }
 
@@ -454,67 +454,67 @@ G_Cello_Music_Voice = {                                                        %
         % [G Cello_Music_Voice measure 92 / measure 4]                         %! _comment_measure_numbers
         <e, c>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "I / II str."                           %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "I / II str."                           %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         \repeatTie                                                             %! TieCorrectionCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "scr."                                  %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
     }
 
     {
 
         % [G Cello_Music_Voice measure 93 / measure 5]                         %! _comment_measure_numbers
-        \once \override NoteHead.style = #'harmonic                            %! baca_note_head_style_harmonic:OverrideCommand(1)
+        \once \override NoteHead.style = #'harmonic                            %! baca.note_head_style_harmonic:OverrideCommand(1)
         <e, c>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "I / II str."                           %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak style #'trill                                                 %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "I / II str."                           %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak style #'trill                                                 %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         \repeatTie                                                             %! TieCorrectionCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        \glissando                                                             %! baca_glissando
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        \glissando                                                             %! baca.glissando
 
     }
 
@@ -523,95 +523,95 @@ G_Cello_Music_Voice = {                                                        %
         % [G Cello_Music_Voice measure 94 / measure 6]                         %! _comment_measure_numbers
         ef,!2..
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "RH vib. poss."                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-right-text "NV"                                   %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "no scr."                               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "RH vib. poss."                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "NV"                                   %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #2.75                             %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset:OverrideCommand(1)
         ef,!8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \mf                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \mf                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         \repeatTie                                                             %! TieCorrectionCommand
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(2)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "scr."                                  %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
-        \breathe                                                               %! baca_breathe:IndicatorCommand
-        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #2.75                             %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
+        \breathe                                                               %! baca.breathe:IndicatorCommand
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding:OverrideCommand(2)
 
     }
 
     {
 
         % [G Cello_Music_Voice measure 95 / measure 7]                         %! _comment_measure_numbers
-        \once \override DynamicText.self-alignment-X = #-0.75                  %! baca_dynamic_text_self_alignment_x:OverrideCommand(1)
-        \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
-        \override DynamicLineSpanner.staff-padding = #3                        %! baca_dls_staff_padding:OverrideCommand(1)
+        \once \override DynamicText.self-alignment-X = #-0.75                  %! baca.dynamic_text_self_alignment_x:OverrideCommand(1)
+        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic:OverrideCommand(1)
+        \override DynamicLineSpanner.staff-padding = #3                        %! baca.dls_staff_padding:OverrideCommand(1)
         <b fs'!>8
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \baca-p-sempre                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_dynamic:IndicatorCommand
-        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
+        \baca-p-sempre                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        - \espressivo                                                          %! baca.espressivo:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
         [
 
         <b fs'!>8
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca.espressivo:IndicatorCommand
 
         <b fs'!>8
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca.espressivo:IndicatorCommand
 
         <b fs'!>8
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \espressivo                                                          %! baca_espressivo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \espressivo                                                          %! baca.espressivo:IndicatorCommand
 
         \times 4/5 {
 
             <b fs'!>8
-            :32                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            :32                                                                %! baca.stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca.espressivo:IndicatorCommand
 
             <b fs'!>8
-            :32                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            :32                                                                %! baca.stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca.espressivo:IndicatorCommand
 
             <b fs'!>8
-            :32                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            :32                                                                %! baca.stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca.espressivo:IndicatorCommand
 
             <b fs'!>8
-            :32                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            :32                                                                %! baca.stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca.espressivo:IndicatorCommand
 
             <b fs'!>8
-            :32                                                                %! baca_stem_tremolo:IndicatorCommand
-            - \espressivo                                                      %! baca_espressivo:IndicatorCommand
+            :32                                                                %! baca.stem_tremolo:IndicatorCommand
+            - \espressivo                                                      %! baca.espressivo:IndicatorCommand
             ]
-            - \tweak arrow-length #2                                           %! baca_finger_pressure_transition
-            - \tweak arrow-width #0.5                                          %! baca_finger_pressure_transition
-            - \tweak bound-details.right.arrow ##t                             %! baca_finger_pressure_transition
-            - \tweak thickness #3                                              %! baca_finger_pressure_transition
-            \glissando                                                         %! baca_finger_pressure_transition
-            \revert NoteHead.style                                             %! baca_note_head_style_harmonic:OverrideCommand(2)
-            \revert DynamicLineSpanner.staff-padding                           %! baca_dls_staff_padding:OverrideCommand(2)
+            - \tweak arrow-length #2                                           %! baca.finger_pressure_transition
+            - \tweak arrow-width #0.5                                          %! baca.finger_pressure_transition
+            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition
+            - \tweak thickness #3                                              %! baca.finger_pressure_transition
+            \glissando                                                         %! baca.finger_pressure_transition
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic:OverrideCommand(2)
+            \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding:OverrideCommand(2)
 
         }
 
@@ -623,45 +623,45 @@ G_Cello_Music_Voice = {                                                        %
         \times 4/5 {
 
             % [G Cello_Music_Voice measure 96 / measure 8]                     %! _comment_measure_numbers
-            \override DynamicLineSpanner.staff-padding = #7                    %! baca_dls_staff_padding:OverrideCommand(1)
+            \override DynamicLineSpanner.staff-padding = #7                    %! baca.dls_staff_padding:OverrideCommand(1)
             <b fs'!>4
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+            \p                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-            \glissando                                                         %! baca_glissando
-            - \abjad-dashed-line-with-hook                                     %! baca_text_spanner:PiecewiseCommand(1)
-            - \baca-text-spanner-left-text "XFB"                               %! baca_text_spanner:PiecewiseCommand(1)
-            - \tweak staff-padding #5.5                                        %! baca_text_spanner:PiecewiseCommand(1)
-            \startTextSpan                                                     %! baca_text_spanner:PiecewiseCommand(1)
+            - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+            \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+            \glissando                                                         %! baca.glissando
+            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner:PiecewiseCommand(1)
+            - \baca-text-spanner-left-text "XFB"                               %! baca.text_spanner:PiecewiseCommand(1)
+            - \tweak staff-padding #5.5                                        %! baca.text_spanner:PiecewiseCommand(1)
+            \startTextSpan                                                     %! baca.text_spanner:PiecewiseCommand(1)
 
             <e' b'>4
-            \glissando                                                         %! baca_glissando
+            \glissando                                                         %! baca.glissando
 
             <af! ef'!>4
-            \glissando                                                         %! baca_glissando
+            \glissando                                                         %! baca.glissando
 
             <d' a'>4
-            \glissando                                                         %! baca_glissando
+            \glissando                                                         %! baca.glissando
 
             <f c'>4
-            \glissando                                                         %! baca_glissando
+            \glissando                                                         %! baca.glissando
 
         }
 
         <bf! f'>4
-        \glissando                                                             %! baca_glissando
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "II / III mod."                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        \glissando                                                             %! baca.glissando
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "II / III mod."                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
 
         <e b>4
-        \glissando                                                             %! baca_glissando
+        \glissando                                                             %! baca.glissando
 
         <g d'>4
-        \glissando                                                             %! baca_glissando
+        \glissando                                                             %! baca.glissando
 
     }
 
@@ -670,62 +670,62 @@ G_Cello_Music_Voice = {                                                        %
         % [G Cello_Music_Voice measure 97 / measure 9]                         %! _comment_measure_numbers
         ds!4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(3)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "no scr."                               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "vib."                                  %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-right-text "NV"                                   %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #0.5                              %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #5.5                                            %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "vib."                                  %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-right-text "NV"                                   %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #5.5                                            %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset:OverrideCommand(1)
         ds!8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \repeatTie                                                             %! TieCorrectionCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(2)
 
     }
 
     {
 
         % [G Cello_Music_Voice measure 98 / measure 10]                        %! _comment_measure_numbers
-        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca_repeat_tie_extra_offset:OverrideCommand(1)
+        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca.repeat_tie_extra_offset:OverrideCommand(1)
         ds!4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ff                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ff                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \repeatTie                                                             %! TieCorrectionCommand
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "scr."                                  %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
 
         ds!4.
         \repeatTie                                                             %! TieCorrectionCommand
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup         %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #4.25                             %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        \revert RepeatTie.extra-offset                                         %! baca_repeat_tie_extra_offset:OverrideCommand(2)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup         %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #4.25                             %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        \revert RepeatTie.extra-offset                                         %! baca.repeat_tie_extra_offset:OverrideCommand(2)
 
     }
 
@@ -733,41 +733,41 @@ G_Cello_Music_Voice = {                                                        %
     \times 7/6 {
 
         % [G Cello_Music_Voice measure 99 / measure 11]                        %! _comment_measure_numbers
-        \override NoteHead.style = #'harmonic                                  %! baca_note_head_style_harmonic:OverrideCommand(1)
+        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic:OverrideCommand(1)
         d,2.
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
 
         <d, bf,!>2
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
-        \glissando                                                             %! baca_finger_pressure_transition
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "I / II larg."                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #8                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpanOne                                                      %! baca_text_spanner:PiecewiseCommand(1)
-        \revert NoteHead.style                                                 %! baca_note_head_style_harmonic:OverrideCommand(2)
+        - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
+        \glissando                                                             %! baca.finger_pressure_transition
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "I / II larg."                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
+        \revert NoteHead.style                                                 %! baca.note_head_style_harmonic:OverrideCommand(2)
 
-        \once \override NoteHead.style = #'harmonic-black                      %! baca_note_head_style_harmonic_black:OverrideCommand(1)
+        \once \override NoteHead.style = #'harmonic-black                      %! baca.note_head_style_harmonic_black:OverrideCommand(1)
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        \stopTextSpanOne                                                       %! baca_text_spanner:PiecewiseCommand(3)
-        - \tweak arrow-length #2                                               %! baca_finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca_finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca_finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca_finger_pressure_transition
-        \glissando                                                             %! baca_finger_pressure_transition
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
+        \glissando                                                             %! baca.finger_pressure_transition
 
     }
 
@@ -775,111 +775,111 @@ G_Cello_Music_Voice = {                                                        %
 
         % [G Cello_Music_Voice measure 100 / measure 12]                       %! _comment_measure_numbers
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        - \tweak staff-padding #8                                              %! baca_markup:IndicatorCommand
-        ^ \markup {                                                            %! baca_markup:IndicatorCommand
-            \override                                                          %! baca_markup:IndicatorCommand
-                #'(box-padding . 0.5)                                          %! baca_markup:IndicatorCommand
-                \box                                                           %! baca_markup:IndicatorCommand
-                    "degrees of ponticello"                                    %! baca_markup:IndicatorCommand
-            }                                                                  %! baca_markup:IndicatorCommand
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        - \tweak staff-padding #8                                              %! baca.markup:IndicatorCommand
+        ^ \markup {                                                            %! baca.markup:IndicatorCommand
+            \override                                                          %! baca.markup:IndicatorCommand
+                #'(box-padding . 0.5)                                          %! baca.markup:IndicatorCommand
+                \box                                                           %! baca.markup:IndicatorCommand
+                    "degrees of ponticello"                                    %! baca.markup:IndicatorCommand
+            }                                                                  %! baca.markup:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \tweak stencil #constante-hairpin                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "0"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak stencil #constante-hairpin                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "0"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        \override NoteHead.X-extent = #'(0 . 0)                                %! baca_note_head_x_extent_zero:OverrideCommand(1)
-        \override NoteHead.transparent = ##t                                   %! baca_note_head_transparent:OverrideCommand(1)
+        \override NoteHead.X-extent = #'(0 . 0)                                %! baca.note_head_x_extent_zero:OverrideCommand(1)
+        \override NoteHead.transparent = ##t                                   %! baca.note_head_transparent:OverrideCommand(1)
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-
-        d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "2"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "1"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "2"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "1"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "3"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "2"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "3"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "2"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "4"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "3"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "4"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
+
+        d,4
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "3"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
     }
 
@@ -887,101 +887,101 @@ G_Cello_Music_Voice = {                                                        %
 
         % [G Cello_Music_Voice measure 101 / measure 13]                       %! _comment_measure_numbers
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "DZ"                                    %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "DZ"                                    %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "4"                                     %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "4"                                     %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \accent                                                              %! baca_accent:IndicatorCommand
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \accent                                                              %! baca.accent:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "OB"                                    %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "OB"                                    %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-solid-line-with-arrow                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "DZ"                                    %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "DZ"                                    %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca_accent:IndicatorCommand
-        \stopTextSpan                                                          %! baca_text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        - \abjad-dashed-line-with-hook                                         %! baca_text_spanner:PiecewiseCommand(1)
-        - \baca-text-spanner-left-text "OB"                                    %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #3.25                             %! baca_text_spanner:PiecewiseCommand(1)
-        - \tweak staff-padding #3                                              %! baca_text_spanner:PiecewiseCommand(1)
-        \startTextSpan                                                         %! baca_text_spanner:PiecewiseCommand(1)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \accent                                                              %! baca.accent:IndicatorCommand
+        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
+        - \baca-text-spanner-left-text "OB"                                    %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak bound-details.right.padding #3.25                             %! baca.text_spanner:PiecewiseCommand(1)
+        - \tweak staff-padding #3                                              %! baca.text_spanner:PiecewiseCommand(1)
+        \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        \glissando                                                             %! baca_glissando
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        \glissando                                                             %! baca.glissando
 
         d,4
-        :32                                                                    %! baca_stem_tremolo:IndicatorCommand
-        - \abjad-zero-padding-glissando                                        %! baca_glissando
-        - \tweak bound-details.right.padding #2.75                             %! baca_glissando
-        \glissando                                                             %! baca_glissando
-        \revert NoteHead.X-extent                                              %! baca_note_head_x_extent_zero:OverrideCommand(2)
-        \revert NoteHead.transparent                                           %! baca_note_head_transparent:OverrideCommand(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca_dls_staff_padding:OverrideCommand(2)
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \abjad-zero-padding-glissando                                        %! baca.glissando
+        - \tweak bound-details.right.padding #2.75                             %! baca.glissando
+        \glissando                                                             %! baca.glissando
+        \revert NoteHead.X-extent                                              %! baca.note_head_x_extent_zero:OverrideCommand(2)
+        \revert NoteHead.transparent                                           %! baca.note_head_transparent:OverrideCommand(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding:OverrideCommand(2)
 
     }
 
@@ -994,9 +994,9 @@ G_Cello_Music_Voice = {                                                        %
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             d,1 * 1/4                                                          %! _make_multimeasure_rest_container
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-            - \tweak to-barline ##t                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
-            \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
-            \stopTextSpan                                                      %! baca_text_spanner:PiecewiseCommand(3)
+            - \tweak to-barline ##t                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+            \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! _make_multimeasure_rest_container
 
