@@ -36,17 +36,17 @@ TO-DO
     This ...
         maker(
             ('vc', [1, 2]),
-            baca.rhythm("{ c'4 c' c' c' }")
+            baca.skeleton("{ c'4 c' c' c' }")
             )
     ... currently breaks.
     Should be equivalent to ...
         maker(
             ('vc', 1),
-            baca.rhythm("{ c'4 c' c' c' }")
+            baca.skeleton("{ c'4 c' c' c' }")
             )
         maker(
             ('vc', 2),
-            baca.rhythm("{ c'4 c' c' c' }")
+            baca.skeleton("{ c'4 c' c' c' }")
             )
     ... instead.
     Integrate into opening of [F].

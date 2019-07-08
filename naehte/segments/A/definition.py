@@ -49,7 +49,7 @@ maker(
         'pp <| mf',
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 7/9 { c'8 [ c'8 c'8 c'8 c'8 c'8 ]"
             r" \times 3/4 { c'4. c'8 } }"
             ),
@@ -118,7 +118,7 @@ maker(
         selector=baca.rleaves().rleak(),
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 6/7 { c'2. c'8 }"
             ),
         baca.pitch('Eb4'),
@@ -154,7 +154,7 @@ maker(
         selector=baca.leaves()[1:-2],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'4 \times 6/7 { c'8 [ c' c' c' c' c' c' ] }"
             r" \times 2/3 { c'4 c'8 } }"
             ),
@@ -199,7 +199,7 @@ maker(
 maker(
     ('vc', 4),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 6/11 { \times 4/5 { c'8 [ c' c' c' c' ] }"
             r" c'2 \times 3/4 { c'8 c'4. } }"
             ),
@@ -252,7 +252,7 @@ maker(
 maker(
     ('vc', (5, 7)),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             "{"
             r" c'4 c'1"
             r" \times 4/5 { c'4 c'1 }"
@@ -304,7 +304,7 @@ maker(
         ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             "{"
             r" c'2... r16"
             " }"

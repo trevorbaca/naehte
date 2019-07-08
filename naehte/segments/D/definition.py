@@ -86,7 +86,7 @@ maker(
         selector=baca.rleaves(),
         ),
     baca.suite(
-        baca.rhythm(r"{ c'8 c'4. c'8 }"),
+        baca.skeleton(r"{ c'8 c'4. c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie_to(),
@@ -125,7 +125,7 @@ maker(
 maker(
     ('vc', 2),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 6/7 { c'2. c'8 }"
             ),
         baca.pitch('Eb4'),
@@ -160,7 +160,7 @@ maker(
         selector=baca.leaves()[1:-2],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'4 \times 6/7 { c'8 [ c' c' c' c' c' c' ] }"
             r" \times 2/3 { c'4 c'8 } }"
             ),
@@ -208,7 +208,7 @@ maker(
         selector=baca.leaves().lleak(),
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 6/11 { \times 4/5 { c'8 [ c' c' c' c' ] }"
             r" { c'2. c'8 } }"
@@ -262,7 +262,7 @@ maker(
             ),
         ),
     baca.suite(
-        baca.rhythm(r"{ c'2 c'32 [ c' c' c' ] }"),
+        baca.skeleton(r"{ c'2 c'32 [ c' c' c' ] }"),
         ),
     baca.text_spanner(
         r'RH NV -> RH vib. =|',
@@ -280,7 +280,7 @@ maker(
         'mf |>',
         bookend=False,
         ),
-    baca.rhythm(r"{ c'2 c'8 }"),
+    baca.skeleton(r"{ c'2 c'8 }"),
     baca.suite(
         baca.pitch('D3'),
         baca.glissando(
@@ -313,7 +313,7 @@ maker(
         pieces=baca.lparts([1, 7]),
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 6/7 { c'2 \times 4/6 { c'16 [ c' c' c' c' c' ] } c'1 }"
             ' }'
@@ -399,7 +399,7 @@ maker(
         'ppp < f',
         ),
     baca.suite(
-        baca.rhythm("{ c'4.. c'16 }"),
+        baca.skeleton("{ c'4.. c'16 }"),
         baca.new(
             baca.pitch('<D#3 F#3>'),
             baca.finger_pressure_transition(),
@@ -428,7 +428,7 @@ maker(
 maker(
     ('vc', 11),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 4/5 { c'16 [ c' c' c' c' ] }"
             r" c'4 c' \times 3/4 { c' c' \times 2/3 { c' c'2 } }"
@@ -523,7 +523,7 @@ maker(
         selector=baca.leaves()[1:],
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' }"),
         baca.pitches(
             'F#3 <F#3 C#4> F#3 F#3',
             allow_repeats=True,
@@ -573,7 +573,7 @@ maker(
         '< mp',
         selector=baca.leaves().lleak().rleak(),
         ),
-    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' }"),
+    baca.skeleton("{ c'4 c' c' c' c' c' c' c' c' }"),
     baca.suite(
         baca.glissando(
             allow_repeats=True,
@@ -593,7 +593,7 @@ maker(
 
 maker(
     ('vc', 14),
-    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.skeleton("{ c'4 c' c' c' c' c' c' c' c' c' }"),
     baca.new(
         baca.accidental_stencil_false(),
         baca.pitch('C#3'),
@@ -617,7 +617,7 @@ maker(
     ('vc', 15),
     baca.pitch('C#3', selector=baca.leaf(0)),
     baca.pitch('<C#3 A3>', selector=baca.leaves()[1:]),
-    baca.rhythm(r"{ c'4 c'2.. c' }"),
+    baca.skeleton(r"{ c'4 c'2.. c' }"),
     baca.text_spanner(
         r'I / II larg. -> strett. -> larg.',
         (abjad.tweak(6.25).bound_details__right__padding, -1),
@@ -637,7 +637,7 @@ maker(
 maker(
     ('vc', 16),
     baca.pitch('<C#3 A3>'),
-    baca.rhythm(r"{ c'1 c'2... r16 }"),
+    baca.skeleton(r"{ c'1 c'2... r16 }"),
     baca.text_spanner(
         r'trill larg. -> strett. -> larg.',
         (abjad.tweak(5.25).bound_details__right__padding, -1),

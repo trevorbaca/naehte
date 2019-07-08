@@ -76,7 +76,7 @@ maker(
         selector=baca.leaves(),
         ),
     baca.suite(
-        baca.rhythm("{ c'1 c'1 c'4 }"),
+        baca.skeleton("{ c'1 c'1 c'4 }"),
         baca.pitches('D2 <Db2 A2> D2'),
         baca.glissando(),
         ),
@@ -99,7 +99,7 @@ maker(
         selector=baca.leaves(),
         ),
     baca.suite(
-        baca.rhythm("{ c'1 c'1 c'4 }"),
+        baca.skeleton("{ c'1 c'1 c'4 }"),
         baca.pitches('Db2 C2 Db2'),
         baca.glissando(),
         ),
@@ -118,7 +118,7 @@ maker(
         'p <| mp',
         ),
     baca.suite(
-        baca.rhythm("{ c'2 c'8 }"),
+        baca.skeleton("{ c'2 c'8 }"),
         baca.pitches('C2 B1'),
         baca.glissando(),
         ),
@@ -140,7 +140,7 @@ maker(
         ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" c'4 \times 3/4 { c'4 c' \times 2/3 { c' c' c' } }"
             ' }'
@@ -174,7 +174,7 @@ maker(
         selector=baca.leaf(-1),
         ),
     baca.pitch('E2'),
-    baca.rhythm(
+    baca.skeleton(
         "{ c'1 c'4 }"
         ),
     baca.text_spanner(
@@ -199,7 +199,7 @@ maker(
     baca.dynamic('pppp-sempre'),
     baca.dynamic_text_self_alignment_x(-0.5),
     baca.pitch('<F3 C4>'),
-    baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    baca.skeleton(r"\times 6/7 { c'2. c'8 }"),
     baca.text_spanner(
         r'II / III mod. =|',
         abjad.tweak(12.5).staff_padding,
@@ -211,7 +211,7 @@ maker(
 maker(
     ('vc', 8),
     baca.pitch('<F3 C4>'),
-    baca.rhythm(r"\times 6/7 { c'2. c'8 }"),
+    baca.skeleton(r"\times 6/7 { c'2. c'8 }"),
     baca.text_spanner(
         r'II / III mod. =|',
         abjad.tweak(12.5).staff_padding,
@@ -265,7 +265,7 @@ maker(
         selector=baca.leaves()[1:],
         ),
     baca.suite(
-        baca.rhythm(r"{ c'2. c2. c2.. c2. }"),
+        baca.skeleton(r"{ c'2. c2. c2.. c2. }"),
         ),
     baca.suite(
         baca.dots_extra_offset((0.5, 1)),
