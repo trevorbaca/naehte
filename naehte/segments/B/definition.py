@@ -111,7 +111,7 @@ maker(
         selector=baca.leaves()[-3:],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'4. c'8 c'32 [ c' c' c' ] }"
             ),
         baca.new(
@@ -167,7 +167,7 @@ maker(
         selector=baca.leaves()[-3:-1],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'4. c'8 c'32 [ c' c' c' ] }"
             ),
         baca.new(
@@ -201,7 +201,7 @@ maker(
 maker(
     ('vc', (3, 4)),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 6/7 { c'2 \times 4/6 { c'16 [ c' c' c' c' c' ] } c'1 }"
             ' }'
@@ -288,7 +288,7 @@ maker(
         'ppp < f',
         ),
     baca.suite(
-        baca.rhythm("{ c'4.. c'16 }"),
+        baca.skeleton("{ c'4.. c'16 }"),
         baca.new(
             baca.pitch('<D#3 F#3>'),
             baca.finger_pressure_transition(),
@@ -316,7 +316,7 @@ maker(
 maker(
     ('vc', 7),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 4/5 { c'16 [ c' c' c' c' ] } c'2... c'16"
             ' }'
@@ -396,7 +396,7 @@ maker(
         abjad.tweak(True).to_barline,
         selector=baca.leaves().rleak(),
         ),
-    baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.skeleton("{ c'4 c' c' c' c' c' c' c' c' c' }"),
     baca.suite(
         baca.glissando(
             allow_repeats=True,
@@ -426,7 +426,7 @@ maker(
             ),
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             "{"
             r" c'1"
             r" \times 4/5 { c'4 c'1 }"
@@ -476,7 +476,7 @@ maker(
         selector=baca.leaves()[-3:-1],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'4. c'8 c'32 [ c' c' c' ] }"
             ),
         baca.new(
@@ -520,7 +520,7 @@ maker(
         selector=baca.leaves()[:2],
         ),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"{ c'2. c'8 }"
             ),
         baca.pitches('C5 Db2'),
@@ -540,7 +540,7 @@ maker(
 maker(
     ('vc', 16),
     baca.suite(
-        baca.rhythm("{ c'1 }"),
+        baca.skeleton("{ c'1 }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie_to(),
@@ -551,7 +551,7 @@ maker(
     ('vc', 17),
     baca.dynamic('"fff"'),
     baca.suite(
-        baca.rhythm("{ c'1. }"),
+        baca.skeleton("{ c'1. }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie_to(),
@@ -561,7 +561,7 @@ maker(
 maker(
     ('vc', 18),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' c' c' }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie_to(),
@@ -571,7 +571,7 @@ maker(
 maker(
     ('vc', 19),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' }"),
         ),
     )
 

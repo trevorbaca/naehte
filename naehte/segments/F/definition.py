@@ -89,7 +89,7 @@ maker(
         selector=baca.pleaves(),
         ),
     baca.pitch('<B3 F#4>'),
-    baca.rhythm(
+    baca.skeleton(
         r"{ c'8 [ c' c' c' \times 4/5 { c' c' c' c' c' ] } }",
         ),
     )
@@ -103,7 +103,7 @@ maker(
         selector=baca.pleaves(),
         ),
     baca.pitch('<B3 F#4>'),
-    baca.rhythm(
+    baca.skeleton(
         r"{ c'8 [ c' c' c' \times 4/5 { c' c' c' c' c' ] } }",
         ),
     )
@@ -117,7 +117,7 @@ maker(
         selector=baca.pleaves(),
         ),
     baca.pitch('<B3 F#4>'),
-    baca.rhythm(
+    baca.skeleton(
         r"{ c'8 [ c' c' c' \times 4/5 { c' c' c' c' c' ] } }",
         ),
     )
@@ -137,7 +137,7 @@ maker(
     baca.note_head_x_extent_zero(
         selector=baca.pleaves()[:-1],
         ),
-    baca.rhythm(
+    baca.skeleton(
         '{'
         r" \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] }"
         " c'2... r16"
@@ -178,7 +178,7 @@ maker(
         selector=baca.pleaves(),
         ),
     baca.pitch('<B3 F#4>'),
-    baca.rhythm(
+    baca.skeleton(
         r"{ c'8 [ c' c' c' \times 4/5 { c' c' c' c' c' ] } }",
         ),
     )
@@ -191,7 +191,7 @@ maker(
     baca.hairpin(
         'p <| f',
         ),
-    baca.rhythm(
+    baca.skeleton(
         r"\times 6/7 { \times 4/5 { c'4 c' c' c' c' } c' c' c' }",
         ),
     baca.suite(
@@ -262,7 +262,7 @@ maker(
             selector=baca.leaf(-3),
             ),
         ),
-    baca.rhythm(
+    baca.skeleton(
         r"\times 3/4 { c'2. \times 2/3 { c'8 [ c' c' ] } }"
         ),
     baca.text_spanner(
@@ -284,7 +284,7 @@ maker(
         ),
     baca.pitch('A3'),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 4/5 { c'4. c'8 [ c' ] }",
             ),
         baca.repeat_tie_to(
@@ -313,7 +313,7 @@ maker(
         'p <| f',
         selector=baca.leaves().rleak(),
         ),
-    baca.rhythm(
+    baca.skeleton(
         r"\times 6/7 { \times 4/5 { c'4 c' c' c' c' } c' c' c' }",
         ),
     baca.suite(
@@ -353,7 +353,7 @@ maker(
             ),
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c'8 }"),
+        baca.skeleton("{ c'4 c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie_to(),
@@ -380,7 +380,7 @@ maker(
         '|> pp',
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c'4. }"),
+        baca.skeleton("{ c'4 c'4. }"),
         baca.pitch('D#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -411,7 +411,7 @@ maker(
         selector=baca.leaves()[1:],
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' c' c' c' c' c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' c' c' c' c' c' c' c' }"),
         baca.pitch('E3'),
         ),
     baca.suite(

@@ -91,7 +91,7 @@ maker(
 
 maker(
     ('vc', 1),
-    baca.rhythm(
+    baca.skeleton(
         r"{ c'4 c' \times 3/4 { c' c' \times 2/3 { c' c'2 } } }"
         ),
     baca.hairpin(
@@ -141,7 +141,7 @@ maker(
         selector=baca.leaves().lleak(),
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' }"),
         baca.pitches(
             'F#3 <F#3 C#4> F#3 F#3',
             allow_repeats=True,
@@ -192,7 +192,7 @@ maker(
         selector=baca.pleaves(),
         ),
     baca.suite(
-        baca.rhythm("{ c'8. c'8. }"),
+        baca.skeleton("{ c'8. c'8. }"),
         baca.pitch('F#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -210,7 +210,7 @@ maker(
 maker(
     ('vc', 4),
     baca.note_head_style_harmonic(),
-    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' }"),
+    baca.skeleton(r"{ c'4 c' c' c' c' c' c' c' }"),
     baca.suite(
         baca.pitches(
             '<E3 B3>'
@@ -239,7 +239,7 @@ maker(
         ),
     baca.note_head_style_harmonic(),
     baca.pitch('<G3 D4>'),
-    baca.rhythm(r" \times 4/5 { c'1 c'4 }"),
+    baca.skeleton(r" \times 4/5 { c'1 c'4 }"),
     )
 
 maker(
@@ -248,7 +248,7 @@ maker(
     baca.hairpin(
         '|> p',
         ),
-    baca.rhythm(r"{ \times 3/4 { c'8 [ c' c' c' ~ ] } c'8 }"),
+    baca.skeleton(r"{ \times 3/4 { c'8 [ c' c' c' ~ ] } c'8 }"),
     baca.suite(
         baca.pitches('<A2 E3> <F3 C4> <G2 D3> Ab2', allow_repeats=True),
         baca.glissando(),
@@ -294,7 +294,7 @@ maker(
         ),
     baca.pitch('A2'),
     baca.suite(
-        baca.rhythm(r"{ c'1.. c'4 }"),
+        baca.skeleton(r"{ c'1.. c'4 }"),
         baca.repeat_tie_to(
             selector=baca.leaf(-1),
             ),
@@ -313,7 +313,7 @@ maker(
 maker(
     ('vc', (9, 10)),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 6/7 { c'2 \times 4/6 { c'16 [ c' c' c' c' c' ] } c'1 }"
             ' }'
@@ -396,7 +396,7 @@ maker(
         'ppp < f',
         ),
     baca.suite(
-        baca.rhythm("{ c'4.. c'16 }"),
+        baca.skeleton("{ c'4.. c'16 }"),
         baca.new(
             baca.pitch('<D#3 F#3>'),
             baca.finger_pressure_transition(),
@@ -424,7 +424,7 @@ maker(
 maker(
     ('vc', 13),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             '{'
             r" \times 4/5 { c'16 [ c' c' c' c' ] }"
             r" c'4 c' \times 3/4 { c' c' \times 2/3 { c' c'2 } }"
@@ -520,7 +520,7 @@ maker(
         selector=baca.leaves()[1:],
         ),
     baca.suite(
-        baca.rhythm("{ c'4 c' c' c' }"),
+        baca.skeleton("{ c'4 c' c' c' }"),
         baca.pitches(
             'F#3 <F#3 C#4> F#3 F#3',
             allow_repeats=True,
@@ -572,7 +572,7 @@ maker(
         selector=baca.leaf(0),
         ),
     baca.suite(
-        baca.rhythm(r"{ c'2 }"),
+        baca.skeleton(r"{ c'2 }"),
         baca.pitch('A2'),
         baca.glissando(
             selector=baca.leaves()[-1:].rleak(),
@@ -587,7 +587,7 @@ maker(
 
 maker(
     ('vc', 16),
-    baca.rhythm(
+    baca.skeleton(
         r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
         " c'4 c'8 [ c' ] c'2 }"
         ),
@@ -609,7 +609,7 @@ maker(
         'pppp >o niente',
         selector=baca.leaves()[-1:].rleak(),
         ),
-    baca.rhythm(
+    baca.skeleton(
         r" \times 7/8 { c'4 c'8 [ c' ] c'4 c'16 [ c' c' c' ]"
         " c'4 c'8 [ c' ] c'2 }"
         ),

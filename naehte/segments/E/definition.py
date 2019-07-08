@@ -76,7 +76,7 @@ maker(
     baca.note_head_x_extent_zero(
         selector=baca.pleaves()[:-1],
         ),
-    baca.rhythm(
+    baca.skeleton(
         '{'
         r" \times 2/3 { c'32 [ c' c' c' c' c' c' c' c' c' c' c' ] }"
         " c'1"
@@ -103,7 +103,7 @@ maker(
 maker(
     ('vc', 2),
     baca.suite(
-        baca.rhythm(r"{ c'\breve }"),
+        baca.skeleton(r"{ c'\breve }"),
         baca.pitch('E2'),
         baca.repeat_tie_to(),
         ),
@@ -111,7 +111,7 @@ maker(
 
 maker(
     ('vc', 3),
-    baca.rhythm(r"{ c'4 c' c' c' c' c' c' c' c' c' }"),
+    baca.skeleton(r"{ c'4 c' c' c' c' c' c' c' c' c' }"),
     baca.suite(
         baca.glissando(
             allow_repeats=True,
@@ -154,7 +154,7 @@ maker(
         selector=baca.rleaves(),
         ),
     baca.suite(
-        baca.rhythm(r"{ c'8 c'4. c'8 }"),
+        baca.skeleton(r"{ c'8 c'4. c'8 }"),
         baca.pitch('C#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -209,7 +209,7 @@ maker(
             ),
         ),
     baca.suite(
-        baca.rhythm(r"{ c'2 c'32 [ c' c' c' ] }"),
+        baca.skeleton(r"{ c'2 c'32 [ c' c' c' ] }"),
         ),
     baca.text_spanner(
         r'RH NV -> RH vib. =|',
@@ -227,7 +227,7 @@ maker(
         'mf |>',
         bookend=False,
         ),
-    baca.rhythm(r"{ c'2 c'8 }"),
+    baca.skeleton(r"{ c'2 c'8 }"),
     baca.suite(
         baca.pitch('D3'),
         baca.glissando(
@@ -271,7 +271,7 @@ maker(
     baca.note_head_style_harmonic(
         selector=baca.leaf(5),
         ),
-    baca.rhythm(
+    baca.skeleton(
         '{'
         r" \times 3/5 { c'4 c' c' c' c' }"
         " c'1"
@@ -316,7 +316,7 @@ maker(
         pieces=baca.lparts([1, 2]),
         selector=baca.leaves().rleak(),
         ),
-    baca.rhythm("{ c'2 c'8 }"),
+    baca.skeleton("{ c'2 c'8 }"),
     baca.stem_tremolo(),
     baca.suite(
         baca.pitches(
@@ -345,7 +345,7 @@ maker(
         '> ppppp',
         selector=baca.leaves().rleak(),
         ),
-    baca.rhythm("{ c'2 }"),
+    baca.skeleton("{ c'2 }"),
     baca.text_spanner(
         'spazz. strett. -> larg.',
         abjad.tweak(5.75).bound_details__right__padding,
@@ -399,7 +399,7 @@ maker(
             selector=baca.leaf(-3),
             ),
         ),
-    baca.rhythm(
+    baca.skeleton(
         r"\times 3/4 { c'2. \times 2/3 { c'8 [ c' c' ] } }"
         ),
     baca.text_spanner(
@@ -421,7 +421,7 @@ maker(
         ),
     baca.pitch('A3'),
     baca.suite(
-        baca.rhythm(
+        baca.skeleton(
             r"\times 4/5 { c'4. c'8 [ c' ] }",
             ),
         baca.repeat_tie_to(
