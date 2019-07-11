@@ -287,9 +287,7 @@ maker(
         baca.skeleton(
             r"\times 4/5 { c'4. c'8 [ c' ] }",
             ),
-        baca.repeat_tie_to(
-            selector=baca.leaves()[-2:],
-            ),
+        baca.repeat_tie(baca.leaves()[-2:]),
         ),
     baca.text_spanner(
         r'no scr. -> scr. =|',
@@ -356,7 +354,7 @@ maker(
         baca.skeleton("{ c'4 c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(-1),
             ),
         ),
@@ -384,7 +382,7 @@ maker(
         baca.pitch('D#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.leaf(0)),
             selector=baca.leaves(),
             ),
         ),

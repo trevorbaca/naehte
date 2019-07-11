@@ -441,7 +441,7 @@ G_Cello_Music_Voice = {                                                        %
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -471,7 +471,7 @@ G_Cello_Music_Voice = {                                                        %
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -508,7 +508,7 @@ G_Cello_Music_Voice = {                                                        %
         e,8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -544,7 +544,7 @@ G_Cello_Music_Voice = {                                                        %
         ef,!8
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mf                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(2)
         \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -695,7 +695,7 @@ G_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(2)
 
     }
@@ -710,7 +710,7 @@ G_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
@@ -718,7 +718,7 @@ G_Cello_Music_Voice = {                                                        %
         \startTextSpanOne                                                      %! baca.text_spanner:PiecewiseCommand(1)
 
         ds!4.
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-circle-very-wide-markup         %! baca.text_spanner:PiecewiseCommand(1)

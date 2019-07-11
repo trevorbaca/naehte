@@ -116,7 +116,7 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             baca.repeat_tie_up(),
             selector=baca.leaves()[1:3],
             ),
@@ -172,7 +172,7 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             baca.repeat_tie_up(),
             selector=baca.leaves()[1:3],
             ),
@@ -481,7 +481,7 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             baca.repeat_tie_up(),
             selector=baca.leaves()[1:3],
             ),
@@ -543,7 +543,7 @@ maker(
         baca.skeleton("{ c'1 }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
-        baca.repeat_tie_to(),
+        baca.repeat_tie(baca.pleaf(0)),
         ),
     )
 
@@ -554,7 +554,7 @@ maker(
         baca.skeleton("{ c'1. }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
-        baca.repeat_tie_to(),
+        baca.repeat_tie(baca.pleaf(0)),
         ),
     )
 
@@ -564,7 +564,7 @@ maker(
         baca.skeleton("{ c'4 c' c' c' c' c' }"),
         baca.pitch('Db2'),
         baca.repeat_tie_extra_offset((-1.5, 0)),
-        baca.repeat_tie_to(),
+        baca.repeat_tie(baca.pleaf(0)),
         ),
     )
 

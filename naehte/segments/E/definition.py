@@ -105,7 +105,7 @@ maker(
     baca.suite(
         baca.skeleton(r"{ c'\breve }"),
         baca.pitch('E2'),
-        baca.repeat_tie_to(),
+        baca.repeat_tie(baca.pleaf(0)),
         ),
     )
 
@@ -123,7 +123,7 @@ maker(
             'E2', 'C#3',
             selector=baca.leaves().rleak(),
             ),
-        baca.repeat_tie_to(),
+        baca.repeat_tie(baca.pleaf(0)),
         ),
     )
 
@@ -158,7 +158,7 @@ maker(
         baca.pitch('C#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaves()[1:],
             ),
         ),
@@ -198,7 +198,7 @@ maker(
         baca.pitches('C#3 C#3 E4 D3 E3', allow_repeats=True),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             ),
         baca.new(
             baca.glissando(
@@ -424,9 +424,7 @@ maker(
         baca.skeleton(
             r"\times 4/5 { c'4. c'8 [ c' ] }",
             ),
-        baca.repeat_tie_to(
-            selector=baca.leaves()[-2:],
-            ),
+        baca.repeat_tie(baca.leaves()[-2:]),
         ),
     baca.text_spanner(
         r'no scr. -> scr. =|',

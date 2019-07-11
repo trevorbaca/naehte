@@ -148,9 +148,7 @@ maker(
     baca.pitch('E2'),
     baca.suite(
         baca.skeleton("{ c'4 c'8 }"),
-        baca.repeat_tie_to(
-            selector=baca.leaf(-1),
-            ),
+        baca.repeat_tie(baca.leaf(-1)),
         ),
     baca.trill_spanner(
         'P1',
@@ -171,9 +169,7 @@ maker(
             '<E2 C3> E2',
             allow_repeats=True,
             ),
-        baca.repeat_tie_to(
-            selector=baca.leaf(-1),
-            ),
+        baca.repeat_tie(baca.leaf(-1)),
         ),
     baca.text_spanner(
         'I / II str. =|',
@@ -210,9 +206,7 @@ maker(
             '<E2 C3> E2',
             allow_repeats=True,
             ),
-        baca.repeat_tie_to(
-            selector=baca.leaf(-1),
-            ),
+        baca.repeat_tie(baca.leaf(-1)),
         ),
     baca.text_spanner(
         'I / II str. =|',
@@ -243,7 +237,7 @@ maker(
         baca.skeleton("{ c'2.. c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(-1),
             ),
         baca.pitch('Eb2'),
@@ -333,7 +327,7 @@ maker(
         baca.skeleton("{ c'4 c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(-1),
             ),
         ),
@@ -362,7 +356,7 @@ maker(
         baca.pitch('D#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaves(),
             ),
         ),

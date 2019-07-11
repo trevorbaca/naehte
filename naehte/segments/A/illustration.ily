@@ -255,7 +255,7 @@ A_Cello_Music_Voice = {                                                        %
             ef'!8
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \mf                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-            \repeatTie                                                         %! TieCorrectionCommand
+            \repeatTie                                                         %! baca.repeat_tie:IndicatorCommand
             \stopTextSpanTwo                                                   %! baca.text_spanner:PiecewiseCommand(2)
             \stopTextSpanOne                                                   %! baca.text_spanner:PiecewiseCommand(1)
             \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(1)
@@ -286,7 +286,7 @@ A_Cello_Music_Voice = {                                                        %
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(3)
         \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -295,7 +295,7 @@ A_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         ef'!8
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "spazz. larg."                          %! baca.text_spanner:PiecewiseCommand(1)
@@ -314,7 +314,7 @@ A_Cello_Music_Voice = {                                                        %
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset:OverrideCommand(1)
         \override TupletBracket.staff-padding = #1                             %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
         ef'!4
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
         - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
         - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
@@ -389,7 +389,7 @@ A_Cello_Music_Voice = {                                                        %
             df'!8
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \ff                                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-            \repeatTie                                                         %! TieCorrectionCommand
+            \repeatTie                                                         %! baca.repeat_tie:IndicatorCommand
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -413,7 +413,7 @@ A_Cello_Music_Voice = {                                                        %
             % [A Cello_Music_Voice measure 4]                                  %! _comment_measure_numbers
             \once \override RepeatTie.extra-offset = #'(-1.5 . 0)              %! baca.repeat_tie_extra_offset:OverrideCommand(1)
             df'!8
-            \repeatTie                                                         %! TieCorrectionCommand
+            \repeatTie                                                         %! baca.repeat_tie:IndicatorCommand
             [
             - \abjad-zero-padding-glissando                                    %! baca.glissando
             \glissando                                                         %! baca.glissando
@@ -488,7 +488,7 @@ A_Cello_Music_Voice = {                                                        %
         % [A Cello_Music_Voice measure 5]                                      %! _comment_measure_numbers
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset:OverrideCommand(1)
         df'!4
-        \repeatTie                                                             %! TieCorrectionCommand
+        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
         - \abjad-zero-padding-glissando                                        %! baca.glissando
         \glissando                                                             %! baca.glissando
 
