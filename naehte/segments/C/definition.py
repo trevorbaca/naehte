@@ -148,12 +148,12 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(0),
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(2),
             ),
         ),
@@ -196,7 +196,7 @@ maker(
         baca.pitch('F#3'),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaves()[:2],
             ),
         ),
@@ -295,9 +295,7 @@ maker(
     baca.pitch('A2'),
     baca.suite(
         baca.skeleton(r"{ c'1.. c'4 }"),
-        baca.repeat_tie_to(
-            selector=baca.leaf(-1),
-            ),
+        baca.repeat_tie(baca.leaf(-1)),
         ),
     baca.text_spanner(
         'vib. mod. -> NV',
@@ -527,12 +525,12 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(0),
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(2),
             ),
         ),

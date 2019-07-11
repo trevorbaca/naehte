@@ -89,7 +89,7 @@ maker(
         baca.skeleton(r"{ c'8 c'4. c'8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaves()[1:],
             ),
         ),
@@ -130,7 +130,7 @@ maker(
             ),
         baca.pitch('Eb4'),
         baca.new(
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(-1),
             ),
@@ -166,12 +166,12 @@ maker(
             ),
         baca.pitches('Eb4 G4 A3 G4 F4 G4 A3 G4 D4 D4'),
         baca.new(
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(0),
             ),
         baca.new(
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(-1),
             ),
         baca.glissando(
@@ -219,7 +219,7 @@ maker(
             allow_repeats=True,
             ),
         baca.new(
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             ),
         baca.glissando(
             selector=baca.leaves()[:5],
@@ -530,12 +530,12 @@ maker(
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(0),
             ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie_to(),
+            baca.repeat_tie(baca.pleaf(0)),
             selector=baca.leaf(2),
             ),
         ),
