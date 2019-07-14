@@ -421,9 +421,7 @@ maker(
 maker(
     ('vc', (12, 13)),
     baca.accent(
-        selector=baca.leaves()[
-            abjad.index([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
-            ],
+        selector=baca.leaves().get([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17]),
         ),
     baca.hairpin(
         'pppp -- pppp >o niente',
