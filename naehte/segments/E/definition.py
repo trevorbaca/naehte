@@ -49,6 +49,7 @@ maker(
     baca.only_segment(
         baca.rehearsal_mark(
             'E',
+            baca.skip(1 - 1),
             abjad.tweak((0, 12)).extra_offset,
             ),
         ),
