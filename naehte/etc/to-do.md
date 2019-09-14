@@ -55,7 +55,6 @@ TO-DO
     Analogous to abjad-dashed-line-with-hook, abjad-solid-line-with-hook.
 
 5.  Integrate empty fermata measures.
-    Make fermata_measure_staff_line_count=0 work.
 
 6.  Add functions for glissandi without note-heads.
 
