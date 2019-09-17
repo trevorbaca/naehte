@@ -318,7 +318,7 @@ H_Cello_Music_Voice = {                                                        %
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic_black:OverrideCommand(2)
 
     }                                                                          %! baca.skeleton
@@ -351,7 +351,7 @@ H_Cello_Music_Voice = {                                                        %
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic_black:OverrideCommand(2)
 
     }                                                                          %! baca.skeleton
@@ -387,7 +387,7 @@ H_Cello_Music_Voice = {                                                        %
             % [H Cello_Music_Voice measure 106 / measure 4]                    %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c'1 * 1/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding:OverrideCommand(2)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -494,8 +494,8 @@ H_Cello_Music_Voice = {                                                        %
         e,4                                                                    %! baca.skeleton
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(2)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr. poss."                            %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.left.padding #-3.25                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -516,7 +516,7 @@ H_Cello_Music_Voice = {                                                        %
         <f c'>2.
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-pppp-sempre                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "II / III mod."                         %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #12.5                                           %! baca.text_spanner:PiecewiseCommand(1)
@@ -534,9 +534,9 @@ H_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         <f c'>8
-        \stopTextSpanTwo                                                       %! baca.text_spanner:PiecewiseCommand(3)
-        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpanTwo                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpanOne                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #9                                              %! baca.text_spanner:PiecewiseCommand(1)
@@ -554,8 +554,8 @@ H_Cello_Music_Voice = {                                                        %
 
         % [H Cello_Music_Voice measure 110 / measure 8]                        %! baca.SegmentMaker._comment_measure_numbers()
         <f c'>2.
-        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpanOne                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "II / III mod."                         %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #12.5                                           %! baca.text_spanner:PiecewiseCommand(1)
@@ -573,9 +573,9 @@ H_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
         <f c'>8
-        \stopTextSpanTwo                                                       %! baca.text_spanner:PiecewiseCommand(3)
-        \stopTextSpanOne                                                       %! baca.text_spanner:PiecewiseCommand(1)
-        \stopTextSpan                                                          %! baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpanTwo                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+        \stopTextSpanOne                                                       %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
+        \stopTextSpan                                                          %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #3.25                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -598,8 +598,8 @@ H_Cello_Music_Voice = {                                                        %
             % [H Cello_Music_Voice measure 111 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c'1 * 1/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \stopTextSpanOne                                                   %! baca.text_spanner:PiecewiseCommand(3)
-            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpanOne                                                   %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -671,7 +671,7 @@ H_Cello_Music_Voice = {                                                        %
             \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
             - \tweak extra-offset #'(-20 . -17.5)                              %! baca.markup:IndicatorCommand
             ^ \naehte-colophon-markup                                          %! baca.markup:IndicatorCommand
-            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
             \revert Dots.extra-offset                                          %! baca.dots_extra_offset:OverrideCommand(2)
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding:OverrideCommand(2)
 
