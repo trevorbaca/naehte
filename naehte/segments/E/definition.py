@@ -42,10 +42,8 @@ maker(
         '52',
         selector=baca.leaf(10 - 1),
         ),
-    baca.new(
-        baca.volta(),
-        measures=(7, 9),
-        ),
+    baca.bar_line(".|:", baca.skip(6 - 1)),
+    baca.bar_line(":|.", baca.skip(9 - 1)),
     baca.only_segment(
         baca.rehearsal_mark(
             'E',
