@@ -62,9 +62,10 @@ maker(
             after=True,
             selector=baca.skip(-1),
             ),
-        baca.volta(),
         measures=(1, 2),
         ),
+    baca.bar_line(".|:", baca.skip(1 - 1), format_slot="before"),
+    baca.bar_line(":|.", baca.skip(2 - 1)),
     baca.only_segment(
         baca.rehearsal_mark(
             'C',
