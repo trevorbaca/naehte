@@ -56,16 +56,8 @@ maker(
         '52',
         selector=baca.leaf(15 - 1),
         ),
-    baca.new(
-        baca.new(
-            baca.bar_line_x_extent((0, 2)),
-            after=True,
-            selector=baca.skip(-1),
-            ),
-        measures=(1, 2),
-        ),
-    baca.bar_line(".|:", baca.skip(1 - 1), format_slot="before"),
-    baca.bar_line(":|.", baca.skip(2 - 1)),
+    baca.open_volta(baca.skip(1 - 1)),
+    baca.close_volta(baca.skip(3 - 1)),
     baca.only_segment(
         baca.rehearsal_mark(
             'C',
