@@ -28,14 +28,6 @@ maker = baca.SegmentMaker(
 
 maker(
     'Global_Skips',
-    baca.bar_line_x_extent(
-        (0, 2.75),
-        selector=baca.skip(1),
-        ),
-    baca.bar_line_x_extent(
-        (0, 2),
-        selector=baca.skip(5),
-        ),
     baca.metronome_mark(
         '52',
         selector=baca.leaf(1 - 1),
@@ -71,8 +63,8 @@ maker(
             abjad.tweak((0, 12)).extra_offset,
             ),
         ),
-    baca.bar_line(".|:", baca.skip(1 - 1)),
-    baca.bar_line(":|.", baca.skip(5 - 1)),
+    baca.open_volta(baca.skip(2 - 1)),
+    baca.close_volta(baca.skip(6 - 1)),
     )
 
 maker(
