@@ -119,7 +119,7 @@ maker(
             selector=baca.leaves().rleak(),
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions(
+        baca.interpolate_pitches(
             "E2", "C#3",
             selector=baca.leaves().rleak(),
         ),

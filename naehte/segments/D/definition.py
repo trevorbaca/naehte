@@ -576,7 +576,7 @@ maker(
             hide_middle_note_heads=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("D3", "C#3"),
+        baca.interpolate_pitches("D3", "C#3"),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
