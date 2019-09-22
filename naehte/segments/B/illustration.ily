@@ -5,8 +5,8 @@ B_Global_Skips = {                                                             %
     \bar ""                                                                    %! baca.SegmentMaker._make_global_skips(4):+SEGMENT:EMPTY_START_BAR
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
     s1 * 5/8                                                                   %! baca.SegmentMaker._make_global_skips(1)
-    - \tweak extra-offset #'(0 . 14)                                           %! baca.rehearsal_mark:+SEGMENT:IndicatorCommand
-    - \baca-rehearsal-mark-markup "B"                                          %! baca.rehearsal_mark:+SEGMENT:IndicatorCommand
+    - \tweak extra-offset #'(0 . 14)                                           %! baca.rehearsal_mark():+SEGMENT:IndicatorCommand
+    - \baca-rehearsal-mark-markup "B"                                          %! baca.rehearsal_mark():+SEGMENT:IndicatorCommand
     - \baca-start-lmn-left-only "1"                                            %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "9"                                             %! MEASURE_NUMBER
@@ -347,25 +347,25 @@ B_Global_Rests = {                                                             %
     R1 * 1/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
 
     % [B Global_Rests measure 14 / measure 6]                                  %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-fermata-measure                                                      %! baca.global_fermata:GlobalFermataCommand(2)
+    \baca-fermata-measure                                                      %! baca.global_fermata():GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata:GlobalFermataCommand(1)
+    ^ \baca-fermata-markup                                                     %! baca.global_fermata():GlobalFermataCommand(1)
 
     % [B Global_Rests measure 15 / measure 7]                                  %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 5/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
 
     % [B Global_Rests measure 16 / measure 8]                                  %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-fermata-measure                                                      %! baca.global_fermata:GlobalFermataCommand(2)
+    \baca-fermata-measure                                                      %! baca.global_fermata():GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata:GlobalFermataCommand(1)
+    ^ \baca-fermata-markup                                                     %! baca.global_fermata():GlobalFermataCommand(1)
 
     % [B Global_Rests measure 17 / measure 9]                                  %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 5/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
 
     % [B Global_Rests measure 18 / measure 10]                                 %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-fermata-measure                                                      %! baca.global_fermata:GlobalFermataCommand(2)
+    \baca-fermata-measure                                                      %! baca.global_fermata():GlobalFermataCommand(2)
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata:GlobalFermataCommand(1)
+    ^ \baca-fermata-markup                                                     %! baca.global_fermata():GlobalFermataCommand(1)
 
     % [B Global_Rests measure 19 / measure 11]                                 %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 1                                                                     %! baca.SegmentMaker._make_global_rests(1)
@@ -402,7 +402,7 @@ B_Global_Rests = {                                                             %
 
 B_Cello_Music_Voice = {                                                        %! abjad.Path.extern
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 9 / measure 1]                          %! baca.SegmentMaker._comment_measure_numbers()
         \override DynamicLineSpanner.staff-padding = #7                        %! baca.dls_staff_padding():OverrideCommand(1)
@@ -411,7 +411,7 @@ B_Cello_Music_Voice = {                                                        %
         \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
         \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
-        fs!4.                                                                  %! baca.skeleton
+        fs!4.                                                                  %! baca.skeleton()
         ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -424,24 +424,24 @@ B_Cello_Music_Voice = {                                                        %
 
         \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca.repeat_tie_extra_offset():OverrideCommand(1)
         \override RepeatTie.direction = #up                                    %! baca.repeat_tie_up():OverrideCommand(1)
-        fs!8                                                                   %! baca.skeleton
+        fs!8                                                                   %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        fs!32                                                                  %! baca.skeleton
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        fs!32                                                                  %! baca.skeleton()
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         [
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "RH vib."                               %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #-2                               %! baca.text_spanner:PiecewiseCommand(1)
@@ -456,30 +456,30 @@ B_Cello_Music_Voice = {                                                        %
 
         \override NoteHead.transparent = ##t                                   %! baca.note_head_transparent():OverrideCommand(1)
         \override NoteHead.X-extent = #'(0 . 0)                                %! baca.note_head_x_extent_zero():OverrideCommand(1)
-        b,32                                                                   %! baca.skeleton
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        b,32                                                                   %! baca.skeleton()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
 
-        g32                                                                    %! baca.skeleton
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        g32                                                                    %! baca.skeleton()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
 
-        \once \override Glissando.bound-details.right.end-on-accidental = ##f  %! baca.literal:IndicatorCommand
-        a,32                                                                   %! baca.skeleton
+        \once \override Glissando.bound-details.right.end-on-accidental = ##f  %! baca.literal():IndicatorCommand
+        a,32                                                                   %! baca.skeleton()
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         ]
-        - \tweak bound-details.left.padding #0                                 %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \tweak bound-details.left.padding #0                                 %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         \revert NoteHead.transparent                                           %! baca.note_head_transparent():OverrideCommand(2)
         \revert NoteHead.X-extent                                              %! baca.note_head_x_extent_zero():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 10 / measure 2]                         %! baca.SegmentMaker._comment_measure_numbers()
         \once \override Accidental.extra-offset = #'(-1 . 0)                   %! baca.accidental_extra_offset():OverrideCommand(1)
-        gs!4.                                                                  %! baca.skeleton
+        gs!4.                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -487,14 +487,14 @@ B_Cello_Music_Voice = {                                                        %
 
         \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca.repeat_tie_extra_offset():OverrideCommand(1)
         \override RepeatTie.direction = #up                                    %! baca.repeat_tie_up():OverrideCommand(1)
-        gs!8                                                                   %! baca.skeleton
+        gs!8                                                                   %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
@@ -504,12 +504,12 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        gs!32                                                                  %! baca.skeleton
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        gs!32                                                                  %! baca.skeleton()
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(2)
         [
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "RH vib."                               %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #-2                               %! baca.text_spanner:PiecewiseCommand(1)
@@ -520,30 +520,30 @@ B_Cello_Music_Voice = {                                                        %
 
         \override NoteHead.transparent = ##t                                   %! baca.note_head_transparent():OverrideCommand(1)
         \override NoteHead.X-extent = #'(0 . 0)                                %! baca.note_head_x_extent_zero():OverrideCommand(1)
-        b32                                                                    %! baca.skeleton
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        b32                                                                    %! baca.skeleton()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
 
-        g,32                                                                   %! baca.skeleton
-        - \tweak bound-details.left.padding #0                                 %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        g,32                                                                   %! baca.skeleton()
+        - \tweak bound-details.left.padding #0                                 %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         \revert NoteHead.transparent                                           %! baca.note_head_transparent():OverrideCommand(2)
         \revert NoteHead.X-extent                                              %! baca.note_head_x_extent_zero():OverrideCommand(2)
 
-        a32                                                                    %! baca.skeleton
+        a32                                                                    %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         ]
-        \breathe                                                               %! baca.breathe:IndicatorCommand
+        \breathe                                                               %! baca.breathe():IndicatorCommand
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
-        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton
-        \times 6/7 {                                                           %! baca.skeleton
+        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        \times 6/7 {                                                           %! baca.skeleton()
 
             % [B Cello_Music_Voice measure 11 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
             \once \override NoteHead.style = #'harmonic                        %! baca.note_head_style_harmonic():OverrideCommand(1)
@@ -552,11 +552,11 @@ B_Cello_Music_Voice = {                                                        %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             - \tweak circled-tip ##t                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-            - \tweak arrow-length #2                                           %! baca.finger_pressure_transition
-            - \tweak arrow-width #0.5                                          %! baca.finger_pressure_transition
-            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition
-            - \tweak thickness #3                                              %! baca.finger_pressure_transition
-            \glissando                                                         %! baca.finger_pressure_transition
+            - \tweak arrow-length #2                                           %! baca.finger_pressure_transition()
+            - \tweak arrow-width #0.5                                          %! baca.finger_pressure_transition()
+            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition()
+            - \tweak thickness #3                                              %! baca.finger_pressure_transition()
+            \glissando                                                         %! baca.finger_pressure_transition()
             - \abjad-solid-line-with-arrow                                     %! baca.text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "II / III strett."                  %! baca.text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca.text_spanner:PiecewiseCommand(1)
@@ -566,13 +566,13 @@ B_Cello_Music_Voice = {                                                        %
             - \tweak staff-padding #8                                          %! baca.text_spanner:PiecewiseCommand(1)
             \startTextSpanOne                                                  %! baca.text_spanner:PiecewiseCommand(1)
 
-            \times 2/3 {                                                       %! baca.skeleton
+            \times 2/3 {                                                       %! baca.skeleton()
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca.note_head_style_harmonic_black():OverrideCommand(1)
                 \override Beam.positions = #'(-5.5 . -5.5)                     %! baca.beam_positions():OverrideCommand(1)
                 \once \override TupletBracket.padding = #1.75                  %! baca.tuplet_bracket_padding():OverrideCommand(1)
                 <f a>16
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 \f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -581,7 +581,7 @@ B_Cello_Music_Voice = {                                                        %
                 \stopTextSpanTwo                                               %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
                 \stopTextSpanOne                                               %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
                 [
-                \glissando                                                     %! baca.glissando
+                \glissando                                                     %! baca.glissando()
                 - \abjad-dashed-line-with-hook                                 %! baca.text_spanner:PiecewiseCommand(1)
                 - \baca-text-spanner-left-text "larg."                         %! baca.text_spanner:PiecewiseCommand(1)
                 - \tweak staff-padding #10.5                                   %! baca.text_spanner:PiecewiseCommand(1)
@@ -600,36 +600,36 @@ B_Cello_Music_Voice = {                                                        %
 
                 \override NoteHead.style = #'harmonic                          %! baca.note_head_style_harmonic():OverrideCommand(1)
                 <d f>16
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
-                \glissando                                                     %! baca.glissando
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
+                \glissando                                                     %! baca.glissando()
 
                 <f a>16
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
-                \glissando                                                     %! baca.glissando
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
+                \glissando                                                     %! baca.glissando()
 
                 <d f>16
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
-                \glissando                                                     %! baca.glissando
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
+                \glissando                                                     %! baca.glissando()
 
                 <f a>16
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
-                \glissando                                                     %! baca.glissando
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
+                \glissando                                                     %! baca.glissando()
 
-                a,16                                                           %! baca.skeleton
-                :64                                                            %! baca.stem_tremolo:IndicatorCommand
+                a,16                                                           %! baca.skeleton()
+                :64                                                            %! baca.stem_tremolo():IndicatorCommand
                 - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 \ppp                                                           %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
                 \stopTextSpan                                                  %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(2)
                 ]
-                \glissando                                                     %! baca.glissando
+                \glissando                                                     %! baca.glissando()
                 \revert Beam.positions                                         %! baca.beam_positions():OverrideCommand(2)
 
-            }                                                                  %! baca.skeleton
+            }                                                                  %! baca.skeleton()
 
-            e1                                                                 %! baca.skeleton
+            e1                                                                 %! baca.skeleton()
             \stopTextSpanTwo                                                   %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
             \stopTextSpanOne                                                   %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-            \glissando                                                         %! baca.glissando
+            \glissando                                                         %! baca.glissando()
             - \abjad-dashed-line-with-hook                                     %! baca.text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "XFB"                               %! baca.text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca.text_spanner:PiecewiseCommand(1)
@@ -641,11 +641,11 @@ B_Cello_Music_Voice = {                                                        %
             \revert NoteHead.style                                             %! baca.note_head_style_harmonic():OverrideCommand(2)
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding():OverrideCommand(2)
 
-        }                                                                      %! baca.skeleton
+        }                                                                      %! baca.skeleton()
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 13 / measure 5]                         %! baca.SegmentMaker._comment_measure_numbers()
         \once \override NoteHead.style = #'harmonic                            %! baca.note_head_style_harmonic():OverrideCommand(1)
@@ -657,11 +657,11 @@ B_Cello_Music_Voice = {                                                        %
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \stopTextSpanTwo                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
-        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
-        \glissando                                                             %! baca.finger_pressure_transition
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition()
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition()
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition()
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition()
+        \glissando                                                             %! baca.finger_pressure_transition()
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "II / III strett."                      %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-right-text "larg."                                %! baca.text_spanner:PiecewiseCommand(1)
@@ -685,7 +685,7 @@ B_Cello_Music_Voice = {                                                        %
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -709,23 +709,23 @@ B_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
-        \times 4/5 {                                                           %! baca.skeleton
+        \times 4/5 {                                                           %! baca.skeleton()
 
             % [B Cello_Music_Voice measure 15 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
             \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():OverrideCommand(1)
             \override Beam.positions = #'(-5.5 . -5.5)                         %! baca.beam_positions():OverrideCommand(1)
             \once \override TupletBracket.padding = #1.75                      %! baca.tuplet_bracket_padding():OverrideCommand(1)
             <ds! fs!>16
-            :64                                                                %! baca.stem_tremolo:IndicatorCommand
+            :64                                                                %! baca.stem_tremolo():IndicatorCommand
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \f                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             [
-            \glissando                                                         %! baca.glissando
+            \glissando                                                         %! baca.glissando()
             - \abjad-dashed-line-with-hook                                     %! baca.text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "II / III larg."                    %! baca.text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #10.5                                       %! baca.text_spanner:PiecewiseCommand(1)
@@ -743,27 +743,27 @@ B_Cello_Music_Voice = {                                                        %
             \startTextSpan                                                     %! baca.text_spanner:PiecewiseCommand(1)
 
             <b, d>16
-            :64                                                                %! baca.stem_tremolo:IndicatorCommand
-            \glissando                                                         %! baca.glissando
+            :64                                                                %! baca.stem_tremolo():IndicatorCommand
+            \glissando                                                         %! baca.glissando()
 
             <d f>16
-            :64                                                                %! baca.stem_tremolo:IndicatorCommand
-            \glissando                                                         %! baca.glissando
+            :64                                                                %! baca.stem_tremolo():IndicatorCommand
+            \glissando                                                         %! baca.glissando()
 
             <b, d>16
-            :64                                                                %! baca.stem_tremolo:IndicatorCommand
-            \glissando                                                         %! baca.glissando
+            :64                                                                %! baca.stem_tremolo():IndicatorCommand
+            \glissando                                                         %! baca.glissando()
 
-            e'16                                                               %! baca.skeleton
-            :64                                                                %! baca.stem_tremolo:IndicatorCommand
+            e'16                                                               %! baca.skeleton()
+            :64                                                                %! baca.stem_tremolo():IndicatorCommand
             \stopTextSpan                                                      %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(2)
             ]
-            \glissando                                                         %! baca.glissando
+            \glissando                                                         %! baca.glissando()
             \revert Beam.positions                                             %! baca.beam_positions():OverrideCommand(2)
 
-        }                                                                      %! baca.skeleton
+        }                                                                      %! baca.skeleton()
 
-        c2...                                                                  %! baca.skeleton
+        c2...                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -772,11 +772,11 @@ B_Cello_Music_Voice = {                                                        %
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \stopTextSpanTwo                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition
-        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition
-        - \tweak thickness #3                                                  %! baca.finger_pressure_transition
-        \glissando                                                             %! baca.finger_pressure_transition
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition()
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition()
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition()
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition()
+        \glissando                                                             %! baca.finger_pressure_transition()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "XFB"                                   %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #2.75                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -790,12 +790,12 @@ B_Cello_Music_Voice = {                                                        %
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():OverrideCommand(2)
 
         \once \override NoteHead.style = #'harmonic-black                      %! baca.note_head_style_harmonic_black():OverrideCommand(1)
-        d''16                                                                  %! baca.skeleton
+        d''16                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -820,17 +820,17 @@ B_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 17 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
         \override DynamicLineSpanner.staff-padding = #6                        %! baca.dls_staff_padding():OverrideCommand(1)
     %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_17:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_17:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "treble"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "treble"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
-        ds''!4                                                                 %! baca.skeleton
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
+        ds''!4                                                                 %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -838,8 +838,8 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak stencil #constante-hairpin                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "XFB"                                   %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #3.25                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -847,33 +847,33 @@ B_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-        \hide NoteHead                                                         %! baca.glissando
-        \override Accidental.stencil = ##f                                     %! baca.glissando
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando
-        d''4                                                                   %! baca.skeleton
+        \hide NoteHead                                                         %! baca.glissando()
+        \override Accidental.stencil = ##f                                     %! baca.glissando()
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
+        d''4                                                                   %! baca.skeleton()
 
-        d''4                                                                   %! baca.skeleton
+        d''4                                                                   %! baca.skeleton()
 
-        e''4                                                                   %! baca.skeleton
+        e''4                                                                   %! baca.skeleton()
 
-        e''4                                                                   %! baca.skeleton
+        e''4                                                                   %! baca.skeleton()
 
-        e''4                                                                   %! baca.skeleton
+        e''4                                                                   %! baca.skeleton()
 
-        e''4                                                                   %! baca.skeleton
+        e''4                                                                   %! baca.skeleton()
 
-        f''4                                                                   %! baca.skeleton
+        f''4                                                                   %! baca.skeleton()
 
-        f''4                                                                   %! baca.skeleton
+        f''4                                                                   %! baca.skeleton()
 
-        \revert Accidental.stencil                                             %! baca.glissando
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando
-        \revert NoteHead.no-ledgers                                            %! baca.glissando
-        \undo \hide NoteHead                                                   %! baca.glissando
-        f''4                                                                   %! baca.skeleton
+        \revert Accidental.stencil                                             %! baca.glissando()
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
+        \revert NoteHead.no-ledgers                                            %! baca.glissando()
+        \undo \hide NoteHead                                                   %! baca.glissando()
+        f''4                                                                   %! baca.skeleton()
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -900,23 +900,23 @@ B_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 19 / measure 11]                        %! baca.SegmentMaker._comment_measure_numbers()
         \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_19:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
         \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                %! MEASURE_19:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "bass"                                                           %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
         <b fs'!>1
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #10.5                                           %! baca.text_spanner:PiecewiseCommand(1)
@@ -927,7 +927,7 @@ B_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-        \times 4/5 {                                                           %! baca.skeleton
+        \times 4/5 {                                                           %! baca.skeleton()
 
             % [B Cello_Music_Voice measure 20 / measure 12]                    %! baca.SegmentMaker._comment_measure_numbers()
             <c' g'>4
@@ -936,8 +936,8 @@ B_Cello_Music_Voice = {                                                        %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \>                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \stopTextSpan                                                      %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-            - \abjad-zero-padding-glissando                                    %! baca.glissando
-            \glissando                                                         %! baca.glissando
+            - \abjad-zero-padding-glissando                                    %! baca.glissando()
+            \glissando                                                         %! baca.glissando()
             - \abjad-dashed-line-with-hook                                     %! baca.text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "strett."                           %! baca.text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #8                                          %! baca.text_spanner:PiecewiseCommand(1)
@@ -950,14 +950,14 @@ B_Cello_Music_Voice = {                                                        %
             - \tweak stencil #abjad-flared-hairpin                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \<                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
             \stopTextSpan                                                      %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-            - \abjad-zero-padding-glissando                                    %! baca.glissando
-            \glissando                                                         %! baca.glissando
+            - \abjad-zero-padding-glissando                                    %! baca.glissando()
+            \glissando                                                         %! baca.glissando()
             - \abjad-solid-line-with-arrow                                     %! baca.text_spanner:PiecewiseCommand(1)
             - \baca-text-spanner-left-text "largo"                             %! baca.text_spanner:PiecewiseCommand(1)
             - \tweak staff-padding #8                                          %! baca.text_spanner:PiecewiseCommand(1)
             \startTextSpan                                                     %! baca.text_spanner:PiecewiseCommand(1)
 
-        }                                                                      %! baca.skeleton
+        }                                                                      %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 21 / measure 13]                        %! baca.SegmentMaker._comment_measure_numbers()
         <bf! f'>2
@@ -966,21 +966,21 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 22 / measure 14]                        %! baca.SegmentMaker._comment_measure_numbers()
         \once \override Accidental.extra-offset = #'(-1 . 0)                   %! baca.accidental_extra_offset():OverrideCommand(1)
-        gs!4.                                                                  %! baca.skeleton
+        gs!4.                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -994,14 +994,14 @@ B_Cello_Music_Voice = {                                                        %
 
         \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca.repeat_tie_extra_offset():OverrideCommand(1)
         \override RepeatTie.direction = #up                                    %! baca.repeat_tie_up():OverrideCommand(1)
-        gs!8                                                                   %! baca.skeleton
+        gs!8                                                                   %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner:PiecewiseCommand(1)
@@ -1011,12 +1011,12 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        gs!32                                                                  %! baca.skeleton
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        gs!32                                                                  %! baca.skeleton()
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(2)
         [
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "RH vib."                               %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak bound-details.right.padding #-2                               %! baca.text_spanner:PiecewiseCommand(1)
@@ -1027,37 +1027,37 @@ B_Cello_Music_Voice = {                                                        %
 
         \override NoteHead.transparent = ##t                                   %! baca.note_head_transparent():OverrideCommand(1)
         \override NoteHead.X-extent = #'(0 . 0)                                %! baca.note_head_x_extent_zero():OverrideCommand(1)
-        b32                                                                    %! baca.skeleton
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        b32                                                                    %! baca.skeleton()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
 
-        g,32                                                                   %! baca.skeleton
-        - \tweak bound-details.left.padding #0                                 %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        g,32                                                                   %! baca.skeleton()
+        - \tweak bound-details.left.padding #0                                 %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         \revert NoteHead.transparent                                           %! baca.note_head_transparent():OverrideCommand(2)
         \revert NoteHead.X-extent                                              %! baca.note_head_x_extent_zero():OverrideCommand(2)
 
-        a32                                                                    %! baca.skeleton
+        a32                                                                    %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \!                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         ]
-        \breathe                                                               %! baca.breathe:IndicatorCommand
+        \breathe                                                               %! baca.breathe():IndicatorCommand
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 23 / measure 15]                        %! baca.SegmentMaker._comment_measure_numbers()
         \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down():OverrideCommand(1)
         \override TupletBracket.staff-padding = #2.5                           %! baca.tuplet_bracket_staff_padding():OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #6                        %! baca.dls_staff_padding():OverrideCommand(1)
-        c''2.                                                                  %! baca.skeleton
+        c''2.                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         - \tweak stencil #abjad-flared-hairpin                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-        \glissando                                                             %! baca.glissando
+        \glissando                                                             %! baca.glissando()
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #10.5                                           %! baca.text_spanner:PiecewiseCommand(1)
@@ -1068,7 +1068,7 @@ B_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
         \revert Stem.direction                                                 %! baca.stem_down():OverrideCommand(2)
 
-        df,!8                                                                  %! baca.skeleton
+        df,!8                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
         \stopTextSpanOne                                                       %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
@@ -1081,72 +1081,72 @@ B_Cello_Music_Voice = {                                                        %
         \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding():OverrideCommand(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 24 / measure 16]                        %! baca.SegmentMaker._comment_measure_numbers()
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():OverrideCommand(1)
         \override DynamicLineSpanner.staff-padding = #6                        %! baca.dls_staff_padding():OverrideCommand(1)
-        df,!1                                                                  %! baca.skeleton
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        df,!1                                                                  %! baca.skeleton()
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 25 / measure 17]                        %! baca.SegmentMaker._comment_measure_numbers()
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():OverrideCommand(1)
-        df,!1.                                                                 %! baca.skeleton
+        df,!1.                                                                 %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-effort-fff                                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "1-2 clicks / sec."                     %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 26 / measure 18]                        %! baca.SegmentMaker._comment_measure_numbers()
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():OverrideCommand(1)
-        df,!4                                                                  %! baca.skeleton
+        df,!4                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
-        \repeatTie                                                             %! baca.repeat_tie:IndicatorCommand
+        \repeatTie                                                             %! baca.repeat_tie():IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando
-        \glissando                                                             %! baca.glissando
+        - \abjad-zero-padding-glissando                                        %! baca.glissando()
+        \glissando                                                             %! baca.glissando()
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "scr. poss."                            %! baca.text_spanner:PiecewiseCommand(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        \hide NoteHead                                                         %! baca.glissando
-        \override Accidental.stencil = ##f                                     %! baca.glissando
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando
-        df,!4                                                                  %! baca.skeleton
+        \hide NoteHead                                                         %! baca.glissando()
+        \override Accidental.stencil = ##f                                     %! baca.glissando()
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
+        df,!4                                                                  %! baca.skeleton()
 
-        d,4                                                                    %! baca.skeleton
+        d,4                                                                    %! baca.skeleton()
 
-        d,4                                                                    %! baca.skeleton
+        d,4                                                                    %! baca.skeleton()
 
-        d,4                                                                    %! baca.skeleton
+        d,4                                                                    %! baca.skeleton()
 
-        e,4                                                                    %! baca.skeleton
+        e,4                                                                    %! baca.skeleton()
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
-    {                                                                          %! baca.skeleton
+    {                                                                          %! baca.skeleton()
 
         % [B Cello_Music_Voice measure 27 / measure 19]                        %! baca.SegmentMaker._comment_measure_numbers()
-        e,4                                                                    %! baca.skeleton
+        e,4                                                                    %! baca.skeleton()
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner:PiecewiseCommand(1)
         - \baca-text-spanner-left-text "XFB"                                   %! baca.text_spanner:PiecewiseCommand(1)
@@ -1154,21 +1154,21 @@ B_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #8                                              %! baca.text_spanner:PiecewiseCommand(1)
         \startTextSpan                                                         %! baca.text_spanner:PiecewiseCommand(1)
 
-        e,4                                                                    %! baca.skeleton
+        e,4                                                                    %! baca.skeleton()
 
-        e,4                                                                    %! baca.skeleton
+        e,4                                                                    %! baca.skeleton()
 
-        \revert Accidental.stencil                                             %! baca.glissando
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando
-        \revert NoteHead.no-ledgers                                            %! baca.glissando
-        \undo \hide NoteHead                                                   %! baca.glissando
-        ef,!4                                                                  %! baca.skeleton
+        \revert Accidental.stencil                                             %! baca.glissando()
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
+        \revert NoteHead.no-ledgers                                            %! baca.glissando()
+        \undo \hide NoteHead                                                   %! baca.glissando()
+        ef,!4                                                                  %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pppp                                                                  %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
         \stopTextSpan                                                          %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
-    }                                                                          %! baca.skeleton
+    }                                                                          %! baca.skeleton()
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
