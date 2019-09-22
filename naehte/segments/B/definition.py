@@ -405,7 +405,7 @@ maker(
             hide_middle_note_heads=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("D#5", "F5"),
+        baca.interpolate_pitches("D#5", "F5"),
     ),
     baca.text_spanner(
         r"XFB =|",
@@ -586,7 +586,7 @@ maker(
             hide_middle_note_heads=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("Db2", "Eb2"),
+        baca.interpolate_pitches("Db2", "Eb2"),
     ),
 )
 

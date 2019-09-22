@@ -276,7 +276,7 @@ maker(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("Eb3", "Eb3"),
+        baca.interpolate_pitches("Eb3", "Eb3"),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(

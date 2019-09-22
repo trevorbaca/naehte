@@ -420,7 +420,7 @@ maker(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("E3", "E3"),
+        baca.interpolate_pitches("E3", "E3"),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(

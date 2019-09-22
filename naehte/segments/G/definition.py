@@ -438,7 +438,7 @@ maker(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_staff_positions("D2", "D2"),
+        baca.interpolate_pitches("D2", "D2"),
         selector=baca.leaves().rleak(),
     ),
     baca.stem_tremolo(
