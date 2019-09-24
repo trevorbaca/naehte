@@ -22,23 +22,23 @@ class ScoreTemplate(baca.ScoreTemplate):
         >>> abjad.f(lilypond_file[abjad.Score], strict=79)
         \context Score = "Score"                                                       %! naehte.ScoreTemplate.__call__
         <<                                                                             %! naehte.ScoreTemplate.__call__
-            \context GlobalContext = "Global_Context"                                  %! abjad.ScoreTemplate._make_global_context
-            <<                                                                         %! abjad.ScoreTemplate._make_global_context
-                \context GlobalRests = "Global_Rests"                                  %! abjad.ScoreTemplate._make_global_context
-                {                                                                      %! abjad.ScoreTemplate._make_global_context
-                }                                                                      %! abjad.ScoreTemplate._make_global_context
-                \context GlobalSkips = "Global_Skips"                                  %! abjad.ScoreTemplate._make_global_context
-                {                                                                      %! abjad.ScoreTemplate._make_global_context
-                }                                                                      %! abjad.ScoreTemplate._make_global_context
-            >>                                                                         %! abjad.ScoreTemplate._make_global_context
+            \context GlobalContext = "Global_Context"                                  %! abjad.ScoreTemplate._make_global_context()
+            <<                                                                         %! abjad.ScoreTemplate._make_global_context()
+                \context GlobalRests = "Global_Rests"                                  %! abjad.ScoreTemplate._make_global_context()
+                {                                                                      %! abjad.ScoreTemplate._make_global_context()
+                }                                                                      %! abjad.ScoreTemplate._make_global_context()
+                \context GlobalSkips = "Global_Skips"                                  %! abjad.ScoreTemplate._make_global_context()
+                {                                                                      %! abjad.ScoreTemplate._make_global_context()
+                }                                                                      %! abjad.ScoreTemplate._make_global_context()
+            >>                                                                         %! abjad.ScoreTemplate._make_global_context()
             \context MusicContext = "Music_Context"                                    %! naehte.ScoreTemplate.__call__
             {                                                                          %! naehte.ScoreTemplate.__call__
                 \context Staff = "Cello_Music_Staff"                                   %! naehte.ScoreTemplate.__call__
                 {                                                                      %! naehte.ScoreTemplate.__call__
                     \context Voice = "Cello_Music_Voice"                               %! naehte.ScoreTemplate.__call__
                     {                                                                  %! naehte.ScoreTemplate.__call__
-                        \clef "bass"                                                   %! abjad.ScoreTemplate.attach_defaults
-                        s1                                                             %! abjad.ScoreTemplate.__illustrate__
+                        \clef "bass"                                                   %! abjad.ScoreTemplate.attach_defaults(3)
+                        s1                                                             %! abjad.ScoreTemplate.__illustrate__()
                     }                                                                  %! naehte.ScoreTemplate.__call__
                 }                                                                      %! naehte.ScoreTemplate.__call__
             }                                                                          %! naehte.ScoreTemplate.__call__
