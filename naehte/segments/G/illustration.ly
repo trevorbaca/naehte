@@ -15,8 +15,8 @@
             \include "layout.ly"                                               %! baca.SegmentMaker._make_lilypond_file()
         }                                                                      %! baca.SegmentMaker._make_lilypond_file()
 
-        \context Score = "Score"                                               %! naehte.ScoreTemplate.__call__
-        <<                                                                     %! naehte.ScoreTemplate.__call__
+        \context Score = "Score"                                               %! naehte.ScoreTemplate.__call__()
+        <<                                                                     %! naehte.ScoreTemplate.__call__()
 
             \context GlobalContext = "Global_Context"                          %! abjad.ScoreTemplate._make_global_context()
             <<                                                                 %! abjad.ScoreTemplate._make_global_context()
@@ -26,15 +26,15 @@
 
             >>                                                                 %! abjad.ScoreTemplate._make_global_context()
 
-            \context MusicContext = "Music_Context"                            %! naehte.ScoreTemplate.__call__
-            {                                                                  %! naehte.ScoreTemplate.__call__
+            \context MusicContext = "Music_Context"                            %! naehte.ScoreTemplate.__call__()
+            {                                                                  %! naehte.ScoreTemplate.__call__()
 
-                \context Staff = "Cello_Music_Staff"                           %! naehte.ScoreTemplate.__call__
+                \context Staff = "Cello_Music_Staff"                           %! naehte.ScoreTemplate.__call__()
                 \G_Cello_Music_Staff                                           %! abjad.Path.extern()
 
-            }                                                                  %! naehte.ScoreTemplate.__call__
+            }                                                                  %! naehte.ScoreTemplate.__call__()
 
-        >>                                                                     %! naehte.ScoreTemplate.__call__
+        >>                                                                     %! naehte.ScoreTemplate.__call__()
 
     >>                                                                         %! baca.SegmentMaker._make_lilypond_file()
     
