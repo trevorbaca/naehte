@@ -11,7 +11,7 @@ from abjadext import rmakers
 
 maker = baca.SegmentMaker(
     activate=[
-        abjad.const.LOCAL_MEASURE_NUMBER,
+        abjad.tags.LOCAL_MEASURE_NUMBER,
     ],
     check_all_are_pitched=True,
     final_segment=True,
