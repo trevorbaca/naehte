@@ -311,9 +311,11 @@ maker(
 
 maker(
     ("vc", -1),
-    baca.markup(
-        r"\naehte-colophon-markup",
-        abjad.tweak((-20, -17.5)).extra_offset,
-        literal=True,
+    baca.chunk(
+        baca.mark(r"\naehte-colophon-markup"),
+        baca.rehearsal_mark_down(),
+        baca.rehearsal_mark_padding(6),
+        baca.rehearsal_mark_self_alignment_x(abjad.Right),
+        selector=baca.leaves().rleak()[-1],
     ),
 )

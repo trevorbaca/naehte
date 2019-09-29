@@ -5,9 +5,10 @@
 naehte-colophon-markup = \markup {
     \override #'(font-name . "Palatino")
     \with-color #black
+    \override #'(baseline-skip . 4)
     \right-column {
-        \line { Madison, WI. }
-        \line { August \hspace #0.75 – \hspace #0.75 October 2018. }
+        \line { Madison, Wisc. }
+        \line { Aug. \hspace #0.75 – \hspace #0.75 Oct. 2018. }
         }
     }
 
