@@ -49,6 +49,7 @@ maker(
             abjad.tweak((0, 12)).extra_offset,
         ),
     ),
+    baca.bar_line("|.", baca.skip(-1)),
 )
 
 maker(
