@@ -578,7 +578,7 @@ A_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup %! baca.text_spanner():baca.PiecewiseCommand._call(1)
-        - \tweak bound-details.right.padding #3.25                             %! baca.text_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak bound-details.right.padding #3.25                             %! baca.text_spanner():baca.PiecewiseCommand._call(1):AUTODETECT
         - \tweak staff-padding #10.5                                           %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \tweak style #'trill                                                 %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(1)
