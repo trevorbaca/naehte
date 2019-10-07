@@ -509,14 +509,14 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #5.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2)
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
 
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         fs!4                                                                   %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
-        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! baca.skeleton()
@@ -550,7 +550,7 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \fff                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         \breathe                                                               %! baca.breathe():baca.IndicatorCommand._call()
         \revert RepeatTie.extra-offset                                         %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(2)
@@ -676,12 +676,12 @@ C_Cello_Music_Voice = {                                                        %
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
             \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
-            \pitchedTrill                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+            \pitchedTrill                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
             af,!8                                                              %! baca.skeleton()
             ~
             ]
-            - \tweak bound-details.right.padding #6.25                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-            \startTrillSpan bf,                                                %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+            - \tweak bound-details.right.padding #6.25                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+            \startTrillSpan bf,                                                %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         }                                                                      %! baca.skeleton()
 
@@ -704,7 +704,7 @@ C_Cello_Music_Voice = {                                                        %
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             d1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
-            \stopTrillSpan                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+            \stopTrillSpan                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
@@ -1120,13 +1120,13 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak staff-padding #5.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2)
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
 
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         fs!4                                                                   %! baca.skeleton()
         \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
-        - \tweak bound-details.right.padding #6.25                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        - \tweak bound-details.right.padding #6.25                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! baca.skeleton()
@@ -1138,7 +1138,7 @@ C_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak self-alignment-X #-0.675                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-pppp-sempre                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT

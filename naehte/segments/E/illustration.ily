@@ -558,7 +558,7 @@ E_Cello_Music_Voice = {                                                        %
     {                                                                          %! baca.skeleton()
 
         % [E Cello_Music_Voice measure 67 / measure 6]                         %! baca.SegmentMaker._comment_measure_numbers()
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         d2                                                                     %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mf                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -572,12 +572,12 @@ E_Cello_Music_Voice = {                                                        %
         - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-        - \tweak bound-details.right.padding #0.5                              %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        \startTrillSpan d                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        - \tweak bound-details.right.padding #0.5                              %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan d                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         d8                                                                     %! baca.skeleton()
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         - \tweak bound-details.left.padding #0                                 %! baca.glissando():abjad.glissando(7)
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
@@ -830,7 +830,7 @@ E_Cello_Music_Voice = {                                                        %
     \times 4/5 {                                                               %! baca.skeleton()
 
         % [E Cello_Music_Voice measure 73 / measure 12]                        %! baca.SegmentMaker._comment_measure_numbers()
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         a4.                                                                    %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -846,7 +846,7 @@ E_Cello_Music_Voice = {                                                        %
         - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2)
         - \tweak staff-padding #5.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2)
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
-        \startTrillSpan bf                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \startTrillSpan bf                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         a8                                                                     %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -856,7 +856,7 @@ E_Cello_Music_Voice = {                                                        %
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         [
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
         - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2)
