@@ -195,8 +195,8 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #13                                             %! baca.text_spanner():baca.PiecewiseCommand._call(1)
@@ -212,25 +212,25 @@ A_Cello_Music_Voice = {                                                        %
         \override Staff.Clef.color = #(x11-color 'violet)                      %! baca.SegmentMaker._attach_color_literal(2):DEFAULT_CLEF_REDRAW_COLOR
 
         <a e'>8
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         <c g>8
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         <e b>8
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         <d a>8
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         <e' b'>8
         ]
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
         \times 3/4 {                                                           %! baca.skeleton()
@@ -333,11 +333,11 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition()
-        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition()
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition()
-        - \tweak thickness #3                                                  %! baca.finger_pressure_transition()
-        \glissando                                                             %! baca.finger_pressure_transition()
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition():abjad.glissando(7)
+        \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
         \times 6/7 {                                                           %! baca.skeleton()
@@ -351,7 +351,7 @@ A_Cello_Music_Voice = {                                                        %
             \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
             [
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
             - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \baca-text-spanner-left-text "RH vib. molto"                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \baca-text-spanner-right-text "NV"                               %! baca.text_spanner():baca.PiecewiseCommand._call(1)
@@ -365,27 +365,27 @@ A_Cello_Music_Voice = {                                                        %
             \startTextSpan                                                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
 
             a8                                                                 %! baca.skeleton()
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             g'8                                                                %! baca.skeleton()
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             f'8                                                                %! baca.skeleton()
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             g'8                                                                %! baca.skeleton()
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             a8                                                                 %! baca.skeleton()
-            \glissando                                                         %! baca.glissando()
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             g'8                                                                %! baca.skeleton()
             ]
-            - \tweak arrow-length #2                                           %! baca.finger_pressure_transition()
-            - \tweak arrow-width #0.5                                          %! baca.finger_pressure_transition()
-            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition()
-            - \tweak thickness #3                                              %! baca.finger_pressure_transition()
-            \glissando                                                         %! baca.finger_pressure_transition()
+            - \tweak arrow-length #2                                           %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak arrow-width #0.5                                          %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak thickness #3                                              %! baca.finger_pressure_transition():abjad.glissando(7)
+            \glissando                                                         %! baca.finger_pressure_transition():abjad.glissando(7)
             \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         }                                                                      %! baca.skeleton()
@@ -440,20 +440,20 @@ A_Cello_Music_Voice = {                                                        %
             - \tweak color #darkcyan                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
             - \tweak staff-padding #8                                          %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
             \bacaStartTextSpanRhythmAnnotation                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             f'8                                                                %! baca.skeleton()
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             g8                                                                 %! baca.skeleton()
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             e'8                                                                %! baca.skeleton()
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
             f8                                                                 %! baca.skeleton()
             ]
@@ -472,11 +472,11 @@ A_Cello_Music_Voice = {                                                        %
         - \baca-text-spanner-left-text "XFB"                                   %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
-        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition()
-        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition()
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition()
-        - \tweak thickness #3                                                  %! baca.finger_pressure_transition()
-        \glissando                                                             %! baca.finger_pressure_transition()
+        - \tweak arrow-length #2                                               %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-width #0.5                                              %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak thickness #3                                                  %! baca.finger_pressure_transition():abjad.glissando(7)
+        \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
@@ -521,8 +521,8 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         <b fs'!>1
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -532,8 +532,8 @@ A_Cello_Music_Voice = {                                                        %
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #10.5                                           %! baca.text_spanner():baca.PiecewiseCommand._call(1)
@@ -550,8 +550,8 @@ A_Cello_Music_Voice = {                                                        %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \baca-effort-f                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(1):SPANNER_STOP
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
             - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \baca-text-spanner-left-text "strett."                           %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \tweak staff-padding #8                                          %! baca.text_spanner():baca.PiecewiseCommand._call(1)
@@ -564,8 +564,8 @@ A_Cello_Music_Voice = {                                                        %
             - \tweak stencil #abjad-flared-hairpin                             %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(1):SPANNER_STOP
-            - \abjad-zero-padding-glissando                                    %! baca.glissando()
-            \glissando                                                         %! baca.glissando()
+            - \abjad-zero-padding-glissando                                    %! baca.glissando():abjad.glissando(7)
+            \glissando                                                         %! baca.glissando():abjad.glissando(7)
             - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \baca-text-spanner-left-text "largo"                             %! baca.text_spanner():baca.PiecewiseCommand._call(1)
             - \tweak staff-padding #8                                          %! baca.text_spanner():baca.PiecewiseCommand._call(1)
@@ -578,8 +578,8 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \baca-effort-f                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(1):SPANNER_STOP
-        - \abjad-zero-padding-glissando                                        %! baca.glissando()
-        \glissando                                                             %! baca.glissando()
+        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        \glissando                                                             %! baca.glissando():abjad.glissando(7)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner():baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.text_spanner():baca.PiecewiseCommand._call(1)
