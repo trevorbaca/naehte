@@ -490,7 +490,7 @@ A_Cello_Music_Voice = {                                                        %
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 
             \override DynamicLineSpanner.staff-padding = #7                    %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
-            \pitchedTrill                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+            \pitchedTrill                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
             df'!4.                                                             %! baca.skeleton()
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \p                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -501,8 +501,8 @@ A_Cello_Music_Voice = {                                                        %
             - \baca-text-spanner-left-text "spazz. strett."                    %! baca.text_spanner():baca.PiecewiseCommand._call(2)
             - \tweak staff-padding #8                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2)
             \startTextSpan                                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2)
-            - \tweak bound-details.right.padding #1.25                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-            \startTrillSpan d'                                                 %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+            - \tweak bound-details.right.padding #1.25                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+            \startTrillSpan d'                                                 %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
             <> \bacaStopTextSpanRhythmAnnotation                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
         }                                                                      %! baca.skeleton()
@@ -531,7 +531,7 @@ A_Cello_Music_Voice = {                                                        %
         - \tweak stencil #abjad-flared-hairpin                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
         - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
