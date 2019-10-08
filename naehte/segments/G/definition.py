@@ -144,7 +144,7 @@ maker(
         baca.repeat_tie(baca.leaf(-1)),
     ),
     baca.trill_spanner(
-        "P1",
+        alteration="P1",
         selector=baca.leaves()[:2],
     ),
 )

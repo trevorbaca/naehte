@@ -285,8 +285,8 @@ maker(
         ),
     ),
     baca.trill_spanner(
-        "P1",
         abjad.tweak(0.5).bound_details__right__padding,
+        alteration="P1",
         selector=baca.leaves()[:2], 
     ),
 )
@@ -557,8 +557,8 @@ maker(
         selector=baca.leaves()[1:4],
     ),
     baca.trill_spanner(
-        "m2",
         abjad.tweak(6.25).bound_details__right__padding,
+        alteration="m2",
         selector=baca.leaves()[-1:].rleak(),
     ),
 )

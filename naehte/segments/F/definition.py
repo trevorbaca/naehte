@@ -299,7 +299,7 @@ maker(
         pieces=baca.lparts([1, 2]),
     ),
     baca.trill_spanner(
-        "m2",
+        alteration="m2",
         selector=baca.leaves()[:2],
     ),
 )
