@@ -174,7 +174,7 @@ maker(
         selector=baca.leaves()[1:4],
     ),
     baca.trill_spanner(
-        "m2",
+        alteration="m2",
         selector=baca.leaves()[-1:].rleak().rleak(),
     ),
 )
@@ -249,8 +249,8 @@ maker(
         baca.glissando(),
     ),
     baca.trill_spanner(
-        "M2",
         abjad.tweak(6.25).bound_details__right__padding,
+        alteration="M2",
         selector=baca.leaves()[-2:].rleak(),
     ),
 )
@@ -551,8 +551,8 @@ maker(
         selector=baca.leaves()[1:4],
     ),
     baca.trill_spanner(
-        "m2",
         abjad.tweak(6.25).bound_details__right__padding,
+        alteration="m2",
         selector=baca.leaves()[-1:].rleak(),
     ),
 )

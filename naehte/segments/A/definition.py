@@ -244,8 +244,8 @@ maker(
         selector=baca.leaves()[-1:].rleak().rleak(),
     ),
     baca.trill_spanner(
-        "D4",
         abjad.tweak(1.25).bound_details__right__padding,
+        alteration="D4",
         selector=baca.leaves()[-1:].rleak().rleak(),
     ),
 )
