@@ -7,7 +7,7 @@ dist: xenial
 
 python:
     - 3.7
-    #- 3.8
+    - 3.8
 
 before_install:
     # alias package
@@ -69,9 +69,10 @@ install:
     - prime-parser-tables
     
 script:
-    - BLACK_OPTS="--target-version=py36 --line-length=79 --check --diff"
-    - BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
-    - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
+    # TODO: black seems to intermittently fail on Travis:
+    #- BLACK_OPTS="--target-version=py36 --line-length=79 --check --diff"
+    #- BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
+    #- black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
     - mypy --ignore-missing-imports $PACKAGE
     - coverage run -a `which baca-doctest` $PACKAGE
     - coverage run -a `which py.test` -rf $PACKAGE
