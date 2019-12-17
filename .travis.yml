@@ -2,7 +2,7 @@ sudo: false
 
 language: python
 
-# xenial necessary for "3.8-dev"
+# xenial necessary for "3.8-dev" # is this still true?
 dist: xenial
 
 python:
@@ -69,10 +69,10 @@ install:
     - prime-parser-tables
     
 script:
-    # TODO: black seems to intermittently fail on Travis:
-    #- BLACK_OPTS="--target-version=py36 --line-length=79 --check --diff"
-    #- BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
-    #- black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
+    - BLACK_OPTS="--target-version=py36 --line-length=79 --check --diff"
+    - BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
+    - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
+    - mypy --version
     - mypy --ignore-missing-imports $PACKAGE
     - coverage run -a `which baca-doctest` $PACKAGE
     - coverage run -a `which py.test` -rf $PACKAGE
