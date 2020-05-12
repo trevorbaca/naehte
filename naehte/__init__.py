@@ -8,6 +8,6 @@ if not (
     raise ImportError("Requires Python 3.7.")
 del distutils
 del platform
-from naehte.tools import *
+from .ScoreTemplate import ScoreTemplate
 from naehte.materials.instruments.definition import instruments
 from naehte.materials.metronome_marks.definition import metronome_marks
