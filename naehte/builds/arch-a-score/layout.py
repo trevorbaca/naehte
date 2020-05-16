@@ -1,6 +1,5 @@
 import baca
 
-
 first_start = 68
 metronome_adjustment = 2
 def first_page_y_offset(system_number):
