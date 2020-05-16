@@ -1,9 +1,9 @@
+import os
+
 import abjad
 import baca
-import os
 import naehte
 from abjadext import rmakers
-
 
 ###############################################################################
 ##################################### [G] #####################################
