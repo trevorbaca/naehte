@@ -2,8 +2,6 @@ import os
 
 import abjad
 import baca
-import naehte
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [D] #####################################
@@ -17,7 +15,7 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (5, 8),
-        
+
         (6, 8), (5, 4), (6, 8),
 
         (5, 8), (5, 8),
@@ -228,7 +226,8 @@ maker(
     baca.note_head_style_harmonic_black(
         selector=baca.leaf(-1),
     ),
-    baca.text_spanner("poss. -> XFB =|",
+    baca.text_spanner(
+        "poss. -> XFB =|",
         (abjad.tweak(8.25).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
         bookend=False,
@@ -287,7 +286,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(0.5).bound_details__right__padding,
         alteration="P1",
-        selector=baca.leaves()[:2], 
+        selector=baca.leaves()[:2],
     ),
 )
 

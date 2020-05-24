@@ -1,10 +1,14 @@
 import distutils.version
 import platform
 
-from naehte.materials.instruments.definition import instruments
-from naehte.materials.metronome_marks.definition import metronome_marks
-
 from .ScoreTemplate import ScoreTemplate
+from .materials import instruments, metronome_marks
+
+__all__ = [
+    "ScoreTemplate",
+    "instruments",
+    "metronome_marks",
+]
 
 if not (
     distutils.version.LooseVersion("3.7")

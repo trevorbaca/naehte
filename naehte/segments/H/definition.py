@@ -2,8 +2,6 @@ import os
 
 import abjad
 import baca
-import naehte
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [H] #####################################
@@ -236,7 +234,7 @@ maker(
     ),
     baca.text_spanner(
         r"\baca-triple-diamond-parenthesized-top-markup ->"
-        r" \baca-damp-markup =|" 
+        r" \baca-damp-markup =|"
         r" \baca-double-diamond-parenthesized-top-markup ->"
         r" \baca-double-diamond-markup =|",
         (abjad.tweak(-0.5).bound_details__left__padding, 0),

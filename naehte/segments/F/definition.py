@@ -2,8 +2,6 @@ import os
 
 import abjad
 import baca
-import naehte
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [F] #####################################
@@ -281,7 +279,7 @@ maker(
 maker(
     ("vc", 9),
     baca.hairpin(
-        "o<| f |> p", 
+        "o<| f |> p",
         pieces=baca.lparts([1, 2]),
     ),
     baca.pitch("A3"),
