@@ -2,8 +2,6 @@ import os
 
 import abjad
 import baca
-import naehte
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [A] #####################################
@@ -17,7 +15,7 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     time_signatures=[
         (7, 8),
-        (6, 8), 
+        (6, 8),
         (5, 4),
         (6, 8),
         (5, 4), (4, 4), (2, 4),

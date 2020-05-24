@@ -2,8 +2,6 @@ import os
 
 import abjad
 import baca
-import naehte
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [E] #####################################
@@ -238,7 +236,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(0.5).bound_details__right__padding,
         alteration="P1",
-        selector=baca.leaves()[:2], 
+        selector=baca.leaves()[:2],
     ),
 )
 
@@ -416,7 +414,7 @@ maker(
 maker(
     ("vc", 12),
     baca.hairpin(
-        "o<| f |> p", 
+        "o<| f |> p",
         pieces=baca.lparts([1, 2]),
     ),
     baca.pitch("A3"),
