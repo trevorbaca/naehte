@@ -2,7 +2,7 @@ import distutils.version
 import platform
 
 from .ScoreTemplate import ScoreTemplate
-from .materials import instruments, metronome_marks
+from .tools import instruments, metronome_marks
 
 __all__ = [
     "ScoreTemplate",
