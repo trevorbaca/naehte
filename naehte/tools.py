@@ -1,6 +1,8 @@
 import abjad
 import baca
 
+# instruments
+
 instruments = abjad.OrderedDict(
     [
         (
@@ -11,5 +13,16 @@ instruments = abjad.OrderedDict(
                 short_markup=baca.markups.short_instrument("Vc."),
             ),
         )
+    ]
+)
+
+# metronome marks
+
+metronome_marks = abjad.OrderedDict(
+    [
+        ("39", abjad.MetronomeMark((1, 4), 39)),
+        ("52", abjad.MetronomeMark((1, 4), 52)),
+        ("91", abjad.MetronomeMark((1, 4), 91)),
+        ("117", abjad.MetronomeMark((1, 4), 117)),
     ]
 )

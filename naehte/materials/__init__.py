@@ -1,7 +1,0 @@
-from .instruments.definition import instruments
-from .metronome_marks.definition import metronome_marks
-
-__all__ = [
-    "instruments",
-    "metronome_marks",
-]
