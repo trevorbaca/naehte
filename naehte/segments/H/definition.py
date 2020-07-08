@@ -1,5 +1,3 @@
-import os
-
 import abjad
 import baca
 
@@ -13,7 +11,7 @@ maker = baca.SegmentMaker(
     ],
     check_all_are_pitched=True,
     final_segment=True,
-    segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
+    segment_directory=abjad.Path(__file__).resolve().parent,
     time_signatures=[
         (9, 4), (9, 4),
         (5, 8),
