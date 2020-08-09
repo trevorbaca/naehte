@@ -1,4 +1,4 @@
-A_Global_Skips = {                                                             %! abjad.Path.extern()
+A_Global_Skips = {                                                             %! ide.Path.extern()
 
     % [A Global_Skips measure 1]                                               %! baca.SegmentMaker._comment_measure_numbers()
     \override TextSpanner.staff-padding = #10                                  %! baca.text_spanner_staff_padding():baca.OverrideCommand._call(1)
@@ -128,10 +128,10 @@ A_Global_Skips = {                                                             %
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-A_Global_Rests = {                                                             %! abjad.Path.extern()
+A_Global_Rests = {                                                             %! ide.Path.extern()
 
     % [A Global_Rests measure 1]                                               %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 7/8                                                                   %! baca.SegmentMaker._make_global_rests(1)
@@ -160,10 +160,10 @@ A_Global_Rests = {                                                             %
     % [A Global_Rests measure 9]                                               %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(4):PHANTOM
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-A_Cello_Music_Voice = {                                                        %! abjad.Path.extern()
+A_Cello_Music_Voice = {                                                        %! ide.Path.extern()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
     \times 7/9 {                                                               %! baca.skeleton()
@@ -678,15 +678,15 @@ A_Cello_Music_Voice = {                                                        %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-A_Cello_Music_Staff = <<                                                       %! abjad.Path.extern()
+A_Cello_Music_Staff = <<                                                       %! ide.Path.extern()
 
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context()
-    \A_Global_Rests                                                            %! abjad.Path.extern()
+    \A_Global_Rests                                                            %! ide.Path.extern()
 
     \context Voice = "Cello_Music_Voice"                                       %! naehte.ScoreTemplate.__call__()
-    \A_Cello_Music_Voice                                                       %! abjad.Path.extern()
+    \A_Cello_Music_Voice                                                       %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()

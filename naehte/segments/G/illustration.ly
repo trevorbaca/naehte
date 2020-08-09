@@ -3,7 +3,7 @@
 
 \include "../../stylesheets/stylesheet.ily"                                    %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
 \include "../../stylesheets/nonfirst-segment.ily"                              %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
-\include "illustration.ily"                                                    %! abjad.Path.extern()
+\include "illustration.ily"                                                    %! ide.Path.extern()
 \paper { first-page-number = #7 }                                              %! __make_segment_pdf__
 
 
@@ -22,7 +22,7 @@
             <<                                                                 %! abjad.ScoreTemplate._make_global_context()
 
                 \context GlobalSkips = "Global_Skips"                          %! abjad.ScoreTemplate._make_global_context()
-                \G_Global_Skips                                                %! abjad.Path.extern()
+                \G_Global_Skips                                                %! ide.Path.extern()
 
             >>                                                                 %! abjad.ScoreTemplate._make_global_context()
 
@@ -30,7 +30,7 @@
             {                                                                  %! naehte.ScoreTemplate.__call__()
 
                 \context Staff = "Cello_Music_Staff"                           %! naehte.ScoreTemplate.__call__()
-                \G_Cello_Music_Staff                                           %! abjad.Path.extern()
+                \G_Cello_Music_Staff                                           %! ide.Path.extern()
 
             }                                                                  %! naehte.ScoreTemplate.__call__()
 
