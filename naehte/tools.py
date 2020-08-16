@@ -1,5 +1,4 @@
 import abjad
-import baca
 
 # instruments
 
@@ -8,7 +7,7 @@ instruments = abjad.OrderedDict(
         (
             "Cello",
             abjad.Cello(
-                markup=baca.markups.instrument("Cello"),
+                markup=abjad.Markup(r"\markup \hcenter-in #16 Cello", literal=True),
                 pitch_range="[B1, +inf]",
                 short_markup=abjad.Markup(r"\naethe-vc-markup", literal=True),
             ),

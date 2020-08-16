@@ -169,12 +169,7 @@ A_Cello_Music_Voice = {                                                        %
     \times 7/9 {                                                               %! baca.skeleton()
 
         % [A Cello_Music_Voice measure 1]                                      %! baca.SegmentMaker._comment_measure_numbers()
-        \set Staff.instrumentName =                                            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-        \markup {                                                              %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            \hcenter-in                                                        %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                #10                                                            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-                Cello                                                          %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
-            }                                                                  %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
+        \set Staff.instrumentName = \markup \hcenter-in #10 "Cello"            %! baca.start_markup():-PARTS:baca.IndicatorCommand._call()
         \override DynamicLineSpanner.staff-padding = #7                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         \override TupletBracket.staff-padding = #1                             %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
         \clef "bass"                                                           %! abjad.ScoreTemplate.attach_defaults(3):baca.SegmentMaker._set_status_tag():DEFAULT_CLEF
