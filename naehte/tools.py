@@ -10,7 +10,7 @@ instruments = abjad.OrderedDict(
             abjad.Cello(
                 markup=baca.markups.instrument("Cello"),
                 pitch_range="[B1, +inf]",
-                short_markup=baca.markups.short_instrument("Vc."),
+                short_markup=abjad.Markup(r"\naethe-vc-markup", literal=True),
             ),
         )
     ]
