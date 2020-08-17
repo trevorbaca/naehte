@@ -419,9 +419,9 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        "degrees of ponticello",
+        r'\baca-boxed-markup "degrees of ponticello"',
         abjad.tweak(8).staff_padding,
-        boxed=True,
+        literal=True,
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
