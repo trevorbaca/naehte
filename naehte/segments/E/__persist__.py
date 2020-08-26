@@ -5,64 +5,64 @@ import ide
 persist = abjad.OrderedDict(
     [
         (
-            "alive_during_segment",
+            'alive_during_segment',
             [
-                "Score",
-                "Global_Context",
-                "Global_Skips",
-                "Music_Context",
-                "Cello_Music_Staff",
-                "Global_Rests",
-                "Cello_Music_Voice",
-                "Cello_Rest_Voice",
-            ],
-        ),
+                'Score',
+                'Global_Context',
+                'Global_Skips',
+                'Music_Context',
+                'Cello_Music_Staff',
+                'Global_Rests',
+                'Cello_Music_Voice',
+                'Cello_Rest_Voice',
+                ],
+            ),
         (
-            "persistent_indicators",
+            'persistent_indicators',
             abjad.OrderedDict(
                 [
                     (
-                        "Cello_Music_Staff",
+                        'Cello_Music_Staff',
                         [
                             ide.Momento(
-                                context="Cello_Music_Voice",
-                                manifest="instruments",
-                                value="Cello",
-                            ),
+                                context='Cello_Music_Voice',
+                                manifest='instruments',
+                                value='Cello',
+                                ),
                             ide.Momento(
-                                context="Cello_Music_Voice",
-                                prototype="abjad.Clef",
-                                value="bass",
-                            ),
-                        ],
-                    ),
+                                context='Cello_Music_Voice',
+                                prototype='abjad.Clef',
+                                value='bass',
+                                ),
+                            ],
+                        ),
                     (
-                        "Cello_Music_Voice",
+                        'Cello_Music_Voice',
                         [
                             ide.Momento(
-                                context="Cello_Music_Voice",
-                                prototype="abjad.Dynamic",
-                                value="p",
-                            ),
-                        ],
-                    ),
+                                context='Cello_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='p',
+                                ),
+                            ],
+                        ),
                     (
-                        "Score",
+                        'Score',
                         [
                             ide.Momento(
-                                context="Global_Skips",
-                                manifest="metronome_marks",
-                                value="52",
-                            ),
+                                context='Global_Skips',
+                                manifest='metronome_marks',
+                                value='52',
+                                ),
                             ide.Momento(
-                                context="Global_Skips",
-                                prototype="abjad.TimeSignature",
-                                value="4/8",
-                            ),
-                        ],
-                    ),
-                ]
+                                context='Global_Skips',
+                                prototype='abjad.TimeSignature',
+                                value='4/8',
+                                ),
+                            ],
+                        ),
+                    ]
+                ),
             ),
-        ),
-    ]
-)
+        ]
+    )

@@ -22,7 +22,8 @@ def nonfirst_page_y_offset(system_number):
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            16 + metronome_adjustment, 16,
+            16 + metronome_adjustment,
+            16,
             measure=1,
             y_offset=first_start,
         ),
