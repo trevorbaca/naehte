@@ -13,13 +13,20 @@ maker = baca.SegmentMaker(
     final_segment=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
-        (9, 4), (9, 4),
+        (9, 4),
+        (9, 4),
         (5, 8),
         (1, 4),
-        (4, 4), (5, 4),
-        (6, 8), (6, 8),
+        (4, 4),
+        (5, 4),
+        (6, 8),
+        (6, 8),
         (1, 4),
-        (6, 8), (6, 8), (7, 8), (6, 8), (1, 4),
+        (6, 8),
+        (6, 8),
+        (7, 8),
+        (6, 8),
+        (1, 4),
     ],
     validate_measure_count=14,
 )
@@ -139,11 +146,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }"
-            " }"
-        ),
+        baca.skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
         ),
@@ -173,9 +176,7 @@ maker(
         selector=baca.leaf(-1),
     ),
     baca.pitch("E2"),
-    baca.skeleton(
-        "{ c1 c4 }"
-    ),
+    baca.skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
         abjad.tweak(8).staff_padding,

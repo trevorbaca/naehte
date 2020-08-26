@@ -16,7 +16,9 @@ maker = baca.SegmentMaker(
         (6, 8),
         (5, 4),
         (6, 8),
-        (5, 4), (4, 4), (2, 4),
+        (5, 4),
+        (4, 4),
+        (2, 4),
         (4, 4),
     ],
     validate_measure_count=8,
@@ -47,8 +49,7 @@ maker(
     ),
     baca.suite(
         baca.skeleton(
-            r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]"
-            r" \times 3/4 { c4. c8 } }"
+            r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
         ),
         baca.new(
             baca.repeat_tie(baca.pleaf(0)),
@@ -56,13 +57,7 @@ maker(
             selector=baca.leaf(-1),
         ),
         baca.pitches(
-            "<G3 D4>"
-            " <A3 E4>"
-            " <C3 G3>"
-            " <E3 B3>"
-            " <D3 A3>"
-            " <E4 B4>"
-            " Eb4"
+            "<G3 D4>" " <A3 E4>" " <C3 G3>" " <E3 B3>" " <D3 A3>" " <E4 B4>" " Eb4"
         ),
         baca.glissando(
             selector=baca.leaves(),
@@ -115,9 +110,7 @@ maker(
         selector=baca.rleaves().rleak(),
     ),
     baca.suite(
-        baca.skeleton(
-            r"\times 6/7 { c2. c8 }"
-        ),
+        baca.skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
             baca.repeat_tie(baca.leaf(0)),
@@ -152,8 +145,7 @@ maker(
     ),
     baca.suite(
         baca.skeleton(
-            r"{ c4 \times 6/7 { c8 [ c c c c c c ] }"
-            r" \times 2/3 { c4 c8 } }"
+            r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
         ),
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 Db4 Db4"),
         baca.new(
@@ -249,13 +241,7 @@ maker(
 maker(
     ("vc", (5, 7)),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" c4 c1"
-            r" \times 4/5 { c4 c1 }"
-            r" c2"
-            " }"
-        ),
+        baca.skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
         baca.pitches(
             "Db4 <B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
         ),
@@ -301,11 +287,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" c2... r16"
-            " }"
-        ),
+        baca.skeleton("{" r" c2... r16" " }"),
         baca.pitch("<G3 D4>"),
     ),
     baca.text_spanner(

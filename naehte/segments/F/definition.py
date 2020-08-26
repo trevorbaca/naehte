@@ -12,13 +12,21 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
-        (4, 4), (4, 4), (4, 4), (5, 4),
+        (4, 4),
+        (4, 4),
+        (4, 4),
+        (5, 4),
         (4, 4),
         (6, 4),
-        (3, 4), (1, 4), (4, 8), (6, 4),
-        (3, 8), (5, 8),
+        (3, 4),
         (1, 4),
-        (11, 4), (1, 4),
+        (4, 8),
+        (6, 4),
+        (3, 8),
+        (5, 8),
+        (1, 4),
+        (11, 4),
+        (1, 4),
     ],
     validate_measure_count=15,
 )
@@ -136,10 +144,7 @@ maker(
         selector=baca.pleaves()[:-1],
     ),
     baca.skeleton(
-        "{"
-        r" \times 2/3 { c32 [ c c c c c c c c c c c ] }"
-        " c2... r16"
-        " }"
+        "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c2... r16" " }"
     ),
     baca.suite(
         baca.pitches(
@@ -194,8 +199,7 @@ maker(
     ),
     baca.suite(
         baca.pitches(
-            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-            " <Bb3 F4> <E3 B3> <G3 D4>",
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
         ),
         baca.glissando(),
@@ -260,9 +264,7 @@ maker(
             selector=baca.leaf(-3),
         ),
     ),
-    baca.skeleton(
-        r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"
-    ),
+    baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
     baca.text_spanner(
         r"XFB =| \baca-circle-markup =| spz. =|",
         (abjad.tweak(0.5).bound_details__right__padding, 1),
@@ -314,8 +316,7 @@ maker(
     ),
     baca.suite(
         baca.pitches(
-            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-            " <Bb3 F4> <E3 B3> <G3 D4>",
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
         ),
         baca.glissando(),

@@ -13,10 +13,17 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
         (5, 4),
-        (8, 4), (10, 4),
-        (5, 8), (5, 8), (5, 8),
-        (7, 4), (5, 8), (4, 8),
-        (3, 4), (1, 4), (4, 8),
+        (8, 4),
+        (10, 4),
+        (5, 8),
+        (5, 8),
+        (5, 8),
+        (7, 4),
+        (5, 8),
+        (4, 8),
+        (3, 4),
+        (1, 4),
+        (4, 8),
     ],
     validate_measure_count=12,
 )
@@ -72,12 +79,7 @@ maker(
     baca.note_head_x_extent_zero(
         selector=baca.pleaves()[:-1],
     ),
-    baca.skeleton(
-        "{"
-        r" \times 2/3 { c32 [ c c c c c c c c c c c ] }"
-        " c1"
-        " }"
-    ),
+    baca.skeleton("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"),
     baca.suite(
         baca.pitches(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
@@ -116,7 +118,8 @@ maker(
             zero_padding=True,
         ),
         baca.interpolate_pitches(
-            "E2", "C#3",
+            "E2",
+            "C#3",
             selector=baca.leaves().rleak(),
         ),
         baca.repeat_tie(baca.pleaf(0)),
@@ -267,12 +270,7 @@ maker(
     baca.note_head_style_harmonic(
         selector=baca.leaf(5),
     ),
-    baca.skeleton(
-        "{"
-        r" \times 3/5 { c4 c c c c }"
-        " c1"
-        " }"
-    ),
+    baca.skeleton("{" r" \times 3/5 { c4 c c c c }" " c1" " }"),
     baca.suite(
         baca.pitches(
             "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>",
@@ -302,7 +300,6 @@ maker(
         bookend=False,
         pieces=baca.lparts([1, 5, 7]),
     ),
-
 )
 
 maker(
@@ -357,9 +354,7 @@ maker(
         pieces=baca.lparts([2, 3]),
         selector=baca.leaves().rleak(),
     ),
-    baca.literal(
-        r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)"
-    ),
+    baca.literal(r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)"),
     baca.suite(
         baca.pitches(
             "Gb2 Gb2 G4 Gb2",
@@ -395,9 +390,7 @@ maker(
             selector=baca.leaf(-3),
         ),
     ),
-    baca.skeleton(
-        r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"
-    ),
+    baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
     baca.text_spanner(
         r"XFB =| \baca-circle-markup =| spz. =|",
         (abjad.tweak(0.5).bound_details__right__padding, 1),

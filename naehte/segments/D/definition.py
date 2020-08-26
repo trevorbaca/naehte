@@ -13,17 +13,21 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
         (5, 8),
-
-        (6, 8), (5, 4), (6, 8),
-
-        (5, 8), (5, 8),
-
-        (3, 4), (3, 4), (2, 4), (1, 4),
-        (6, 4), (4, 4),
-
-        (9, 4), (10, 4),
-
-        (8, 4), (8, 4),
+        (6, 8),
+        (5, 4),
+        (6, 8),
+        (5, 8),
+        (5, 8),
+        (3, 4),
+        (3, 4),
+        (2, 4),
+        (1, 4),
+        (6, 4),
+        (4, 4),
+        (9, 4),
+        (10, 4),
+        (8, 4),
+        (8, 4),
     ],
     validate_measure_count=16,
 )
@@ -117,9 +121,7 @@ maker(
 maker(
     ("vc", 2),
     baca.suite(
-        baca.skeleton(
-            r"\times 6/7 { c2. c8 }"
-        ),
+        baca.skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
             baca.repeat_tie(baca.pleaf(0)),
@@ -153,8 +155,7 @@ maker(
     ),
     baca.suite(
         baca.skeleton(
-            r"{ c4 \times 6/7 { c8 [ c c c c c c ] }"
-            r" \times 2/3 { c4 c8 } }"
+            r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
         ),
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 D4 D4"),
         baca.new(
@@ -201,10 +202,7 @@ maker(
     ),
     baca.suite(
         baca.skeleton(
-            "{"
-            r" \times 6/11 { \times 4/5 { c8 [ c c c c ] }"
-            r" { c2. c8 } }"
-            " }"
+            "{" r" \times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" { c2. c8 } }" " }"
         ),
         baca.pitches(
             "D4 F4 G3 E4 F3 D4 B2",
@@ -307,9 +305,7 @@ maker(
     ),
     baca.suite(
         baca.skeleton(
-            "{"
-            r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }"
-            " }"
+            "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
         ),
     ),
     baca.suite(
@@ -434,8 +430,7 @@ maker(
     ),
     baca.suite(
         baca.pitches(
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4"
-            " Eb2 B3 F2 A3 G2 F#3",
+            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4" " Eb2 B3 F2 A3 G2 F#3",
             allow_repeats=True,
         ),
         baca.note_head_style_harmonic(
