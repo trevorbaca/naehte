@@ -12,12 +12,19 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
-        (4, 4), (5, 4), (3, 8),
+        (4, 4),
+        (5, 4),
         (3, 8),
-        (3, 8), (4, 4),
-        (4, 4), (6, 4), (3, 8), (5, 8),
+        (3, 8),
+        (3, 8),
+        (4, 4),
+        (4, 4),
+        (6, 4),
+        (3, 8),
+        (5, 8),
         (7, 4),
-        (10, 4), (11, 4),
+        (10, 4),
+        (11, 4),
         (1, 4),
     ],
     validate_measure_count=14,
@@ -81,11 +88,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }"
-            " }"
-        ),
+        baca.skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
         ),
@@ -104,9 +107,7 @@ maker(
         selector=baca.leaf(-1),
     ),
     baca.pitch("E2"),
-    baca.skeleton(
-        "{ c1 c4 }"
-    ),
+    baca.skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
         abjad.tweak(8).staff_padding,
@@ -278,8 +279,7 @@ maker(
     ),
     baca.suite(
         baca.pitches(
-            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-            " <Bb3 F4> <E3 B3> <G3 D4>",
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
         ),
         baca.glissando(),
@@ -399,13 +399,10 @@ maker(
     baca.finger_pressure_transition(
         selector=baca.leaves()[:1].lleak(),
     ),
-    baca.skeleton(r"{ c4 c c c c c c c c c }")
+    baca.skeleton(r"{ c4 c c c c c c c c c }"),
 )
 
-maker(
-    ("vc", 13),
-    baca.skeleton(r"{ c4 c c c c c c c c c c }")
-)
+maker(("vc", 13), baca.skeleton(r"{ c4 c c c c c c c c c c }"))
 
 maker(
     ("vc", (12, 13)),

@@ -12,16 +12,23 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
-        (5, 4), (4, 4), (3, 8),
+        (5, 4),
+        (4, 4),
+        (3, 8),
         (8, 4),
-        (4, 4), (4, 8),
+        (4, 4),
+        (4, 8),
         (1, 4),
         (8, 4),
-
-        (3, 4), (3, 4), (2, 4), (1, 4),
-        (6, 4), (4, 4),
-
-        (2, 4), (7, 4), (7, 4),
+        (3, 4),
+        (3, 4),
+        (2, 4),
+        (1, 4),
+        (6, 4),
+        (4, 4),
+        (2, 4),
+        (7, 4),
+        (7, 4),
         (1, 4),
     ],
     validate_measure_count=18,
@@ -82,9 +89,7 @@ maker(
 
 maker(
     ("vc", 1),
-    baca.skeleton(
-        r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"
-    ),
+    baca.skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"),
     baca.hairpin(
         r"p > ppp <",
         pieces=baca.lparts([1, 1, 1, 1, 2]),
@@ -303,9 +308,7 @@ maker(
     ("vc", (9, 10)),
     baca.suite(
         baca.skeleton(
-            "{"
-            r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }"
-            " }"
+            "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
         ),
     ),
     baca.hairpin(
@@ -426,8 +429,7 @@ maker(
     ),
     baca.suite(
         baca.pitches(
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4"
-            " Eb2 B3 F2 A3 G2 F#3",
+            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4" " Eb2 B3 F2 A3 G2 F#3",
             allow_repeats=True,
         ),
         baca.note_head_style_harmonic(
@@ -576,10 +578,7 @@ maker(
 
 maker(
     ("vc", 16),
-    baca.skeleton(
-        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]"
-        " c4 c8 [ c ] c2 }"
-    ),
+    baca.skeleton(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"),
     baca.suite(
         baca.pitches(
             " <B3 F#4> <B3 F#4> <C3 G3>"
@@ -598,10 +597,7 @@ maker(
         "pppp >o niente",
         selector=baca.leaves()[-1:].rleak(),
     ),
-    baca.skeleton(
-        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]"
-        " c4 c8 [ c ] c2 }"
-    ),
+    baca.skeleton(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"),
     baca.suite(
         baca.pitches(
             " <A3 E4> <A3 E4> <C3 G3>"

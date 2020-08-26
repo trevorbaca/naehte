@@ -12,24 +12,32 @@ maker = baca.SegmentMaker(
     check_all_are_pitched=True,
     segment_directory=baca.Path(__file__).resolve().parent,
     time_signatures=[
-        (5, 8), (5, 8),
-        (3, 4), (3, 4),
-        (2, 4), (1, 4), (5, 4),
+        (5, 8),
+        (5, 8),
+        (3, 4),
+        (3, 4),
+        (2, 4),
+        (1, 4),
+        (5, 4),
         (1, 4),
         (10, 4),
         (1, 4),
-        (4, 4), (4, 4), (2, 4), (5, 8),
-        (7, 8), (4, 4), (6, 4), (6, 4), (4, 4),
+        (4, 4),
+        (4, 4),
+        (2, 4),
+        (5, 8),
+        (7, 8),
+        (4, 4),
+        (6, 4),
+        (6, 4),
+        (4, 4),
     ],
     validate_measure_count=19,
 )
 
 maker(
     "Global_Skips",
-    baca.metronome_mark(
-        "52",
-        selector=baca.leaf(1 - 1)
-    ),
+    baca.metronome_mark("52", selector=baca.leaf(1 - 1)),
     baca.metronome_mark(
         "52",
         selector=baca.leaf(3 - 1),
@@ -109,9 +117,7 @@ maker(
         selector=baca.leaves()[-3:],
     ),
     baca.suite(
-        baca.skeleton(
-            r"{ c4. c8 c32 [ c c c ] }"
-        ),
+        baca.skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(baca.pleaf(0)),
@@ -165,9 +171,7 @@ maker(
         selector=baca.leaves()[-3:-1],
     ),
     baca.suite(
-        baca.skeleton(
-            r"{ c4. c8 c32 [ c c c ] }"
-        ),
+        baca.skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(baca.pleaf(0)),
@@ -200,9 +204,7 @@ maker(
     ("vc", (3, 4)),
     baca.suite(
         baca.skeleton(
-            "{"
-            r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }"
-            " }"
+            "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
         ),
     ),
     baca.hairpin(
@@ -314,11 +316,7 @@ maker(
 maker(
     ("vc", 7),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" \times 4/5 { c16 [ c c c c ] } c2... c16"
-            " }"
-        ),
+        baca.skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
     ),
     baca.hairpin(
         "f |> ppp >o niente",
@@ -424,13 +422,7 @@ maker(
         ),
     ),
     baca.suite(
-        baca.skeleton(
-            "{"
-            r" c1"
-            r" \times 4/5 { c4 c1 }"
-            r" c2"
-            " }"
-        ),
+        baca.skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
         baca.pitches(
             "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
         ),
@@ -474,9 +466,7 @@ maker(
         selector=baca.leaves()[-3:-1],
     ),
     baca.suite(
-        baca.skeleton(
-            r"{ c4. c8 c32 [ c c c ] }"
-        ),
+        baca.skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(baca.pleaf(0)),
@@ -518,9 +508,7 @@ maker(
         selector=baca.leaves()[:2],
     ),
     baca.suite(
-        baca.skeleton(
-            r"{ c2. c8 }"
-        ),
+        baca.skeleton(r"{ c2. c8 }"),
         baca.pitches("C5 Db2"),
         baca.glissando(),
     ),
