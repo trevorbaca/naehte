@@ -63,9 +63,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             name="Music_Context",
             tag=tag,
         )
-        score = abjad.Score(
-            [global_context, music_context], name="Score", tag=tag
-        )
+        score = abjad.Score([global_context, music_context], name="Score", tag=tag)
         self._assert_lilypond_identifiers(score)
         self._assert_unique_context_names(score)
         self._assert_matching_custom_context_names(score)
