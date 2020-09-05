@@ -5,8 +5,6 @@ import baca
 ##################################### [A] #####################################
 ###############################################################################
 
-raise Exception("Travis test")
-
 maker = baca.SegmentMaker(
     activate=[
         baca.tags.LOCAL_MEASURE_NUMBER,
