@@ -799,7 +799,7 @@ c_Cello_Music_Voice = {                                                        %
             - \tweak staff-padding #8                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
-            \times 2/3 {                                                       %! baca.skeleton()
+            \times 4/6 {                                                       %! baca.skeleton()
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
                 \override Beam.positions = #'(-5.5 . -5.5)                     %! baca.beam_positions():baca.OverrideCommand._call(1)
