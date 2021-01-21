@@ -28,6 +28,7 @@ jobs:
     - name: Log environment variables
       run: |
         python --version
+        python -m pip install --upgrade pip
         echo $HOME
         echo $GITHUB_WORKSPACE
         name=$(basename "$GITHUB_WORKSPACE")
@@ -63,3 +64,9 @@ jobs:
 
         if [[ $do_not_symlink_test_py != true ]]; then rm "$GITHUB_WORKSPACE"/$name/test.py; fi
         if [[ $do_not_symlink_test_py != true ]]; then ln -s /tmp/baca/dotfiles/test_segments.py "$GITHUB_WORKSPACE"/$name/test.py; fi
+
+    - name: Install IDE
+      run: |
+        # must install -e editable for ide/scores directory in wrapper:
+        git clone https://github.com/Abjad/ide.git /tmp/ide
+        pip install -e /tmp/ide
