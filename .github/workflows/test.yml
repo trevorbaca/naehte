@@ -34,6 +34,12 @@ jobs:
         name=$(basename "$GITHUB_WORKSPACE")
         echo $name
 
+    - name: Install IDE
+      run: |
+        # must install -e editable for ide/scores directory in wrapper:
+        git clone https://github.com/Abjad/ide.git /tmp/ide
+        pip install -e /tmp/ide
+
     - name: Install LilyPond
       run: |
         lilypond=/tmp/lilypond
@@ -68,5 +74,5 @@ jobs:
     - name: Install IDE
       run: |
         # must install -e editable for ide/scores directory in wrapper:
-        git clone https://github.com/Abjad/ide.git /tmp/ide
-        pip install -e /tmp/ide
+        # git clone https://github.com/Abjad/ide.git /tmp/ide
+        # pip install -e /tmp/ide
