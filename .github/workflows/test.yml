@@ -45,3 +45,8 @@ jobs:
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
         pip install -e /tmp/abjad
+
+    - name: Install rmakers
+      run: |
+        git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
+        pip install /tmp/abjad-ext-rmakers
