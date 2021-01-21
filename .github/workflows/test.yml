@@ -39,6 +39,8 @@ jobs:
         run: |
           PATH=/home/runner/bin:$PATH
           echo $PATH
+          export PATH
+          echo $PATH
 
       - name: Echo PATH
         run: echo $PATH
