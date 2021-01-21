@@ -38,4 +38,5 @@ jobs:
           echo $GITHUB_WORKSPACE
           echo $name
           echo $flamingo
+          basename "$GITHUB_WORKSPACE"
           echo Hello, world!
