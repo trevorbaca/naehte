@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
 
 # Repo checked out into $GITHUB_WORKSPACE
+# $GITHUB_WORKSPACE is wrapper directory
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,15 +34,6 @@ jobs:
         echo $GITHUB_WORKSPACE
         name=$(basename "$GITHUB_WORKSPACE")
         echo $name
-
-    - name: List GITHUB_WORKSPACE
-      run: ls $GITHUB_WORKSPACE
-
-    - name: List GITHUB_WORKSPACE/naehte
-      run: ls $GITHUB_WORKSPACE/naehte
-
-    - name: List GITHUB_WORKSPACE/naehte/segments
-      run: ls $GITHUB_WORKSPACE/naehte/segments
 
     - name: Install LilyPond
       run: |
@@ -129,15 +121,6 @@ jobs:
 
     - name: Run doctest
       run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"
-
-    - name: List GITHUB_WORKSPACE
-      run: ls $GITHUB_WORKSPACE
-
-    - name: List GITHUB_WORKSPACE/naehte
-      run: ls $GITHUB_WORKSPACE/naehte
-
-    - name: List GITHUB_WORKSPACE/naehte/segments
-      run: ls $GITHUB_WORKSPACE/naehte/segments
 
     - name: Check definition files
       run: |
