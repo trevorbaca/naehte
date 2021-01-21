@@ -34,12 +34,6 @@ jobs:
         name=$(basename "$GITHUB_WORKSPACE")
         echo $name
 
-    - name: Install IDE
-      run: |
-        # must install -e editable for ide/scores directory in wrapper:
-        git clone https://github.com/Abjad/ide.git /tmp/ide
-        pip install -e /tmp/ide
-
     - name: Install LilyPond
       run: |
         lilypond=/tmp/lilypond
@@ -74,5 +68,61 @@ jobs:
     - name: Install IDE
       run: |
         # must install -e editable for ide/scores directory in wrapper:
-        # git clone https://github.com/Abjad/ide.git /tmp/ide
-        # pip install -e /tmp/ide
+        git clone https://github.com/Abjad/ide.git /tmp/ide
+        pip install -e /tmp/ide
+
+    - name: Configure mypy
+      run: |
+        export MYPYPATH=/tmp/abjad:/tmp/abjad-ext-rmakers:/tmp/baca:/tmp/ide
+        ln -s /tmp/baca/dotfiles/mypy.ini ~/.mypy.ini
+
+    - name: Log environment variables
+      run: |
+        echo $MYPYPATH
+        echo $PATH
+        echo $PYTHONPATH
+        echo $GITHUB_WORKSPACE
+
+    - name: Install this score
+      run: pip install -e .
+
+    - name: Prime parser tables
+      run: /tmp/abjad/scr/prime-parser-tables
+
+    - name: Set scores directory for IDE path management
+      run: |
+        cat ~/.abjad/abjad.cfg
+        echo composer_scores_directory = $(dirname "$TRAVIS_BUILD_DIR") > ~/.abjad/abjad.cfg
+        cat ~/.abjad/abjad.cfg
+
+    - name: Log versions
+      run: |
+        black --version
+        flake8 --version
+        isort --version
+        mypy --version
+        pytest --version
+
+    - name: Make black-check
+      run: make black-check
+
+    - name: Make flake8
+      run: make flake8
+
+    - name: Make isort-check
+      run: make isort-check
+
+    - name: Make mypy
+      run: make mypy
+
+    - name: Run doctest
+      run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"/$name
+
+    - name: Check definition files
+      run: |
+        cd "$GITHUB_WORKSPACE"/$name/segments
+        /tmp/baca/scr/dpc
+        cd -
+
+    - name: Run pytest
+      run: py.test -rf "$GITHUB_WORKSPACE"/$name/test.py
