@@ -34,6 +34,12 @@ jobs:
         name=$(basename "$GITHUB_WORKSPACE")
         echo $name
 
+    - name: List GITHUB_WORKSPACE
+      run: ls $GITHUB_WORKSPACE
+
+    - name: List GITHUB_WORKSPACE/segments
+      run: ls $GITHUB_WORKSPACE/segments
+
     - name: Install LilyPond
       run: |
         lilypond=/tmp/lilypond
@@ -120,6 +126,12 @@ jobs:
 
     - name: Run doctest
       run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"
+
+    - name: List GITHUB_WORKSPACE
+      run: ls $GITHUB_WORKSPACE
+
+    - name: List GITHUB_WORKSPACE/segments
+      run: ls $GITHUB_WORKSPACE/segments
 
     - name: Check definition files
       run: |
