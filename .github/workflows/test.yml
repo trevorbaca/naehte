@@ -92,7 +92,7 @@ jobs:
     - name: Set scores directory for IDE path management
       run: |
         cat ~/.abjad/abjad.cfg
-        echo composer_scores_directory = $(dirname "$TRAVIS_BUILD_DIR") > ~/.abjad/abjad.cfg
+        echo composer_scores_directory = $(dirname "$GITHUB_WORKSPACE") > ~/.abjad/abjad.cfg
         cat ~/.abjad/abjad.cfg
 
     - name: Log versions
@@ -113,7 +113,11 @@ jobs:
       run: make isort-check
 
     - name: Make mypy
-      run: make mypy
+      # uncomment after fixing
+      run: 
+        export MYPYPATH=/tmp/abjad:/tmp/abjad-ext-rmakers:/tmp/baca:/tmp/ide
+        echo $MYPYPATH
+        make mypy
 
     - name: Run doctest
       run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"/$name
