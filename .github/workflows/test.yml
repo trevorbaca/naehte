@@ -47,7 +47,8 @@ jobs:
 
       - name: Verify LilyPond install
         run: |
-          PATH=/home/runner/bin:$PATH
+          ln -s /home/runner/bin/lilypond /usr/bin/lilypond
+          ln -s /home/runner/bin/lilypond /usr/sbin/lilypond
           echo $(which lilypond)
 
       - name: List ~
