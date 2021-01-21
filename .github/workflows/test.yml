@@ -37,8 +37,11 @@ jobs:
     - name: List GITHUB_WORKSPACE
       run: ls $GITHUB_WORKSPACE
 
-    - name: List GITHUB_WORKSPACE/segments
-      run: ls $GITHUB_WORKSPACE/segments
+    - name: List GITHUB_WORKSPACE/naehte
+      run: ls $GITHUB_WORKSPACE/naehte
+
+    - name: List GITHUB_WORKSPACE/naehte/segments
+      run: ls $GITHUB_WORKSPACE/naehte/segments
 
     - name: Install LilyPond
       run: |
@@ -130,8 +133,11 @@ jobs:
     - name: List GITHUB_WORKSPACE
       run: ls $GITHUB_WORKSPACE
 
-    - name: List GITHUB_WORKSPACE/segments
-      run: ls $GITHUB_WORKSPACE/segments
+    - name: List GITHUB_WORKSPACE/naehte
+      run: ls $GITHUB_WORKSPACE/naehte
+
+    - name: List GITHUB_WORKSPACE/naehte/segments
+      run: ls $GITHUB_WORKSPACE/naehte/segments
 
     - name: Check definition files
       run: |
