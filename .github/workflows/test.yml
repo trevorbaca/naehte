@@ -36,7 +36,9 @@ jobs:
           sh $lilypond --batch
 
       - name: Add ~/bin to PATH
-        run: export PATH=$PATH:~/bin
+        run: |
+          PATH=/home/runner/bin:$PATH
+          echo $PATH
 
       - name: Echo PATH
         run: echo $PATH
