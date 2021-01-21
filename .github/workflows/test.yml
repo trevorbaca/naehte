@@ -47,7 +47,6 @@ jobs:
 
       - name: Verify LilyPond install
         run: |
-          ln -s /home/runner/bin/lilypond /usr/bin/lilypond
           ln -s /home/runner/bin/lilypond /usr/sbin/lilypond
           echo $(which lilypond)
 
