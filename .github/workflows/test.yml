@@ -46,7 +46,9 @@ jobs:
         run: echo $PATH
 
       - name: Verify LilyPond install
-        run: echo $(which lilypond)
+        run: |
+          PATH=/home/runner/bin:$PATH
+          echo $(which lilypond)
 
       - name: List ~
         run: ls ~
