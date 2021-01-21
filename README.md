@@ -4,11 +4,9 @@ Nähte
 [![Build Status](
     https://api.travis-ci.org/trevorbaca/naehte.svg)](
     https://api.travis-ci.org/trevorbaca/naehte)
-<!---
 [![Code style: black](
     https://img.shields.io/badge/code%20style-black-000000.svg)](
     https://github.com/ambv/black)
--->
 
 Nähte (2018) for cello. Commissioned by Ashley Walters.
 
