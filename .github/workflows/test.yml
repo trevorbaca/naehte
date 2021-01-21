@@ -34,3 +34,4 @@ jobs:
         run: |
           echo $GITHUB_WORKSPACE
           echo $name
+          echo Hello, world!
