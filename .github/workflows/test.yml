@@ -30,8 +30,12 @@ jobs:
       - name: Get package name
         run: name=$(basename "$GITHUB_WORKSPACE")
 
+      - name: Test variable assignment
+        run: flamingo="FLAMINGO"
+
       - name: Log environment variables
         run: |
           echo $GITHUB_WORKSPACE
           echo $name
+          echo $flamingo
           echo Hello, world!
