@@ -27,16 +27,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Get package name
-        run: name=$(basename "$GITHUB_WORKSPACE")
-
-      - name: Test variable assignment
-        run: flamingo="FLAMINGO"
-
       - name: Log environment variables
         run: |
           echo $GITHUB_WORKSPACE
+          # get package name
+          name=$(basename "$GITHUB_WORKSPACE")
           echo $name
-          echo $flamingo
-          basename "$GITHUB_WORKSPACE"
           echo Hello, world!
