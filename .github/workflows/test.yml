@@ -17,20 +17,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
       - name: Log environment variables
         run: |
           echo $GITHUB_WORKSPACE
-          # get package name
           name=$(basename "$GITHUB_WORKSPACE")
           echo $name
           echo Hello, world!
@@ -42,7 +31,6 @@ jobs:
           lilypond_source=lilypond-2.21.82-1.linux-64.sh
           wget -q -O $lilypond $lilypond_url/$lilypond_source
           sh $lilypond --batch
-          which lilypond
 
       - name: Verify LilyPond install
         run: which lilypond
