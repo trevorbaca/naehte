@@ -50,3 +50,16 @@ jobs:
       run: |
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
         pip install /tmp/abjad-ext-rmakers
+
+    - name: Install Bača
+      run: |
+        git clone https://github.com/trevorbaca/baca.git /tmp/baca
+        pip install /tmp/baca
+        rm "$GITHUB_WORKSPACE"/Makefile
+        ln -s /tmp/baca/dotfiles/Makefile "$GITHUB_WORKSPACE"/Makefile
+
+        name=$(basename "$GITHUB_WORKSPACE")
+        echo $name
+
+        if [[ $do_not_symlink_test_py != true ]]; then rm "$GITHUB_WORKSPACE"/$name/test.py; fi
+        if [[ $do_not_symlink_test_py != true ]]; then ln -s /tmp/baca/dotfiles/test_segments.py "$GITHUB_WORKSPACE"/$name/test.py; fi
