@@ -36,3 +36,12 @@ jobs:
 
       - name: Verify LilyPond install
         run: echo $(which lilypond)
+
+      - name: Log setup
+        run: |
+          echo $HOME
+          echo ~
+          ls ~
+          ls ~/bin
+          echo $PATH
+          echo Hello, world!
