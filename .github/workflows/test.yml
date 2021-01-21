@@ -113,20 +113,19 @@ jobs:
       run: make isort-check
 
     - name: Make mypy
-      # uncomment after fixing
       run: 
         export MYPYPATH=/tmp/abjad:/tmp/abjad-ext-rmakers:/tmp/baca:/tmp/ide
         echo $MYPYPATH
         make mypy
 
     - name: Run doctest
-      run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"/$name
+      run: /tmp/baca/scr/doctest "$GITHUB_WORKSPACE"
 
     - name: Check definition files
       run: |
-        cd "$GITHUB_WORKSPACE"/$name/segments
+        cd "$GITHUB_WORKSPACE"/segments
         /tmp/baca/scr/dpc
         cd -
 
     - name: Run pytest
-      run: py.test -rf "$GITHUB_WORKSPACE"/$name/test.py
+      run: py.test -rf "$GITHUB_WORKSPACE"/test.py
