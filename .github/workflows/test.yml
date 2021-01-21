@@ -24,6 +24,7 @@ jobs:
           echo $name
           echo $HOME
           echo ~
+          echo $PATH
           echo Hello, world!
 
       - name: Install LilyPond
@@ -34,14 +35,17 @@ jobs:
           wget -q -O $lilypond $lilypond_url/$lilypond_source
           sh $lilypond --batch
 
+      - name: Add ~/bin to PATH
+        run: export PATH=$PATH:~/bin
+
+      - name: Echo PATH
+        run: echo $PATH
+
       - name: Verify LilyPond install
         run: echo $(which lilypond)
 
-      - name: Log setup
-        run: |
-          echo $HOME
-          echo ~
-          ls ~
-          ls ~/bin
-          echo $PATH
-          echo Hello, world!
+      - name: List ~
+        run: ls ~
+
+      - name: List ~/bin
+        run: ls ~/bin
