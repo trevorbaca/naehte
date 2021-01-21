@@ -13,12 +13,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Log environment variables
         run: |
+          python --version
           echo $HOME
           echo $GITHUB_WORKSPACE
           name=$(basename "$GITHUB_WORKSPACE")
@@ -32,8 +36,7 @@ jobs:
           wget -q -O $lilypond $lilypond_url/$lilypond_source
           sh $lilypond --batch
 
-      - name: Clone & install Abjad trevor/dev
+      - name: Install Abjad
         run: |
           git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-          # pip install -e /tmp/abjad
-          python --version
+          pip install -e /tmp/abjad
