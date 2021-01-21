@@ -141,9 +141,9 @@ jobs:
 
     - name: Check definition files
       run: |
-        cd "$GITHUB_WORKSPACE"/segments
+        cd "$GITHUB_WORKSPACE"/naehte/segments
         /tmp/baca/scr/dpc
         cd -
 
     - name: Run pytest
-      run: py.test -rf "$GITHUB_WORKSPACE"/test.py
+      run: py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
