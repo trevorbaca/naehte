@@ -35,4 +35,5 @@ jobs:
       - name: Clone & install Abjad trevor/dev
         run: |
           git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-          pip install -e /tmp/abjad
+          # pip install -e /tmp/abjad
+          python --version
