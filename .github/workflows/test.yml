@@ -22,6 +22,8 @@ jobs:
           echo $GITHUB_WORKSPACE
           name=$(basename "$GITHUB_WORKSPACE")
           echo $name
+          echo $HOME
+          echo ~
           echo Hello, world!
 
       - name: Install LilyPond
@@ -33,4 +35,4 @@ jobs:
           sh $lilypond --batch
 
       - name: Verify LilyPond install
-        run: which lilypond
+        run: echo $(which lilypond)
