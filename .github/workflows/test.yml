@@ -9,23 +9,20 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Repo checked out into $GITHUB_WORKSPACE
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       - name: Log environment variables
         run: |
+          echo $HOME
           echo $GITHUB_WORKSPACE
           name=$(basename "$GITHUB_WORKSPACE")
           echo $name
-          echo $HOME
-          echo ~
-          echo $PATH
-          echo Hello, world!
 
       - name: Install LilyPond
         run: |
@@ -35,23 +32,7 @@ jobs:
           wget -q -O $lilypond $lilypond_url/$lilypond_source
           sh $lilypond --batch
 
-      - name: Add ~/bin to PATH
+      - name: Clone & install Abjad trevor/dev
         run: |
-          PATH=/home/runner/bin:$PATH
-          echo $PATH
-          export PATH
-          echo $PATH
-
-      - name: Echo PATH
-        run: echo $PATH
-
-      - name: Verify LilyPond install
-        run: |
-          ln -s /home/runner/bin/lilypond /usr/sbin/lilypond
-          echo $(which lilypond)
-
-      - name: List ~
-        run: ls ~
-
-      - name: List ~/bin
-        run: ls ~/bin
+          git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
+          pip install -e /tmp/abjad
