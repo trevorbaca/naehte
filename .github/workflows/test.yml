@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 # Repo checked out into $GITHUB_WORKSPACE
-# $GITHUB_WORKSPACE is wrapper directory
+# $GITHUB_WORKSPACE is wrapper directory for this file
 jobs:
   build:
     runs-on: ubuntu-latest
