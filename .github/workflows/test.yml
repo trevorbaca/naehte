@@ -138,4 +138,6 @@ jobs:
         echo $PATH
         cat "$GITHUB_WORKSPACE"/naehte/test.py
         echo
+        py.test -rf "$GITHUB_WORKSPACE"/naehte/actions.py
+        echo
         py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
