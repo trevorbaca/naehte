@@ -134,4 +134,6 @@ jobs:
     - name: Run pytest
       run: |
         echo $PATH
+        export PATH=/tmp/baca/scr:${PATH}
+        echo $PATH
         py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
