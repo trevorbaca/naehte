@@ -43,6 +43,14 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
+    - name: Verify LilyPond
+      run: |
+        echo $PATH
+        which lilypond
+        export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
+        echo $PATH
+        which lilypond
+
     - name: Install Abjad
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
@@ -134,7 +142,6 @@ jobs:
     - name: Run pytest
       run: |
         echo $PATH
-        which lilypond
         export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
         echo $PATH
         which lilypond
