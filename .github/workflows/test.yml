@@ -134,10 +134,8 @@ jobs:
     - name: Run pytest
       run: |
         echo $PATH
-        export PATH=/tmp/baca/scr:${PATH}
+        which lilypond
+        export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
         echo $PATH
-        cat "$GITHUB_WORKSPACE"/naehte/test.py
-        echo
-        python "$GITHUB_WORKSPACE"/naehte/actions.py
-        echo
+        which lilypond
         py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
