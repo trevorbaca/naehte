@@ -93,7 +93,9 @@ jobs:
     - name: Set scores directory for IDE path management
       run: |
         cat ~/.abjad/abjad.cfg
+        echo
         echo composer_scores_directory = $(dirname "$GITHUB_WORKSPACE") > ~/.abjad/abjad.cfg
+        echo
         cat ~/.abjad/abjad.cfg
 
     - name: Log versions
@@ -125,9 +127,7 @@ jobs:
     - name: Check definition files
       run: |
         cd "$GITHUB_WORKSPACE"/naehte/segments
-        echo $PATH
         export PATH=/tmp/baca/scr:${PATH}
-        echo $PATH
         /tmp/baca/scr/dpc
         cd -
 
@@ -136,4 +136,6 @@ jobs:
         echo $PATH
         export PATH=/tmp/baca/scr:${PATH}
         echo $PATH
+        cat "$GITHUB_WORKSPACE"/naehte/test.py
+        echo
         py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
