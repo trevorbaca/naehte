@@ -46,7 +46,6 @@ jobs:
     - name: Verify LilyPond
       run: |
         echo $PATH
-        which lilypond
         export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
         echo $PATH
         which lilypond
