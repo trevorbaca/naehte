@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 # Repo checked out into $GITHUB_WORKSPACE
-# $GITHUB_WORKSPACE is wrapper directory for this file
+# $GITHUB_WORKSPACE is wrapper directory
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,13 +42,6 @@ jobs:
         lilypond_source=lilypond-2.21.82-1.linux-64.sh
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
-
-    - name: Verify LilyPond
-      run: |
-        echo $PATH
-        export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
-        echo $PATH
-        which lilypond
 
     - name: Install Abjad
       run: |
@@ -116,8 +109,8 @@ jobs:
     - name: Run black
       run: make black-check
 
-    # - name: Run flake8
-    #  run: make flake8
+    - name: Run flake8
+      run: make flake8
 
     - name: Run isort
       run: make isort-check
@@ -133,15 +126,15 @@ jobs:
 
     - name: Check definition files
       run: |
-        cd "$GITHUB_WORKSPACE"/naehte/segments
+        NAME=$(basename "$GITHUB_WORKSPACE")
+        cd "$GITHUB_WORKSPACE"/"$NAME"/segments
+        pwd
         export PATH=/tmp/baca/scr:${PATH}
         /tmp/baca/scr/dpc
         cd -
 
     - name: Run pytest
       run: |
-        echo $PATH
-        export PATH=/home/runner/bin:/tmp/baca/scr:${PATH}
-        echo $PATH
-        which lilypond
-        py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
+        export PATH=/home/runner/bin:${PATH}
+        NAME=$(basename "$GITHUB_WORKSPACE")
+        py.test -rf "$GITHUB_WORKSPACE"/"$NAME"/test.py
