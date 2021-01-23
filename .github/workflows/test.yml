@@ -104,16 +104,16 @@ jobs:
         mypy --version
         pytest --version
 
-    - name: Make black-check
+    - name: Run black
       run: make black-check
 
-    - name: Make flake8
+    - name: Run flake8
       run: make flake8
 
-    - name: Make isort-check
+    - name: Run isort
       run: make isort-check
 
-    - name: Make mypy
+    - name: Run mypy
       run: 
         export MYPYPATH=/tmp/abjad:/tmp/abjad-ext-rmakers:/tmp/baca:/tmp/ide
         echo $MYPYPATH
@@ -125,8 +125,13 @@ jobs:
     - name: Check definition files
       run: |
         cd "$GITHUB_WORKSPACE"/naehte/segments
+        echo $PATH
+        export PATH=/tmp/baca/scr:${PATH}
+        echo $PATH
         /tmp/baca/scr/dpc
         cd -
 
     - name: Run pytest
-      run: py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
+      run: |
+        echo $PATH
+        py.test -rf "$GITHUB_WORKSPACE"/naehte/test.py
