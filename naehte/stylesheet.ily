@@ -1,6 +1,110 @@
-% Nähte (2018)
-\include "/Users/trevorbaca/baca/lilypond/baca.ily"
+#(set-default-paper-size "arch a")
+#(set-global-staff-size 12)
 
+\include "/Users/trevorbaca/baca/lilypond/baca.ily"
+\include "contexts.ily"
+\include "markups.ily"
+
+\paper {
+    %bottom-margin = 10\mm
+    evenFooterMarkup = \markup
+        \on-the-fly #print-page-number-check-first
+        \fill-line {
+            " "
+            \bold
+            \fontsize #3
+            \override #'(font-name . "Palatino")
+            \concat {
+                \override #'(font-name . "Palatino Italic")
+                Nähte
+                \hspace #3
+                —
+                \hspace #3
+                \on-the-fly #print-page-number-check-first
+                \fromproperty #'page:page-number-string
+                \hspace #3
+                —
+                \hspace #3
+                Bača
+            }
+            " "
+    }
+    evenHeaderMarkup = \markup \fill-line { " " }
+    left-margin = 20\mm
+    oddFooterMarkup = \evenFooterMarkup
+    oddHeaderMarkup = \markup \fill-line { " " }
+    print-first-page-number = ##f
+    print-page-number = ##t
+    ragged-bottom = ##t
+    ragged-last-bottom = ##t
+    right-margin = 15\mm
+    markup-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 60)
+        (padding . 0)
+        (stretchability . 0)
+    )
+    system-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 24) % space after each system
+        (padding . 0)
+        (stretchability . 0)
+    )
+    top-markup-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 18)
+        (padding . 0)
+        (stretchability . 0)
+    )
+    top-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 26)
+        (padding . 0)
+        (stretchability . 0)
+    )
+    top-margin = 0\mm
+}
+
+\header {
+    composer = \markup {
+        \override #'(font-name . "Palatino")
+        \fontsize #5
+        %\line { Trevor Bača (*1975) \hspace #15 }
+        \line { Trevor Bača (*1975) }
+    }
+    tagline = \markup { "" }
+    title = \markup \column {
+        \center-align {
+            \override #'(font-name . "Palatino")
+            \fontsize #16
+            NÄHTE
+            " "
+            " "
+            " "
+            \override #'(font-name . "Palatino Italic")
+            \fontsize #3
+            \line {
+                for \hspace #0.75
+                Ashley \hspace #0.75
+                Walters
+            }
+            " "
+            " "
+            " "
+        }
+    }
+}
+
+\layout {
+    %\accidentalStyle neo-modern
+    \accidentalStyle forget
+    indent = 0
+    ragged-bottom = ##t
+    ragged-last = ##t
+    %ragged-right = ##t
+}
+
+%%% CONTEXTS
 
 \layout {
 
@@ -141,3 +245,21 @@
         tupletFullLength = ##t
     }
 }
+
+%%% MARKUP
+
+naehte-colophon-markup = \markup
+  \override #'(font-name . "Palatino")
+  \with-color #black
+  \override #'(baseline-skip . 4)
+  \right-column {
+    \line { Madison, Wisc. }
+    \line { Aug. \hspace #0.75 – \hspace #0.75 Oct. 2018. }
+    }
+
+naehte-degrees-of-ponticello-markup = \baca-boxed-markup \markup "degrees of ponticello"
+
+%%% MARGIN MARKUP %%%
+
+naehte-cello-markup = \markup { \hcenter-in #14 "Cello" }
+naehte-vc-markup = \markup { \hcenter-in #12 "Vc." }
