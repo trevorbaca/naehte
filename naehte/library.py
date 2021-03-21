@@ -31,6 +31,9 @@ metronome_marks = abjad.OrderedDict(
 class ScoreTemplate(baca.ScoreTemplate):
     """
     Score template.
+
+    >>> import naehte
+
     """
 
     ### CLASS VARIABLES ###
