@@ -253,7 +253,8 @@ f_Cello_Music_Voice = {
         :32
         - \espressivo
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             <b fs'!>8
             :32
@@ -309,7 +310,8 @@ f_Cello_Music_Voice = {
         :32
         - \espressivo
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             <b fs'!>8
             :32
@@ -365,7 +367,8 @@ f_Cello_Music_Voice = {
         :32
         - \espressivo
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             <b fs'!>8
             :32
@@ -396,7 +399,8 @@ f_Cello_Music_Voice = {
 
     {
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             % [06 Cello_Music_Voice measure 77 / measure 4]
             \once \override NoteHead.extra-offset = #'(-1.25 . 0)
@@ -532,7 +536,8 @@ f_Cello_Music_Voice = {
         :32
         - \espressivo
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             <b fs'!>8
             :32
@@ -567,9 +572,11 @@ f_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [06 Cello_Music_Voice measure 79 / measure 6]
             <b fs'!>4
@@ -626,7 +633,8 @@ f_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         % [06 Cello_Music_Voice measure 80 / measure 7]
         gf,!2.
@@ -648,7 +656,8 @@ f_Cello_Music_Voice = {
         - \tweak staff-padding 5.5
         \startTextSpan
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             \once \override Glissando.bound-details.left.X-offset = 4
             \override Stem.direction = #down
@@ -719,7 +728,8 @@ f_Cello_Music_Voice = {
 
     >>
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [06 Cello_Music_Voice measure 82 / measure 9]
         \pitchedTrill
@@ -776,9 +786,11 @@ f_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [06 Cello_Music_Voice measure 83 / measure 10]
             <b fs'!>4

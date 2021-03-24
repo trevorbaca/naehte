@@ -226,7 +226,8 @@ g_Cello_Music_Voice = {
         \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4 {
+        \times 3/4
+        {
 
             g4
             - \tweak color #(x11-color 'blue)
@@ -242,7 +243,8 @@ g_Cello_Music_Voice = {
             \<
             \glissando
 
-            \times 2/3 {
+            \times 2/3
+            {
 
                 b,4
                 - \tweak color #(x11-color 'blue)
@@ -532,7 +534,8 @@ g_Cello_Music_Voice = {
         :32
         - \espressivo
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             <b fs'!>8
             :32
@@ -568,9 +571,11 @@ g_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [07 Cello_Music_Voice measure 96 / measure 8]
             \override DynamicLineSpanner.staff-padding = 7
@@ -707,7 +712,8 @@ g_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/6 {
+    \times 7/6
+    {
 
         % [07 Cello_Music_Voice measure 99 / measure 11]
         \override NoteHead.style = #'harmonic

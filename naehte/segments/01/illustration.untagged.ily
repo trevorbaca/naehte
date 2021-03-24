@@ -115,7 +115,8 @@ a_Global_Rests = {
 a_Cello_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/9 {
+    \times 7/9
+    {
 
         % [01 Cello_Music_Voice measure 1]
         \set Staff.instrumentName = \markup \hcenter-in #10 "Cello"
@@ -176,7 +177,8 @@ a_Cello_Music_Voice = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4 {
+        \times 3/4
+        {
 
             ef'!4.
             \stopTextSpanTwo
@@ -227,7 +229,8 @@ a_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [01 Cello_Music_Voice measure 2]
         \override DynamicLineSpanner.staff-padding = 7
@@ -291,7 +294,8 @@ a_Cello_Music_Voice = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 6/7 {
+        \times 6/7
+        {
 
             \override NoteHead.style = #'harmonic
             g'8
@@ -341,7 +345,8 @@ a_Cello_Music_Voice = {
 
         }
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             df'!4
             - \tweak color #(x11-color 'blue)
@@ -380,9 +385,11 @@ a_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [01 Cello_Music_Voice measure 4]
             \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
@@ -435,7 +442,8 @@ a_Cello_Music_Voice = {
         \revert DynamicLineSpanner.staff-padding
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4 {
+        \times 3/4
+        {
 
             \once \override NoteHead.style = #'harmonic-black
             df'!8
@@ -500,7 +508,8 @@ a_Cello_Music_Voice = {
         - \tweak staff-padding 8
         \startTextSpan
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [01 Cello_Music_Voice measure 6]
             <c' g'>4

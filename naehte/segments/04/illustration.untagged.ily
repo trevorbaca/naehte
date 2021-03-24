@@ -285,7 +285,8 @@ d_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [04 Cello_Music_Voice measure 47 / measure 2]
         \override TupletBracket.staff-padding = 1
@@ -340,7 +341,8 @@ d_Cello_Music_Voice = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 6/7 {
+        \times 6/7
+        {
 
             \override NoteHead.style = #'harmonic
             g'8
@@ -390,7 +392,8 @@ d_Cello_Music_Voice = {
 
         }
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             d'4
             - \tweak color #(x11-color 'blue)
@@ -428,9 +431,11 @@ d_Cello_Music_Voice = {
     {
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 6/11 {
+        \times 6/11
+        {
 
-            \times 4/5 {
+            \times 4/5
+            {
 
                 % [04 Cello_Music_Voice measure 49 / measure 4]
                 d'8
@@ -605,7 +610,8 @@ d_Cello_Music_Voice = {
     {
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 6/7 {
+        \times 6/7
+        {
 
             % [04 Cello_Music_Voice measure 52 / measure 7]
             \once \override NoteHead.style = #'harmonic
@@ -636,7 +642,8 @@ d_Cello_Music_Voice = {
             - \tweak staff-padding 8
             \startTextSpanOne
 
-            \times 4/6 {
+            \times 4/6
+            {
 
                 \once \override NoteHead.style = #'harmonic-black
                 \override Beam.positions = #'(-5.5 . -5.5)
@@ -788,7 +795,8 @@ d_Cello_Music_Voice = {
 
     {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [04 Cello_Music_Voice measure 56 / measure 11]
             \override NoteHead.style = #'harmonic
@@ -867,7 +875,8 @@ d_Cello_Music_Voice = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4 {
+        \times 3/4
+        {
 
             \once \override TupletBracket.staff-padding = 3.25
             f,4
@@ -884,7 +893,8 @@ d_Cello_Music_Voice = {
             \<
             \glissando
 
-            \times 2/3 {
+            \times 2/3
+            {
 
                 \once \override TupletBracket.staff-padding = 2
                 g,4
