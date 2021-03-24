@@ -424,7 +424,8 @@ b_Cello_Music_Voice = {
     {
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 6/7 {
+        \times 6/7
+        {
 
             % [02 Cello_Music_Voice measure 11 / measure 3]
             \once \override NoteHead.style = #'harmonic
@@ -453,7 +454,8 @@ b_Cello_Music_Voice = {
             - \tweak staff-padding 8
             \startTextSpanOne
 
-            \times 4/6 {
+            \times 4/6
+            {
 
                 \once \override NoteHead.style = #'harmonic-black
                 \override Beam.positions = #'(-5.5 . -5.5)
@@ -607,7 +609,8 @@ b_Cello_Music_Voice = {
 
     {
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [02 Cello_Music_Voice measure 15 / measure 7]
             \override NoteHead.style = #'harmonic
@@ -843,7 +846,8 @@ b_Cello_Music_Voice = {
         \startTextSpan
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-        \times 4/5 {
+        \times 4/5
+        {
 
             % [02 Cello_Music_Voice measure 20 / measure 12]
             <c' g'>4

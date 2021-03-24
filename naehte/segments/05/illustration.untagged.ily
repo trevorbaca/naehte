@@ -176,7 +176,8 @@ e_Cello_Music_Voice = {
 
     {
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             % [05 Cello_Music_Voice measure 62 / measure 1]
             \once \override NoteHead.extra-offset = #'(-1.25 . 0)
@@ -518,7 +519,8 @@ e_Cello_Music_Voice = {
     {
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/5 {
+        \times 3/5
+        {
 
             % [05 Cello_Music_Voice measure 68 / measure 7]
             \once \override Staff.BarLine.space-alist.first-note = #'(minimum-space . 4)
@@ -655,7 +657,8 @@ e_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         % [05 Cello_Music_Voice measure 71 / measure 10]
         \once \override Staff.BarLine.extra-offset = #'(1 . 0)
@@ -678,7 +681,8 @@ e_Cello_Music_Voice = {
         - \tweak staff-padding 5.5
         \startTextSpan
 
-        \times 2/3 {
+        \times 2/3
+        {
 
             \once \override Glissando.bound-details.left.X-offset = 4
             \override Stem.direction = #down
@@ -749,7 +753,8 @@ e_Cello_Music_Voice = {
 
     >>
 
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [05 Cello_Music_Voice measure 73 / measure 12]
         \pitchedTrill

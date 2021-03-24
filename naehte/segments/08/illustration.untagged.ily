@@ -348,7 +348,8 @@ h_Cello_Music_Voice = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4 {
+        \times 3/4
+        {
 
             \once \override TupletBracket.staff-padding = 2
             g4
@@ -365,7 +366,8 @@ h_Cello_Music_Voice = {
             \<
             \glissando
 
-            \times 2/3 {
+            \times 2/3
+            {
 
                 \once \override TupletBracket.staff-padding = 2.5
                 b,4
@@ -449,7 +451,8 @@ h_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [08 Cello_Music_Voice measure 109 / measure 7]
         \once \override DynamicText.self-alignment-X = -0.5
@@ -498,7 +501,8 @@ h_Cello_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [08 Cello_Music_Voice measure 110 / measure 8]
         <f c'>2.

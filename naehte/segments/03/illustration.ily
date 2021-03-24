@@ -413,7 +413,8 @@ c_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
-        \times 3/4 {                                                           %! baca.skeleton()
+        \times 3/4                                                             %! baca.skeleton()
+        {                                                                      %! baca.skeleton()
 
             \once \override TupletBracket.staff-padding = 3.25                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
             f,4                                                                %! baca.skeleton()
@@ -430,7 +431,8 @@ c_Cello_Music_Voice = {                                                        %
             \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
-            \times 2/3 {                                                       %! baca.skeleton()
+            \times 2/3                                                         %! baca.skeleton()
+            {                                                                  %! baca.skeleton()
 
                 \once \override TupletBracket.staff-padding = 2                %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
                 g,4                                                            %! baca.skeleton()
@@ -617,7 +619,8 @@ c_Cello_Music_Voice = {                                                        %
 
     }                                                                          %! baca.skeleton()
 
-    \times 4/5 {                                                               %! baca.skeleton()
+    \times 4/5                                                                 %! baca.skeleton()
+    {                                                                          %! baca.skeleton()
 
         % [03 Cello_Music_Voice measure 32 / measure 5]                        %! baca.SegmentMaker._comment_measure_numbers()
         \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
@@ -654,7 +657,8 @@ c_Cello_Music_Voice = {                                                        %
     {                                                                          %! baca.skeleton()
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
-        \times 3/4 {                                                           %! baca.skeleton()
+        \times 3/4                                                             %! baca.skeleton()
+        {                                                                      %! baca.skeleton()
 
             % [03 Cello_Music_Voice measure 33 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
             <a, e>8
@@ -770,7 +774,8 @@ c_Cello_Music_Voice = {                                                        %
     {                                                                          %! baca.skeleton()
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
-        \times 6/7 {                                                           %! baca.skeleton()
+        \times 6/7                                                             %! baca.skeleton()
+        {                                                                      %! baca.skeleton()
 
             % [03 Cello_Music_Voice measure 36 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
             \once \override NoteHead.style = #'harmonic                        %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
@@ -799,7 +804,8 @@ c_Cello_Music_Voice = {                                                        %
             - \tweak staff-padding 8                                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
-            \times 4/6 {                                                       %! baca.skeleton()
+            \times 4/6                                                         %! baca.skeleton()
+            {                                                                  %! baca.skeleton()
 
                 \once \override NoteHead.style = #'harmonic-black              %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
                 \override Beam.positions = #'(-5.5 . -5.5)                     %! baca.beam_positions():baca.OverrideCommand._call(1)
@@ -954,7 +960,8 @@ c_Cello_Music_Voice = {                                                        %
 
     {                                                                          %! baca.skeleton()
 
-        \times 4/5 {                                                           %! baca.skeleton()
+        \times 4/5                                                             %! baca.skeleton()
+        {                                                                      %! baca.skeleton()
 
             % [03 Cello_Music_Voice measure 40 / measure 13]                   %! baca.SegmentMaker._comment_measure_numbers()
             \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
@@ -1034,7 +1041,8 @@ c_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
 
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
-        \times 3/4 {                                                           %! baca.skeleton()
+        \times 3/4                                                             %! baca.skeleton()
+        {                                                                      %! baca.skeleton()
 
             \once \override TupletBracket.staff-padding = 3.25                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
             f,4                                                                %! baca.skeleton()
@@ -1051,7 +1059,8 @@ c_Cello_Music_Voice = {                                                        %
             \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
-            \times 2/3 {                                                       %! baca.skeleton()
+            \times 2/3                                                         %! baca.skeleton()
+            {                                                                  %! baca.skeleton()
 
                 \once \override TupletBracket.staff-padding = 2                %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
                 g,4                                                            %! baca.skeleton()
@@ -1173,7 +1182,8 @@ c_Cello_Music_Voice = {                                                        %
     }                                                                          %! baca.skeleton()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
-    \times 7/8 {                                                               %! baca.skeleton()
+    \times 7/8                                                                 %! baca.skeleton()
+    {                                                                          %! baca.skeleton()
 
         % [03 Cello_Music_Voice measure 43 / measure 16]                       %! baca.SegmentMaker._comment_measure_numbers()
         <b fs'!>4
@@ -1244,7 +1254,8 @@ c_Cello_Music_Voice = {                                                        %
     }                                                                          %! baca.skeleton()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
-    \times 7/8 {                                                               %! baca.skeleton()
+    \times 7/8                                                                 %! baca.skeleton()
+    {                                                                          %! baca.skeleton()
 
         % [03 Cello_Music_Voice measure 44 / measure 17]                       %! baca.SegmentMaker._comment_measure_numbers()
         \override DynamicLineSpanner.staff-padding = 6                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
