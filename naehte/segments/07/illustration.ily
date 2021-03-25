@@ -262,6 +262,7 @@ g_Global_Skips = {                                                             %
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
 
+                                                                               %! abjad.ScoreTemplate._make_global_context()
 }                                                                              %! ide.Path.extern()
 
 
@@ -330,11 +331,13 @@ g_Global_Rests = {                                                             %
     %! PHANTOM
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
+                                                                               %! abjad.ScoreTemplate._make_global_context()
 }                                                                              %! ide.Path.extern()
 
 
 g_Cello_Music_Voice = {                                                        %! ide.Path.extern()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 89 / measure 1]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -361,8 +364,11 @@ g_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
         \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
+        %! baca.skeleton()
         \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        %! baca.skeleton()
         \times 3/4                                                             %! baca.skeleton()
+        %! baca.skeleton()
         {                                                                      %! baca.skeleton()
 
             %! baca.skeleton()
@@ -381,7 +387,9 @@ g_Cello_Music_Voice = {                                                        %
             \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
+            %! baca.skeleton()
             \times 2/3                                                         %! baca.skeleton()
+            %! baca.skeleton()
             {                                                                  %! baca.skeleton()
 
                 %! baca.skeleton()
@@ -410,12 +418,16 @@ g_Cello_Music_Voice = {                                                        %
                 \revert TupletBracket.staff-padding                            %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
                 <> \bacaStopTextSpanRhythmAnnotation                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+            %! baca.skeleton()
             }                                                                  %! baca.skeleton()
 
+        %! baca.skeleton()
         }                                                                      %! baca.skeleton()
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 90 / measure 2]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -470,8 +482,10 @@ g_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 91 / measure 3]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -510,8 +524,10 @@ g_Cello_Music_Voice = {                                                        %
         \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 92 / measure 4]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -555,8 +571,10 @@ g_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 93 / measure 5]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -599,8 +617,10 @@ g_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 94 / measure 6]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -649,8 +669,10 @@ g_Cello_Music_Voice = {                                                        %
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 95 / measure 7]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -683,7 +705,9 @@ g_Cello_Music_Voice = {                                                        %
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \espressivo                                                          %! baca.espressivo():baca.IndicatorCommand._call()
 
+        %! baca.skeleton()
         \times 4/5                                                             %! baca.skeleton()
+        %! baca.skeleton()
         {                                                                      %! baca.skeleton()
 
             <b fs'!>8
@@ -715,15 +739,22 @@ g_Cello_Music_Voice = {                                                        %
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
             <> \bacaStopTextSpanRhythmAnnotation                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+        %! baca.skeleton()
         }                                                                      %! baca.skeleton()
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
+    %! baca.skeleton()
     \times 6/7                                                                 %! baca.skeleton()
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
+        %! baca.skeleton()
         \times 4/5                                                             %! baca.skeleton()
+        %! baca.skeleton()
         {                                                                      %! baca.skeleton()
 
             % [07 Cello_Music_Voice measure 96 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -758,6 +789,7 @@ g_Cello_Music_Voice = {                                                        %
             <f c'>4
             \glissando                                                         %! baca.glissando():abjad.glissando(7)
 
+        %! baca.skeleton()
         }                                                                      %! baca.skeleton()
 
         <bf! f'>4
@@ -774,8 +806,10 @@ g_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.glissando():abjad.glissando(7)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 97 / measure 9]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -822,8 +856,10 @@ g_Cello_Music_Voice = {                                                        %
         ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 98 / measure 10]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -862,10 +898,14 @@ g_Cello_Music_Voice = {                                                        %
         \revert RepeatTie.extra-offset                                         %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
+    %! baca.skeleton()
     \times 7/6                                                                 %! baca.skeleton()
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 99 / measure 11]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -914,8 +954,10 @@ g_Cello_Music_Voice = {                                                        %
         \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 100 / measure 12]                      %! baca.SegmentMaker._comment_measure_numbers()
@@ -1038,8 +1080,10 @@ g_Cello_Music_Voice = {                                                        %
         \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.skeleton()
     {                                                                          %! baca.skeleton()
 
         % [07 Cello_Music_Voice measure 101 / measure 13]                      %! baca.SegmentMaker._comment_measure_numbers()
@@ -1158,11 +1202,15 @@ g_Cello_Music_Voice = {                                                        %
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+    %! baca.skeleton()
     }                                                                          %! baca.skeleton()
 
+    %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
             % [07 Cello_Music_Voice measure 102 / measure 14]                  %! baca.SegmentMaker._comment_measure_numbers()
@@ -1178,9 +1226,12 @@ g_Cello_Music_Voice = {                                                        %
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
             % [07 Cello_Rest_Voice measure 102 / measure 14]                   %! baca.SegmentMaker._comment_measure_numbers()
@@ -1190,13 +1241,21 @@ g_Cello_Music_Voice = {                                                        %
             R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
+    %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
+    %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    %! PHANTOM
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        %! PHANTOM
         \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        %! PHANTOM
         {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
 
             % [07 Cello_Music_Voice measure 103 / measure 15]                  %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
@@ -1209,9 +1268,15 @@ g_Cello_Music_Voice = {                                                        %
             R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):PHANTOM:HIDDEN:MULTIMEASURE_REST
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:MULTIMEASURE_REST:PHANTOM:baca.SegmentMaker._style_phantom_measures(5)
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        %! PHANTOM
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        %! PHANTOM
         \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        %! PHANTOM
         {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
 
             % [07 Cello_Rest_Voice measure 103 / measure 15]                   %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
@@ -1227,19 +1292,29 @@ g_Cello_Music_Voice = {                                                        %
             R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):PHANTOM:REST_VOICE:MULTIMEASURE_REST
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:PHANTOM:REST_VOICE:baca.SegmentMaker._style_phantom_measures(5)
 
+        %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        %! PHANTOM
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
 
+    %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    %! PHANTOM
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
+                                                                               %! naehte.ScoreTemplate.__call__()
 }                                                                              %! ide.Path.extern()
 
 
 g_Cello_Music_Staff = <<                                                       %! ide.Path.extern()
 
+    %! abjad.ScoreTemplate._make_global_context()
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context()
+    %! abjad.ScoreTemplate._make_global_context()
     \g_Global_Rests                                                            %! ide.Path.extern()
 
+    %! naehte.ScoreTemplate.__call__()
     \context Voice = "Cello_Music_Voice"                                       %! naehte.ScoreTemplate.__call__()
+    %! naehte.ScoreTemplate.__call__()
     \g_Cello_Music_Voice                                                       %! ide.Path.extern()
 
+                                                                               %! naehte.ScoreTemplate.__call__()
 >>                                                                             %! ide.Path.extern()
