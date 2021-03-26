@@ -1,1390 +1,1390 @@
-c_Global_Skips = {                                                             %! ide.Path.extern()
+c_Global_Skips = { %! ide.Path.extern()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 28 / measure 1]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 28 / measure 1] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.bar_line()
     %! baca.IndicatorCommand._call()
-    \bar ".|:"                                                                 %! baca.bar_line():baca.IndicatorCommand._call()
+    \bar ".|:" %! baca.bar_line():baca.IndicatorCommand._call()
     %! baca.bar_line_x_extent()
     %! NOT_MOL
     %! MEASURE_28
     %! baca.OverrideCommand._call(1)
-    \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! baca.bar_line_x_extent():NOT_MOL:MEASURE_28:baca.OverrideCommand._call(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 2) %! baca.bar_line_x_extent():NOT_MOL:MEASURE_28:baca.OverrideCommand._call(1)
     %! baca.bar_line_x_extent()
     %! ONLY_MOL
     %! MEASURE_28
     %! baca.OverrideCommand._call(1)
-%%% \once \override Score.BarLine.X-extent = #'(0 . 3)                         %! baca.bar_line_x_extent():ONLY_MOL:MEASURE_28:baca.OverrideCommand._call(1)
+%%% \once \override Score.BarLine.X-extent = #'(0 . 3) %! baca.bar_line_x_extent():ONLY_MOL:MEASURE_28:baca.OverrideCommand._call(1)
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 5/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 5/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! EMPTY_START_BAR
     %! +SEGMENT
     %! baca.SegmentMaker._make_global_skips(4)
-    \bar ""                                                                    %! EMPTY_START_BAR:+SEGMENT:baca.SegmentMaker._make_global_skips(4)
+    \bar "" %! EMPTY_START_BAR:+SEGMENT:baca.SegmentMaker._make_global_skips(4)
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 5/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
-    - \tweak extra-offset #'(0 . 14)                                           %! baca.rehearsal_mark():+SEGMENT:baca.IndicatorCommand._call()
-    - \baca-rehearsal-mark-markup "C" #10                                      %! baca.rehearsal_mark():+SEGMENT:baca.IndicatorCommand._call()
+    s1 * 5/4 %! baca.SegmentMaker._make_global_skips(1)
+    - \tweak extra-offset #'(0 . 14) %! baca.rehearsal_mark():+SEGMENT:baca.IndicatorCommand._call()
+    - \baca-rehearsal-mark-markup "C" #10 %! baca.rehearsal_mark():+SEGMENT:baca.IndicatorCommand._call()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "1"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "1" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "28"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "28"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"                        %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "91" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "91" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'34'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'34'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 29 / measure 2]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 29 / measure 2] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 4/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 4/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "2"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "2" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "29"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "29"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'37'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'37'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 30 / measure 3]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 30 / measure 3] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.bar_line()
     %! baca.IndicatorCommand._call()
-    \bar ":|."                                                                 %! baca.bar_line():baca.IndicatorCommand._call()
+    \bar ":|." %! baca.bar_line():baca.IndicatorCommand._call()
     %! baca.bar_line_x_extent()
     %! ONLY_MOL
     %! MEASURE_30
     %! baca.OverrideCommand._call(1)
-    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! baca.bar_line_x_extent():ONLY_MOL:MEASURE_30:baca.OverrideCommand._call(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5) %! baca.bar_line_x_extent():ONLY_MOL:MEASURE_30:baca.OverrideCommand._call(1)
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 3/8                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 3/8 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 3/8                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 3/8 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "3"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "3" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "30"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "30"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'39'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'39'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 31 / measure 4]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 31 / measure 4] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 8/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 8/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 2                                                                     %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._attach_metronome_marks(1)
-    \bacaStopTextSpanMM                                                        %! baca.SegmentMaker._attach_metronome_marks(1)
+    \bacaStopTextSpanMM %! baca.SegmentMaker._attach_metronome_marks(1)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "4"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "4" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "31"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "31"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"                        %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'40'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'40'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 32 / measure 5]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 32 / measure 5] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 4/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 4/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._attach_metronome_marks(1)
-    \bacaStopTextSpanMM                                                        %! baca.SegmentMaker._attach_metronome_marks(1)
+    \bacaStopTextSpanMM %! baca.SegmentMaker._attach_metronome_marks(1)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "5"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "5" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "32"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "32"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'53'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'53'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 33 / measure 6]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 33 / measure 6] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 4/8                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 4/8 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "6"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "6" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "33"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "33"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'55'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'55'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 34 / measure 7]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 34 / measure 7] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 1/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 1/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "7"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "7" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "34"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "34"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only-fermata "2''"                                   %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only-fermata "2''"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 35 / measure 8]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 35 / measure 8] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 8/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 8/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 2                                                                     %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._attach_metronome_marks(1)
-    \bacaStopTextSpanMM                                                        %! baca.SegmentMaker._attach_metronome_marks(1)
+    \bacaStopTextSpanMM %! baca.SegmentMaker._attach_metronome_marks(1)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "8"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "8" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "35"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "35"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"                        %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[1'58'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[1'58'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 36 / measure 9]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 36 / measure 9] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 3/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 3/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 3/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 3/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "9"                                            %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "9" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "36"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "36"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'07'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'07'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 37 / measure 10]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 37 / measure 10] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 3/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 3/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "10"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "10" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "37"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "37"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'11'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'11'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 38 / measure 11]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 38 / measure 11] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 2/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 2/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "11"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "11" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "38"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "38"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'14'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'14'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 39 / measure 12]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 39 / measure 12] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 1/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 1/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "12"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "12" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "39"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "39"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only-fermata "2''"                                   %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only-fermata "2''"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 40 / measure 13]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 40 / measure 13] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 6/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 3/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 3/2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._attach_metronome_marks(1)
-    \bacaStopTextSpanMM                                                        %! baca.SegmentMaker._attach_metronome_marks(1)
+    \bacaStopTextSpanMM %! baca.SegmentMaker._attach_metronome_marks(1)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "13"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "13" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "40"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "40"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"                        %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "91" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "91" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'18'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'18'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 41 / measure 14]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 41 / measure 14] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 4/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 4/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "14"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "14" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "41"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "41"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'22'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'22'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 42 / measure 15]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 42 / measure 15] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 2/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 2/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/2 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._attach_metronome_marks(1)
-    \bacaStopTextSpanMM                                                        %! baca.SegmentMaker._attach_metronome_marks(1)
+    \bacaStopTextSpanMM %! baca.SegmentMaker._attach_metronome_marks(1)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "15"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "15" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "42"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "42"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \abjad-invisible-line                                                    %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \abjad-invisible-line     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"                        %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_METRONOME_MARK
     %! baca.SegmentMaker._attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
+%@% \bacaStartTextSpanMM     %! baca.SegmentMaker._set_status_tag():EXPLICIT_METRONOME_MARK:baca.SegmentMaker._attach_metronome_marks(2)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \abjad-invisible-line %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue         %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     %! baca.SegmentMaker._attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
+    \bacaStartTextSpanMM %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'25'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'25'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 43 / measure 16]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 43 / measure 16] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 7/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 7/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 7/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 7/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "16"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "16" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "43"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "43"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'27'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'27'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 44 / measure 17]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 44 / measure 17] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 7/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 7/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "17"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "17" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "44"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "44"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-left-only "[2'35'']"                                      %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[2'35'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Skips measure 45 / measure 18]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Skips measure 45 / measure 18] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_skips(2)
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_TIME_SIGNATURE
-    \time 1/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
+    \time 1/4 %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     %! baca.SegmentMaker._attach_color_literal(2)
     %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca.SegmentMaker._make_global_skips(1)
-    s1 * 1/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
+    s1 * 1/4 %! baca.SegmentMaker._make_global_skips(1)
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    - \baca-start-lmn-left-only "18"                                           %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    - \baca-start-lmn-left-only "18" %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+    \bacaStartTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-mn-left-only "45"                                            %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% - \baca-start-mn-left-only "45"     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
+%@% \bacaStartTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% - \baca-start-ct-both-left-fermata "2''" "[2'45'']"                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-both-left-fermata "2''" "[2'45'']"     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% \bacaStartTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._style_phantom_measures(1)
     %! PHANTOM
-    % [03 Global_Skips measure 46 / measure 19]                                %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    % [03 Global_Skips measure 46 / measure 19] %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     %! baca.SegmentMaker._style_phantom_measures(2)
     %! PHANTOM
-    \baca-time-signature-transparent                                           %! baca.SegmentMaker._style_phantom_measures(2):PHANTOM
+    \baca-time-signature-transparent %! baca.SegmentMaker._style_phantom_measures(2):PHANTOM
     %! baca.SegmentMaker._make_global_skips(3)
     %! PHANTOM
-    s1 * 1/4                                                                   %! baca.SegmentMaker._make_global_skips(3):PHANTOM
+    s1 * 1/4 %! baca.SegmentMaker._make_global_skips(3):PHANTOM
     %! LOCAL_MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._style_phantom_measures(1)
     %! PHANTOM
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    \bacaStopTextSpanLMN %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     %! MEASURE_NUMBER
     %! baca.SegmentMaker._label_measure_numbers()
     %! baca.SegmentMaker._style_phantom_measures(1)
     %! PHANTOM
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+%@% \bacaStopTextSpanMN     %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     %! EOS_STOP_MM_SPANNER
     %! baca.SegmentMaker._attach_metronome_marks(4)
     %! baca.SegmentMaker._style_phantom_measures(1)
     %! PHANTOM
-    \bacaStopTextSpanMM                                                        %! EOS_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    \bacaStopTextSpanMM %! EOS_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     %! CLOCK_TIME
     %! baca.SegmentMaker._label_clock_time()
     %! baca.SegmentMaker._style_phantom_measures(1)
     %! PHANTOM
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+%@% \bacaStopTextSpanCT     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     %! baca.SegmentMaker._style_phantom_measures(3)
     %! PHANTOM
-    \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
+    \once \override Score.BarLine.transparent = ##t %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     %! baca.SegmentMaker._style_phantom_measures(3)
     %! PHANTOM
-    \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
+    \once \override Score.SpanBar.transparent = ##t %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
 
-                                                                               %! abjad.ScoreTemplate._make_global_context()
-}                                                                              %! ide.Path.extern()
+%! abjad.ScoreTemplate._make_global_context()
+} %! ide.Path.extern()
 
 
-c_Global_Rests = {                                                             %! ide.Path.extern()
+c_Global_Rests = { %! ide.Path.extern()
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 28 / measure 1]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 28 / measure 1] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 5/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 5/4 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 29 / measure 2]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 29 / measure 2] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1                                                                     %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 30 / measure 3]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 30 / measure 3] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 3/8                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 3/8 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 31 / measure 4]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 31 / measure 4] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 2                                                                     %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 32 / measure 5]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 32 / measure 5] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1                                                                     %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 33 / measure 6]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 33 / measure 6] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1/2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 34 / measure 7]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 34 / measure 7] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.global_fermata()
     %! baca.GlobalFermataCommand._call(2)
-    \baca-fermata-measure                                                      %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
+    \baca-fermata-measure %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
+    R1 * 1/4 %! baca.SegmentMaker._make_global_rests(1)
+    ^ \baca-fermata-markup %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 35 / measure 8]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 35 / measure 8] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 2                                                                     %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 36 / measure 9]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 36 / measure 9] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 3/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 3/4 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 37 / measure 10]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 37 / measure 10] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 3/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 3/4 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 38 / measure 11]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 38 / measure 11] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1/2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 39 / measure 12]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 39 / measure 12] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.global_fermata()
     %! baca.GlobalFermataCommand._call(2)
-    \baca-fermata-measure                                                      %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
+    \baca-fermata-measure %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
+    R1 * 1/4 %! baca.SegmentMaker._make_global_rests(1)
+    ^ \baca-fermata-markup %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 40 / measure 13]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 40 / measure 13] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 3/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 3/2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 41 / measure 14]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 41 / measure 14] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1                                                                     %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 42 / measure 15]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 42 / measure 15] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/2                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 1/2 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 43 / measure 16]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 43 / measure 16] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 7/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 7/4 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 44 / measure 17]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 44 / measure 17] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 7/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
+    R1 * 7/4 %! baca.SegmentMaker._make_global_rests(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
-    % [03 Global_Rests measure 45 / measure 18]                                %! baca.SegmentMaker._comment_measure_numbers()
+    % [03 Global_Rests measure 45 / measure 18] %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.global_fermata()
     %! baca.GlobalFermataCommand._call(2)
-    \baca-fermata-measure                                                      %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
+    \baca-fermata-measure %! baca.global_fermata():baca.GlobalFermataCommand._call(2)
     %! baca.SegmentMaker._make_global_rests(1)
-    R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
-    ^ \baca-fermata-markup                                                     %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
+    R1 * 1/4 %! baca.SegmentMaker._make_global_rests(1)
+    ^ \baca-fermata-markup %! baca.global_fermata():baca.GlobalFermataCommand._call(1)
 
     %! baca.SegmentMaker._comment_measure_numbers()
     %! baca.SegmentMaker._style_phantom_measures(4)
     %! PHANTOM
-    % [03 Global_Rests measure 46 / measure 19]                                %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(4):PHANTOM
+    % [03 Global_Rests measure 46 / measure 19] %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(4):PHANTOM
     %! baca.SegmentMaker._make_global_rests(2)
     %! PHANTOM
-    R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(2):PHANTOM
+    R1 * 1/4 %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
-                                                                               %! abjad.ScoreTemplate._make_global_context()
-}                                                                              %! ide.Path.extern()
+%! abjad.ScoreTemplate._make_global_context()
+} %! ide.Path.extern()
 
 
-c_Cello_Music_Voice = {                                                        %! ide.Path.extern()
+c_Cello_Music_Voice = { %! ide.Path.extern()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 28 / measure 1]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 28 / measure 1] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 8.5                       %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 8.5 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         %! baca.tuplet_bracket_down()
         %! baca.OverrideCommand._call(1)
-        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
+        \override TupletBracket.direction = #down %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
         %! baca.SegmentMaker._reapply_persistent_indicators(3)
         %! baca.SegmentMaker._set_status_tag()
         %! REAPPLIED_CLEF
-        \clef "bass"                                                           %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
+        \clef "bass" %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
         %! baca.SegmentMaker._attach_color_literal(2)
         %! REAPPLIED_CLEF_COLOR
-        \once \override Staff.Clef.color = #(x11-color 'green4)                %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_COLOR
+        \once \override Staff.Clef.color = #(x11-color 'green4) %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_COLOR
         %! baca.SegmentMaker._attach_color_literal(1)
         %! REAPPLIED_CLEF_COLOR_CANCELLATION
-    %@% \override Staff.Clef.color = ##f                                       %! baca.SegmentMaker._attach_color_literal(1):REAPPLIED_CLEF_COLOR_CANCELLATION
+    %@% \override Staff.Clef.color = ##f     %! baca.SegmentMaker._attach_color_literal(1):REAPPLIED_CLEF_COLOR_CANCELLATION
         %! baca.SegmentMaker._reapply_persistent_indicators(3)
         %! baca.SegmentMaker._treat_persistent_wrapper(2)
         %! baca.SegmentMaker._set_status_tag()
         %! REAPPLIED_CLEF
-        \set Staff.forceClef = ##t                                             %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
+        \set Staff.forceClef = ##t %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
         %! baca.skeleton()
-        ef,!4                                                                  %! baca.skeleton()
+        ef,!4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \p                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
+        \p %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        ^ \baca-reapplied-indicator-markup "(“Cello”)" %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_color_literal(2)
         %! REAPPLIED_CLEF_REDRAW_COLOR
-        \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
+        \override Staff.Clef.color = #(x11-color 'OliveDrab) %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
         %! baca.skeleton()
-        b4                                                                     %! baca.skeleton()
+        b4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         %! baca.skeleton()
-        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
         %! baca.skeleton()
-        \times 3/4                                                             %! baca.skeleton()
+        \times 3/4 %! baca.skeleton()
         %! baca.skeleton()
-        {                                                                      %! baca.skeleton()
+        { %! baca.skeleton()
 
             %! baca.tuplet_bracket_staff_padding()
             %! baca.OverrideCommand._call(1)
-            \once \override TupletBracket.staff-padding = 3.25                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+            \once \override TupletBracket.staff-padding = 3.25 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
             %! baca.skeleton()
-            f,4                                                                %! baca.skeleton()
+            f,4 %! baca.skeleton()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \p                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \p %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \>                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.skeleton()
-            a4                                                                 %! baca.skeleton()
+            a4 %! baca.skeleton()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \ppp                                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.skeleton()
-            \times 2/3                                                         %! baca.skeleton()
+            \times 2/3 %! baca.skeleton()
             %! baca.skeleton()
-            {                                                                  %! baca.skeleton()
+            { %! baca.skeleton()
 
                 %! baca.tuplet_bracket_staff_padding()
                 %! baca.OverrideCommand._call(1)
-                \once \override TupletBracket.staff-padding = 2                %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+                \once \override TupletBracket.staff-padding = 2 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
                 %! baca.skeleton()
-                g,4                                                            %! baca.skeleton()
+                g,4 %! baca.skeleton()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \p                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \p %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \>                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                \stopTextSpanOne                                               %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+                \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-dashed-line-with-hook                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "spz."                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "spz." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
                 %! baca.skeleton()
-                fs!2                                                           %! baca.skeleton()
+                fs!2 %! baca.skeleton()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(3)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(3)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \ppp                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \ppp %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak stencil #abjad-flared-hairpin                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \<                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                \stopTextSpanOne                                               %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+                \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-dashed-line-with-hook                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "(LH) vib. molto"               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "(LH) vib. molto" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.SegmentMaker._attach_shadow_tie_indicators()
-                - \tweak stencil ##f                                           %! baca.SegmentMaker._attach_shadow_tie_indicators()
+                - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
                 %! baca.SegmentMaker._attach_shadow_tie_indicators()
-                ~                                                              %! baca.SegmentMaker._attach_shadow_tie_indicators()
+                ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
                 %! baca.dls_staff_padding()
                 %! baca.OverrideCommand._call(2)
-                \revert DynamicLineSpanner.staff-padding                       %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+                \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
                 %! baca.rhythm_annotation_spanner()
                 %! RHYTHM_ANNOTATION_SPANNER
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                <> \bacaStopTextSpanRhythmAnnotation                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+                <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
             %! baca.skeleton()
-            }                                                                  %! baca.skeleton()
+            } %! baca.skeleton()
 
         %! baca.skeleton()
-        }                                                                      %! baca.skeleton()
+        } %! baca.skeleton()
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 29 / measure 2]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 29 / measure 2] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(1)
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0) %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 3                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 3 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        fs4                                                                    %! baca.skeleton()
+        fs4 %! baca.skeleton()
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
         <fs! cs'!>4
         %! baca.hairpin()
@@ -1392,442 +1392,442 @@ c_Cello_Music_Voice = {                                                        %
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-effort-f                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-effort-f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 10.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanTwo                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III"                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "II / III" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "no scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(1)
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0) %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        fs4                                                                    %! baca.skeleton()
+        fs4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-effort-f                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-effort-f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \pitchedTrill %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         %! baca.skeleton()
-        fs!4                                                                   %! baca.skeleton()
+        fs!4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
-        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan g %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 30 / measure 3]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 30 / measure 3] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(1)
-        \override RepeatTie.extra-offset = #'(-1.5 . 0)                        %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
+        \override RepeatTie.extra-offset = #'(-1.5 . 0) %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        fs8.                                                                   %! baca.skeleton()
+        fs8. %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak stencil #abjad-flared-hairpin                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "no scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "scr. poss."                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "scr. poss." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
         %! baca.skeleton()
-        fs8.                                                                   %! baca.skeleton()
+        fs8. %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \fff                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \fff %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(4)
         %! SPANNER_STOP
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
+        \stopTrillSpan %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.breathe()
         %! baca.IndicatorCommand._call()
-        \breathe                                                               %! baca.breathe():baca.IndicatorCommand._call()
+        \breathe %! baca.breathe():baca.IndicatorCommand._call()
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(2)
-        \revert RepeatTie.extra-offset                                         %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(2)
+        \revert RepeatTie.extra-offset %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 31 / measure 4]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 31 / measure 4] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(1)
-        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+        \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 7                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 7 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         <e b>4
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak stencil #abjad-flared-hairpin                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.glissando()
         %! abjad.glissando(7)
-        - \abjad-zero-padding-glissando                                        %! baca.glissando():abjad.glissando(7)
+        - \abjad-zero-padding-glissando %! baca.glissando():abjad.glissando(7)
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-double-diamond-markup           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-double-diamond-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III largo"                        %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "II / III largo" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         %! baca.glissando()
         %! abjad.glissando(1)
-        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \hide NoteHead %! baca.glissando():abjad.glissando(1)
         %! baca.glissando()
         %! abjad.glissando(1)
-        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f %! baca.glissando():abjad.glissando(1)
         %! baca.glissando()
         %! abjad.glissando(1)
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t %! baca.glissando():abjad.glissando(1)
         %! baca.glissando()
         %! abjad.glissando(1)
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t %! baca.glissando():abjad.glissando(1)
         <e b>4
 
         <e b>4
@@ -1843,1595 +1843,1595 @@ c_Cello_Music_Voice = {                                                        %
         <g d'>4
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(2)
-        \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
+        \revert NoteHead.style %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    \times 4/5                                                                 %! baca.skeleton()
+    \times 4/5 %! baca.skeleton()
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 32 / measure 5]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 32 / measure 5] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(1)
-        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+        \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
         %! baca.glissando()
         %! abjad.glissando(6)
-        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert Accidental.stencil %! baca.glissando():abjad.glissando(6)
         %! baca.glissando()
         %! abjad.glissando(6)
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip %! baca.glissando():abjad.glissando(6)
         %! baca.glissando()
         %! abjad.glissando(6)
-        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers %! baca.glissando():abjad.glissando(6)
         %! baca.glissando()
         %! abjad.glissando(6)
-        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead %! baca.glissando():abjad.glissando(6)
         <g d'>1
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
         <g d'>4
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak arrow-length 2                                                %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-length 2 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak arrow-width 0.5                                               %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-width 0.5 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak thickness 3                                                   %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak thickness 3 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
+        \glissando %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(2)
-        \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
+        \revert NoteHead.style %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.skeleton()
-        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
         %! baca.skeleton()
-        \times 3/4                                                             %! baca.skeleton()
+        \times 3/4 %! baca.skeleton()
         %! baca.skeleton()
-        {                                                                      %! baca.skeleton()
+        { %! baca.skeleton()
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 33 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 33 / measure 6] %! baca.SegmentMaker._comment_measure_numbers()
             <a, e>8
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \fff                                                               %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \fff %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak stencil #abjad-flared-hairpin                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \>                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
-            \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+            \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
             [
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "baca.skeleton()"                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.padding 2.75                          %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+            - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak color #darkcyan                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \bacaStartTextSpanRhythmAnnotation                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "larg."                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 5.5                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpan                                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
             <f c'>8
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             <g, d>8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(4)
             %! SPANNER_STOP
-            \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+            \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
-            \pitchedTrill                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+            \pitchedTrill %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
             %! baca.skeleton()
-            af,!8                                                              %! baca.skeleton()
+            af,!8 %! baca.skeleton()
             ~
             ]
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.padding 6.25                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+            - \tweak bound-details.right.padding 6.25 %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
-            \startTrillSpan bf,                                                %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+            \startTrillSpan bf, %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         %! baca.skeleton()
-        }                                                                      %! baca.skeleton()
+        } %! baca.skeleton()
 
         %! baca.skeleton()
-        af,8                                                                   %! baca.skeleton()
+        af,8 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \p                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \p %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.breathe()
         %! baca.IndicatorCommand._call()
-        \breathe                                                               %! baca.breathe():baca.IndicatorCommand._call()
+        \breathe %! baca.breathe():baca.IndicatorCommand._call()
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    << %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        \context Voice = "Cello_Music_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 34 / measure 7]                    %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 34 / measure 7] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(2)
             %! NOTE
             %! INVISIBLE_MUSIC_COLORING
-            \abjad-invisible-music-coloring                                    %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
+            \abjad-invisible-music-coloring %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
             %! baca.SegmentMaker._make_multimeasure_rest_container(3)
             %! NOTE
             %! INVISIBLE_MUSIC_COMMAND
-        %@% \abjad-invisible-music                                             %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
+        %@% \abjad-invisible-music     %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._color_not_yet_pitched()
             %! NOT_YET_PITCHED_COLORING
             %! HIDDEN
             %! NOTE
-            \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
+            \baca-not-yet-pitched-coloring %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! HIDDEN
             %! NOTE
-            d1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
+            d1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(4)
             %! SPANNER_STOP
-            \stopTrillSpan                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
+            \stopTrillSpan %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        \context Voice = "Cello_Rest_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Rest_Voice measure 34 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Rest_Voice measure 34 / measure 7] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(5)
             %! REST_VOICE
             %! MULTIMEASURE_REST
-            R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
+            R1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    >> %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 35 / measure 8]                        %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 35 / measure 8] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 3                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 3 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        a,1..                                                                  %! baca.skeleton()
+        a,1.. %! baca.skeleton()
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak self-alignment-X -0.675                                       %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X -0.675 %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-pppp-sempre                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-pppp-sempre %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "vib. mod."                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "vib. mod." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "NV"                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "NV" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "no scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "scr. poss."                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "scr. poss." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
         %! baca.skeleton()
-        a,4                                                                    %! baca.skeleton()
+        a,4 %! baca.skeleton()
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.skeleton()
-        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
         %! baca.skeleton()
-        \times 6/7                                                             %! baca.skeleton()
+        \times 6/7 %! baca.skeleton()
         %! baca.skeleton()
-        {                                                                      %! baca.skeleton()
+        { %! baca.skeleton()
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 36 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 36 / measure 9] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(1)
-            \once \override NoteHead.style = #'harmonic                        %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+            \once \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
             %! baca.dls_staff_padding()
             %! baca.OverrideCommand._call(1)
-            \override DynamicLineSpanner.staff-padding = 11                    %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+            \override DynamicLineSpanner.staff-padding = 11 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
             <f a>2
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak circled-tip ##t                                           %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            - \tweak circled-tip ##t %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "baca.skeleton()"                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.padding 2.75                          %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+            - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak color #darkcyan                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \bacaStartTextSpanRhythmAnnotation                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
-            - \tweak arrow-length 2                                            %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak arrow-length 2 %! baca.finger_pressure_transition():abjad.glissando(7)
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
-            - \tweak arrow-width 0.5                                           %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak arrow-width 0.5 %! baca.finger_pressure_transition():abjad.glissando(7)
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
-            - \tweak bound-details.right.arrow ##t                             %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak bound-details.right.arrow ##t %! baca.finger_pressure_transition():abjad.glissando(7)
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
-            - \tweak thickness 3                                               %! baca.finger_pressure_transition():abjad.glissando(7)
+            - \tweak thickness 3 %! baca.finger_pressure_transition():abjad.glissando(7)
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.finger_pressure_transition():abjad.glissando(7)
+            \glissando %! baca.finger_pressure_transition():abjad.glissando(7)
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "II / III strett."                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "II / III strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 10.5                                        %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanTwo                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "T"                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "T" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
             %! baca.skeleton()
-            \times 4/6                                                         %! baca.skeleton()
+            \times 4/6 %! baca.skeleton()
             %! baca.skeleton()
-            {                                                                  %! baca.skeleton()
+            { %! baca.skeleton()
 
                 %! baca.note_head_style_harmonic_black()
                 %! baca.OverrideCommand._call(1)
-                \once \override NoteHead.style = #'harmonic-black              %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
+                \once \override NoteHead.style = #'harmonic-black %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
                 %! baca.beam_positions()
                 %! baca.OverrideCommand._call(1)
-                \override Beam.positions = #'(-5.5 . -5.5)                     %! baca.beam_positions():baca.OverrideCommand._call(1)
+                \override Beam.positions = #'(-5.5 . -5.5) %! baca.beam_positions():baca.OverrideCommand._call(1)
                 <f a>16
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \f                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak stencil #abjad-flared-hairpin                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \>                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
-                \stopTextSpanTwo                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+                \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
-                \stopTextSpanOne                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+                \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
                 [
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-dashed-line-with-hook                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "larg."                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 10.5                                    %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanTwo                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-solid-line-with-arrow                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "P"                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "P" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-solid-line-with-arrow                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "trem."                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "trem." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-right-text "larg."                        %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-right-text "larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak bound-details.right.padding 2.5                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak bound-details.right.padding 2.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak bound-details.right.stencil-align-dir-y #center       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 5.5                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpan                                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
                 %! baca.note_head_style_harmonic()
                 %! baca.OverrideCommand._call(1)
-                \override NoteHead.style = #'harmonic                          %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+                \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
                 <d f>16
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
 
                 <f a>16
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
 
                 <d f>16
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
 
                 <f a>16
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
 
                 %! baca.skeleton()
-                a,16                                                           %! baca.skeleton()
+                a,16 %! baca.skeleton()
                 %! baca.stem_tremolo()
                 %! baca.IndicatorCommand._call()
-                :64                                                            %! baca.stem_tremolo():baca.IndicatorCommand._call()
+                :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(3)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(3)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \ppp                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \ppp %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(3)
                 %! SPANNER_STOP
-                \stopTextSpan                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+                \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
                 ]
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
                 %! baca.beam_positions()
                 %! baca.OverrideCommand._call(2)
-                \revert Beam.positions                                         %! baca.beam_positions():baca.OverrideCommand._call(2)
+                \revert Beam.positions %! baca.beam_positions():baca.OverrideCommand._call(2)
 
             %! baca.skeleton()
-            }                                                                  %! baca.skeleton()
+            } %! baca.skeleton()
 
             %! baca.skeleton()
-            e1                                                                 %! baca.skeleton()
+            e1 %! baca.skeleton()
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(4)
             %! SPANNER_STOP
-            \stopTextSpanTwo                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+            \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
-            \stopTextSpanOne                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+            \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "XFB"                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "XFB" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 10.5                                        %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanTwo                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "T"                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "T" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(2)
-            \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
+            \revert NoteHead.style %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
             %! baca.dls_staff_padding()
             %! baca.OverrideCommand._call(2)
-            \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+            \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(4)
             %! SPANNER_STOP
-            <> \bacaStopTextSpanRhythmAnnotation                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+            <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
         %! baca.skeleton()
-        }                                                                      %! baca.skeleton()
+        } %! baca.skeleton()
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 38 / measure 11]                       %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 38 / measure 11] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(1)
-        \once \override NoteHead.style = #'harmonic                            %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+        \once \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 4                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 4 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         <ds! fs!>4..
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak arrow-length 2                                                %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-length 2 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak arrow-width 0.5                                               %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak arrow-width 0.5 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak bound-details.right.arrow ##t                                 %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        - \tweak thickness 3                                                   %! baca.finger_pressure_transition():abjad.glissando(7)
+        - \tweak thickness 3 %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.finger_pressure_transition():abjad.glissando(7)
+        \glissando %! baca.finger_pressure_transition():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III strett."                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "II / III strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "larg."                                %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 10.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanTwo                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "(T)"                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "(T)" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "P"                                    %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "P" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         %! baca.note_head_style_harmonic_black()
         %! baca.OverrideCommand._call(1)
-        \once \override NoteHead.style = #'harmonic-black                      %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
+        \once \override NoteHead.style = #'harmonic-black %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(1)
         <ds! fs!>16
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \f                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \f %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    << %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        \context Voice = "Cello_Music_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 39 / measure 12]                   %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 39 / measure 12] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(2)
             %! NOTE
             %! INVISIBLE_MUSIC_COLORING
-            \abjad-invisible-music-coloring                                    %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
+            \abjad-invisible-music-coloring %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
             %! baca.SegmentMaker._make_multimeasure_rest_container(3)
             %! NOTE
             %! INVISIBLE_MUSIC_COMMAND
-        %@% \abjad-invisible-music                                             %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
+        %@% \abjad-invisible-music     %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._color_not_yet_pitched()
             %! NOT_YET_PITCHED_COLORING
             %! HIDDEN
             %! NOTE
-            \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
+            \baca-not-yet-pitched-coloring %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! HIDDEN
             %! NOTE
-            d1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
+            d1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        \context Voice = "Cello_Rest_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Rest_Voice measure 39 / measure 12]                    %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Rest_Voice measure 39 / measure 12] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(5)
             %! REST_VOICE
             %! MULTIMEASURE_REST
-            R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
+            R1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    >> %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.skeleton()
-        \times 4/5                                                             %! baca.skeleton()
+        \times 4/5 %! baca.skeleton()
         %! baca.skeleton()
-        {                                                                      %! baca.skeleton()
+        { %! baca.skeleton()
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 40 / measure 13]                   %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 40 / measure 13] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(1)
-            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
+            \override NoteHead.style = #'harmonic %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
             %! baca.beam_positions()
             %! baca.OverrideCommand._call(1)
-            \override Beam.positions = #'(-5.5 . -5.5)                         %! baca.beam_positions():baca.OverrideCommand._call(1)
+            \override Beam.positions = #'(-5.5 . -5.5) %! baca.beam_positions():baca.OverrideCommand._call(1)
             %! baca.dls_staff_padding()
             %! baca.OverrideCommand._call(1)
-            \override DynamicLineSpanner.staff-padding = 9                     %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+            \override DynamicLineSpanner.staff-padding = 9 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
             <ds! fs!>16
             %! baca.stem_tremolo()
             %! baca.IndicatorCommand._call()
-            :64                                                                %! baca.stem_tremolo():baca.IndicatorCommand._call()
+            :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \f                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak stencil #abjad-flared-hairpin                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \>                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             [
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "baca.skeleton()"                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.padding 2.75                          %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+            - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak color #darkcyan                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \bacaStartTextSpanRhythmAnnotation                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+            \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "II / III larg."                    %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "II / III larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 10.5                                        %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanTwo                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "P"                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "P" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-solid-line-with-arrow                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "trem."                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "trem." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-right-text "larg."                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-right-text "larg." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.padding 2                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak bound-details.right.padding 2 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak bound-details.right.stencil-align-dir-y #center           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 5.5                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpan                                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
             <b, d>16
             %! baca.stem_tremolo()
             %! baca.IndicatorCommand._call()
-            :64                                                                %! baca.stem_tremolo():baca.IndicatorCommand._call()
+            :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             <d f>16
             %! baca.stem_tremolo()
             %! baca.IndicatorCommand._call()
-            :64                                                                %! baca.stem_tremolo():baca.IndicatorCommand._call()
+            :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
-            \stopTextSpanOne                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+            \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-dashed-line-with-hook                                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \baca-text-spanner-left-text "T"                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \baca-text-spanner-left-text "T" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8                                           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanOne                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+            \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
             <b, d>16
             %! baca.stem_tremolo()
             %! baca.IndicatorCommand._call()
-            :64                                                                %! baca.stem_tremolo():baca.IndicatorCommand._call()
+            :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.skeleton()
-            e'16                                                               %! baca.skeleton()
+            e'16 %! baca.skeleton()
             %! baca.stem_tremolo()
             %! baca.IndicatorCommand._call()
-            :64                                                                %! baca.stem_tremolo():baca.IndicatorCommand._call()
+            :64 %! baca.stem_tremolo():baca.IndicatorCommand._call()
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
-            \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+            \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
             ]
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(2)
-            \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
+            \revert NoteHead.style %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
             %! baca.beam_positions()
             %! baca.OverrideCommand._call(2)
-            \revert Beam.positions                                             %! baca.beam_positions():baca.OverrideCommand._call(2)
+            \revert Beam.positions %! baca.beam_positions():baca.OverrideCommand._call(2)
 
         %! baca.skeleton()
-        }                                                                      %! baca.skeleton()
+        } %! baca.skeleton()
 
         %! baca.skeleton()
-        ef,!4                                                                  %! baca.skeleton()
+        ef,!4 %! baca.skeleton()
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-circle-very-wide-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         %! baca.skeleton()
-        b4                                                                     %! baca.skeleton()
+        b4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \ppp                                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         %! baca.skeleton()
-        \tweak text #tuplet-number::calc-fraction-text                         %! baca.skeleton()
+        \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
         %! baca.skeleton()
-        \times 3/4                                                             %! baca.skeleton()
+        \times 3/4 %! baca.skeleton()
         %! baca.skeleton()
-        {                                                                      %! baca.skeleton()
+        { %! baca.skeleton()
 
             %! baca.tuplet_bracket_staff_padding()
             %! baca.OverrideCommand._call(1)
-            \once \override TupletBracket.staff-padding = 3.25                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+            \once \override TupletBracket.staff-padding = 3.25 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
             %! baca.skeleton()
-            f,4                                                                %! baca.skeleton()
+            f,4 %! baca.skeleton()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \p                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \p %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \>                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.skeleton()
-            a4                                                                 %! baca.skeleton()
+            a4 %! baca.skeleton()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \ppp                                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \<                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+            \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
             %! baca.glissando()
             %! abjad.glissando(7)
-            \glissando                                                         %! baca.glissando():abjad.glissando(7)
+            \glissando %! baca.glissando():abjad.glissando(7)
 
             %! baca.skeleton()
-            \times 2/3                                                         %! baca.skeleton()
+            \times 2/3 %! baca.skeleton()
             %! baca.skeleton()
-            {                                                                  %! baca.skeleton()
+            { %! baca.skeleton()
 
                 %! baca.tuplet_bracket_staff_padding()
                 %! baca.OverrideCommand._call(1)
-                \once \override TupletBracket.staff-padding = 2                %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+                \once \override TupletBracket.staff-padding = 2 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
                 %! baca.skeleton()
-                g,4                                                            %! baca.skeleton()
+                g,4 %! baca.skeleton()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \p                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \p %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \>                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                \stopTextSpanOne                                               %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+                \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
                 %! baca.glissando()
                 %! abjad.glissando(7)
-                \glissando                                                     %! baca.glissando():abjad.glissando(7)
+                \glissando %! baca.glissando():abjad.glissando(7)
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-dashed-line-with-hook                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "spz."                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "spz." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
                 %! baca.skeleton()
-                fs!2                                                           %! baca.skeleton()
+                fs!2 %! baca.skeleton()
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \ppp                                                           %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \ppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak color #(x11-color 'blue)                              %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+                - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                - \tweak stencil #abjad-flared-hairpin                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                - \tweak stencil #abjad-flared-hairpin %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.hairpin()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 %! baca.SegmentMaker._set_status_tag()
                 %! EXPLICIT_DYNAMIC
-                \<                                                             %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+                \< %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                \stopTextSpanOne                                               %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+                \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \abjad-dashed-line-with-hook                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \baca-text-spanner-left-text "(LH) vib. molto"               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \baca-text-spanner-left-text "(LH) vib. molto" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne                                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+                \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
                 %! baca.SegmentMaker._attach_shadow_tie_indicators()
-                - \tweak stencil ##f                                           %! baca.SegmentMaker._attach_shadow_tie_indicators()
+                - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
                 %! baca.SegmentMaker._attach_shadow_tie_indicators()
-                ~                                                              %! baca.SegmentMaker._attach_shadow_tie_indicators()
+                ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
                 %! baca.dls_staff_padding()
                 %! baca.OverrideCommand._call(2)
-                \revert DynamicLineSpanner.staff-padding                       %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+                \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
                 %! baca.rhythm_annotation_spanner()
                 %! RHYTHM_ANNOTATION_SPANNER
                 %! baca.PiecewiseCommand._call(4)
                 %! SPANNER_STOP
-                <> \bacaStopTextSpanRhythmAnnotation                           %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+                <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
             %! baca.skeleton()
-            }                                                                  %! baca.skeleton()
+            } %! baca.skeleton()
 
         %! baca.skeleton()
-        }                                                                      %! baca.skeleton()
+        } %! baca.skeleton()
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 41 / measure 14]                       %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 41 / measure 14] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(1)
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0) %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 4                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 4 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        fs4                                                                    %! baca.skeleton()
+        fs4 %! baca.skeleton()
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
         <fs! cs'!>4
         %! baca.hairpin()
@@ -3439,349 +3439,349 @@ c_Cello_Music_Voice = {                                                        %
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-effort-f                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-effort-f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 10.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanTwo                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III"                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "II / III" %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "no scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        - \tweak stencil ##f %! baca.SegmentMaker._attach_shadow_tie_indicators()
         %! baca.SegmentMaker._attach_shadow_tie_indicators()
-        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~ %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
         %! baca.repeat_tie_extra_offset()
         %! baca.OverrideCommand._call(1)
-        \once \override RepeatTie.extra-offset = #'(-1.5 . 0)                  %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
+        \once \override RepeatTie.extra-offset = #'(-1.5 . 0) %! baca.repeat_tie_extra_offset():baca.OverrideCommand._call(1)
         %! baca.skeleton()
-        fs4                                                                    %! baca.skeleton()
+        fs4 %! baca.skeleton()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-effort-f                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-effort-f %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.repeat_tie()
         %! baca.IndicatorCommand._call()
-        \repeatTie                                                             %! baca.repeat_tie():baca.IndicatorCommand._call()
+        \repeatTie %! baca.repeat_tie():baca.IndicatorCommand._call()
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "scr."                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
-        \pitchedTrill                                                          %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \pitchedTrill %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         %! baca.skeleton()
-        fs!4                                                                   %! baca.skeleton()
+        fs!4 %! baca.skeleton()
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 6.25                              %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 6.25 %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
-        \startTrillSpan g                                                      %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan g %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 42 / measure 15]                       %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 42 / measure 15] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.skeleton()
-        a,2                                                                    %! baca.skeleton()
+        a,2 %! baca.skeleton()
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak self-alignment-X -0.675                                       %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X -0.675 %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.dynamic()
         %! baca.IndicatorCommand._call()
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \baca-pppp-sempre                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \baca-pppp-sempre %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(4)
         %! SPANNER_STOP
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
+        \stopTrillSpan %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "scr. poss."                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "scr. poss." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-right-text "no scr."                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-right-text "no scr." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 0.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 5.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpan                                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
+    \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
     %! baca.skeleton()
-    \times 7/8                                                                 %! baca.skeleton()
+    \times 7/8 %! baca.skeleton()
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 43 / measure 16]                       %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 43 / measure 16] %! baca.SegmentMaker._comment_measure_numbers()
         <b fs'!>4
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
-        \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
+        \stopTextSpan %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-damp-markup                     %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 10.5                                            %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 10.5 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanTwo                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III mod."                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "II / III mod." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         <b fs'!>8
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <c g>8
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <b fs'!>4
 
@@ -3789,43 +3789,43 @@ c_Cello_Music_Voice = {                                                        %
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         <e b>16
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <b fs'!>16
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <d a>16
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <b fs'!>4
 
@@ -3833,119 +3833,119 @@ c_Cello_Music_Voice = {                                                        %
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <c g>8
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <b fs'!>2
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "mod."                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "mod." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.skeleton()
-    \tweak text #tuplet-number::calc-fraction-text                             %! baca.skeleton()
+    \tweak text #tuplet-number::calc-fraction-text %! baca.skeleton()
     %! baca.skeleton()
-    \times 7/8                                                                 %! baca.skeleton()
+    \times 7/8 %! baca.skeleton()
     %! baca.skeleton()
-    {                                                                          %! baca.skeleton()
+    { %! baca.skeleton()
 
         %! baca.SegmentMaker._comment_measure_numbers()
-        % [03 Cello_Music_Voice measure 44 / measure 17]                       %! baca.SegmentMaker._comment_measure_numbers()
+        % [03 Cello_Music_Voice measure 44 / measure 17] %! baca.SegmentMaker._comment_measure_numbers()
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = 6                         %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = 6 %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         <a e'>4
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak color #darkcyan                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak color #darkcyan %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
+        \bacaStartTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         <a e'>8
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <c g>8
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <a e'>4
 
@@ -3953,43 +3953,43 @@ c_Cello_Music_Voice = {                                                        %
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-solid-line-with-arrow %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "mod."                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "mod." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
         <e b>16
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <a e'>16
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <d a>16
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <a e'>4
 
@@ -3997,13 +3997,13 @@ c_Cello_Music_Voice = {                                                        %
         [
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <c g>8
         ]
         %! baca.glissando()
         %! abjad.glissando(7)
-        \glissando                                                             %! baca.glissando():abjad.glissando(7)
+        \glissando %! baca.glissando():abjad.glissando(7)
 
         <a e'>2
         %! baca.hairpin()
@@ -4011,241 +4011,241 @@ c_Cello_Music_Voice = {                                                        %
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \pppp                                                                  %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \pppp %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak to-barline ##t                                                %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak to-barline ##t %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak circled-tip ##t %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %! baca.SegmentMaker._set_status_tag()
         %! EXPLICIT_DYNAMIC
-        \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \> %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
-        \stopTextSpanOne                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
+        \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_STOP
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-dashed-line-with-hook                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \abjad-dashed-line-with-hook %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \baca-text-spanner-left-text "strett." %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75                              %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak bound-details.right.padding 2.75 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8                                               %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8 %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+        \startTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
-        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
+        <> \bacaStopTextSpanRhythmAnnotation %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     %! baca.skeleton()
-    }                                                                          %! baca.skeleton()
+    } %! baca.skeleton()
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    << %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        \context Voice = "Cello_Music_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Music_Voice measure 45 / measure 18]                   %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Music_Voice measure 45 / measure 18] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(2)
             %! NOTE
             %! INVISIBLE_MUSIC_COLORING
-            \abjad-invisible-music-coloring                                    %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
+            \abjad-invisible-music-coloring %! baca.SegmentMaker._make_multimeasure_rest_container(2):NOTE:INVISIBLE_MUSIC_COLORING
             %! baca.SegmentMaker._make_multimeasure_rest_container(3)
             %! NOTE
             %! INVISIBLE_MUSIC_COMMAND
-        %@% \abjad-invisible-music                                             %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
+        %@% \abjad-invisible-music     %! baca.SegmentMaker._make_multimeasure_rest_container(3):NOTE:INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._color_not_yet_pitched()
             %! NOT_YET_PITCHED_COLORING
             %! HIDDEN
             %! NOTE
-            \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
+            \baca-not-yet-pitched-coloring %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! HIDDEN
             %! NOTE
-            d1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
+            d1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            - \tweak color #(x11-color 'blue) %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
             %! baca.SegmentMaker._set_status_tag()
             %! EXPLICIT_DYNAMIC
-            \!                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
+            \! %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(4)
             %! SPANNER_STOP
-            \stopTextSpanTwo                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+            \stopTextSpanTwo %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(4)
             %! SPANNER_STOP
-            \stopTextSpanOne                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
+            \stopTextSpanOne %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
             %! baca.tuplet_bracket_down()
             %! baca.OverrideCommand._call(2)
-            \revert TupletBracket.direction                                    %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+            \revert TupletBracket.direction %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        \context Voice = "Cello_Rest_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
             %! baca.SegmentMaker._comment_measure_numbers()
-            % [03 Cello_Rest_Voice measure 45 / measure 18]                    %! baca.SegmentMaker._comment_measure_numbers()
+            % [03 Cello_Rest_Voice measure 45 / measure 18] %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._make_multimeasure_rest_container(5)
             %! REST_VOICE
             %! MULTIMEASURE_REST
-            R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
+            R1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(5):REST_VOICE:MULTIMEASURE_REST
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:REST_VOICE
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6)
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(6)
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
-    >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
+    >> %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     %! PHANTOM
-    <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
+    << %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! PHANTOM
-        \context Voice = "Cello_Music_Voice"                                   %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
+        \context Voice = "Cello_Music_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! PHANTOM
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
 
             %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._style_phantom_measures(5)
             %! PHANTOM
-            % [03 Cello_Music_Voice measure 46 / measure 19]                   %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            % [03 Cello_Music_Voice measure 46 / measure 19] %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             %! baca.SegmentMaker._make_multimeasure_rest_container(2)
             %! PHANTOM
             %! MULTIMEASURE_REST
             %! INVISIBLE_MUSIC_COLORING
             %! baca.SegmentMaker._style_phantom_measures(5)
-            \abjad-invisible-music-coloring                                    %! baca.SegmentMaker._make_multimeasure_rest_container(2):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COLORING:baca.SegmentMaker._style_phantom_measures(5)
+            \abjad-invisible-music-coloring %! baca.SegmentMaker._make_multimeasure_rest_container(2):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COLORING:baca.SegmentMaker._style_phantom_measures(5)
             %! baca.SegmentMaker._make_multimeasure_rest_container(3)
             %! PHANTOM
             %! MULTIMEASURE_REST
             %! INVISIBLE_MUSIC_COMMAND
             %! baca.SegmentMaker._style_phantom_measures(5)
-        %@% \abjad-invisible-music                                             %! baca.SegmentMaker._make_multimeasure_rest_container(3):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COMMAND:baca.SegmentMaker._style_phantom_measures(5)
+        %@% \abjad-invisible-music     %! baca.SegmentMaker._make_multimeasure_rest_container(3):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COMMAND:baca.SegmentMaker._style_phantom_measures(5)
             %! baca.SegmentMaker._make_multimeasure_rest_container(1)
             %! PHANTOM
             %! HIDDEN
             %! MULTIMEASURE_REST
-            R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):PHANTOM:HIDDEN:MULTIMEASURE_REST
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:MULTIMEASURE_REST:PHANTOM:baca.SegmentMaker._style_phantom_measures(5)
+            R1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(1):PHANTOM:HIDDEN:MULTIMEASURE_REST
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:MULTIMEASURE_REST:PHANTOM:baca.SegmentMaker._style_phantom_measures(5)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(4)
         %! PHANTOM
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(4):PHANTOM
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! PHANTOM
-        \context Voice = "Cello_Rest_Voice"                                    %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
+        \context Voice = "Cello_Rest_Voice" %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! PHANTOM
-        {                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
+        { %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
 
             %! baca.SegmentMaker._comment_measure_numbers()
             %! baca.SegmentMaker._style_phantom_measures(5)
             %! PHANTOM
-            % [03 Cello_Rest_Voice measure 46 / measure 19]                    %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            % [03 Cello_Rest_Voice measure 46 / measure 19] %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             %! baca.SegmentMaker._style_phantom_measures(6)
             %! PHANTOM
-            \once \override Score.TimeSignature.X-extent = ##f                 %! baca.SegmentMaker._style_phantom_measures(6):PHANTOM
+            \once \override Score.TimeSignature.X-extent = ##f %! baca.SegmentMaker._style_phantom_measures(6):PHANTOM
             %! baca.SegmentMaker._style_phantom_measures(7)
             %! PHANTOM
-            \once \override MultiMeasureRest.transparent = ##t                 %! baca.SegmentMaker._style_phantom_measures(7):PHANTOM
+            \once \override MultiMeasureRest.transparent = ##t %! baca.SegmentMaker._style_phantom_measures(7):PHANTOM
             %! baca.SegmentMaker._style_phantom_measures(8)
             %! PHANTOM
-            \stopStaff                                                         %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
+            \stopStaff %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
             %! baca.SegmentMaker._style_phantom_measures(8)
             %! PHANTOM
-            \once \override Staff.StaffSymbol.transparent = ##t                %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
+            \once \override Staff.StaffSymbol.transparent = ##t %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
             %! baca.SegmentMaker._style_phantom_measures(8)
             %! PHANTOM
-            \startStaff                                                        %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
+            \startStaff %! baca.SegmentMaker._style_phantom_measures(8):PHANTOM
             %! baca.SegmentMaker._make_multimeasure_rest_container(5)
             %! PHANTOM
             %! REST_VOICE
             %! MULTIMEASURE_REST
-            R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(5):PHANTOM:REST_VOICE:MULTIMEASURE_REST
-        %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:PHANTOM:REST_VOICE:baca.SegmentMaker._style_phantom_measures(5)
+            R1 * 1/4 %! baca.SegmentMaker._make_multimeasure_rest_container(5):PHANTOM:REST_VOICE:MULTIMEASURE_REST
+        %@% ^ \baca-duration-multiplier-markup #"1" #"4"     %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:MULTIMEASURE_REST:PHANTOM:REST_VOICE:baca.SegmentMaker._style_phantom_measures(5)
 
         %! baca.SegmentMaker._make_multimeasure_rest_container(6)
         %! PHANTOM
-        }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
+        } %! baca.SegmentMaker._make_multimeasure_rest_container(6):PHANTOM
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     %! PHANTOM
-    >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
+    >> %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-                                                                               %! naehte.ScoreTemplate.__call__()
-}                                                                              %! ide.Path.extern()
+%! naehte.ScoreTemplate.__call__()
+} %! ide.Path.extern()
 
 
-c_Cello_Music_Staff = <<                                                       %! ide.Path.extern()
+c_Cello_Music_Staff = << %! ide.Path.extern()
 
     %! abjad.ScoreTemplate._make_global_context()
-    \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context()
+    \context GlobalRests = "Global_Rests" %! abjad.ScoreTemplate._make_global_context()
     %! abjad.ScoreTemplate._make_global_context()
-    \c_Global_Rests                                                            %! ide.Path.extern()
+    \c_Global_Rests %! ide.Path.extern()
 
     %! naehte.ScoreTemplate.__call__()
-    \context Voice = "Cello_Music_Voice"                                       %! naehte.ScoreTemplate.__call__()
+    \context Voice = "Cello_Music_Voice" %! naehte.ScoreTemplate.__call__()
     %! naehte.ScoreTemplate.__call__()
-    \c_Cello_Music_Voice                                                       %! ide.Path.extern()
+    \c_Cello_Music_Voice %! ide.Path.extern()
 
-                                                                               %! naehte.ScoreTemplate.__call__()
->>                                                                             %! ide.Path.extern()
+%! naehte.ScoreTemplate.__call__()
+>> %! ide.Path.extern()
