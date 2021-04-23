@@ -89,14 +89,14 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[-2:].rleak(),
     ),
     baca.text_spanner(
         r"ord. -> P -> T =|",
         abjad.tweak(8).staff_padding,
         bookend=False,
-        pieces=baca.lparts([6, 1, 2]),
+        pieces=baca.selectors.lparts([6, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.tuplet_bracket_staff_padding(1),
@@ -179,7 +179,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         measures=(3, 4),
-        pieces=baca.lparts([7, 1, 6, 2]),
+        pieces=baca.selectors.lparts([7, 1, 6, 2]),
         selector=baca.leaves()[1:-1],
     ),
     baca.tuplet_bracket_staff_padding(1),
@@ -257,7 +257,7 @@ maker(
     baca.new(
         baca.hairpin(
             'p |> pp <| "f" pp <| "f"',
-            pieces=baca.lparts([2, 1, 1, 2]),
+            pieces=baca.selectors.lparts([2, 1, 1, 2]),
         ),
         baca.dls_staff_padding(7),
         selector=baca.leaves().lleak(),
@@ -273,7 +273,7 @@ maker(
         r"II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
         abjad.tweak(8).staff_padding,
         (abjad.tweak(6.25).bound_details__right__padding, -1),
-        pieces=baca.lparts([1, 1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 2]),
         selector=baca.leaves()[1:].rleak().rleak().rleak(),
     ),
 )

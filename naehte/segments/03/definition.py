@@ -92,7 +92,7 @@ maker(
     baca.skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"),
     baca.hairpin(
         r"p > ppp <",
-        pieces=baca.lparts([1, 1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 2]),
     ),
     baca.suite(
         baca.pitches("Eb2 B3 F2 A3 G2 F#3"),
@@ -133,7 +133,7 @@ maker(
     ("vc", 2),
     baca.hairpin(
         '<| "f" "f" > ppp',
-        pieces=baca.lparts([2, 1, 2]),
+        pieces=baca.selectors.lparts([2, 1, 2]),
         selector=baca.leaves().lleak(),
     ),
     baca.suite(
@@ -171,7 +171,7 @@ maker(
         "no scr. -> scr. =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[1:4],
     ),
     baca.trill_spanner(
@@ -276,7 +276,7 @@ maker(
         "II / III largo -> strett. -> larg. =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([9, 1, 3]),
+        pieces=baca.selectors.lparts([9, 1, 3]),
         selector=baca.leaves()[:-2],
     ),
 )
@@ -313,7 +313,7 @@ maker(
     ),
     baca.hairpin(
         "o< f |> ppp",
-        pieces=baca.lparts([1, 6]),
+        pieces=baca.selectors.lparts([1, 6]),
         selector=baca.leaves()[:8],
     ),
     baca.suite(
@@ -356,7 +356,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        pieces=baca.lparts([1, 7]),
+        pieces=baca.selectors.lparts([1, 7]),
         selector=baca.leaves()[:],
     ),
     baca.text_spanner(
@@ -371,7 +371,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([1, 6, 2]),
+        pieces=baca.selectors.lparts([1, 6, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
@@ -425,7 +425,7 @@ maker(
     ),
     baca.hairpin(
         "f |> ppp < p > ppp < p > ppp <|",
-        pieces=baca.lparts([6, 1, 1, 1, 1, 1]),
+        pieces=baca.selectors.lparts([6, 1, 1, 1, 1, 1]),
     ),
     baca.suite(
         baca.pitches(
@@ -462,7 +462,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([2, 4]),
+        pieces=baca.selectors.lparts([2, 4]),
         selector=baca.leaves()[:6],
     ),
     baca.text_spanner(
@@ -507,7 +507,7 @@ maker(
     baca.hairpin(
         '"f" "f" >',
         bookend=False,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[1:],
     ),
     baca.suite(
@@ -545,7 +545,7 @@ maker(
         "no scr. -> scr. =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[1:4],
     ),
     baca.trill_spanner(
@@ -626,7 +626,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([4, 7, 1, 4, 7, 2]),
+        pieces=baca.selectors.lparts([4, 7, 1, 4, 7, 2]),
         selector=baca.leaves().rleak(),
     ),
 )

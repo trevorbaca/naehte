@@ -75,7 +75,7 @@ maker(
     ("vc", 1),
     baca.hairpin(
         "ppp > pppp < ppp",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
@@ -98,7 +98,7 @@ maker(
     ("vc", 2),
     baca.hairpin(
         "ppp > pppp < ppp",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
@@ -142,7 +142,7 @@ maker(
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
         bookend=False,
-        pieces=baca.lparts([1, 1, 1, 1, 1, 1]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1]),
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
@@ -189,7 +189,7 @@ maker(
         (abjad.tweak(5.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -228,7 +228,7 @@ maker(
         (abjad.tweak(3.25).bound_details__right__padding, -1),
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
@@ -246,7 +246,7 @@ maker(
         (abjad.tweak(3.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )
