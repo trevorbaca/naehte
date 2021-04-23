@@ -58,20 +58,16 @@ TO-DO
 
 6.  Add functions for glissandi without note-heads.
 
-7.  Extend leak.
-    Add baca.rleak(n=1) keyword.
-    Add baca.lleak(n=1) keyword.
-
-8.  Consolidate tie functions.
+7.  Consolidate tie functions.
     Replace baca.tie_to(), baca.tie_from() with baca.tie().
     Replace baca.repeat_tie_to(), baca.repeat_tie_from() with baca.repeat_tie().
 
-9.  Teach repeat ties to ignore trill pitch.
+8.  Teach repeat ties to ignore trill pitch.
 
-10. Allow trend-initial text spanners:
+9.  Allow trend-initial text spanners:
         baca.text_spanner(
             r'-> XFB =|',
             bookend=False,
             pieces=baca.lparts([2, 4]),
             selector=baca.leaves().lleak(),
-            )
+        )
