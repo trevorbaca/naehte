@@ -104,7 +104,7 @@ maker(
     baca.hairpin(
         "o< f >",
         bookend=False,
-        pieces=baca.lparts([1, 5]),
+        pieces=baca.selectors.lparts([1, 5]),
     ),
     baca.literal(
         r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
@@ -148,7 +148,7 @@ maker(
         "no scr. -> scr. ->",
         abjad.tweak(8).staff_padding,
         measures=(1, 2),
-        pieces=baca.lparts([1, 1, 5, 2]),
+        pieces=baca.selectors.lparts([1, 1, 5, 2]),
         selector=baca.leaves()[:-3],
     ),
 )
@@ -162,7 +162,7 @@ maker(
     baca.breathe(),
     baca.hairpin(
         "pp < f >o niente",
-        pieces=baca.lparts([1, 5]),
+        pieces=baca.selectors.lparts([1, 5]),
     ),
     baca.note_head_transparent(
         selector=baca.leaves()[-3:-1],
@@ -209,7 +209,7 @@ maker(
     ),
     baca.hairpin(
         "o< f |> ppp",
-        pieces=baca.lparts([1, 6]),
+        pieces=baca.selectors.lparts([1, 6]),
         selector=baca.leaves()[:8],
     ),
     baca.suite(
@@ -252,7 +252,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        pieces=baca.lparts([1, 7]),
+        pieces=baca.selectors.lparts([1, 7]),
         selector=baca.leaves()[:],
     ),
     baca.text_spanner(
@@ -267,7 +267,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([1, 6, 2]),
+        pieces=baca.selectors.lparts([1, 6, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
@@ -320,7 +320,7 @@ maker(
     ),
     baca.hairpin(
         "f |> ppp >o niente",
-        pieces=baca.lparts([5, 2]),
+        pieces=baca.selectors.lparts([5, 2]),
     ),
     baca.suite(
         baca.pitches(
@@ -369,7 +369,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([5, 3]),
+        pieces=baca.selectors.lparts([5, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
@@ -417,7 +417,7 @@ maker(
         baca.hairpin(
             'pp <| "f" > pp <| "f" >',
             bookend=False,
-            pieces=baca.lparts([1, 1, 1, 2]),
+            pieces=baca.selectors.lparts([1, 1, 1, 2]),
             selector=baca.leaves().rleak(),
         ),
     ),
@@ -443,7 +443,7 @@ maker(
         abjad.tweak(8).staff_padding,
         # (abjad.tweak(6.25).bound_details__right__padding, -1),
         bookend=False,
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -457,7 +457,7 @@ maker(
     baca.breathe(),
     baca.hairpin(
         "pp < f >o niente",
-        pieces=baca.lparts([1, 5]),
+        pieces=baca.selectors.lparts([1, 5]),
     ),
     baca.note_head_transparent(
         selector=baca.leaves()[-3:-1],
@@ -496,7 +496,7 @@ maker(
     baca.text_spanner(
         "no scr. -> scr. ->",
         abjad.tweak(8).staff_padding,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[:3],
     ),
 )
@@ -581,7 +581,7 @@ maker(
         (abjad.tweak(-4.5).bound_details__right__padding, -1),
         abjad.tweak(8).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 2, 1, 6, 4]),
+        pieces=baca.selectors.lparts([1, 2, 1, 6, 4]),
     ),
 )
 

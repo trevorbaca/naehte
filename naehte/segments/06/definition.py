@@ -133,7 +133,7 @@ maker(
     baca.breathe(),
     baca.hairpin(
         "o< pp > ppp < f",
-        pieces=baca.lparts([6, 6, 2]),
+        pieces=baca.selectors.lparts([6, 6, 2]),
         selector=baca.leaves(),
     ),
     baca.note_head_extra_offset((-1.25, 0)),
@@ -226,7 +226,7 @@ maker(
     ),
     baca.hairpin(
         "|> ppppp <| p |>o niente",
-        pieces=baca.lparts([1, 1, 4]),
+        pieces=baca.selectors.lparts([1, 1, 4]),
         selector=baca.leaves().lleak().rleak(),
     ),
     baca.suite(
@@ -271,7 +271,7 @@ maker(
         (abjad.tweak(4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 1, 3]),
+        pieces=baca.selectors.lparts([1, 1, 3]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -280,7 +280,7 @@ maker(
     ("vc", 9),
     baca.hairpin(
         "o<| f |> p",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
     ),
     baca.pitch("A3"),
     baca.suite(
@@ -294,7 +294,7 @@ maker(
         (abjad.tweak(-4.25).bound_details__right__padding, -1),
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
     ),
     baca.trill_spanner(
         alteration="m2",
@@ -340,7 +340,7 @@ maker(
     ("vc", 11),
     baca.hairpin(
         "|> p <| ff",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.suite(
@@ -362,7 +362,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        pieces=baca.lparts([2, 2]),
+        pieces=baca.selectors.lparts([2, 2]),
         measures=(11, 12),
     ),
     baca.text_spanner(
