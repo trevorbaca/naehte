@@ -34,31 +34,31 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(1 - 1),
+        selector=baca.selectors.leaf(1 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(3 - 1),
+        selector=baca.selectors.leaf(3 - 1),
     ),
     baca.metronome_mark(
         baca.Accelerando(),
-        selector=baca.leaf(3 - 1),
+        selector=baca.selectors.leaf(3 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(6 - 1),
+        selector=baca.selectors.leaf(6 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(7 - 1),
+        selector=baca.selectors.leaf(7 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(8 - 1),
+        selector=baca.selectors.leaf(8 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(12 - 1),
+        selector=baca.selectors.leaf(12 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -75,7 +75,7 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
 )
 
@@ -104,7 +104,7 @@ maker(
         "mp <| fff",
     ),
     baca.note_head_style_harmonic(
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.pitch("E2"),
     baca.skeleton("{ c1 c4 }"),
@@ -133,12 +133,12 @@ maker(
         selector=baca.leaves().lleak(),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.pitch("E2"),
     baca.suite(
         baca.skeleton("{ c4 c8 }"),
-        baca.repeat_tie(baca.leaf(-1)),
+        baca.repeat_tie(baca.selectors.leaf(-1)),
     ),
     baca.trill_spanner(
         alteration="P1",
@@ -159,7 +159,7 @@ maker(
             "<E2 C3> E2",
             allow_repeats=True,
         ),
-        baca.repeat_tie(baca.leaf(-1)),
+        baca.repeat_tie(baca.selectors.leaf(-1)),
     ),
     baca.text_spanner(
         "I / II str. =|",
@@ -188,7 +188,7 @@ maker(
         selector=baca.leaves().lleak(),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.suite(
         baca.skeleton("{ c4 c8 }"),
@@ -196,7 +196,7 @@ maker(
             "<E2 C3> E2",
             allow_repeats=True,
         ),
-        baca.repeat_tie(baca.leaf(-1)),
+        baca.repeat_tie(baca.selectors.leaf(-1)),
     ),
     baca.text_spanner(
         "I / II str. =|",
@@ -230,7 +230,7 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.pitch("Eb2"),
     ),
@@ -321,7 +321,7 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
     ),
     baca.text_spanner(
@@ -382,7 +382,7 @@ maker(
         selector=baca.leaves()[-1:],
     ),
     baca.stem_tremolo(
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.suite(
         baca.skeleton(r"\times 7/6 { c2. c2 c4 }"),

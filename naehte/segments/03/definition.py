@@ -38,27 +38,27 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "91",
-        selector=baca.leaf(1 - 1),
+        selector=baca.selectors.leaf(1 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(4 - 1),
+        selector=baca.selectors.leaf(4 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(5 - 1),
+        selector=baca.selectors.leaf(5 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(8 - 1),
+        selector=baca.selectors.leaf(8 - 1),
     ),
     baca.metronome_mark(
         "91",
-        selector=baca.leaf(13 - 1),
+        selector=baca.selectors.leaf(13 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(15 - 1),
+        selector=baca.selectors.leaf(15 - 1),
     ),
     baca.open_volta(baca.skip(1 - 1)),
     baca.close_volta(baca.skip(3 - 1)),
@@ -75,15 +75,15 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(7 - 1),
+        selector=baca.selectors.leaf(7 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(12 - 1),
+        selector=baca.selectors.leaf(12 - 1),
     ),
 )
 
@@ -121,11 +121,11 @@ maker(
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
-        selector=baca.leaf(2),
+        selector=baca.selectors.leaf(2),
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.leaf(4),
+        selector=baca.selectors.leaf(4),
     ),
 )
 
@@ -147,14 +147,14 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(2),
+            selector=baca.selectors.leaf(2),
         ),
     ),
     baca.text_spanner(
@@ -292,12 +292,12 @@ maker(
     baca.dynamic(
         "pppp-sempre",
         abjad.tweak(-0.675).self_alignment_X,
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.pitch("A2"),
     baca.suite(
         baca.skeleton(r"{ c1.. c4 }"),
-        baca.repeat_tie(baca.leaf(-1)),
+        baca.repeat_tie(baca.selectors.leaf(-1)),
     ),
     baca.text_spanner(
         "vib. mod. -> NV",
@@ -334,10 +334,10 @@ maker(
             selector=baca.leaves()[2:8],
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
         baca.note_head_style_harmonic(
             selector=baca.leaves()[2:9],
@@ -401,10 +401,10 @@ maker(
             selector=baca.leaves(),
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
     ),
     baca.text_spanner(
@@ -500,11 +500,11 @@ maker(
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
-        selector=baca.leaf(-4),
+        selector=baca.selectors.leaf(-4),
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.leaf(-2),
+        selector=baca.selectors.leaf(-2),
     ),
 )
 
@@ -527,14 +527,14 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(2),
+            selector=baca.selectors.leaf(2),
         ),
     ),
     baca.text_spanner(
@@ -570,7 +570,7 @@ maker(
     baca.dynamic(
         "pppp-sempre",
         abjad.tweak(-0.675).self_alignment_X,
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.suite(
         baca.skeleton(r"{ c2 }"),
