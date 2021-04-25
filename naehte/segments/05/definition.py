@@ -150,7 +150,7 @@ maker(
         'o< "f" >',
         bookend=False,
         pieces=baca.selectors.lparts([1, 3]),
-        selector=baca.rleaves(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.suite(
         baca.skeleton(r"{ c8 c4. c8 }"),
@@ -166,7 +166,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.rleaves(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"\baca-circle-markup =|",
@@ -216,7 +216,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 5]),
-        selector=baca.rleaves(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

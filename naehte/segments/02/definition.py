@@ -428,7 +428,7 @@ maker(
         ),
         baca.glissando(
             zero_padding=True,
-            selector=baca.rleaves(),
+            selector=baca.selectors.rleaves(),
         ),
     ),
     baca.text_spanner(

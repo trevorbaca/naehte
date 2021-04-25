@@ -107,7 +107,7 @@ maker(
     baca.dls_staff_padding(7),
     baca.hairpin(
         "pp > ppppp",
-        selector=baca.rleaves().rleak(),
+        selector=lambda _: baca.Selection(_).rleaves().rleak(),
     ),
     baca.suite(
         baca.skeleton(r"\times 6/7 { c2. c8 }"),
@@ -251,7 +251,7 @@ maker(
         ),
         baca.glissando(
             zero_padding=True,
-            selector=baca.rleaves(),
+            selector=baca.selectors.rleaves(),
         ),
     ),
     baca.new(
