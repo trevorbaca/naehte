@@ -85,7 +85,9 @@ maker(
         baca.skeleton(r"{ c8 c4. c8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaves()[1:],
         ),
     ),
@@ -124,7 +126,9 @@ maker(
         baca.skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(-1),
         ),
@@ -159,12 +163,16 @@ maker(
         ),
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 D4 D4"),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(0),
         ),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(-1),
         ),
         baca.glissando(
@@ -209,7 +217,9 @@ maker(
             allow_repeats=True,
         ),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
         ),
         baca.glissando(
             selector=baca.leaves()[:5],
@@ -518,12 +528,16 @@ maker(
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(2),
         ),
     ),

@@ -144,12 +144,16 @@ maker(
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(2),
         ),
     ),
@@ -185,14 +189,16 @@ maker(
     baca.breathe(),
     baca.hairpin(
         "ppp <| fff",
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.suite(
         baca.skeleton("{ c8. c8. }"),
         baca.pitch("F#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaves()[:2],
         ),
     ),
@@ -518,12 +524,16 @@ maker(
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(2),
         ),
     ),

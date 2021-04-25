@@ -52,7 +52,9 @@ maker(
             r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
         ),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(-1),
         ),
@@ -149,12 +151,16 @@ maker(
         ),
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 Db4 Db4"),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(0),
         ),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaf(-1),
         ),
@@ -246,7 +252,9 @@ maker(
             "Db4 <B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
         ),
         baca.new(
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
         ),
         baca.glissando(
