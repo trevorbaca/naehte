@@ -227,7 +227,9 @@ maker(
         baca.skeleton("{ c2.. c8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(-1),
         ),
         baca.pitch("Eb2"),
@@ -257,7 +259,7 @@ maker(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(),
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.pitch("<B3 F#4>"),
     baca.skeleton(
@@ -316,7 +318,9 @@ maker(
         baca.skeleton("{ c4 c8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(-1),
         ),
     ),
@@ -345,7 +349,9 @@ maker(
         baca.pitch("D#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaves(),
         ),
     ),

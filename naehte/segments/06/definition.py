@@ -92,7 +92,7 @@ maker(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(),
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.pitch("<B3 F#4>"),
     baca.skeleton(
@@ -106,7 +106,7 @@ maker(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(),
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.pitch("<B3 F#4>"),
     baca.skeleton(
@@ -120,7 +120,7 @@ maker(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(),
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.pitch("<B3 F#4>"),
     baca.skeleton(
@@ -138,10 +138,10 @@ maker(
     ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
-        selector=baca.pleaves()[1:-1],
+        selector=baca.selectors.pleaves((1, -1)),
     ),
     baca.note_head_x_extent_zero(
-        selector=baca.pleaves()[:-1],
+        selector=baca.selectors.pleaves((None, -1)),
     ),
     baca.skeleton(
         "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c2... r16" " }"
@@ -178,7 +178,7 @@ maker(
         baca.espressivo(),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(),
-        selector=baca.pleaves(),
+        selector=baca.selectors.pleaves(),
     ),
     baca.pitch("<B3 F#4>"),
     baca.skeleton(
@@ -353,7 +353,9 @@ maker(
         baca.skeleton("{ c4 c8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.pleaf(0)),
+            baca.repeat_tie(
+                baca.selectors.pleaf(0),
+            ),
             selector=baca.leaf(-1),
         ),
     ),
