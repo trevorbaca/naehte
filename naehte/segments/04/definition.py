@@ -36,23 +36,23 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(2 - 1),
+        selector=baca.selectors.leaf(2 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(5 - 1),
+        selector=baca.selectors.leaf(5 - 1),
     ),
     baca.metronome_mark(
         "91",
-        selector=baca.leaf(11 - 1),
+        selector=baca.selectors.leaf(11 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(13 - 1),
+        selector=baca.selectors.leaf(13 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(15 - 1),
+        selector=baca.selectors.leaf(15 - 1),
     ),
     baca.open_volta(baca.skip(5 - 1)),
     baca.close_volta(baca.skip(7 - 1)),
@@ -69,7 +69,7 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(10 - 1),
+        selector=baca.selectors.leaf(10 - 1),
     ),
 )
 
@@ -130,7 +130,7 @@ maker(
                 baca.selectors.pleaf(0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
     ),
     baca.text_spanner(
@@ -167,13 +167,13 @@ maker(
                 baca.selectors.pleaf(0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.glissando(
             selector=baca.leaves()[1:-2],
@@ -230,7 +230,7 @@ maker(
         selector=baca.leaves()[-2:].rleak(),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.text_spanner(
         "poss. -> XFB =|",
@@ -330,10 +330,10 @@ maker(
             selector=baca.leaves()[2:8],
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
         baca.note_head_style_harmonic(
             selector=baca.leaves()[2:9],
@@ -384,11 +384,11 @@ maker(
     ),
     baca.tuplet_bracket_padding(
         1.75,
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_staff_padding(
         4.25,
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
 )
 
@@ -405,10 +405,10 @@ maker(
             selector=baca.leaves(),
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
     ),
     baca.text_spanner(
@@ -505,11 +505,11 @@ maker(
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
-        selector=baca.leaf(-4),
+        selector=baca.selectors.leaf(-4),
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.leaf(-2),
+        selector=baca.selectors.leaf(-2),
     ),
 )
 
@@ -531,14 +531,14 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(2),
+            selector=baca.selectors.leaf(2),
         ),
     ),
     baca.text_spanner(
@@ -617,7 +617,7 @@ maker(
 
 maker(
     ("vc", 15),
-    baca.pitch("C#3", selector=baca.leaf(0)),
+    baca.pitch("C#3", selector=baca.selectors.leaf(0)),
     baca.pitch("<C#3 A3>", selector=baca.leaves()[1:]),
     baca.skeleton(r"{ c4 c2.. c }"),
     baca.text_spanner(
@@ -658,7 +658,7 @@ maker(
 maker(
     ("vc", (15, 16)),
     baca.breathe(
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.hairpin(
         '"mf" > pp < "mf" >o niente',

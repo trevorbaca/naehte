@@ -35,15 +35,15 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(1 - 1),
+        selector=baca.selectors.leaf(1 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(5 - 1),
+        selector=baca.selectors.leaf(5 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(7 - 1),
+        selector=baca.selectors.leaf(7 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -59,15 +59,15 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(4 - 1),
+        selector=baca.selectors.leaf(4 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(9 - 1),
+        selector=baca.selectors.leaf(9 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
 )
 
@@ -154,11 +154,11 @@ maker(
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_staff_padding(
         2.5,
-        selector=baca.leaf(3),
+        selector=baca.selectors.leaf(3),
     ),
 )
 
@@ -173,7 +173,7 @@ maker(
         "mp <| fff",
     ),
     baca.note_head_style_harmonic(
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.pitch("E2"),
     baca.skeleton("{ c1 c4 }"),

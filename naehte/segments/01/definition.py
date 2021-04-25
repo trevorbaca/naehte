@@ -28,7 +28,7 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(1 - 1),
+        selector=baca.selectors.leaf(1 - 1),
     ),
     baca.text_spanner_staff_padding(10),
 )
@@ -56,7 +56,7 @@ maker(
                 baca.selectors.pleaf(0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.pitches(
             "<G3 D4>" " <A3 E4>" " <C3 G3>" " <E3 B3>" " <D3 A3>" " <E4 B4>" " Eb4"
@@ -115,7 +115,7 @@ maker(
         baca.skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
-            baca.repeat_tie(baca.leaf(0)),
+            baca.repeat_tie(baca.selectors.leaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.leaves(),
         ),
@@ -155,14 +155,14 @@ maker(
                 baca.selectors.pleaf(0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.glissando(
             selector=baca.leaves()[1:-2],
@@ -207,7 +207,7 @@ maker(
             selector=baca.leaves()[-2:],
         ),
         baca.new(
-            baca.repeat_tie(baca.leaf(0)),
+            baca.repeat_tie(baca.selectors.leaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
         ),
         baca.glissando(
@@ -229,7 +229,7 @@ maker(
         selector=baca.leaves()[-3:-1],
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.leaf(-2),
+        selector=baca.selectors.leaf(-2),
     ),
     baca.text_spanner(
         r"spazz. strett. =|",

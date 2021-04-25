@@ -37,42 +37,42 @@ maker = baca.SegmentMaker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("52", selector=baca.leaf(1 - 1)),
+    baca.metronome_mark("52", selector=baca.selectors.leaf(1 - 1)),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(3 - 1),
+        selector=baca.selectors.leaf(3 - 1),
     ),
     baca.metronome_mark(
         baca.Accelerando(),
-        selector=baca.leaf(3 - 1),
+        selector=baca.selectors.leaf(3 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(5 - 1),
+        selector=baca.selectors.leaf(5 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(9 - 1),
+        selector=baca.selectors.leaf(9 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(11 - 1),
+        selector=baca.selectors.leaf(11 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(14 - 1),
+        selector=baca.selectors.leaf(14 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(15 - 1),
+        selector=baca.selectors.leaf(15 - 1),
     ),
     baca.metronome_mark(
         baca.Ritardando(),
-        selector=baca.leaf(15 - 1),
+        selector=baca.selectors.leaf(15 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(16 - 1),
+        selector=baca.selectors.leaf(16 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -87,15 +87,15 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(6 - 1),
+        selector=baca.selectors.leaf(6 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(8 - 1),
+        selector=baca.selectors.leaf(8 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(10 - 1),
+        selector=baca.selectors.leaf(10 - 1),
     ),
 )
 
@@ -108,7 +108,7 @@ maker(
     ),
     baca.literal(
         r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.note_head_transparent(
         selector=baca.leaves()[-3:],
@@ -159,7 +159,7 @@ maker(
     ("vc", 2),
     baca.accidental_extra_offset(
         (-1, 0),
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.breathe(),
     baca.hairpin(
@@ -228,10 +228,10 @@ maker(
             selector=baca.leaves()[2:8],
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
         baca.note_head_style_harmonic(
             selector=baca.leaves()[2:9],
@@ -282,7 +282,7 @@ maker(
     ),
     baca.tuplet_bracket_padding(
         1.75,
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
 )
 
@@ -299,10 +299,10 @@ maker(
             selector=baca.leaves(),
         ),
         baca.note_head_style_harmonic(
-            selector=baca.leaf(0),
+            selector=baca.selectors.leaf(0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(1),
+            selector=baca.selectors.leaf(1),
         ),
     ),
     baca.text_spanner(
@@ -335,7 +335,7 @@ maker(
             selector=baca.leaves()[:-1],
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.finger_pressure_transition(
             selector=baca.leaves()[-2:],
@@ -384,7 +384,7 @@ maker(
     ),
     baca.tuplet_bracket_padding(
         1.75,
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
 )
 
@@ -456,7 +456,7 @@ maker(
     ("vc", 14),
     baca.accidental_extra_offset(
         (-1, 0),
-        selector=baca.leaf(0),
+        selector=baca.selectors.leaf(0),
     ),
     baca.breathe(),
     baca.hairpin(

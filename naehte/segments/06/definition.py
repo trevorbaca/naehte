@@ -35,27 +35,27 @@ maker(
     "Global_Skips",
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(4 - 1),
+        selector=baca.selectors.leaf(4 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(5 - 1),
+        selector=baca.selectors.leaf(5 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(6 - 1),
+        selector=baca.selectors.leaf(6 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.leaf(7 - 1),
+        selector=baca.selectors.leaf(7 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.leaf(10 - 1),
+        selector=baca.selectors.leaf(10 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.leaf(14 - 1),
+        selector=baca.selectors.leaf(14 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -70,15 +70,15 @@ maker(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(8 - 1),
+        selector=baca.selectors.leaf(8 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(-3),
+        selector=baca.selectors.leaf(-3),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
 )
 
@@ -236,7 +236,7 @@ maker(
         ),
         baca.accidental_extra_offset(
             (-0.25, 0),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
         baca.glissando(
             selector=baca.leaves()[-3:],
@@ -244,14 +244,14 @@ maker(
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.left.X-offset = 4",
-            selector=baca.leaf(-3),
+            selector=baca.selectors.leaf(-3),
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-            selector=baca.leaf(-2),
+            selector=baca.selectors.leaf(-2),
         ),
         baca.note_head_transparent(
-            selector=baca.leaf(-2),
+            selector=baca.selectors.leaf(-2),
         ),
         baca.note_head_x_extent_zero(
             selector=baca.leaves()[-2:-1],
@@ -261,7 +261,7 @@ maker(
         ),
         baca.tuplet_bracket_padding(
             1.5,
-            selector=baca.leaf(-3),
+            selector=baca.selectors.leaf(-3),
         ),
     ),
     baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
@@ -356,7 +356,7 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaf(-1),
+            selector=baca.selectors.leaf(-1),
         ),
     ),
     baca.text_spanner(
@@ -383,7 +383,7 @@ maker(
         baca.pitch("D#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.leaf(0)),
+            baca.repeat_tie(baca.selectors.leaf(0)),
             selector=baca.leaves(),
         ),
     ),
