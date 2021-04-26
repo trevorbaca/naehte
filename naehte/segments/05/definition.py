@@ -70,7 +70,7 @@ maker(
     baca.hairpin(
         "o< pp > ppp < f",
         pieces=baca.selectors.lparts([6, 6, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
@@ -85,7 +85,7 @@ maker(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
         ),
         baca.glissando(
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
             zero_padding=True,
         ),
     ),
@@ -116,13 +116,13 @@ maker(
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
-            selector=baca.leaves().rleak(),
+            selector=baca.selectors.rleaves(),
             zero_padding=True,
         ),
         baca.interpolate_pitches(
             "E2",
             "C#3",
-            selector=baca.leaves().rleak(),
+            selector=baca.selectors.rleaves(),
         ),
         baca.repeat_tie(
             baca.selectors.pleaf(0),
@@ -135,7 +135,7 @@ maker(
     baca.hairpin(
         ">o",
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "no scr. -> scr. poss. -> XFB =|",
@@ -254,7 +254,7 @@ maker(
     baca.hairpin(
         "p > ppp < pp",
         pieces=baca.selectors.lparts([5, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.literal(
         r"\once \override Staff.BarLine.space-alist.first-note"
@@ -284,7 +284,7 @@ maker(
             "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>",
         ),
         baca.finger_pressure_transition(
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
     ),
     baca.stem_tremolo(
@@ -315,7 +315,7 @@ maker(
     baca.hairpin(
         "> pppp < ppp",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.skeleton("{ c2 c8 }"),
     baca.stem_tremolo(),
@@ -325,7 +325,7 @@ maker(
             allow_repeats=True,
         ),
         baca.glissando(
-            selector=baca.leaves().rleak(),
+            selector=baca.selectors.rleaves(),
         ),
         measures=(8, 9),
     ),
@@ -336,7 +336,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         measures=(8, 9),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -344,7 +344,7 @@ maker(
     ("vc", 9),
     baca.hairpin(
         "> ppppp",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.skeleton("{ c2 }"),
     baca.text_spanner(
@@ -360,7 +360,7 @@ maker(
     baca.hairpin(
         "<| p |>o niente",
         pieces=baca.selectors.lparts([2, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.literal(r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)"),
     baca.suite(
@@ -406,7 +406,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

@@ -303,7 +303,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 5, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -374,7 +374,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 6, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -402,7 +402,7 @@ maker(
         baca.new(
             baca.pitch("<D#3 F#3>"),
             baca.finger_pressure_transition(),
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
         baca.note_head_style_harmonic(
             selector=baca.selectors.leaf(0),
@@ -583,13 +583,13 @@ maker(
             zero_padding=True,
         ),
         baca.interpolate_pitches("D3", "C#3"),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "no scr. ->",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -604,7 +604,7 @@ maker(
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
         zero_padding=True,
     ),
     baca.text_spanner(

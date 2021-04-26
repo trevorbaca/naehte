@@ -245,7 +245,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -274,7 +274,7 @@ maker(
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
@@ -297,7 +297,7 @@ maker(
         "XFB =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -352,7 +352,7 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
     ),
     baca.text_spanner(
@@ -419,7 +419,7 @@ maker(
         "pppp -- pppp >o niente",
         abjad.tweak(True).to_barline,
         pieces=baca.selectors.lparts([14, 8]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\naehte-degrees-of-ponticello-markup",
@@ -438,10 +438,10 @@ maker(
             zero_padding=True,
         ),
         baca.interpolate_pitches("D2", "D2"),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.stem_tremolo(
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.text_spanner(
         "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
@@ -449,7 +449,7 @@ maker(
         abjad.tweak(3).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
