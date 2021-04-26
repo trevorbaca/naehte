@@ -134,7 +134,7 @@ maker(
     baca.hairpin(
         "o< pp > ppp < f",
         pieces=baca.selectors.lparts([6, 6, 2]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
@@ -151,7 +151,7 @@ maker(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
         ),
         baca.glissando(
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
             zero_padding=True,
         ),
     ),
@@ -215,7 +215,7 @@ maker(
         "XFB =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -272,7 +272,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -309,7 +309,7 @@ maker(
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
@@ -332,7 +332,7 @@ maker(
         "XFB =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -341,7 +341,7 @@ maker(
     baca.hairpin(
         "|> p <| ff",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.suite(
         baca.pitch("D#3"),
@@ -384,7 +384,7 @@ maker(
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(baca.selectors.leaf(0)),
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
     ),
     baca.text_spanner(
@@ -402,7 +402,7 @@ maker(
     baca.hairpin(
         "ppp -- niente",
         abjad.tweak(True).to_barline,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
@@ -420,14 +420,14 @@ maker(
             zero_padding=True,
         ),
         baca.interpolate_pitches("E3", "E3"),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"\baca-circle-very-wide-markup =|",
         abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

@@ -272,7 +272,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 6, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -296,7 +296,7 @@ maker(
         baca.new(
             baca.pitch("<D#3 F#3>"),
             baca.finger_pressure_transition(),
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
         baca.note_head_style_harmonic(
             selector=baca.selectors.leaf(0),
@@ -374,7 +374,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([5, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -394,7 +394,7 @@ maker(
     baca.hairpin(
         "pppp -- niente",
         abjad.tweak(True).to_barline,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.skeleton("{ c4 c c c c c c c c c }"),
     baca.suite(
@@ -410,7 +410,7 @@ maker(
         abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -422,7 +422,7 @@ maker(
             'pp <| "f" > pp <| "f" >',
             bookend=False,
             pieces=baca.selectors.lparts([1, 1, 1, 2]),
-            selector=baca.leaves().rleak(),
+            selector=baca.selectors.rleaves(),
         ),
     ),
     baca.suite(
@@ -440,7 +440,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"II / III largo -> strett. =| largo -> strett. =|",
@@ -448,7 +448,7 @@ maker(
         # (abjad.tweak(6.25).bound_details__right__padding, -1),
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

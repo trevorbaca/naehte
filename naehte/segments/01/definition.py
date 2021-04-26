@@ -62,7 +62,7 @@ maker(
             "<G3 D4>" " <A3 E4>" " <C3 G3>" " <E3 B3>" " <D3 A3>" " <E4 B4>" " Eb4"
         ),
         baca.glissando(
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
             zero_padding=True,
         ),
     ),
@@ -99,7 +99,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([6, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.tuplet_bracket_staff_padding(1),
 )
@@ -117,7 +117,7 @@ maker(
         baca.new(
             baca.repeat_tie(baca.selectors.leaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
     ),
     baca.text_spanner(
@@ -291,7 +291,7 @@ maker(
     baca.dls_staff_padding(7),
     baca.hairpin(
         "f |>o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
@@ -305,6 +305,6 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )

@@ -79,7 +79,7 @@ maker(
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.suite(
         baca.skeleton("{ c1 c1 c4 }"),
@@ -102,7 +102,7 @@ maker(
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.suite(
         baca.skeleton("{ c1 c1 c4 }"),
@@ -133,7 +133,7 @@ maker(
         abjad.tweak(6.25).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -190,7 +190,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -229,7 +229,7 @@ maker(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         r"\baca-triple-diamond-parenthesized-top-markup ->"
@@ -247,7 +247,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -257,7 +257,7 @@ maker(
     baca.hairpin(
         "appena-udibile -- niente",
         abjad.tweak(True).to_barline,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
@@ -275,7 +275,7 @@ maker(
             zero_padding=True,
         ),
         baca.interpolate_pitches("Eb3", "Eb3"),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "XFB =|",
@@ -283,7 +283,7 @@ maker(
         abjad.tweak(3.25).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
