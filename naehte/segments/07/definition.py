@@ -63,12 +63,12 @@ maker(
     baca.only_segment(
         baca.rehearsal_mark(
             "G",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 12)).extra_offset,
         ),
     ),
-    baca.open_volta(baca.skip(2 - 1)),
-    baca.close_volta(baca.skip(6 - 1)),
+    baca.open_volta(baca.selectors.skip(2 - 1)),
+    baca.close_volta(baca.selectors.skip(6 - 1)),
 )
 
 maker(
