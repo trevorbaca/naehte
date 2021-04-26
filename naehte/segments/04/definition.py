@@ -54,12 +54,12 @@ maker(
         "52",
         selector=baca.selectors.leaf(15 - 1),
     ),
-    baca.open_volta(baca.skip(5 - 1)),
-    baca.close_volta(baca.skip(7 - 1)),
+    baca.open_volta(baca.selectors.skip(5 - 1)),
+    baca.close_volta(baca.selectors.skip(7 - 1)),
     baca.only_segment(
         baca.rehearsal_mark(
             "D",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 14)).extra_offset,
         ),
     ),
