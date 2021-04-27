@@ -617,8 +617,14 @@ maker(
 
 maker(
     ("vc", 15),
-    baca.pitch("C#3", selector=baca.selectors.leaf(0)),
-    baca.pitch("<C#3 A3>", selector=baca.leaves()[1:]),
+    baca.pitch(
+        "C#3",
+        selector=baca.selectors.leaf(0),
+    ),
+    baca.pitch(
+        "<C#3 A3>",
+        selector=baca.leaves()[1:],
+    ),
     baca.skeleton(r"{ c4 c2.. c }"),
     baca.text_spanner(
         r"I / II larg. -> strett. -> larg.",
