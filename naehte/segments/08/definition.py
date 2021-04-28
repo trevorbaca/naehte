@@ -90,7 +90,7 @@ maker(
         "I / II larg. =|",
         abjad.tweak(3).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
@@ -113,7 +113,7 @@ maker(
         "½ clt =|",
         abjad.tweak(3).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
@@ -167,7 +167,7 @@ maker(
     baca.breathe(),
     baca.finger_pressure_transition(),
     baca.glissando(
-        selector=baca.leaves()[:1].lleak(),
+        selector=baca.selectors.leaves((None, 1), lleak=True),
     ),
     baca.hairpin(
         "mp <| fff",
@@ -262,7 +262,7 @@ maker(
     baca.new(
         baca.note_head_x_extent_zero(),
         baca.note_head_transparent(),
-        selector=baca.leaves()[1:],
+        selector=baca.selectors.leaves((1, None)),
     ),
     baca.suite(
         baca.skeleton(r"{ c2. c2. c2.. c2. }"),
