@@ -125,7 +125,7 @@ maker(
 maker(
     ("vc", 3),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[:1].lleak(),
+        selector=baca.selectors.leaves((None, 1), lleak=True),
     ),
     baca.hairpin(
         "|> ppp <| p",
@@ -142,7 +142,7 @@ maker(
     ),
     baca.trill_spanner(
         alteration="P1",
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -221,7 +221,7 @@ maker(
         selector=baca.leaves().lleak(),
     ),
     baca.glissando(
-        selector=baca.leaves()[:1].lleak(),
+        selector=baca.selectors.leaves((None, 1), lleak=True),
     ),
     baca.suite(
         baca.skeleton("{ c2.. c8 }"),
@@ -270,7 +270,7 @@ maker(
 maker(
     ("vc", 8),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[:1].lleak(),
+        selector=baca.selectors.leaves((None, 1), lleak=True),
     ),
     baca.hairpin(
         "p <| f",
@@ -311,7 +311,7 @@ maker(
     baca.suite(
         baca.pitch("D#3"),
         baca.glissando(
-            selector=baca.leaves()[:1].lleak(),
+            selector=baca.selectors.leaves((None, 1), lleak=True),
         ),
     ),
     baca.suite(
@@ -368,7 +368,7 @@ maker(
 maker(
     ("vc", 11),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.hairpin(
         "ppp <| p |>",
@@ -376,10 +376,10 @@ maker(
         pieces=baca.selectors.lparts([1, 2]),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.leaves()[-1:],
+        selector=baca.selectors.leaves((-1, None)),
     ),
     baca.stem_tremolo(
         selector=baca.selectors.leaf(-1),
@@ -396,14 +396,14 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
 maker(
     ("vc", 12),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[:1].lleak(),
+        selector=baca.selectors.leaves((None, 1), lleak=True),
     ),
     baca.skeleton(r"{ c4 c c c c c c c c c }"),
 )
@@ -429,7 +429,7 @@ maker(
     baca.new(
         baca.note_head_x_extent_zero(),
         baca.note_head_transparent(),
-        selector=baca.leaves()[1:],
+        selector=baca.selectors.leaves((1, None)),
     ),
     baca.suite(
         baca.glissando(

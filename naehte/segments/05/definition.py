@@ -164,7 +164,7 @@ maker(
             baca.repeat_tie(
                 baca.selectors.pleaf(0),
             ),
-            selector=baca.leaves()[1:],
+            selector=baca.selectors.leaves((1, None)),
         ),
     ),
     baca.text_spanner(
@@ -178,7 +178,7 @@ maker(
         r"\baca-circle-markup =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.text_spanner(
         r"spz. larg. -> str. =|",
@@ -193,11 +193,11 @@ maker(
 maker(
     ("vc", 5),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.suite(
         baca.pitches("C#3 C#3 E4 D3 E3", allow_repeats=True),
@@ -245,7 +245,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(0.5).bound_details__right__padding,
         alteration="P1",
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -373,7 +373,7 @@ maker(
             selector=baca.selectors.leaf(-1),
         ),
         baca.glissando(
-            selector=baca.leaves()[-3:],
+            selector=baca.selectors.leaves((-3, None)),
             zero_padding=True,
         ),
         baca.literal(
@@ -388,10 +388,10 @@ maker(
             selector=baca.selectors.leaf(-2),
         ),
         baca.note_head_x_extent_zero(
-            selector=baca.leaves()[-2:-1],
+            selector=baca.selectors.leaves((-2, -1)),
         ),
         baca.stem_down(
-            selector=baca.leaves()[-3:],
+            selector=baca.selectors.leaves((-3, None)),
         ),
         baca.tuplet_bracket_padding(
             1.5,
@@ -421,7 +421,9 @@ maker(
         baca.skeleton(
             r"\times 4/5 { c4. c8 [ c ] }",
         ),
-        baca.repeat_tie(baca.leaves()[-2:]),
+        baca.repeat_tie(
+            baca.selectors.leaves((-2, None)),
+        ),
     ),
     baca.text_spanner(
         r"no scr. -> scr. =|",
@@ -432,7 +434,7 @@ maker(
     ),
     baca.trill_spanner(
         alteration="m2",
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 

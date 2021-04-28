@@ -71,20 +71,20 @@ maker(
         abjad.tweak(13).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.text_spanner(
         r"vib. molto -> NV",
         abjad.tweak(13).staff_padding,
         lilypond_id=2,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.text_spanner(
         r"II / III mod. =|",
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.text_spanner(
         r"no scr. -> scr. =|",
@@ -124,7 +124,7 @@ maker(
         r"\baca-circle-very-wide-markup =|",
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.text_spanner(
         r"spazz. larg. =|",
@@ -140,10 +140,10 @@ maker(
     baca.dls_staff_padding(5),
     baca.hairpin(
         "<| f",
-        selector=baca.leaves()[1:-1],
+        selector=baca.selectors.leaves((1, -1)),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.leaves()[1:-2],
+        selector=baca.selectors.leaves((1, -2)),
     ),
     baca.suite(
         baca.skeleton(
@@ -165,20 +165,20 @@ maker(
             selector=baca.selectors.leaf(-1),
         ),
         baca.glissando(
-            selector=baca.leaves()[1:-2],
+            selector=baca.selectors.leaves((1, -2)),
         ),
         baca.finger_pressure_transition(
-            selector=baca.leaves()[:2],
+            selector=baca.selectors.leaves((None, 2)),
         ),
         baca.finger_pressure_transition(
-            selector=baca.leaves()[-3:-1],
+            selector=baca.selectors.leaves((-3, -1)),
         ),
     ),
     baca.text_spanner(
         r"RH vib. molto -> NV",
         abjad.tweak(10.5).staff_padding,
         lilypond_id=1,
-        selector=baca.leaves()[1:-1],
+        selector=baca.selectors.leaves((1, -1)),
     ),
     baca.text_spanner(
         r"no scr. -> scr. -> poss. -> XFB =|",
@@ -186,7 +186,7 @@ maker(
         bookend=False,
         measures=(3, 4),
         pieces=baca.selectors.lparts([7, 1, 6, 2]),
-        selector=baca.leaves()[1:-1],
+        selector=baca.selectors.leaves((1, -1)),
     ),
     baca.tuplet_bracket_staff_padding(1),
 )
@@ -200,33 +200,33 @@ maker(
         ),
         baca.pitches(
             "Db4 F4 G3 E4 F3",
-            selector=baca.leaves()[:-2],
+            selector=baca.selectors.leaves((None, -2)),
         ),
         baca.pitch(
             "Db4",
-            selector=baca.leaves()[-2:],
+            selector=baca.selectors.leaves((-2, None)),
         ),
         baca.new(
             baca.repeat_tie(baca.selectors.leaf(0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
         ),
         baca.glissando(
-            selector=baca.leaves()[:5],
+            selector=baca.selectors.leaves((None, 5)),
             zero_padding=True,
         ),
     ),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[-3:-1],
+        selector=baca.selectors.leaves((-3, -1)),
     ),
     baca.new(
         baca.hairpin("ff |> p"),
         baca.dls_staff_padding(7),
-        selector=baca.leaves()[:6].lleak(),
+        selector=baca.selectors.leaves((None, 6), lleak=True),
     ),
     baca.new(
         baca.hairpin("<| mf"),
         baca.dls_staff_padding(7),
-        selector=baca.leaves()[-3:-1],
+        selector=baca.selectors.leaves((-3, -1)),
     ),
     baca.note_head_style_harmonic_black(
         selector=baca.selectors.leaf(-2),
