@@ -209,7 +209,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-3:].rleak(),
+        selector=baca.selectors.leaves((-3, None), rleak=True),
     ),
     baca.text_spanner(
         "XFB =|",
@@ -227,7 +227,7 @@ maker(
     baca.hairpin(
         "|> ppppp <| p |>o niente",
         pieces=baca.selectors.lparts([1, 1, 4]),
-        selector=baca.leaves().lleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
     ),
     baca.suite(
         baca.pitches(
@@ -326,7 +326,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-3:].rleak(),
+        selector=baca.selectors.leaves((-3, None), rleak=True),
     ),
     baca.text_spanner(
         "XFB =|",
@@ -393,7 +393,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 

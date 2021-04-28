@@ -118,7 +118,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
-        selector=baca.leaves().rleak().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak().rleak(),
     ),
 )
 
@@ -176,7 +176,7 @@ maker(
         r"scr. =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
@@ -291,7 +291,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-3:].rleak(),
+        selector=baca.selectors.leaves((-3, None), rleak=True),
     ),
     baca.text_spanner(
         "XFB =|",
@@ -361,7 +361,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
