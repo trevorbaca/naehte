@@ -347,10 +347,7 @@ maker(
             selector=baca.selectors.leaves((None, -1)),
         ),
     ),
-    baca.beam_positions(
-        -5.5,
-        selector=baca.selectors.leaves((None, 5))
-    ),
+    baca.beam_positions(-5.5, selector=baca.selectors.leaves((None, 5))),
     baca.stem_tremolo(
         selector=baca.selectors.leaves((None, 5)),
         tremolo_flags=64,
