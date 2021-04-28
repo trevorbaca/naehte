@@ -94,7 +94,7 @@ maker(
     baca.suite(
         baca.pitch("C#3"),
         baca.glissando(
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.text_spanner(
@@ -116,7 +116,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
@@ -143,7 +143,7 @@ maker(
         r"spazz. larg. =|",
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
     baca.tuplet_bracket_staff_padding(1),
 )
@@ -227,7 +227,7 @@ maker(
         ),
     ),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
     baca.note_head_style_harmonic_black(
         selector=baca.selectors.leaf(-1),
@@ -238,7 +238,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([6, 3]),
-        selector=baca.leaves().lleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
     ),
 )
 
@@ -259,7 +259,7 @@ maker(
                 zero_padding=True,
             ),
             baca.note_head_style_harmonic(),
-            selector=baca.leaves()[1:].rleak(),
+            selector=baca.selectors.leaves((1, None), rleak=True),
         ),
     ),
     baca.suite(
@@ -286,7 +286,7 @@ maker(
         baca.pitch("D3"),
         baca.glissando(
             abjad.tweak(0).bound_details__left__padding,
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.trill_spanner(
@@ -342,7 +342,7 @@ maker(
             selector=baca.leaves()[1:9],
         ),
         baca.glissando(
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.beam_positions(
@@ -366,7 +366,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.text_spanner(
         r"T -> P -> T =|",
@@ -495,7 +495,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -565,7 +565,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(6.25).bound_details__right__padding,
         alteration="m2",
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
@@ -573,7 +573,7 @@ maker(
     ("vc", 13),
     baca.hairpin(
         "< mp",
-        selector=baca.leaves().lleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
     ),
     baca.skeleton("{ c4 c c c c c c c c }"),
     baca.suite(
@@ -611,7 +611,7 @@ maker(
         "scr. poss. =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
     ),
 )
 
@@ -632,13 +632,13 @@ maker(
         abjad.tweak(9).staff_padding,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
     baca.text_spanner(
         r"\baca-damp-markup =|",
         abjad.tweak(5.5).staff_padding,
         bookend=False,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
 )
 

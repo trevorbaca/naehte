@@ -138,7 +138,7 @@ maker(
         ),
         baca.glissando(
             abjad.tweak(0).bound_details__left__padding,
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.text_spanner(
@@ -243,7 +243,7 @@ maker(
             selector=baca.leaves()[1:9],
         ),
         baca.glissando(
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.beam_positions(
@@ -267,7 +267,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.text_spanner(
         r"T -> P -> T =|",
@@ -368,7 +368,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
     baca.text_spanner(
         r"P -> T =|",

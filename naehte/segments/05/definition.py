@@ -93,7 +93,7 @@ maker(
         "RH vibr. strettiss. -> RH NV",
         abjad.tweak(8).staff_padding,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.tuplet_bracket_padding(1.75),
 )
@@ -144,7 +144,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 11]),
-        selector=baca.leaves().lleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
     ),
 )
 
@@ -186,7 +186,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
@@ -212,7 +212,7 @@ maker(
                 zero_padding=True,
             ),
             baca.note_head_style_harmonic(),
-            selector=baca.leaves()[1:].rleak(),
+            selector=baca.selectors.leaves((1, None), rleak=True),
         ),
     ),
     baca.suite(
@@ -239,7 +239,7 @@ maker(
         baca.pitch("D3"),
         baca.glissando(
             abjad.tweak(0).bound_details__left__padding,
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.trill_spanner(
@@ -295,7 +295,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
 )
 
@@ -351,7 +351,7 @@ maker(
         "spazz. strett. -> larg.",
         abjad.tweak(5.75).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves().lleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
     ),
 )
 

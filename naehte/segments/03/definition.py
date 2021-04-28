@@ -117,7 +117,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
@@ -180,7 +180,7 @@ maker(
     ),
     baca.trill_spanner(
         alteration="m2",
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
 )
 
@@ -237,7 +237,7 @@ maker(
 maker(
     ("vc", 5),
     baca.finger_pressure_transition(
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.note_head_style_harmonic(),
     baca.pitch("<G3 D4>"),
@@ -258,7 +258,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(6.25).bound_details__right__padding,
         alteration="M2",
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
@@ -346,7 +346,7 @@ maker(
             selector=baca.leaves()[1:9],
         ),
         baca.glissando(
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.beam_positions(
@@ -370,7 +370,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         bookend=False,
         lilypond_id=2,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.text_spanner(
         r"T -> P -> T =|",
@@ -490,7 +490,7 @@ maker(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=baca.leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -561,7 +561,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(6.25).bound_details__right__padding,
         alteration="m2",
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
@@ -576,7 +576,7 @@ maker(
         baca.skeleton(r"{ c2 }"),
         baca.pitch("A2"),
         baca.glissando(
-            selector=baca.leaves()[-1:].rleak(),
+            selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
     baca.text_spanner(
@@ -605,7 +605,7 @@ maker(
     ("vc", 17),
     baca.hairpin(
         "pppp >o niente",
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
     baca.skeleton(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"),
     baca.suite(
