@@ -130,7 +130,7 @@ maker(
     baca.hairpin(
         "|> ppp <| p",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.note_head_style_harmonic_black(
         selector=baca.selectors.leaf(0),
@@ -151,7 +151,7 @@ maker(
     baca.hairpin(
         "|> ppp <| fff",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.suite(
         baca.skeleton("{ c4 c8 }"),
@@ -185,7 +185,7 @@ maker(
     baca.hairpin(
         "|> ppp <| fff",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.note_head_style_harmonic(
         selector=baca.selectors.leaf(0),
@@ -218,7 +218,7 @@ maker(
     baca.hairpin(
         "|> ppp <| mf",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.glissando(
         selector=baca.selectors.leaves((None, 1), lleak=True),
@@ -413,7 +413,7 @@ maker(("vc", 13), baca.skeleton(r"{ c4 c c c c c c c c c c }"))
 maker(
     ("vc", (12, 13)),
     baca.accent(
-        selector=baca.leaves().get([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17]),
+        selector=baca.selectors.leaves([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17]),
     ),
     baca.hairpin(
         "pppp -- pppp >o niente",

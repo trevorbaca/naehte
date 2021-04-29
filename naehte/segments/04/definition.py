@@ -206,7 +206,7 @@ maker(
     baca.hairpin(
         "ff |> p <| mf",
         pieces=baca.selectors.lparts([6, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.suite(
         baca.skeleton(

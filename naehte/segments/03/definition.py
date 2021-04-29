@@ -134,7 +134,7 @@ maker(
     baca.hairpin(
         '<| "f" "f" > ppp',
         pieces=baca.selectors.lparts([2, 1, 2]),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.suite(
         baca.skeleton("{ c4 c c c }"),
