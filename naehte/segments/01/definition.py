@@ -268,7 +268,7 @@ maker(
             pieces=baca.selectors.lparts([2, 1, 1, 2]),
         ),
         baca.dls_staff_padding(7),
-        selector=baca.leaves().lleak(),
+        selector=baca.selectors.leaves(lleak=True),
     ),
     baca.text_spanner(
         r"\baca-damp-markup =|",
