@@ -1,4 +1,4 @@
-%! ide.Path.extern()
+%! baca.Path.extern()
 d_Global_Skips = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -811,11 +811,11 @@ d_Global_Skips = {
     \once \override Score.SpanBar.transparent = ##t
 
 %! abjad.ScoreTemplate._make_global_context()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 d_Global_Rests = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -913,11 +913,11 @@ d_Global_Rests = {
     R1 * 1/4
 
 %! abjad.ScoreTemplate._make_global_context()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 d_Cello_Music_Voice = {
 
     %! baca.skeleton()
@@ -4374,25 +4374,25 @@ d_Cello_Music_Voice = {
     >>
 
 %! naehte.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 d_Cello_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \d_Global_Rests
 
     %! naehte.ScoreTemplate.__call__()
     \context Voice = "Cello_Music_Voice"
     %! naehte.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \d_Cello_Music_Voice
 
 %! naehte.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
