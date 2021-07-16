@@ -28,7 +28,6 @@ maker = baca.SegmentMaker(
         (6, 8),
         (1, 4),
     ],
-    validate_measure_count=14,
 )
 
 maker(
