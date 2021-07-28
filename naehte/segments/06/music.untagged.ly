@@ -1,12 +1,12 @@
 \version "2.23.1"
 \language "english"
 \include "../../stylesheet.ily"
-\include "illustration.ily"
+\include "music.ily"
 
 \header { composer = ##f poet = ##f title = ##f }
 \layout { indent = 0 }
 \paper { print-first-page-number = ##t }
-\paper { first-page-number = #7 }
+\paper { first-page-number = #6 }
 
 \score
 {
@@ -24,7 +24,7 @@
             <<
 
                 \context GlobalSkips = "Global_Skips"
-                \g_Global_Skips
+                \f_Global_Skips
 
             >>
 
@@ -32,7 +32,7 @@
             {
 
                 \context Staff = "Cello_Music_Staff"
-                \g_Cello_Music_Staff
+                \f_Cello_Music_Staff
 
             }
 
