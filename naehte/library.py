@@ -31,9 +31,6 @@ metronome_marks = abjad.OrderedDict(
 class ScoreTemplate(baca.ScoreTemplate):
     """
     Score template.
-
-    >>> import naehte
-
     """
 
     ### CLASS VARIABLES ###
@@ -96,7 +93,8 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         ..  container:: example
 
-            >>> naehte.ScoreTemplate().do_not_require_margin_markup
+            >>> import naehte
+            >>> naehte.library.ScoreTemplate().do_not_require_margin_markup
             True
 
         """
@@ -109,7 +107,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         ..  container:: example
 
-            >>> score_template = naehte.ScoreTemplate()
+            >>> score_template = naehte.library.ScoreTemplate()
             >>> string = abjad.storage(score_template.voice_abbreviations)
             >>> print(string)
             abjad.OrderedDict(
