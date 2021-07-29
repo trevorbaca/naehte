@@ -1,6 +1,8 @@
 import abjad
 import baca
 
+from naehte import library as naehte
+
 ###############################################################################
 ##################################### [H] #####################################
 ###############################################################################
@@ -11,6 +13,7 @@ maker = baca.SegmentMaker(
     ],
     check_all_are_pitched=True,
     final_segment=True,
+    score_template=naehte.ScoreTemplate(),
     time_signatures=[
         (9, 4),
         (9, 4),
