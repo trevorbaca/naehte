@@ -13,7 +13,6 @@ maker = baca.SegmentMaker(
     ],
     check_all_are_pitched=True,
     final_segment=True,
-    segment_directory=pathlib.Path(__file__).resolve().parent,
     time_signatures=[
         (9, 4),
         (9, 4),
