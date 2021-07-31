@@ -13,6 +13,8 @@ maker = baca.SegmentMaker(
     ],
     check_all_are_pitched=True,
     final_segment=True,
+    instruments=naehte.instruments,
+    metronome_marks=naehte.metronome_marks,
     score_template=naehte.ScoreTemplate(),
     time_signatures=[
         (9, 4),
