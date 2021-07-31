@@ -1,6 +1,6 @@
 b_Global_Skips = {
 
-    % [02 Global_Skips measure 9 / measure 1]
+    % [Global_Skips measure 9 / measure 1]
     \time 5/8
     \bar ""
     \baca-time-signature-color #'blue
@@ -13,13 +13,13 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 10 / measure 2]
+    % [Global_Skips measure 10 / measure 2]
     s1 * 5/8
     \bacaStopTextSpanLMN
     - \baca-start-lmn-left-only "2"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 11 / measure 3]
+    % [Global_Skips measure 11 / measure 3]
     \time 3/4
     \baca-time-signature-color #'blue
     s1 * 3/4
@@ -31,13 +31,13 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 12 / measure 4]
+    % [Global_Skips measure 12 / measure 4]
     s1 * 3/4
     \bacaStopTextSpanLMN
     - \baca-start-lmn-left-only "4"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 13 / measure 5]
+    % [Global_Skips measure 13 / measure 5]
     \time 2/4
     \baca-time-signature-color #'blue
     s1 * 1/2
@@ -49,7 +49,7 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 14 / measure 6]
+    % [Global_Skips measure 14 / measure 6]
     \time 1/4
     \baca-time-signature-color #'blue
     s1 * 1/4
@@ -57,7 +57,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "6"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 15 / measure 7]
+    % [Global_Skips measure 15 / measure 7]
     \time 5/4
     \baca-time-signature-color #'blue
     s1 * 5/4
@@ -65,7 +65,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "7"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 16 / measure 8]
+    % [Global_Skips measure 16 / measure 8]
     \time 1/4
     \baca-time-signature-color #'blue
     s1 * 1/4
@@ -73,7 +73,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "8"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 17 / measure 9]
+    % [Global_Skips measure 17 / measure 9]
     \time 10/4
     \baca-time-signature-color #'blue
     s1 * 5/2
@@ -85,7 +85,7 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 18 / measure 10]
+    % [Global_Skips measure 18 / measure 10]
     \time 1/4
     \baca-time-signature-color #'blue
     s1 * 1/4
@@ -93,7 +93,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "10"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 19 / measure 11]
+    % [Global_Skips measure 19 / measure 11]
     \time 4/4
     \baca-time-signature-color #'blue
     s1 * 1
@@ -105,13 +105,13 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 20 / measure 12]
+    % [Global_Skips measure 20 / measure 12]
     s1 * 1
     \bacaStopTextSpanLMN
     - \baca-start-lmn-left-only "12"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 21 / measure 13]
+    % [Global_Skips measure 21 / measure 13]
     \time 2/4
     \baca-time-signature-color #'blue
     s1 * 1/2
@@ -119,7 +119,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "13"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 22 / measure 14]
+    % [Global_Skips measure 22 / measure 14]
     \time 5/8
     \baca-time-signature-color #'blue
     s1 * 5/8
@@ -131,7 +131,7 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 23 / measure 15]
+    % [Global_Skips measure 23 / measure 15]
     \time 7/8
     \baca-time-signature-color #'blue
     s1 * 7/8
@@ -143,7 +143,7 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 24 / measure 16]
+    % [Global_Skips measure 24 / measure 16]
     \time 4/4
     \baca-time-signature-color #'blue
     s1 * 1
@@ -155,7 +155,7 @@ b_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue
     \bacaStartTextSpanMM
 
-    % [02 Global_Skips measure 25 / measure 17]
+    % [Global_Skips measure 25 / measure 17]
     \time 6/4
     \baca-time-signature-color #'blue
     s1 * 3/2
@@ -163,13 +163,13 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "17"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 26 / measure 18]
+    % [Global_Skips measure 26 / measure 18]
     s1 * 3/2
     \bacaStopTextSpanLMN
     - \baca-start-lmn-left-only "18"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 27 / measure 19]
+    % [Global_Skips measure 27 / measure 19]
     \time 4/4
     \baca-time-signature-color #'blue
     s1 * 1
@@ -177,7 +177,7 @@ b_Global_Skips = {
     - \baca-start-lmn-left-only "19"
     \bacaStartTextSpanLMN
 
-    % [02 Global_Skips measure 28 / measure 20]
+    % [Global_Skips measure 28 / measure 20]
     \time 1/4
     \baca-time-signature-transparent
     s1 * 1/4
@@ -191,70 +191,70 @@ b_Global_Skips = {
 
 b_Global_Rests = {
 
-    % [02 Global_Rests measure 9 / measure 1]
+    % [Global_Rests measure 9 / measure 1]
     R1 * 5/8
 
-    % [02 Global_Rests measure 10 / measure 2]
+    % [Global_Rests measure 10 / measure 2]
     R1 * 5/8
 
-    % [02 Global_Rests measure 11 / measure 3]
+    % [Global_Rests measure 11 / measure 3]
     R1 * 3/4
 
-    % [02 Global_Rests measure 12 / measure 4]
+    % [Global_Rests measure 12 / measure 4]
     R1 * 3/4
 
-    % [02 Global_Rests measure 13 / measure 5]
+    % [Global_Rests measure 13 / measure 5]
     R1 * 1/2
 
-    % [02 Global_Rests measure 14 / measure 6]
+    % [Global_Rests measure 14 / measure 6]
     \baca-fermata-measure
     R1 * 1/4
     ^ \baca-fermata-markup
 
-    % [02 Global_Rests measure 15 / measure 7]
+    % [Global_Rests measure 15 / measure 7]
     R1 * 5/4
 
-    % [02 Global_Rests measure 16 / measure 8]
+    % [Global_Rests measure 16 / measure 8]
     \baca-fermata-measure
     R1 * 1/4
     ^ \baca-fermata-markup
 
-    % [02 Global_Rests measure 17 / measure 9]
+    % [Global_Rests measure 17 / measure 9]
     R1 * 5/2
 
-    % [02 Global_Rests measure 18 / measure 10]
+    % [Global_Rests measure 18 / measure 10]
     \baca-fermata-measure
     R1 * 1/4
     ^ \baca-fermata-markup
 
-    % [02 Global_Rests measure 19 / measure 11]
+    % [Global_Rests measure 19 / measure 11]
     R1 * 1
 
-    % [02 Global_Rests measure 20 / measure 12]
+    % [Global_Rests measure 20 / measure 12]
     R1 * 1
 
-    % [02 Global_Rests measure 21 / measure 13]
+    % [Global_Rests measure 21 / measure 13]
     R1 * 1/2
 
-    % [02 Global_Rests measure 22 / measure 14]
+    % [Global_Rests measure 22 / measure 14]
     R1 * 5/8
 
-    % [02 Global_Rests measure 23 / measure 15]
+    % [Global_Rests measure 23 / measure 15]
     R1 * 7/8
 
-    % [02 Global_Rests measure 24 / measure 16]
+    % [Global_Rests measure 24 / measure 16]
     R1 * 1
 
-    % [02 Global_Rests measure 25 / measure 17]
+    % [Global_Rests measure 25 / measure 17]
     R1 * 3/2
 
-    % [02 Global_Rests measure 26 / measure 18]
+    % [Global_Rests measure 26 / measure 18]
     R1 * 3/2
 
-    % [02 Global_Rests measure 27 / measure 19]
+    % [Global_Rests measure 27 / measure 19]
     R1 * 1
 
-    % [02 Global_Rests measure 28 / measure 20]
+    % [Global_Rests measure 28 / measure 20]
     R1 * 1/4
 
 }
@@ -264,7 +264,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 9 / measure 1]
+        % [Cello_Music_Voice measure 9 / measure 1]
         \override DynamicLineSpanner.staff-padding = 7
         \override Stem.direction = #down
         \clef "bass"
@@ -347,7 +347,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 10 / measure 2]
+        % [Cello_Music_Voice measure 10 / measure 2]
         \once \override Accidental.extra-offset = #'(-1 . 0)
         gs!4.
         - \tweak color #(x11-color 'blue)
@@ -427,7 +427,7 @@ b_Cello_Music_Voice = {
         \times 6/7
         {
 
-            % [02 Cello_Music_Voice measure 11 / measure 3]
+            % [Cello_Music_Voice measure 11 / measure 3]
             \once \override NoteHead.style = #'harmonic
             \override DynamicLineSpanner.staff-padding = 11
             <f a>2
@@ -537,7 +537,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 13 / measure 5]
+        % [Cello_Music_Voice measure 13 / measure 5]
         \once \override NoteHead.style = #'harmonic
         \override DynamicLineSpanner.staff-padding = 5
         <ds! fs!>4..
@@ -589,7 +589,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Music_Voice"
         {
 
-            % [02 Cello_Music_Voice measure 14 / measure 6]
+            % [Cello_Music_Voice measure 14 / measure 6]
             \abjad-invisible-music-coloring
             \override DynamicLineSpanner.staff-padding = 9
             \baca-not-yet-pitched-coloring
@@ -600,7 +600,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Rest_Voice"
         {
 
-            % [02 Cello_Rest_Voice measure 14 / measure 6]
+            % [Cello_Rest_Voice measure 14 / measure 6]
             R1 * 1/4
 
         }
@@ -612,7 +612,7 @@ b_Cello_Music_Voice = {
         \times 4/5
         {
 
-            % [02 Cello_Music_Voice measure 15 / measure 7]
+            % [Cello_Music_Voice measure 15 / measure 7]
             \override NoteHead.style = #'harmonic
             \override Beam.positions = #'(-5.5 . -5.5)
             \once \override TupletBracket.padding = 1.75
@@ -708,7 +708,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Music_Voice"
         {
 
-            % [02 Cello_Music_Voice measure 16 / measure 8]
+            % [Cello_Music_Voice measure 16 / measure 8]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             d1 * 1/4
@@ -720,7 +720,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Rest_Voice"
         {
 
-            % [02 Cello_Rest_Voice measure 16 / measure 8]
+            % [Cello_Rest_Voice measure 16 / measure 8]
             R1 * 1/4
 
         }
@@ -729,7 +729,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 17 / measure 9]
+        % [Cello_Music_Voice measure 17 / measure 9]
         \override DynamicLineSpanner.staff-padding = 6
     %%% \once \override Staff.Clef.X-extent = ##f
     %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
@@ -793,7 +793,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Music_Voice"
         {
 
-            % [02 Cello_Music_Voice measure 18 / measure 10]
+            % [Cello_Music_Voice measure 18 / measure 10]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             b'1 * 1/4
@@ -807,7 +807,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Rest_Voice"
         {
 
-            % [02 Cello_Rest_Voice measure 18 / measure 10]
+            % [Cello_Rest_Voice measure 18 / measure 10]
             R1 * 1/4
 
         }
@@ -816,7 +816,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 19 / measure 11]
+        % [Cello_Music_Voice measure 19 / measure 11]
         \once \override Staff.Clef.X-extent = ##f
         \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
         \clef "bass"
@@ -849,7 +849,7 @@ b_Cello_Music_Voice = {
         \times 4/5
         {
 
-            % [02 Cello_Music_Voice measure 20 / measure 12]
+            % [Cello_Music_Voice measure 20 / measure 12]
             <c' g'>4
             - \tweak color #(x11-color 'blue)
             \baca-effort-f
@@ -879,7 +879,7 @@ b_Cello_Music_Voice = {
 
         }
 
-        % [02 Cello_Music_Voice measure 21 / measure 13]
+        % [Cello_Music_Voice measure 21 / measure 13]
         <bf! f'>2
         - \tweak color #(x11-color 'blue)
         \baca-effort-f
@@ -899,7 +899,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 22 / measure 14]
+        % [Cello_Music_Voice measure 22 / measure 14]
         \once \override Accidental.extra-offset = #'(-1 . 0)
         gs!4.
         - \tweak color #(x11-color 'blue)
@@ -980,7 +980,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 23 / measure 15]
+        % [Cello_Music_Voice measure 23 / measure 15]
         \override TupletBracket.direction = #down
         \override TupletBracket.staff-padding = 2.5
         \override DynamicLineSpanner.staff-padding = 6
@@ -1026,7 +1026,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 24 / measure 16]
+        % [Cello_Music_Voice measure 24 / measure 16]
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
         \override DynamicLineSpanner.staff-padding = 6
         df,1
@@ -1045,7 +1045,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 25 / measure 17]
+        % [Cello_Music_Voice measure 25 / measure 17]
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
         df,1.
         - \tweak color #(x11-color 'blue)
@@ -1070,7 +1070,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 26 / measure 18]
+        % [Cello_Music_Voice measure 26 / measure 18]
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
         df,4
         - \tweak color #(x11-color 'blue)
@@ -1111,7 +1111,7 @@ b_Cello_Music_Voice = {
 
     {
 
-        % [02 Cello_Music_Voice measure 27 / measure 19]
+        % [Cello_Music_Voice measure 27 / measure 19]
         e,4
         \stopTextSpan
         - \abjad-dashed-line-with-hook
@@ -1148,7 +1148,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Music_Voice"
         {
 
-            % [02 Cello_Music_Voice measure 28 / measure 20]
+            % [Cello_Music_Voice measure 28 / measure 20]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             d1 * 1/4
@@ -1158,7 +1158,7 @@ b_Cello_Music_Voice = {
         \context Voice = "Cello_Rest_Voice"
         {
 
-            % [02 Cello_Rest_Voice measure 28 / measure 20]
+            % [Cello_Rest_Voice measure 28 / measure 20]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
