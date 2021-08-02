@@ -1,4 +1,4 @@
-b_Global_Skips = {
+segment.02.Global.Skips = {
 
     % [Global_Skips measure 9 / measure 1]
     \time 5/8
@@ -189,7 +189,7 @@ b_Global_Skips = {
 }
 
 
-b_Global_Rests = {
+segment.02.Global.Rests = {
 
     % [Global_Rests measure 9 / measure 1]
     R1 * 5/8
@@ -260,7 +260,7 @@ b_Global_Rests = {
 }
 
 
-b_Cello_Music_Voice = {
+segment.02.Cello.Music.Voice = {
 
     {
 
@@ -1173,12 +1173,12 @@ b_Cello_Music_Voice = {
 }
 
 
-b_Cello_Music_Staff = <<
+segment.02.Cello.Music.Staff = <<
 
     \context GlobalRests = "Global_Rests"
-    \b_Global_Rests
+    { \segment.02.Global.Rests }
 
     \context Voice = "Cello_Music_Voice"
-    \b_Cello_Music_Voice
+    { \segment.02.Cello.Music.Voice }
 
 >>

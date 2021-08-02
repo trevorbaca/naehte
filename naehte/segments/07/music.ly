@@ -24,7 +24,7 @@
             <<
 
                 \context GlobalSkips = "Global_Skips"
-                \g_Global_Skips
+                { \segment.07.Global.Skips }
 
             >>
 
@@ -32,7 +32,7 @@
             {
 
                 \context Staff = "Cello_Music_Staff"
-                \g_Cello_Music_Staff
+                { \segment.07.Cello.Music.Staff }
 
             }
 

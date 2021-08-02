@@ -1,4 +1,4 @@
-a_Global_Skips = {
+segment.01.Global.Skips = {
 
     % [Global_Skips measure 1]
     \override TextSpanner.staff-padding = 10
@@ -80,7 +80,7 @@ a_Global_Skips = {
 }
 
 
-a_Global_Rests = {
+segment.01.Global.Rests = {
 
     % [Global_Rests measure 1]
     R1 * 7/8
@@ -112,7 +112,7 @@ a_Global_Rests = {
 }
 
 
-a_Cello_Music_Voice = {
+segment.01.Cello.Music.Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 7/9
@@ -630,12 +630,12 @@ a_Cello_Music_Voice = {
 }
 
 
-a_Cello_Music_Staff = <<
+segment.01.Cello.Music.Staff = <<
 
     \context GlobalRests = "Global_Rests"
-    \a_Global_Rests
+    { \segment.01.Global.Rests }
 
     \context Voice = "Cello_Music_Voice"
-    \a_Cello_Music_Voice
+    { \segment.01.Cello.Music.Voice }
 
 >>
