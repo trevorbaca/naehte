@@ -3,17 +3,17 @@ import baca
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            16,
+            (16,),
             measure=1,
             y_offset=30 + 0 * (35 + 16),
         ),
         baca.system(
-            16,
+            (16,),
             measure=3,
             y_offset=30 + 1 * (35 + 16),
         ),
         baca.system(
-            16,
+            (16,),
             measure=8,
             y_offset=30 + 2 * (35 + 16),
         ),
