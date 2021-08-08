@@ -22,9 +22,9 @@ spacing.override(2, (1, 56))
 spacing.override(3, (1, 48))
 spacing.override(5, (1, 48))
 spacing.override(7, (1, 48))
-spacing.override(9, (1, 24), force_local=True)
-spacing.override(14, (1, 56), force_local=True)
-spacing.override((16, 19), (1, 14), force_local=True)
+spacing.override(9, (1, 24))
+spacing.override(14, (1, 56))
+spacing.override((16, 19), (1, 14))
 
 if __name__ == "__main__":
     baca.build.make_layout_ly(__file__, breaks, spacing)
