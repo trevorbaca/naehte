@@ -11,14 +11,12 @@ breaks = baca.breaks(
     ),
 )
 
-spacing = baca.spacing(
-    breaks=breaks,
-    fallback_duration=(1, 32),
-    overrides=(
-        baca.space(1, (1, 48)),
-        baca.space(4, (1, 48)),
-    ),
-)
-
 if __name__ == "__main__":
-    baca.build.make_layout_ly(breaks, spacing)
+    baca.build.make_layout_ly(
+        breaks,
+        fallback_duration=(1, 32),
+        overrides=(
+            baca.space(1, (1, 48)),
+            baca.space(4, (1, 48)),
+        ),
+    )
