@@ -11,7 +11,7 @@ maker = baca.SegmentMaker(
     activate=[
         baca.tags.LOCAL_MEASURE_NUMBER,
     ],
-    check_all_are_pitched=True,
+    error_on_not_yet_pitched=True,
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
     score_template=naehte.ScoreTemplate(),
