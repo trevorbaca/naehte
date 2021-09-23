@@ -8,6 +8,7 @@ from naehte import library as naehte
 ###############################################################################
 
 maker = baca.SegmentMaker(
+    **baca.segments(),
     activate=[
         baca.tags.LOCAL_MEASURE_NUMBER,
     ],
