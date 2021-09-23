@@ -15,50 +15,39 @@ abjad.OrderedDict(
         ),
         (
             "persistent_indicators",
-            abjad.OrderedDict(
-                [
-                    (
-                        "Cello_Music_Staff",
-                        [
-                            baca.Memento(
-                                context="Cello_Music_Voice",
-                                manifest="instruments",
-                                value="Cello",
-                            ),
-                            baca.Memento(
-                                context="Cello_Music_Voice",
-                                prototype="abjad.Clef",
-                                value="bass",
-                            ),
-                        ],
+            {
+                "Cello_Music_Staff": [
+                    baca.Memento(
+                        context="Cello_Music_Voice",
+                        manifest="instruments",
+                        value="Cello",
                     ),
-                    (
-                        "Cello_Music_Voice",
-                        [
-                            baca.Memento(
-                                context="Cello_Music_Voice",
-                                prototype="abjad.Dynamic",
-                                value="niente",
-                            ),
-                        ],
+                    baca.Memento(
+                        context="Cello_Music_Voice",
+                        prototype="abjad.Clef",
+                        value="bass",
                     ),
-                    (
-                        "Score",
-                        [
-                            baca.Memento(
-                                context="Global_Skips",
-                                manifest="metronome_marks",
-                                value="52",
-                            ),
-                            baca.Memento(
-                                context="Global_Skips",
-                                prototype="abjad.TimeSignature",
-                                value="1/4",
-                            ),
-                        ],
+                ],
+                "Cello_Music_Voice": [
+                    baca.Memento(
+                        context="Cello_Music_Voice",
+                        prototype="abjad.Dynamic",
+                        value="niente",
                     ),
-                ]
-            ),
+                ],
+                "Score": [
+                    baca.Memento(
+                        context="Global_Skips",
+                        manifest="metronome_marks",
+                        value="52",
+                    ),
+                    baca.Memento(
+                        context="Global_Skips",
+                        prototype="abjad.TimeSignature",
+                        value="1/4",
+                    ),
+                ],
+            },
         ),
     ]
 )
