@@ -9,9 +9,6 @@ from naehte import library as naehte
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    activate=[
-        baca.tags.LOCAL_MEASURE_NUMBER,
-    ],
     error_on_not_yet_pitched=True,
     final_segment=True,
     instruments=naehte.instruments,
@@ -323,4 +320,10 @@ maker(
 )
 
 if __name__ == "__main__":
-    baca.build.make_segment_pdf(maker, runtime=baca.segments(runtime=True))
+    baca.build.make_segment_pdf(
+        maker,
+        **baca.segments(runtime=True),
+        activate=[
+            baca.tags.LOCAL_MEASURE_NUMBER,
+        ],
+    )
