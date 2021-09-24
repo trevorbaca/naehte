@@ -9,8 +9,6 @@ from naehte import library as naehte
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    error_on_not_yet_pitched=True,
-    final_segment=True,
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
     score_template=naehte.ScoreTemplate(),
@@ -326,4 +324,6 @@ if __name__ == "__main__":
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
         ],
+        error_on_not_yet_pitched=True,
+        final_segment=True,
     )
