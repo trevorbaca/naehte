@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [H] #####################################
 ###############################################################################
 
-maker = baca.SegmentMaker(
+maker = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
