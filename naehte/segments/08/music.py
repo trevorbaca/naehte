@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [H] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
@@ -30,7 +30,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark(
         "117",
@@ -54,7 +54,7 @@ maker(
     baca.bar_line("|.", baca.selectors.skip(-1)),
 )
 
-maker(
+commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
@@ -70,7 +70,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 1),
     baca.hairpin(
         "ppp > pppp < ppp",
@@ -93,7 +93,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 2),
     baca.hairpin(
         "ppp > pppp < ppp",
@@ -116,7 +116,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 3),
     baca.breathe(),
     baca.hairpin(
@@ -136,7 +136,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 5),
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
@@ -161,7 +161,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 6),
     baca.breathe(),
     baca.finger_pressure_transition(),
@@ -193,7 +193,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 7),
     baca.dynamic("pppp-sempre"),
     baca.dynamic_text_self_alignment_x(-0.5),
@@ -207,7 +207,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 8),
     baca.pitch("<F3 C4>"),
     baca.skeleton(r"\times 6/7 { c2. c8 }"),
@@ -219,7 +219,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (7, 8)),
     baca.text_spanner(
         r"no scr -> scr. -> no scr. -> scr. =|",
@@ -250,7 +250,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (10, 13)),
     baca.dynamic_text_self_alignment_x(-0.45),
     baca.hairpin(
@@ -286,7 +286,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "vc",
     baca.new(
         baca.dls_staff_padding(6),
@@ -306,7 +306,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", -1),
     baca.chunk(
         baca.mark(r"\naehte-colophon-markup"),
@@ -319,7 +319,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,

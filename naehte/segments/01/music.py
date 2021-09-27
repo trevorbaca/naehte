@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [A] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
@@ -24,7 +24,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark(
         "117",
@@ -33,7 +33,7 @@ maker(
     baca.text_spanner_staff_padding(10),
 )
 
-maker(
+commands(
     "vc",
     baca.start_markup(
         "Cello",
@@ -41,7 +41,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 1),
     baca.dls_staff_padding(7),
     baca.hairpin(
@@ -104,7 +104,7 @@ maker(
     baca.tuplet_bracket_staff_padding(1),
 )
 
-maker(
+commands(
     ("vc", 2),
     baca.dls_staff_padding(7),
     baca.hairpin(
@@ -135,7 +135,7 @@ maker(
     baca.tuplet_bracket_staff_padding(1),
 )
 
-maker(
+commands(
     ("vc", 3),
     baca.dls_staff_padding(5),
     baca.hairpin(
@@ -191,7 +191,7 @@ maker(
     baca.tuplet_bracket_staff_padding(1),
 )
 
-maker(
+commands(
     ("vc", 4),
     baca.suite(
         baca.skeleton(
@@ -244,7 +244,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (5, 7)),
     baca.suite(
         baca.skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
@@ -286,7 +286,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 8),
     baca.dls_staff_padding(7),
     baca.hairpin(
@@ -311,7 +311,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
