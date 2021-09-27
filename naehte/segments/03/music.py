@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [C] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
@@ -34,7 +34,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark(
         "91",
@@ -71,7 +71,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
@@ -87,7 +87,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 1),
     baca.skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"),
     baca.hairpin(
@@ -129,7 +129,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 2),
     baca.hairpin(
         '<| "f" "f" > ppp',
@@ -184,7 +184,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 3),
     baca.breathe(),
     baca.hairpin(
@@ -209,7 +209,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 4),
     baca.note_head_style_harmonic(),
     baca.skeleton(r"{ c4 c c c c c c c }"),
@@ -234,7 +234,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 5),
     baca.finger_pressure_transition(
         selector=baca.selectors.leaves((-1, None), rleak=True),
@@ -244,7 +244,7 @@ maker(
     baca.skeleton(r" \times 4/5 { c1 c4 }"),
 )
 
-maker(
+commands(
     ("vc", 6),
     baca.breathe(),
     baca.hairpin(
@@ -262,7 +262,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (4, 5)),
     baca.hairpin(
         "ppp <| fff",
@@ -276,7 +276,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (4, 6)),
     baca.text_spanner(
         "II / III largo -> strett. -> larg. =|",
@@ -287,7 +287,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 8),
     baca.dynamic(
         "pppp-sempre",
@@ -310,7 +310,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (9, 10)),
     baca.suite(
         baca.skeleton(
@@ -388,7 +388,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 11),
     baca.hairpin(
         "ppp < f",
@@ -419,7 +419,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 13),
     baca.suite(
         baca.skeleton(
@@ -508,7 +508,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 14),
     baca.hairpin(
         '"f" "f" >',
@@ -565,7 +565,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 15),
     baca.dynamic(
         "pppp-sempre",
@@ -586,7 +586,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 16),
     baca.skeleton(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"),
     baca.suite(
@@ -601,7 +601,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 17),
     baca.hairpin(
         "pppp >o niente",
@@ -620,7 +620,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (16, 17)),
     baca.text_spanner(
         r"\baca-damp-markup =|",
@@ -641,7 +641,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "vc",
     baca.new(
         baca.dls_staff_padding(8.5),
@@ -684,7 +684,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,

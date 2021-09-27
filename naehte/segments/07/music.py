@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [G] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
@@ -30,7 +30,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark(
         "52",
@@ -71,7 +71,7 @@ maker(
     baca.close_volta(baca.selectors.skip(6 - 1)),
 )
 
-maker(
+commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
@@ -79,7 +79,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 1),
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
@@ -97,7 +97,7 @@ maker(
     baca.tuplet_bracket_staff_padding(2),
 )
 
-maker(
+commands(
     ("vc", 2),
     baca.finger_pressure_transition(),
     baca.hairpin(
@@ -122,7 +122,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 3),
     baca.finger_pressure_transition(
         selector=baca.selectors.leaves((None, 1), lleak=True),
@@ -146,7 +146,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 4),
     baca.hairpin(
         "|> ppp <| fff",
@@ -180,7 +180,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 5),
     baca.hairpin(
         "|> ppp <| fff",
@@ -212,7 +212,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 6),
     baca.breathe(),
     baca.hairpin(
@@ -249,7 +249,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 7),
     baca.new(
         baca.dynamic_text_self_alignment_x(-0.75),
@@ -267,7 +267,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 8),
     baca.finger_pressure_transition(
         selector=baca.selectors.leaves((None, 1), lleak=True),
@@ -301,7 +301,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 9),
     baca.hairpin(
         "|> p <|",
@@ -338,7 +338,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 10),
     baca.hairpin(
         "ff |>",
@@ -365,7 +365,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 11),
     baca.finger_pressure_transition(
         selector=baca.selectors.leaves((-2, None)),
@@ -400,7 +400,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 12),
     baca.finger_pressure_transition(
         selector=baca.selectors.leaves((None, 1), lleak=True),
@@ -408,9 +408,9 @@ maker(
     baca.skeleton(r"{ c4 c c c c c c c c c }"),
 )
 
-maker(("vc", 13), baca.skeleton(r"{ c4 c c c c c c c c c c }"))
+commands(("vc", 13), baca.skeleton(r"{ c4 c c c c c c c c c c }"))
 
-maker(
+commands(
     ("vc", (12, 13)),
     baca.accent(
         selector=baca.selectors.leaves([0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17]),
@@ -453,7 +453,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "vc",
     baca.new(
         baca.dls_staff_padding(7),
@@ -471,7 +471,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,

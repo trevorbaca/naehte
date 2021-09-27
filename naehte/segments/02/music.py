@@ -7,7 +7,7 @@ from naehte import library as naehte
 ##################################### [B] #####################################
 ###############################################################################
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
@@ -35,7 +35,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark(
         "52",
@@ -86,7 +86,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
@@ -102,7 +102,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 1),
     baca.hairpin(
         "o< f >",
@@ -158,7 +158,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 2),
     baca.accidental_extra_offset(
         (-1, 0),
@@ -207,7 +207,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (3, 4)),
     baca.suite(
         baca.skeleton(
@@ -289,7 +289,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 5),
     baca.hairpin(
         "ppp < f",
@@ -320,7 +320,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 7),
     baca.suite(
         baca.skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
@@ -388,7 +388,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 9),
     baca.clef("treble"),
     baca.hairpin(
@@ -414,7 +414,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (11, 13)),
     baca.clef("bass"),
     baca.new(
@@ -452,7 +452,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 14),
     baca.accidental_extra_offset(
         (-1, 0),
@@ -507,7 +507,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 15),
     baca.hairpin(
         "o<| fff",
@@ -529,7 +529,7 @@ maker(
     baca.tuplet_bracket_staff_padding(2.5),
 )
 
-maker(
+commands(
     ("vc", 16),
     baca.suite(
         baca.skeleton("{ c1 }"),
@@ -541,7 +541,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 17),
     baca.dynamic('"fff"'),
     baca.suite(
@@ -554,7 +554,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 18),
     baca.suite(
         baca.skeleton("{ c4 c c c c c }"),
@@ -566,14 +566,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", 19),
     baca.suite(
         baca.skeleton("{ c4 c c c }"),
     ),
 )
 
-maker(
+commands(
     ("vc", (18, 19)),
     baca.hairpin("fff > pppp"),
     baca.suite(
@@ -586,7 +586,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("vc", (15, 19)),
     baca.text_spanner(
         "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
@@ -597,7 +597,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "vc",
     baca.new(
         baca.dls_staff_padding(7),
@@ -636,7 +636,7 @@ maker(
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
