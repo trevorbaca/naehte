@@ -110,10 +110,10 @@ class ScoreTemplate(baca.ScoreTemplate):
             >>> score_template = naehte.library.ScoreTemplate()
             >>> string = abjad.storage(score_template.voice_abbreviations)
             >>> print(string)
-            abjad.OrderedDict(
-                [
-                    ('vc', 'Cello_Music_Voice'),
-                    ]
+            dict(
+                {
+                    'vc': 'Cello_Music_Voice',
+                    }
                 )
 
         """
