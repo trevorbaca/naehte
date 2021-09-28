@@ -11,7 +11,7 @@ commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
-    score_template=naehte.ScoreTemplate(),
+    score_template=naehte.make_empty_score,
     time_signatures=[
         (7, 8),
         (6, 8),
@@ -22,6 +22,7 @@ commands = baca.CommandAccumulator(
         (2, 4),
         (4, 4),
     ],
+    voice_abbreviations=naehte.voice_abbreviations,
 )
 
 commands(
@@ -316,5 +317,8 @@ if __name__ == "__main__":
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
         ],
+        always_make_global_rests=True,
+        do_not_require_margin_markup=True,
+        global_rests_in_topmost_staff=True,
         error_on_not_yet_pitched=True,
     )
