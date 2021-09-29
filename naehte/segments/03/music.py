@@ -3,15 +3,17 @@ import baca
 
 from naehte import library as naehte
 
-###############################################################################
-##################################### [C] #####################################
-###############################################################################
+#########################################################################################
+########################################### 03 ##########################################
+#########################################################################################
+
+score = naehte.make_empty_score()
+voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
     instruments=naehte.instruments,
     metronome_marks=naehte.metronome_marks,
-    score_template=naehte.make_empty_score,
     time_signatures=[
         (5, 4),
         (4, 4),
@@ -33,6 +35,7 @@ commands = baca.CommandAccumulator(
         (1, 4),
     ],
     voice_abbreviations=naehte.voice_abbreviations,
+    voice_names=voice_names,
 )
 
 commands(
@@ -694,4 +697,5 @@ if __name__ == "__main__":
         do_not_require_margin_markup=True,
         global_rests_in_topmost_staff=True,
         error_on_not_yet_pitched=True,
+        score=score,
     )
