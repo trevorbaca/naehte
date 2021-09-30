@@ -27,9 +27,9 @@
         %! baca._make_lilypond_file()
         }
 
-        %! naehte.ScoreTemplate.__call__()
+        %! naehte.make_empty_score()
         \context Score = "Score"
-        %! naehte.ScoreTemplate.__call__()
+        %! naehte.make_empty_score()
         <<
 
             %! abjad.ScoreTemplate._make_global_context()
@@ -46,21 +46,21 @@
             %! abjad.ScoreTemplate._make_global_context()
             >>
 
-            %! naehte.ScoreTemplate.__call__()
+            %! naehte.make_empty_score()
             \context MusicContext = "Music_Context"
-            %! naehte.ScoreTemplate.__call__()
+            %! naehte.make_empty_score()
             {
 
-                %! naehte.ScoreTemplate.__call__()
+                %! naehte.make_empty_score()
                 \context Staff = "Cello_Music_Staff"
-                %! naehte.ScoreTemplate.__call__()
+                %! naehte.make_empty_score()
                 %! baca.path.extern()
                 { \segment.01.Cello.Music.Staff }
 
-            %! naehte.ScoreTemplate.__call__()
+            %! naehte.make_empty_score()
             }
 
-        %! naehte.ScoreTemplate.__call__()
+        %! naehte.make_empty_score()
         >>
 
     %! baca._make_lilypond_file()

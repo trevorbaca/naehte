@@ -3589,7 +3589,7 @@ segment.06.Cello.Music.Voice = {
     %! PHANTOM
     >>
 
-%! naehte.ScoreTemplate.__call__()
+%! naehte.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -3603,12 +3603,12 @@ segment.06.Cello.Music.Staff = <<
     %! baca.path.extern()
     { \segment.06.Global.Rests }
 
-    %! naehte.ScoreTemplate.__call__()
+    %! naehte.make_empty_score()
     \context Voice = "Cello_Music_Voice"
-    %! naehte.ScoreTemplate.__call__()
+    %! naehte.make_empty_score()
     %! baca.path.extern()
     { \segment.06.Cello.Music.Voice }
 
-%! naehte.ScoreTemplate.__call__()
+%! naehte.make_empty_score()
 %! baca.path.extern()
 >>
