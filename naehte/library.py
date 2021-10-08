@@ -5,7 +5,7 @@ import baca
 
 # instruments
 
-instruments = abjad.OrderedDict(
+instruments = dict(
     [
         (
             "Cello",
@@ -20,7 +20,7 @@ instruments = abjad.OrderedDict(
 
 # metronome marks
 
-metronome_marks = abjad.OrderedDict(
+metronome_marks = dict(
     [
         ("39", abjad.MetronomeMark((1, 4), 39)),
         ("52", abjad.MetronomeMark((1, 4), 52)),
