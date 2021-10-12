@@ -428,7 +428,6 @@ commands(
     baca.markup(
         r"\naehte-degrees-of-ponticello-markup",
         abjad.tweak(8).staff_padding,
-        literal=True,
     ),
     baca.new(
         baca.note_head_x_extent_zero(),

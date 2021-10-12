@@ -10,9 +10,9 @@ instruments = dict(
         (
             "Cello",
             abjad.Cello(
-                markup=abjad.Markup(r"\markup \hcenter-in #16 Cello", literal=True),
+                markup=abjad.Markup(r"\markup \hcenter-in #16 Cello"),
                 pitch_range="[B1, +inf]",
-                short_markup=abjad.Markup(r"\naethe-vc-markup", literal=True),
+                short_markup=abjad.Markup(r"\naethe-vc-markup"),
             ),
         )
     ]
