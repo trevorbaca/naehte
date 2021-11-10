@@ -1,5 +1,4 @@
 \version "2.19.82"
-\language "english"
 
 \include "../../stylesheet.ily"                                    %! _make_lilypond_file:LilyPondFile
 \include "../../nonfirst-segment.ily"                              %! _make_lilypond_file:LilyPondFile

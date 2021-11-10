@@ -1,7 +1,6 @@
 % Nähte (2018) for cello
 
 \version "2.19.82"
-\language "english"
 
 \include "stylesheet.ily"
 \include "_segments/01.ily"
