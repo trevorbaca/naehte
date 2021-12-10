@@ -1,19 +1,19 @@
 import abjad
 import baca
 
-from naehte import library as naehte
+from naehte import library
 
 #########################################################################################
 ########################################### 02 ##########################################
 #########################################################################################
 
-score = naehte.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=naehte.instruments,
-    metronome_marks=naehte.metronome_marks,
+    instruments=library.instruments,
+    metronome_marks=library.metronome_marks,
     time_signatures=[
         (5, 8),
         (5, 8),
@@ -35,7 +35,7 @@ commands = baca.CommandAccumulator(
         (6, 4),
         (4, 4),
     ],
-    voice_abbreviations=naehte.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
