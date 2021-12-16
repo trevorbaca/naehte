@@ -63,36 +63,6 @@
     top-margin = 0\mm
 }
 
-\header {
-    composer = \markup {
-        \override #'(font-name . "Palatino")
-        \fontsize #5
-        %\line { Trevor Bača (*1975) \hspace #15 }
-        \line { Trevor Bača (*1975) }
-    }
-    tagline = \markup { "" }
-    title = \markup \column {
-        \center-align {
-            \override #'(font-name . "Palatino")
-            \fontsize #16
-            NÄHTE
-            " "
-            " "
-            " "
-            \override #'(font-name . "Palatino Italic")
-            \fontsize #3
-            \line {
-                for \hspace #0.75
-                Ashley \hspace #0.75
-                Walters
-            }
-            " "
-            " "
-            " "
-        }
-    }
-}
-
 \layout {
     %\accidentalStyle neo-modern
     \accidentalStyle forget
