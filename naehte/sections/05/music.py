@@ -148,7 +148,7 @@ commands(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 11]),
-        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
+        selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
     ),
 )
 
@@ -299,7 +299,7 @@ commands(
         abjad.tweak(8).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
 )
 
@@ -355,7 +355,7 @@ commands(
         "spazz. strett. -> larg.",
         abjad.tweak(5.75).bound_details__right__padding,
         abjad.tweak(8).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
+        selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
     ),
 )
 

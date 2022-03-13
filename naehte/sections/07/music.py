@@ -122,7 +122,7 @@ commands(
         abjad.tweak(5.5).staff_padding,
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
-        selector=lambda _: baca.Selection(_).leaves().rleak().rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_), count=3),
     ),
 )
 

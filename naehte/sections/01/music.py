@@ -113,7 +113,7 @@ commands(
     baca.dls_staff_padding(7),
     baca.hairpin(
         "pp > ppppp",
-        selector=lambda _: baca.Selection(_).rleaves().rleak(),
+        selector=lambda _: baca.rleaves(_, count=2),
     ),
     baca.suite(
         baca.skeleton(r"\times 6/7 { c2. c8 }"),
@@ -134,7 +134,7 @@ commands(
         r"spazz. larg. =|",
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
     baca.tuplet_bracket_staff_padding(1),
 )
@@ -239,12 +239,12 @@ commands(
         r"spazz. strett. =|",
         abjad.tweak(8).staff_padding,
         bookend=False,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
     baca.trill_spanner(
         abjad.tweak(1.25).bound_details__right__padding,
         alteration="D4",
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
 )
 
@@ -286,7 +286,7 @@ commands(
         abjad.tweak(8).staff_padding,
         (abjad.tweak(6.25).bound_details__right__padding, -1),
         pieces=baca.selectors.lparts([1, 1, 1, 1, 2]),
-        selector=lambda _: baca.Selection(_).leaves()[1:].rleak().rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[1:], count=3),
     ),
 )
 
