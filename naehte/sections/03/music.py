@@ -121,7 +121,7 @@ commands(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
@@ -184,7 +184,7 @@ commands(
     ),
     baca.trill_spanner(
         alteration="m2",
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
 )
 
@@ -494,7 +494,7 @@ commands(
         abjad.tweak(8).staff_padding,
         bookend=False,
         lilypond_id=1,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak().rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
     baca.text_spanner(
         r"trem. -> larg.",

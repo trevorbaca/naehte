@@ -231,7 +231,7 @@ commands(
     baca.hairpin(
         "|> ppppp <| p |>o niente",
         pieces=baca.selectors.lparts([1, 1, 4]),
-        selector=lambda _: baca.Selection(_).leaves().lleak().rleak(),
+        selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
     ),
     baca.suite(
         baca.pitches(
