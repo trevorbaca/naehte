@@ -34,7 +34,7 @@ voice_abbreviations = {"vc": "Cello_Music_Voice"}
 
 
 def make_empty_score():
-    tag = baca.site(inspect.currentframe())
+    tag = baca.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
 
     # cello
