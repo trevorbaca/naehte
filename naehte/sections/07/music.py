@@ -114,12 +114,12 @@ commands(
     baca.skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         lilypond_id=1,
     ),
     baca.text_spanner(
         "no scr. -> scr. poss. -> XFB =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
         selector=lambda _: baca.rleak(abjad.select.leaves(_), count=3),
@@ -167,18 +167,18 @@ commands(
     ),
     baca.text_spanner(
         "I / II str. =|",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
     ),
     baca.text_spanner(
         r"\baca-damp-markup =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
     ),
     baca.text_spanner(
         r"scr. =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
@@ -204,14 +204,14 @@ commands(
     ),
     baca.text_spanner(
         "I / II str. =|",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
     ),
     baca.text_spanner(
         r"\baca-double-diamond-parenthesized-top-markup ->",
-        abjad.tweak(5.5).staff_padding,
-        abjad.tweak("#'trill").style,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
+        abjad.Tweak(r"- \tweak style #'trill"),
         bookend=False,
     ),
 )
@@ -240,13 +240,13 @@ commands(
     ),
     baca.text_spanner(
         "RH vib. poss. -> NV",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         lilypond_id=1,
     ),
     baca.text_spanner(
         "no scr. -> scr. =|",
-        abjad.tweak(2.75).bound_details__right__padding,
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
         selector=baca.selectors.rleaves(),
@@ -292,14 +292,14 @@ commands(
     ),
     baca.text_spanner(
         "II / III mod. =|",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
         selector=baca.selectors.leaves((-3, None), rleak=True),
     ),
     baca.text_spanner(
         "XFB =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         selector=baca.selectors.rleaves(),
     ),
@@ -330,7 +330,7 @@ commands(
     ),
     baca.text_spanner(
         "no scr. -> scr. =|",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([2, 2]),
@@ -338,7 +338,7 @@ commands(
     ),
     baca.text_spanner(
         "vib. -> NV",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -361,8 +361,8 @@ commands(
     ),
     baca.text_spanner(
         r"\baca-circle-very-wide-markup =|",
-        abjad.tweak(4.25).bound_details__right__padding,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
         selector=baca.selectors.leaves((-1, None), rleak=True),
@@ -397,7 +397,7 @@ commands(
     ),
     baca.text_spanner(
         "I / II larg. =|",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
         selector=baca.selectors.leaves((-2, None)),
@@ -448,8 +448,8 @@ commands(
     ),
     baca.text_spanner(
         "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
-        (abjad.tweak(3.25).bound_details__right__padding, -1),
-        abjad.tweak(3).staff_padding,
+        (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
         pieces=baca.selectors.lparts([2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]),
         selector=baca.selectors.rleaves(),
