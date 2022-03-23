@@ -56,7 +56,7 @@ commands(
         baca.rehearsal_mark(
             "E",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 12)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 12)"),
         ),
     ),
 )
