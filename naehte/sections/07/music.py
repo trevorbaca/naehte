@@ -68,7 +68,7 @@ commands(
         baca.rehearsal_mark(
             "G",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 12)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 12)"),
         ),
     ),
     baca.open_volta(baca.selectors.skip(2 - 1)),
@@ -427,7 +427,7 @@ commands(
     ),
     baca.markup(
         r"\naehte-degrees-of-ponticello-markup",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
