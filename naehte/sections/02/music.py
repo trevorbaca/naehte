@@ -141,7 +141,7 @@ commands(
             zero_padding=True,
         ),
         baca.glissando(
-            abjad.tweak(0).bound_details__left__padding,
+            abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
             selector=baca.selectors.leaves((-1, None), rleak=True),
         ),
     ),
@@ -197,7 +197,7 @@ commands(
             zero_padding=True,
         ),
         baca.glissando(
-            abjad.tweak(0).bound_details__left__padding,
+            abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
             selector=baca.selectors.leaves((-2, None)),
         ),
     ),
@@ -490,7 +490,7 @@ commands(
             zero_padding=True,
         ),
         baca.glissando(
-            abjad.tweak(0).bound_details__left__padding,
+            abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
             selector=baca.selectors.leaves((-2, None)),
         ),
     ),
