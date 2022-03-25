@@ -260,7 +260,7 @@ commands(
         baca.glissando(),
     ),
     baca.trill_spanner(
-        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
         alteration="M2",
         selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
@@ -295,7 +295,7 @@ commands(
     ("vc", 8),
     baca.dynamic(
         "pppp-sempre",
-        abjad.tweak(-0.675).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
         selector=baca.selectors.leaf(0),
     ),
     baca.pitch("A2"),
@@ -563,7 +563,7 @@ commands(
         selector=baca.selectors.leaves((1, 4)),
     ),
     baca.trill_spanner(
-        abjad.tweak(6.25).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
         alteration="m2",
         selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
@@ -573,7 +573,7 @@ commands(
     ("vc", 15),
     baca.dynamic(
         "pppp-sempre",
-        abjad.tweak(-0.675).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
         selector=baca.selectors.leaf(0),
     ),
     baca.suite(

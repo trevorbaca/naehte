@@ -421,7 +421,7 @@ commands(
     ),
     baca.hairpin(
         "pppp -- pppp >o niente",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         pieces=baca.selectors.lparts([14, 8]),
         selector=baca.selectors.rleaves(),
     ),
