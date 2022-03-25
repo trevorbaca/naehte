@@ -259,7 +259,7 @@ commands(
     baca.dynamic_text_self_alignment_x(-0.45),
     baca.hairpin(
         "appena-udibile -- niente",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         selector=baca.selectors.rleaves(),
     ),
     baca.new(

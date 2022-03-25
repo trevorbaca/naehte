@@ -397,7 +397,7 @@ commands(
     baca.clef("treble"),
     baca.hairpin(
         "pppp -- niente",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         selector=baca.selectors.rleaves(),
     ),
     baca.skeleton("{ c4 c c c c c c c c c }"),

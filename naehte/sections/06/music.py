@@ -407,7 +407,7 @@ commands(
     ("vc", 14),
     baca.hairpin(
         "ppp -- niente",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         selector=baca.selectors.rleaves(),
     ),
     baca.new(

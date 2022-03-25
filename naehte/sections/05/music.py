@@ -247,7 +247,7 @@ commands(
         ),
     ),
     baca.trill_spanner(
-        abjad.tweak(0.5).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
         alteration="P1",
         selector=baca.selectors.leaves((None, 2)),
     ),

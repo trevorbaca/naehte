@@ -242,7 +242,7 @@ commands(
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
     baca.trill_spanner(
-        abjad.tweak(1.25).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"),
         alteration="D4",
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
     ),
