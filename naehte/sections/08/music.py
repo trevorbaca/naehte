@@ -273,7 +273,7 @@ commands(
     baca.suite(
         baca.dots_extra_offset((0.5, 1)),
         baca.glissando(
-            (abjad.tweak(1.25).bound_details__right__padding, -1),
+            (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
             allow_repeats=True,
             zero_padding=True,
         ),

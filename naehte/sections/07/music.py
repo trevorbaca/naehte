@@ -436,7 +436,7 @@ commands(
     ),
     baca.suite(
         baca.glissando(
-            (abjad.tweak(2.75).bound_details__right__padding, -1),
+            (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
             allow_repeats=True,
             zero_padding=True,
         ),
