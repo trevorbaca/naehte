@@ -3271,12 +3271,6 @@ segment.06.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        - \abjad-zero-padding-glissando
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        \glissando
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3297,6 +3291,12 @@ segment.06.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \startTextSpan
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        - \abjad-zero-padding-glissando
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        \glissando
 
         %! baca.note_head_x_extent_zero()
         %! baca.OverrideCommand._call(1)
@@ -3389,10 +3389,10 @@ segment.06.Cello.Music.Voice = {
         e4
         %! baca.glissando()
         %! abjad.glissando(7)
-        - \abjad-zero-padding-glissando
+        - \tweak bound-details.right.padding 2.75
         %! baca.glissando()
         %! abjad.glissando(7)
-        - \tweak bound-details.right.padding 2.75
+        - \abjad-zero-padding-glissando
         %! baca.glissando()
         %! abjad.glissando(7)
         \glissando

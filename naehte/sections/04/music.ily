@@ -1764,21 +1764,6 @@ segment.04.Cello.Music.Voice = {
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 \stopTextSpan
-                %! baca.finger_pressure_transition()
-                %! abjad.glissando(7)
-                - \tweak arrow-length 2
-                %! baca.finger_pressure_transition()
-                %! abjad.glissando(7)
-                - \tweak arrow-width 0.5
-                %! baca.finger_pressure_transition()
-                %! abjad.glissando(7)
-                - \tweak bound-details.right.arrow ##t
-                %! baca.finger_pressure_transition()
-                %! abjad.glissando(7)
-                - \tweak thickness 3
-                %! baca.finger_pressure_transition()
-                %! abjad.glissando(7)
-                \glissando
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -1799,6 +1784,21 @@ segment.04.Cello.Music.Voice = {
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 \startTextSpan
+                %! baca.finger_pressure_transition()
+                %! abjad.glissando(7)
+                - \tweak arrow-length 2
+                %! baca.finger_pressure_transition()
+                %! abjad.glissando(7)
+                - \tweak arrow-width 0.5
+                %! baca.finger_pressure_transition()
+                %! abjad.glissando(7)
+                - \tweak bound-details.right.arrow ##t
+                %! baca.finger_pressure_transition()
+                %! abjad.glissando(7)
+                - \tweak thickness 3
+                %! baca.finger_pressure_transition()
+                %! abjad.glissando(7)
+                \glissando
 
                 %! baca.note_head_style_harmonic_black()
                 %! baca.OverrideCommand._call(1)
@@ -1949,21 +1949,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak arrow-length 2
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak arrow-width 0.5
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak bound-details.right.arrow ##t
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak thickness 3
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        \glissando
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1996,6 +1981,21 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \startTextSpan
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak arrow-length 2
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak arrow-width 0.5
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak thickness 3
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        \glissando
 
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(1)
@@ -2212,12 +2212,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         \stopTextSpan
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        - \tweak bound-details.left.padding 0
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        \glissando
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2234,6 +2228,12 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \startTextSpan
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        - \tweak bound-details.left.padding 0
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        \glissando
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
@@ -2329,21 +2329,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             \bacaStartTextSpanRhythmAnnotation
-            %! baca.finger_pressure_transition()
-            %! abjad.glissando(7)
-            - \tweak arrow-length 2
-            %! baca.finger_pressure_transition()
-            %! abjad.glissando(7)
-            - \tweak arrow-width 0.5
-            %! baca.finger_pressure_transition()
-            %! abjad.glissando(7)
-            - \tweak bound-details.right.arrow ##t
-            %! baca.finger_pressure_transition()
-            %! abjad.glissando(7)
-            - \tweak thickness 3
-            %! baca.finger_pressure_transition()
-            %! abjad.glissando(7)
-            \glissando
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -2376,6 +2361,21 @@ segment.04.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             \startTextSpanOne
+            %! baca.finger_pressure_transition()
+            %! abjad.glissando(7)
+            - \tweak arrow-length 2
+            %! baca.finger_pressure_transition()
+            %! abjad.glissando(7)
+            - \tweak arrow-width 0.5
+            %! baca.finger_pressure_transition()
+            %! abjad.glissando(7)
+            - \tweak bound-details.right.arrow ##t
+            %! baca.finger_pressure_transition()
+            %! abjad.glissando(7)
+            - \tweak thickness 3
+            %! baca.finger_pressure_transition()
+            %! abjad.glissando(7)
+            \glissando
 
             %! baca.skeleton()
             \times 4/6
@@ -2717,21 +2717,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak arrow-length 2
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak arrow-width 0.5
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak bound-details.right.arrow ##t
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        - \tweak thickness 3
-        %! baca.finger_pressure_transition()
-        %! abjad.glissando(7)
-        \glissando
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2788,6 +2773,21 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \startTextSpanOne
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak arrow-length 2
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak arrow-width 0.5
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak bound-details.right.arrow ##t
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        - \tweak thickness 3
+        %! baca.finger_pressure_transition()
+        %! abjad.glissando(7)
+        \glissando
 
         %! baca.note_head_style_harmonic_black()
         %! baca.OverrideCommand._call(1)
