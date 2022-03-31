@@ -974,16 +974,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -1005,7 +995,21 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1017,11 +1021,11 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8
+        \startTextSpanOne
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne
+        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1030,10 +1034,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-circle-markup
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1089,19 +1089,19 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "spz. larg."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
         - \tweak bound-details.right.padding 1
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "spz. larg."
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1126,15 +1126,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "str."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1181,16 +1181,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -1212,7 +1202,21 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1221,10 +1225,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-circle-very-wide-markup
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1249,15 +1249,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 8
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "spazz. larg."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1302,16 +1302,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -1329,6 +1319,16 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 8
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -1407,18 +1407,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-left-text "RH vib. molto"
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-right-text "NV"
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
             - \tweak bound-details.right.padding 0.5
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
@@ -1431,7 +1419,23 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-left-text "RH vib. molto"
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-right-text "NV"
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             \startTextSpanOne
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1440,10 +1444,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-left-text "no scr."
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1536,15 +1536,15 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \tweak staff-padding 8
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             - \abjad-solid-line-with-arrow
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-left-text "scr."
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1600,15 +1600,15 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \tweak staff-padding 8
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             - \abjad-solid-line-with-arrow
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-left-text "poss."
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1663,16 +1663,6 @@ segment.04.Cello.Music.Voice = {
                 %! baca.rhythm_annotation_spanner()
                 %! RHYTHM_ANNOTATION_SPANNER
                 %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \abjad-dashed-line-with-hook
-                %! baca.rhythm_annotation_spanner()
-                %! RHYTHM_ANNOTATION_SPANNER
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \baca-text-spanner-left-text "baca.skeleton()"
-                %! baca.rhythm_annotation_spanner()
-                %! RHYTHM_ANNOTATION_SPANNER
-                %! baca.PiecewiseCommand._call(2)
                 %! AUTODETECT
                 %! SPANNER_START
                 %! baca.rhythm_annotation_spanner()
@@ -1690,6 +1680,16 @@ segment.04.Cello.Music.Voice = {
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 - \tweak staff-padding 8
+                %! baca.rhythm_annotation_spanner()
+                %! RHYTHM_ANNOTATION_SPANNER
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \abjad-dashed-line-with-hook
+                %! baca.rhythm_annotation_spanner()
+                %! RHYTHM_ANNOTATION_SPANNER
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \baca-text-spanner-left-text "baca.skeleton()"
                 %! baca.rhythm_annotation_spanner()
                 %! RHYTHM_ANNOTATION_SPANNER
                 %! baca.PiecewiseCommand._call(2)
@@ -1779,26 +1779,6 @@ segment.04.Cello.Music.Voice = {
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_STOP
                 \stopTextSpan
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \abjad-dashed-line-with-hook
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \baca-text-spanner-left-text "XFB"
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak bound-details.right.padding 8.25
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak staff-padding 8
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                \startTextSpan
                 %! baca.finger_pressure_transition()
                 %! abjad.glissando(7)
                 - \tweak arrow-length 2
@@ -1814,6 +1794,26 @@ segment.04.Cello.Music.Voice = {
                 %! baca.finger_pressure_transition()
                 %! abjad.glissando(7)
                 \glissando
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak bound-details.right.padding 8.25
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak staff-padding 8
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \abjad-dashed-line-with-hook
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \baca-text-spanner-left-text "XFB"
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                \startTextSpan
 
                 %! baca.note_head_style_harmonic_black()
                 %! baca.OverrideCommand._call(1)
@@ -1937,16 +1937,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -1968,39 +1958,17 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "RH NV"
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 8
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        \startTextSpanOne
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "scr."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        \startTextSpan
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
         - \tweak arrow-length 2
@@ -2016,6 +1984,38 @@ segment.04.Cello.Music.Voice = {
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
         \glissando
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 8
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "RH NV"
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        \startTextSpanOne
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "scr."
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        \startTextSpan
 
         %! baca.note_head_style_harmonic()
         %! baca.OverrideCommand._call(1)
@@ -2054,6 +2054,10 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 8
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
@@ -2062,11 +2066,11 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8
+        \startTextSpanOne
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne
+        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2075,10 +2079,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2183,16 +2183,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -2210,6 +2200,16 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 8
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -2237,6 +2237,16 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         \stopTextSpan
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        - \tweak bound-details.left.padding 0
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        \glissando
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2248,17 +2258,7 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 5.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
         \startTextSpan
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        - \tweak bound-details.left.padding 0
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        \glissando
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(4)
@@ -2327,16 +2327,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \abjad-dashed-line-with-hook
-            %! baca.rhythm_annotation_spanner()
-            %! RHYTHM_ANNOTATION_SPANNER
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-left-text "baca.skeleton()"
-            %! baca.rhythm_annotation_spanner()
-            %! RHYTHM_ANNOTATION_SPANNER
-            %! baca.PiecewiseCommand._call(2)
             %! AUTODETECT
             %! SPANNER_START
             %! baca.rhythm_annotation_spanner()
@@ -2358,39 +2348,17 @@ segment.04.Cello.Music.Voice = {
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \abjad-dashed-line-with-hook
+            %! baca.rhythm_annotation_spanner()
+            %! RHYTHM_ANNOTATION_SPANNER
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-left-text "baca.skeleton()"
+            %! baca.rhythm_annotation_spanner()
+            %! RHYTHM_ANNOTATION_SPANNER
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             \bacaStartTextSpanRhythmAnnotation
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-left-text "II / III strett."
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 10.5
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            \startTextSpanTwo
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-left-text "T"
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            \startTextSpanOne
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
             - \tweak arrow-length 2
@@ -2406,6 +2374,38 @@ segment.04.Cello.Music.Voice = {
             %! baca.finger_pressure_transition()
             %! abjad.glissando(7)
             \glissando
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak staff-padding 10.5
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-left-text "II / III strett."
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            \startTextSpanTwo
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak staff-padding 8
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-left-text "T"
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            \startTextSpanOne
 
             %! baca.skeleton()
             \times 4/6
@@ -2474,6 +2474,10 @@ segment.04.Cello.Music.Voice = {
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
+                - \tweak staff-padding 10.5
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
                 - \abjad-dashed-line-with-hook
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
@@ -2482,11 +2486,11 @@ segment.04.Cello.Music.Voice = {
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 10.5
+                \startTextSpanTwo
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanTwo
+                - \tweak staff-padding 8
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -2498,11 +2502,27 @@ segment.04.Cello.Music.Voice = {
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                - \tweak staff-padding 8
+                \startTextSpanOne
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
-                \startTextSpanOne
+                - \tweak bound-details.right.padding 0.5
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak bound-details.right.padding 2.5
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak bound-details.right.stencil-align-dir-y #center
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak bound-details.right.stencil-align-dir-y #center
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
+                - \tweak staff-padding 5.5
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -2515,18 +2535,6 @@ segment.04.Cello.Music.Voice = {
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 - \baca-text-spanner-right-text "larg."
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak bound-details.right.padding 2.5
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak bound-details.right.stencil-align-dir-y #center
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak staff-padding 5.5
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -2617,6 +2625,10 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \tweak staff-padding 10.5
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             - \abjad-dashed-line-with-hook
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
@@ -2625,11 +2637,11 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 10.5
+            \startTextSpanTwo
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanTwo
+            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -2638,10 +2650,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-left-text "T"
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -2720,16 +2728,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -2751,63 +2749,17 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III strett."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-right-text "larg."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 10.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        \startTextSpanTwo
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "(T)"
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-right-text "P"
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 8
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        \startTextSpanOne
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
         - \tweak arrow-length 2
@@ -2823,6 +2775,62 @@ segment.04.Cello.Music.Voice = {
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
         \glissando
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 10.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "II / III strett."
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-right-text "larg."
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        \startTextSpanTwo
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 8
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "(T)"
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-right-text "P"
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        \startTextSpanOne
 
         %! baca.note_head_style_harmonic_black()
         %! baca.OverrideCommand._call(1)
@@ -2976,16 +2984,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \abjad-dashed-line-with-hook
-            %! baca.rhythm_annotation_spanner()
-            %! RHYTHM_ANNOTATION_SPANNER
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \baca-text-spanner-left-text "baca.skeleton()"
-            %! baca.rhythm_annotation_spanner()
-            %! RHYTHM_ANNOTATION_SPANNER
-            %! baca.PiecewiseCommand._call(2)
             %! AUTODETECT
             %! SPANNER_START
             %! baca.rhythm_annotation_spanner()
@@ -3007,10 +3005,24 @@ segment.04.Cello.Music.Voice = {
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \abjad-dashed-line-with-hook
+            %! baca.rhythm_annotation_spanner()
+            %! RHYTHM_ANNOTATION_SPANNER
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \baca-text-spanner-left-text "baca.skeleton()"
+            %! baca.rhythm_annotation_spanner()
+            %! RHYTHM_ANNOTATION_SPANNER
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             \bacaStartTextSpanRhythmAnnotation
             %! baca.glissando()
             %! abjad.glissando(7)
             \glissando
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak staff-padding 10.5
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -3022,11 +3034,11 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 10.5
+            \startTextSpanTwo
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanTwo
+            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -3038,11 +3050,27 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            - \tweak staff-padding 8
+            \startTextSpanOne
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
-            \startTextSpanOne
+            - \tweak bound-details.right.padding 0.5
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak bound-details.right.padding 2
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak bound-details.right.stencil-align-dir-y #center
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak bound-details.right.stencil-align-dir-y #center
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
+            - \tweak staff-padding 5.5
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -3055,18 +3083,6 @@ segment.04.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-right-text "larg."
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak bound-details.right.padding 2
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak bound-details.right.stencil-align-dir-y #center
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 5.5
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -3094,15 +3110,15 @@ segment.04.Cello.Music.Voice = {
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
+            - \tweak staff-padding 8
+            %! baca.text_spanner()
+            %! baca.PiecewiseCommand._call(2)
+            %! SPANNER_START
             - \abjad-dashed-line-with-hook
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             - \baca-text-spanner-left-text "T"
-            %! baca.text_spanner()
-            %! baca.PiecewiseCommand._call(2)
-            %! SPANNER_START
-            - \tweak staff-padding 8
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -3152,15 +3168,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 8
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-circle-very-wide-markup
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3326,15 +3342,15 @@ segment.04.Cello.Music.Voice = {
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
+                - \tweak staff-padding 8
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
                 - \abjad-dashed-line-with-hook
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 - \baca-text-spanner-left-text "spz."
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak staff-padding 8
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -3383,15 +3399,15 @@ segment.04.Cello.Music.Voice = {
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
+                - \tweak staff-padding 8
+                %! baca.text_spanner()
+                %! baca.PiecewiseCommand._call(2)
+                %! SPANNER_START
                 - \abjad-dashed-line-with-hook
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
                 - \baca-text-spanner-left-text "(LH) vib. molto"
-                %! baca.text_spanner()
-                %! baca.PiecewiseCommand._call(2)
-                %! SPANNER_START
-                - \tweak staff-padding 8
                 %! baca.text_spanner()
                 %! baca.PiecewiseCommand._call(2)
                 %! SPANNER_START
@@ -3436,16 +3452,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -3463,6 +3469,16 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 8
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -3491,6 +3507,10 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 10.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
@@ -3499,11 +3519,11 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 10.5
+        \startTextSpanTwo
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanTwo
+        - \tweak staff-padding 8
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3515,11 +3535,11 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 8
+        \startTextSpanOne
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne
+        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3528,10 +3548,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3584,15 +3600,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "scr."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3680,16 +3696,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -3711,6 +3717,16 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
         %! baca.glissando()
         %! abjad.glissando(7)
@@ -3721,15 +3737,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-solid-line-with-arrow
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3824,16 +3840,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -3855,6 +3861,16 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
         %! baca.glissando()
         %! abjad.glissando(7)
@@ -3865,15 +3881,15 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 5.5
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-dashed-line-with-hook
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-text "scr. poss."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3959,16 +3975,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -3986,6 +3992,16 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 8
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -4031,6 +4047,10 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak staff-padding 9
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \abjad-solid-line-with-arrow
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
@@ -4039,11 +4059,11 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 9
+        \startTextSpanOne
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        \startTextSpanOne
+        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4052,10 +4072,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak staff-padding 5.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4097,15 +4113,7 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-right-text "larg."
+        - \tweak bound-details.right.padding 0.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4117,7 +4125,23 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \tweak staff-padding 9
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "strett."
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-right-text "larg."
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4193,16 +4217,6 @@ segment.04.Cello.Music.Voice = {
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "baca.skeleton()"
-        %! baca.rhythm_annotation_spanner()
-        %! RHYTHM_ANNOTATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.rhythm_annotation_spanner()
@@ -4224,7 +4238,21 @@ segment.04.Cello.Music.Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "baca.skeleton()"
+        %! baca.rhythm_annotation_spanner()
+        %! RHYTHM_ANNOTATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak staff-padding 9
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4236,19 +4264,7 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak staff-padding 9
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
         \startTextSpanOne
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-triple-diamond-parenthesized-top-markup
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4257,6 +4273,14 @@ segment.04.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak style #'trill
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-triple-diamond-parenthesized-top-markup
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4270,15 +4294,7 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "strett."
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-right-text "larg."
+        - \tweak bound-details.right.padding 0.5
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4290,7 +4306,23 @@ segment.04.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
         - \tweak staff-padding 9
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "strett."
+        %! baca.text_spanner()
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-right-text "larg."
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
