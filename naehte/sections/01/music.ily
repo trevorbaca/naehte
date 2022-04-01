@@ -474,7 +474,7 @@ segment.01.Cello.Music.Voice = {
         \set Staff.forceClef = ##t
         <g d'>8
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -491,7 +491,7 @@ segment.01.Cello.Music.Voice = {
         %! baca._attach_latent_indicator_alert()
         ^ \baca-default-indicator-markup "(“Cello”)"
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -737,7 +737,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             ef'8
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
@@ -845,7 +845,7 @@ segment.01.Cello.Music.Voice = {
         %! baca.skeleton()
         ef'2.
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -859,7 +859,7 @@ segment.01.Cello.Music.Voice = {
         %! EXPLICIT_DYNAMIC
         \pp
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1074,7 +1074,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             g'8
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
@@ -1088,7 +1088,7 @@ segment.01.Cello.Music.Voice = {
             %! EXPLICIT_DYNAMIC
             \ppppp
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1223,7 +1223,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             df'!4
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
@@ -1274,7 +1274,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             df'8
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
@@ -1291,7 +1291,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.IndicatorCommand._call()
             \repeatTie
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1462,7 +1462,7 @@ segment.01.Cello.Music.Voice = {
         %! baca.skeleton()
         df'!2
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
@@ -1476,7 +1476,7 @@ segment.01.Cello.Music.Voice = {
         %! EXPLICIT_DYNAMIC
         \p
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1547,7 +1547,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             df'!8
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
@@ -1578,7 +1578,7 @@ segment.01.Cello.Music.Voice = {
             %! baca.skeleton()
             df'!4.
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
@@ -1592,7 +1592,7 @@ segment.01.Cello.Music.Voice = {
             %! EXPLICIT_DYNAMIC
             \p
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1713,7 +1713,7 @@ segment.01.Cello.Music.Voice = {
 
         <b fs'!>1
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -1727,7 +1727,7 @@ segment.01.Cello.Music.Voice = {
         %! EXPLICIT_DYNAMIC
         \pp
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1802,7 +1802,7 @@ segment.01.Cello.Music.Voice = {
             % [Cello_Music_Voice measure 6]
             <c' g'>4
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
@@ -1844,7 +1844,7 @@ segment.01.Cello.Music.Voice = {
 
             <a e'>1
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
@@ -1858,7 +1858,7 @@ segment.01.Cello.Music.Voice = {
             %! EXPLICIT_DYNAMIC
             \pp
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1911,7 +1911,7 @@ segment.01.Cello.Music.Voice = {
         % [Cello_Music_Voice measure 7]
         <bf! f'>2
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
@@ -1980,7 +1980,7 @@ segment.01.Cello.Music.Voice = {
         \once \override NoteHead.style = #'harmonic
         <g d'>2...
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -1994,7 +1994,7 @@ segment.01.Cello.Music.Voice = {
         %! EXPLICIT_DYNAMIC
         \f
         %! EXPLICIT_DYNAMIC_COLOR
-        %! _treat_persistent_wrapper(1)
+        %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -2189,7 +2189,7 @@ segment.01.Cello.Music.Voice = {
             %! NOTE
             d1 * 1/4
             %! EXPLICIT_DYNAMIC_COLOR
-            %! _treat_persistent_wrapper(1)
+            %! baca.treat_persistent_wrapper()
             %! baca.hairpin()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
