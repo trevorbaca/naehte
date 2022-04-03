@@ -1616,15 +1616,7 @@ segment.06.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
         - \tweak bound-details.right.padding 7.25
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1652,15 +1644,7 @@ segment.06.Cello.Music.Voice = {
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
         - \tweak bound-details.right.padding 8.25
-        %! baca.text_spanner()
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
