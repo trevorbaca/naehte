@@ -1627,6 +1627,10 @@ segment.01.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             \startTextSpan
+            %! baca._attach_shadow_tie_indicators()
+            - \tweak stencil ##f
+            %! baca._attach_shadow_tie_indicators()
+            ~
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
@@ -1635,10 +1639,6 @@ segment.01.Cello.Music.Voice = {
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
             \startTrillSpan d'
-            %! baca._attach_shadow_tie_indicators()
-            - \tweak stencil ##f
-            %! baca._attach_shadow_tie_indicators()
-            ~
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
             %! baca.PiecewiseCommand._call(4)
