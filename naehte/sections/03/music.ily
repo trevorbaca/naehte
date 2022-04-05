@@ -2200,8 +2200,8 @@ segment.03.Cello.Music.Voice = {
             \pitchedTrill
             %! baca.skeleton()
             af,!8
-            ~
             ]
+            ~
             %! baca.trill_spanner()
             %! baca.SpannerIndicatorCommand._call(2)
             %! SPANNER_START
