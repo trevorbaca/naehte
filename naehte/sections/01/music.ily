@@ -750,9 +750,6 @@ segment.01.Cello.Music.Voice = {
             %! baca._set_status_tag()
             %! EXPLICIT_DYNAMIC
             \mf
-            %! baca.repeat_tie()
-            %! baca.IndicatorCommand._call()
-            \repeatTie
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(3)
             %! SPANNER_STOP
@@ -765,6 +762,9 @@ segment.01.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             \stopTextSpan
+            %! baca.repeat_tie()
+            %! baca.IndicatorCommand._call()
+            \repeatTie
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -858,9 +858,6 @@ segment.01.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \pp
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
@@ -918,6 +915,9 @@ segment.01.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \>
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -941,13 +941,13 @@ segment.01.Cello.Music.Voice = {
 
         %! baca.skeleton()
         ef'8
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(4)
         %! SPANNER_STOP
         \stopTextSpan
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1007,9 +1007,6 @@ segment.01.Cello.Music.Voice = {
         \override TupletBracket.staff-padding = 1
         %! baca.skeleton()
         ef'4
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -1045,6 +1042,9 @@ segment.01.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.finger_pressure_transition()
         %! abjad.glissando(7)
         - \tweak arrow-length 2
@@ -1287,13 +1287,13 @@ segment.01.Cello.Music.Voice = {
             %! baca._set_status_tag()
             %! EXPLICIT_DYNAMIC
             \ff
-            %! baca.repeat_tie()
-            %! baca.IndicatorCommand._call()
-            \repeatTie
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_STOP
             \stopTextSpan
+            %! baca.repeat_tie()
+            %! baca.IndicatorCommand._call()
+            \repeatTie
             %! baca.text_spanner()
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
@@ -1376,9 +1376,6 @@ segment.01.Cello.Music.Voice = {
             \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
             %! baca.skeleton()
             df'8
-            %! baca.repeat_tie()
-            %! baca.IndicatorCommand._call()
-            \repeatTie
             [
             %! baca.rhythm_annotation_spanner()
             %! RHYTHM_ANNOTATION_SPANNER
@@ -1415,6 +1412,9 @@ segment.01.Cello.Music.Voice = {
             %! baca.PiecewiseCommand._call(2)
             %! SPANNER_START
             \bacaStartTextSpanRhythmAnnotation
+            %! baca.repeat_tie()
+            %! baca.IndicatorCommand._call()
+            \repeatTie
             %! baca.glissando()
             %! abjad.glissando(7)
             - \abjad-zero-padding-glissando
@@ -1666,9 +1666,6 @@ segment.01.Cello.Music.Voice = {
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
         %! baca.skeleton()
         df'4
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -1704,6 +1701,9 @@ segment.01.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         - \abjad-zero-padding-glissando
