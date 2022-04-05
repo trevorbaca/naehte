@@ -1211,9 +1211,6 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \f
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -1232,6 +1229,9 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \>
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -1255,14 +1255,14 @@ segment.02.Cello.Music.Voice = {
 
         %! baca.skeleton()
         fs32
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
         \stopTextSpan
         [
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         - \abjad-zero-padding-glissando
@@ -1472,9 +1472,6 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \f
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -1533,6 +1530,9 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \>
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca._attach_shadow_tie_indicators()
         - \tweak stencil ##f
         %! baca._attach_shadow_tie_indicators()
@@ -1540,14 +1540,14 @@ segment.02.Cello.Music.Voice = {
 
         %! baca.skeleton()
         gs32
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         \stopTextSpan
         [
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         - \abjad-zero-padding-glissando
@@ -3451,9 +3451,6 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \f
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -3484,6 +3481,9 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \>
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -3519,14 +3519,14 @@ segment.02.Cello.Music.Voice = {
 
         %! baca.skeleton()
         gs32
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(3)
         %! SPANNER_STOP
         \stopTextSpan
         [
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         - \abjad-zero-padding-glissando
@@ -3824,9 +3824,6 @@ segment.02.Cello.Music.Voice = {
         \override DynamicLineSpanner.staff-padding = 6
         %! baca.skeleton()
         df,1
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -3862,6 +3859,9 @@ segment.02.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca._attach_shadow_tie_indicators()
         - \tweak stencil ##f
         %! baca._attach_shadow_tie_indicators()
@@ -3902,9 +3902,6 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \baca-effort-fff
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -3944,6 +3941,9 @@ segment.02.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
@@ -4002,9 +4002,6 @@ segment.02.Cello.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \fff
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.text_spanner()
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_STOP
@@ -4044,6 +4041,9 @@ segment.02.Cello.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
