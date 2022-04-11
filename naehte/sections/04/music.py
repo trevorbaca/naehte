@@ -58,12 +58,12 @@ commands(
         "52",
         selector=baca.selectors.leaf(15 - 1),
     ),
-    baca.open_volta(baca.selectors.skip(5 - 1)),
-    baca.close_volta(baca.selectors.skip(7 - 1)),
+    baca.open_volta(lambda _: baca.select.skip(_, 5 - 1)),
+    baca.close_volta(lambda _: baca.select.skip(_, 7 - 1)),
     baca.only_segment(
         baca.rehearsal_mark(
             "D",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 14)"),
         ),
     ),
