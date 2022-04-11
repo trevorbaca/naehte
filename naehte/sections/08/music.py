@@ -136,7 +136,7 @@ commands(
         abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
         abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -193,7 +193,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -232,7 +232,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"\baca-triple-diamond-parenthesized-top-markup ->"
@@ -250,7 +250,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -260,7 +260,7 @@ commands(
     baca.hairpin(
         "appena-udibile -- niente",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
@@ -278,7 +278,7 @@ commands(
             zero_padding=True,
         ),
         baca.interpolate_pitches("Eb3", "Eb3"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         "XFB =|",
@@ -286,7 +286,7 @@ commands(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
         abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

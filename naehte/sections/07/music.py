@@ -249,7 +249,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -278,7 +278,7 @@ commands(
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
@@ -301,7 +301,7 @@ commands(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -423,7 +423,7 @@ commands(
         "pppp -- pppp >o niente",
         abjad.Tweak(r"- \tweak to-barline ##t"),
         pieces=baca.selectors.lparts([14, 8]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\naehte-degrees-of-ponticello-markup",
@@ -441,7 +441,7 @@ commands(
             zero_padding=True,
         ),
         baca.interpolate_pitches("D2", "D2"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(
         selector=baca.selectors.leaves(),
@@ -452,7 +452,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
         pieces=baca.selectors.lparts([2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

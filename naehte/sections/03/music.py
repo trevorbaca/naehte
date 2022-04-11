@@ -232,7 +232,7 @@ commands(
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
             zero_padding=True,
         ),
     ),
@@ -270,7 +270,7 @@ commands(
     ("vc", (4, 5)),
     baca.hairpin(
         "ppp <| fff",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"\baca-double-diamond-markup =|",
@@ -382,7 +382,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 6, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -586,7 +586,7 @@ commands(
     baca.text_spanner(
         "scr. poss. -> no scr.",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -632,7 +632,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         bookend=False,
         lilypond_id=2,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         "II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|",
@@ -641,7 +641,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([4, 7, 1, 4, 7, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

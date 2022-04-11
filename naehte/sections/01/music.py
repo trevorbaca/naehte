@@ -103,7 +103,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         pieces=baca.selectors.lparts([6, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.tuplet_bracket_staff_padding(1),
 )
@@ -263,7 +263,7 @@ commands(
         ),
         baca.glissando(
             zero_padding=True,
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
     ),
     baca.new(
@@ -295,7 +295,7 @@ commands(
     baca.dls_staff_padding(7),
     baca.hairpin(
         "f |>o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
@@ -309,7 +309,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         lilypond_id=1,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

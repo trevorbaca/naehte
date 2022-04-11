@@ -219,7 +219,7 @@ commands(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -276,7 +276,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -315,7 +315,7 @@ commands(
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
@@ -338,7 +338,7 @@ commands(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -347,7 +347,7 @@ commands(
     baca.hairpin(
         "|> p <| ff",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.suite(
         baca.pitch("D#3"),
@@ -408,7 +408,7 @@ commands(
     baca.hairpin(
         "ppp -- niente",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.new(
         baca.note_head_x_extent_zero(),
@@ -426,14 +426,14 @@ commands(
             zero_padding=True,
         ),
         baca.interpolate_pitches("E3", "E3"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"\baca-circle-very-wide-markup =|",
         abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
