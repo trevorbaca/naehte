@@ -279,7 +279,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 6, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -378,7 +378,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([5, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -398,7 +398,7 @@ commands(
     baca.hairpin(
         "pppp -- niente",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.skeleton("{ c4 c c c c c c c c c }"),
     baca.suite(
@@ -414,7 +414,7 @@ commands(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -426,7 +426,7 @@ commands(
             'pp <| "f" > pp <| "f" >',
             bookend=False,
             pieces=baca.selectors.lparts([1, 1, 1, 2]),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
     ),
     baca.suite(
@@ -436,7 +436,7 @@ commands(
         ),
         baca.glissando(
             zero_padding=True,
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
     ),
     baca.text_spanner(
@@ -444,14 +444,14 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         bookend=False,
         lilypond_id=1,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"II / III largo -> strett. =| largo -> strett. =|",
         abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

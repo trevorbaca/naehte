@@ -83,7 +83,7 @@ commands(
         'o< "f" >',
         bookend=False,
         pieces=baca.selectors.lparts([1, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.suite(
         baca.skeleton(r"{ c8 c4. c8 }"),
@@ -106,7 +106,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         lilypond_id=1,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"\baca-circle-markup =|",
@@ -275,7 +275,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 5]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -307,7 +307,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 5, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -378,7 +378,7 @@ commands(
         bookend=False,
         lilypond_id=1,
         pieces=baca.selectors.lparts([1, 6, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         r"trem. -> larg.",
@@ -587,13 +587,13 @@ commands(
             zero_padding=True,
         ),
         baca.interpolate_pitches("D3", "C#3"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         "no scr. ->",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -608,7 +608,7 @@ commands(
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
         zero_padding=True,
     ),
     baca.text_spanner(
