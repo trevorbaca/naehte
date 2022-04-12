@@ -97,7 +97,7 @@ commands(
         "RH vibr. strettiss. -> RH NV",
         abjad.Tweak(r"- \tweak staff-padding 8"),
         lilypond_id=1,
-        selector=baca.selectors.leaves((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
     ),
     baca.tuplet_bracket_padding(1.75),
 )
@@ -168,7 +168,7 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaves((1, None)),
+            selector=lambda _: baca.select.leaves(_)[1:],
         ),
     ),
     baca.text_spanner(
@@ -182,7 +182,7 @@ commands(
         r"\baca-circle-markup =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.text_spanner(
         r"spz. larg. -> str. =|",
@@ -190,18 +190,18 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
-        selector=baca.selectors.leaves((-2, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
     ),
 )
 
 commands(
     ("vc", 5),
     baca.finger_pressure_transition(
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.hairpin(
         "p <| f",
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.suite(
         baca.pitches("C#3 C#3 E4 D3 E3", allow_repeats=True),
@@ -216,7 +216,7 @@ commands(
                 zero_padding=True,
             ),
             baca.note_head_style_harmonic(),
-            selector=baca.selectors.leaves((1, None), rleak=True),
+            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
         ),
     ),
     baca.suite(
@@ -243,13 +243,13 @@ commands(
         baca.pitch("D3"),
         baca.glissando(
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
-            selector=baca.selectors.leaves((-1, None), rleak=True),
+            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
         alteration="P1",
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
@@ -377,7 +377,7 @@ commands(
             selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.glissando(
-            selector=baca.selectors.leaves((-3, None)),
+            selector=lambda _: baca.select.leaves(_)[-3:],
             zero_padding=True,
         ),
         baca.literal(
@@ -392,10 +392,10 @@ commands(
             selector=lambda _: abjad.select.leaf(_, -2),
         ),
         baca.note_head_x_extent_zero(
-            selector=baca.selectors.leaves((-2, -1)),
+            selector=lambda _: baca.select.leaves(_)[-2:-1],
         ),
         baca.stem_down(
-            selector=baca.selectors.leaves((-3, None)),
+            selector=lambda _: baca.select.leaves(_)[-3:],
         ),
         baca.tuplet_bracket_padding(
             1.5,
@@ -426,7 +426,7 @@ commands(
             r"\times 4/5 { c4. c8 [ c ] }",
         ),
         baca.repeat_tie(
-            baca.selectors.leaves((-2, None)),
+            lambda _: baca.select.leaves(_)[-2:],
         ),
     ),
     baca.text_spanner(
@@ -438,7 +438,7 @@ commands(
     ),
     baca.trill_spanner(
         alteration="m2",
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
