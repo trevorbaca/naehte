@@ -78,7 +78,7 @@ commands(
     ("vc", 1),
     baca.hairpin(
         "ppp > pppp < ppp",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
@@ -101,7 +101,7 @@ commands(
     ("vc", 2),
     baca.hairpin(
         "ppp > pppp < ppp",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
@@ -145,7 +145,7 @@ commands(
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
         bookend=False,
-        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
@@ -192,7 +192,7 @@ commands(
         (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )
@@ -231,7 +231,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 9"),
         bookend=False,
         lilypond_id=1,
-        pieces=baca.selectors.lparts([1, 1, 1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
@@ -249,7 +249,7 @@ commands(
         (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         bookend=False,
-        pieces=baca.selectors.lparts([1, 1, 1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )

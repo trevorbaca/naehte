@@ -57,7 +57,7 @@ commands(
         ),
         baca.new(
             baca.repeat_tie(
-                baca.selectors.pleaf(0),
+                lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.selectors.leaf(-1),
@@ -95,14 +95,14 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         bookend=False,
         lilypond_id=1,
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
     baca.text_spanner(
         r"ord. -> P -> T =|",
         abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
-        pieces=baca.selectors.lparts([6, 1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [6, 1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.tuplet_bracket_staff_padding(1),
@@ -156,14 +156,14 @@ commands(
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 Db4 Db4"),
         baca.new(
             baca.repeat_tie(
-                baca.selectors.pleaf(0),
+                lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.selectors.leaf(0),
         ),
         baca.new(
             baca.repeat_tie(
-                baca.selectors.pleaf(0),
+                lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
             selector=baca.selectors.leaf(-1),
@@ -189,7 +189,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         bookend=False,
         measures=(3, 4),
-        pieces=baca.selectors.lparts([7, 1, 6, 2]),
+        pieces=lambda _: baca.select.lparts(_, [7, 1, 6, 2]),
         selector=baca.selectors.leaves((1, -1)),
     ),
     baca.tuplet_bracket_staff_padding(1),
@@ -257,7 +257,7 @@ commands(
         ),
         baca.new(
             baca.repeat_tie(
-                baca.selectors.pleaf(0),
+                lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
         ),
@@ -269,7 +269,7 @@ commands(
     baca.new(
         baca.hairpin(
             'p |> pp <| "f" pp <| "f"',
-            pieces=baca.selectors.lparts([2, 1, 1, 2]),
+            pieces=lambda _: baca.select.lparts(_, [2, 1, 1, 2]),
         ),
         baca.dls_staff_padding(7),
         selector=baca.selectors.leaves(lleak=True),
@@ -285,7 +285,7 @@ commands(
         r"II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
         abjad.Tweak(r"- \tweak staff-padding 8"),
         (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
-        pieces=baca.selectors.lparts([1, 1, 1, 1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[1:], count=3),
     ),
 )
