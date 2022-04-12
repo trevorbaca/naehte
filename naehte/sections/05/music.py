@@ -78,10 +78,10 @@ commands(
     ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
-        selector=baca.selectors.pleaves((1, -1)),
+        selector=lambda _: baca.select.pleaves(_)[1:-1],
     ),
     baca.note_head_x_extent_zero(
-        selector=baca.selectors.pleaves((None, -1)),
+        selector=lambda _: baca.select.pleaves(_)[:-1],
     ),
     baca.skeleton("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"),
     baca.suite(
