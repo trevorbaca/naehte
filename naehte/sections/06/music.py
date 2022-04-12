@@ -39,27 +39,27 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "39",
-        selector=baca.selectors.leaf(4 - 1),
+        selector=lambda _: abjad.select.leaf(_, 4 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(5 - 1),
+        selector=lambda _: abjad.select.leaf(_, 5 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(6 - 1),
+        selector=lambda _: abjad.select.leaf(_, 6 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(7 - 1),
+        selector=lambda _: abjad.select.leaf(_, 7 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(10 - 1),
+        selector=lambda _: abjad.select.leaf(_, 10 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.selectors.leaf(14 - 1),
+        selector=lambda _: abjad.select.leaf(_, 14 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -74,15 +74,15 @@ commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(8 - 1),
+        selector=lambda _: abjad.select.leaf(_, 8 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(-3),
+        selector=lambda _: abjad.select.leaf(_, -3),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -138,7 +138,7 @@ commands(
     baca.hairpin(
         "o< pp > ppp < f",
         pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.note_head_extra_offset((-1.25, 0)),
     baca.note_head_transparent(
@@ -155,7 +155,7 @@ commands(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
         ),
         baca.glissando(
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
             zero_padding=True,
         ),
     ),
@@ -240,7 +240,7 @@ commands(
         ),
         baca.accidental_extra_offset(
             (-0.25, 0),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.glissando(
             selector=baca.selectors.leaves((-3, None)),
@@ -248,14 +248,14 @@ commands(
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.left.X-offset = 4",
-            selector=baca.selectors.leaf(-3),
+            selector=lambda _: abjad.select.leaf(_, -3),
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-            selector=baca.selectors.leaf(-2),
+            selector=lambda _: abjad.select.leaf(_, -2),
         ),
         baca.note_head_transparent(
-            selector=baca.selectors.leaf(-2),
+            selector=lambda _: abjad.select.leaf(_, -2),
         ),
         baca.note_head_x_extent_zero(
             selector=baca.selectors.leaves((-2, -1)),
@@ -265,7 +265,7 @@ commands(
         ),
         baca.tuplet_bracket_padding(
             1.5,
-            selector=baca.selectors.leaf(-3),
+            selector=lambda _: abjad.select.leaf(_, -3),
         ),
     ),
     baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
@@ -362,7 +362,7 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     ),
     baca.text_spanner(
@@ -389,8 +389,8 @@ commands(
         baca.pitch("D#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(baca.selectors.leaf(0)),
-            selector=baca.selectors.leaves(),
+            baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
+            selector=lambda _: baca.select.leaves(_),
         ),
     ),
     baca.text_spanner(

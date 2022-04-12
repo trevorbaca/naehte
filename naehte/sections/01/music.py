@@ -32,7 +32,7 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(1 - 1),
+        selector=lambda _: abjad.select.leaf(_, 1 - 1),
     ),
     baca.text_spanner_staff_padding(10),
 )
@@ -60,13 +60,13 @@ commands(
                 lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.pitches(
             "<G3 D4>" " <A3 E4>" " <C3 G3>" " <E3 B3>" " <D3 A3>" " <E4 B4>" " Eb4"
         ),
         baca.glissando(
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
             zero_padding=True,
         ),
     ),
@@ -119,9 +119,9 @@ commands(
         baca.skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
-            baca.repeat_tie(baca.selectors.leaf(0)),
+            baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
     ),
     baca.text_spanner(
@@ -159,14 +159,14 @@ commands(
                 lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaf(0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.new(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.glissando(
             selector=baca.selectors.leaves((1, -2)),
@@ -211,7 +211,7 @@ commands(
             selector=baca.selectors.leaves((-2, None)),
         ),
         baca.new(
-            baca.repeat_tie(baca.selectors.leaf(0)),
+            baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
             baca.repeat_tie_extra_offset((-1.5, 0)),
         ),
         baca.glissando(
@@ -233,7 +233,7 @@ commands(
         selector=baca.selectors.leaves((-3, -1)),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(-2),
+        selector=lambda _: abjad.select.leaf(_, -2),
     ),
     baca.text_spanner(
         r"spazz. strett. =|",

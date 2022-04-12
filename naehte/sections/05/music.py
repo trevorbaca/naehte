@@ -36,19 +36,19 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "39",
-        selector=baca.selectors.leaf(1 - 1),
+        selector=lambda _: abjad.select.leaf(_, 1 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(4 - 1),
+        selector=lambda _: abjad.select.leaf(_, 4 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(7 - 1),
+        selector=lambda _: abjad.select.leaf(_, 7 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(10 - 1),
+        selector=lambda _: abjad.select.leaf(_, 10 - 1),
     ),
     baca.open_volta(lambda _: baca.select.skip(_, 7 - 1)),
     baca.close_volta(lambda _: baca.select.skip(_, 10 - 1)),
@@ -65,7 +65,7 @@ commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(11 - 1),
+        selector=lambda _: abjad.select.leaf(_, 11 - 1),
     ),
 )
 
@@ -89,7 +89,7 @@ commands(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
         ),
         baca.glissando(
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
             zero_padding=True,
         ),
     ),
@@ -265,22 +265,22 @@ commands(
         " = #'(minimum-space . 4)"
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(2),
+        selector=lambda _: abjad.select.leaf(_, 2),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(3),
+        selector=lambda _: abjad.select.leaf(_, 3),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(4),
+        selector=lambda _: abjad.select.leaf(_, 4),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(5),
+        selector=lambda _: abjad.select.leaf(_, 5),
     ),
     baca.skeleton("{" r" \times 3/5 { c4 c c c c }" " c1" " }"),
     baca.suite(
@@ -288,11 +288,11 @@ commands(
             "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>",
         ),
         baca.finger_pressure_transition(
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
     ),
     baca.stem_tremolo(
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.text_spanner(
         "I / II mod. -> strett. =|",
@@ -374,7 +374,7 @@ commands(
         ),
         baca.accidental_extra_offset(
             (-0.25, 0),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.glissando(
             selector=baca.selectors.leaves((-3, None)),
@@ -382,14 +382,14 @@ commands(
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.left.X-offset = 4",
-            selector=baca.selectors.leaf(-3),
+            selector=lambda _: abjad.select.leaf(_, -3),
         ),
         baca.literal(
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-            selector=baca.selectors.leaf(-2),
+            selector=lambda _: abjad.select.leaf(_, -2),
         ),
         baca.note_head_transparent(
-            selector=baca.selectors.leaf(-2),
+            selector=lambda _: abjad.select.leaf(_, -2),
         ),
         baca.note_head_x_extent_zero(
             selector=baca.selectors.leaves((-2, -1)),
@@ -399,7 +399,7 @@ commands(
         ),
         baca.tuplet_bracket_padding(
             1.5,
-            selector=baca.selectors.leaf(-3),
+            selector=lambda _: abjad.select.leaf(_, -3),
         ),
     ),
     baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),

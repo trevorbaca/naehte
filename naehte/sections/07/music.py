@@ -38,31 +38,31 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(1 - 1),
+        selector=lambda _: abjad.select.leaf(_, 1 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(3 - 1),
+        selector=lambda _: abjad.select.leaf(_, 3 - 1),
     ),
     baca.metronome_mark(
         baca.Accelerando(),
-        selector=baca.selectors.leaf(3 - 1),
+        selector=lambda _: abjad.select.leaf(_, 3 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(6 - 1),
+        selector=lambda _: abjad.select.leaf(_, 6 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(7 - 1),
+        selector=lambda _: abjad.select.leaf(_, 7 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(8 - 1),
+        selector=lambda _: abjad.select.leaf(_, 8 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.selectors.leaf(12 - 1),
+        selector=lambda _: abjad.select.leaf(_, 12 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -79,7 +79,7 @@ commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -108,7 +108,7 @@ commands(
         "mp <| fff",
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.pitch("E2"),
     baca.skeleton("{ c1 c4 }"),
@@ -137,12 +137,12 @@ commands(
         selector=baca.selectors.leaves(lleak=True),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch("E2"),
     baca.suite(
         baca.skeleton("{ c4 c8 }"),
-        baca.repeat_tie(baca.selectors.leaf(-1)),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
     ),
     baca.trill_spanner(
         alteration="P1",
@@ -163,7 +163,7 @@ commands(
             "<E2 C3> E2",
             allow_repeats=True,
         ),
-        baca.repeat_tie(baca.selectors.leaf(-1)),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
     ),
     baca.text_spanner(
         "I / II str. =|",
@@ -192,7 +192,7 @@ commands(
         selector=baca.selectors.leaves(lleak=True),
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.suite(
         baca.skeleton("{ c4 c8 }"),
@@ -200,7 +200,7 @@ commands(
             "<E2 C3> E2",
             allow_repeats=True,
         ),
-        baca.repeat_tie(baca.selectors.leaf(-1)),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
     ),
     baca.text_spanner(
         "I / II str. =|",
@@ -234,7 +234,7 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.pitch("Eb2"),
     ),
@@ -325,7 +325,7 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     ),
     baca.text_spanner(
@@ -356,7 +356,7 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
     ),
     baca.text_spanner(
@@ -386,7 +386,7 @@ commands(
         selector=baca.selectors.leaves((-1, None)),
     ),
     baca.stem_tremolo(
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.suite(
         baca.skeleton(r"\times 7/6 { c2. c2 c4 }"),
@@ -444,7 +444,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.text_spanner(
         "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
