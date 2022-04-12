@@ -40,23 +40,23 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(2 - 1),
+        selector=lambda _: abjad.select.leaf(_, 2 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(5 - 1),
+        selector=lambda _: abjad.select.leaf(_, 5 - 1),
     ),
     baca.metronome_mark(
         "91",
-        selector=baca.selectors.leaf(11 - 1),
+        selector=lambda _: abjad.select.leaf(_, 11 - 1),
     ),
     baca.metronome_mark(
         "39",
-        selector=baca.selectors.leaf(13 - 1),
+        selector=lambda _: abjad.select.leaf(_, 13 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(15 - 1),
+        selector=lambda _: abjad.select.leaf(_, 15 - 1),
     ),
     baca.open_volta(lambda _: baca.select.skip(_, 5 - 1)),
     baca.close_volta(lambda _: baca.select.skip(_, 7 - 1)),
@@ -73,7 +73,7 @@ commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(10 - 1),
+        selector=lambda _: abjad.select.leaf(_, 10 - 1),
     ),
 )
 
@@ -134,7 +134,7 @@ commands(
                 lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     ),
     baca.text_spanner(
@@ -171,13 +171,13 @@ commands(
                 lambda _: baca.select.pleaf(_, 0),
             ),
             baca.repeat_tie_extra_offset((-1.5, 0)),
-            selector=baca.selectors.leaf(0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.new(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(-1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
         baca.glissando(
             selector=baca.selectors.leaves((1, -2)),
@@ -234,7 +234,7 @@ commands(
         selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
     baca.note_head_style_harmonic_black(
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.text_spanner(
         "poss. -> XFB =|",
@@ -334,10 +334,10 @@ commands(
             selector=baca.selectors.leaves((2, 8)),
         ),
         baca.note_head_style_harmonic(
-            selector=baca.selectors.leaf(0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.selectors.leaf(1),
+            selector=lambda _: abjad.select.leaf(_, 1),
         ),
         baca.note_head_style_harmonic(
             selector=baca.selectors.leaves((2, 9)),
@@ -363,7 +363,7 @@ commands(
         bookend=False,
         lilypond_id=2,
         pieces=lambda _: baca.select.lparts(_, [1, 7]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.text_spanner(
         r"XFB =|",
@@ -388,11 +388,11 @@ commands(
     ),
     baca.tuplet_bracket_padding(
         1.75,
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     baca.tuplet_bracket_staff_padding(
         4.25,
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
 )
 
@@ -406,13 +406,13 @@ commands(
         baca.new(
             baca.pitch("<D#3 F#3>"),
             baca.finger_pressure_transition(),
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic(
-            selector=baca.selectors.leaf(0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.note_head_style_harmonic_black(
-            selector=baca.selectors.leaf(1),
+            selector=lambda _: abjad.select.leaf(_, 1),
         ),
     ),
     baca.text_spanner(
@@ -509,11 +509,11 @@ commands(
     ),
     baca.tuplet_bracket_staff_padding(
         2 + 1.25,
-        selector=baca.selectors.leaf(-4),
+        selector=lambda _: abjad.select.leaf(_, -4),
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.selectors.leaf(-2),
+        selector=lambda _: abjad.select.leaf(_, -2),
     ),
 )
 
@@ -535,14 +535,14 @@ commands(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
-            selector=baca.selectors.leaf(2),
+            selector=lambda _: abjad.select.leaf(_, 2),
         ),
     ),
     baca.text_spanner(
@@ -623,7 +623,7 @@ commands(
     ("vc", 15),
     baca.pitch(
         "C#3",
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch(
         "<C#3 A3>",
@@ -668,7 +668,7 @@ commands(
 commands(
     ("vc", (15, 16)),
     baca.breathe(
-        selector=baca.selectors.leaf(0),
+        selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.hairpin(
         '"mf" > pp < "mf" >o niente',

@@ -38,15 +38,15 @@ commands(
     "Global_Skips",
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(1 - 1),
+        selector=lambda _: abjad.select.leaf(_, 1 - 1),
     ),
     baca.metronome_mark(
         "52",
-        selector=baca.selectors.leaf(5 - 1),
+        selector=lambda _: abjad.select.leaf(_, 5 - 1),
     ),
     baca.metronome_mark(
         "117",
-        selector=baca.selectors.leaf(7 - 1),
+        selector=lambda _: abjad.select.leaf(_, 7 - 1),
     ),
     baca.only_segment(
         baca.rehearsal_mark(
@@ -62,15 +62,15 @@ commands(
     "Global_Rests",
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(4 - 1),
+        selector=lambda _: abjad.select.leaf(_, 4 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(9 - 1),
+        selector=lambda _: abjad.select.leaf(_, 9 - 1),
     ),
     baca.global_fermata(
         "fermata",
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -82,7 +82,7 @@ commands(
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.suite(
         baca.skeleton("{ c1 c1 c4 }"),
@@ -105,7 +105,7 @@ commands(
     ),
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.suite(
         baca.skeleton("{ c1 c1 c4 }"),
@@ -157,11 +157,11 @@ commands(
     ),
     baca.tuplet_bracket_staff_padding(
         2,
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     baca.tuplet_bracket_staff_padding(
         2.5,
-        selector=baca.selectors.leaf(3),
+        selector=lambda _: abjad.select.leaf(_, 3),
     ),
 )
 
@@ -176,7 +176,7 @@ commands(
         "mp <| fff",
     ),
     baca.note_head_style_harmonic(
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.pitch("E2"),
     baca.skeleton("{ c1 c4 }"),
