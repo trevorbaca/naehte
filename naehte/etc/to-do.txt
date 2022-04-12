@@ -68,6 +68,6 @@ TO-DO
         baca.text_spanner(
             r'-> XFB =|',
             bookend=False,
-            pieces=baca.selectors.lparts([2, 4]),
+            pieces=lambda _: baca.select.lparts(_, [2, 4]),
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         )
