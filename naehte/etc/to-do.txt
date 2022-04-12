@@ -69,5 +69,5 @@ TO-DO
             r'-> XFB =|',
             bookend=False,
             pieces=baca.selectors.lparts([2, 4]),
-            selector=baca.selectors.leaves(lleak=True),
+            selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         )

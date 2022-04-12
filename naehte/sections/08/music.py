@@ -93,7 +93,7 @@ commands(
         "I / II larg. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
 )
 
@@ -116,7 +116,7 @@ commands(
         "½ clt =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=False,
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
 )
 
@@ -170,7 +170,7 @@ commands(
     baca.breathe(),
     baca.finger_pressure_transition(),
     baca.glissando(
-        selector=baca.selectors.leaves((None, 1), lleak=True),
+        selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
     ),
     baca.hairpin(
         "mp <| fff",
@@ -265,7 +265,7 @@ commands(
     baca.new(
         baca.note_head_x_extent_zero(),
         baca.note_head_transparent(),
-        selector=baca.selectors.leaves((1, None)),
+        selector=lambda _: baca.select.leaves(_)[1:],
     ),
     baca.suite(
         baca.skeleton(r"{ c2. c2. c2.. c2. }"),
