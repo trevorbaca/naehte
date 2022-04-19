@@ -38,23 +38,12 @@ commands(
 )
 
 commands(
-    "vc",
-    baca.start_markup(
-        "Cello",
-        hcenter_in=10,
-    ),
-)
-
-commands(
     ("vc", 1),
-    baca.dls_staff_padding(7),
-    baca.hairpin(
-        "pp <| mf",
-    ),
     baca.suite(
         baca.skeleton(
             r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
         ),
+        baca.attach_first_segment_default_indicators(),
         baca.new(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
@@ -69,6 +58,14 @@ commands(
             selector=lambda _: baca.select.leaves(_),
             zero_padding=True,
         ),
+    ),
+    baca.start_markup(
+        "Cello",
+        hcenter_in=10,
+    ),
+    baca.dls_staff_padding(7),
+    baca.hairpin(
+        "pp <| mf",
     ),
     baca.text_spanner(
         r"\baca-damp-markup =|",
