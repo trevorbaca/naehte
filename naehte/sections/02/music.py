@@ -108,6 +108,18 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.suite(
+        baca.skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie(
+                lambda _: baca.select.pleaf(_, 0),
+            ),
+            baca.repeat_tie_up(),
+            selector=lambda _: baca.select.leaves(_)[1:3],
+        ),
+    ),
+    baca.reapply_persistent_indicators(),
     baca.hairpin(
         "o< f >",
         bookend=False,
@@ -122,17 +134,6 @@ commands(
     ),
     baca.note_head_x_extent_zero(
         selector=lambda _: baca.select.leaves(_)[-3:],
-    ),
-    baca.suite(
-        baca.skeleton(r"{ c4. c8 c32 [ c c c ] }"),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            baca.repeat_tie_up(),
-            selector=lambda _: baca.select.leaves(_)[1:3],
-        ),
     ),
     baca.suite(
         baca.pitches("F#3 B2 G3 A2"),

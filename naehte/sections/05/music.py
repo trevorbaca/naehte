@@ -71,6 +71,8 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.skeleton("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"),
+    baca.reapply_persistent_indicators(),
     baca.hairpin(
         "o< pp > ppp < f",
         pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
@@ -83,7 +85,6 @@ commands(
     baca.note_head_x_extent_zero(
         selector=lambda _: baca.select.pleaves(_)[:-1],
     ),
-    baca.skeleton("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"),
     baca.suite(
         baca.pitches(
             "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
