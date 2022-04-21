@@ -79,12 +79,6 @@ commands(
 
 commands(
     ("vc", 1),
-    baca.hairpin(
-        'o< "f" >',
-        bookend=False,
-        pieces=lambda _: baca.select.lparts(_, [1, 3]),
-        selector=lambda _: baca.select.rleaves(_),
-    ),
     baca.suite(
         baca.skeleton(r"{ c8 c4. c8 }"),
         baca.new(
@@ -94,6 +88,13 @@ commands(
             ),
             selector=lambda _: baca.select.leaves(_)[1:],
         ),
+    ),
+    baca.reapply_persistent_indicators(),
+    baca.hairpin(
+        'o< "f" >',
+        bookend=False,
+        pieces=lambda _: baca.select.lparts(_, [1, 3]),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.suite(
         baca.pitch("C#3"),

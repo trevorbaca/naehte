@@ -76,6 +76,12 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.suite(
+        baca.skeleton("{ c1 c1 c4 }"),
+        baca.reapply_persistent_indicators(),
+        baca.pitches("D2 <Db2 A2> D2"),
+        baca.glissando(),
+    ),
     baca.hairpin(
         "ppp > pppp < ppp",
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -83,11 +89,6 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.stem_tremolo(
         selector=lambda _: baca.select.leaves(_),
-    ),
-    baca.suite(
-        baca.skeleton("{ c1 c1 c4 }"),
-        baca.pitches("D2 <Db2 A2> D2"),
-        baca.glissando(),
     ),
     baca.text_spanner(
         "I / II larg. =|",

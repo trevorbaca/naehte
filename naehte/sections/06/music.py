@@ -88,6 +88,10 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.skeleton(
+        r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
+    ),
+    baca.reapply_persistent_indicators(),
     baca.new(
         baca.dynamic_text_self_alignment_x(-0.75),
         baca.dynamic("p-sempre"),
@@ -99,9 +103,6 @@ commands(
         selector=lambda _: baca.select.pleaves(_),
     ),
     baca.pitch("<B3 F#4>"),
-    baca.skeleton(
-        r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
-    ),
 )
 
 commands(

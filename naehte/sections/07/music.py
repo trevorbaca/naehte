@@ -85,19 +85,20 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.suite(
+        baca.skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
+        baca.reapply_persistent_indicators(),
+        baca.pitches(
+            "F5 G3 A4 B2 C4 D2",
+        ),
+        baca.glissando(),
+    ),
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
         bookend=False,
         pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
     ),
     baca.note_head_style_harmonic(),
-    baca.suite(
-        baca.skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
-        baca.pitches(
-            "F5 G3 A4 B2 C4 D2",
-        ),
-        baca.glissando(),
-    ),
     baca.tuplet_bracket_staff_padding(2),
 )
 

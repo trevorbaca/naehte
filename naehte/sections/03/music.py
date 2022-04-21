@@ -94,6 +94,7 @@ commands(
 commands(
     ("vc", 1),
     baca.skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"),
+    baca.reapply_persistent_indicators(),
     baca.hairpin(
         r"p > ppp <",
         pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
