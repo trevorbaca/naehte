@@ -1272,7 +1272,7 @@ segment.02.Cello.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1304,7 +1304,7 @@ segment.02.Cello.Music.Voice = {
           %! baca._set_status_tag()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         fs!4.
         % AFTER:
         % MARKUP:
@@ -1341,7 +1341,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -1403,7 +1403,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.repeat_tie_extra_offset()
         \override RepeatTie.extra-offset = #'(-1.5 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         fs8
         % AFTER:
         % ARTICULATIONS:
@@ -1467,7 +1467,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         fs32
         % AFTER:
         % SPANNER_STOPS:
@@ -1541,7 +1541,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_transparent()
         \override NoteHead.transparent = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         b,32
         % AFTER:
         % SPANNER_STARTS:
@@ -1554,7 +1554,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         g32
         % AFTER:
         % SPANNER_STARTS:
@@ -1572,7 +1572,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.IndicatorCommand._call()
           %! baca.literal()
         \once \override Glissando.bound-details.right.end-on-accidental = ##f
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a,32
         % AFTER:
         % SPANNER_STOPS:
@@ -1612,13 +1612,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1630,7 +1630,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.accidental_extra_offset()
         \once \override Accidental.extra-offset = #'(-1 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs!4.
         % AFTER:
         % ARTICULATIONS:
@@ -1678,7 +1678,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -1713,7 +1713,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.repeat_tie_extra_offset()
         \override RepeatTie.extra-offset = #'(-1.5 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs8
         % AFTER:
         % ARTICULATIONS:
@@ -1801,7 +1801,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs32
         % AFTER:
         % SPANNER_STOPS:
@@ -1859,7 +1859,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_transparent()
         \override NoteHead.transparent = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         b32
         % AFTER:
         % SPANNER_STARTS:
@@ -1872,7 +1872,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         g,32
         % AFTER:
         % SPANNER_STARTS:
@@ -1892,7 +1892,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a32
         % AFTER:
         % ARTICULATIONS:
@@ -1940,23 +1940,23 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         \tweak text #tuplet-number::calc-fraction-text
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         \times 6/7
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -2018,7 +2018,7 @@ segment.02.Cello.Music.Voice = {
               %! SPANNER_START
               %! baca.PiecewiseCommand._call(2)
               %! baca.rhythm_annotation_spanner()
-            - \baca-text-spanner-left-text "baca.skeleton()"
+            - \baca-text-spanner-left-text "baca.make_skeleton()"
               %! RHYTHM_ANNOTATION_SPANNER
               %! SPANNER_START
               %! baca.PiecewiseCommand._call(2)
@@ -2080,9 +2080,9 @@ segment.02.Cello.Music.Voice = {
             % COMMANDS:
 
             % OPEN_BRACKETS:
-              %! baca.skeleton()
+              %! baca.make_skeleton()
             \times 4/6
-              %! baca.skeleton()
+              %! baca.make_skeleton()
             {
                 % ABSOLUTE_BEFORE:
                 % COMMANDS:
@@ -2274,7 +2274,7 @@ segment.02.Cello.Music.Voice = {
                 % ABSOLUTE_BEFORE:
                 % COMMANDS:
 
-                  %! baca.skeleton()
+                  %! baca.make_skeleton()
                 a,16
                 % AFTER:
                 % STEM_TREMOLOS:
@@ -2315,12 +2315,12 @@ segment.02.Cello.Music.Voice = {
                 % COMMANDS:
 
             % CLOSE_BRACKETS:
-              %! baca.skeleton()
+              %! baca.make_skeleton()
             }
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
-              %! baca.skeleton()
+              %! baca.make_skeleton()
             e1
             % AFTER:
             % SPANNER_STOPS:
@@ -2391,19 +2391,19 @@ segment.02.Cello.Music.Voice = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2545,7 +2545,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -2619,7 +2619,7 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2713,15 +2713,15 @@ segment.02.Cello.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         \times 4/5
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -2820,7 +2820,7 @@ segment.02.Cello.Music.Voice = {
               %! SPANNER_START
               %! baca.PiecewiseCommand._call(2)
               %! baca.rhythm_annotation_spanner()
-            - \baca-text-spanner-left-text "baca.skeleton()"
+            - \baca-text-spanner-left-text "baca.make_skeleton()"
               %! RHYTHM_ANNOTATION_SPANNER
               %! SPANNER_START
               %! baca.PiecewiseCommand._call(2)
@@ -2923,7 +2923,7 @@ segment.02.Cello.Music.Voice = {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
-              %! baca.skeleton()
+              %! baca.make_skeleton()
             e'16
             % AFTER:
             % STEM_TREMOLOS:
@@ -2949,12 +2949,12 @@ segment.02.Cello.Music.Voice = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         c2...
         % AFTER:
         % ARTICULATIONS:
@@ -3075,7 +3075,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_style_harmonic_black()
         \once \override NoteHead.style = #'harmonic-black
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d''16
         % AFTER:
         % ARTICULATIONS:
@@ -3113,7 +3113,7 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3213,7 +3213,7 @@ segment.02.Cello.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3256,7 +3256,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         ds''!4
         % AFTER:
         % ARTICULATIONS:
@@ -3310,7 +3310,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -3384,42 +3384,42 @@ segment.02.Cello.Music.Voice = {
           %! abjad.glissando(1)
           %! baca.glissando()
         \override NoteHead.no-ledgers = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f''4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3438,7 +3438,7 @@ segment.02.Cello.Music.Voice = {
           %! abjad.glissando(6)
           %! baca.glissando()
         \undo \hide NoteHead
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f''4
         % AFTER:
         % LEAK:
@@ -3457,7 +3457,7 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3568,7 +3568,7 @@ segment.02.Cello.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3661,7 +3661,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -3728,9 +3728,9 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         \times 4/5
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -3868,7 +3868,7 @@ segment.02.Cello.Music.Voice = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3954,13 +3954,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3972,7 +3972,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.accidental_extra_offset()
         \once \override Accidental.extra-offset = #'(-1 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs!4.
         % AFTER:
         % ARTICULATIONS:
@@ -4029,7 +4029,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4080,7 +4080,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.repeat_tie_extra_offset()
         \override RepeatTie.extra-offset = #'(-1.5 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs8
         % AFTER:
         % ARTICULATIONS:
@@ -4168,7 +4168,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         gs32
         % AFTER:
         % SPANNER_STOPS:
@@ -4226,7 +4226,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_transparent()
         \override NoteHead.transparent = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         b32
         % AFTER:
         % SPANNER_STARTS:
@@ -4239,7 +4239,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         g,32
         % AFTER:
         % SPANNER_STARTS:
@@ -4259,7 +4259,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a32
         % AFTER:
         % ARTICULATIONS:
@@ -4304,13 +4304,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4328,7 +4328,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_staff_padding()
         \override TupletBracket.staff-padding = 2.5
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         c''2.
         % AFTER:
         % SPANNER_STARTS:
@@ -4361,7 +4361,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4435,7 +4435,7 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         df,!8
         % AFTER:
         % ARTICULATIONS:
@@ -4509,13 +4509,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4530,7 +4530,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.dls_staff_padding()
         \override DynamicLineSpanner.staff-padding = 6
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         df,1
         % AFTER:
         % SPANNER_STARTS:
@@ -4563,7 +4563,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4592,13 +4592,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4610,7 +4610,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.repeat_tie_extra_offset()
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         df,1.
         % AFTER:
         % ARTICULATIONS:
@@ -4661,7 +4661,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4706,13 +4706,13 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4724,7 +4724,7 @@ segment.02.Cello.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.repeat_tie_extra_offset()
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         df,4
         % AFTER:
         % ARTICULATIONS:
@@ -4783,7 +4783,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4839,27 +4839,27 @@ segment.02.Cello.Music.Voice = {
           %! abjad.glissando(1)
           %! baca.glissando()
         \override NoteHead.no-ledgers = ##t
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         df,!4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d,4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d,4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         d,4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e,4
         % AFTER:
         % LEAK:
@@ -4878,20 +4878,20 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello_Music_Voice measure 19]
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e,4
         % AFTER:
         % SPANNER_STOPS:
@@ -4949,7 +4949,7 @@ segment.02.Cello.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        - \baca-text-spanner-left-text "baca.skeleton()"
+        - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -4958,12 +4958,12 @@ segment.02.Cello.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e,4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         e,4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4982,7 +4982,7 @@ segment.02.Cello.Music.Voice = {
           %! abjad.glissando(6)
           %! baca.glissando()
         \undo \hide NoteHead
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         ef,!4
         % AFTER:
         % ARTICULATIONS:
@@ -5025,7 +5025,7 @@ segment.02.Cello.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

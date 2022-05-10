@@ -88,7 +88,7 @@ commands(
 
 commands(
     ("vc", 1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
     ),
     baca.reapply_persistent_indicators(),
@@ -114,7 +114,7 @@ commands(
         selector=lambda _: baca.select.pleaves(_),
     ),
     baca.pitch("<B3 F#4>"),
-    baca.skeleton(
+    baca.make_skeleton(
         r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
     ),
 )
@@ -128,7 +128,7 @@ commands(
         selector=lambda _: baca.select.pleaves(_),
     ),
     baca.pitch("<B3 F#4>"),
-    baca.skeleton(
+    baca.make_skeleton(
         r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
     ),
 )
@@ -148,7 +148,7 @@ commands(
     baca.note_head_x_extent_zero(
         selector=lambda _: baca.select.pleaves(_)[:-1],
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c2... r16" " }"
     ),
     baca.suite(
@@ -186,7 +186,7 @@ commands(
         selector=lambda _: baca.select.pleaves(_),
     ),
     baca.pitch("<B3 F#4>"),
-    baca.skeleton(
+    baca.make_skeleton(
         r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
     ),
 )
@@ -199,7 +199,7 @@ commands(
     baca.hairpin(
         "p <| f",
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     ),
     baca.suite(
@@ -269,7 +269,7 @@ commands(
             selector=lambda _: abjad.select.leaf(_, -3),
         ),
     ),
-    baca.skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
+    baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
     baca.text_spanner(
         r"XFB =| \baca-circle-markup =| spz. =|",
         (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
@@ -289,7 +289,7 @@ commands(
     ),
     baca.pitch("A3"),
     baca.suite(
-        baca.skeleton(
+        baca.make_skeleton(
             r"\times 4/5 { c4. c8 [ c ] }",
         ),
         baca.repeat_tie(
@@ -318,7 +318,7 @@ commands(
         "p <| f",
         selector=lambda _: baca.select.rleaves(_),
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     ),
     baca.suite(
@@ -357,7 +357,7 @@ commands(
         ),
     ),
     baca.suite(
-        baca.skeleton("{ c4 c8 }"),
+        baca.make_skeleton("{ c4 c8 }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
@@ -386,7 +386,7 @@ commands(
         "|> pp",
     ),
     baca.suite(
-        baca.skeleton("{ c4 c4. }"),
+        baca.make_skeleton("{ c4 c4. }"),
         baca.pitch("D#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -417,7 +417,7 @@ commands(
         selector=lambda _: baca.select.leaves(_)[1:],
     ),
     baca.suite(
-        baca.skeleton("{ c4 c c c c c c c c c c }"),
+        baca.make_skeleton("{ c4 c c c c c c c c c c }"),
         baca.pitch("E3"),
     ),
     baca.suite(

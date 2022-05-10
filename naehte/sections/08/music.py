@@ -77,7 +77,7 @@ commands(
 commands(
     ("vc", 1),
     baca.suite(
-        baca.skeleton("{ c1 c1 c4 }"),
+        baca.make_skeleton("{ c1 c1 c4 }"),
         baca.reapply_persistent_indicators(),
         baca.pitches("D2 <Db2 A2> D2"),
         baca.glissando(),
@@ -109,7 +109,7 @@ commands(
         selector=lambda _: baca.select.leaves(_),
     ),
     baca.suite(
-        baca.skeleton("{ c1 c1 c4 }"),
+        baca.make_skeleton("{ c1 c1 c4 }"),
         baca.pitches("Db2 C2 Db2"),
         baca.glissando(),
     ),
@@ -128,7 +128,7 @@ commands(
         "p <| mp",
     ),
     baca.suite(
-        baca.skeleton("{ c2 c8 }"),
+        baca.make_skeleton("{ c2 c8 }"),
         baca.pitches("C2 B1"),
         baca.glissando(),
     ),
@@ -150,7 +150,7 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
+        baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
         ),
@@ -180,7 +180,7 @@ commands(
         selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.pitch("E2"),
-    baca.skeleton("{ c1 c4 }"),
+    baca.make_skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -203,7 +203,7 @@ commands(
     baca.dynamic("pppp-sempre"),
     baca.dynamic_text_self_alignment_x(-0.5),
     baca.pitch("<F3 C4>"),
-    baca.skeleton(r"\times 6/7 { c2. c8 }"),
+    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
     baca.text_spanner(
         r"II / III mod. =|",
         abjad.Tweak(r"- \tweak staff-padding 12.5"),
@@ -215,7 +215,7 @@ commands(
 commands(
     ("vc", 8),
     baca.pitch("<F3 C4>"),
-    baca.skeleton(r"\times 6/7 { c2. c8 }"),
+    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
     baca.text_spanner(
         r"II / III mod. =|",
         abjad.Tweak(r"- \tweak staff-padding 12.5"),
@@ -269,7 +269,7 @@ commands(
         selector=lambda _: baca.select.leaves(_)[1:],
     ),
     baca.suite(
-        baca.skeleton(r"{ c2. c2. c2.. c2. }"),
+        baca.make_skeleton(r"{ c2. c2. c2.. c2. }"),
     ),
     baca.suite(
         baca.dots_extra_offset((0.5, 1)),
