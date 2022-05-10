@@ -40,7 +40,7 @@ commands(
 commands(
     ("vc", 1),
     baca.suite(
-        baca.skeleton(
+        baca.make_skeleton(
             r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
         ),
         baca.attach_first_segment_default_indicators(),
@@ -113,7 +113,7 @@ commands(
         selector=lambda _: baca.rleaves(_, count=2),
     ),
     baca.suite(
-        baca.skeleton(r"\times 6/7 { c2. c8 }"),
+        baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
         baca.pitch("Eb4"),
         baca.new(
             baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
@@ -147,7 +147,7 @@ commands(
         selector=lambda _: baca.select.leaves(_)[1:-2],
     ),
     baca.suite(
-        baca.skeleton(
+        baca.make_skeleton(
             r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
         ),
         baca.pitches("Eb4 G4 A3 G4 F4 G4 A3 G4 Db4 Db4"),
@@ -195,7 +195,7 @@ commands(
 commands(
     ("vc", 4),
     baca.suite(
-        baca.skeleton(
+        baca.make_skeleton(
             r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }"
             r" c2 \times 3/4 { c8 c4. } }"
         ),
@@ -248,7 +248,7 @@ commands(
 commands(
     ("vc", (5, 7)),
     baca.suite(
-        baca.skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
+        baca.make_skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
         baca.pitches(
             "Db4 <B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
         ),
@@ -296,7 +296,7 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.skeleton("{" r" c2... r16" " }"),
+        baca.make_skeleton("{" r" c2... r16" " }"),
         baca.pitch("<G3 D4>"),
     ),
     baca.text_spanner(
