@@ -76,8 +76,12 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.make_skeleton("{ c1 c1 c4 }"),
+)
+
+commands(
+    ("vc", 1),
     baca.suite(
-        baca.make_skeleton("{ c1 c1 c4 }"),
         baca.reapply_persistent_indicators(),
         baca.pitches("D2 <Db2 A2> D2"),
         baca.glissando(),
@@ -100,6 +104,11 @@ commands(
 
 commands(
     ("vc", 2),
+    baca.make_skeleton("{ c1 c1 c4 }"),
+)
+
+commands(
+    ("vc", 2),
     baca.hairpin(
         "ppp > pppp < ppp",
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -109,7 +118,6 @@ commands(
         selector=lambda _: baca.select.leaves(_),
     ),
     baca.suite(
-        baca.make_skeleton("{ c1 c1 c4 }"),
         baca.pitches("Db2 C2 Db2"),
         baca.glissando(),
     ),
@@ -123,12 +131,16 @@ commands(
 
 commands(
     ("vc", 3),
+    baca.make_skeleton("{ c2 c8 }"),
+)
+
+commands(
+    ("vc", 3),
     baca.breathe(),
     baca.hairpin(
         "p <| mp",
     ),
     baca.suite(
-        baca.make_skeleton("{ c2 c8 }"),
         baca.pitches("C2 B1"),
         baca.glissando(),
     ),
@@ -143,6 +155,11 @@ commands(
 
 commands(
     ("vc", 5),
+    baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
+)
+
+commands(
+    ("vc", 5),
     baca.hairpin(
         "ppp < p > pp < mp > p < mf >",
         bookend=False,
@@ -150,7 +167,6 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.suite(
-        baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
         ),
@@ -168,6 +184,11 @@ commands(
 
 commands(
     ("vc", 6),
+    baca.make_skeleton("{ c1 c4 }"),
+)
+
+commands(
+    ("vc", 6),
     baca.breathe(),
     baca.finger_pressure_transition(),
     baca.glissando(
@@ -180,7 +201,6 @@ commands(
         selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.pitch("E2"),
-    baca.make_skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -200,10 +220,14 @@ commands(
 
 commands(
     ("vc", 7),
+    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
+)
+
+commands(
+    ("vc", 7),
     baca.dynamic("pppp-sempre"),
     baca.dynamic_text_self_alignment_x(-0.5),
     baca.pitch("<F3 C4>"),
-    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
     baca.text_spanner(
         r"II / III mod. =|",
         abjad.Tweak(r"- \tweak staff-padding 12.5"),
@@ -214,8 +238,12 @@ commands(
 
 commands(
     ("vc", 8),
-    baca.pitch("<F3 C4>"),
     baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
+)
+
+commands(
+    ("vc", 8),
+    baca.pitch("<F3 C4>"),
     baca.text_spanner(
         r"II / III mod. =|",
         abjad.Tweak(r"- \tweak staff-padding 12.5"),
@@ -257,6 +285,11 @@ commands(
 
 commands(
     ("vc", (10, 13)),
+    baca.make_skeleton(r"{ c2. c2. c2.. c2. }"),
+)
+
+commands(
+    ("vc", (10, 13)),
     baca.dynamic_text_self_alignment_x(-0.45),
     baca.hairpin(
         "appena-udibile -- niente",
@@ -267,9 +300,6 @@ commands(
         baca.note_head_x_extent_zero(),
         baca.note_head_transparent(),
         selector=lambda _: baca.select.leaves(_)[1:],
-    ),
-    baca.suite(
-        baca.make_skeleton(r"{ c2. c2. c2.. c2. }"),
     ),
     baca.suite(
         baca.dots_extra_offset((0.5, 1)),

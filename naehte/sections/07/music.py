@@ -85,8 +85,12 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
+)
+
+commands(
+    ("vc", 1),
     baca.suite(
-        baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
         baca.reapply_persistent_indicators(),
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
@@ -104,6 +108,11 @@ commands(
 
 commands(
     ("vc", 2),
+    baca.make_skeleton("{ c1 c4 }"),
+)
+
+commands(
+    ("vc", 2),
     baca.finger_pressure_transition(),
     baca.hairpin(
         "mp <| fff",
@@ -112,7 +121,6 @@ commands(
         selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.pitch("E2"),
-    baca.make_skeleton("{ c1 c4 }"),
     baca.text_spanner(
         "RH vib. molto -> NV",
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -124,6 +132,14 @@ commands(
         bookend=False,
         pieces=lambda _: baca.select.lparts(_, [1, 1, 3]),
         selector=lambda _: baca.rleak(abjad.select.leaves(_), count=3),
+    ),
+)
+
+commands(
+    ("vc", 3),
+    baca.suite(
+        baca.make_skeleton("{ c4 c8 }"),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
     ),
 )
 
@@ -141,14 +157,15 @@ commands(
         selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch("E2"),
-    baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
-        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
-    ),
     baca.trill_spanner(
         alteration="P1",
         selector=lambda _: baca.select.leaves(_)[:2],
     ),
+)
+
+commands(
+    ("vc", 4),
+    baca.make_skeleton("{ c4 c8 }"),
 )
 
 commands(
@@ -159,7 +176,6 @@ commands(
         selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
     ),
     baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
         baca.pitches(
             "<E2 C3> E2",
             allow_repeats=True,
@@ -187,6 +203,11 @@ commands(
 
 commands(
     ("vc", 5),
+    baca.make_skeleton("{ c4 c8 }"),
+)
+
+commands(
+    ("vc", 5),
     baca.hairpin(
         "|> ppp <| fff",
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -196,7 +217,6 @@ commands(
         selector=lambda _: abjad.select.leaf(_, 0),
     ),
     baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
         baca.pitches(
             "<E2 C3> E2",
             allow_repeats=True,
@@ -219,6 +239,18 @@ commands(
 
 commands(
     ("vc", 6),
+    baca.make_skeleton("{ c2.. c8 }"),
+    baca.new(
+        baca.repeat_tie_extra_offset((-1.5, 0)),
+        baca.repeat_tie(
+            lambda _: baca.select.pleaf(_, 0),
+        ),
+        selector=lambda _: abjad.select.leaf(_, -1),
+    ),
+)
+
+commands(
+    ("vc", 6),
     baca.breathe(),
     baca.hairpin(
         "|> ppp <| mf",
@@ -229,14 +261,6 @@ commands(
         selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
     ),
     baca.suite(
-        baca.make_skeleton("{ c2.. c8 }"),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            selector=lambda _: abjad.select.leaf(_, -1),
-        ),
         baca.pitch("Eb2"),
     ),
     baca.text_spanner(
@@ -256,6 +280,13 @@ commands(
 
 commands(
     ("vc", 7),
+    baca.make_skeleton(
+        r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
+    ),
+)
+
+commands(
+    ("vc", 7),
     baca.new(
         baca.dynamic_text_self_alignment_x(-0.75),
         baca.dynamic("p-sempre"),
@@ -267,8 +298,12 @@ commands(
         selector=lambda _: baca.select.pleaves(_),
     ),
     baca.pitch("<B3 F#4>"),
+)
+
+commands(
+    ("vc", 8),
     baca.make_skeleton(
-        r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
+        r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     ),
 )
 
@@ -280,9 +315,6 @@ commands(
     baca.hairpin(
         "p <| f",
         selector=lambda _: baca.select.rleaves(_),
-    ),
-    baca.make_skeleton(
-        r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     ),
     baca.suite(
         baca.pitches(
@@ -308,6 +340,20 @@ commands(
 
 commands(
     ("vc", 9),
+    baca.suite(
+        baca.make_skeleton("{ c4 c8 }"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie(
+                lambda _: baca.select.pleaf(_, 0),
+            ),
+            selector=lambda _: abjad.select.leaf(_, -1),
+        ),
+    ),
+)
+
+commands(
+    ("vc", 9),
     baca.hairpin(
         "|> p <|",
         bookend=False,
@@ -317,16 +363,6 @@ commands(
         baca.pitch("D#3"),
         baca.glissando(
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
-        ),
-    ),
-    baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     ),
     baca.text_spanner(
@@ -345,12 +381,16 @@ commands(
 
 commands(
     ("vc", 10),
+    baca.make_skeleton("{ c4 c4. }"),
+)
+
+commands(
+    ("vc", 10),
     baca.hairpin(
         "ff |>",
         bookend=False,
     ),
     baca.suite(
-        baca.make_skeleton("{ c4 c4. }"),
         baca.pitch("D#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -368,6 +408,11 @@ commands(
         lilypond_id=1,
         selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
     ),
+)
+
+commands(
+    ("vc", 11),
+    baca.make_skeleton(r"\times 7/6 { c2. c2 c4 }"),
 )
 
 commands(
@@ -390,7 +435,6 @@ commands(
         selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.suite(
-        baca.make_skeleton(r"\times 7/6 { c2. c2 c4 }"),
         baca.pitches(
             "D2 <D2 Bb2> D2",
             allow_repeats=True,
@@ -407,13 +451,20 @@ commands(
 
 commands(
     ("vc", 12),
-    baca.finger_pressure_transition(
-        selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
-    ),
     baca.make_skeleton(r"{ c4 c c c c c c c c c }"),
 )
 
-commands(("vc", 13), baca.make_skeleton(r"{ c4 c c c c c c c c c c }"))
+commands(
+    ("vc", 12),
+    baca.finger_pressure_transition(
+        selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
+    ),
+)
+
+commands(
+    ("vc", 13),
+    baca.make_skeleton(r"{ c4 c c c c c c c c c c }"),
+)
 
 commands(
     ("vc", (12, 13)),

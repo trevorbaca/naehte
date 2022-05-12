@@ -72,6 +72,10 @@ commands(
 commands(
     ("vc", 1),
     baca.make_skeleton("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"),
+)
+
+commands(
+    ("vc", 1),
     baca.reapply_persistent_indicators(),
     baca.hairpin(
         "o< pp > ppp < f",
@@ -105,8 +109,12 @@ commands(
 
 commands(
     ("vc", 2),
+    baca.make_skeleton(r"{ c\breve }"),
+)
+
+commands(
+    ("vc", 2),
     baca.suite(
-        baca.make_skeleton(r"{ c\breve }"),
         baca.pitch("E2"),
         baca.repeat_tie(
             lambda _: baca.select.pleaf(_, 0),
@@ -117,6 +125,10 @@ commands(
 commands(
     ("vc", 3),
     baca.make_skeleton(r"{ c4 c c c c c c c c c }"),
+)
+
+commands(
+    ("vc", 3),
     baca.suite(
         baca.glissando(
             allow_repeats=True,
@@ -155,6 +167,11 @@ commands(
 
 commands(
     ("vc", 4),
+    baca.make_skeleton(r"{ c8 c4. c8 }"),
+)
+
+commands(
+    ("vc", 4),
     baca.hairpin(
         'o< "f" >',
         bookend=False,
@@ -162,7 +179,6 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.suite(
-        baca.make_skeleton(r"{ c8 c4. c8 }"),
         baca.pitch("C#3"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -197,6 +213,11 @@ commands(
 
 commands(
     ("vc", 5),
+    baca.make_skeleton(r"{ c2 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", 5),
     baca.finger_pressure_transition(
         selector=lambda _: baca.select.leaves(_)[:2],
     ),
@@ -220,9 +241,6 @@ commands(
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
         ),
     ),
-    baca.suite(
-        baca.make_skeleton(r"{ c2 c32 [ c c c ] }"),
-    ),
     baca.text_spanner(
         r"RH NV -> RH vib. =|",
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -235,11 +253,15 @@ commands(
 
 commands(
     ("vc", 6),
+    baca.make_skeleton(r"{ c2 c8 }"),
+)
+
+commands(
+    ("vc", 6),
     baca.hairpin(
         "mf |>",
         bookend=False,
     ),
-    baca.make_skeleton(r"{ c2 c8 }"),
     baca.suite(
         baca.pitch("D3"),
         baca.glissando(
@@ -252,6 +274,11 @@ commands(
         alteration="P1",
         selector=lambda _: baca.select.leaves(_)[:2],
     ),
+)
+
+commands(
+    ("vc", 7),
+    baca.make_skeleton("{" r" \times 3/5 { c4 c c c c }" " c1" " }"),
 )
 
 commands(
@@ -283,7 +310,6 @@ commands(
     baca.note_head_style_harmonic(
         selector=lambda _: abjad.select.leaf(_, 5),
     ),
-    baca.make_skeleton("{" r" \times 3/5 { c4 c c c c }" " c1" " }"),
     baca.suite(
         baca.pitches(
             "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>",
@@ -317,12 +343,16 @@ commands(
 
 commands(
     ("vc", 8),
+    baca.make_skeleton("{ c2 c8 }"),
+)
+
+commands(
+    ("vc", 8),
     baca.hairpin(
         "> pppp < ppp",
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
-    baca.make_skeleton("{ c2 c8 }"),
     baca.stem_tremolo(),
     baca.suite(
         baca.pitches(
@@ -347,17 +377,26 @@ commands(
 
 commands(
     ("vc", 9),
+    baca.make_skeleton("{ c2 }"),
+)
+
+commands(
+    ("vc", 9),
     baca.hairpin(
         "> ppppp",
         selector=lambda _: baca.select.rleaves(_),
     ),
-    baca.make_skeleton("{ c2 }"),
     baca.text_spanner(
         "spazz. strett. -> larg.",
         abjad.Tweak(r"- \tweak bound-details.right.padding 5.75"),
         abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
     ),
+)
+
+commands(
+    ("vc", 10),
+    baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
 )
 
 commands(
@@ -403,7 +442,6 @@ commands(
             selector=lambda _: abjad.select.leaf(_, -3),
         ),
     ),
-    baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }"),
     baca.text_spanner(
         r"XFB =| \baca-circle-markup =| spz. =|",
         (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
@@ -417,15 +455,19 @@ commands(
 
 commands(
     ("vc", 12),
+    baca.make_skeleton(
+        r"\times 4/5 { c4. c8 [ c ] }",
+    ),
+)
+
+commands(
+    ("vc", 12),
     baca.hairpin(
         "o<| f |> p",
         pieces=lambda _: baca.select.lparts(_, [1, 2]),
     ),
     baca.pitch("A3"),
     baca.suite(
-        baca.make_skeleton(
-            r"\times 4/5 { c4. c8 [ c ] }",
-        ),
         baca.repeat_tie(
             lambda _: baca.select.leaves(_)[-2:],
         ),

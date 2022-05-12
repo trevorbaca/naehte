@@ -108,8 +108,12 @@ commands(
 
 commands(
     ("vc", 1),
+    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", 1),
     baca.suite(
-        baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
@@ -165,6 +169,11 @@ commands(
 
 commands(
     ("vc", 2),
+    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", 2),
     baca.accidental_extra_offset(
         (-1, 0),
         selector=lambda _: abjad.select.leaf(_, 0),
@@ -181,7 +190,6 @@ commands(
         selector=lambda _: baca.select.leaves(_)[-3:-1],
     ),
     baca.suite(
-        baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
@@ -214,11 +222,13 @@ commands(
 
 commands(
     ("vc", (3, 4)),
-    baca.suite(
-        baca.make_skeleton(
-            "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
-        ),
+    baca.make_skeleton(
+        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
     ),
+)
+
+commands(
+    ("vc", (3, 4)),
     baca.hairpin(
         "o< f |> ppp",
         pieces=lambda _: baca.select.lparts(_, [1, 6]),
@@ -296,11 +306,15 @@ commands(
 
 commands(
     ("vc", 5),
+    baca.make_skeleton("{ c4.. c16 }"),
+)
+
+commands(
+    ("vc", 5),
     baca.hairpin(
         "ppp < f",
     ),
     baca.suite(
-        baca.make_skeleton("{ c4.. c16 }"),
         baca.new(
             baca.pitch("<D#3 F#3>"),
             baca.finger_pressure_transition(),
@@ -327,9 +341,11 @@ commands(
 
 commands(
     ("vc", 7),
-    baca.suite(
-        baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
-    ),
+    baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
+)
+
+commands(
+    ("vc", 7),
     baca.hairpin(
         "f |> ppp >o niente",
         pieces=lambda _: baca.select.lparts(_, [5, 2]),
@@ -398,13 +414,17 @@ commands(
 
 commands(
     ("vc", 9),
+    baca.make_skeleton("{ c4 c c c c c c c c c }"),
+)
+
+commands(
+    ("vc", 9),
     baca.clef("treble"),
     baca.hairpin(
         "pppp -- niente",
         abjad.Tweak(r"- \tweak to-barline ##t"),
         selector=lambda _: baca.select.rleaves(_),
     ),
-    baca.make_skeleton("{ c4 c c c c c c c c c }"),
     baca.suite(
         baca.glissando(
             allow_repeats=True,
@@ -424,6 +444,11 @@ commands(
 
 commands(
     ("vc", (11, 13)),
+    baca.make_skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
+)
+
+commands(
+    ("vc", (11, 13)),
     baca.clef("bass"),
     baca.new(
         baca.hairpin(
@@ -434,7 +459,6 @@ commands(
         ),
     ),
     baca.suite(
-        baca.make_skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
         baca.pitches(
             "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
         ),
@@ -461,6 +485,11 @@ commands(
 
 commands(
     ("vc", 14),
+    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", 14),
     baca.accidental_extra_offset(
         (-1, 0),
         selector=lambda _: abjad.select.leaf(_, 0),
@@ -477,7 +506,6 @@ commands(
         selector=lambda _: baca.select.leaves(_)[-3:-1],
     ),
     baca.suite(
-        baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
         baca.new(
             baca.repeat_tie_extra_offset((-1.5, 0)),
             baca.repeat_tie(
@@ -516,12 +544,16 @@ commands(
 
 commands(
     ("vc", 15),
+    baca.make_skeleton(r"{ c2. c8 }"),
+)
+
+commands(
+    ("vc", 15),
     baca.hairpin(
         "o<| fff",
         selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.suite(
-        baca.make_skeleton(r"{ c2. c8 }"),
         baca.pitches("C5 Db2"),
         baca.glissando(),
     ),
@@ -538,8 +570,12 @@ commands(
 
 commands(
     ("vc", 16),
+    baca.make_skeleton("{ c1 }"),
+)
+
+commands(
+    ("vc", 16),
     baca.suite(
-        baca.make_skeleton("{ c1 }"),
         baca.pitch("Db2"),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie(
@@ -550,9 +586,13 @@ commands(
 
 commands(
     ("vc", 17),
+    baca.make_skeleton("{ c1. }"),
+)
+
+commands(
+    ("vc", 17),
     baca.dynamic('"fff"'),
     baca.suite(
-        baca.make_skeleton("{ c1. }"),
         baca.pitch("Db2"),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie(
@@ -563,8 +603,12 @@ commands(
 
 commands(
     ("vc", 18),
+    baca.make_skeleton("{ c4 c c c c c }"),
+)
+
+commands(
+    ("vc", 18),
     baca.suite(
-        baca.make_skeleton("{ c4 c c c c c }"),
         baca.pitch("Db2"),
         baca.repeat_tie_extra_offset((-1.5, 0)),
         baca.repeat_tie(
@@ -575,9 +619,7 @@ commands(
 
 commands(
     ("vc", 19),
-    baca.suite(
-        baca.make_skeleton("{ c4 c c c }"),
-    ),
+    baca.make_skeleton("{ c4 c c c }"),
 )
 
 commands(
