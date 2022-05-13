@@ -106,10 +106,96 @@ commands(
     ),
 )
 
+# VC
+
 commands(
     ("vc", 1),
     baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
 )
+
+commands(
+    ("vc", 2),
+    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", (3, 4)),
+    baca.make_skeleton(
+        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
+    ),
+)
+
+commands(
+    ("vc", 5),
+    baca.make_skeleton("{ c4.. c16 }"),
+)
+
+commands(
+    ("vc", 6),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc", 7),
+    baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
+)
+
+commands(
+    ("vc", 8),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc", 9),
+    baca.make_skeleton("{ c4 c c c c c c c c c }"),
+)
+
+commands(
+    ("vc", 10),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc", (11, 13)),
+    baca.make_skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
+)
+
+commands(
+    ("vc", 14),
+    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
+)
+
+commands(
+    ("vc", 15),
+    baca.make_skeleton(r"{ c2. c8 }"),
+)
+
+commands(
+    ("vc", 16),
+    baca.make_skeleton("{ c1 }"),
+)
+
+commands(
+    ("vc", 17),
+    baca.make_skeleton("{ c1. }"),
+)
+
+commands(
+    ("vc", 18),
+    baca.make_skeleton("{ c4 c c c c c }"),
+)
+
+commands(
+    ("vc", 19),
+    baca.make_skeleton("{ c4 c c c }"),
+)
+
+commands(
+    "vc",
+    baca.append_phantom_measure(),
+)
+
+# vc
 
 commands(
     ("vc", 1),
@@ -169,11 +255,6 @@ commands(
 
 commands(
     ("vc", 2),
-    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
-)
-
-commands(
-    ("vc", 2),
     baca.accidental_extra_offset(
         (-1, 0),
         selector=lambda _: abjad.select.leaf(_, 0),
@@ -217,13 +298,6 @@ commands(
         bookend=False,
         lilypond_id=1,
         selector=lambda _: baca.select.leaves(_)[-4:],
-    ),
-)
-
-commands(
-    ("vc", (3, 4)),
-    baca.make_skeleton(
-        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
     ),
 )
 
@@ -306,11 +380,6 @@ commands(
 
 commands(
     ("vc", 5),
-    baca.make_skeleton("{ c4.. c16 }"),
-)
-
-commands(
-    ("vc", 5),
     baca.hairpin(
         "ppp < f",
     ),
@@ -337,11 +406,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         lilypond_id=1,
     ),
-)
-
-commands(
-    ("vc", 7),
-    baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"),
 )
 
 commands(
@@ -414,11 +478,6 @@ commands(
 
 commands(
     ("vc", 9),
-    baca.make_skeleton("{ c4 c c c c c c c c c }"),
-)
-
-commands(
-    ("vc", 9),
     baca.clef("treble"),
     baca.hairpin(
         "pppp -- niente",
@@ -440,11 +499,6 @@ commands(
         bookend=False,
         selector=lambda _: baca.select.rleaves(_),
     ),
-)
-
-commands(
-    ("vc", (11, 13)),
-    baca.make_skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
 )
 
 commands(
@@ -481,11 +535,6 @@ commands(
         pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
-)
-
-commands(
-    ("vc", 14),
-    baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }"),
 )
 
 commands(
@@ -544,11 +593,6 @@ commands(
 
 commands(
     ("vc", 15),
-    baca.make_skeleton(r"{ c2. c8 }"),
-)
-
-commands(
-    ("vc", 15),
     baca.hairpin(
         "o<| fff",
         selector=lambda _: baca.select.leaves(_)[:2],
@@ -570,11 +614,6 @@ commands(
 
 commands(
     ("vc", 16),
-    baca.make_skeleton("{ c1 }"),
-)
-
-commands(
-    ("vc", 16),
     baca.suite(
         baca.pitch("Db2"),
         baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -582,11 +621,6 @@ commands(
             lambda _: baca.select.pleaf(_, 0),
         ),
     ),
-)
-
-commands(
-    ("vc", 17),
-    baca.make_skeleton("{ c1. }"),
 )
 
 commands(
@@ -603,11 +637,6 @@ commands(
 
 commands(
     ("vc", 18),
-    baca.make_skeleton("{ c4 c c c c c }"),
-)
-
-commands(
-    ("vc", 18),
     baca.suite(
         baca.pitch("Db2"),
         baca.repeat_tie_extra_offset((-1.5, 0)),
@@ -615,11 +644,6 @@ commands(
             lambda _: baca.select.pleaf(_, 0),
         ),
     ),
-)
-
-commands(
-    ("vc", 19),
-    baca.make_skeleton("{ c4 c c c }"),
 )
 
 commands(
@@ -690,9 +714,12 @@ if __name__ == "__main__":
         **baca.score_interpretation_defaults(),
         activate=(baca.tags.LOCAL_MEASURE_NUMBER,),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         do_not_require_margin_markup=True,
+        do_not_sort_commands=True,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
+        intercalate_mmrests_by_hand=True,
     )
     lilypond_file = baca.make_lilypond_file(
         score,
