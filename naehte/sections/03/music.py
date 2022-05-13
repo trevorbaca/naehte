@@ -91,10 +91,110 @@ commands(
     ),
 )
 
+# VC
+
 commands(
     ("vc", 1),
     baca.make_skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"),
 )
+
+commands(
+    ("vc", 2),
+    baca.make_skeleton("{ c4 c c c }"),
+)
+
+commands(
+    ("vc", 3),
+    baca.make_skeleton("{ c8. c8. }"),
+)
+
+commands(
+    ("vc", 4),
+    baca.make_skeleton(r"{ c4 c c c c c c c }"),
+)
+
+commands(
+    ("vc", 5),
+    baca.make_skeleton(r" \times 4/5 { c1 c4 }"),
+)
+
+commands(
+    ("vc", 6),
+    baca.make_skeleton(r"{ \times 3/4 { c8 [ c c c ~ ] } c8 }"),
+)
+
+commands(
+    ("vc", 7),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc", 8),
+    baca.make_skeleton(r"{ c1.. c4 }"),
+)
+
+commands(
+    ("vc", (9, 10)),
+    baca.make_skeleton(
+        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
+    ),
+)
+
+commands(
+    ("vc", 11),
+    baca.make_skeleton("{ c4.. c16 }"),
+)
+
+commands(
+    ("vc", 12),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc", 13),
+    baca.make_skeleton(
+        "{"
+        r" \times 4/5 { c16 [ c c c c ] }"
+        r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
+        " }"
+    ),
+)
+
+commands(
+    ("vc", 14),
+    baca.make_skeleton("{ c4 c c c }"),
+)
+
+commands(
+    ("vc", 15),
+    baca.make_skeleton(r"{ c2 }"),
+)
+
+commands(
+    ("vc", 16),
+    baca.make_skeleton(
+        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
+    ),
+)
+
+commands(
+    ("vc", 17),
+    baca.make_skeleton(
+        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
+    ),
+)
+
+commands(
+    ("vc", 18),
+    baca.make_mmrests(),
+)
+
+commands(
+    "vc",
+    baca.append_phantom_measure(),
+)
+
+# vc
 
 commands(
     ("vc", 1),
@@ -136,11 +236,6 @@ commands(
         2,
         selector=lambda _: abjad.select.leaf(_, 4),
     ),
-)
-
-commands(
-    ("vc", 2),
-    baca.make_skeleton("{ c4 c c c }"),
 )
 
 commands(
@@ -199,11 +294,6 @@ commands(
 
 commands(
     ("vc", 3),
-    baca.make_skeleton("{ c8. c8. }"),
-)
-
-commands(
-    ("vc", 3),
     baca.breathe(),
     baca.hairpin(
         "ppp <| fff",
@@ -224,11 +314,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=lambda _: baca.select.leaves(_)[:2],
     ),
-)
-
-commands(
-    ("vc", 4),
-    baca.make_skeleton(r"{ c4 c c c c c c c }"),
 )
 
 commands(
@@ -257,21 +342,11 @@ commands(
 
 commands(
     ("vc", 5),
-    baca.make_skeleton(r" \times 4/5 { c1 c4 }"),
-)
-
-commands(
-    ("vc", 5),
     baca.finger_pressure_transition(
         selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
     ),
     baca.note_head_style_harmonic(),
     baca.pitch("<G3 D4>"),
-)
-
-commands(
-    ("vc", 6),
-    baca.make_skeleton(r"{ \times 3/4 { c8 [ c c c ~ ] } c8 }"),
 )
 
 commands(
@@ -318,11 +393,6 @@ commands(
 
 commands(
     ("vc", 8),
-    baca.make_skeleton(r"{ c1.. c4 }"),
-)
-
-commands(
-    ("vc", 8),
     baca.dynamic(
         "pppp-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
@@ -340,13 +410,6 @@ commands(
     baca.text_spanner(
         "no scr. -> scr. poss.",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-    ),
-)
-
-commands(
-    ("vc", (9, 10)),
-    baca.make_skeleton(
-        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
     ),
 )
 
@@ -425,11 +488,6 @@ commands(
 
 commands(
     ("vc", 11),
-    baca.make_skeleton("{ c4.. c16 }"),
-)
-
-commands(
-    ("vc", 11),
     baca.hairpin(
         "ppp < f",
     ),
@@ -455,16 +513,6 @@ commands(
         r"(T) -> P",
         abjad.Tweak(r"- \tweak staff-padding 8"),
         lilypond_id=1,
-    ),
-)
-
-commands(
-    ("vc", 13),
-    baca.make_skeleton(
-        "{"
-        r" \times 4/5 { c16 [ c c c c ] }"
-        r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
-        " }"
     ),
 )
 
@@ -551,11 +599,6 @@ commands(
 
 commands(
     ("vc", 14),
-    baca.make_skeleton("{ c4 c c c }"),
-)
-
-commands(
-    ("vc", 14),
     baca.hairpin(
         '"f" "f" >',
         bookend=False,
@@ -612,11 +655,6 @@ commands(
 
 commands(
     ("vc", 15),
-    baca.make_skeleton(r"{ c2 }"),
-)
-
-commands(
-    ("vc", 15),
     baca.dynamic(
         "pppp-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
@@ -637,13 +675,6 @@ commands(
 
 commands(
     ("vc", 16),
-    baca.make_skeleton(
-        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
-    ),
-)
-
-commands(
-    ("vc", 16),
     baca.suite(
         baca.pitches(
             " <B3 F#4> <B3 F#4> <C3 G3>"
@@ -653,13 +684,6 @@ commands(
             allow_repeats=True,
         ),
         baca.glissando(),
-    ),
-)
-
-commands(
-    ("vc", 17),
-    baca.make_skeleton(
-        r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
     ),
 )
 
@@ -750,9 +774,12 @@ if __name__ == "__main__":
         **baca.score_interpretation_defaults(),
         activate=(baca.tags.LOCAL_MEASURE_NUMBER,),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         do_not_require_margin_markup=True,
+        do_not_sort_commands=True,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
+        intercalate_mmrests_by_hand=True,
     )
     lilypond_file = baca.make_lilypond_file(
         score,
