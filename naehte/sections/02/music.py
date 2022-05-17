@@ -190,9 +190,12 @@ commands(
     baca.make_skeleton("{ c4 c c c }"),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc
@@ -209,7 +212,6 @@ commands(
             selector=lambda _: baca.select.leaves(_)[1:3],
         ),
     ),
-    baca.reapply_persistent_indicators(),
     baca.hairpin(
         "o< f >",
         bookend=False,

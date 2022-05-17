@@ -131,9 +131,12 @@ commands(
     baca.make_mmrests(),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc
@@ -141,7 +144,6 @@ commands(
 commands(
     ("vc", 1),
     baca.suite(
-        baca.reapply_persistent_indicators(),
         baca.pitches("D2 <Db2 A2> D2"),
         baca.glissando(),
     ),

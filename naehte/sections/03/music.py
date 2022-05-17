@@ -189,16 +189,18 @@ commands(
     baca.make_mmrests(),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc
 
 commands(
     ("vc", 1),
-    baca.reapply_persistent_indicators(),
     baca.hairpin(
         r"p > ppp <",
         pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),

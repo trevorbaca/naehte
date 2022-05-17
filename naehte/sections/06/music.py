@@ -191,16 +191,18 @@ commands(
     baca.make_mmrests(),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc
 
 commands(
     ("vc", 1),
-    baca.reapply_persistent_indicators(),
     baca.new(
         baca.dynamic_text_self_alignment_x(-0.75),
         baca.dynamic("p-sempre"),
