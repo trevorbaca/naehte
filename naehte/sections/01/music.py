@@ -75,9 +75,12 @@ commands(
     baca.make_skeleton("{" r" c2... r16" " }"),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.attach_first_segment_default_indicators(),
 )
 
 # vc
@@ -85,7 +88,6 @@ commands(
 commands(
     ("vc", 1),
     baca.suite(
-        baca.attach_first_segment_default_indicators(),
         baca.new(
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),

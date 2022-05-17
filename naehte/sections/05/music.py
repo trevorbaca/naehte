@@ -133,16 +133,18 @@ commands(
     ),
 )
 
+# phantom & reapply
+
 commands(
     "vc",
     baca.append_phantom_measure(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc
 
 commands(
     ("vc", 1),
-    baca.reapply_persistent_indicators(),
     baca.hairpin(
         "o< pp > ppp < f",
         pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
