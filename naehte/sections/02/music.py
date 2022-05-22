@@ -81,13 +81,6 @@ commands(
         "39",
         selector=lambda _: abjad.select.leaf(_, 16 - 1),
     ),
-    baca.only_segment(
-        baca.rehearsal_mark(
-            "B",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 14)"),
-        ),
-    ),
 )
 
 commands(
@@ -132,7 +125,7 @@ commands(
 
 commands(
     ("vc", 6),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
