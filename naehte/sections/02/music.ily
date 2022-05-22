@@ -21,15 +21,6 @@ segment.02.Global.Skips = {
       %! baca._make_global_skips(1)
     s1 * 5/8
     % AFTER:
-    % MARKUP:
-      %! +SEGMENT
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 14)
-      %! +SEGMENT
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "B" #10
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
       %! baca._attach_metronome_marks(3)
@@ -2436,91 +2427,20 @@ segment.02.Cello.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-    % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    <<
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"
-          %! baca._make_multimeasure_rest_container(4)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Music_Voice measure 6]
-            % BEFORE:
-            % COMMANDS:
-              %! INVISIBLE_MUSIC_COMMAND
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
-              %! INVISIBLE_MUSIC_COLORING
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-              %! baca.OverrideCommand._call(1)
-              %! baca.dls_staff_padding()
-            \override DynamicLineSpanner.staff-padding = 9
-            % GROB_OVERRIDES:
-            \once \override Accidental.stencil = ##f
-            \once \override NoteColumn.ignore-collision = ##t
-              %! HIDDEN
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
-            d1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        }
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"
-          %! baca._make_multimeasure_rest_container(6)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Rest_Voice measure 6]
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
-            R1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        }
-        % CLOSING:
-        % COMMANDS:
-
-    % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    >>
+      %! baca._comment_measure_numbers()
+    % [Cello_Music_Voice measure 6]
+    % BEFORE:
+    % COMMANDS:
+      %! baca.OverrideCommand._call(1)
+      %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 9
+      %! baca._make_mmrests_flat()
+    R1 * 1/4
+    % AFTER:
+    % MARKUP:
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

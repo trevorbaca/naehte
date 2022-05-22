@@ -48,13 +48,6 @@ commands(
         "117",
         selector=lambda _: abjad.select.leaf(_, 7 - 1),
     ),
-    baca.only_segment(
-        baca.rehearsal_mark(
-            "H",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 12)"),
-        ),
-    ),
     baca.bar_line("|.", lambda _: baca.select.skip(_, -1)),
 )
 

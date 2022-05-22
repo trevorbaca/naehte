@@ -64,13 +64,6 @@ commands(
         "39",
         selector=lambda _: abjad.select.leaf(_, 12 - 1),
     ),
-    baca.only_segment(
-        baca.rehearsal_mark(
-            "G",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 12)"),
-        ),
-    ),
     baca.open_volta(lambda _: baca.select.skip(_, 2 - 1)),
     baca.close_volta(lambda _: baca.select.skip(_, 6 - 1)),
 )
