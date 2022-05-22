@@ -2366,93 +2366,20 @@ segment.03.Cello.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-    % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    <<
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"
-          %! baca._make_multimeasure_rest_container(4)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Music_Voice measure 7]
-            % BEFORE:
-            % COMMANDS:
-              %! INVISIBLE_MUSIC_COMMAND
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
-              %! INVISIBLE_MUSIC_COLORING
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            % GROB_OVERRIDES:
-            \once \override Accidental.stencil = ##f
-            \once \override NoteColumn.ignore-collision = ##t
-              %! HIDDEN
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
-            d1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % SPANNER_STOPS:
-              %! SPANNER_STOP
-              %! baca.SpannerIndicatorCommand._call(4)
-              %! baca.trill_spanner()
-            \stopTrillSpan
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        }
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"
-          %! baca._make_multimeasure_rest_container(6)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Rest_Voice measure 7]
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
-            R1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        }
-        % CLOSING:
-        % COMMANDS:
-
-    % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    >>
+      %! baca._comment_measure_numbers()
+    % [Cello_Music_Voice measure 7]
+      %! baca._make_mmrests_flat()
+    R1 * 1/4
+    % AFTER:
+    % MARKUP:
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    % SPANNER_STOPS:
+      %! SPANNER_STOP
+      %! baca.SpannerIndicatorCommand._call(4)
+      %! baca.trill_spanner()
+    \stopTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3165,88 +3092,15 @@ segment.03.Cello.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-    % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    <<
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"
-          %! baca._make_multimeasure_rest_container(4)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Music_Voice measure 12]
-            % BEFORE:
-            % COMMANDS:
-              %! INVISIBLE_MUSIC_COMMAND
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
-              %! INVISIBLE_MUSIC_COLORING
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            % GROB_OVERRIDES:
-            \once \override Accidental.stencil = ##f
-            \once \override NoteColumn.ignore-collision = ##t
-              %! HIDDEN
-              %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
-            d1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
-        }
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"
-          %! baca._make_multimeasure_rest_container(6)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! baca._comment_measure_numbers()
-            % [Cello_Rest_Voice measure 12]
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
-            R1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! MULTIMEASURE_REST
-              %! REST_VOICE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
-        }
-        % CLOSING:
-        % COMMANDS:
-
-    % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
-    >>
+      %! baca._comment_measure_numbers()
+    % [Cello_Music_Voice measure 12]
+      %! baca._make_mmrests_flat()
+    R1 * 1/4
+    % AFTER:
+    % MARKUP:
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
