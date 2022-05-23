@@ -30,17 +30,16 @@ metronome_marks = dict(
 )
 
 
-voice_abbreviations = {"vc": "Cello_Music_Voice"}
+voice_abbreviations = {"vc": "Cello.Music_Voice"}
 
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
-
-    # cello
-    cello_music_voice = abjad.Voice(name="Cello_Music_Voice", tag=tag)
+    # CELLO
+    cello_music_voice = abjad.Voice(name="Cello.Music_Voice", tag=tag)
     cello_music_staff = abjad.Staff(
-        [cello_music_voice], name="Cello_Music_Staff", tag=tag
+        [cello_music_voice], name="Cello.Music_Staff", tag=tag
     )
     abjad.annotate(
         cello_music_staff,
@@ -48,7 +47,6 @@ def make_empty_score():
         instruments["Cello"],
     )
     abjad.annotate(cello_music_staff, "default_clef", abjad.Clef("bass"))
-
     # SCORE
     music_context = abjad.Context(
         [cello_music_staff],

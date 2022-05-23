@@ -74,7 +74,7 @@
 
                 % OPEN_BRACKETS:
                   %! naehte.make_empty_score()
-                \context Staff = "Cello_Music_Staff"
+                \context Staff = "Cello.Music_Staff"
                   %! naehte.make_empty_score()
                   %! baca.path.extern()
                 { \segment.07.Cello.Music.Staff }
