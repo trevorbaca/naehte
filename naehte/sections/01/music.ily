@@ -525,7 +525,7 @@ segment.01.Global_Rests = {
 
 
   %! baca.path.extern()
-segment.01.Cello_Music_Voice = {
+segment.01.Cello.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -540,7 +540,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 1]
+        % [Cello.Music_Voice measure 1]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -941,7 +941,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 2]
+        % [Cello.Music_Voice measure 2]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1079,7 +1079,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 3]
+        % [Cello.Music_Voice measure 3]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1486,7 +1486,7 @@ segment.01.Cello_Music_Voice = {
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello_Music_Voice measure 4]
+            % [Cello.Music_Voice measure 4]
             % BEFORE:
             % COMMANDS:
               %! baca.OverrideCommand._call(1)
@@ -1796,7 +1796,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 5]
+        % [Cello.Music_Voice measure 5]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1915,7 +1915,7 @@ segment.01.Cello_Music_Voice = {
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello_Music_Voice measure 6]
+            % [Cello.Music_Voice measure 6]
             <c' g'>4
             % AFTER:
             % ARTICULATIONS:
@@ -2039,7 +2039,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 7]
+        % [Cello.Music_Voice measure 7]
         <bf! f'>2
         % AFTER:
         % ARTICULATIONS:
@@ -2105,7 +2105,7 @@ segment.01.Cello_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_Music_Voice measure 8]
+        % [Cello.Music_Voice measure 8]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -2263,7 +2263,7 @@ segment.01.Cello_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_Music_Voice"
+        \context Voice = "Cello.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -2273,7 +2273,7 @@ segment.01.Cello_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_Music_Voice measure 9]
+            % [Cello.Music_Voice measure 9]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2344,7 +2344,7 @@ segment.01.Cello_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_Rest_Voice"
+        \context Voice = "Cello.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -2354,7 +2354,7 @@ segment.01.Cello_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_Rest_Voice measure 9]
+            % [Cello.Rest_Voice measure 9]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -2425,10 +2425,10 @@ segment.01.Cello.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! naehte.make_empty_score()
-    \context Voice = "Cello_Music_Voice"
+    \context Voice = "Cello.Music_Voice"
       %! naehte.make_empty_score()
       %! baca.path.extern()
-    { \segment.01.Cello_Music_Voice }
+    { \segment.01.Cello.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
