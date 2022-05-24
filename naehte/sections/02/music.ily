@@ -1,5 +1,5 @@
   %! baca.path.extern()
-segment.02.Global_Skips = {
+section_number.02.Global_Skips = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1074,7 +1074,7 @@ segment.02.Global_Skips = {
 
 
   %! baca.path.extern()
-segment.02.Global_Rests = {
+section_number.02.Global_Rests = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1258,7 +1258,7 @@ segment.02.Global_Rests = {
 
 
   %! baca.path.extern()
-segment.02.Cello.Music_Voice = {
+section_number.02.Cello.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4468,7 +4468,7 @@ segment.02.Cello.Music_Voice = {
 
 
   %! baca.path.extern()
-segment.02.Cello.Music.Staff = <<
+section_number.02.Cello.Music_Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4477,7 +4477,7 @@ segment.02.Cello.Music.Staff = <<
     \context GlobalRests = "Global_Rests"
       %! baca.make_global_context()
       %! baca.path.extern()
-    { \segment.02.Global_Rests }
+    { \section_number.02.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4486,7 +4486,7 @@ segment.02.Cello.Music.Staff = <<
     \context Voice = "Cello.Music_Voice"
       %! naehte.make_empty_score()
       %! baca.path.extern()
-    { \segment.02.Cello.Music_Voice }
+    { \section_number.02.Cello.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
