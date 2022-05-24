@@ -3,14 +3,14 @@
 \version "2.19.82"
 
 \include "stylesheet.ily"
-\include "_segments/01.ily"
-\include "_segments/02.ily"
-\include "_segments/03.ily"
-\include "_segments/04.ily"
-\include "_segments/05.ily"
-\include "_segments/06.ily"
-\include "_segments/07.ily"
-\include "_segments/08.ily"
+\include "_sections/01.ily"
+\include "_sections/02.ily"
+\include "_sections/03.ily"
+\include "_sections/04.ily"
+\include "_sections/05.ily"
+\include "_sections/06.ily"
+\include "_sections/07.ily"
+\include "_sections/08.ily"
 
 
 \score {
@@ -19,14 +19,14 @@
         \include "layout.ly"
         }
         {
-        \include "_segments/01.ly"
-        \include "_segments/02.ly"
-        \include "_segments/03.ly"
-        \include "_segments/04.ly"
-        \include "_segments/05.ly"
-        \include "_segments/06.ly"
-        \include "_segments/07.ly"
-        \include "_segments/08.ly"
+        \include "_sections/01.ly"
+        \include "_sections/02.ly"
+        \include "_sections/03.ly"
+        \include "_sections/04.ly"
+        \include "_sections/05.ly"
+        \include "_sections/06.ly"
+        \include "_sections/07.ly"
+        \include "_sections/08.ly"
         }
     >>
 }
