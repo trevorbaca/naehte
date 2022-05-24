@@ -11,7 +11,7 @@ score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
-    **baca.segment_accumulation_defaults(),
+    **baca.section_accumulation_defaults(),
     instruments=library.instruments,
     metronome_marks=library.metronome_marks,
     time_signatures=[
@@ -80,7 +80,7 @@ commands(
 commands(
     "vc",
     baca.append_phantom_measure(),
-    baca.attach_first_segment_default_indicators(),
+    baca.attach_first_section_default_indicators(),
 )
 
 # vc
