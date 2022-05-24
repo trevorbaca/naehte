@@ -380,7 +380,7 @@ if __name__ == "__main__":
         always_make_global_rests=True,
         do_not_require_margin_markup=True,
         error_on_not_yet_pitched=True,
-        final_segment=True,
+        final_section=True,
         global_rests_in_topmost_staff=True,
     )
     lilypond_file = baca.make_lilypond_file(
