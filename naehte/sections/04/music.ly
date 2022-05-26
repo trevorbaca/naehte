@@ -54,7 +54,7 @@
                 \context GlobalSkips = "Global_Skips"
                   %! baca.make_global_context()
                   %! baca.path.extern()
-                { \section_number.4.Global_Skips }
+                { \number.4.Global_Skips }
                 % CLOSING:
                 % COMMANDS:
 
@@ -77,7 +77,7 @@
                 \context Staff = "Cello.Music_Staff"
                   %! naehte.make_empty_score()
                   %! baca.path.extern()
-                { \section_number.4.Cello.Music_Staff }
+                { \number.4.Cello.Music_Staff }
                 % CLOSING:
                 % COMMANDS:
 
