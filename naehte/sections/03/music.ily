@@ -4471,14 +4471,14 @@ number.3.Cello.Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.Rest_Voice"
+        \context Voice = "Cello.RestVoice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.Rest_Voice measure 18]
+            % [Cello.RestVoice measure 18]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -4567,7 +4567,7 @@ number.3.Cello.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.Rest_Voice"
+        \context Voice = "Cello.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -4577,7 +4577,7 @@ number.3.Cello.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello.Rest_Voice measure 19]
+            % [Cello.RestVoice measure 19]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
