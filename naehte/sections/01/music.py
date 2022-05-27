@@ -80,7 +80,10 @@ commands(
 commands(
     "vc",
     baca.append_phantom_measure(),
-    baca.attach_first_section_default_indicators(),
+    baca.attach_first_section_default_indicators(
+        attach_instruments_by_hand=True,
+    ),
+    baca.instrument(commands.instruments["Cello"]),
 )
 
 # vc

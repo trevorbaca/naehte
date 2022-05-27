@@ -588,9 +588,9 @@ number.1.Cello.MusicVoice = {
           %! baca.hairpin()
         \pp
         % MARKUP:
-          %! DEFAULT_INSTRUMENT_ALERT
+          %! EXPLICIT_INSTRUMENT_ALERT
           %! baca._attach_latent_indicator_alert()
-        ^ \baca-default-indicator-markup "(“Cello”)"
+        ^ \baca-explicit-indicator-markup "(“Cello”)"
         % START_BEAM:
         [
         % SPANNER_STARTS:
