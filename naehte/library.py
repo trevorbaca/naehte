@@ -41,11 +41,6 @@ def make_empty_score():
     cello_music_staff = abjad.Staff(
         [cello_music_voice], name="Cello.Music_Staff", tag=tag
     )
-    abjad.annotate(
-        cello_music_staff,
-        "default_instrument",
-        instruments["Cello"],
-    )
     abjad.annotate(cello_music_staff, "default_clef", abjad.Clef("bass"))
     # SCORE
     music_context = abjad.Context(
