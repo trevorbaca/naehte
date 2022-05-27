@@ -30,14 +30,14 @@ metronome_marks = dict(
 )
 
 
-voice_abbreviations = {"vc": "Cello.Music_Voice"}
+voice_abbreviations = {"vc": "Cello.MusicVoice"}
 
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
     # CELLO
-    cello_music_voice = abjad.Voice(name="Cello.Music_Voice", tag=tag)
+    cello_music_voice = abjad.Voice(name="Cello.MusicVoice", tag=tag)
     cello_music_staff = abjad.Staff(
         [cello_music_voice], name="Cello.Music_Staff", tag=tag
     )

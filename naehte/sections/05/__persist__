@@ -6,13 +6,23 @@
         "Music_Context",
         "Cello.Music_Staff",
         "GlobalRests",
-        "Cello.Music_Voice",
+        "Cello.MusicVoice",
         "Cello.RestVoice",
     ],
     "persistent_indicators": {
+        "Cello.MusicVoice": [
+            baca.Memento(
+                context="Cello.MusicVoice",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            )
+        ],
         "Cello.Music_Staff": [
             baca.Memento(
-                context="Cello.Music_Voice",
+                context="Cello.MusicVoice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -20,23 +30,13 @@
                 value="Cello",
             ),
             baca.Memento(
-                context="Cello.Music_Voice",
+                context="Cello.MusicVoice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
                 value="bass",
             ),
-        ],
-        "Cello.Music_Voice": [
-            baca.Memento(
-                context="Cello.Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="p",
-            )
         ],
         "Score": [
             baca.Memento(
