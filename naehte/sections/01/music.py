@@ -84,6 +84,7 @@ commands(
         attach_instruments_by_hand=True,
     ),
     baca.instrument(commands.instruments["Cello"]),
+    baca.clef("bass"),
 )
 
 # vc
