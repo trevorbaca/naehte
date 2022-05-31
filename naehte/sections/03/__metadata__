@@ -2,6 +2,7 @@
     "bol_measure_numbers": [28, 31, 36, 40, 43],
     "duration": "1'11''",
     "fermata_measure_numbers": [34, 39, 45],
+    "final_measure_is_fermata": True,
     "final_measure_number": 45,
     "first_measure_number": 28,
     "start_clock_time": "1'34''",
