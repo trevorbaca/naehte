@@ -7,7 +7,6 @@
         "Cello.Music_Staff",
         "GlobalRests",
         "Cello.MusicVoice",
-        "Cello.RestVoice",
     ],
     "persistent_indicators": {
         "Cello.MusicVoice": [
