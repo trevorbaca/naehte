@@ -183,11 +183,17 @@ commands(
     baca.make_skeleton("{ c4 c c c }"),
 )
 
-# phantom & reapply
+# anchor notes
 
 commands(
     "vc",
-    baca.append_phantom_measure(),
+    baca.append_anchor_note(),
+)
+
+# reapply
+
+commands(
+    "vc",
     baca.reapply_persistent_indicators(),
 )
 

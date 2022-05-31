@@ -48,7 +48,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'46'']"
+    %@% - \baca-start-ct-left-only "[2'45'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -117,7 +117,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'48'']"
+    %@% - \baca-start-ct-left-only "[2'47'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -163,7 +163,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'50'']"
+    %@% - \baca-start-ct-left-only "[2'49'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -209,7 +209,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'52'']"
+    %@% - \baca-start-ct-left-only "[2'51'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -293,7 +293,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'54'']"
+    %@% - \baca-start-ct-left-only "[2'53'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -330,7 +330,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[2'57'']"
+    %@% - \baca-start-ct-left-only "[2'56'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -386,7 +386,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'00'']"
+    %@% - \baca-start-ct-left-only "[2'59'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -423,7 +423,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'03'']"
+    %@% - \baca-start-ct-left-only "[3'02'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -469,7 +469,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'07'']"
+    %@% - \baca-start-ct-left-only "[3'06'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -584,7 +584,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'11'']"
+    %@% - \baca-start-ct-left-only "[3'10'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -630,7 +630,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'15'']"
+    %@% - \baca-start-ct-left-only "[3'14'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -699,7 +699,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'18'']"
+    %@% - \baca-start-ct-left-only "[3'17'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -745,7 +745,7 @@ number.4.GlobalSkips = {
     % SPANNER_STARTS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'31'']"
+    %@% - \baca-start-ct-left-only "[3'30'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -814,7 +814,7 @@ number.4.GlobalSkips = {
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
-    %@% - \baca-start-ct-left-only "[3'47'']"
+    %@% - \baca-start-ct-both "[3'46'']" "[3'55'']"
       %! CLOCK_TIME
       %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
@@ -845,78 +845,12 @@ number.4.GlobalSkips = {
       %! LOCAL_MEASURE_NUMBER
       %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
-      %! MEASURE_NUMBER
-      %! baca._label_measure_numbers()
-    %@% \bacaStopTextSpanMN
-    % SPANNER_STARTS:
-      %! CLOCK_TIME
-      %! baca._label_clock_time()
-    %@% - \baca-start-ct-both "[3'56'']" "[4'05'']"
-      %! CLOCK_TIME
-      %! baca._label_clock_time()
-    %@% \bacaStartTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-      %! baca._label_measure_numbers()
-    - \baca-start-lmn-left-only "16"
-      %! LOCAL_MEASURE_NUMBER
-      %! baca._label_measure_numbers()
-    \bacaStartTextSpanLMN
-      %! MEASURE_NUMBER
-      %! baca._label_measure_numbers()
-    %@% - \baca-start-mn-left-only "61"
-      %! MEASURE_NUMBER
-      %! baca._label_measure_numbers()
-    %@% \bacaStartTextSpanMN
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! PHANTOM
-      %! baca._comment_measure_numbers()
-      %! baca._style_phantom_measures(1)
-    % [GlobalSkips measure 17]
-    % OPENING:
-    % COMMANDS:
-      %! PHANTOM
-      %! baca._style_phantom_measures(2)
-    \baca-time-signature-transparent
-      %! EXPLICIT_TIME_SIGNATURE
-      %! PHANTOM
-      %! baca._make_global_skips(3)
-      %! baca._set_status_tag()
-      %! baca._style_phantom_measures(1)
-    \time 1/4
-      %! PHANTOM
-      %! baca._make_global_skips(3)
-    s1 * 1/4
-    % AFTER:
-    % SPANNER_STOPS:
-      %! CLOCK_TIME
-      %! PHANTOM
-      %! baca._label_clock_time()
-      %! baca._style_phantom_measures(1)
-    %@% \bacaStopTextSpanCT
-      %! LOCAL_MEASURE_NUMBER
-      %! PHANTOM
-      %! baca._label_measure_numbers()
-      %! baca._style_phantom_measures(1)
-    \bacaStopTextSpanLMN
       %! EOS_STOP_MM_SPANNER
-      %! PHANTOM
       %! baca._attach_metronome_marks(4)
-      %! baca._style_phantom_measures(1)
     \bacaStopTextSpanMM
       %! MEASURE_NUMBER
-      %! PHANTOM
       %! baca._label_measure_numbers()
-      %! baca._style_phantom_measures(1)
     %@% \bacaStopTextSpanMN
-    % COMMANDS:
-      %! PHANTOM
-      %! baca._style_phantom_measures(3)
-    \once \override Score.BarLine.transparent = ##t
-      %! PHANTOM
-      %! baca._style_phantom_measures(3)
-    \once \override Score.SpanBar.transparent = ##t
     % CLOSING:
     % COMMANDS:
 
@@ -1050,16 +984,6 @@ number.4.GlobalRests = {
     % [GlobalRests measure 16]
       %! baca._make_global_rests(1)
     R1 * 2
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! PHANTOM
-      %! baca._comment_measure_numbers()
-      %! baca._style_phantom_measures(4)
-    % [GlobalRests measure 17]
-      %! PHANTOM
-      %! baca._make_global_rests(2)
-    R1 * 1/4
     % CLOSING:
     % COMMANDS:
 
@@ -4394,130 +4318,6 @@ number.4.Cello.MusicVoice = {
     % CLOSE_BRACKETS:
       %! baca.make_skeleton()
     }
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! PHANTOM
-      %! baca._make_multimeasure_rest_container(7)
-    <<
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello.MusicVoice"
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(4)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! PHANTOM
-              %! baca._comment_measure_numbers()
-              %! baca._style_phantom_measures(5)
-            % [Cello.MusicVoice measure 17]
-            % BEFORE:
-            % COMMANDS:
-              %! INVISIBLE_MUSIC_COMMAND
-              %! NOTE
-              %! PHANTOM
-              %! baca._make_multimeasure_rest_container(3)
-              %! baca._style_phantom_measures(5)
-            %@% \abjad-invisible-music
-              %! INVISIBLE_MUSIC_COLORING
-              %! NOTE
-              %! PHANTOM
-              %! baca._make_multimeasure_rest_container(2)
-              %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
-            % GROB_OVERRIDES:
-            \once \override Accidental.stencil = ##f
-            \once \override NoteColumn.ignore-collision = ##t
-              %! HIDDEN
-              %! NOTE
-              %! PHANTOM
-              %! baca._make_multimeasure_rest_container(1)
-            d1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! PHANTOM
-              %! baca._label_duration_multipliers()
-              %! baca._style_phantom_measures(5)
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(4)
-        }
-        % ABSOLUTE_BEFORE:
-        % COMMANDS:
-
-        % OPEN_BRACKETS:
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.RestVoice"
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(6)
-        {
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-
-              %! PHANTOM
-              %! baca._comment_measure_numbers()
-              %! baca._style_phantom_measures(5)
-            % [Cello.RestVoice measure 17]
-            % OPENING:
-            % COMMANDS:
-              %! PHANTOM
-              %! baca._style_phantom_measures(7)
-            \once \override MultiMeasureRest.transparent = ##t
-              %! PHANTOM
-              %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-              %! PHANTOM
-              %! baca._style_phantom_measures(8)
-            \stopStaff
-              %! PHANTOM
-              %! baca._style_phantom_measures(8)
-            \once \override Staff.StaffSymbol.transparent = ##t
-              %! PHANTOM
-              %! baca._style_phantom_measures(8)
-            \startStaff
-              %! MULTIMEASURE_REST
-              %! PHANTOM
-              %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
-            R1 * 1/4
-            % AFTER:
-            % MARKUP:
-              %! DURATION_MULTIPLIER
-              %! MULTIMEASURE_REST
-              %! PHANTOM
-              %! REST_VOICE
-              %! baca._label_duration_multipliers()
-              %! baca._style_phantom_measures(5)
-            %@% ^ \baca-duration-multiplier-markup #"1" #"4"
-            % CLOSING:
-            % COMMANDS:
-
-        % CLOSE_BRACKETS:
-          %! PHANTOM
-          %! baca._make_multimeasure_rest_container(6)
-        }
-        % CLOSING:
-        % COMMANDS:
-
-    % CLOSE_BRACKETS:
-      %! PHANTOM
-      %! baca._make_multimeasure_rest_container(7)
-    >>
     % CLOSING:
     % COMMANDS:
 

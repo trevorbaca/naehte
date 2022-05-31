@@ -171,11 +171,10 @@ commands(
     baca.make_mmrests(),
 )
 
-# phantom & reapply
+# reapply
 
 commands(
     "vc",
-    baca.append_phantom_measure(),
     baca.reapply_persistent_indicators(),
 )
 

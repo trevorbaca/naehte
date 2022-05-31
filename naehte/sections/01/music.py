@@ -75,19 +75,19 @@ commands(
     baca.make_skeleton("{" r" c2... r16" " }"),
 )
 
-# phantom & reapply
+# anchor notes
 
 commands(
     "vc",
-    baca.append_phantom_measure(),
-    baca.instrument(commands.instruments["Cello"]),
-    baca.clef("bass"),
+    baca.append_anchor_note(),
 )
 
 # vc
 
 commands(
     ("vc", 1),
+    baca.instrument(commands.instruments["Cello"]),
+    baca.clef("bass"),
     baca.suite(
         baca.new(
             baca.repeat_tie(

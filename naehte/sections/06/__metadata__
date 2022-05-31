@@ -1,12 +1,11 @@
 {
     "bol_measure_numbers": [74, 77, 80, 84],
-    "duration": "1'04''",
+    "duration": "1'03''",
     "fermata_measure_numbers": [81, 86, 88],
-    "final_measure_is_fermata": True,
     "final_measure_number": 88,
     "first_measure_number": 74,
-    "start_clock_time": "5'04''",
-    "stop_clock_time": "6'08''",
+    "start_clock_time": "5'02''",
+    "stop_clock_time": "6'05''",
     "time_signatures": [
         "4/4",
         "4/4",
