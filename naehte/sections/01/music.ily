@@ -552,7 +552,7 @@ number.1.Cello.MusicVoice = {
         \override TupletBracket.staff-padding = 1
           %! -PARTS
           %! baca.IndicatorCommand._call()
-          %! baca.start_markup()
+          %! baca.instrument_name()
         \set Staff.instrumentName = \markup \hcenter-in #10 "Cello"
         % OPENING:
         % COMMANDS:

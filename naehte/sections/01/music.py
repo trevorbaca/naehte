@@ -103,7 +103,7 @@ commands(
             zero_padding=True,
         ),
     ),
-    baca.start_markup(
+    baca.instrument_name(
         "Cello",
         hcenter_in=10,
     ),
@@ -349,7 +349,7 @@ if __name__ == "__main__":
         **baca.score_interpretation_defaults(),
         activate=(baca.tags.LOCAL_MEASURE_NUMBER,),
         always_make_global_rests=True,
-        do_not_require_margin_markup=True,
+        do_not_require_short_instrument_names=True,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
     )
