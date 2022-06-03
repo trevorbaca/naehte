@@ -2,10 +2,10 @@
     "alive_during_section": [
         "Score",
         "GlobalContext",
-        "GlobalSkips",
+        "Skips",
         "MusicContext",
         "Cello.Music_Staff",
-        "GlobalRests",
+        "Rests",
         "Cello.Music",
     ],
     "persistent_indicators": {
@@ -39,7 +39,7 @@
         ],
         "Score": [
             baca.Memento(
-                context="GlobalSkips",
+                context="Skips",
                 edition=None,
                 manifest="metronome_marks",
                 prototype=None,
@@ -47,7 +47,7 @@
                 value="117",
             ),
             baca.Memento(
-                context="GlobalSkips",
+                context="Skips",
                 edition=None,
                 manifest=None,
                 prototype="abjad.TimeSignature",
