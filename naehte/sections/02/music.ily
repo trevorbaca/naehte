@@ -1247,7 +1247,7 @@ number.2.GlobalRests = {
 
 
   %! baca.path.extern()
-number.2.Cello.MusicVoice = {
+number.2.Cello.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1258,7 +1258,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 1]
+        % [Cello.Music measure 1]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1557,7 +1557,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 2]
+        % [Cello.Music measure 2]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1848,7 +1848,7 @@ number.2.Cello.MusicVoice = {
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.MusicVoice measure 3]
+            % [Cello.Music measure 3]
             % BEFORE:
             % COMMANDS:
               %! baca.OverrideCommand._call(1)
@@ -2248,7 +2248,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 5]
+        % [Cello.Music measure 5]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -2417,7 +2417,7 @@ number.2.Cello.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello.MusicVoice measure 6]
+    % [Cello.Music measure 6]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2448,7 +2448,7 @@ number.2.Cello.MusicVoice = {
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.MusicVoice measure 7]
+            % [Cello.Music measure 7]
             % BEFORE:
             % COMMANDS:
               %! baca.OverrideCommand._call(1)
@@ -2800,14 +2800,14 @@ number.2.Cello.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello.MusicVoice"
+        \context Voice = "Cello.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.MusicVoice measure 8]
+            % [Cello.Music measure 8]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2852,14 +2852,14 @@ number.2.Cello.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.RestVoice"
+        \context Voice = "Cello.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.RestVoice measure 8]
+            % [Cello.Rests measure 8]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2893,7 +2893,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 9]
+        % [Cello.Music measure 9]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_17
@@ -3096,14 +3096,14 @@ number.2.Cello.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello.MusicVoice"
+        \context Voice = "Cello.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.MusicVoice measure 10]
+            % [Cello.Music measure 10]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -3159,14 +3159,14 @@ number.2.Cello.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.RestVoice"
+        \context Voice = "Cello.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.RestVoice measure 10]
+            % [Cello.Rests measure 10]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -3200,7 +3200,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 11]
+        % [Cello.Music measure 11]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_19
@@ -3327,7 +3327,7 @@ number.2.Cello.MusicVoice = {
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.MusicVoice measure 12]
+            % [Cello.Music measure 12]
             <c' g'>4
             % AFTER:
             % ARTICULATIONS:
@@ -3465,7 +3465,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 13]
+        % [Cello.Music measure 13]
         <bf! f'>2
         % AFTER:
         % ARTICULATIONS:
@@ -3545,7 +3545,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 14]
+        % [Cello.Music measure 14]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -3848,7 +3848,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 15]
+        % [Cello.Music measure 15]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -4006,7 +4006,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 16]
+        % [Cello.Music measure 16]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -4042,7 +4042,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 17]
+        % [Cello.Music measure 17]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -4109,7 +4109,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 18]
+        % [Cello.Music measure 18]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -4233,7 +4233,7 @@ number.2.Cello.MusicVoice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello.MusicVoice measure 19]
+        % [Cello.Music measure 19]
           %! baca.make_skeleton()
         e,4
         % AFTER:
@@ -4329,7 +4329,7 @@ number.2.Cello.MusicVoice = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Cello.MusicVoice measure 20]
+    % [Cello.Music measure 20]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -4408,10 +4408,10 @@ number.2.Cello.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! naehte.make_empty_score()
-    \context Voice = "Cello.MusicVoice"
+    \context Voice = "Cello.Music"
       %! naehte.make_empty_score()
       %! baca.path.extern()
-    { \number.2.Cello.MusicVoice }
+    { \number.2.Cello.Music }
     % CLOSING:
     % COMMANDS:
 
