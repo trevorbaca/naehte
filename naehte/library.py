@@ -25,7 +25,7 @@ def make_empty_score():
     music_context = abjad.Context(
         [cello_music_staff],
         lilypond_type="MusicContext",
-        name="Music_Context",
+        name="MusicContext",
         tag=tag,
     )
     score = abjad.Score([global_context, music_context], name="Score", tag=tag)
