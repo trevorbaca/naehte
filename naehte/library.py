@@ -18,7 +18,7 @@ def instruments():
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
-    cello_music_voice = abjad.Voice(name="Cello.MusicVoice", tag=tag)
+    cello_music_voice = abjad.Voice(name="Cello.Music", tag=tag)
     cello_music_staff = abjad.Staff(
         [cello_music_voice], name="Cello.Music_Staff", tag=tag
     )
@@ -47,4 +47,4 @@ def metronome_marks():
 
 
 def voice_abbreviations():
-    return {"vc": "Cello.MusicVoice"}
+    return {"vc": "Cello.Music"}
