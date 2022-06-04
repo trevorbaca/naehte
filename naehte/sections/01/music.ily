@@ -553,7 +553,7 @@ number.1.Cello.Music = {
           %! -PARTS
           %! baca.IndicatorCommand._call()
           %! baca.instrument_name()
-        \set Staff.instrumentName = \markup \hcenter-in #10 "Cello"
+        \set Staff.instrumentName = \naehte-cello-markup
         % OPENING:
         % COMMANDS:
           %! EXPLICIT_CLEF
