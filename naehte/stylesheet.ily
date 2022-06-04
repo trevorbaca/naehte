@@ -214,7 +214,9 @@
     }
 }
 
-%%% MARKUP
+% MARKUP
+
+naehte-cello-markup = \markup \hcenter-in #10 Cello
 
 naehte-colophon-markup = \markup
   \override #'(font-name . "Palatino")
@@ -226,8 +228,3 @@ naehte-colophon-markup = \markup
     }
 
 naehte-degrees-of-ponticello-markup = \baca-boxed-markup \markup "degrees of ponticello"
-
-%%% MARGIN MARKUP %%%
-
-naehte-cello-markup = \markup { \hcenter-in #14 "Cello" }
-naehte-vc-markup = \markup { \hcenter-in #12 "Vc." }

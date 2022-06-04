@@ -86,6 +86,7 @@ commands(
 commands(
     ("vc", 1),
     baca.instrument(commands.instruments["Cello"]),
+    baca.instrument_name(r"\naehte-cello-markup"),
     baca.clef("bass"),
     baca.suite(
         baca.new(
@@ -102,10 +103,6 @@ commands(
             selector=lambda _: baca.select.leaves(_),
             zero_padding=True,
         ),
-    ),
-    baca.instrument_name(
-        "Cello",
-        hcenter_in=10,
     ),
     baca.dls_staff_padding(7),
     baca.hairpin(
