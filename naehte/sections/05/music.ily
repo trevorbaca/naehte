@@ -864,7 +864,7 @@ number.5.Cello.Music = {
             % MARKUP:
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
-            ^ \baca-reapplied-indicator-markup "(“Cello”)"
+            ^ \baca-reapplied-instrument-markup "(“Cello”)"
             % START_BEAM:
             [
             % SPANNER_STARTS:
