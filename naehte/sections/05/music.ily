@@ -76,7 +76,7 @@ number.5.Skips = {
       %! baca._set_status_tag()
     \time 8/4
       %! baca._make_global_skips(1)
-    s1 * 2
+    s1 * 8/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -122,7 +122,7 @@ number.5.Skips = {
       %! baca._set_status_tag()
     \time 10/4
       %! baca._make_global_skips(1)
-    s1 * 5/2
+    s1 * 10/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -441,7 +441,7 @@ number.5.Skips = {
       %! baca._set_status_tag()
     \time 4/8
       %! baca._make_global_skips(1)
-    s1 * 1/2
+    s1 * 4/8
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -612,7 +612,7 @@ number.5.Skips = {
       %! baca._set_status_tag()
     \time 4/8
       %! baca._make_global_skips(1)
-    s1 * 1/2
+    s1 * 4/8
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -649,7 +649,7 @@ number.5.Skips = {
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_skip(1)
-    % [Skips measure 13]
+    % [anchor skip]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
@@ -716,14 +716,14 @@ number.5.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 2]
       %! baca._make_global_rests(1)
-    R1 * 2
+    R1 * 8/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Rests measure 3]
       %! baca._make_global_rests(1)
-    R1 * 5/2
+    R1 * 10/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -765,7 +765,7 @@ number.5.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 9]
       %! baca._make_global_rests(1)
-    R1 * 1/2
+    R1 * 4/8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -796,7 +796,7 @@ number.5.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 12]
       %! baca._make_global_rests(1)
-    R1 * 1/2
+    R1 * 4/8
     % CLOSING:
     % COMMANDS:
 
@@ -3016,7 +3016,7 @@ number.5.Cello.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Cello.Music measure 13]
+    % [Cello.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
