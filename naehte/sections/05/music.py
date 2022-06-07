@@ -59,7 +59,7 @@ commands(
     baca.close_volta(lambda _: baca.select.skip(_, 10 - 1)),
 )
 
-baca.commands._open_volta(skips[7 - 1], commands.first_measure_number)
+baca.open_volta(skips[7 - 1], commands.first_measure_number)
 
 commands(
     "Rests",
