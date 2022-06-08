@@ -45,10 +45,7 @@ for index, item in ((1 - 1, "117"),):
     indicator = commands.metronome_marks.get(item, item)
     baca.commands._metronome_mark(skip, indicator, manifests)
 
-commands(
-    "Skips",
-    baca.text_spanner_staff_padding(10),
-)
+baca.text_spanner_staff_padding_function(skips[:-1], 10)
 
 # VC
 
