@@ -1116,15 +1116,13 @@ number.2.Rests = {
     % [Rests measure 6]
     % OPENING:
     % COMMANDS:
-      %! baca.GlobalFermataCommand._call(2)
-      %! baca.global_fermata()
+      %! baca._global_fermata(2)
     \baca-fermata-measure
       %! baca._make_global_rests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
-      %! baca.GlobalFermataCommand._call(1)
-      %! baca.global_fermata()
+      %! baca._global_fermata(1)
     ^ \baca-fermata-markup
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1140,15 +1138,13 @@ number.2.Rests = {
     % [Rests measure 8]
     % OPENING:
     % COMMANDS:
-      %! baca.GlobalFermataCommand._call(2)
-      %! baca.global_fermata()
+      %! baca._global_fermata(2)
     \baca-fermata-measure
       %! baca._make_global_rests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
-      %! baca.GlobalFermataCommand._call(1)
-      %! baca.global_fermata()
+      %! baca._global_fermata(1)
     ^ \baca-fermata-markup
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1164,15 +1160,13 @@ number.2.Rests = {
     % [Rests measure 10]
     % OPENING:
     % COMMANDS:
-      %! baca.GlobalFermataCommand._call(2)
-      %! baca.global_fermata()
+      %! baca._global_fermata(2)
     \baca-fermata-measure
       %! baca._make_global_rests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
-      %! baca.GlobalFermataCommand._call(1)
-      %! baca.global_fermata()
+      %! baca._global_fermata(1)
     ^ \baca-fermata-markup
     % ABSOLUTE_BEFORE:
     % COMMANDS:

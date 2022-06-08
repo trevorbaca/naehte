@@ -478,13 +478,12 @@ number.5.Skips = {
     % [Skips measure 10]
     % BEFORE:
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
-      %! baca.bar_line_command()
+      %! baca.bar_line()
     \bar ":|."
       %! MEASURE_71
       %! ONLY_MOL
-      %! baca.OverrideCommand._call(1)
-      %! baca.bar_line_x_extent_command()
+      %! baca.bar_line_x_extent(1)
+      %! baca.close_volta()
 %%% \once \override Score.BarLine.X-extent = #'(0 . 1.5)
     % OPENING:
     % COMMANDS:
@@ -779,15 +778,13 @@ number.5.Rests = {
     % [Rests measure 11]
     % OPENING:
     % COMMANDS:
-      %! baca.GlobalFermataCommand._call(2)
-      %! baca.global_fermata()
+      %! baca._global_fermata(2)
     \baca-fermata-measure
       %! baca._make_global_rests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
-      %! baca.GlobalFermataCommand._call(1)
-      %! baca.global_fermata()
+      %! baca._global_fermata(1)
     ^ \baca-fermata-markup
     % ABSOLUTE_BEFORE:
     % COMMANDS:
