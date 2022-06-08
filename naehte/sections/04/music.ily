@@ -2914,7 +2914,7 @@ number.4.Cello.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.Music measure 10]
-      %! baca._make_mmrests_flat()
+      %! baca.make_mmrests_function()
     R1 * 1/4
     % AFTER:
     % MARKUP:

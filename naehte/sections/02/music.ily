@@ -2417,7 +2417,7 @@ number.2.Cello.Music = {
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
     \override DynamicLineSpanner.staff-padding = 9
-      %! baca._make_mmrests_flat()
+      %! baca.make_mmrests_function()
     R1 * 1/4
     % AFTER:
     % MARKUP:

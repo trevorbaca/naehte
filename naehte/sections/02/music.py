@@ -101,7 +101,7 @@ commands(
 
 commands(
     ("vc", 6),
-    baca.make_mmrests_flat(),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -111,7 +111,7 @@ commands(
 
 commands(
     ("vc", 8),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
@@ -121,7 +121,7 @@ commands(
 
 commands(
     ("vc", 10),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
