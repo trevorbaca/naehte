@@ -7,8 +7,7 @@ number.1.Skips = {
     % [Skips measure 1]
     % BEFORE:
     % COMMANDS:
-      %! baca.OverrideCommand._call(1)
-      %! baca.text_spanner_staff_padding()
+      %! baca.text_spanner_staff_padding_function(1)
     \override TextSpanner.staff-padding = 10
     % OPENING:
     % COMMANDS:
@@ -385,8 +384,7 @@ number.1.Skips = {
       %! baca._label_measure_numbers()
     %@% \bacaStartTextSpanMN
     % COMMANDS:
-      %! baca.OverrideCommand._call(2)
-      %! baca.text_spanner_staff_padding()
+      %! baca.text_spanner_staff_padding_function(2)
     \revert TextSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
