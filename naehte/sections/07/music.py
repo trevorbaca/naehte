@@ -158,7 +158,7 @@ commands(
 
 commands(
     ("vc", 14),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # reapply

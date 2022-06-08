@@ -115,7 +115,7 @@ commands(
 
 commands(
     ("vc", 11),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
