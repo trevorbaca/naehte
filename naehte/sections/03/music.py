@@ -46,11 +46,6 @@ baca.interpret.set_up_score(
     attach_nonfirst_empty_start_bar=True,
 )
 
-commands(
-    "Skips",
-    baca.close_volta(lambda _: baca.select.skip(_, 3 - 1)),
-)
-
 skips = score["Skips"]
 manifests = commands.manifests()
 
@@ -67,6 +62,7 @@ for index, item in (
     baca.commands._metronome_mark(skip, indicator, manifests)
 
 baca.open_volta(skips[1 - 1], commands.first_measure_number)
+baca.close_volta(skips[3 - 1], commands.first_measure_number)
 
 commands(
     "Rests",
