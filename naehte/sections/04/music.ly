@@ -74,10 +74,10 @@
 
                 % OPEN_BRACKETS:
                   %! naehte.make_empty_score()
-                \context Staff = "Cello.Music_Staff"
+                \context Staff = "Cello.Staff"
                   %! naehte.make_empty_score()
                   %! baca.path.extern()
-                { \number.4.Cello.Music_Staff }
+                { \number.4.Cello.Staff }
                 % CLOSING:
                 % COMMANDS:
 

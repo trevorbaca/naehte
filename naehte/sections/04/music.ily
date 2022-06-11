@@ -4324,7 +4324,7 @@ number.4.Cello.Music = {
 
 
   %! baca.path.extern()
-number.4.Cello.Music_Staff = <<
+number.4.Cello.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
