@@ -4,7 +4,7 @@
         "GlobalContext",
         "Skips",
         "MusicContext",
-        "Cello.Music_Staff",
+        "Cello.Staff",
         "Rests",
         "Cello.Music",
     ],
@@ -19,7 +19,7 @@
                 value="niente",
             )
         ],
-        "Cello.Music_Staff": [
+        "Cello.Staff": [
             baca.Memento(
                 context="Cello.Music",
                 edition=None,
