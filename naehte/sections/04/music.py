@@ -67,91 +67,77 @@ for index, string in ((10 - 1, "fermata"),):
 
 # VC
 
-commands(
-    ("vc", 1),
-    baca.make_skeleton(r"{ c8 c4. c8 }"),
-)
+voice = score["Cello.Music"]
 
-commands(
-    ("vc", 2),
-    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
-)
+# 1
+music = baca.make_skeleton_function(r"{ c8 c4. c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 3),
-    baca.make_skeleton(
-        r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
-    ),
-)
+# 2
+music = baca.make_skeleton_function(r"\times 6/7 { c2. c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 4),
-    baca.make_skeleton(
-        "{" r" \times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" { c2. c8 } }" " }"
-    ),
+# 3
+music = baca.make_skeleton_function(
+    r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 5),
-    baca.make_skeleton(r"{ c2 c32 [ c c c ] }"),
+# 4
+music = baca.make_skeleton_function(
+    "{" r" \times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" { c2. c8 } }" " }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 6),
-    baca.make_skeleton(r"{ c2 c8 }"),
-)
+# 5
+music = baca.make_skeleton_function(r"{ c2 c32 [ c c c ] }")
+voice.extend(music)
 
-commands(
-    ("vc", (7, 8)),
-    baca.make_skeleton(
-        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
-    ),
-)
+# 6
+music = baca.make_skeleton_function(r"{ c2 c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 9),
-    baca.make_skeleton("{ c4.. c16 }"),
+# (7, 8)
+music = baca.make_skeleton_function(
+    "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 10),
-    baca.make_mmrests(),
-)
+# 9
+music = baca.make_skeleton_function("{ c4.. c16 }")
+voice.extend(music)
 
-commands(
-    ("vc", 11),
-    baca.make_skeleton(
-        "{"
-        r" \times 4/5 { c16 [ c c c c ] }"
-        r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
-        " }"
-    ),
-)
+music = baca.make_mmrests_function(commands.get(10))
+voice.extend(music)
 
-commands(
-    ("vc", 12),
-    baca.make_skeleton("{ c4 c c c }"),
+# 11
+music = baca.make_skeleton_function(
+    "{"
+    r" \times 4/5 { c16 [ c c c c ] }"
+    r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
+    " }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 13),
-    baca.make_skeleton("{ c4 c c c c c c c c }"),
-)
+# 12
+music = baca.make_skeleton_function("{ c4 c c c }")
+voice.extend(music)
 
-commands(
-    ("vc", 14),
-    baca.make_skeleton("{ c4 c c c c c c c c c }"),
-)
+# 13
+music = baca.make_skeleton_function("{ c4 c c c c c c c c }")
+voice.extend(music)
 
-commands(
-    ("vc", 15),
-    baca.make_skeleton(r"{ c4 c2.. c }"),
-)
+# 14
+music = baca.make_skeleton_function("{ c4 c c c c c c c c c }")
+voice.extend(music)
 
-commands(
-    ("vc", 16),
-    baca.make_skeleton(r"{ c1 c2... r16 }"),
-)
+# 15
+music = baca.make_skeleton_function(r"{ c4 c2.. c }")
+voice.extend(music)
+
+# 16
+music = baca.make_skeleton_function(r"{ c1 c2... r16 }")
+voice.extend(music)
 
 # reapply
 

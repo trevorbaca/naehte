@@ -2788,7 +2788,6 @@ number.6.Cello.Music = {
         - \tweak stencil ##f
           %! baca._attach_shadow_tie_indicators()
         ~
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:
@@ -2835,7 +2834,6 @@ number.6.Cello.Music = {
           %! abjad.glissando(7)
           %! baca.finger_pressure_transition()
         \glissando
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % CLOSING:
@@ -3127,8 +3125,7 @@ number.6.Cello.Music = {
 
         % BEFORE:
         % COMMANDS:
-          %! baca.OverrideCommand._call(1)
-          %! baca.repeat_tie_extra_offset()
+          %! baca.repeat_tie_extra_offset_function(1)
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
           %! baca.make_skeleton()
         ds8
@@ -3178,7 +3175,6 @@ number.6.Cello.Music = {
         - \tweak stencil ##f
           %! baca._attach_shadow_tie_indicators()
         ~
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % CLOSING:

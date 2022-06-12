@@ -1596,7 +1596,6 @@ number.7.Cello.Music = {
           %! baca._set_status_tag()
           %! baca.hairpin()
         \>
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % CLOSING:
@@ -2040,8 +2039,7 @@ number.7.Cello.Music = {
 
         % BEFORE:
         % COMMANDS:
-          %! baca.OverrideCommand._call(1)
-          %! baca.repeat_tie_extra_offset()
+          %! baca.repeat_tie_extra_offset_function(1)
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
           %! baca.make_skeleton()
         ef,8
@@ -2091,7 +2089,6 @@ number.7.Cello.Music = {
           %! baca.PiecewiseCommand._call(2)
           %! baca.text_spanner()
         \startTextSpan
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % COMMANDS:
@@ -2595,8 +2592,7 @@ number.7.Cello.Music = {
 
         % BEFORE:
         % COMMANDS:
-          %! baca.OverrideCommand._call(1)
-          %! baca.repeat_tie_extra_offset()
+          %! baca.repeat_tie_extra_offset_function(1)
         \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
           %! baca.make_skeleton()
         ds8
@@ -2646,7 +2642,6 @@ number.7.Cello.Music = {
         - \tweak stencil ##f
           %! baca._attach_shadow_tie_indicators()
         ~
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % CLOSING:
