@@ -49,41 +49,37 @@ baca.text_spanner_staff_padding_function(skips[:-1], 10)
 
 # VC
 
-commands(
-    ("vc", 1),
-    baca.make_skeleton(
-        r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
-    ),
-)
+voice = score["Cello.Music"]
 
-commands(
-    ("vc", 2),
-    baca.make_skeleton(r"\times 6/7 { c2. c8 }"),
+# 1
+music = baca.make_skeleton_function(
+    r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 3),
-    baca.make_skeleton(
-        r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
-    ),
-)
+# 2
+music = baca.make_skeleton_function(r"\times 6/7 { c2. c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 4),
-    baca.make_skeleton(
-        r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" c2 \times 3/4 { c8 c4. } }"
-    ),
+# 3
+music = baca.make_skeleton_function(
+    r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", (5, 7)),
-    baca.make_skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }"),
+# 4
+music = baca.make_skeleton_function(
+    r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" c2 \times 3/4 { c8 c4. } }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 8),
-    baca.make_skeleton("{" r" c2... r16" " }"),
-)
+# (5, 7)
+music = baca.make_skeleton_function("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
+voice.extend(music)
+
+# 8
+music = baca.make_skeleton_function("{" r" c2... r16" " }")
+voice.extend(music)
 
 # anchor notes
 

@@ -68,98 +68,72 @@ for index, string in ((14 - 1, "fermata"),):
 
 # VC
 
-commands(
-    ("vc", 1),
-    baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"),
-)
+voice = score["Cello.Music"]
 
-commands(
-    ("vc", 2),
-    baca.make_skeleton("{ c1 c4 }"),
+# 1
+music = baca.make_skeleton_function(
+    "{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"
 )
+voice.extend(music)
 
-commands(
-    ("vc", 3),
-    baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
-        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
-    ),
-)
+# 2
+music = baca.make_skeleton_function("{ c1 c4 }")
+voice.extend(music)
 
-commands(
-    ("vc", 4),
-    baca.make_skeleton("{ c4 c8 }"),
-)
+# 3
+music = baca.make_skeleton_function("{ c4 c8 }")
+leaf = abjad.select.leaf(music, -1)
+baca.repeat_tie_function(leaf)
+voice.extend(music)
 
-commands(
-    ("vc", 5),
-    baca.make_skeleton("{ c4 c8 }"),
-)
+# 4
+music = baca.make_skeleton_function("{ c4 c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 6),
-    baca.make_skeleton("{ c2.. c8 }"),
-    baca.new(
-        baca.repeat_tie_extra_offset((-1.5, 0)),
-        baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, 0),
-        ),
-        selector=lambda _: abjad.select.leaf(_, -1),
-    ),
-)
+# 5
+music = baca.make_skeleton_function("{ c4 c8 }")
+voice.extend(music)
 
-commands(
-    ("vc", 7),
-    baca.make_skeleton(
-        r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
-    ),
-)
+# 6
+music = baca.make_skeleton_function("{ c2.. c8 }")
+leaf = abjad.select.leaf(music, -1)
+baca.repeat_tie_extra_offset_function(leaf, (-1.5, 0))
+baca.repeat_tie_function(leaf)
+voice.extend(music)
 
-commands(
-    ("vc", 8),
-    baca.make_skeleton(
-        r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
-    ),
-)
+# 7
+music = baca.make_skeleton_function(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
+voice.extend(music)
 
-commands(
-    ("vc", 9),
-    baca.suite(
-        baca.make_skeleton("{ c4 c8 }"),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            selector=lambda _: abjad.select.leaf(_, -1),
-        ),
-    ),
-)
+# 8
+music = baca.make_skeleton_function(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
+voice.extend(music)
 
-commands(
-    ("vc", 10),
-    baca.make_skeleton("{ c4 c4. }"),
-)
+# 9
+music = baca.make_skeleton_function("{ c4 c8 }")
+leaf = abjad.select.leaf(music, -1)
+baca.repeat_tie_extra_offset_function(leaf, (-1.5, 0))
+baca.repeat_tie_function(leaf)
+voice.extend(music)
 
-commands(
-    ("vc", 11),
-    baca.make_skeleton(r"\times 7/6 { c2. c2 c4 }"),
-)
+# 10
+music = baca.make_skeleton_function("{ c4 c4. }")
+voice.extend(music)
 
-commands(
-    ("vc", 12),
-    baca.make_skeleton(r"{ c4 c c c c c c c c c }"),
-)
+# 11
+music = baca.make_skeleton_function(r"\times 7/6 { c2. c2 c4 }")
+voice.extend(music)
 
-commands(
-    ("vc", 13),
-    baca.make_skeleton(r"{ c4 c c c c c c c c c c }"),
-)
+# 12
+music = baca.make_skeleton_function(r"{ c4 c c c c c c c c c }")
+voice.extend(music)
 
-commands(
-    ("vc", 14),
-    baca.make_mmrests(head=True),
-)
+# 13
+music = baca.make_skeleton_function(r"{ c4 c c c c c c c c c c }")
+voice.extend(music)
+
+music = baca.make_mmrests_function(commands.get(14), head=voice.name)
+voice.extend(music)
 
 # reapply
 
