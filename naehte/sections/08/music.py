@@ -84,9 +84,7 @@ music = baca.make_mmrests(commands.get(4), head=voice.name)
 voice.extend(music)
 
 # 5
-music = baca.make_skeleton(
-    "{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"
-)
+music = baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
 voice.extend(music)
 
 # 6

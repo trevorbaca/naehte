@@ -71,9 +71,7 @@ for index, string in ((14 - 1, "fermata"),):
 voice = score["Cello.Music"]
 
 # 1
-music = baca.make_skeleton(
-    "{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }"
-)
+music = baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
 voice.extend(music)
 
 # 2

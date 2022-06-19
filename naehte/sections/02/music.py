@@ -101,9 +101,7 @@ music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 # 7
-music = baca.make_skeleton(
-    "{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }"
-)
+music = baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }")
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(8), head=voice.name)
