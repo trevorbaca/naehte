@@ -107,7 +107,7 @@ voice.extend(music)
 music = baca.make_skeleton_function("{ c4.. c16 }")
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(10))
+music = baca.make_mmrests(commands.get(10))
 voice.extend(music)
 
 # 11
