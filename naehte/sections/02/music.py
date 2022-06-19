@@ -97,7 +97,7 @@ voice.extend(music)
 music = baca.make_skeleton_function("{ c4.. c16 }")
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6))
+music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 # 7
@@ -106,14 +106,14 @@ music = baca.make_skeleton_function(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(8), head=voice.name)
+music = baca.make_mmrests(commands.get(8), head=voice.name)
 voice.extend(music)
 
 # 9
 music = baca.make_skeleton_function("{ c4 c c c c c c c c c }")
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(10), head=voice.name)
+music = baca.make_mmrests(commands.get(10), head=voice.name)
 voice.extend(music)
 
 # (11, 13)
