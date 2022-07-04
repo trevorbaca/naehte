@@ -311,7 +311,7 @@ commands(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_pitches("Eb3", "Eb3"),
+        baca.interpolate_pitches("Eb3", "Eb3", allow_hidden=True),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(

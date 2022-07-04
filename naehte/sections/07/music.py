@@ -464,7 +464,7 @@ commands(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_pitches("D2", "D2"),
+        baca.interpolate_pitches("D2", "D2", allow_hidden=True),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(

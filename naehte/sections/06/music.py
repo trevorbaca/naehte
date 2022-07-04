@@ -448,7 +448,7 @@ commands(
             allow_repeats=True,
             zero_padding=True,
         ),
-        baca.interpolate_pitches("E3", "E3"),
+        baca.interpolate_pitches("E3", "E3", allow_hidden=True),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
