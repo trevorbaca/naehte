@@ -10,7 +10,7 @@ from naehte import library
 score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
-commands = baca.CommandAccumulator(
+accumulator = baca.CommandAccumulator(
     instruments=library.instruments(),
     metronome_marks=library.metronome_marks(),
     time_signatures=[
@@ -36,15 +36,15 @@ commands = baca.CommandAccumulator(
 
 baca.interpret.set_up_score(
     score,
-    commands,
-    commands.manifests(),
-    commands.time_signatures,
+    accumulator,
+    accumulator.manifests(),
+    accumulator.time_signatures,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
 )
 
 skips = score["Skips"]
-manifests = commands.manifests()
+manifests = accumulator.manifests()
 
 for index, item in (
     (4 - 1, "39"),
@@ -55,7 +55,7 @@ for index, item in (
     (14 - 1, "39"),
 ):
     skip = skips[index]
-    indicator = commands.metronome_marks.get(item, item)
+    indicator = accumulator.metronome_marks.get(item, item)
     baca.metronome_mark(skip, indicator, manifests)
 
 rests = score["Rests"]
@@ -104,7 +104,7 @@ voice.extend(music)
 music = baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(8), head=voice.name)
+music = baca.make_mmrests(accumulator.get(8), head=voice.name)
 voice.extend(music)
 
 # 9
@@ -132,26 +132,26 @@ voice.extend(music)
 music = baca.make_skeleton("{ c4 c4. }")
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(13), head=voice.name)
+music = baca.make_mmrests(accumulator.get(13), head=voice.name)
 voice.extend(music)
 
 # 14
 music = baca.make_skeleton("{ c4 c c c c c c c c c c }")
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(15), head=voice.name)
+music = baca.make_mmrests(accumulator.get(15), head=voice.name)
 voice.extend(music)
 
 # reapply
 
-commands(
+accumulator(
     "vc",
     baca.reapply_persistent_indicators(),
 )
 
 # vc
 
-commands(
+accumulator(
     ("vc", 1),
     baca.new(
         baca.dynamic_text_self_alignment_x(-0.75),
@@ -166,7 +166,7 @@ commands(
     baca.pitch("<B3 F#4>"),
 )
 
-commands(
+accumulator(
     ("vc", 2),
     baca.new(
         baca.espressivo(),
@@ -177,7 +177,7 @@ commands(
     baca.pitch("<B3 F#4>"),
 )
 
-commands(
+accumulator(
     ("vc", 3),
     baca.new(
         baca.espressivo(),
@@ -188,7 +188,7 @@ commands(
     baca.pitch("<B3 F#4>"),
 )
 
-commands(
+accumulator(
     ("vc", 4),
     baca.breathe(),
     baca.hairpin(
@@ -228,7 +228,7 @@ commands(
     baca.tuplet_bracket_padding(1.75),
 )
 
-commands(
+accumulator(
     ("vc", 5),
     baca.dynamic("p"),
     baca.new(
@@ -240,7 +240,7 @@ commands(
     baca.pitch("<B3 F#4>"),
 )
 
-commands(
+accumulator(
     ("vc", 6),
     baca.finger_pressure_transition(
         selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
@@ -270,7 +270,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 7),
     baca.glissando(
         selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
@@ -326,7 +326,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 9),
     baca.hairpin(
         "o<| f |> p",
@@ -346,7 +346,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 10),
     baca.finger_pressure_transition(
         selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
@@ -377,7 +377,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 11),
     baca.hairpin(
         "|> p <| ff",
@@ -404,7 +404,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 12),
     baca.hairpin(
         "|> pp",
@@ -427,7 +427,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc", 14),
     baca.hairpin(
         "ppp -- niente",
@@ -460,27 +460,27 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     "vc",
     baca.dls_staff_padding(6),
 )
 
 if __name__ == "__main__":
-    defaults = baca.score_interpretation_defaults()
+    defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
-    metadata, persist, score, timing = baca.build.interpret_section(
+    metadata, persist, score, timing = baca.build.section(
         score,
-        commands.manifests(),
-        commands.time_signatures,
+        accumulator.manifests(),
+        accumulator.time_signatures,
         **defaults,
         activate=(baca.tags.LOCAL_MEASURE_NUMBER,),
         always_make_global_rests=True,
-        commands=commands,
+        commands=accumulator.commands,
         do_not_require_short_instrument_names=True,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
     )
-    lilypond_file = baca.make_lilypond_file(
+    lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily"],
