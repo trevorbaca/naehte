@@ -336,7 +336,7 @@ def vc(m):
             "f |>o niente",
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G3 D4>"),
         baca.text_spanner(
             r"\baca-double-diamond-parenthesized-top-markup ->",

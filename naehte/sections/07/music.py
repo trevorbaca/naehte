@@ -150,7 +150,7 @@ def vc(m):
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_staff_padding(2),
     )
 
@@ -302,7 +302,7 @@ def vc(m):
         ),
         baca.new(
             baca.espressivo(),
-            baca.note_head_style_harmonic(),
+            baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
         ),

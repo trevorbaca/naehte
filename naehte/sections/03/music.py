@@ -278,7 +278,7 @@ def vc(m):
 
     accumulator(
         ("vc", 4),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.suite(
             baca.pitches(
                 "<E3 B3>"
@@ -305,7 +305,7 @@ def vc(m):
         baca.finger_pressure_transition(
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G3 D4>"),
     )
 
