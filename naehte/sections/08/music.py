@@ -123,7 +123,7 @@ def vc(m):
             "ppp > pppp < ppp",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.leaves(_),
         ),
@@ -141,7 +141,7 @@ def vc(m):
             "ppp > pppp < ppp",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.leaves(_),
         ),
@@ -183,7 +183,7 @@ def vc(m):
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.suite(
             baca.pitches(
                 "F5 G3 A4 B2 C4 D2",

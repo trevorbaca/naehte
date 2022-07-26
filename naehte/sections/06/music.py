@@ -157,7 +157,7 @@ def vc(m):
         ),
         baca.new(
             baca.espressivo(),
-            baca.note_head_style_harmonic(),
+            baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
         ),
@@ -168,7 +168,7 @@ def vc(m):
         ("vc", 2),
         baca.new(
             baca.espressivo(),
-            baca.note_head_style_harmonic(),
+            baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
         ),
@@ -179,7 +179,7 @@ def vc(m):
         ("vc", 3),
         baca.new(
             baca.espressivo(),
-            baca.note_head_style_harmonic(),
+            baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
         ),
@@ -234,7 +234,7 @@ def vc(m):
         baca.dynamic("p"),
         baca.new(
             baca.espressivo(),
-            baca.note_head_style_harmonic(),
+            baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
         ),
