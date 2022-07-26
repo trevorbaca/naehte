@@ -127,7 +127,10 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.note_head_extra_offset((-1.25, 0)),
+        baca.note_head_extra_offset(
+            (-1.25, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.note_head_transparent(
             selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
@@ -253,7 +256,10 @@ def vc(m):
         baca.suite(
             baca.pitches("C#3 C#3 E4 D3 E3", allow_repeats=True),
             baca.new(
-                baca.repeat_tie_extra_offset((-1.5, 0)),
+                baca.repeat_tie_extra_offset(
+                    (-1.5, 0),
+                    selector=lambda _: baca.select.pleaf(_, 0),
+                ),
                 baca.repeat_tie(
                     lambda _: baca.select.pleaf(_, 0),
                 ),

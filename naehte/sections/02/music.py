@@ -566,7 +566,10 @@ def vc(m):
         ("vc", 16),
         baca.suite(
             baca.pitch("Db2"),
-            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_extra_offset(
+                (-1.5, 0),
+                selector=lambda _: baca.select.pleaf(_, 0),
+            ),
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
@@ -578,7 +581,10 @@ def vc(m):
         baca.dynamic('"fff"'),
         baca.suite(
             baca.pitch("Db2"),
-            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_extra_offset(
+                (-1.5, 0),
+                selector=lambda _: baca.select.pleaf(_, 0),
+            ),
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
@@ -589,7 +595,10 @@ def vc(m):
         ("vc", 18),
         baca.suite(
             baca.pitch("Db2"),
-            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie_extra_offset(
+                (-1.5, 0),
+                selector=lambda _: baca.select.pleaf(_, 0),
+            ),
             baca.repeat_tie(
                 lambda _: baca.select.pleaf(_, 0),
             ),
