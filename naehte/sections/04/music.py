@@ -320,7 +320,9 @@ def vc(m):
                 baca.glissando(
                     zero_padding=True,
                 ),
-                baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
+                baca.note_head_style_harmonic(
+                    selector=lambda _: baca.select.pleaves(_)
+                ),
                 selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
             ),
         ),
