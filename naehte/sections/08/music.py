@@ -234,7 +234,10 @@ def vc(m):
     accumulator(
         ("vc", 7),
         baca.dynamic("pppp-sempre"),
-        baca.dynamic_text_self_alignment_x(-0.5),
+        baca.dynamic_text_self_alignment_x(
+            -0.5,
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.pitch("<F3 C4>"),
         baca.text_spanner(
             r"II / III mod. =|",
@@ -288,7 +291,10 @@ def vc(m):
 
     accumulator(
         ("vc", (10, 13)),
-        baca.dynamic_text_self_alignment_x(-0.45),
+        baca.dynamic_text_self_alignment_x(
+            -0.45,
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.hairpin(
             "appena-udibile -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),

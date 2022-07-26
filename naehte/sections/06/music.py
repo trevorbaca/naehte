@@ -149,7 +149,10 @@ def vc(m):
     accumulator(
         ("vc", 1),
         baca.new(
-            baca.dynamic_text_self_alignment_x(-0.75),
+            baca.dynamic_text_self_alignment_x(
+                -0.75,
+                selector=lambda _: baca.select.pleaf(_, 0),
+            ),
             baca.dynamic("p-sempre"),
         ),
         baca.new(
@@ -191,7 +194,10 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.note_head_extra_offset((-1.25, 0)),
+        baca.note_head_extra_offset(
+            (-1.25, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.note_head_transparent(
             selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),

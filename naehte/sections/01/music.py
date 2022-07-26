@@ -246,7 +246,10 @@ def vc(m):
             ),
             baca.new(
                 baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
-                baca.repeat_tie_extra_offset((-1.5, 0)),
+                baca.repeat_tie_extra_offset(
+                    (-1.5, 0),
+                    selector=lambda _: baca.select.pleaf(_, 0),
+                ),
             ),
             baca.glissando(
                 selector=lambda _: baca.select.leaves(_)[:5],
@@ -292,7 +295,10 @@ def vc(m):
                 baca.repeat_tie(
                     lambda _: baca.select.pleaf(_, 0),
                 ),
-                baca.repeat_tie_extra_offset((-1.5, 0)),
+                baca.repeat_tie_extra_offset(
+                    (-1.5, 0),
+                    selector=lambda _: baca.select.pleaf(_, 0),
+                ),
             ),
             baca.glissando(
                 zero_padding=True,
