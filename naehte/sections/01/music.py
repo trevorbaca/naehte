@@ -89,7 +89,9 @@ def vc(m):
 
     accumulator(
         ("vc", 1),
-        baca.instrument(accumulator.instruments["Cello"]),
+        baca.instrument(
+            accumulator.instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.instrument_name(r"\naehte-cello-markup"),
         baca.clef("bass"),
         baca.suite(
