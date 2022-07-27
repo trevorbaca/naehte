@@ -209,7 +209,9 @@ def vc(m):
             (-1, 0),
             selector=lambda _: abjad.select.leaf(_, 0),
         ),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "pp < f >o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 5]),
@@ -493,7 +495,9 @@ def vc(m):
             (-1, 0),
             selector=lambda _: abjad.select.leaf(_, 0),
         ),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "pp < f >o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 5]),

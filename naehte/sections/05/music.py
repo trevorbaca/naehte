@@ -371,7 +371,9 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.stem_tremolo(),
+        baca.stem_tremolo(
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.suite(
             baca.pitches(
                 "<D4 Bb4> <C4 Ab4>",
