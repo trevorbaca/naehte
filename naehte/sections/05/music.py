@@ -313,7 +313,8 @@ def vc(m):
         ),
         baca.literal(
             r"\once \override Staff.BarLine.space-alist.first-note"
-            " = #'(minimum-space . 4)"
+            " = #'(minimum-space . 4)",
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.note_head_style_harmonic_black(
             selector=lambda _: abjad.select.leaf(_, 0),
@@ -416,7 +417,10 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [2, 3]),
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.literal(r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)"),
+        baca.literal(
+            r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)",
+            selector=lambda _: abjad.select.leaf(_, 0),
+        ),
         baca.suite(
             baca.pitches(
                 "Gb2 Gb2 G4 Gb2",
