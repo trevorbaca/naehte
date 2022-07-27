@@ -303,7 +303,7 @@ def vc(m):
             baca.dynamic("p-sempre"),
         ),
         baca.new(
-            baca.espressivo(),
+            baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),

@@ -156,7 +156,7 @@ def vc(m):
             baca.dynamic("p-sempre"),
         ),
         baca.new(
-            baca.espressivo(),
+            baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
@@ -167,7 +167,7 @@ def vc(m):
     accumulator(
         ("vc", 2),
         baca.new(
-            baca.espressivo(),
+            baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
@@ -178,7 +178,7 @@ def vc(m):
     accumulator(
         ("vc", 3),
         baca.new(
-            baca.espressivo(),
+            baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
@@ -235,7 +235,7 @@ def vc(m):
         ("vc", 5),
         baca.dynamic("p"),
         baca.new(
-            baca.espressivo(),
+            baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_),
