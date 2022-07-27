@@ -159,7 +159,9 @@ def vc(m):
 
     accumulator(
         ("vc", 3),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "p <| mp",
         ),
@@ -202,7 +204,9 @@ def vc(m):
 
     accumulator(
         ("vc", 6),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.finger_pressure_transition(),
         baca.glissando(
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),

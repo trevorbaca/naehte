@@ -254,7 +254,9 @@ def vc(m):
 
     accumulator(
         ("vc", 3),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "ppp <| fff",
             selector=lambda _: baca.select.pleaves(_),
@@ -311,7 +313,9 @@ def vc(m):
 
     accumulator(
         ("vc", 6),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "|> p",
         ),

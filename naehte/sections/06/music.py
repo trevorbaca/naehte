@@ -188,7 +188,9 @@ def vc(m):
 
     accumulator(
         ("vc", 4),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
         baca.hairpin(
             "o< pp > ppp < f",
             pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
