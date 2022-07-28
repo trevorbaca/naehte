@@ -430,7 +430,7 @@ def vc(m):
 
     accumulator(
         ("vc", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pppp -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -455,7 +455,7 @@ def vc(m):
 
     accumulator(
         ("vc", (11, 13)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.new(
             baca.hairpin(
                 'pp <| "f" > pp <| "f" >',
