@@ -300,7 +300,7 @@ def vc(m):
                 -0.75,
                 selector=lambda _: baca.select.pleaf(_, 0),
             ),
-            baca.dynamic("p-sempre"),
+            baca.dynamic("p-sempre", selector=lambda _: baca.select.phead(_, 0)),
         ),
         baca.new(
             baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
