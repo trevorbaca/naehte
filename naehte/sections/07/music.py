@@ -453,6 +453,7 @@ def vc(m):
         baca.markup(
             r"\naehte-degrees-of-ponticello-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.new(
             baca.note_head_x_extent_zero(),
