@@ -237,7 +237,7 @@ def vc(m):
 
     accumulator(
         ("vc", 7),
-        baca.dynamic("pppp-sempre"),
+        baca.dynamic("pppp-sempre", selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic_text_self_alignment_x(
             -0.5,
             selector=lambda _: baca.select.pleaf(_, 0),

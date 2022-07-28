@@ -153,7 +153,7 @@ def vc(m):
                 -0.75,
                 selector=lambda _: baca.select.pleaf(_, 0),
             ),
-            baca.dynamic("p-sempre"),
+            baca.dynamic("p-sempre", selector=lambda _: baca.select.phead(_, 0)),
         ),
         baca.new(
             baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
@@ -233,7 +233,7 @@ def vc(m):
 
     accumulator(
         ("vc", 5),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.new(
             baca.espressivo(selector=lambda _: baca.select.phead(_, 0)),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),

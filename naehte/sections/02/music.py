@@ -582,7 +582,7 @@ def vc(m):
 
     accumulator(
         ("vc", 17),
-        baca.dynamic('"fff"'),
+        baca.dynamic('"fff"', selector=lambda _: baca.select.phead(_, 0)),
         baca.suite(
             baca.pitch("Db2"),
             baca.repeat_tie_extra_offset(
