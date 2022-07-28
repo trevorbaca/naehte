@@ -95,7 +95,7 @@ def vc(m):
         baca.instrument_name(
             r"\naehte-cello-markup", selector=lambda _: abjad.select.leaf(_, 0)
         ),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.suite(
             baca.new(
                 baca.repeat_tie(
