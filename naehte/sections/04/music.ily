@@ -105,15 +105,21 @@ number.4.Skips = {
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -280,15 +286,21 @@ number.4.Skips = {
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -570,15 +582,21 @@ number.4.Skips = {
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "91"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -685,15 +703,21 @@ number.4.Skips = {
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -800,15 +824,21 @@ number.4.Skips = {
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \abjad-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"
       %! EXPLICIT_METRONOME_MARK
       %! baca._attach_metronome_marks(2)
+      %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
+      %! baca.metronome_mark()
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -1166,7 +1196,7 @@ number.4.Cello.Music = {
         - \tweak stencil ##f
           %! baca._attach_shadow_tie_indicators()
         ~
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:
@@ -1200,7 +1230,7 @@ number.4.Cello.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % COMMANDS:
@@ -1303,7 +1333,7 @@ number.4.Cello.Music = {
         - \tweak stencil ##f
           %! baca._attach_shadow_tie_indicators()
         ~
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % COMMANDS:
@@ -1354,7 +1384,7 @@ number.4.Cello.Music = {
           %! abjad.glissando(7)
           %! baca.finger_pressure_transition()
         \glissando
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:
@@ -1678,7 +1708,7 @@ number.4.Cello.Music = {
             - \tweak stencil ##f
               %! baca._attach_shadow_tie_indicators()
             ~
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.repeat_tie()
             \repeatTie
             % COMMANDS:
@@ -1738,7 +1768,7 @@ number.4.Cello.Music = {
                   %! abjad.glissando(7)
                   %! baca.glissando()
                 \glissando
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.repeat_tie()
                 \repeatTie
                 % ABSOLUTE_BEFORE:
@@ -2452,7 +2482,7 @@ number.4.Cello.Music = {
                 <f a>16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % ARTICULATIONS:
@@ -2576,7 +2606,7 @@ number.4.Cello.Music = {
                 <d f>16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % SPANNER_STARTS:
@@ -2589,7 +2619,7 @@ number.4.Cello.Music = {
                 <f a>16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % SPANNER_STARTS:
@@ -2602,7 +2632,7 @@ number.4.Cello.Music = {
                 <d f>16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % SPANNER_STARTS:
@@ -2615,7 +2645,7 @@ number.4.Cello.Music = {
                 <f a>16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % SPANNER_STARTS:
@@ -2629,7 +2659,7 @@ number.4.Cello.Music = {
                 a,16
                 % AFTER:
                 % STEM_TREMOLOS:
-                  %! baca.IndicatorCommand._call()
+                  %! baca._attach_persistent_indicator()
                   %! baca.stem_tremolo()
                 :64
                 % SPANNER_STOPS:
@@ -2951,7 +2981,7 @@ number.4.Cello.Music = {
             <ds! fs!>16
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.stem_tremolo()
             :64
             % ARTICULATIONS:
@@ -3061,7 +3091,7 @@ number.4.Cello.Music = {
             <b, d>16
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.stem_tremolo()
             :64
             % SPANNER_STARTS:
@@ -3074,7 +3104,7 @@ number.4.Cello.Music = {
             <d f>16
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.stem_tremolo()
             :64
             % SPANNER_STOPS:
@@ -3108,7 +3138,7 @@ number.4.Cello.Music = {
             <b, d>16
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.stem_tremolo()
             :64
             % SPANNER_STARTS:
@@ -3122,7 +3152,7 @@ number.4.Cello.Music = {
             e'16
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca.IndicatorCommand._call()
+              %! baca._attach_persistent_indicator()
               %! baca.stem_tremolo()
             :64
             % SPANNER_STOPS:
@@ -3490,7 +3520,7 @@ number.4.Cello.Music = {
         fs4
         % AFTER:
         % SPANNER_STARTS:
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:
@@ -3633,7 +3663,7 @@ number.4.Cello.Music = {
           %! baca.PiecewiseCommand._call(2)
           %! baca.text_spanner()
         \startTextSpan
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:
@@ -3983,7 +4013,7 @@ number.4.Cello.Music = {
         cs!4
         % AFTER:
         % COMMANDS:
-          %! baca.IndicatorCommand._call()
+          %! baca._attach_persistent_indicator()
           %! baca.breathe()
         \breathe
         % ABSOLUTE_BEFORE:
