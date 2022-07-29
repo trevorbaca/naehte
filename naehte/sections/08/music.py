@@ -115,10 +115,8 @@ def vc(m):
 
     accumulator(
         ("vc", 1),
-        baca.suite(
-            baca.pitches("D2 <Db2 A2> D2"),
-            baca.glissando(),
-        ),
+        baca.pitches("D2 <Db2 A2> D2"),
+        baca.glissando(),
         baca.hairpin(
             "ppp > pppp < ppp",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -145,10 +143,8 @@ def vc(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.suite(
-            baca.pitches("Db2 C2 Db2"),
-            baca.glissando(),
-        ),
+        baca.pitches("Db2 C2 Db2"),
+        baca.glissando(),
         baca.text_spanner(
             "½ clt =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -165,10 +161,8 @@ def vc(m):
         baca.hairpin(
             "p <| mp",
         ),
-        baca.suite(
-            baca.pitches("C2 B1"),
-            baca.glissando(),
-        ),
+        baca.pitches("C2 B1"),
+        baca.glissando(),
         baca.text_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
@@ -186,12 +180,10 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
         ),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
-        baca.suite(
-            baca.pitches(
-                "F5 G3 A4 B2 C4 D2",
-            ),
-            baca.glissando(),
+        baca.pitches(
+            "F5 G3 A4 B2 C4 D2",
         ),
+        baca.glissando(),
         baca.tuplet_bracket_staff_padding(
             2,
             selector=lambda _: abjad.select.leaf(_, 1),

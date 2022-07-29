@@ -206,14 +206,12 @@ def vc(m):
         baca.note_head_x_extent_zero(
             selector=lambda _: baca.select.pleaves(_)[:-1],
         ),
-        baca.suite(
-            baca.pitches(
-                "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
-            ),
-            baca.glissando(
-                selector=lambda _: baca.select.leaves(_),
-                zero_padding=True,
-            ),
+        baca.pitches(
+            "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
+        ),
+        baca.glissando(
+            selector=lambda _: baca.select.leaves(_),
+            zero_padding=True,
         ),
         baca.text_spanner(
             "RH vibr. strettiss. -> RH NV",
@@ -251,14 +249,11 @@ def vc(m):
         baca.hairpin(
             "p <| f",
         ),
-        baca.suite(
-            baca.pitches(
-                "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-                " <Bb3 F4> <E3 B3> <G3 D4>",
-                allow_repeats=True,
-            ),
-            baca.glissando(),
+        baca.pitches(
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
+            allow_repeats=True,
         ),
+        baca.glissando(),
         baca.text_spanner(
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -284,40 +279,38 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 1, 4]),
             selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
         ),
-        baca.suite(
-            baca.pitches(
-                "Gb2 Gb2 G4 Gb2",
-                allow_repeats=True,
-            ),
-            baca.accidental_extra_offset(
-                (-0.25, 0),
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-            baca.glissando(
-                selector=lambda _: baca.select.leaves(_)[-3:],
-                zero_padding=True,
-            ),
-            baca.literal(
-                r"\once \override Glissando.bound-details.left.X-offset = 4",
-                selector=lambda _: abjad.select.leaf(_, -3),
-            ),
-            baca.literal(
-                r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-                selector=lambda _: abjad.select.leaf(_, -2),
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: abjad.select.leaf(_, -2),
-            ),
-            baca.note_head_x_extent_zero(
-                selector=lambda _: baca.select.leaves(_)[-2:-1],
-            ),
-            baca.stem_down(
-                selector=lambda _: baca.select.leaves(_)[-3:],
-            ),
-            baca.tuplet_bracket_padding(
-                1.5,
-                selector=lambda _: abjad.select.leaf(_, -3),
-            ),
+        baca.pitches(
+            "Gb2 Gb2 G4 Gb2",
+            allow_repeats=True,
+        ),
+        baca.accidental_extra_offset(
+            (-0.25, 0),
+            selector=lambda _: abjad.select.leaf(_, -1),
+        ),
+        baca.glissando(
+            selector=lambda _: baca.select.leaves(_)[-3:],
+            zero_padding=True,
+        ),
+        baca.literal(
+            r"\once \override Glissando.bound-details.left.X-offset = 4",
+            selector=lambda _: abjad.select.leaf(_, -3),
+        ),
+        baca.literal(
+            r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
+            selector=lambda _: abjad.select.leaf(_, -2),
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: abjad.select.leaf(_, -2),
+        ),
+        baca.note_head_x_extent_zero(
+            selector=lambda _: baca.select.leaves(_)[-2:-1],
+        ),
+        baca.stem_down(
+            selector=lambda _: baca.select.leaves(_)[-3:],
+        ),
+        baca.tuplet_bracket_padding(
+            1.5,
+            selector=lambda _: abjad.select.leaf(_, -3),
         ),
         baca.text_spanner(
             r"XFB =| \baca-circle-markup =| spz. =|",
@@ -359,14 +352,11 @@ def vc(m):
             "p <| f",
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.suite(
-            baca.pitches(
-                "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-                " <Bb3 F4> <E3 B3> <G3 D4>",
-                allow_repeats=True,
-            ),
-            baca.glissando(),
+        baca.pitches(
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
+            allow_repeats=True,
         ),
+        baca.glissando(),
         baca.text_spanner(
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -389,11 +379,9 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.suite(
-            baca.pitch("D#3"),
-            baca.glissando(
-                selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
-            ),
+        baca.pitch("D#3"),
+        baca.glissando(
+            selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
         ),
         baca.text_spanner(
             "no scr. -> scr. =|",
@@ -414,13 +402,11 @@ def vc(m):
         baca.hairpin(
             "|> pp",
         ),
-        baca.suite(
-            baca.pitch("D#3"),
-            baca.new(
-                baca.repeat_tie_extra_offset((-1.5, 0)),
-                baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
-                selector=lambda _: baca.select.leaves(_),
-            ),
+        baca.pitch("D#3"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie(lambda _: abjad.select.leaf(_, 0)),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.text_spanner(
             r"\baca-circle-very-wide-markup =|",
@@ -444,9 +430,7 @@ def vc(m):
             baca.note_head_transparent(),
             selector=lambda _: baca.select.leaves(_)[1:],
         ),
-        baca.suite(
-            baca.pitch("E3"),
-        ),
+        baca.pitch("E3"),
         baca.suite(
             baca.glissando(
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),

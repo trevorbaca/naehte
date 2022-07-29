@@ -139,12 +139,10 @@ def vc(m):
 
     accumulator(
         ("vc", 1),
-        baca.suite(
-            baca.pitches(
-                "F5 G3 A4 B2 C4 D2",
-            ),
-            baca.glissando(),
+        baca.pitches(
+            "F5 G3 A4 B2 C4 D2",
         ),
+        baca.glissando(),
         baca.hairpin(
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
@@ -205,13 +203,11 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         ),
-        baca.suite(
-            baca.pitches(
-                "<E2 C3> E2",
-                allow_repeats=True,
-            ),
-            baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
+        baca.pitches(
+            "<E2 C3> E2",
+            allow_repeats=True,
         ),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
         baca.text_spanner(
             "I / II str. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -241,13 +237,11 @@ def vc(m):
         baca.note_head_style_harmonic(
             selector=lambda _: abjad.select.leaf(_, 0),
         ),
-        baca.suite(
-            baca.pitches(
-                "<E2 C3> E2",
-                allow_repeats=True,
-            ),
-            baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
+        baca.pitches(
+            "<E2 C3> E2",
+            allow_repeats=True,
         ),
+        baca.repeat_tie(lambda _: abjad.select.leaf(_, -1)),
         baca.text_spanner(
             "I / II str. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -275,9 +269,7 @@ def vc(m):
         baca.glissando(
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
         ),
-        baca.suite(
-            baca.pitch("Eb2"),
-        ),
+        baca.pitch("Eb2"),
         baca.text_spanner(
             "RH vib. poss. -> NV",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -320,14 +312,11 @@ def vc(m):
             "p <| f",
             selector=lambda _: baca.select.rleaves(_),
         ),
-        baca.suite(
-            baca.pitches(
-                "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>"
-                " <Bb3 F4> <E3 B3> <G3 D4>",
-                allow_repeats=True,
-            ),
-            baca.glissando(),
+        baca.pitches(
+            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
+            allow_repeats=True,
         ),
+        baca.glissando(),
         baca.text_spanner(
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -350,11 +339,9 @@ def vc(m):
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1]),
         ),
-        baca.suite(
-            baca.pitch("D#3"),
-            baca.glissando(
-                selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
-            ),
+        baca.pitch("D#3"),
+        baca.glissando(
+            selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
         ),
         baca.text_spanner(
             "no scr. -> scr. =|",
@@ -376,15 +363,13 @@ def vc(m):
             "ff |>",
             bookend=False,
         ),
-        baca.suite(
-            baca.pitch("D#3"),
-            baca.new(
-                baca.repeat_tie_extra_offset((-1.5, 0)),
-                baca.repeat_tie(
-                    lambda _: baca.select.pleaf(_, 0),
-                ),
-                selector=lambda _: baca.select.leaves(_),
+        baca.pitch("D#3"),
+        baca.new(
+            baca.repeat_tie_extra_offset((-1.5, 0)),
+            baca.repeat_tie(
+                lambda _: baca.select.pleaf(_, 0),
             ),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.text_spanner(
             r"\baca-circle-very-wide-markup =|",
@@ -415,11 +400,9 @@ def vc(m):
         baca.stem_tremolo(
             selector=lambda _: abjad.select.leaf(_, -1),
         ),
-        baca.suite(
-            baca.pitches(
-                "D2 <D2 Bb2> D2",
-                allow_repeats=True,
-            ),
+        baca.pitches(
+            "D2 <D2 Bb2> D2",
+            allow_repeats=True,
         ),
         baca.text_spanner(
             "I / II larg. =|",
