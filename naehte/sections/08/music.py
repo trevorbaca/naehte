@@ -52,9 +52,9 @@ for index, item in (
 ):
     skip = skips[index]
     indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, indicator, manifests)
 
-baca.bar_line(score["Skips"][14 - 1], "|.")
+baca.bar_line_function(score["Skips"][14 - 1], "|.")
 
 rests = score["Rests"]
 for index, string in (
@@ -62,7 +62,7 @@ for index, string in (
     (9 - 1, "fermata"),
     (14 - 1, "fermata"),
 ):
-    baca.global_fermata(rests[index], string)
+    baca.global_fermata_function(rests[index], string)
 
 
 def VC(voice):
