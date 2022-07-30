@@ -306,7 +306,7 @@ def vc(m):
             baca.glissando(
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
                 allow_repeats=True,
-            selector=lambda _: baca.select.tleaves(_),
+                selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.interpolate_pitches("Eb3", "Eb3", allow_hidden=True),
@@ -345,7 +345,9 @@ def vc(m):
     accumulator(
         ("vc", -1),
         baca.chunk(
-            baca.mark(r"\naehte-colophon-markup", selector=lambda _: abjad.select.leaf(_, 0)),
+            baca.mark(
+                r"\naehte-colophon-markup", selector=lambda _: abjad.select.leaf(_, 0)
+            ),
             baca.rehearsal_mark_down(),
             baca.rehearsal_mark_padding(6),
             baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),

@@ -435,7 +435,7 @@ def vc(m):
             baca.glissando(
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
                 allow_repeats=True,
-            selector=lambda _: baca.select.tleaves(_),
+                selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.interpolate_pitches("E3", "E3", allow_hidden=True),
