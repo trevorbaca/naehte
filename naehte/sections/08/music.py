@@ -116,7 +116,7 @@ def vc(m):
     accumulator(
         ("vc", 1),
         baca.pitches("D2 <Db2 A2> D2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "ppp > pppp < ppp",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -144,7 +144,7 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_),
         ),
         baca.pitches("Db2 C2 Db2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.text_spanner(
             "½ clt =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -162,7 +162,7 @@ def vc(m):
             "p <| mp",
         ),
         baca.pitches("C2 B1"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.text_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
@@ -183,7 +183,7 @@ def vc(m):
         baca.pitches(
             "F5 G3 A4 B2 C4 D2",
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.tuplet_bracket_staff_padding(
             2,
             selector=lambda _: abjad.select.leaf(_, 1),
@@ -306,6 +306,7 @@ def vc(m):
             baca.glissando(
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
                 allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.interpolate_pitches("Eb3", "Eb3", allow_hidden=True),
@@ -344,7 +345,7 @@ def vc(m):
     accumulator(
         ("vc", -1),
         baca.chunk(
-            baca.mark(r"\naehte-colophon-markup"),
+            baca.mark(r"\naehte-colophon-markup", selector=lambda _: abjad.select.leaf(_, 0)),
             baca.rehearsal_mark_down(),
             baca.rehearsal_mark_padding(6),
             baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
