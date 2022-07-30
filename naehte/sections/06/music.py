@@ -253,7 +253,7 @@ def vc(m):
             "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.text_spanner(
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -356,7 +356,7 @@ def vc(m):
             "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.text_spanner(
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -435,6 +435,7 @@ def vc(m):
             baca.glissando(
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
                 allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.interpolate_pitches("E3", "E3", allow_hidden=True),

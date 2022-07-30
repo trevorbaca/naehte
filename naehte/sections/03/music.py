@@ -164,7 +164,7 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
         ),
         baca.pitches("Eb2 B3 F2 A3 G2 F#3"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.text_spanner(
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -312,7 +312,7 @@ def vc(m):
             "|> p",
         ),
         baca.pitches("<A2 E3> <F3 C4> <G2 D3> Ab2", allow_repeats=True),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="M2",
@@ -624,7 +624,7 @@ def vc(m):
             " <B3 F#4>",
             allow_repeats=True,
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
     )
 
     accumulator(
@@ -640,7 +640,7 @@ def vc(m):
             " <A3 E4>",
             allow_repeats=True,
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
     )
 
     accumulator(

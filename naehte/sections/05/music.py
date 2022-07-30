@@ -257,6 +257,7 @@ def vc(m):
         ),
         baca.new(
             baca.glissando(
+            selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),

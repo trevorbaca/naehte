@@ -308,6 +308,7 @@ def vc(m):
         baca.new(
             baca.glissando(
                 zero_padding=True,
+            selector=lambda _: baca.select.tleaves(_),
             ),
             baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
@@ -599,6 +600,7 @@ def vc(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
                 zero_padding=True,
             ),
             baca.interpolate_pitches("D3", "C#3"),
