@@ -1263,6 +1263,9 @@ number.8.Cello.Music = {
           %! baca._attach_persistent_indicator()
           %! baca.breathe()
         \breathe
+          %! baca.OverrideCommand._call(2)
+          %! baca.dls_staff_padding()
+        \revert DynamicLineSpanner.staff-padding
         % CLOSING:
         % COMMANDS:
 
@@ -1317,10 +1320,6 @@ number.8.Cello.Music = {
               %! baca.PiecewiseCommand._call(4)
               %! baca.text_spanner()
             \stopTextSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -2419,6 +2418,9 @@ number.8.Cello.Music = {
         \glissando
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
+          %! baca.dls_staff_padding()
+        \revert DynamicLineSpanner.staff-padding
+          %! baca.OverrideCommand._call(2)
           %! baca.note_head_x_extent_zero()
         \revert NoteHead.X-extent
           %! baca.OverrideCommand._call(2)
@@ -2511,9 +2513,6 @@ number.8.Cello.Music = {
               %! baca.OverrideCommand._call(2)
               %! baca.dots_extra_offset()
             \revert Dots.extra-offset
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 

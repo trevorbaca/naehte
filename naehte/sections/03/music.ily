@@ -4341,6 +4341,9 @@ number.3.Cello.Music = {
           %! baca.OverrideCommand._call(2)
           %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
+          %! baca.OverrideCommand._call(2)
+          %! baca.tuplet_bracket_down()
+        \revert TupletBracket.direction
         % CLOSING:
         % COMMANDS:
 
@@ -4414,10 +4417,6 @@ number.3.Cello.Music = {
               %! baca.PiecewiseCommand._call(4)
               %! baca.text_spanner()
             \stopTextSpanTwo
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.tuplet_bracket_down()
-            \revert TupletBracket.direction
             % CLOSING:
             % COMMANDS:
 
