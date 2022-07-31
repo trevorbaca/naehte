@@ -3677,6 +3677,9 @@ number.6.Cello.Music = {
         \glissando
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
+          %! baca.dls_staff_padding()
+        \revert DynamicLineSpanner.staff-padding
+          %! baca.OverrideCommand._call(2)
           %! baca.note_head_x_extent_zero()
         \revert NoteHead.X-extent
           %! baca.OverrideCommand._call(2)
@@ -3751,10 +3754,6 @@ number.6.Cello.Music = {
               %! baca.PiecewiseCommand._call(4)
               %! baca.text_spanner()
             \stopTextSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
