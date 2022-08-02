@@ -193,7 +193,9 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1, 11]),
-            selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
+            selector=lambda _: baca.select.rleak(
+                baca.select.lleak(abjad.select.leaves(_))
+            ),
         ),
     )
 
@@ -335,7 +337,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
     )
 
@@ -391,7 +393,9 @@ def vc(m):
             "spazz. strett. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5.75"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
+            selector=lambda _: baca.select.rleak(
+                baca.select.lleak(abjad.select.leaves(_))
+            ),
         ),
     )
 

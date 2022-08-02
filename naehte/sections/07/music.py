@@ -172,7 +172,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1, 3]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_), count=3),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_), count=3),
         ),
     )
 
