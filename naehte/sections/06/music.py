@@ -277,7 +277,9 @@ def vc(m):
         baca.hairpin(
             "|> ppppp <| p |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 1, 4]),
-            selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
+            selector=lambda _: baca.select.rleak(
+                baca.select.lleak(abjad.select.leaves(_))
+            ),
         ),
         baca.pitches(
             "Gb2 Gb2 G4 Gb2",

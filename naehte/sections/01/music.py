@@ -157,7 +157,7 @@ def vc(m):
         baca.dls_staff_padding(7),
         baca.hairpin(
             "pp > ppppp",
-            selector=lambda _: baca.rleaves(_, count=2),
+            selector=lambda _: baca.select.rleaves(_, count=2),
         ),
         baca.pitch("Eb4"),
         baca.new(
@@ -175,7 +175,7 @@ def vc(m):
             r"spazz. larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.tuplet_bracket_staff_padding(1),
     )
@@ -272,12 +272,12 @@ def vc(m):
             r"spazz. strett. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"),
             alteration="D4",
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
     )
 
@@ -319,7 +319,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[1:], count=3),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[1:], count=3),
         ),
     )
 

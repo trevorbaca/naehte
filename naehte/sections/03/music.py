@@ -184,7 +184,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.tuplet_bracket_staff_padding(
             2 + 1.25,
@@ -244,7 +244,7 @@ def vc(m):
         ),
         baca.trill_spanner(
             alteration="m2",
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
     )
 
@@ -525,7 +525,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.text_spanner(
             r"trem. -> larg.",

@@ -205,7 +205,7 @@ def vc(m):
             r"spazz. larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.tuplet_bracket_staff_padding(1),
     )
@@ -290,7 +290,9 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [6, 3]),
-            selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
+            selector=lambda _: baca.select.rleak(
+                baca.select.lleak(abjad.select.leaves(_))
+            ),
         ),
     )
 
@@ -519,7 +521,7 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:], count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
         baca.text_spanner(
             r"trem. -> larg.",
@@ -594,7 +596,9 @@ def vc(m):
         ("vc", 13),
         baca.hairpin(
             "< mp",
-            selector=lambda _: baca.rleak(baca.lleak(abjad.select.leaves(_))),
+            selector=lambda _: baca.select.rleak(
+                baca.select.lleak(abjad.select.leaves(_))
+            ),
         ),
         baca.suite(
             baca.glissando(
@@ -631,7 +635,7 @@ def vc(m):
             "scr. poss. =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_), count=2),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_), count=2),
         ),
     )
 
