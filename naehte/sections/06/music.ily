@@ -2689,8 +2689,7 @@ number.6.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         \pitchedTrill
           %! baca.make_skeleton()
         a4.
@@ -2744,8 +2743,7 @@ number.6.Cello.Music = {
         ~
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         \startTrillSpan bf
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2774,8 +2772,7 @@ number.6.Cello.Music = {
           %! baca.text_spanner()
         \stopTextSpan
           %! SPANNER_STOP
-          %! baca.SpannerIndicatorCommand._call(4)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(4)
         \stopTrillSpan
         % START_BEAM:
         [
