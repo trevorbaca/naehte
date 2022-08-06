@@ -1876,7 +1876,7 @@ number.5.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \pitchedTrill
           %! baca.make_skeleton()
         d2
@@ -1924,10 +1924,10 @@ number.5.Cello.Music = {
         \>
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         - \tweak bound-details.right.padding 0.5
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \startTrillSpan d
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
@@ -1945,7 +1945,7 @@ number.5.Cello.Music = {
           %! baca.text_spanner()
         \stopTextSpan
           %! SPANNER_STOP
-          %! baca._do_spanner_indicator_command(4)
+          %! baca._do_spanner_indicator_command(2)
         \stopTrillSpan
         % SPANNER_STARTS:
           %! abjad.glissando(7)
@@ -2846,7 +2846,7 @@ number.5.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \pitchedTrill
           %! baca.make_skeleton()
         a4.
@@ -2900,7 +2900,7 @@ number.5.Cello.Music = {
         ~
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \startTrillSpan bf
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2929,7 +2929,7 @@ number.5.Cello.Music = {
           %! baca.text_spanner()
         \stopTextSpan
           %! SPANNER_STOP
-          %! baca._do_spanner_indicator_command(4)
+          %! baca._do_spanner_indicator_command(2)
         \stopTrillSpan
         % START_BEAM:
         [

@@ -2240,7 +2240,7 @@ number.4.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \pitchedTrill
           %! baca.make_skeleton()
         d2
@@ -2288,10 +2288,10 @@ number.4.Cello.Music = {
         \>
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         - \tweak bound-details.right.padding 0.5
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \startTrillSpan d
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
@@ -2309,7 +2309,7 @@ number.4.Cello.Music = {
           %! baca.text_spanner()
         \stopTextSpan
           %! SPANNER_STOP
-          %! baca._do_spanner_indicator_command(4)
+          %! baca._do_spanner_indicator_command(2)
         \stopTrillSpan
         % SPANNER_STARTS:
           %! abjad.glissando(7)
@@ -3668,7 +3668,7 @@ number.4.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \pitchedTrill
           %! baca.make_skeleton()
         fs!4
@@ -3718,10 +3718,10 @@ number.4.Cello.Music = {
         \<
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         - \tweak bound-details.right.padding 6.25
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \startTrillSpan g
         % CLOSING:
         % COMMANDS:
@@ -3745,7 +3745,7 @@ number.4.Cello.Music = {
         % AFTER:
         % SPANNER_STOPS:
           %! SPANNER_STOP
-          %! baca._do_spanner_indicator_command(4)
+          %! baca._do_spanner_indicator_command(2)
         \stopTrillSpan
         % SPANNER_STARTS:
           %! abjad.glissando(7)

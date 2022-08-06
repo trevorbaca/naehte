@@ -1513,7 +1513,7 @@ number.7.Cello.Music = {
         % OPENING:
         % PITCHED_TRILL:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \pitchedTrill
           %! baca.make_skeleton()
         e,4
@@ -1581,7 +1581,7 @@ number.7.Cello.Music = {
         ~
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca._do_spanner_indicator_command(2)
+          %! baca._do_spanner_indicator_command(1)
         \startTrillSpan e,
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1606,7 +1606,7 @@ number.7.Cello.Music = {
         \p
         % SPANNER_STOPS:
           %! SPANNER_STOP
-          %! baca._do_spanner_indicator_command(4)
+          %! baca._do_spanner_indicator_command(2)
         \stopTrillSpan
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
