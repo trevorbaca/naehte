@@ -42,8 +42,7 @@ manifests = accumulator.manifests()
 
 for index, item in ((1 - 1, "117"),):
     skip = skips[index]
-    indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark_function(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, item, manifests)
 
 baca.text_spanner_staff_padding_function(skips[:-1], 10)
 
