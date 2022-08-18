@@ -29,7 +29,7 @@ accumulator = baca.CommandAccumulator(
         (6, 8),
         (1, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations(),
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -376,7 +376,7 @@ if __name__ == "__main__":
     main()
     defaults = baca.interpret.section_defaults()
     del defaults["append_anchor_skip"]
-    metadata, persist, score, timing = baca.build.section(
+    metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
         accumulator.time_signatures,

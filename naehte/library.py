@@ -21,10 +21,6 @@ def make_empty_score():
     return score
 
 
-def voice_abbreviations():
-    return {"vc": "Cello.Music"}
-
-
 instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
 
 
@@ -40,3 +36,6 @@ manifests = {
     "abjad.Instrument": instruments,
     "abjad.MetronomeMark": metronome_marks,
 }
+
+
+voice_abbreviations = {"vc": "Cello.Music"}
