@@ -4,17 +4,6 @@ import abjad
 import baca
 
 
-def instruments():
-    return dict(
-        [
-            (
-                "Cello",
-                abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]")),
-            )
-        ]
-    )
-
-
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
@@ -32,16 +21,22 @@ def make_empty_score():
     return score
 
 
-def metronome_marks():
-    return dict(
-        [
-            ("39", abjad.MetronomeMark((1, 4), 39)),
-            ("52", abjad.MetronomeMark((1, 4), 52)),
-            ("91", abjad.MetronomeMark((1, 4), 91)),
-            ("117", abjad.MetronomeMark((1, 4), 117)),
-        ]
-    )
-
-
 def voice_abbreviations():
     return {"vc": "Cello.Music"}
+
+
+instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
+
+
+metronome_marks = {
+    "39": abjad.MetronomeMark((1, 4), 39),
+    "52": abjad.MetronomeMark((1, 4), 52),
+    "91": abjad.MetronomeMark((1, 4), 91),
+    "117": abjad.MetronomeMark((1, 4), 117),
+}
+
+
+manifests = {
+    "abjad.Instrument": instruments,
+    "abjad.MetronomeMark": metronome_marks,
+}
