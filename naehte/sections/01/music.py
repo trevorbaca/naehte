@@ -11,8 +11,7 @@ score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 accumulator = baca.CommandAccumulator(
-    instruments=library.instruments,
-    metronome_marks=library.metronome_marks,
+    manifests=library.manifests,
     time_signatures=[
         (7, 8),
         (6, 8),
@@ -89,7 +88,7 @@ def vc(m):
     accumulator(
         ("vc", 1),
         baca.instrument(
-            accumulator.instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.instrument_name(
             r"\naehte-cello-markup", selector=lambda _: abjad.select.leaf(_, 0)
