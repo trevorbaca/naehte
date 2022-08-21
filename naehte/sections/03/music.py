@@ -44,7 +44,6 @@ first_measure_number = baca.interpret.set_up_score(
 )
 
 skips = score["Skips"]
-manifests = library.manifests
 
 for index, item in (
     (1 - 1, "91"),
@@ -55,7 +54,7 @@ for index, item in (
     (15 - 1, "52"),
 ):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 baca.open_volta_function(skips[1 - 1], first_measure_number)
 baca.close_volta_function(skips[3 - 1], first_measure_number)
