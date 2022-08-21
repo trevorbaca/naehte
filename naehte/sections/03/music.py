@@ -41,7 +41,6 @@ first_measure_number = baca.interpret.set_up_score(
     accumulator,
     library.manifests,
     always_make_global_rests=True,
-    attach_nonfirst_empty_start_bar=True,
 )
 
 skips = score["Skips"]
