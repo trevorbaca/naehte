@@ -40,7 +40,6 @@ baca.interpret.set_up_score(
 )
 
 skips = score["Skips"]
-manifests = library.manifests
 
 for index, item in (
     (1 - 1, "117"),
@@ -48,7 +47,7 @@ for index, item in (
     (7 - 1, "117"),
 ):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 baca.bar_line_function(score["Skips"][14 - 1], "|.")
 

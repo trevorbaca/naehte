@@ -36,11 +36,10 @@ baca.interpret.set_up_score(
 )
 
 skips = score["Skips"]
-manifests = library.manifests
 
 for index, item in ((1 - 1, "117"),):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 baca.text_spanner_staff_padding_function(skips[:-1], 10)
 
