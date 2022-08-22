@@ -478,7 +478,7 @@ def vc(m):
     )
 
 
-def main():
+def make_score():
     VC(accumulator.voice("vc"))
     previous_persist = baca.previous_persist(__file__)
     previous_persistent_indicators = previous_persist["persistent_indicators"]
@@ -495,8 +495,8 @@ def main():
     vc(cache["vc"])
 
 
-if __name__ == "__main__":
-    main()
+def main():
+    make_score()
     metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
@@ -515,3 +515,7 @@ if __name__ == "__main__":
         includes=["../stylesheet.ily"],
     )
     baca.build.persist(lilypond_file, metadata, persist, timing)
+
+
+if __name__ == "__main__":
+    main()
