@@ -137,7 +137,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.new(
@@ -179,7 +178,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
         ),
     )
-
     accumulator(
         ("vc", 2),
         baca.pitch("Eb4"),
@@ -204,7 +202,6 @@ def vc(m):
         ),
         baca.tuplet_bracket_staff_padding(1),
     )
-
     accumulator(
         ("vc", 3),
         baca.hairpin(
@@ -252,7 +249,6 @@ def vc(m):
         ),
         baca.tuplet_bracket_staff_padding(1),
     )
-
     accumulator(
         ("vc", 4),
         baca.hairpin(
@@ -290,7 +286,6 @@ def vc(m):
             ),
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.finger_pressure_transition(
@@ -319,7 +314,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 6),
         baca.hairpin(
@@ -337,7 +331,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         ("vc", (5, 6)),
         baca.text_spanner(
@@ -348,7 +341,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", (7, 8)),
         baca.hairpin(
@@ -426,7 +418,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", 9),
         baca.hairpin(
@@ -454,7 +445,6 @@ def vc(m):
             lilypond_id=1,
         ),
     )
-
     accumulator(
         ("vc", 11),
         baca.hairpin(
@@ -533,7 +523,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, -2),
         ),
     )
-
     accumulator(
         ("vc", 12),
         baca.hairpin(
@@ -586,7 +575,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     )
-
     accumulator(
         ("vc", 13),
         baca.hairpin(
@@ -612,7 +600,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 14),
         baca.new(
@@ -633,7 +620,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(abjad.select.leaves(_), count=2),
         ),
     )
-
     accumulator(
         ("vc", 15),
         baca.pitch(
@@ -659,7 +645,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
         ),
     )
-
     accumulator(
         ("vc", 16),
         baca.pitch("<C#3 A3>"),
@@ -677,7 +662,6 @@ def vc(m):
             bookend=False,
         ),
     )
-
     accumulator(
         ("vc", (15, 16)),
         baca.breathe(
@@ -689,7 +673,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[1:],
         ),
     )
-
     accumulator(
         "vc",
         baca.new(

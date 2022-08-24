@@ -151,7 +151,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.hairpin(
@@ -190,7 +189,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, 4),
         ),
     )
-
     accumulator(
         ("vc", 2),
         baca.hairpin(
@@ -242,7 +240,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
     )
-
     accumulator(
         ("vc", 3),
         baca.breathe(
@@ -266,7 +263,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         ("vc", 4),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
@@ -288,7 +284,6 @@ def vc(m):
             zero_padding=True,
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.finger_pressure_transition(
@@ -297,7 +292,6 @@ def vc(m):
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G3 D4>"),
     )
-
     accumulator(
         ("vc", 6),
         baca.breathe(
@@ -314,7 +308,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
         ),
     )
-
     accumulator(
         ("vc", (4, 5)),
         baca.hairpin(
@@ -328,7 +321,6 @@ def vc(m):
             lilypond_id=1,
         ),
     )
-
     accumulator(
         ("vc", (4, 6)),
         baca.text_spanner(
@@ -339,7 +331,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:-2],
         ),
     )
-
     accumulator(
         ("vc", 8),
         baca.dynamic(
@@ -359,7 +350,6 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
     )
-
     accumulator(
         ("vc", (9, 10)),
         baca.hairpin(
@@ -430,7 +420,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[1:7],
         ),
     )
-
     accumulator(
         ("vc", 11),
         baca.hairpin(
@@ -458,7 +447,6 @@ def vc(m):
             lilypond_id=1,
         ),
     )
-
     accumulator(
         ("vc", 13),
         baca.hairpin(
@@ -537,7 +525,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, -2),
         ),
     )
-
     accumulator(
         ("vc", 14),
         baca.hairpin(
@@ -591,7 +578,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     )
-
     accumulator(
         ("vc", 15),
         baca.dynamic(
@@ -609,7 +595,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 16),
         baca.pitches(
@@ -621,7 +606,6 @@ def vc(m):
         ),
         baca.glissando(selector=lambda _: baca.select.tleaves(_)),
     )
-
     accumulator(
         ("vc", 17),
         baca.hairpin(
@@ -637,7 +621,6 @@ def vc(m):
         ),
         baca.glissando(selector=lambda _: baca.select.tleaves(_)),
     )
-
     accumulator(
         ("vc", (16, 17)),
         baca.text_spanner(
@@ -658,7 +641,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         "vc",
         baca.new(

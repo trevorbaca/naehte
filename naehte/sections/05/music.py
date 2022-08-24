@@ -114,7 +114,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.hairpin(
@@ -147,7 +146,6 @@ def vc(m):
         ),
         baca.tuplet_bracket_padding(1.75),
     )
-
     accumulator(
         ("vc", 2),
         baca.pitch("E2"),
@@ -155,7 +153,6 @@ def vc(m):
             lambda _: baca.select.pleaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", 3),
         baca.glissando(
@@ -173,7 +170,6 @@ def vc(m):
             lambda _: baca.select.pleaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", (2, 3)),
         baca.hairpin(
@@ -193,7 +189,6 @@ def vc(m):
             ),
         ),
     )
-
     accumulator(
         ("vc", 4),
         baca.hairpin(
@@ -232,7 +227,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.finger_pressure_transition(
@@ -269,7 +263,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 6),
         baca.hairpin(
@@ -287,7 +280,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         ("vc", 7),
         baca.hairpin(
@@ -335,7 +327,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
         ),
     )
-
     accumulator(
         ("vc", (5, 7)),
         baca.text_spanner(
@@ -346,7 +337,6 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 5, 7]),
         ),
     )
-
     accumulator(
         ("vc", 8),
         baca.hairpin(
@@ -377,7 +367,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 9),
         baca.hairpin(
@@ -393,7 +382,6 @@ def vc(m):
             ),
         ),
     )
-
     accumulator(
         ("vc", 10),
         baca.hairpin(
@@ -448,7 +436,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 12),
         baca.hairpin(
@@ -471,7 +458,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         "vc",
         baca.dls_staff_padding(8),

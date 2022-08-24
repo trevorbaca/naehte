@@ -140,7 +140,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.new(
@@ -158,7 +157,6 @@ def vc(m):
         ),
         baca.pitch("<B3 F#4>"),
     )
-
     accumulator(
         ("vc", 2),
         baca.new(
@@ -169,7 +167,6 @@ def vc(m):
         ),
         baca.pitch("<B3 F#4>"),
     )
-
     accumulator(
         ("vc", 3),
         baca.new(
@@ -180,7 +177,6 @@ def vc(m):
         ),
         baca.pitch("<B3 F#4>"),
     )
-
     accumulator(
         ("vc", 4),
         baca.breathe(
@@ -223,7 +219,6 @@ def vc(m):
         ),
         baca.tuplet_bracket_padding(1.75),
     )
-
     accumulator(
         ("vc", 5),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
@@ -235,7 +230,6 @@ def vc(m):
         ),
         baca.pitch("<B3 F#4>"),
     )
-
     accumulator(
         ("vc", 6),
         baca.finger_pressure_transition(
@@ -263,7 +257,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 7),
         baca.glissando(
@@ -319,7 +312,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 9),
         baca.hairpin(
@@ -339,7 +331,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         ("vc", 10),
         baca.finger_pressure_transition(
@@ -368,7 +359,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 11),
         baca.hairpin(
@@ -393,7 +383,6 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
     )
-
     accumulator(
         ("vc", 12),
         baca.hairpin(
@@ -414,7 +403,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     )
-
     accumulator(
         ("vc", 14),
         baca.hairpin(
@@ -446,7 +434,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         "vc",
         baca.dls_staff_padding(6),
