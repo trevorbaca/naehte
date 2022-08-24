@@ -107,7 +107,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.pitches("D2 <Db2 A2> D2"),
@@ -127,7 +126,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[-2:],
         ),
     )
-
     accumulator(
         ("vc", 2),
         baca.hairpin(
@@ -147,7 +145,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[-2:],
         ),
     )
-
     accumulator(
         ("vc", 3),
         baca.breathe(
@@ -166,7 +163,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.hairpin(
@@ -188,7 +184,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, 3),
         ),
     )
-
     accumulator(
         ("vc", 6),
         baca.breathe(
@@ -221,7 +216,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 7),
         baca.dynamic("pppp-sempre", selector=lambda _: baca.select.phead(_, 0)),
@@ -237,7 +231,6 @@ def vc(m):
             lilypond_id=2,
         ),
     )
-
     accumulator(
         ("vc", 8),
         baca.pitch("<F3 C4>"),
@@ -248,7 +241,6 @@ def vc(m):
             lilypond_id=2,
         ),
     )
-
     accumulator(
         ("vc", (7, 8)),
         baca.text_spanner(
@@ -279,7 +271,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", (10, 13)),
         baca.dynamic_text_self_alignment_x(
@@ -316,7 +307,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         "vc",
         baca.new(
@@ -336,7 +326,6 @@ def vc(m):
             measures=(10, 14),
         ),
     )
-
     accumulator(
         ("vc", -1),
         baca.chunk(

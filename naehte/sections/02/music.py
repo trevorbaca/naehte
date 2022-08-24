@@ -142,7 +142,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.new(
@@ -193,7 +192,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:-3],
         ),
     )
-
     accumulator(
         ("vc", 2),
         baca.accidental_extra_offset(
@@ -241,7 +239,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[-4:],
         ),
     )
-
     accumulator(
         ("vc", (3, 4)),
         baca.hairpin(
@@ -316,7 +313,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, 1),
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.hairpin(
@@ -344,7 +340,6 @@ def vc(m):
             lilypond_id=1,
         ),
     )
-
     accumulator(
         ("vc", 7),
         baca.hairpin(
@@ -410,7 +405,6 @@ def vc(m):
             selector=lambda _: abjad.select.leaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", 9),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -434,7 +428,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", (11, 13)),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -468,7 +461,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 14),
         baca.accidental_extra_offset(
@@ -522,7 +514,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:3],
         ),
     )
-
     accumulator(
         ("vc", 15),
         baca.hairpin(
@@ -541,7 +532,6 @@ def vc(m):
         baca.tuplet_bracket_down(),
         baca.tuplet_bracket_staff_padding(2.5),
     )
-
     accumulator(
         ("vc", 16),
         baca.pitch("Db2"),
@@ -553,7 +543,6 @@ def vc(m):
             lambda _: baca.select.pleaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", 17),
         baca.dynamic('"fff"', selector=lambda _: baca.select.phead(_, 0)),
@@ -566,7 +555,6 @@ def vc(m):
             lambda _: baca.select.pleaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", 18),
         baca.pitch("Db2"),
@@ -578,7 +566,6 @@ def vc(m):
             lambda _: baca.select.pleaf(_, 0),
         ),
     )
-
     accumulator(
         ("vc", (18, 19)),
         baca.hairpin("fff > pppp"),
@@ -590,7 +577,6 @@ def vc(m):
         ),
         baca.interpolate_pitches("Db2", "Eb2"),
     )
-
     accumulator(
         ("vc", (15, 19)),
         baca.text_spanner(
@@ -601,7 +587,6 @@ def vc(m):
             pieces=lambda _: baca.select.lparts(_, [1, 2, 1, 6, 4]),
         ),
     )
-
     accumulator(
         "vc",
         baca.new(

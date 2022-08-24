@@ -131,7 +131,6 @@ def VC(voice):
 
 
 def vc(m):
-
     accumulator(
         ("vc", 1),
         baca.pitches(
@@ -146,7 +145,6 @@ def vc(m):
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_staff_padding(2),
     )
-
     accumulator(
         ("vc", 2),
         baca.finger_pressure_transition(),
@@ -170,7 +168,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(abjad.select.leaves(_), count=3),
         ),
     )
-
     accumulator(
         ("vc", 3),
         baca.finger_pressure_transition(
@@ -190,7 +187,6 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[:2],
         ),
     )
-
     accumulator(
         ("vc", 4),
         baca.hairpin(
@@ -221,7 +217,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     )
-
     accumulator(
         ("vc", 5),
         baca.hairpin(
@@ -250,7 +245,6 @@ def vc(m):
             bookend=False,
         ),
     )
-
     accumulator(
         ("vc", 6),
         baca.breathe(
@@ -279,7 +273,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 7),
         baca.new(
@@ -297,7 +290,6 @@ def vc(m):
         ),
         baca.pitch("<B3 F#4>"),
     )
-
     accumulator(
         ("vc", 8),
         baca.finger_pressure_transition(
@@ -326,7 +318,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         ("vc", 9),
         baca.hairpin(
@@ -351,7 +342,6 @@ def vc(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
     )
-
     accumulator(
         ("vc", 10),
         baca.hairpin(
@@ -375,7 +365,6 @@ def vc(m):
             selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
         ),
     )
-
     accumulator(
         ("vc", 11),
         baca.finger_pressure_transition(
@@ -407,14 +396,12 @@ def vc(m):
             selector=lambda _: baca.select.leaves(_)[-2:],
         ),
     )
-
     accumulator(
         ("vc", 12),
         baca.finger_pressure_transition(
             selector=lambda _: baca.select.lleak(baca.select.leaves(_)[:1]),
         ),
     )
-
     accumulator(
         ("vc", (12, 13)),
         baca.accent(
@@ -462,7 +449,6 @@ def vc(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
     )
-
     accumulator(
         "vc",
         baca.new(
