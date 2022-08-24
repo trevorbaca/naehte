@@ -1012,14 +1012,12 @@ number.6.Cello.Music = {
         % [Cello.Music measure 1]
         % BEFORE:
         % COMMANDS:
-          %! baca.OverrideCommand._call(1)
-          %! baca.dynamic_text_self_alignment_x()
+          %! baca.dynamic_text_self_alignment_x_function(1)
         \once \override DynamicText.self-alignment-X = -0.75
           %! baca.OverrideCommand._call(1)
           %! baca.dls_staff_padding()
         \override DynamicLineSpanner.staff-padding = 6
-          %! baca.OverrideCommand._call(1)
-          %! baca.note_head_style_harmonic()
+          %! baca.note_head_style_harmonic_function(1)
         \override NoteHead.style = #'harmonic
         % OPENING:
         % COMMANDS:
@@ -1041,24 +1039,22 @@ number.6.Cello.Music = {
         <b fs'!>8
         % AFTER:
         % STEM_TREMOLOS:
-          %! baca._attach_persistent_indicator()
-          %! baca.stem_tremolo()
+          %! baca.stem_tremolo_function()
         :32
         % ARTICULATIONS:
-          %! baca._attach_persistent_indicator()
-          %! baca.espressivo()
+          %! baca.espressivo_function()
         - \espressivo
           %! EXPLICIT_DYNAMIC_COLOR
           %! baca.treat_persistent_wrapper()
           %! EXPLICIT_DYNAMIC
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.dynamic()
+          %! baca.dynamic_function()
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
           %! baca._attach_persistent_indicator()
           %! baca._set_status_tag()
-          %! baca.dynamic()
+          %! baca.dynamic_function()
         \baca-p-sempre
         % MARKUP:
           %! REAPPLIED_INSTRUMENT_ALERT
@@ -1077,12 +1073,10 @@ number.6.Cello.Music = {
         <b fs'!>8
         % AFTER:
         % STEM_TREMOLOS:
-          %! baca._attach_persistent_indicator()
-          %! baca.stem_tremolo()
+          %! baca.stem_tremolo_function()
         :32
         % ARTICULATIONS:
-          %! baca._attach_persistent_indicator()
-          %! baca.espressivo()
+          %! baca.espressivo_function()
         - \espressivo
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1090,12 +1084,10 @@ number.6.Cello.Music = {
         <b fs'!>8
         % AFTER:
         % STEM_TREMOLOS:
-          %! baca._attach_persistent_indicator()
-          %! baca.stem_tremolo()
+          %! baca.stem_tremolo_function()
         :32
         % ARTICULATIONS:
-          %! baca._attach_persistent_indicator()
-          %! baca.espressivo()
+          %! baca.espressivo_function()
         - \espressivo
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1103,12 +1095,10 @@ number.6.Cello.Music = {
         <b fs'!>8
         % AFTER:
         % STEM_TREMOLOS:
-          %! baca._attach_persistent_indicator()
-          %! baca.stem_tremolo()
+          %! baca.stem_tremolo_function()
         :32
         % ARTICULATIONS:
-          %! baca._attach_persistent_indicator()
-          %! baca.espressivo()
+          %! baca.espressivo_function()
         - \espressivo
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1124,12 +1114,10 @@ number.6.Cello.Music = {
             <b fs'!>8
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca._attach_persistent_indicator()
-              %! baca.stem_tremolo()
+              %! baca.stem_tremolo_function()
             :32
             % ARTICULATIONS:
-              %! baca._attach_persistent_indicator()
-              %! baca.espressivo()
+              %! baca.espressivo_function()
             - \espressivo
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -1137,12 +1125,10 @@ number.6.Cello.Music = {
             <b fs'!>8
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca._attach_persistent_indicator()
-              %! baca.stem_tremolo()
+              %! baca.stem_tremolo_function()
             :32
             % ARTICULATIONS:
-              %! baca._attach_persistent_indicator()
-              %! baca.espressivo()
+              %! baca.espressivo_function()
             - \espressivo
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -1150,12 +1136,10 @@ number.6.Cello.Music = {
             <b fs'!>8
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca._attach_persistent_indicator()
-              %! baca.stem_tremolo()
+              %! baca.stem_tremolo_function()
             :32
             % ARTICULATIONS:
-              %! baca._attach_persistent_indicator()
-              %! baca.espressivo()
+              %! baca.espressivo_function()
             - \espressivo
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -1163,12 +1147,10 @@ number.6.Cello.Music = {
             <b fs'!>8
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca._attach_persistent_indicator()
-              %! baca.stem_tremolo()
+              %! baca.stem_tremolo_function()
             :32
             % ARTICULATIONS:
-              %! baca._attach_persistent_indicator()
-              %! baca.espressivo()
+              %! baca.espressivo_function()
             - \espressivo
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -1176,18 +1158,15 @@ number.6.Cello.Music = {
             <b fs'!>8
             % AFTER:
             % STEM_TREMOLOS:
-              %! baca._attach_persistent_indicator()
-              %! baca.stem_tremolo()
+              %! baca.stem_tremolo_function()
             :32
             % ARTICULATIONS:
-              %! baca._attach_persistent_indicator()
-              %! baca.espressivo()
+              %! baca.espressivo_function()
             - \espressivo
             % STOP_BEAM:
             ]
             % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.note_head_style_harmonic()
+              %! baca.note_head_style_harmonic_function(2)
             \revert NoteHead.style
             % CLOSING:
             % COMMANDS:

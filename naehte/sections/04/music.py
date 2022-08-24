@@ -136,48 +136,40 @@ def VC(voice):
     voice.extend(music)
 
 
-def vc(m):
-    accumulator(
-        ("vc", 1),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            selector=lambda _: baca.select.leaves(_)[1:],
-        ),
-        baca.hairpin(
+def vc(cache):
+    m = cache["vc"]
+    with baca.scope(m[1]) as o:
+        baca.repeat_tie_extra_offset_function(o.leaves()[1:], (-1.5, 0))
+        baca.repeat_tie_function(o.leaves()[1:])
+        baca.hairpin_function(
+            o.rleaves(),
             'o< "f" >',
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 3]),
-            selector=lambda _: baca.select.rleaves(_),
-        ),
-        baca.pitch("C#3"),
-        baca.glissando(
-            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
-        ),
-        baca.text_spanner(
+        )
+        baca.pitch_function(o, "C#3")
+        baca.glissando_function(baca.select.rleak(o.leaves()[-1:]))
+        baca.text_spanner_function(
+            o.rleaves(),
             r"\baca-damp-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.select.rleaves(_),
-        ),
-        baca.text_spanner(
+        )
+        baca.text_spanner_function(
+            o.leaves()[:2],
             r"\baca-circle-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            selector=lambda _: baca.select.leaves(_)[:2],
-        ),
-        baca.text_spanner(
+        )
+        baca.text_spanner_function(
+            baca.select.rleak(o.leaves()[-2:]),
             r"spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
-            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
-        ),
-    )
+        )
     accumulator(
         ("vc", 2),
         baca.pitch("Eb4"),
@@ -705,7 +697,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    vc(cache["vc"])
+    vc(cache)
 
 
 def main():

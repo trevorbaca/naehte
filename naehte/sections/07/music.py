@@ -130,21 +130,19 @@ def VC(voice):
     voice.extend(music)
 
 
-def vc(m):
-    accumulator(
-        ("vc", 1),
-        baca.pitches(
-            "F5 G3 A4 B2 C4 D2",
-        ),
-        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
-        baca.hairpin(
+def vc(cache):
+    m = cache["vc"]
+    with baca.scope(m[1]) as o:
+        baca.pitches_function(o, "F5 G3 A4 B2 C4 D2"),
+        baca.glissando_function(o.tleaves())
+        baca.hairpin_function(
+            o,
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
-        ),
-        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
-        baca.tuplet_bracket_staff_padding(2),
-    )
+        )
+        baca.note_head_style_harmonic_function(o.pleaves())
+        baca.tuplet_bracket_staff_padding_function(o, 2)
     accumulator(
         ("vc", 2),
         baca.finger_pressure_transition(),
@@ -480,7 +478,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    vc(cache["vc"])
+    vc(cache)
 
 
 def main():
