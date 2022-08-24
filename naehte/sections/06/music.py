@@ -63,46 +63,35 @@ for index, string in (
 
 
 def VC(voice):
-
-    voice = score["Cello.Music"]
-
     # 1
     music = baca.make_skeleton(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     voice.extend(music)
-
     # 2
     music = baca.make_skeleton(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     voice.extend(music)
-
     # 3
     music = baca.make_skeleton(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     voice.extend(music)
-
     # 4
     music = baca.make_skeleton(
         "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c2... r16" " }"
     )
     voice.extend(music)
-
     # 5
     music = baca.make_skeleton(
         r"{ c8 [ c c c \times 4/5 { c c c c c ] } }",
     )
     voice.extend(music)
-
     # 6
     music = baca.make_skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     )
     voice.extend(music)
-
     # 7
     music = baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(8), head=voice.name)
     voice.extend(music)
-
     # 9
     music = baca.make_skeleton(
         r"\times 4/5 { c4. c8 [ c ] }",
@@ -110,31 +99,25 @@ def VC(voice):
     for leaf in baca.select.leaves(music)[-2:]:
         baca.repeat_tie_function(leaf)
     voice.extend(music)
-
     # 10
     music = baca.make_skeleton(
         r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }",
     )
     voice.extend(music)
-
     # 11
     music = baca.make_skeleton("{ c4 c8 }")
     leaf = abjad.select.leaf(music, -1)
     baca.repeat_tie_extra_offset_function(leaf, (-1.5, 0))
     baca.repeat_tie_function(leaf)
     voice.extend(music)
-
     # 12
     music = baca.make_skeleton("{ c4 c4. }")
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(13), head=voice.name)
     voice.extend(music)
-
     # 14
     music = baca.make_skeleton("{ c4 c c c c c c c c c c }")
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(15), head=voice.name)
     voice.extend(music)
 

@@ -69,54 +69,40 @@ for index, string in (
 
 
 def VC(voice):
-
-    voice = score["Cello.Music"]
-
     # 1
     music = baca.make_skeleton(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }")
     voice.extend(music)
-
     # 2
     music = baca.make_skeleton("{ c4 c c c }")
     voice.extend(music)
-
     # 3
     music = baca.make_skeleton("{ c8. c8. }")
     voice.extend(music)
-
     # 4
     music = baca.make_skeleton(r"{ c4 c c c c c c c }")
     voice.extend(music)
-
     # 5
     music = baca.make_skeleton(r" \times 4/5 { c1 c4 }")
     voice.extend(music)
-
     # 6
     music = baca.make_skeleton(r"{ \times 3/4 { c8 [ c c c ~ ] } c8 }")
     voice.extend(music)
-
     # 7
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
-
     # 8
     music = baca.make_skeleton(r"{ c1.. c4 }")
     voice.extend(music)
-
     # (9, 10)
     music = baca.make_skeleton(
         "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
     )
     voice.extend(music)
-
     # 11
     music = baca.make_skeleton("{ c4.. c16 }")
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(12))
     voice.extend(music)
-
     # 13
     music = baca.make_skeleton(
         "{"
@@ -125,27 +111,22 @@ def VC(voice):
         " }"
     )
     voice.extend(music)
-
     # 14
     music = baca.make_skeleton("{ c4 c c c }")
     voice.extend(music)
-
     # 15
     music = baca.make_skeleton(r"{ c2 }")
     voice.extend(music)
-
     # 16
     music = baca.make_skeleton(
         r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
     )
     voice.extend(music)
-
     # 17
     music = baca.make_skeleton(
         r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }"
     )
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(18), head=voice.name)
     voice.extend(music)
 
