@@ -58,58 +58,43 @@ for index, string in ((11 - 1, "fermata"),):
 
 
 def VC(voice):
-
-    voice = score["Cello.Music"]
-
     # 1
     music = baca.make_skeleton(
         "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"
     )
     voice.extend(music)
-
     # 2
     music = baca.make_skeleton(r"{ c\breve }")
     voice.extend(music)
-
     # 3
     music = baca.make_skeleton(r"{ c4 c c c c c c c c c }")
     voice.extend(music)
-
     # 4
     music = baca.make_skeleton(r"{ c8 c4. c8 }")
     voice.extend(music)
-
     # 5
     music = baca.make_skeleton(r"{ c2 c32 [ c c c ] }")
     voice.extend(music)
-
     # 6
     music = baca.make_skeleton(r"{ c2 c8 }")
     voice.extend(music)
-
     # 7
     music = baca.make_skeleton("{" r" \times 3/5 { c4 c c c c }" " c1" " }")
     voice.extend(music)
-
     # 8
     music = baca.make_skeleton("{ c2 c8 }")
     voice.extend(music)
-
     # 9
     music = baca.make_skeleton("{ c2 }")
     voice.extend(music)
-
     # 10
     music = baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
     voice.extend(music)
-
     music = baca.make_mmrests(accumulator.get(11), head=voice.name)
     voice.extend(music)
-
     # 12
     music = baca.make_skeleton(r"\times 4/5 { c4. c8 [ c ] }")
     voice.extend(music)
-
     baca.append_anchor_note_function(voice)
 
 
