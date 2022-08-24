@@ -141,57 +141,45 @@ def VC(voice):
     baca.append_anchor_note_function(voice)
 
 
-def vc(m):
-    accumulator(
-        ("vc", 1),
-        baca.new(
-            baca.repeat_tie_extra_offset((-1.5, 0)),
-            baca.repeat_tie(
-                lambda _: baca.select.pleaf(_, 0),
-            ),
-            baca.repeat_tie_up(),
-            selector=lambda _: baca.select.leaves(_)[1:3],
-        ),
-        baca.hairpin(
+def vc(cache):
+    m = cache["vc"]
+    with baca.scope(m[1]) as o:
+        baca.repeat_tie_extra_offset_function(o.leaves()[1:3], (-1.5, 0))
+        baca.repeat_tie_function(o.leaves()[1:3])
+        baca.repeat_tie_up_function(o.leaves()[1:3])
+        baca.hairpin_function(
+            o,
             "o< f >",
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [1, 5]),
-        ),
-        baca.literal(
+        )
+        baca.literal_function(
+            o.leaf(-1),
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
-            selector=lambda _: abjad.select.leaf(_, -1),
-        ),
-        baca.note_head_transparent(
-            selector=lambda _: baca.select.leaves(_)[-3:],
-        ),
-        baca.note_head_x_extent_zero(
-            selector=lambda _: baca.select.leaves(_)[-3:],
-        ),
-        baca.pitches("F#3 B2 G3 A2"),
-        baca.glissando(
-            selector=lambda _: baca.select.leaves(_)[-4:],
-            zero_padding=True,
-        ),
-        baca.glissando(
+        )
+        baca.note_head_transparent_function(o.leaves()[-3:])
+        baca.note_head_x_extent_zero_function(o.leaves()[-3:])
+        baca.pitches_function(o, "F#3 B2 G3 A2")
+        baca.glissando_function(o.leaves()[-4:], zero_padding=True)
+        baca.glissando_function(
+            baca.select.rleak(o.leaves()[-1:]),
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
-            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
-        ),
-        baca.text_spanner(
+        )
+        baca.text_spanner_function(
+            o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.select.leaves(_)[-4:],
-        ),
-        baca.text_spanner(
+        )
+    with baca.scope(m.get(1, 2)) as o:
+        baca.text_spanner_function(
+            o.leaves()[:-3],
             "no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            measures=(1, 2),
             pieces=lambda _: baca.select.lparts(_, [1, 1, 5, 2]),
-            selector=lambda _: baca.select.leaves(_)[:-3],
-        ),
-    )
+        )
     accumulator(
         ("vc", 2),
         baca.accidental_extra_offset(
@@ -639,7 +627,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    vc(cache["vc"])
+    vc(cache)
 
 
 def main():

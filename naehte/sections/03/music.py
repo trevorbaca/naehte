@@ -150,45 +150,39 @@ def VC(voice):
     voice.extend(music)
 
 
-def vc(m):
-    accumulator(
-        ("vc", 1),
-        baca.hairpin(
+def vc(cache):
+    m = cache["vc"]
+    with baca.scope(m[1]) as o:
+        baca.hairpin_function(
+            o,
             r"p > ppp <",
             pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
         ),
-        baca.pitches("Eb2 B3 F2 A3 G2 F#3"),
-        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
-        baca.text_spanner(
+        baca.pitches_function(o, "Eb2 B3 F2 A3 G2 F#3")
+        baca.glissando_function(o.tleaves())
+        baca.text_spanner_function(
+            o.leaves()[:5],
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.select.leaves(_)[:5],
-        ),
-        baca.text_spanner(
+        )
+        baca.text_spanner_function(
+            o.leaves()[4:6],
             "spz. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.select.leaves(_)[4:6],
-        ),
-        baca.text_spanner(
+        )
+        baca.text_spanner_function(
+            baca.select.rleak(o.leaves()[-1:], count=2),
             "(LH) vib. molto =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:], count=2),
-        ),
-        baca.tuplet_bracket_staff_padding(
-            2 + 1.25,
-            selector=lambda _: abjad.select.leaf(_, 2),
-        ),
-        baca.tuplet_bracket_staff_padding(
-            2,
-            selector=lambda _: abjad.select.leaf(_, 4),
-        ),
-    )
+        )
+        baca.tuplet_bracket_staff_padding_function(o.leaf(2), 2 + 1.25)
+        baca.tuplet_bracket_staff_padding_function(o.leaf(4), 2)
     accumulator(
         ("vc", 2),
         baca.hairpin(
@@ -697,7 +691,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    vc(cache["vc"])
+    vc(cache)
 
 
 def main():

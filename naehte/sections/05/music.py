@@ -113,39 +113,26 @@ def VC(voice):
     baca.append_anchor_note_function(voice)
 
 
-def vc(m):
-    accumulator(
-        ("vc", 1),
-        baca.hairpin(
+def vc(cache):
+    m = cache["vc"]
+    with baca.scope(m[1]) as o:
+        baca.hairpin_function(
+            o.rleaves(),
             "o< pp > ppp < f",
             pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
-            selector=lambda _: baca.select.rleaves(_),
-        ),
-        baca.note_head_extra_offset(
-            (-1.25, 0),
-            selector=lambda _: baca.select.pleaf(_, 0),
-        ),
-        baca.note_head_transparent(
-            selector=lambda _: baca.select.pleaves(_)[1:-1],
-        ),
-        baca.note_head_x_extent_zero(
-            selector=lambda _: baca.select.pleaves(_)[:-1],
-        ),
-        baca.pitches(
-            "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
-        ),
-        baca.glissando(
-            selector=lambda _: baca.select.leaves(_),
-            zero_padding=True,
-        ),
-        baca.text_spanner(
+        )
+        baca.note_head_extra_offset_function(o.pleaf(0), (-1.25, 0))
+        baca.note_head_transparent_function(o.pleaves()[1:-1])
+        baca.note_head_x_extent_zero_function(o.pleaves()[:-1])
+        baca.pitches_function(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
+        baca.glissando_function(o.leaves(), zero_padding=True)
+        baca.text_spanner_function(
+            baca.select.rleak(o.leaves()[-1:]),
             "RH vibr. strettiss. -> RH NV",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             lilypond_id=1,
-            selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
-        ),
-        baca.tuplet_bracket_padding(1.75),
-    )
+        )
+        baca.tuplet_bracket_padding_function(o, 1.75)
     accumulator(
         ("vc", 2),
         baca.pitch("E2"),
@@ -478,7 +465,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    vc(cache["vc"])
+    vc(cache)
 
 
 def main():
