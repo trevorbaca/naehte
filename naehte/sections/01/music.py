@@ -7,41 +7,32 @@ from naehte import library
 ########################################### 01 ##########################################
 #########################################################################################
 
-score = library.make_empty_score()
-voice_names = baca.accumulator.get_voice_names(score)
 
-accumulator = baca.CommandAccumulator(
-    time_signatures=[
-        (7, 8),
-        (6, 8),
-        (5, 4),
-        (6, 8),
-        (5, 4),
-        (4, 4),
-        (2, 4),
-        (4, 4),
-    ],
-    _voice_abbreviations=library.voice_abbreviations,
-    _voice_names=voice_names,
-)
+def make_empty_score():
+    score = library.make_empty_score()
+    voice_names = baca.accumulator.get_voice_names(score)
+    accumulator = baca.CommandAccumulator(
+        time_signatures=[
+            (7, 8),
+            (6, 8),
+            (5, 4),
+            (6, 8),
+            (5, 4),
+            (4, 4),
+            (2, 4),
+            (4, 4),
+        ],
+        _voice_abbreviations=library.voice_abbreviations,
+        _voice_names=voice_names,
+    )
+    return score, accumulator
 
-baca.interpret.set_up_score(
-    score,
-    accumulator.time_signatures,
-    accumulator,
-    library.manifests,
-    append_anchor_skip=True,
-    always_make_global_rests=True,
-    first_section=True,
-)
 
-skips = score["Skips"]
-
-for index, item in ((1 - 1, "117"),):
-    skip = skips[index]
-    baca.metronome_mark_function(skip, item, library.manifests)
-
-baca.text_spanner_staff_padding_function(skips[:-1], 10)
+def GLOBALS(skips):
+    for index, item in ((1 - 1, "117"),):
+        skip = skips[index]
+        baca.metronome_mark_function(skip, item, library.manifests)
+    baca.text_spanner_staff_padding_function(skips[:-1], 10)
 
 
 def VC(voice):
@@ -251,6 +242,17 @@ def vc(cache):
 
 
 def make_score():
+    score, accumulator = make_empty_score()
+    baca.interpret.set_up_score(
+        score,
+        accumulator.time_signatures,
+        accumulator,
+        library.manifests,
+        append_anchor_skip=True,
+        always_make_global_rests=True,
+        first_section=True,
+    )
+    GLOBALS(score["Skips"])
     VC(accumulator.voice("vc"))
     cache = baca.interpret.cache_leaves(
         score,
@@ -258,16 +260,17 @@ def make_score():
         library.voice_abbreviations,
     )
     vc(cache)
+    return score, accumulator
 
 
 def main():
-    make_score()
+    score, accumulator = make_score()
     metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
         accumulator.time_signatures,
         **baca.interpret.section_defaults(),
-        activate=(baca.tags.LOCAL_MEASURE_NUMBER,),
+        activate=[baca.tags.LOCAL_MEASURE_NUMBER],
         always_make_global_rests=True,
         do_not_require_short_instrument_names=True,
         error_on_not_yet_pitched=True,
