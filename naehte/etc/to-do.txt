@@ -66,8 +66,8 @@ TO-DO
 
 9.  Allow trend-initial text spanners:
         baca.text_spanner(
+            baca.select.lleak(o.leaves()),
             r'-> XFB =|',
             bookend=False,
             pieces=lambda _: baca.select.lparts(_, [2, 4]),
-            selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         )
