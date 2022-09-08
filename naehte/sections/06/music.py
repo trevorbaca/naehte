@@ -45,13 +45,13 @@ def GLOBALS(skips, rests):
         (14 - 1, "39"),
     ):
         skip = skips[index]
-        baca.metronome_mark_function(skip, item, library.manifests)
+        baca.metronome_mark(skip, item, library.manifests)
     for index, string in (
         (8 - 1, "fermata"),
         (13 - 1, "fermata"),
         (15 - 1, "fermata"),
     ):
-        baca.global_fermata_function(rests[index], string)
+        baca.global_fermata(rests[index], string)
 
 
 def VC(voice, accumulator):
@@ -89,7 +89,7 @@ def VC(voice, accumulator):
         r"\times 4/5 { c4. c8 [ c ] }",
     )
     for leaf in baca.select.leaves(music)[-2:]:
-        baca.repeat_tie_function(leaf)
+        baca.repeat_tie(leaf)
     voice.extend(music)
     # 10
     music = baca.make_skeleton(
@@ -99,8 +99,8 @@ def VC(voice, accumulator):
     # 11
     music = baca.make_skeleton("{ c4 c8 }")
     leaf = abjad.select.leaf(music, -1)
-    baca.repeat_tie_extra_offset_function(leaf, (-1.5, 0))
-    baca.repeat_tie_function(leaf)
+    baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
+    baca.repeat_tie(leaf)
     voice.extend(music)
     # 12
     music = baca.make_skeleton("{ c4 c4. }")
@@ -117,71 +117,71 @@ def VC(voice, accumulator):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.dynamic_text_self_alignment_x_function(o.pleaf(0), -0.75)
-        baca.dynamic_function(o.phead(0), "p-sempre")
-        baca.espressivo_function(o.pleaves())
-        baca.note_head_style_harmonic_function(o.pleaves())
-        baca.stem_tremolo_function(o.pleaves())
-        baca.pitch_function(o, "<B3 F#4>")
+        baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.75)
+        baca.dynamic(o.phead(0), "p-sempre")
+        baca.espressivo(o.pleaves())
+        baca.note_head_style_harmonic(o.pleaves())
+        baca.stem_tremolo(o.pleaves())
+        baca.pitch(o, "<B3 F#4>")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[2]) as o:
-        baca.pitch_function(o, "<B3 F#4>")
+        baca.pitch(o, "<B3 F#4>")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[2]) as o:
         with baca.scope(o.pleaves()) as u:
-            baca.espressivo_function(u)
-            baca.note_head_style_harmonic_function(u)
-            baca.stem_tremolo_function(u)
+            baca.espressivo(u)
+            baca.note_head_style_harmonic(u)
+            baca.stem_tremolo(u)
     with baca.scope(m[3]) as o:
-        baca.pitch_function(o, "<B3 F#4>")
+        baca.pitch(o, "<B3 F#4>")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[3]) as o:
         with baca.scope(o.pleaves()) as u:
-            baca.espressivo_function(u)
-            baca.note_head_style_harmonic_function(u)
-            baca.stem_tremolo_function(u)
+            baca.espressivo(u)
+            baca.note_head_style_harmonic(u)
+            baca.stem_tremolo(u)
     with baca.scope(m[4]) as o:
-        baca.breathe_function(o.pleaf(-1))
-        baca.hairpin_function(
+        baca.breathe(o.pleaf(-1))
+        baca.hairpin(
             o.leaves(),
             "o< pp > ppp < f",
             pieces=lambda _: baca.select.lparts(_, [6, 6, 2]),
         )
-        baca.note_head_extra_offset_function(o.pleaf(0), (-1.25, 0))
-        baca.note_head_transparent_function(o.pleaves()[1:-1])
-        baca.note_head_x_extent_zero_function(o.pleaves()[:-1])
-        baca.pitches_function(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
-        baca.glissando_function(o.leaves(), zero_padding=True)
+        baca.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
+        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.note_head_x_extent_zero(o.pleaves()[:-1])
+        baca.pitches(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
+        baca.glissando(o.leaves(), zero_padding=True)
         with baca.scope(o.leaves()[-2:]) as u:
-            baca.text_spanner_function(
+            baca.text_spanner(
                 u,
                 "RH vibr. strettiss. -> RH NV",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 7.25"),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 lilypond_id=1,
             )
-            baca.text_spanner_function(
+            baca.text_spanner(
                 u,
                 "no scr. -> scr. poss.",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
             )
-        baca.tuplet_bracket_padding_function(o, 1.75)
+        baca.tuplet_bracket_padding(o, 1.75)
     with baca.scope(m[5]) as o:
-        baca.pitch_function(o, "<B3 F#4>")
+        baca.pitch(o, "<B3 F#4>")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[5]) as o:
-        baca.dynamic_function(o.phead(0), "p")
+        baca.dynamic(o.phead(0), "p")
         with baca.scope(o.pleaves()) as u:
-            baca.espressivo_function(u)
-            baca.note_head_style_harmonic_function(u)
-            baca.stem_tremolo_function(u)
+            baca.espressivo(u)
+            baca.note_head_style_harmonic(u)
+            baca.stem_tremolo(u)
     with baca.scope(m[6]) as o:
-        baca.pitches_function(
+        baca.pitches(
             o,
             "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
@@ -189,45 +189,45 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[6]) as o:
-        baca.finger_pressure_transition_function(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin_function(o, "p <| f")
-        baca.glissando_function(o.tleaves())
-        baca.text_spanner_function(
+        baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
+        baca.hairpin(o, "p <| f")
+        baca.glissando(o.tleaves())
+        baca.text_spanner(
             baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
         )
-        baca.text_spanner_function(
+        baca.text_spanner(
             o.rleaves(),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
         )
     with baca.scope(m[7]) as o:
-        baca.pitches_function(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
-        baca.glissando_function(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin_function(
+        baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
+        baca.glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.hairpin(
             baca.select.rleak(baca.select.lleak(o.leaves())),
             "|> ppppp <| p |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 1, 4]),
         ),
-        baca.accidental_extra_offset_function(o.leaf(-1), (-0.25, 0))
-        baca.glissando_function(o.leaves()[-3:], zero_padding=True)
-        baca.literal_function(
+        baca.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
+        baca.glissando(o.leaves()[-3:], zero_padding=True)
+        baca.literal(
             o.leaf(-3),
             r"\once \override Glissando.bound-details.left.X-offset = 4",
         )
-        baca.literal_function(
+        baca.literal(
             o.leaf(-2),
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
         )
-        baca.note_head_transparent_function(o.leaf(-2))
-        baca.note_head_x_extent_zero_function(o.leaves()[-2:-1])
-        baca.stem_down_function(o.leaves()[-3:])
-        baca.tuplet_bracket_padding_function(o.leaf(-3), 1.5)
-        baca.text_spanner_function(
+        baca.note_head_transparent(o.leaf(-2))
+        baca.note_head_x_extent_zero(o.leaves()[-2:-1])
+        baca.stem_down(o.leaves()[-3:])
+        baca.tuplet_bracket_padding(o.leaf(-3), 1.5)
+        baca.text_spanner(
             o.rleaves(),
             r"XFB =| \baca-circle-markup =| spz. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
@@ -238,13 +238,13 @@ def vc(cache):
         )
     with baca.scope(m[9]) as o:
         with baca.scope(o.leaves()) as u:
-            baca.pitch_function(u, "A3"),
-            baca.hairpin_function(
+            baca.pitch(u, "A3"),
+            baca.hairpin(
                 u,
                 "o<| f |> p",
                 pieces=lambda _: baca.select.lparts(_, [1, 2]),
             )
-            baca.text_spanner_function(
+            baca.text_spanner(
                 u,
                 r"no scr. -> scr. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
@@ -252,9 +252,9 @@ def vc(cache):
                 bookend=False,
                 pieces=lambda _: baca.select.lparts(_, [1, 2]),
             )
-        baca.trill_spanner_function(o.leaves()[:2], alteration="m2")
+        baca.trill_spanner(o.leaves()[:2], alteration="m2")
     with baca.scope(m[10]) as o:
-        baca.pitches_function(
+        baca.pitches(
             o,
             "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
             allow_repeats=True,
@@ -262,24 +262,24 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[10]) as o:
-        baca.finger_pressure_transition_function(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin_function(o.rleaves(), "p <| f")
-        baca.glissando_function(o.tleaves())
-        baca.text_spanner_function(
+        baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
+        baca.hairpin(o.rleaves(), "p <| f")
+        baca.glissando(o.tleaves())
+        baca.text_spanner(
             baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
         )
-        baca.text_spanner_function(
+        baca.text_spanner(
             o.rleaves(),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
         )
     with baca.scope(m.get(11, 12)) as o:
-        baca.text_spanner_function(
+        baca.text_spanner(
             o,
             "no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -288,25 +288,25 @@ def vc(cache):
             pieces=lambda _: baca.select.lparts(_, [2, 2]),
         )
     with baca.scope(m[11]) as o:
-        baca.pitch_function(o, "D#3"),
-        baca.hairpin_function(
+        baca.pitch(o, "D#3"),
+        baca.hairpin(
             o.rleaves(),
             "|> p <| ff",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
         )
-        baca.glissando_function(baca.select.lleak(o.leaves()[:1]))
-        baca.text_spanner_function(
+        baca.glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.text_spanner(
             o,
             "vib. molto -> NV",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m[12]) as o:
-        baca.pitch_function(o, "D#3")
-        baca.hairpin_function(o, "|> pp")
+        baca.pitch(o, "D#3")
+        baca.hairpin(o, "|> pp")
         with baca.scope(o.leaves()) as u:
-            baca.repeat_tie_extra_offset_function(u, (-1.5, 0))
-            baca.repeat_tie_function(u)
-        baca.text_spanner_function(
+            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.repeat_tie(u)
+        baca.text_spanner(
             baca.select.rleak(o.leaves()[-1:]),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
@@ -315,31 +315,31 @@ def vc(cache):
             lilypond_id=1,
         )
     with baca.scope(m[14]) as o:
-        baca.pitch_function(o, "E3")
-        baca.hairpin_function(
+        baca.pitch(o, "E3")
+        baca.hairpin(
             o.rleaves(),
             "ppp -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         with baca.scope(o.leaves()[1:]) as u:
-            baca.note_head_x_extent_zero_function(u)
-            baca.note_head_transparent_function(u)
+            baca.note_head_x_extent_zero(u)
+            baca.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
-            baca.glissando_function(
+            baca.glissando(
                 u,
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
                 allow_repeats=True,
                 zero_padding=True,
             )
-            baca.interpolate_pitches_function(u, "E3", "E3", allow_hidden=True)
-            baca.text_spanner_function(
+            baca.interpolate_pitches(u, "E3", "E3", allow_hidden=True)
+            baca.text_spanner(
                 u,
                 r"\baca-circle-very-wide-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
             )
-    baca.dls_staff_padding_function(m.leaves()[:-1], 6)
+    baca.dls_staff_padding(m.leaves()[:-1], 6)
 
 
 def make_score(first_measure_number, previous_persistent_indicators):
