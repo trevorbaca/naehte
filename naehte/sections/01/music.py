@@ -60,7 +60,7 @@ def VC(voice):
     # 8
     music = baca.make_skeleton("{" r" c2... r16" " }")
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def vc(cache):
@@ -248,10 +248,10 @@ def make_score():
         score,
         accumulator.time_signatures,
         accumulator,
-        library.manifests,
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_section=True,
+        manifests=library.manifests,
     )
     GLOBALS(score["Skips"])
     VC(accumulator.voice("vc"))
@@ -268,17 +268,18 @@ def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     timing = baca.build.Timing()
     score, accumulator = make_score(timing)
-    metadata, persist, timing = baca.build.postprocess_score(
+    metadata, persist = baca.section.postprocess_score(
         score,
-        library.manifests,
         accumulator.time_signatures,
-        environment,
         **baca.section.section_defaults(),
         activate=[baca.tags.LOCAL_MEASURE_NUMBER],
         always_make_global_rests=True,
         do_not_require_short_instrument_names=True,
+        environment=environment,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
+        manifests=library.manifests,
+        timing=timing,
     )
     lilypond_file = baca.lilypond.file(
         score,
