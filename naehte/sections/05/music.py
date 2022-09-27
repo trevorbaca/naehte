@@ -385,8 +385,8 @@ def main():
     )
     baca.build.persist_lilypond_file(
         lilypond_file,
-        environment.metadata,
-        environment.persist,
+        metadata,
+        persist,
         timing,
         environment.arguments,
     )
