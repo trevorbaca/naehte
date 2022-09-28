@@ -328,7 +328,7 @@ def vc(cache):
         baca.dls_staff_padding(o, 8)
 
 
-@baca.build.timed
+@baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score, accumulator = make_empty_score()
     first_measure_number = baca.section.set_up_score(
