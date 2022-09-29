@@ -25,7 +25,7 @@ def make_empty_score():
         (1, 4),
         (4, 8),
     ]
-    measures = baca.measures(time_signatures)
+    measures = baca.section.measures(time_signatures)
     return score, voices, measures
 
 
@@ -328,7 +328,7 @@ def vc(cache):
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
     score, voices, measures = make_empty_score()
-    first_measure_number = baca.section.set_up_score(
+    baca.section.set_up_score(
         score,
         measures(),
         append_anchor_skip=True,
