@@ -563,11 +563,10 @@ def make_score(first_measure_number, previous_persistent_indicators):
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    timing = baca.build.Timing()
     score, measures = make_score(
         environment.first_measure_number,
         environment.previous_persist["persistent_indicators"],
-        timing,
+        environment.timing,
     )
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
@@ -583,7 +582,6 @@ def main():
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
         manifests=library.manifests,
-        timing=timing,
     )
     lilypond_file = baca.lilypond.file(
         score,
@@ -594,7 +592,7 @@ def main():
         lilypond_file,
         metadata,
         persist,
-        timing,
+        environment.timing,
         environment.arguments,
     )
 
