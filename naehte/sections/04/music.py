@@ -570,7 +570,7 @@ def main():
     )
     defaults = baca.section.section_defaults()
     del defaults["append_anchor_skip"]
-    metadata, persist = baca.section.postprocess_score(
+    metadata = baca.section.postprocess_score(
         score,
         measures(),
         **defaults,
@@ -591,7 +591,6 @@ def main():
     baca.build.persist_lilypond_file(
         lilypond_file,
         metadata,
-        persist,
         environment.timing,
         environment.arguments,
     )
