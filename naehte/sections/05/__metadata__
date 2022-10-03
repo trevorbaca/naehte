@@ -1,10 +1,68 @@
 {
+    "alive_during_section": [
+        "Score",
+        "GlobalContext",
+        "Skips",
+        "MusicContext",
+        "Cello.Staff",
+        "Rests",
+        "Cello.Music",
+        "Cello.Rests",
+    ],
     "bol_measure_numbers": [62, 65, 68, 71],
     "duration": "0'58''",
     "fermata_measure_numbers": [72],
     "final_measure_number": 73,
     "first_measure_number": 62,
     "has_anchor_skip": True,
+    "persistent_indicators": {
+        "Cello.Music": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="p",
+            )
+        ],
+        "Cello.Staff": [
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Cello",
+            ),
+            baca.Memento(
+                context="Cello.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="bass",
+            ),
+        ],
+        "Score": [
+            baca.Memento(
+                context="Skips",
+                edition=None,
+                manifest="metronome_marks",
+                prototype=None,
+                synthetic_offset=None,
+                value="52",
+            ),
+            baca.Memento(
+                context="Skips",
+                edition=None,
+                manifest=None,
+                prototype="abjad.TimeSignature",
+                synthetic_offset=None,
+                value="4/8",
+            ),
+        ],
+    },
     "start_clock_time": "4'04''",
     "stop_clock_time": "5'02''",
     "time_signatures": [
