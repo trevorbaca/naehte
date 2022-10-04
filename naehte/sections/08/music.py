@@ -287,12 +287,12 @@ def make_score(first_measure_number, previous_persistent_indicators):
         library.voice_abbreviations,
     )
     vc(cache)
-    return score, measures
+    return score
 
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    score, measures = make_score(
+    score = make_score(
         environment.first_measure_number,
         environment.previous_metadata["persistent_indicators"],
         environment.timing,
@@ -301,7 +301,6 @@ def main():
     del defaults["append_anchor_skip"]
     metadata = baca.section.postprocess_score(
         score,
-        measures(),
         **defaults,
         activate=[baca.tags.LOCAL_MEASURE_NUMBER],
         always_make_global_rests=True,
