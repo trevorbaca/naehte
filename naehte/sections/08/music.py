@@ -309,10 +309,8 @@ def main():
         final_section=True,
         global_rests_in_topmost_staff=True,
         manifests=library.manifests,
-        tags=baca.tags.Tags(
-            activate=[baca.tags.LOCAL_MEASURE_NUMBER],
-        ),
     )
+    baca.tags.activate(score, baca.tags.LOCAL_MEASURE_NUMBER)
     lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
