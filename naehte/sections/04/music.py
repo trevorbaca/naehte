@@ -568,11 +568,9 @@ def main():
         environment.previous_metadata["persistent_indicators"],
         environment.timing,
     )
-    defaults = baca.section.section_defaults()
-    del defaults["append_anchor_skip"]
     metadata = baca.section.postprocess_score(
         score,
-        **defaults,
+        **baca.section.section_defaults(),
         always_make_global_rests=True,
         do_not_check_wellformedness=True,
         do_not_require_short_instrument_names=True,
