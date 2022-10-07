@@ -13,6 +13,7 @@
     "fermata_measure_numbers": [55],
     "final_measure_number": 61,
     "first_measure_number": 46,
+    "has_anchor_skip": False,
     "persistent_indicators": {
         "Cello.Music": [
             baca.Memento(
