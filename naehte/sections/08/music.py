@@ -27,8 +27,8 @@ def make_empty_score():
         (6, 8),
         (1, 4),
     ]
-    measures = baca.section.measures(time_signatures)
-    return score, voices, measures
+    signatures = baca.section.signatures(time_signatures)
+    return score, voices, signatures
 
 
 def GLOBALS(skips, rests):
@@ -49,7 +49,7 @@ def GLOBALS(skips, rests):
         baca.global_fermata(rests[index], string)
 
 
-def VC(voice, measures):
+def VC(voice, signatures):
     # 1
     music = baca.make_skeleton("{ c1 c1 c4 }")
     voice.extend(music)
@@ -59,7 +59,7 @@ def VC(voice, measures):
     # 3
     music = baca.make_skeleton("{ c2 c8 }")
     voice.extend(music)
-    music = baca.make_mmrests(measures(4), head=voice.name)
+    music = baca.make_mmrests(signatures(4), head=voice.name)
     voice.extend(music)
     # 5
     music = baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
@@ -73,12 +73,12 @@ def VC(voice, measures):
     # 8
     music = baca.make_skeleton(r"\times 6/7 { c2. c8 }")
     voice.extend(music)
-    music = baca.make_mmrests(measures(9), head=voice.name)
+    music = baca.make_mmrests(signatures(9), head=voice.name)
     voice.extend(music)
     # (10, 13)
     music = baca.make_skeleton(r"{ c2. c2. c2.. c2. }")
     voice.extend(music)
-    music = baca.make_mmrests(measures(14), head=voice.name)
+    music = baca.make_mmrests(signatures(14), head=voice.name)
     voice.extend(music)
 
 
@@ -265,17 +265,17 @@ def vc(cache):
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
-    score, voices, measures = make_empty_score()
+    score, voices, signatures = make_empty_score()
     baca.section.set_up_score(
         score,
-        measures(),
+        signatures(),
         always_make_global_rests=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
         previous_persistent_indicators=previous_persistent_indicators,
     )
     GLOBALS(score["Skips"], score["Rests"])
-    VC(voices("vc"), measures)
+    VC(voices("vc"), signatures)
     baca.section.reapply(
         voices,
         previous_persistent_indicators,
@@ -283,7 +283,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     )
     cache = baca.section.cache_leaves(
         score,
-        len(measures()),
+        len(signatures()),
         library.voice_abbreviations,
     )
     vc(cache)
