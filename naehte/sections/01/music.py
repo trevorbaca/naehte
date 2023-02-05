@@ -100,20 +100,21 @@ def vc(cache):
             bookend=False,
             lilypond_id=1,
         )
+        leaves = baca.select.rleak(o.leaves()[-2:])
         baca.text_spanner(
-            baca.select.rleak(o.leaves()[-2:]),
+            leaves,
             r"no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
             lilypond_id=1,
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.text_spanner(
             o.rleaves(),
             r"ord. -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [6, 1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [6, 1, 2]),
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[2]) as o:
@@ -155,12 +156,13 @@ def vc(cache):
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m.get(3, 4)) as o:
+        leaves = o.leaves()[1:-1]
         baca.text_spanner(
-            o.leaves()[1:-1],
+            leaves,
             r"no scr. -> scr. -> poss. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [7, 1, 6, 2]),
+            the_pieces=baca.select.lparts(leaves, [7, 1, 6, 2]),
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves()[:-2], "Db4 F4 G3 E4 F3")
@@ -202,7 +204,7 @@ def vc(cache):
             baca.hairpin(
                 u,
                 'p |> pp <| "f" pp <| "f"',
-                pieces=lambda _: baca.select.lparts(_, [2, 1, 1, 2]),
+                the_pieces=baca.select.lparts(u, [2, 1, 1, 2]),
             ),
             baca.dls_staff_padding(u, 7)
         baca.text_spanner(
@@ -212,12 +214,13 @@ def vc(cache):
             bookend=False,
             lilypond_id=1,
         )
+        leaves = baca.select.rleak(o.leaves()[1:], count=3)
         baca.text_spanner(
-            baca.select.rleak(o.leaves()[1:], count=3),
+            leaves,
             r"II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 2]),
+            the_pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 2]),
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "<G3 D4>")

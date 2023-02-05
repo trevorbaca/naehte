@@ -120,7 +120,7 @@ def vc(cache):
             o,
             "o< f >",
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 5]),
+            the_pieces=baca.select.lparts(o, [1, 5]),
         )
         baca.literal(
             o.leaf(-1),
@@ -143,11 +143,12 @@ def vc(cache):
             lilypond_id=1,
         )
     with baca.scope(m.get(1, 2)) as o:
+        leaves = o.leaves()[:-3]
         baca.text_spanner(
-            o.leaves()[:-3],
+            leaves,
             "no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 5, 2]),
+            the_pieces=baca.select.lparts(leaves, [1, 1, 5, 2]),
         )
     with baca.scope(m[2]) as o:
         baca.accidental_extra_offset(o.leaf(0), (-1, 0))
@@ -155,7 +156,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "pp < f >o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 5]),
+            the_pieces=baca.select.lparts(o, [1, 5]),
         )
         baca.note_head_transparent(o.leaves()[-3:-1])
         baca.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -179,10 +180,11 @@ def vc(cache):
             lilypond_id=1,
         )
     with baca.scope(m.get(3, 4)) as o:
+        leaves = o.leaves()[:8]
         baca.hairpin(
-            o.leaves()[:8],
+            leaves,
             "o< f |> ppp",
-            pieces=lambda _: baca.select.lparts(_, [1, 6]),
+            the_pieces=baca.select.lparts(leaves, [1, 6]),
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
         cache.rebuild()
@@ -211,7 +213,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
             lilypond_id=2,
-            pieces=lambda _: baca.select.lparts(_, [1, 7]),
+            the_pieces=baca.select.lparts(o.leaves(), [1, 7]),
         )
         baca.text_spanner(
             baca.select.rleak(o.leaves()[-1:]),
@@ -226,7 +228,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            pieces=lambda _: baca.select.lparts(_, [1, 6, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 6, 2]),
         )
         baca.text_spanner(
             o.leaves()[1:7],
@@ -260,7 +262,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "f |> ppp >o niente",
-            pieces=lambda _: baca.select.lparts(_, [5, 2]),
+            the_pieces=baca.select.lparts(o, [5, 2]),
         ),
         baca.pitches(
             o,
@@ -299,7 +301,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            pieces=lambda _: baca.select.lparts(_, [5, 3]),
+            the_pieces=baca.select.lparts(o.rleaves(), [5, 3]),
         )
         baca.text_spanner(
             o.leaves()[:5],
@@ -335,7 +337,7 @@ def vc(cache):
             o.rleaves(),
             'pp <| "f" > pp <| "f" >',
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -354,7 +356,7 @@ def vc(cache):
             r"II / III largo -> strett. =| largo -> strett. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
     with baca.scope(m[14]) as o:
         baca.accidental_extra_offset(o.leaf(0), (-1, 0))
@@ -362,7 +364,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "pp < f >o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 5]),
+            the_pieces=baca.select.lparts(o, [1, 5]),
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.note_head_transparent(u)
@@ -385,11 +387,12 @@ def vc(cache):
             bookend=False,
             lilypond_id=1,
         )
+        leaves = o.leaves()[:3]
         baca.text_spanner(
-            o.leaves()[:3],
+            leaves,
             "no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(leaves, [1, 2]),
         )
     with baca.scope(m[15]) as o:
         baca.hairpin(o.leaves()[:2], "o<| fff")
@@ -433,7 +436,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.5"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 2, 1, 6, 4]),
+            the_pieces=baca.select.lparts(o, [1, 2, 1, 6, 4]),
         )
     with baca.scope(m.leaves()) as o:
         pass
