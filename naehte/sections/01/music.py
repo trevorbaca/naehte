@@ -107,14 +107,14 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
             lilypond_id=1,
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.text_spanner(
             o.rleaves(),
             r"ord. -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            the_pieces=baca.select.lparts(o.rleaves(), [6, 1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [6, 1, 2]),
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[2]) as o:
@@ -162,7 +162,7 @@ def vc(cache):
             r"no scr. -> scr. -> poss. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            the_pieces=baca.select.lparts(leaves, [7, 1, 6, 2]),
+            pieces=baca.select.lparts(leaves, [7, 1, 6, 2]),
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves()[:-2], "Db4 F4 G3 E4 F3")
@@ -204,7 +204,7 @@ def vc(cache):
             baca.hairpin(
                 u,
                 'p |> pp <| "f" pp <| "f"',
-                the_pieces=baca.select.lparts(u, [2, 1, 1, 2]),
+                pieces=baca.select.lparts(u, [2, 1, 1, 2]),
             ),
             baca.dls_staff_padding(u, 7)
         baca.text_spanner(
@@ -220,7 +220,7 @@ def vc(cache):
             r"II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
-            the_pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 2]),
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "<G3 D4>")

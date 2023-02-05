@@ -145,7 +145,7 @@ def vc(cache):
         baca.hairpin(
             o.leaves(),
             "o< pp > ppp < f",
-            the_pieces=baca.select.lparts(o.leaves(), [6, 6, 2]),
+            pieces=baca.select.lparts(o.leaves(), [6, 6, 2]),
         )
         baca.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.note_head_transparent(o.pleaves()[1:-1])
@@ -209,7 +209,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "|> ppppp <| p |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 1, 4]),
+            pieces=baca.select.lparts(leaves, [1, 1, 4]),
         ),
         baca.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
@@ -232,7 +232,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 3]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 1, 3]),
         )
     with baca.scope(m[9]) as o:
         with baca.scope(o.leaves()) as u:
@@ -240,7 +240,7 @@ def vc(cache):
             baca.hairpin(
                 u,
                 "o<| f |> p",
-                the_pieces=baca.select.lparts(u, [1, 2]),
+                pieces=baca.select.lparts(u, [1, 2]),
             )
             baca.text_spanner(
                 u,
@@ -248,7 +248,7 @@ def vc(cache):
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
-                the_pieces=baca.select.lparts(u, [1, 2]),
+                pieces=baca.select.lparts(u, [1, 2]),
             )
         baca.trill_spanner(o.leaves()[:2], alteration="m2")
     with baca.scope(m[10]) as o:
@@ -283,14 +283,14 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            the_pieces=baca.select.lparts(o, [2, 2]),
+            pieces=baca.select.lparts(o, [2, 2]),
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
         baca.hairpin(
             o.rleaves(),
             "|> p <| ff",
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(

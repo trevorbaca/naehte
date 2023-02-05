@@ -110,7 +110,7 @@ def vc(cache):
             o,
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
-            the_pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
+            pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
         )
         baca.note_head_style_harmonic(o.pleaves())
         baca.tuplet_bracket_staff_padding(o, 2)
@@ -131,7 +131,7 @@ def vc(cache):
             "no scr. -> scr. poss. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            the_pieces=baca.select.lparts(leaves, [1, 1, 3]),
+            pieces=baca.select.lparts(leaves, [1, 1, 3]),
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "E2")
@@ -140,7 +140,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "|> ppp <| p",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.note_head_style_harmonic_black(o.leaf(0))
         baca.trill_spanner(o.leaves()[:2], alteration="P1")
@@ -153,7 +153,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "|> ppp <| fff",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.repeat_tie(o.leaf(-1))
         baca.text_spanner(
@@ -184,7 +184,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "|> ppp <| fff",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.note_head_style_harmonic(o.leaf(0))
         baca.repeat_tie(o.leaf(-1))
@@ -209,7 +209,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "|> ppp <| mf",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(
@@ -224,7 +224,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "<B3 F#4>")
@@ -269,7 +269,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            the_pieces=baca.select.lparts(o, [2, 2]),
+            pieces=baca.select.lparts(o, [2, 2]),
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "D#3")
@@ -277,7 +277,7 @@ def vc(cache):
             o,
             "|> p <|",
             bookend=False,
-            the_pieces=baca.select.lparts(o, [1, 1]),
+            pieces=baca.select.lparts(o, [1, 1]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(
@@ -309,7 +309,7 @@ def vc(cache):
             o,
             "ppp <| p |>",
             bookend=False,
-            the_pieces=baca.select.lparts(o, [1, 2]),
+            pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.note_head_style_harmonic(o.leaves()[:2])
         baca.note_head_style_harmonic_black(o.leaves()[-1:])
@@ -331,7 +331,7 @@ def vc(cache):
             o.rleaves(),
             "pppp -- pppp >o niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            the_pieces=baca.select.lparts(o.rleaves(), [14, 8]),
+            pieces=baca.select.lparts(o.rleaves(), [14, 8]),
         )
         baca.markup(
             o.pleaf(0),
@@ -356,7 +356,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
-            the_pieces=baca.select.lparts(
+            pieces=baca.select.lparts(
                 o.rleaves(), [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]
             ),
         )
