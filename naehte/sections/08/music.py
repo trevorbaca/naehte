@@ -93,7 +93,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "ppp > pppp < ppp",
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(o, [1, 2]),
         ),
         baca.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
@@ -108,7 +108,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "ppp > pppp < ppp",
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
@@ -137,7 +137,7 @@ def vc(cache):
             o,
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1]),
+            the_pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
         )
         baca.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
@@ -164,7 +164,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "<F3 C4>")
@@ -200,7 +200,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 9"),
             bookend=False,
             lilypond_id=1,
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
         baca.text_spanner(
             o.rleaves(),
@@ -218,7 +218,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
     with baca.scope(m.get(10, 13)) as o:
         baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
