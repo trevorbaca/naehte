@@ -116,7 +116,7 @@ def vc(cache):
             o.rleaves(),
             'o< "f" >',
             bookend=False,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 3]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 3]),
         )
         baca.pitch(o, "C#3")
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
@@ -140,7 +140,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Eb4"),
@@ -183,7 +183,7 @@ def vc(cache):
             r"no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            the_pieces=baca.select.lparts(leaves, [7, 2]),
+            pieces=baca.select.lparts(leaves, [7, 2]),
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[4]) as o:
@@ -191,7 +191,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             "ff |> p <| mf",
-            the_pieces=baca.select.lparts(leaves, [6, 2]),
+            pieces=baca.select.lparts(leaves, [6, 2]),
         )
         baca.pitches(
             o,
@@ -211,7 +211,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
-            the_pieces=baca.select.lparts(leaves, [6, 3]),
+            pieces=baca.select.lparts(leaves, [6, 3]),
         )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves()[:2]) as u:
@@ -220,7 +220,7 @@ def vc(cache):
             baca.hairpin(
                 leaves,
                 "|> p <| f",
-                the_pieces=baca.select.lparts(leaves, [1, 2]),
+                pieces=baca.select.lparts(leaves, [1, 2]),
             )
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
@@ -232,7 +232,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 5]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 5]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(o, "mf |>", bookend=False)
@@ -252,13 +252,13 @@ def vc(cache):
             r"scr. -> no scr. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 5, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 5, 2]),
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.hairpin(
             o,
             "p < f |> ppp",
-            the_pieces=baca.select.lparts(o, [1, 7]),
+            pieces=baca.select.lparts(o, [1, 7]),
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
@@ -294,7 +294,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
             lilypond_id=2,
-            the_pieces=baca.select.lparts(o.leaves(), [1, 7]),
+            pieces=baca.select.lparts(o.leaves(), [1, 7]),
         )
         baca.text_spanner(
             baca.select.rleak(o.leaves()[-1:]),
@@ -309,7 +309,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 6, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 6, 2]),
         )
         baca.tuplet_bracket_padding(o.leaf(1), 1.75)
         baca.tuplet_bracket_staff_padding(o.leaf(0), 4.25)
@@ -346,7 +346,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "f |> ppp < p > ppp < p > ppp <|",
-            the_pieces=baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
+            pieces=baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
         )
         with baca.scope(o.leaves()[:5]) as u:
             baca.note_head_style_harmonic(u)
@@ -374,7 +374,7 @@ def vc(cache):
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 bookend=False,
                 lilypond_id=1,
-                the_pieces=baca.select.lparts(u, [2, 4]),
+                pieces=baca.select.lparts(u, [2, 4]),
             )
         baca.text_spanner(
             o.leaves()[-6:-1],
@@ -412,7 +412,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             '"f" "f" > ppp',
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         with baca.scope(o.leaf(0)) as u:
             baca.repeat_tie_extra_offset(u, (-1.5, 0))
@@ -440,7 +440,7 @@ def vc(cache):
                 "no scr. -> scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
-                the_pieces=baca.select.lparts(u, [1, 2]),
+                pieces=baca.select.lparts(u, [1, 2]),
             )
         baca.trill_spanner(
             baca.select.rleak(o.leaves()[-1:]),
@@ -495,7 +495,7 @@ def vc(cache):
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
                 abjad.Tweak(r"- \tweak staff-padding 9"),
                 lilypond_id=1,
-                the_pieces=baca.select.lparts(u, [1, 2]),
+                pieces=baca.select.lparts(u, [1, 2]),
             )
             baca.text_spanner(
                 u,
@@ -514,7 +514,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 9"),
             lilypond_id=1,
-            the_pieces=baca.select.lparts(o, [1, 2]),
+            pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.text_spanner(
             o,
@@ -529,7 +529,7 @@ def vc(cache):
         baca.hairpin(
             leaves,
             '"mf" > pp < "mf" >o niente',
-            the_pieces=baca.select.lparts(leaves, [1, 1, 3]),
+            pieces=baca.select.lparts(leaves, [1, 1, 3]),
         )
     for measures_, padding in (
         ((1, 5), 7),
