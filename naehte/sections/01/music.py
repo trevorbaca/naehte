@@ -21,8 +21,8 @@ def make_empty_score():
         (2, 4),
         (4, 4),
     ]
-    signatures = baca.section.signatures(time_signatures)
-    return score, voices, signatures
+    time_signatures = baca.section.time_signatures(time_signatures)
+    return score, voices, time_signatures
 
 
 def GLOBALS(skips):
@@ -243,10 +243,10 @@ def vc(cache):
 
 @baca.build.timed("make_score")
 def make_score():
-    score, voices, signatures = make_empty_score()
+    score, voices, time_signatures = make_empty_score()
     baca.section.set_up_score(
         score,
-        signatures(),
+        time_signatures(),
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_section=True,
@@ -256,7 +256,7 @@ def make_score():
     VC(voices("vc"))
     cache = baca.section.cache_leaves(
         score,
-        len(signatures()),
+        len(time_signatures()),
         library.voice_abbreviations,
     )
     vc(cache)

@@ -25,8 +25,8 @@ def make_empty_score():
         (1, 4),
         (4, 8),
     ]
-    signatures = baca.section.signatures(time_signatures)
-    return score, voices, signatures
+    time_signatures = baca.section.time_signatures(time_signatures)
+    return score, voices, time_signatures
 
 
 def GLOBALS(skips, rests, first_measure_number):
@@ -44,7 +44,7 @@ def GLOBALS(skips, rests, first_measure_number):
         baca.global_fermata(rests[index], string)
 
 
-def VC(voice, signatures):
+def VC(voice, time_signatures):
     # 1
     music = baca.make_skeleton(
         "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"
@@ -77,7 +77,7 @@ def VC(voice, signatures):
     # 10
     music = baca.make_skeleton(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
     voice.extend(music)
-    music = baca.make_mmrests(signatures(11), head=voice.name)
+    music = baca.make_mmrests(time_signatures(11), head=voice.name)
     voice.extend(music)
     # 12
     music = baca.make_skeleton(r"\times 4/5 { c4. c8 [ c ] }")
@@ -330,10 +330,10 @@ def vc(cache):
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
-    score, voices, signatures = make_empty_score()
+    score, voices, time_signatures = make_empty_score()
     baca.section.set_up_score(
         score,
-        signatures(),
+        time_signatures(),
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_measure_number=first_measure_number,
@@ -341,7 +341,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
         previous_persistent_indicators=previous_persistent_indicators,
     )
     GLOBALS(score["Skips"], score["Rests"], first_measure_number)
-    VC(voices("vc"), signatures)
+    VC(voices("vc"), time_signatures)
     baca.section.reapply(
         voices,
         previous_persistent_indicators,
@@ -349,7 +349,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     )
     cache = baca.section.cache_leaves(
         score,
-        len(signatures()),
+        len(time_signatures()),
         library.voice_abbreviations,
     )
     vc(cache)
