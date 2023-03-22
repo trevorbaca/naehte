@@ -34,28 +34,28 @@ def GLOBALS(skips):
 
 def VC(voice):
     # 1
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
     )
     voice.extend(music)
     # 2
-    music = baca.make_skeleton(r"\times 6/7 { c2. c8 }")
+    music = baca.parse(r"\times 6/7 { c2. c8 }")
     voice.extend(music)
     # 3
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
     )
     voice.extend(music)
     # 4
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" c2 \times 3/4 { c8 c4. } }"
     )
     voice.extend(music)
     # (5, 7)
-    music = baca.make_skeleton("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
+    music = baca.parse("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
     voice.extend(music)
     # 8
-    music = baca.make_skeleton("{" r" c2... r16" " }")
+    music = baca.parse("{" r" c2... r16" " }")
     voice.extend(music)
     baca.section.append_anchor_note(voice)
 

@@ -51,32 +51,32 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.make_skeleton("{ c1 c1 c4 }")
+    music = baca.parse("{ c1 c1 c4 }")
     voice.extend(music)
     # 2
-    music = baca.make_skeleton("{ c1 c1 c4 }")
+    music = baca.parse("{ c1 c1 c4 }")
     voice.extend(music)
     # 3
-    music = baca.make_skeleton("{ c2 c8 }")
+    music = baca.parse("{ c2 c8 }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(4), head=voice.name)
     voice.extend(music)
     # 5
-    music = baca.make_skeleton("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
+    music = baca.parse("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
     voice.extend(music)
     # 6
-    music = baca.make_skeleton("{ c1 c4 }")
+    music = baca.parse("{ c1 c4 }")
     voice.extend(music)
     # 7
-    music = baca.make_skeleton(r"\times 6/7 { c2. c8 }")
+    music = baca.parse(r"\times 6/7 { c2. c8 }")
     voice.extend(music)
     # 8
-    music = baca.make_skeleton(r"\times 6/7 { c2. c8 }")
+    music = baca.parse(r"\times 6/7 { c2. c8 }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(9), head=voice.name)
     voice.extend(music)
     # (10, 13)
-    music = baca.make_skeleton(r"{ c2. c2. c2.. c2. }")
+    music = baca.parse(r"{ c2. c2. c2.. c2. }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(14), head=voice.name)
     voice.extend(music)
