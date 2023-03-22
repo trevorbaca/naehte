@@ -46,9 +46,7 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.parse(
-        "{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }"
-    )
+    music = baca.parse("{" r" \times 2/3 { c32 [ c c c c c c c c c c c ] }" " c1" " }")
     voice.extend(music)
     # 2
     music = baca.parse(r"{ c\breve }")
