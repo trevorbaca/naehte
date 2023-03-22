@@ -61,51 +61,51 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }")
+    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
     voice.extend(music)
     # 2
-    music = baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }")
+    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
     voice.extend(music)
     # (3, 4)
-    music = baca.make_skeleton(
+    music = baca.parse(
         "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
     )
     voice.extend(music)
     # 5
-    music = baca.make_skeleton("{ c4.. c16 }")
+    music = baca.parse("{ c4.. c16 }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(6))
     voice.extend(music)
     # 7
-    music = baca.make_skeleton("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }")
+    music = baca.parse("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
     # 9
-    music = baca.make_skeleton("{ c4 c c c c c c c c c }")
+    music = baca.parse("{ c4 c c c c c c c c c }")
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
     # (11, 13)
-    music = baca.make_skeleton("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
+    music = baca.parse("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
     voice.extend(music)
     # 14
-    music = baca.make_skeleton(r"{ c4. c8 c32 [ c c c ] }")
+    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
     voice.extend(music)
     # 15
-    music = baca.make_skeleton(r"{ c2. c8 }")
+    music = baca.parse(r"{ c2. c8 }")
     voice.extend(music)
     # 16
-    music = baca.make_skeleton("{ c1 }")
+    music = baca.parse("{ c1 }")
     voice.extend(music)
     # 17
-    music = baca.make_skeleton("{ c1. }")
+    music = baca.parse("{ c1. }")
     voice.extend(music)
     # 18
-    music = baca.make_skeleton("{ c4 c c c c c }")
+    music = baca.parse("{ c4 c c c c c }")
     voice.extend(music)
     # 19
-    music = baca.make_skeleton("{ c4 c c c }")
+    music = baca.parse("{ c4 c c c }")
     voice.extend(music)
     baca.section.append_anchor_note(voice)
 
