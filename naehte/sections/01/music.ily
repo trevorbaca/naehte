@@ -1,9 +1,9 @@
 number.1.Skips = {
 
     % [Skips measure 1]
-    \override TextSpanner.staff-padding = 10
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'blue
+    \override TextSpanner.staff-padding = 10
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/8
     s1 * 7/8
@@ -276,21 +276,21 @@ number.1.Cello.Music = {
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
+          %! EXPLICIT_CLEF_COLOR
+        \once \override Staff.Clef.color = #(x11-color 'blue)
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
         \override DynamicLineSpanner.staff-padding = 7
+          %! EXPLICIT_CLEF_COLOR_CANCELLATION
+        %@% \override Staff.Clef.color = ##f
         \override TupletBracket.staff-padding = 1
+          %! EXPLICIT_CLEF
+        \set Staff.forceClef = ##t
           %! -PARTS
         \set Staff.instrumentName = \naehte-cello-markup
           %! EXPLICIT_CLEF
         \clef "bass"
-          %! EXPLICIT_CLEF_COLOR
-        \once \override Staff.Clef.color = #(x11-color 'blue)
-          %! EXPLICIT_CLEF_COLOR_CANCELLATION
-        %@% \override Staff.Clef.color = ##f
-          %! EXPLICIT_CLEF
-        \set Staff.forceClef = ##t
         <g d'>8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC

@@ -35,6 +35,8 @@ number.7.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 2]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue
     \bar ".|:"
       %! MEASURE_90
       %! NOT_MOL
@@ -42,8 +44,6 @@ number.7.Skips = {
       %! MEASURE_90
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 3)
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
@@ -147,12 +147,12 @@ number.7.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 6]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue
     \bar ":|."
       %! MEASURE_94
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 1.5)
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 4/4
     s1 * 4/4
@@ -501,17 +501,17 @@ number.7.Cello.Music = {
     {
 
         % [Cello.Music measure 1]
-        \override DynamicLineSpanner.staff-padding = 7
-        \override NoteHead.style = #'harmonic
-        \override TupletBracket.staff-padding = 2
-          %! REAPPLIED_CLEF
-        \clef "bass"
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
+        \override DynamicLineSpanner.staff-padding = 7
+        \override NoteHead.style = #'harmonic
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.staff-padding = 2
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
+          %! REAPPLIED_CLEF
+        \clef "bass"
         f''4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC

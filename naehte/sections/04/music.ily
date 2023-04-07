@@ -123,6 +123,8 @@ number.4.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 5]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue
     \bar ".|:"
       %! MEASURE_50
       %! NOT_MOL
@@ -130,8 +132,6 @@ number.4.Skips = {
       %! MEASURE_50
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 3)
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/8
     s1 * 5/8
@@ -189,12 +189,12 @@ number.4.Skips = {
     %@% \bacaStartTextSpanMN
 
     % [Skips measure 7]
+      %! EXPLICIT_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'blue
     \bar ":|."
       %! MEASURE_52
       %! ONLY_MOL
     \once \override Score.BarLine.X-extent = #'(0 . 1.5)
-      %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 3/4
     s1 * 3/4
@@ -526,16 +526,16 @@ number.4.Cello.Music = {
     {
 
         % [Cello.Music measure 1]
-        \override DynamicLineSpanner.staff-padding = 7
-        \override TupletBracket.direction = #down
-          %! REAPPLIED_CLEF
-        \clef "bass"
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
+        \override DynamicLineSpanner.staff-padding = 7
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
+        \override TupletBracket.direction = #down
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
+          %! REAPPLIED_CLEF
+        \clef "bass"
         cs!8
           %! REAPPLIED_INSTRUMENT_ALERT
         ^ \baca-reapplied-instrument-markup "(“Cello”)"
@@ -1710,11 +1710,11 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \startTextSpan
 
-        \override Accidental.stencil = ##f
         \hide NoteHead
         \override Accidental.stencil = ##f
         \override NoteColumn.glissando-skip = ##t
         \override NoteHead.no-ledgers = ##t
+        \override Accidental.stencil = ##f
         cs!4
 
         cs!4
