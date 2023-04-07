@@ -425,16 +425,16 @@ number.8.Cello.Music = {
     {
 
         % [Cello.Music measure 1]
-        \override DynamicLineSpanner.staff-padding = 6
-        \override NoteHead.style = #'harmonic-black
-          %! REAPPLIED_CLEF
-        \clef "bass"
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
+        \override DynamicLineSpanner.staff-padding = 6
+        \override NoteHead.style = #'harmonic-black
           %! REAPPLIED_CLEF_COLOR_CANCELLATION
         %@% \override Staff.Clef.color = ##f
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
+          %! REAPPLIED_CLEF
+        \clef "bass"
         d,1
         :32
           %! EXPLICIT_DYNAMIC_COLOR
