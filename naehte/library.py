@@ -25,10 +25,10 @@ instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
 
 
 metronome_marks = {
-    "39": abjad.MetronomeMark((1, 4), 39),
-    "52": abjad.MetronomeMark((1, 4), 52),
-    "91": abjad.MetronomeMark((1, 4), 91),
-    "117": abjad.MetronomeMark((1, 4), 117),
+    "39": abjad.MetronomeMark(abjad.Duration(1, 4), 39),
+    "52": abjad.MetronomeMark(abjad.Duration(1, 4), 52),
+    "91": abjad.MetronomeMark(abjad.Duration(1, 4), 91),
+    "117": abjad.MetronomeMark(abjad.Duration(1, 4), 117),
 }
 
 
