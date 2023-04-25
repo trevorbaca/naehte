@@ -58,9 +58,9 @@ def VC(voice, time_signatures):
     voice.extend(music)
     # 3
     music = baca.parse("{ c4 c8 }")
+    voice.extend(music)
     leaf = abjad.select.leaf(music, -1)
     baca.repeat_tie(leaf)
-    voice.extend(music)
     # 4
     music = baca.parse("{ c4 c8 }")
     voice.extend(music)
@@ -69,10 +69,10 @@ def VC(voice, time_signatures):
     voice.extend(music)
     # 6
     music = baca.parse("{ c2.. c8 }")
+    voice.extend(music)
     leaf = abjad.select.leaf(music, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
     baca.repeat_tie(leaf)
-    voice.extend(music)
     # 7
     music = baca.parse(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     voice.extend(music)
@@ -81,10 +81,10 @@ def VC(voice, time_signatures):
     voice.extend(music)
     # 9
     music = baca.parse("{ c4 c8 }")
+    voice.extend(music)
     leaf = abjad.select.leaf(music, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
     baca.repeat_tie(leaf)
-    voice.extend(music)
     # 10
     music = baca.parse("{ c4 c4. }")
     voice.extend(music)
