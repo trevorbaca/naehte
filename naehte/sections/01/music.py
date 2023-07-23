@@ -235,7 +235,6 @@ def vc(cache):
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            autodetect_right_padding=True,
             bookend=False,
             lilypond_id=1,
         )
