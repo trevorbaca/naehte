@@ -937,20 +937,6 @@ number.1.Cello.Music = {
         \stopTextSpan
           %! SPANNER_STOP
         \stopTextSpanOne
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! SPANNER_START
-        - \tweak staff-padding 10.5
-          %! SPANNER_START
-        - \tweak style #'trill
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup
-          %! SPANNER_START
-        \startTextSpanOne
           %! SPANNER_START
         - \tweak bound-details.right.padding 6.25
           %! SPANNER_START
@@ -981,6 +967,16 @@ number.1.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+          %! SPANNER_START
+        - \tweak staff-padding 10.5
+          %! SPANNER_START
+        - \tweak style #'trill
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-double-diamond-parenthesized-top-markup
+          %! SPANNER_START
+        \startTextSpanOne
 
         r16
           %! SPANNER_STOP
