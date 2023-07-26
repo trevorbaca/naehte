@@ -539,32 +539,32 @@ number.4.Cello.Music = {
         cs!8
           %! REAPPLIED_INSTRUMENT_ALERT
         ^ \baca-reapplied-instrument-markup "(“Cello”)"
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-circle-markup
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
+        \startTextSpanOne
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \<
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-circle-markup
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-damp-markup
-          %! SPANNER_START
-        \startTextSpanOne
         - \tweak stencil ##f
         ~
           %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -582,13 +582,13 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \tweak bound-details.right.padding 1
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
         - \abjad-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "spz. larg."
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 1
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTextSpan
           %! EXPLICIT_DYNAMIC_COLOR
@@ -606,11 +606,11 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "str."
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTextSpan
         \glissando
@@ -631,11 +631,11 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
           %! SPANNER_START
-        - \tweak staff-padding 8
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-circle-very-wide-markup
+          %! SPANNER_START
+        - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
         - \tweak stencil ##f
@@ -646,11 +646,11 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \tweak staff-padding 8
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "spazz. larg."
+          %! SPANNER_START
+        - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
         - \tweak stencil ##f
@@ -690,37 +690,37 @@ number.4.Cello.Music = {
             \stopTextSpan
             [
               %! SPANNER_START
-            - \tweak bound-details.right.padding 0.5
-              %! SPANNER_START
-            - \tweak bound-details.right.stencil-align-dir-y #center
-              %! SPANNER_START
-            - \tweak staff-padding 10.5
-              %! SPANNER_START
             - \abjad-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "RH vib. molto"
               %! SPANNER_START
             - \baca-text-spanner-right-text "NV"
               %! SPANNER_START
+            - \tweak bound-details.right.padding 0.5
+              %! SPANNER_START
+            - \tweak bound-details.right.stencil-align-dir-y #center
+              %! SPANNER_START
+            - \tweak staff-padding 10.5
+              %! SPANNER_START
             \startTextSpanOne
+              %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "no scr."
+              %! SPANNER_START
+            - \tweak staff-padding 8
+              %! SPANNER_START
+            \startTextSpan
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak color #(x11-color 'blue)
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \<
-              %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "no scr."
-              %! SPANNER_START
-            \startTextSpan
             \glissando
 
             a8
@@ -765,11 +765,11 @@ number.4.Cello.Music = {
               %! SPANNER_STOP
             \stopTextSpanOne
               %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
             - \abjad-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "scr."
+              %! SPANNER_START
+            - \tweak staff-padding 8
               %! SPANNER_START
             \startTextSpan
             - \tweak stencil ##f
@@ -785,26 +785,26 @@ number.4.Cello.Music = {
             \ff
               %! SPANNER_STOP
             \stopTextSpan
+              %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "poss."
+              %! SPANNER_START
+            - \tweak staff-padding 8
+              %! SPANNER_START
+            \startTextSpan
+            - \tweak stencil ##f
+            ~
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak color #(x11-color 'blue)
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
-              %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "poss."
-              %! SPANNER_START
-            \startTextSpan
-            - \tweak stencil ##f
-            ~
             \repeatTie
             \revert TupletBracket.staff-padding
 
@@ -857,28 +857,28 @@ number.4.Cello.Music = {
                 \p
                   %! SPANNER_STOP
                 \stopTextSpan
-                - \tweak arrow-length 2
-                - \tweak arrow-width 0.5
-                - \tweak bound-details.right.arrow ##t
-                - \tweak thickness 3
-                \glissando
-                  %! SPANNER_START
-                - \tweak bound-details.right.padding 8.25
-                  %! SPANNER_START
-                - \tweak staff-padding 8
                   %! SPANNER_START
                 - \abjad-dashed-line-with-hook
                   %! SPANNER_START
                 - \baca-text-spanner-left-text "XFB"
                   %! SPANNER_START
+                - \tweak bound-details.right.padding 8.25
+                  %! SPANNER_START
+                - \tweak staff-padding 8
+                  %! SPANNER_START
                 \startTextSpan
+                - \tweak arrow-length 2
+                - \tweak arrow-width 0.5
+                - \tweak bound-details.right.arrow ##t
+                - \tweak thickness 3
+                \glissando
+                  %! EXPLICIT_DYNAMIC
+                  %! SPANNER_START
+                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC_COLOR
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 - \tweak color #(x11-color 'blue)
-                  %! EXPLICIT_DYNAMIC
-                  %! SPANNER_START
-                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 \<
@@ -897,13 +897,13 @@ number.4.Cello.Music = {
                 - \tweak bound-details.right.arrow ##t
                 - \tweak thickness 3
                 \glissando
+                  %! EXPLICIT_DYNAMIC
+                  %! SPANNER_START
+                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC_COLOR
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 - \tweak color #(x11-color 'blue)
-                  %! EXPLICIT_DYNAMIC
-                  %! SPANNER_START
-                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 \>
@@ -927,37 +927,37 @@ number.4.Cello.Music = {
         \p
           %! SPANNER_STOP
         \stopTextSpan
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "RH NV"
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
+        \startTextSpanOne
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "scr."
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
         - \tweak arrow-length 2
         - \tweak arrow-width 0.5
         - \tweak bound-details.right.arrow ##t
         - \tweak thickness 3
         \glissando
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak stencil #abjad-flared-hairpin
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak stencil #abjad-flared-hairpin
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \<
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "scr."
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "RH NV"
-          %! SPANNER_START
-        \startTextSpanOne
 
         \override NoteHead.style = #'harmonic
         cs!32
@@ -973,24 +973,24 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
         [
-        - \abjad-zero-padding-glissando
-        \glissando
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "RH vib."
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
         \startTextSpanOne
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "no scr."
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
+        - \abjad-zero-padding-glissando
+        \glissando
 
         e'32
         - \abjad-zero-padding-glissando
@@ -1024,13 +1024,13 @@ number.4.Cello.Music = {
         \mf
           %! SPANNER_STOP
         \stopTextSpanOne
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak stencil #abjad-flared-hairpin
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak stencil #abjad-flared-hairpin
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
@@ -1045,16 +1045,16 @@ number.4.Cello.Music = {
         \stopTextSpan
           %! SPANNER_STOP
         \stopTrillSpan
-        - \tweak bound-details.left.padding 0
-        \glissando
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
           %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
           %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
         \startTextSpan
+        - \tweak bound-details.left.padding 0
+        \glissando
 
     }
 
@@ -1077,6 +1077,22 @@ number.4.Cello.Music = {
             \p
               %! SPANNER_STOP
             \stopTextSpan
+              %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "II / III strett."
+              %! SPANNER_START
+            - \tweak staff-padding 10.5
+              %! SPANNER_START
+            \startTextSpanTwo
+              %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "T"
+              %! SPANNER_START
+            - \tweak staff-padding 8
+              %! SPANNER_START
+            \startTextSpanOne
             - \tweak arrow-length 2
             - \tweak arrow-width 0.5
             - \tweak bound-details.right.arrow ##t
@@ -1089,22 +1105,6 @@ number.4.Cello.Music = {
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             \<
-              %! SPANNER_START
-            - \tweak staff-padding 10.5
-              %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "II / III strett."
-              %! SPANNER_START
-            \startTextSpanTwo
-              %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "T"
-              %! SPANNER_START
-            \startTextSpanOne
 
             \times 4/6
             {
@@ -1127,11 +1127,21 @@ number.4.Cello.Music = {
                 \stopTextSpanTwo
                 [
                   %! SPANNER_START
-                - \tweak bound-details.right.padding 2.5
+                - \abjad-dashed-line-with-hook
                   %! SPANNER_START
-                - \tweak bound-details.right.stencil-align-dir-y #center
+                - \baca-text-spanner-left-text "larg."
                   %! SPANNER_START
-                - \tweak staff-padding 5.5
+                - \tweak staff-padding 10.5
+                  %! SPANNER_START
+                \startTextSpanTwo
+                  %! SPANNER_START
+                - \abjad-solid-line-with-arrow
+                  %! SPANNER_START
+                - \baca-text-spanner-left-text "P"
+                  %! SPANNER_START
+                - \tweak staff-padding 8
+                  %! SPANNER_START
+                \startTextSpanOne
                   %! SPANNER_START
                 - \abjad-solid-line-with-arrow
                   %! SPANNER_START
@@ -1139,33 +1149,23 @@ number.4.Cello.Music = {
                   %! SPANNER_START
                 - \baca-text-spanner-right-text "larg."
                   %! SPANNER_START
+                - \tweak bound-details.right.padding 2.5
+                  %! SPANNER_START
+                - \tweak bound-details.right.stencil-align-dir-y #center
+                  %! SPANNER_START
+                - \tweak staff-padding 5.5
+                  %! SPANNER_START
                 \startTextSpan
+                  %! EXPLICIT_DYNAMIC
+                  %! SPANNER_START
+                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC_COLOR
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 - \tweak color #(x11-color 'blue)
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
-                - \tweak stencil #abjad-flared-hairpin
-                  %! EXPLICIT_DYNAMIC
-                  %! SPANNER_START
                 \>
-                  %! SPANNER_START
-                - \tweak staff-padding 10.5
-                  %! SPANNER_START
-                - \abjad-dashed-line-with-hook
-                  %! SPANNER_START
-                - \baca-text-spanner-left-text "larg."
-                  %! SPANNER_START
-                \startTextSpanTwo
-                  %! SPANNER_START
-                - \tweak staff-padding 8
-                  %! SPANNER_START
-                - \abjad-solid-line-with-arrow
-                  %! SPANNER_START
-                - \baca-text-spanner-left-text "P"
-                  %! SPANNER_START
-                \startTextSpanOne
                 \glissando
 
                 \override NoteHead.style = #'harmonic
@@ -1208,21 +1208,21 @@ number.4.Cello.Music = {
               %! SPANNER_STOP
             \stopTextSpanTwo
               %! SPANNER_START
-            - \tweak staff-padding 10.5
+            - \abjad-dashed-line-with-hook
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "T"
+              %! SPANNER_START
+            - \tweak staff-padding 8
+              %! SPANNER_START
+            \startTextSpanOne
               %! SPANNER_START
             - \abjad-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "XFB"
               %! SPANNER_START
+            - \tweak staff-padding 10.5
+              %! SPANNER_START
             \startTextSpanTwo
-              %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
-            - \abjad-dashed-line-with-hook
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "T"
-              %! SPANNER_START
-            \startTextSpanOne
             \glissando
             \revert DynamicLineSpanner.staff-padding
             \revert NoteHead.style
@@ -1248,31 +1248,6 @@ number.4.Cello.Music = {
         \stopTextSpanOne
           %! SPANNER_STOP
         \stopTextSpanTwo
-        - \tweak arrow-length 2
-        - \tweak arrow-width 0.5
-        - \tweak bound-details.right.arrow ##t
-        - \tweak thickness 3
-        \glissando
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        - \tweak staff-padding 10.5
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "II / III strett."
-          %! SPANNER_START
-        - \baca-text-spanner-right-text "larg."
-          %! SPANNER_START
-        \startTextSpanTwo
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 0.5
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! SPANNER_START
         - \abjad-solid-line-with-arrow
           %! SPANNER_START
@@ -1280,7 +1255,32 @@ number.4.Cello.Music = {
           %! SPANNER_START
         - \baca-text-spanner-right-text "P"
           %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
         \startTextSpanOne
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "II / III strett."
+          %! SPANNER_START
+        - \baca-text-spanner-right-text "larg."
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 0.5
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 10.5
+          %! SPANNER_START
+        \startTextSpanTwo
+        - \tweak arrow-length 2
+        - \tweak arrow-width 0.5
+        - \tweak bound-details.right.arrow ##t
+        - \tweak thickness 3
+        \glissando
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1329,11 +1329,21 @@ number.4.Cello.Music = {
             \f
             [
               %! SPANNER_START
-            - \tweak bound-details.right.padding 2
+            - \abjad-dashed-line-with-hook
               %! SPANNER_START
-            - \tweak bound-details.right.stencil-align-dir-y #center
+            - \baca-text-spanner-left-text "II / III larg."
               %! SPANNER_START
-            - \tweak staff-padding 5.5
+            - \tweak staff-padding 10.5
+              %! SPANNER_START
+            \startTextSpanTwo
+              %! SPANNER_START
+            - \abjad-solid-line-with-arrow
+              %! SPANNER_START
+            - \baca-text-spanner-left-text "P"
+              %! SPANNER_START
+            - \tweak staff-padding 8
+              %! SPANNER_START
+            \startTextSpanOne
               %! SPANNER_START
             - \abjad-solid-line-with-arrow
               %! SPANNER_START
@@ -1341,33 +1351,23 @@ number.4.Cello.Music = {
               %! SPANNER_START
             - \baca-text-spanner-right-text "larg."
               %! SPANNER_START
+            - \tweak bound-details.right.padding 2
+              %! SPANNER_START
+            - \tweak bound-details.right.stencil-align-dir-y #center
+              %! SPANNER_START
+            - \tweak staff-padding 5.5
+              %! SPANNER_START
             \startTextSpan
+              %! EXPLICIT_DYNAMIC
+              %! SPANNER_START
+            - \tweak stencil #abjad-flared-hairpin
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak color #(x11-color 'blue)
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak stencil #abjad-flared-hairpin
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
-              %! SPANNER_START
-            - \tweak staff-padding 10.5
-              %! SPANNER_START
-            - \abjad-dashed-line-with-hook
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "II / III larg."
-              %! SPANNER_START
-            \startTextSpanTwo
-              %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
-            - \abjad-solid-line-with-arrow
-              %! SPANNER_START
-            - \baca-text-spanner-left-text "P"
-              %! SPANNER_START
-            \startTextSpanOne
             \glissando
 
             <b, d>16
@@ -1379,11 +1379,11 @@ number.4.Cello.Music = {
               %! SPANNER_STOP
             \stopTextSpanOne
               %! SPANNER_START
-            - \tweak staff-padding 8
-              %! SPANNER_START
             - \abjad-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "T"
+              %! SPANNER_START
+            - \tweak staff-padding 8
               %! SPANNER_START
             \startTextSpanOne
             \glissando
@@ -1408,11 +1408,11 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanTwo
           %! SPANNER_START
-        - \tweak staff-padding 8
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-circle-very-wide-markup
+          %! SPANNER_START
+        - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpanOne
         \glissando
@@ -1487,6 +1487,14 @@ number.4.Cello.Music = {
                 \p
                   %! SPANNER_STOP
                 \stopTextSpanOne
+                  %! SPANNER_START
+                - \abjad-dashed-line-with-hook
+                  %! SPANNER_START
+                - \baca-text-spanner-left-text "spz."
+                  %! SPANNER_START
+                - \tweak staff-padding 8
+                  %! SPANNER_START
+                \startTextSpanOne
                   %! EXPLICIT_DYNAMIC_COLOR
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
@@ -1494,14 +1502,6 @@ number.4.Cello.Music = {
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 \>
-                  %! SPANNER_START
-                - \tweak staff-padding 8
-                  %! SPANNER_START
-                - \abjad-dashed-line-with-hook
-                  %! SPANNER_START
-                - \baca-text-spanner-left-text "spz."
-                  %! SPANNER_START
-                \startTextSpanOne
                 \glissando
 
                 fs!2
@@ -1514,26 +1514,26 @@ number.4.Cello.Music = {
                 \ppp
                   %! SPANNER_STOP
                 \stopTextSpanOne
+                  %! SPANNER_START
+                - \abjad-dashed-line-with-hook
+                  %! SPANNER_START
+                - \baca-text-spanner-left-text "(LH) vib. molto"
+                  %! SPANNER_START
+                - \tweak staff-padding 8
+                  %! SPANNER_START
+                \startTextSpanOne
+                - \tweak stencil ##f
+                ~
+                  %! EXPLICIT_DYNAMIC
+                  %! SPANNER_START
+                - \tweak stencil #abjad-flared-hairpin
                   %! EXPLICIT_DYNAMIC_COLOR
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
                 - \tweak color #(x11-color 'blue)
                   %! EXPLICIT_DYNAMIC
                   %! SPANNER_START
-                - \tweak stencil #abjad-flared-hairpin
-                  %! EXPLICIT_DYNAMIC
-                  %! SPANNER_START
                 \<
-                  %! SPANNER_START
-                - \tweak staff-padding 8
-                  %! SPANNER_START
-                - \abjad-dashed-line-with-hook
-                  %! SPANNER_START
-                - \baca-text-spanner-left-text "(LH) vib. molto"
-                  %! SPANNER_START
-                \startTextSpanOne
-                - \tweak stencil ##f
-                ~
 
             }
 
@@ -1559,29 +1559,29 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
           %! SPANNER_START
-        - \tweak staff-padding 10.5
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
           %! SPANNER_START
+        - \tweak staff-padding 10.5
+          %! SPANNER_START
         \startTextSpanTwo
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "no scr."
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "II / III"
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! SPANNER_START
         \startTextSpanOne
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "no scr."
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
         - \tweak stencil ##f
         ~
 
@@ -1596,6 +1596,14 @@ number.4.Cello.Music = {
         \baca-effort-f
           %! SPANNER_STOP
         \stopTextSpan
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "scr."
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1603,14 +1611,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "scr."
-          %! SPANNER_START
-        \startTextSpan
         \repeatTie
 
           %! SPANNER_START
@@ -1649,16 +1649,16 @@ number.4.Cello.Music = {
         d4
           %! SPANNER_STOP
         \stopTrillSpan
-        - \abjad-zero-padding-glissando
-        \glissando
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
           %! SPANNER_START
         - \abjad-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
           %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
         \startTextSpan
+        - \abjad-zero-padding-glissando
+        \glissando
 
         \hide NoteHead
         \override Accidental.stencil = ##f
@@ -1699,16 +1699,16 @@ number.4.Cello.Music = {
         \mp
           %! SPANNER_STOP
         \stopTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
           %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr. poss."
           %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
         \startTextSpan
+        - \abjad-zero-padding-glissando
+        \glissando
 
         \hide NoteHead
         \override Accidental.stencil = ##f
@@ -1756,6 +1756,22 @@ number.4.Cello.Music = {
         \baca-effort-mf
           %! SPANNER_STOP
         \stopTextSpan
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-damp-markup
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        \startTextSpan
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "I / II larg."
+          %! SPANNER_START
+        - \tweak staff-padding 9
+          %! SPANNER_START
+        \startTextSpanOne
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1763,22 +1779,6 @@ number.4.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-damp-markup
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 9
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "I / II larg."
-          %! SPANNER_START
-        \startTextSpanOne
 
         <cs! a>2..
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1791,17 +1791,17 @@ number.4.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
           %! SPANNER_START
-        - \tweak bound-details.right.padding 6.25
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        - \tweak staff-padding 9
-          %! SPANNER_START
         - \abjad-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "strett."
           %! SPANNER_START
         - \baca-text-spanner-right-text "larg."
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 6.25
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 9
           %! SPANNER_START
         \startTextSpanOne
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1829,6 +1829,27 @@ number.4.Cello.Music = {
         \stopTextSpan
           %! SPANNER_STOP
         \stopTextSpanOne
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-triple-diamond-parenthesized-top-markup
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! SPANNER_START
+        - \tweak style #'trill
+          %! SPANNER_START
+        \startTextSpan
+          %! SPANNER_START
+        - \abjad-solid-line-with-arrow
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "trill larg."
+          %! SPANNER_START
+        - \tweak staff-padding 9
+          %! SPANNER_START
+        \startTextSpanOne
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1838,44 +1859,23 @@ number.4.Cello.Music = {
         - \tweak to-barline ##t
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! SPANNER_START
-        - \tweak style #'trill
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-triple-diamond-parenthesized-top-markup
-          %! SPANNER_START
-        \startTextSpan
-          %! SPANNER_START
-        - \tweak staff-padding 9
-          %! SPANNER_START
-        - \abjad-solid-line-with-arrow
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "trill larg."
-          %! SPANNER_START
-        \startTextSpanOne
 
         <cs! a>2...
           %! SPANNER_STOP
         \stopTextSpanOne
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 5.25
-          %! SPANNER_START
-        - \tweak bound-details.right.stencil-align-dir-y #center
-          %! SPANNER_START
-        - \tweak staff-padding 9
           %! SPANNER_START
         - \abjad-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "strett."
           %! SPANNER_START
         - \baca-text-spanner-right-text "larg."
+          %! SPANNER_START
+        - \tweak bound-details.right.padding 5.25
+          %! SPANNER_START
+        - \tweak bound-details.right.stencil-align-dir-y #center
+          %! SPANNER_START
+        - \tweak staff-padding 9
           %! SPANNER_START
         \startTextSpanOne
 
