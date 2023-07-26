@@ -10,13 +10,13 @@ number.2.Skips = {
     \time 5/8
     s1 * 5/8
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"
       %! EXPLICIT_METRONOME_MARK
@@ -69,13 +69,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-dashed-line-with-arrow
+    - \baca-dashed-line-with-arrow
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-dashed-line-with-arrow
+    %@% - \baca-dashed-line-with-arrow
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"
       %! EXPLICIT_METRONOME_MARK
@@ -128,13 +128,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"
       %! EXPLICIT_METRONOME_MARK
@@ -241,13 +241,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"
       %! EXPLICIT_METRONOME_MARK
@@ -304,13 +304,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"
       %! EXPLICIT_METRONOME_MARK
@@ -388,13 +388,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "52" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "52"
       %! EXPLICIT_METRONOME_MARK
@@ -426,13 +426,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-dashed-line-with-arrow
+    - \baca-dashed-line-with-arrow
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "117" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-dashed-line-with-arrow
+    %@% - \baca-dashed-line-with-arrow
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "117"
       %! EXPLICIT_METRONOME_MARK
@@ -464,13 +464,13 @@ number.2.Skips = {
       %! MEASURE_NUMBER
     %@% \bacaStopTextSpanMN
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "39" #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "39"
       %! EXPLICIT_METRONOME_MARK
@@ -675,7 +675,7 @@ number.2.Cello.Music = {
           %! REAPPLIED_INSTRUMENT_ALERT
         ^ \baca-reapplied-instrument-markup "(“Cello”)"
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
           %! SPANNER_START
@@ -710,7 +710,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr."
           %! SPANNER_START
@@ -732,8 +732,10 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
         [
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "RH vib."
           %! SPANNER_START
@@ -743,15 +745,13 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \startTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
           %! SPANNER_START
         - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
         \repeatTie
         \revert RepeatTie.direction
         \revert RepeatTie.extra-offset
@@ -813,7 +813,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr."
           %! SPANNER_START
@@ -847,8 +847,10 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
         [
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "RH vib."
           %! SPANNER_START
@@ -857,8 +859,6 @@ number.2.Cello.Music = {
         - \tweak staff-padding 10.5
           %! SPANNER_START
         \startTextSpanOne
-        - \abjad-zero-padding-glissando
-        \glissando
         \repeatTie
         \revert RepeatTie.direction
         \revert RepeatTie.extra-offset
@@ -902,7 +902,7 @@ number.2.Cello.Music = {
             \override DynamicLineSpanner.staff-padding = 11
             <f a>2
               %! SPANNER_START
-            - \abjad-solid-line-with-arrow
+            - \baca-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "II / III strett."
               %! SPANNER_START
@@ -910,7 +910,7 @@ number.2.Cello.Music = {
               %! SPANNER_START
             \startTextSpanTwo
               %! SPANNER_START
-            - \abjad-solid-line-with-arrow
+            - \baca-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "T"
               %! SPANNER_START
@@ -954,7 +954,7 @@ number.2.Cello.Music = {
                 \stopTextSpanTwo
                 [
                   %! SPANNER_START
-                - \abjad-dashed-line-with-hook
+                - \baca-dashed-line-with-hook
                   %! SPANNER_START
                 - \baca-text-spanner-left-text "larg."
                   %! SPANNER_START
@@ -962,7 +962,7 @@ number.2.Cello.Music = {
                   %! SPANNER_START
                 \startTextSpanTwo
                   %! SPANNER_START
-                - \abjad-solid-line-with-arrow
+                - \baca-solid-line-with-arrow
                   %! SPANNER_START
                 - \baca-text-spanner-left-text "P"
                   %! SPANNER_START
@@ -970,7 +970,7 @@ number.2.Cello.Music = {
                   %! SPANNER_START
                 \startTextSpanOne
                   %! SPANNER_START
-                - \abjad-solid-line-with-arrow
+                - \baca-solid-line-with-arrow
                   %! SPANNER_START
                 - \baca-text-spanner-left-text "trem."
                   %! SPANNER_START
@@ -1035,7 +1035,7 @@ number.2.Cello.Music = {
               %! SPANNER_STOP
             \stopTextSpanTwo
               %! SPANNER_START
-            - \abjad-dashed-line-with-hook
+            - \baca-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "T"
               %! SPANNER_START
@@ -1043,7 +1043,7 @@ number.2.Cello.Music = {
               %! SPANNER_START
             \startTextSpanOne
               %! SPANNER_START
-            - \abjad-dashed-line-with-hook
+            - \baca-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "XFB"
               %! SPANNER_START
@@ -1076,7 +1076,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanTwo
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "(T)"
           %! SPANNER_START
@@ -1090,7 +1090,7 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \startTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "II / III strett."
           %! SPANNER_START
@@ -1159,7 +1159,7 @@ number.2.Cello.Music = {
             \f
             [
               %! SPANNER_START
-            - \abjad-dashed-line-with-hook
+            - \baca-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "II / III larg."
               %! SPANNER_START
@@ -1167,7 +1167,7 @@ number.2.Cello.Music = {
               %! SPANNER_START
             \startTextSpanTwo
               %! SPANNER_START
-            - \abjad-solid-line-with-arrow
+            - \baca-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "P"
               %! SPANNER_START
@@ -1175,7 +1175,7 @@ number.2.Cello.Music = {
               %! SPANNER_START
             \startTextSpanOne
               %! SPANNER_START
-            - \abjad-solid-line-with-arrow
+            - \baca-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "trem."
               %! SPANNER_START
@@ -1235,7 +1235,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanTwo
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "T"
           %! SPANNER_START
@@ -1245,7 +1245,7 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \startTextSpanOne
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
           %! SPANNER_START
@@ -1357,8 +1357,10 @@ number.2.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \pppp
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
           %! SPANNER_START
@@ -1367,8 +1369,6 @@ number.2.Cello.Music = {
         - \tweak staff-padding 5.5
           %! SPANNER_START
         \startTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak stencil #constante-hairpin
@@ -1487,8 +1487,10 @@ number.2.Cello.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \pp
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
           %! SPANNER_START
@@ -1496,15 +1498,13 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \startTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "II / III largo"
           %! SPANNER_START
         - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         - \tweak stencil #abjad-flared-hairpin
@@ -1532,16 +1532,16 @@ number.2.Cello.Music = {
             \baca-effort-f
               %! SPANNER_STOP
             \stopTextSpan
+            - \abjad-zero-padding-glissando
+            \glissando
               %! SPANNER_START
-            - \abjad-dashed-line-with-hook
+            - \baca-dashed-line-with-hook
               %! SPANNER_START
             - \baca-text-spanner-left-text "strett."
               %! SPANNER_START
             - \tweak staff-padding 8
               %! SPANNER_START
             \startTextSpan
-            - \abjad-zero-padding-glissando
-            \glissando
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
@@ -1560,16 +1560,16 @@ number.2.Cello.Music = {
             \pp
               %! SPANNER_STOP
             \stopTextSpan
+            - \abjad-zero-padding-glissando
+            \glissando
               %! SPANNER_START
-            - \abjad-solid-line-with-arrow
+            - \baca-solid-line-with-arrow
               %! SPANNER_START
             - \baca-text-spanner-left-text "largo"
               %! SPANNER_START
             - \tweak staff-padding 8
               %! SPANNER_START
             \startTextSpan
-            - \abjad-zero-padding-glissando
-            \glissando
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
             - \tweak stencil #abjad-flared-hairpin
@@ -1594,16 +1594,16 @@ number.2.Cello.Music = {
         \baca-effort-f
           %! SPANNER_STOP
         \stopTextSpan
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "strett."
           %! SPANNER_START
         - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1632,7 +1632,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
           %! SPANNER_START
@@ -1662,7 +1662,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr."
           %! SPANNER_START
@@ -1696,8 +1696,10 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
         [
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "RH vib."
           %! SPANNER_START
@@ -1706,8 +1708,6 @@ number.2.Cello.Music = {
         - \tweak staff-padding 10.5
           %! SPANNER_START
         \startTextSpanOne
-        - \abjad-zero-padding-glissando
-        \glissando
         \repeatTie
         \revert RepeatTie.direction
         \revert RepeatTie.extra-offset
@@ -1747,7 +1747,7 @@ number.2.Cello.Music = {
         \override TupletBracket.staff-padding = 2.5
         c''2.
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-markup \baca-damp-markup
           %! SPANNER_START
@@ -1755,7 +1755,7 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \startTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "no scr."
           %! SPANNER_START
@@ -1791,7 +1791,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpanOne
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr. poss."
           %! SPANNER_START
@@ -1831,7 +1831,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "1-2 clicks / sec."
           %! SPANNER_START
@@ -1858,16 +1858,16 @@ number.2.Cello.Music = {
         \fff
           %! SPANNER_STOP
         \stopTextSpan
+        - \abjad-zero-padding-glissando
+        \glissando
           %! SPANNER_START
-        - \abjad-solid-line-with-arrow
+        - \baca-solid-line-with-arrow
           %! SPANNER_START
         - \baca-text-spanner-left-text "scr. poss."
           %! SPANNER_START
         - \tweak staff-padding 8
           %! SPANNER_START
         \startTextSpan
-        - \abjad-zero-padding-glissando
-        \glissando
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1900,7 +1900,7 @@ number.2.Cello.Music = {
           %! SPANNER_STOP
         \stopTextSpan
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! SPANNER_START
         - \baca-text-spanner-left-text "XFB"
           %! SPANNER_START
