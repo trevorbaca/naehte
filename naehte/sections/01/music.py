@@ -248,7 +248,6 @@ def make_score():
         time_signatures(),
         append_anchor_skip=True,
         always_make_global_rests=True,
-        first_section=True,
         manifests=library.manifests,
     )
     GLOBALS(score["Skips"])
@@ -272,6 +271,7 @@ def main():
         always_make_global_rests=True,
         do_not_require_short_instrument_names=True,
         error_on_not_yet_pitched=True,
+        first_section=True,
         global_rests_in_topmost_staff=True,
     )
     baca.tags.activate(score, baca.tags.LOCAL_MEASURE_NUMBER)
