@@ -3,9 +3,6 @@ number.3.Skips = {
     % [Skips measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'blue
-      %! +SECTION
-      %! EMPTY_START_BAR
-    \bar ""
     \bar ".|:"
       %! MEASURE_28
       %! NOT_MOL
