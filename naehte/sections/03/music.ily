@@ -14,6 +14,12 @@ number.3.Skips = {
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
+      %! RED_START_BAR
+    %@% \tweak break-visibility ##(#t #t #f)
+      %! RED_START_BAR
+    %@% \tweak color #red
+      %! RED_START_BAR
+    %@% \mark \markup \with-dimensions-from \null "03"
     s1 * 5/4
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
