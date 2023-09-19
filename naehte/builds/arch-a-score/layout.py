@@ -11,17 +11,14 @@ def first_y_offset(system_number):
     return y_offset
 
 
-nonfirst_start = 10
-
-distances = (16,)
-
-
 def nonfirst_y_offset(system_number):
+    nonfirst_start = 10
     nonfirst_separation = 23
     return nonfirst_start + (system_number - 1) * (nonfirst_separation + 16)
 
 
 def main():
+    distances = (16,)
     spacing = baca.make_layout(
         baca.page(
             1,
