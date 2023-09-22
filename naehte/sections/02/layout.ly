@@ -11,7 +11,7 @@
 <<
 
     \context GlobalContext = "GlobalContext"
-    <<
+    {
 
         \context PageLayout = "PageLayout"
         {   %*% PageLayout
@@ -295,6 +295,6 @@
 
         }   %*% PageLayout
 
-    >>
+    }
 
 >>
