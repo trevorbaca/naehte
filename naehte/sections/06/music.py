@@ -346,7 +346,6 @@ def make_score(first_measure_number, previous_persistent_indicators):
     baca.section.set_up_score(
         score,
         time_signatures(),
-        always_make_global_rests=True,
         first_measure_number=first_measure_number,
         manifests=library.manifests,
         score_persistent_indicators=previous_persistent_indicators["Score"],
@@ -372,7 +371,6 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
-        always_make_global_rests=True,
         do_not_require_short_instrument_names=True,
         error_on_not_yet_pitched=True,
         global_rests_in_topmost_staff=True,
