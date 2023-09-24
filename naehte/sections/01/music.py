@@ -34,13 +34,9 @@ def GLOBALS(skips):
 
 def VC(voice):
     # 1
-    music = baca.parse(
-        r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }"
-    )
-    voice.extend(music)
+    voice.append(r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }")
     # 2
-    music = baca.parse(r"\times 6/7 { c2. c8 }")
-    voice.extend(music)
+    voice.append(r"\times 6/7 { c2. c8 }")
     # 3
     music = baca.parse(
         r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
