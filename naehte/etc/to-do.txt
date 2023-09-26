@@ -32,39 +32,16 @@ TO-DO
 
     The principle is that pitched trill spanners must format last.
 
-3.  Fix rhythm scoping.
-    This ...
-        maker(
-            ('vc', [1, 2]),
-            baca.make_skeleton("{ c'4 c' c' c' }")
-            )
-    ... currently breaks.
-    Should be equivalent to ...
-        maker(
-            ('vc', 1),
-            baca.make_skeleton("{ c'4 c' c' c' }")
-            )
-        maker(
-            ('vc', 2),
-            baca.make_skeleton("{ c'4 c' c' c' }")
-            )
-    ... instead.
-    Integrate into opening of [F].
-
-4.  Add baca-dashed-line, baca-solid-line text spanner line style functions.
+3.  Add baca-dashed-line, baca-solid-line text spanner line style functions.
     Analogous to abjad-dashed-line-with-hook, abjad-solid-line-with-hook.
 
-5.  Integrate empty fermata measures.
+4.  Integrate empty fermata measures.
 
-6.  Add functions for glissandi without note-heads.
+5.  Add functions for glissandi without note-heads.
 
-7.  Consolidate tie functions.
-    Replace baca.tie_to(), baca.tie_from() with baca.tie().
-    Replace baca.repeat_tie_to(), baca.repeat_tie_from() with baca.repeat_tie().
+6.  Teach repeat ties to ignore trill pitch.
 
-8.  Teach repeat ties to ignore trill pitch.
-
-9.  Allow trend-initial text spanners:
+7.  Allow trend-initial text spanners:
         baca.text_spanner(
             baca.select.lleak(o.leaves()),
             r'-> XFB =|',
