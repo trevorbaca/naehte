@@ -82,10 +82,7 @@ def VC(voice, time_signatures):
     voice.extend(music)
     # 13
     voice.extend(
-        "{"
-        r" \times 4/5 { c16 [ c c c c ] }"
-        r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
-        " }"
+        r"{ \times 4/5 { c16 [ c c c c ] } c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"
     )
     # 14
     voice.extend("{ c4 c c c }")

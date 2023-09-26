@@ -69,16 +69,13 @@ def VC(voice, time_signatures):
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
     # 9
-    voice.extend(r"\times 4/5 { c4. c8 [ c ] }")
-    for leaf in baca.select.leaves(voice)[-2:]:
-        baca.repeat_tie(leaf)
+    voice.extend(r"\times 4/5 { c4. c8 \repeatTie [ c \repeatTie ] }")
     # 10
     voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
     # 11
-    voice.extend("{ c4 c8 }")
+    voice.extend(r"{ c4 c8 \repeatTie }")
     leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    baca.repeat_tie(leaf)
     # 12
     voice.extend("{ c4 c4. }")
     music = baca.make_mmrests(time_signatures(13), head=voice.name)
