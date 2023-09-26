@@ -61,52 +61,37 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
-    voice.extend(music)
+    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
     # 2
-    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
-    voice.extend(music)
+    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
     # (3, 4)
-    music = baca.parse(
-        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
-    )
-    voice.extend(music)
+    voice.extend(r"{ \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 } }")
     # 5
-    music = baca.parse("{ c4.. c16 }")
-    voice.extend(music)
+    voice.extend("{ c4.. c16 }")
     music = baca.make_mmrests(time_signatures(6))
     voice.extend(music)
     # 7
-    music = baca.parse("{" r" \times 4/5 { c16 [ c c c c ] } c2... c16" " }")
-    voice.extend(music)
+    voice.extend(r"{ \times 4/5 { c16 [ c c c c ] } c2... c16 }")
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
     # 9
-    music = baca.parse("{ c4 c c c c c c c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c c c c c c c }")
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
     # (11, 13)
-    music = baca.parse("{" r" c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
-    voice.extend(music)
+    voice.extend(r"{ c1 \times 4/5 { c4 c1 } c2 }")
     # 14
-    music = baca.parse(r"{ c4. c8 c32 [ c c c ] }")
-    voice.extend(music)
+    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
     # 15
-    music = baca.parse(r"{ c2. c8 }")
-    voice.extend(music)
+    voice.extend(r"{ c2. c8 }")
     # 16
-    music = baca.parse("{ c1 }")
-    voice.extend(music)
+    voice.extend("{ c1 }")
     # 17
-    music = baca.parse("{ c1. }")
-    voice.extend(music)
+    voice.extend("{ c1. }")
     # 18
-    music = baca.parse("{ c4 c c c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c c c }")
     # 19
-    music = baca.parse("{ c4 c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c }")
     baca.section.append_anchor_note(voice)
 
 

@@ -51,52 +51,39 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.parse("{" r" c4 \times 3/4 { c4 c \times 2/3 { c c c } }" " }")
-    voice.extend(music)
+    voice.extend(r"{ c4 \times 3/4 { c4 c \times 2/3 { c c c } } }")
     # 2
-    music = baca.parse("{ c1 c4 }")
-    voice.extend(music)
+    voice.extend("{ c1 c4 }")
     # 3
-    music = baca.parse("{ c4 c8 }")
-    voice.extend(music)
-    leaf = abjad.select.leaf(music, -1)
+    voice.extend("{ c4 c8 }")
+    leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie(leaf)
     # 4
-    music = baca.parse("{ c4 c8 }")
-    voice.extend(music)
+    voice.extend("{ c4 c8 }")
     # 5
-    music = baca.parse("{ c4 c8 }")
-    voice.extend(music)
+    voice.extend("{ c4 c8 }")
     # 6
-    music = baca.parse("{ c2.. c8 }")
-    voice.extend(music)
-    leaf = abjad.select.leaf(music, -1)
+    voice.extend("{ c2.. c8 }")
+    leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
     baca.repeat_tie(leaf)
     # 7
-    music = baca.parse(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
-    voice.extend(music)
+    voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     # 8
-    music = baca.parse(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
-    voice.extend(music)
+    voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
     # 9
-    music = baca.parse("{ c4 c8 }")
-    voice.extend(music)
-    leaf = abjad.select.leaf(music, -1)
+    voice.extend("{ c4 c8 }")
+    leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
     baca.repeat_tie(leaf)
     # 10
-    music = baca.parse("{ c4 c4. }")
-    voice.extend(music)
+    voice.extend("{ c4 c4. }")
     # 11
-    music = baca.parse(r"\times 7/6 { c2. c2 c4 }")
-    voice.extend(music)
+    voice.extend(r"\times 7/6 { c2. c2 c4 }")
     # 12
-    music = baca.parse(r"{ c4 c c c c c c c c c }")
-    voice.extend(music)
+    voice.extend(r"{ c4 c c c c c c c c c }")
     # 13
-    music = baca.parse(r"{ c4 c c c c c c c c c c }")
-    voice.extend(music)
+    voice.extend(r"{ c4 c c c c c c c c c c }")
     music = baca.make_mmrests(time_signatures(14), head=voice.name)
     voice.extend(music)
 
