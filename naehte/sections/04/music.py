@@ -51,60 +51,40 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    music = baca.parse(r"{ c8 c4. c8 }")
-    voice.extend(music)
+    voice.extend(r"{ c8 c4. c8 }")
     # 2
-    music = baca.parse(r"\times 6/7 { c2. c8 }")
-    voice.extend(music)
+    voice.extend(r"\times 6/7 { c2. c8 }")
     # 3
-    music = baca.parse(
-        r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
-    )
-    voice.extend(music)
+    voice.extend(r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }")
     # 4
-    music = baca.parse(
-        "{" r" \times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" { c2. c8 } }" " }"
-    )
-    voice.extend(music)
+    voice.extend(r"{ \times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" { c2. c8 } } }")
     # 5
-    music = baca.parse(r"{ c2 c32 [ c c c ] }")
-    voice.extend(music)
+    voice.extend(r"{ c2 c32 [ c c c ] }")
     # 6
-    music = baca.parse(r"{ c2 c8 }")
-    voice.extend(music)
+    voice.extend(r"{ c2 c8 }")
     # (7, 8)
-    music = baca.parse(
-        "{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }"
-    )
-    voice.extend(music)
+    voice.extend(r"{ \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 } }")
     # 9
-    music = baca.parse("{ c4.. c16 }")
-    voice.extend(music)
+    voice.extend("{ c4.. c16 }")
     music = baca.make_mmrests(time_signatures(10))
     voice.extend(music)
     # 11
-    music = baca.parse(
+    voice.extend(
         "{"
         r" \times 4/5 { c16 [ c c c c ] }"
         r" c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
         " }"
     )
-    voice.extend(music)
     # 12
-    music = baca.parse("{ c4 c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c }")
     # 13
-    music = baca.parse("{ c4 c c c c c c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c c c c c c }")
     # 14
-    music = baca.parse("{ c4 c c c c c c c c c }")
-    voice.extend(music)
+    voice.extend("{ c4 c c c c c c c c c }")
     # 15
-    music = baca.parse(r"{ c4 c2.. c }")
-    voice.extend(music)
+    voice.extend(r"{ c4 c2.. c }")
     # 16
-    music = baca.parse(r"{ c1 c2... r16 }")
-    voice.extend(music)
+    voice.extend(r"{ c1 c2... r16 }")
 
 
 def vc(cache):

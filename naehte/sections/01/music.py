@@ -38,21 +38,15 @@ def VC(voice):
     # 2
     voice.append(r"\times 6/7 { c2. c8 }")
     # 3
-    music = baca.parse(
-        r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }"
-    )
-    voice.extend(music)
+    voice.extend(r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }")
     # 4
-    music = baca.parse(
+    voice.extend(
         r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" c2 \times 3/4 { c8 c4. } }"
     )
-    voice.extend(music)
     # (5, 7)
-    music = baca.parse("{" r" c4 c1" r" \times 4/5 { c4 c1 }" r" c2" " }")
-    voice.extend(music)
+    voice.extend(r"{ c4 c1 \times 4/5 { c4 c1 } c2 }")
     # 8
-    music = baca.parse("{" r" c2... r16" " }")
-    voice.extend(music)
+    voice.extend(r"{ c2... r16 }")
     baca.section.append_anchor_note(voice)
 
 
