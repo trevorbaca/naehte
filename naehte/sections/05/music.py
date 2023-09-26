@@ -58,7 +58,7 @@ def VC(voice, time_signatures):
     # 6
     voice.extend(r"{ c2 c8 }")
     # 7
-    voice.extend("{" r" \times 3/5 { c4 c c c c }" " c1" " }")
+    voice.extend(r"{ \times 3/5 { c4 c c c c } c1 }")
     # 8
     voice.extend("{ c2 c8 }")
     # 9

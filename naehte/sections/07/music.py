@@ -55,27 +55,23 @@ def VC(voice, time_signatures):
     # 2
     voice.extend("{ c1 c4 }")
     # 3
-    voice.extend("{ c4 c8 }")
-    leaf = abjad.select.leaf(voice, -1)
-    baca.repeat_tie(leaf)
+    voice.extend(r"{ c4 c8 \repeatTie }")
     # 4
     voice.extend("{ c4 c8 }")
     # 5
     voice.extend("{ c4 c8 }")
     # 6
-    voice.extend("{ c2.. c8 }")
+    voice.extend(r"{ c2.. c8 \repeatTie }")
     leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    baca.repeat_tie(leaf)
     # 7
     voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
     # 8
     voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
     # 9
-    voice.extend("{ c4 c8 }")
+    voice.extend(r"{ c4 c8 \repeatTie }")
     leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    baca.repeat_tie(leaf)
     # 10
     voice.extend("{ c4 c4. }")
     # 11
