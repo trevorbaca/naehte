@@ -13,24 +13,7 @@ def T(items, extra_counts):
     return baca.Tuplet(items, extra_counts)
 
 
-def make_empty_score():
-    tag = baca.helpers.function_name(inspect.currentframe())
-    global_context = baca.score.make_global_context()
-    cello_music_voice = abjad.Voice(name="Cello.Music", tag=tag)
-    cello_music_staff = abjad.Staff([cello_music_voice], name="Cello.Staff", tag=tag)
-    music_context = abjad.Context(
-        [cello_music_staff],
-        lilypond_type="MusicContext",
-        name="MusicContext",
-        tag=tag,
-    )
-    score = abjad.Score([global_context, music_context], name="Score", tag=tag)
-    baca.score.assert_lilypond_identifiers(score)
-    baca.score.assert_unique_context_names(score)
-    return score
-
-
-def make_rhythm(voice, items, denominator=16):
+def make(voice, items, denominator=16):
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
         items = abjad.sequence.flatten(items)
@@ -48,6 +31,23 @@ def make_rhythm(voice, items, denominator=16):
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
+
+
+def make_empty_score():
+    tag = baca.helpers.function_name(inspect.currentframe())
+    global_context = baca.score.make_global_context()
+    cello_music_voice = abjad.Voice(name="Cello.Music", tag=tag)
+    cello_music_staff = abjad.Staff([cello_music_voice], name="Cello.Staff", tag=tag)
+    music_context = abjad.Context(
+        [cello_music_staff],
+        lilypond_type="MusicContext",
+        name="MusicContext",
+        tag=tag,
+    )
+    score = abjad.Score([global_context, music_context], name="Score", tag=tag)
+    baca.score.assert_lilypond_identifiers(score)
+    baca.score.assert_unique_context_names(score)
+    return score
 
 
 instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}

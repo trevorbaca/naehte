@@ -9,6 +9,7 @@ from naehte import library
 
 C = library.C
 T = library.T
+make = library.make
 
 
 def make_empty_score():
@@ -64,12 +65,13 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    leaves = library.make_rhythm(voice, [12, 4, 1, 1, 1, 1], 32)
+    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
     # 2
-    voice.extend("c4. c8 c32 [ c c c ]")
+    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
+    abjad.beam(leaves[-4:])
     # (3, 4)
-    voice.extend(r"\times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }")
+    make(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
     # 5
     voice.extend("c4.. c16")
     music = baca.make_mmrests(time_signatures(6))
