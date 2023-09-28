@@ -25,14 +25,12 @@ def GLOBALS(skips):
 
 
 def VC(voice):
-    library.make_rhythm(voice, [T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4)])
-    library.make_rhythm(voice, [T([12, 2], -2)])
-    library.make_rhythm(
-        voice, [4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)], container=True
-    )
-    library.make_rhythm(voice, [T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10)])
-    library.make_rhythm(voice, [4, 16, T([4, 16], -4), 8], container=True)
-    library.make_rhythm(voice, [C([15, -1])])
+    library.make_rhythm(voice, T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4))
+    library.make_rhythm(voice, T([12, 2], -2))
+    library.make_rhythm(voice, C([4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)]))
+    library.make_rhythm(voice, T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10))
+    library.make_rhythm(voice, C([4, 16, T([4, 16], -4), 8]))
+    library.make_rhythm(voice, C([15, -1]))
     baca.section.append_anchor_note(voice)
 
 
@@ -44,9 +42,7 @@ def vc(cache):
         baca.clef(o.leaf(0), "bass")
         baca.repeat_tie(o.leaf(-1))
         baca.repeat_tie_extra_offset(o.leaf(-1), (-1.5, 0))
-        baca.pitches(
-            o, "<G3 D4>" " <A3 E4>" " <C3 G3>" " <E3 B3>" " <D3 A3>" " <E4 B4>" " Eb4"
-        )
+        baca.pitches(o, "<G3 D4> <A3 E4> <C3 G3> <E3 B3> <D3 A3> <E4 B4> Eb4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
