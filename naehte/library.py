@@ -5,6 +5,10 @@ import baca
 from abjadext import rmakers
 
 
+def C(items):
+    return baca.Container(items)
+
+
 def T(items, extra_counts):
     return baca.Tuplet(items, extra_counts)
 

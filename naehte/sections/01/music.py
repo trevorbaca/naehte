@@ -7,6 +7,7 @@ from naehte import library
 ########################################### 01 ##########################################
 #########################################################################################
 
+C = library.C
 T = library.T
 
 
@@ -31,7 +32,7 @@ def VC(voice):
     )
     library.make_rhythm(voice, [T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10)])
     library.make_rhythm(voice, [4, 16, T([4, 16], -4), 8], container=True)
-    library.make_rhythm(voice, [15, -1], container=True)
+    library.make_rhythm(voice, [C([15, -1])])
     baca.section.append_anchor_note(voice)
 
 
