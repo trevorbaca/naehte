@@ -51,17 +51,17 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend("{ c1 c1 c4 }")
+    voice.extend("c1 c1 c4")
     # 2
-    voice.extend("{ c1 c1 c4 }")
+    voice.extend("c1 c1 c4")
     # 3
-    voice.extend("{ c2 c8 }")
+    voice.extend("c2 c8")
     music = baca.make_mmrests(time_signatures(4), head=voice.name)
     voice.extend(music)
     # 5
-    voice.extend(r"{ c4 \times 3/4 { c4 c \times 2/3 { c c c } } }")
+    voice.extend(r"c4 \times 3/4 { c4 c \times 2/3 { c c c } }")
     # 6
-    voice.extend("{ c1 c4 }")
+    voice.extend("c1 c4")
     # 7
     voice.extend(r"\times 6/7 { c2. c8 }")
     # 8
@@ -69,7 +69,7 @@ def VC(voice, time_signatures):
     music = baca.make_mmrests(time_signatures(9), head=voice.name)
     voice.extend(music)
     # (10, 13)
-    voice.extend(r"{ c2. c2. c2.. c2. }")
+    voice.extend(r"c2. c2. c2.. c2.")
     music = baca.make_mmrests(time_signatures(14), head=voice.name)
     voice.extend(music)
 

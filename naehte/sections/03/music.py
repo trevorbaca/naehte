@@ -7,6 +7,9 @@ from naehte import library
 ########################################### 03 ##########################################
 #########################################################################################
 
+T = library.T
+rhythm = library.rhythm
+
 
 def make_empty_score():
     score = library.make_empty_score()
@@ -58,40 +61,40 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend(r"{ c4 c \times 3/4 { c c \times 2/3 { c c2 } } }")
+    voice.extend(r"c4 c \times 3/4 { c c \times 2/3 { c c2 } }")
     # 2
-    voice.extend("{ c4 c c c }")
+    voice.extend("c4 c c c")
     # 3
-    voice.extend("{ c8. c8. }")
+    voice.extend("c8. c8.")
     # 4
-    voice.extend(r"{ c4 c c c c c c c }")
+    voice.extend("c4 c c c c c c c")
     # 5
-    voice.extend(r" \times 4/5 { c1 c4 }")
+    voice.extend(r"\times 4/5 { c1 c4 }")
     # 6
-    voice.extend(r"{ \times 3/4 { c8 [ c c c ~ ] } c8 }")
+    voice.extend(r"\times 3/4 { c8 [ c c c ~ ] } c8")
     # 7
     music = baca.make_mmrests(time_signatures(7))
     voice.extend(music)
     # 8
-    voice.extend(r"{ c1.. c4 }")
+    voice.extend("c1.. c4")
     # (9, 10)
-    voice.extend(r"{ \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 } }")
+    voice.extend(r"\times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }")
     # 11
-    voice.extend("{ c4.. c16 }")
+    voice.extend("c4.. c16")
     music = baca.make_mmrests(time_signatures(12))
     voice.extend(music)
     # 13
     voice.extend(
-        r"{ \times 4/5 { c16 [ c c c c ] } c4 c \times 3/4 { c c \times 2/3 { c c2 } } }"
+        r"\times 4/5 { c16 [ c c c c ] } c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
     )
     # 14
-    voice.extend("{ c4 c c c }")
+    voice.extend("c4 c c c")
     # 15
-    voice.extend(r"{ c2 }")
+    voice.extend("c2")
     # 16
-    voice.extend(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
+    voice.extend(r"\times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
     # 17
-    voice.extend(r" \times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
+    voice.extend(r"\times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
     music = baca.make_mmrests(time_signatures(18), head=voice.name)
     voice.extend(music)
 

@@ -53,15 +53,15 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
+    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
     # 2
-    voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
+    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
     # 3
-    voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
+    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
     # 4
-    voice.extend(r"{ \times 2/3 { c32 [ c c c c c c c c c c c ] } c2... r16 }")
+    voice.extend(r"\times 2/3 { c32 [ c c c c c c c c c c c ] } c2... r16")
     # 5
-    voice.extend(r"{ c8 [ c c c \times 4/5 { c c c c c ] } }")
+    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
     # 6
     voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
     # 7
@@ -73,15 +73,15 @@ def VC(voice, time_signatures):
     # 10
     voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
     # 11
-    voice.extend(r"{ c4 c8 \repeatTie }")
+    voice.extend(r"c4 c8 \repeatTie")
     leaf = abjad.select.leaf(voice, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
     # 12
-    voice.extend("{ c4 c4. }")
+    voice.extend("c4 c4.")
     music = baca.make_mmrests(time_signatures(13), head=voice.name)
     voice.extend(music)
     # 14
-    voice.extend("{ c4 c c c c c c c c c c }")
+    voice.extend("c4 c c c c c c c c c c")
     music = baca.make_mmrests(time_signatures(15), head=voice.name)
     voice.extend(music)
 

@@ -46,23 +46,23 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend(r"{ \times 2/3 { c32 [ c c c c c c c c c c c ] } c1 }")
+    voice.extend(r"\times 2/3 { c32 [ c c c c c c c c c c c ] } c1")
     # 2
-    voice.extend(r"{ c\breve }")
+    voice.extend(r"c\breve")
     # 3
-    voice.extend(r"{ c4 c c c c c c c c c }")
+    voice.extend("c4 c c c c c c c c c")
     # 4
-    voice.extend(r"{ c8 c4. c8 }")
+    voice.extend("c8 c4. c8")
     # 5
-    voice.extend(r"{ c2 c32 [ c c c ] }")
+    voice.extend("c2 c32 [ c c c ]")
     # 6
-    voice.extend(r"{ c2 c8 }")
+    voice.extend("c2 c8")
     # 7
-    voice.extend(r"{ \times 3/5 { c4 c c c c } c1 }")
+    voice.extend(r"\times 3/5 { c4 c c c c } c1")
     # 8
-    voice.extend("{ c2 c8 }")
+    voice.extend("c2 c8")
     # 9
-    voice.extend("{ c2 }")
+    voice.extend("c2")
     # 10
     voice.extend(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
     music = baca.make_mmrests(time_signatures(11), head=voice.name)
