@@ -1,11 +1,15 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from naehte import library
 
 #########################################################################################
 ########################################### 02 ##########################################
 #########################################################################################
+
+C = library.C
+T = library.T
 
 
 def make_empty_score():
@@ -61,37 +65,40 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
+    components = library.make_rhythm(voice, C([12, 4, 1, 1, 1, 1]), 32)
+    container = components[0]
+    rmakers.unbeam(container)
+    abjad.beam(container[-4:])
     # 2
-    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
+    voice.extend("c4. c8 c32 [ c c c ]")
     # (3, 4)
-    voice.extend(r"{ \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 } }")
+    voice.extend(r"\times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }")
     # 5
-    voice.extend("{ c4.. c16 }")
+    voice.extend("c4.. c16")
     music = baca.make_mmrests(time_signatures(6))
     voice.extend(music)
     # 7
-    voice.extend(r"{ \times 4/5 { c16 [ c c c c ] } c2... c16 }")
+    voice.extend(r"\times 4/5 { c16 [ c c c c ] } c2... c16")
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
     # 9
-    voice.extend("{ c4 c c c c c c c c c }")
+    voice.extend("c4 c c c c c c c c c")
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
     # (11, 13)
-    voice.extend(r"{ c1 \times 4/5 { c4 c1 } c2 }")
+    voice.extend(r"c1 \times 4/5 { c4 c1 } c2")
     # 14
-    voice.extend(r"{ c4. c8 c32 [ c c c ] }")
+    voice.extend("c4. c8 c32 [ c c c ]")
     # 15
-    voice.extend(r"{ c2. c8 }")
+    voice.extend("c2. c8")
     # 16
-    voice.extend("{ c1 }")
+    voice.extend("c1")
     # 17
-    voice.extend("{ c1. }")
+    voice.extend("c1.")
     # 18
-    voice.extend("{ c4 c c c c c }")
+    voice.extend("c4 c c c c c")
     # 19
-    voice.extend("{ c4 c c c }")
+    voice.extend("c4 c c c")
     baca.section.append_anchor_note(voice)
 
 

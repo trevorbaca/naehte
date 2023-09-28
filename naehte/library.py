@@ -30,7 +30,7 @@ def make_empty_score():
     return score
 
 
-def make_rhythm(voice, items, time_signatures=None, *, container=False):
+def make_rhythm(voice, items, denominator=16):
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
         items = abjad.sequence.flatten(items)
@@ -38,16 +38,14 @@ def make_rhythm(voice, items, time_signatures=None, *, container=False):
         items = [items]
     voice_ = baca.make_rhythm(
         items,
-        16,
-        time_signatures,
+        denominator,
+        None,
         do_not_rewrite_meter=True,
         tag=tag,
     )
     rmakers.beam(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
-    if container is True:
-        components = [abjad.Container(components)]
     voice.extend(components)
     return components
 
