@@ -50,6 +50,10 @@ def rhythm(voice, items, denominator=16):
     return components
 
 
+def t(argument):
+    return baca.Tie(argument)
+
+
 instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
 
 

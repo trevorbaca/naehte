@@ -9,6 +9,7 @@ from naehte import library
 
 T = library.T
 rhythm = library.rhythm
+t = library.t
 
 
 def make_empty_score():
@@ -61,17 +62,22 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def VC(voice, time_signatures):
     # 1
-    voice.extend(r"c4 c \times 3/4 { c c \times 2/3 { c c2 } }")
+    rhythm(voice, [4, 4, T([4, 4, T([4, 8], -4)], -4)])
     # 2
-    voice.extend("c4 c c c")
+    # voice.extend("c4 c c c")
+    rhythm(voice, [4, 4, 4, 4])
     # 3
-    voice.extend("c8. c8.")
+    # voice.extend("c8. c8.")
+    rhythm(voice, [3, 3])
     # 4
-    voice.extend("c4 c c c c c c c")
+    # voice.extend("c4 c c c c c c c")
+    rhythm(voice, 8 * [4])
     # 5
-    voice.extend(r"\times 4/5 { c1 c4 }")
+    # voice.extend(r"\times 4/5 { c1 c4 }")
+    rhythm(voice, T([16, 4], -4))
     # 6
     voice.extend(r"\times 3/4 { c8 [ c c c ~ ] } c8")
+    # rhythm(voice, [T([2, 2, 2, t(2)], -2), 2])
     # 7
     music = baca.make_mmrests(time_signatures(7))
     voice.extend(music)
