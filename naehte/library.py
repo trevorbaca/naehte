@@ -32,7 +32,10 @@ def make_empty_score():
 
 def make_rhythm(voice, items, time_signatures=None, *, container=False):
     tag = baca.helpers.function_name(inspect.currentframe())
-    items = abjad.sequence.flatten(items)
+    if isinstance(items, list):
+        items = abjad.sequence.flatten(items)
+    else:
+        items = [items]
     voice_ = baca.make_rhythm(
         items,
         16,
