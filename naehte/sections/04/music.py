@@ -7,6 +7,12 @@ from naehte import library
 ########################################### 04 ##########################################
 #########################################################################################
 
+C = library.C
+T = library.T
+bl = library.bl
+br = library.br
+rhythm = library.rhythm
+
 
 def make_empty_score():
     score = library.make_empty_score()
@@ -50,16 +56,11 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def VC(voice, time_signatures):
-    # 1
-    voice.extend("c8 c4. c8")
-    # 2
-    voice.extend(r"\times 6/7 { c2. c8 }")
-    # 3
-    voice.extend(r"c4 \times 6/7 { c8 [ c c c c c c ] } \times 2/3 { c4 c8 }")
-    # 4
-    voice.extend(r"\times 6/11 { \times 4/5 { c8 [ c c c c ] } { c2. c8 } }")
-    # 5
-    voice.extend(r"c2 c32 [ c c c ]")
+    rhythm(voice, [2, 6, 2])
+    rhythm(voice, T([12, 2], -2))
+    rhythm(voice, [4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)])
+    rhythm(voice, T([T([2, 2, 2, 2, 2], -2), C([12, 2])], -10))
+    rhythm(voice, [16, bl(1), 1, 1, br(1)], 32)
     # 6
     voice.extend("c2 c8")
     # (7, 8)
