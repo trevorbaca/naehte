@@ -1,6 +1,5 @@
 import abjad
 import baca
-from abjadext import rmakers
 
 from naehte import library
 
@@ -65,10 +64,8 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     # 1
-    components = library.make_rhythm(voice, C([12, 4, 1, 1, 1, 1]), 32)
-    container = components[0]
-    rmakers.unbeam(container)
-    abjad.beam(container[-4:])
+    leaves = library.make_rhythm(voice, [12, 4, 1, 1, 1, 1], 32)
+    abjad.beam(leaves[-4:])
     # 2
     voice.extend("c4. c8 c32 [ c c c ]")
     # (3, 4)
