@@ -61,46 +61,23 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def VC(voice, time_signatures):
-    # 1
     rhythm(voice, [4, 4, T([4, 4, T([4, 8], -4)], -4)])
-    # 2
-    # voice.extend("c4 c c c")
     rhythm(voice, [4, 4, 4, 4])
-    # 3
-    # voice.extend("c8. c8.")
     rhythm(voice, [3, 3])
-    # 4
-    # voice.extend("c4 c c c c c c c")
     rhythm(voice, 8 * [4])
-    # 5
-    # voice.extend(r"\times 4/5 { c1 c4 }")
     rhythm(voice, T([16, 4], -4))
-    # 6
-    voice.extend(r"\times 3/4 { c8 [ c c c ~ ] } c8")
-    # rhythm(voice, [T([2, 2, 2, t(2)], -2), 2])
-    # 7
+    rhythm(voice, [T([2, 2, 2, t(2)], -2), 2])
     music = baca.make_mmrests(time_signatures(7))
     voice.extend(music)
-    # 8
-    voice.extend("c1.. c4")
-    # (9, 10)
-    voice.extend(r"\times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }")
-    # 11
-    voice.extend("c4.. c16")
+    rhythm(voice, [28, 4])
+    rhythm(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
+    rhythm(voice, [7, 1])
     music = baca.make_mmrests(time_signatures(12))
     voice.extend(music)
-    # 13
-    voice.extend(
-        r"\times 4/5 { c16 [ c c c c ] } c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
-    )
-    # 14
-    voice.extend("c4 c c c")
-    # 15
-    voice.extend("c2")
-    # 16
-    voice.extend(r"\times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
-    # 17
-    voice.extend(r"\times 7/8 { c4 c8 [ c ] c4 c16 [ c c c ]" " c4 c8 [ c ] c2 }")
+    rhythm(voice, [T([1, 1, 1, 1, 1], -1), 4, 4, T([4, 4, T([4, 8], -4)], -4)])
+    rhythm(voice, [4, 4, 4, 4, 8])
+    rhythm(voice, T([4, 2, 2, 4, 1, 1, 1, 1, 4, 2, 2, 8], -4))
+    rhythm(voice, T([4, 2, 2, 4, 1, 1, 1, 1, 4, 2, 2, 8], -4))
     music = baca.make_mmrests(time_signatures(18), head=voice.name)
     voice.extend(music)
 
