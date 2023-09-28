@@ -2,6 +2,11 @@ import inspect
 
 import abjad
 import baca
+from abjadext import rmakers
+
+
+def T(items, extra_counts):
+    return baca.Tuplet(items, extra_counts)
 
 
 def make_empty_score():
@@ -19,6 +24,25 @@ def make_empty_score():
     baca.score.assert_lilypond_identifiers(score)
     baca.score.assert_unique_context_names(score)
     return score
+
+
+def make_rhythm(voice, items, time_signatures=None, *, container=False):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    items = abjad.sequence.flatten(items)
+    voice_ = baca.make_rhythm(
+        items,
+        16,
+        time_signatures,
+        do_not_rewrite_meter=True,
+        tag=tag,
+    )
+    rmakers.beam(voice_)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    components = abjad.mutate.eject_contents(voice_)
+    if container is True:
+        components = [abjad.Container(components)]
+    voice.extend(components)
+    return components
 
 
 instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
