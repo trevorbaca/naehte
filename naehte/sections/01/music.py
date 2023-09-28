@@ -7,7 +7,6 @@ from naehte import library
 ########################################### 01 ##########################################
 #########################################################################################
 
-C = library.C
 T = library.T
 rhythm = library.rhythm
 
@@ -28,10 +27,10 @@ def GLOBALS(skips):
 def VC(voice):
     rhythm(voice, T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4))
     rhythm(voice, T([12, 2], -2))
-    rhythm(voice, C([4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)]))
+    rhythm(voice, [4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)])
     rhythm(voice, T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10))
-    rhythm(voice, C([4, 16, T([4, 16], -4), 8]))
-    rhythm(voice, C([15, -1]))
+    rhythm(voice, [4, 16, T([4, 16], -4), 8])
+    rhythm(voice, [15, -1])
     baca.section.append_anchor_note(voice)
 
 
