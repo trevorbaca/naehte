@@ -64,40 +64,24 @@ def GLOBALS(skips, rests):
 
 
 def VC(voice, time_signatures):
-    # 1
     leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
-    # 2
     leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
-    # (3, 4)
     make(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
-    # 5
-    voice.extend("c4.. c16")
+    make(voice, [7, 1])
     music = baca.make_mmrests(time_signatures(6))
     voice.extend(music)
-    # 7
-    voice.extend(r"\times 4/5 { c16 [ c c c c ] } c2... c16")
+    make(voice, [T([1, 1, 1, 1, 1], -1), 15, 1])
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
-    # 9
-    voice.extend("c4 c c c c c c c c c")
+    make(voice, 10 * [4])
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
-    # (11, 13)
-    voice.extend(r"c1 \times 4/5 { c4 c1 } c2")
-    # 14
-    voice.extend("c4. c8 c32 [ c c c ]")
-    # 15
-    voice.extend("c2. c8")
-    # 16
-    voice.extend("c1")
-    # 17
-    voice.extend("c1.")
-    # 18
-    voice.extend("c4 c c c c c")
-    # 19
-    voice.extend("c4 c c c")
+    make(voice, [16, T([4, 16], -4), 8])
+    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
+    abjad.beam(leaves[-4:])
+    make(voice, [12, 2, 16, 24, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
     baca.section.append_anchor_note(voice)
 
 
