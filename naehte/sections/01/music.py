@@ -9,7 +9,7 @@ from naehte import library
 
 C = library.C
 T = library.T
-make = library.make
+rhythm = library.rhythm
 
 
 def make_empty_score():
@@ -26,12 +26,12 @@ def GLOBALS(skips):
 
 
 def VC(voice):
-    make(voice, T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4))
-    make(voice, T([12, 2], -2))
-    make(voice, C([4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)]))
-    make(voice, T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10))
-    make(voice, C([4, 16, T([4, 16], -4), 8]))
-    make(voice, C([15, -1]))
+    rhythm(voice, T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4))
+    rhythm(voice, T([12, 2], -2))
+    rhythm(voice, C([4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)]))
+    rhythm(voice, T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10))
+    rhythm(voice, C([4, 16, T([4, 16], -4), 8]))
+    rhythm(voice, C([15, -1]))
     baca.section.append_anchor_note(voice)
 
 

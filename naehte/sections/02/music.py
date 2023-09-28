@@ -9,7 +9,7 @@ from naehte import library
 
 C = library.C
 T = library.T
-make = library.make
+rhythm = library.rhythm
 
 
 def make_empty_score():
@@ -64,24 +64,24 @@ def GLOBALS(skips, rests):
 
 
 def VC(voice, time_signatures):
-    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
+    leaves = rhythm(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
-    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
+    leaves = rhythm(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
-    make(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
-    make(voice, [7, 1])
+    rhythm(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
+    rhythm(voice, [7, 1])
     music = baca.make_mmrests(time_signatures(6))
     voice.extend(music)
-    make(voice, [T([1, 1, 1, 1, 1], -1), 15, 1])
+    rhythm(voice, [T([1, 1, 1, 1, 1], -1), 15, 1])
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
-    make(voice, 10 * [4])
+    rhythm(voice, 10 * [4])
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
-    make(voice, [16, T([4, 16], -4), 8])
-    leaves = make(voice, [12, 4, 1, 1, 1, 1], 32)
+    rhythm(voice, [16, T([4, 16], -4), 8])
+    leaves = rhythm(voice, [12, 4, 1, 1, 1, 1], 32)
     abjad.beam(leaves[-4:])
-    make(voice, [12, 2, 16, 24, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
+    rhythm(voice, [12, 2, 16, 24, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
     baca.section.append_anchor_note(voice)
 
 
