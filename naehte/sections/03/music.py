@@ -75,7 +75,7 @@ def VC(voice, time_signatures):
     # 8
     voice.extend(r"{ c1.. c4 }")
     # (9, 10)
-    voice.extend("{" r" \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }" " }")
+    voice.extend(r"{ \times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 } }")
     # 11
     voice.extend("{ c4.. c16 }")
     music = baca.make_mmrests(time_signatures(12))

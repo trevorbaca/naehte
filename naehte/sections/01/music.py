@@ -7,46 +7,31 @@ from naehte import library
 ########################################### 01 ##########################################
 #########################################################################################
 
+T = library.T
+
 
 def make_empty_score():
     score = library.make_empty_score()
     voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    time_signatures = [
-        (7, 8),
-        (6, 8),
-        (5, 4),
-        (6, 8),
-        (5, 4),
-        (4, 4),
-        (2, 4),
-        (4, 4),
-    ]
+    time_signatures = [(7, 8), (6, 8), (5, 4), (6, 8), (5, 4), (4, 4), (2, 4), (4, 4)]
     time_signatures = baca.section.wrap(time_signatures)
     return score, voices, time_signatures
 
 
 def GLOBALS(skips):
-    for index, item in ((1 - 1, "117"),):
-        skip = skips[index]
-        baca.metronome_mark(skip, item, manifests=library.manifests)
+    baca.metronome_mark(skips[1 - 1], "117", manifests=library.manifests)
     baca.text_spanner_staff_padding(skips[:-1], 10)
 
 
 def VC(voice):
-    # 1
-    voice.append(r"\times 7/9 { c8 [ c8 c8 c8 c8 c8 ]" r" \times 3/4 { c4. c8 } }")
-    # 2
-    voice.append(r"\times 6/7 { c2. c8 }")
-    # 3
-    voice.extend(r"{ c4 \times 6/7 { c8 [ c c c c c c ] }" r" \times 2/3 { c4 c8 } }")
-    # 4
-    voice.extend(
-        r"\times 6/11 { \times 4/5 { c8 [ c c c c ] }" r" c2 \times 3/4 { c8 c4. } }"
+    library.make_rhythm(voice, [T([2, 2, 2, 2, 2, 2, T([6, 2], -2)], -4)])
+    library.make_rhythm(voice, [T([12, 2], -2)])
+    library.make_rhythm(
+        voice, [4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)], container=True
     )
-    # (5, 7)
-    voice.extend(r"{ c4 c1 \times 4/5 { c4 c1 } c2 }")
-    # 8
-    voice.extend(r"{ c2... r16 }")
+    library.make_rhythm(voice, [T([T([2, 2, 2, 2, 2], -2), 8, T([2, 6], -2)], -10)])
+    library.make_rhythm(voice, [4, 16, T([4, 16], -4), 8], container=True)
+    library.make_rhythm(voice, [15, -1], container=True)
     baca.section.append_anchor_note(voice)
 
 
