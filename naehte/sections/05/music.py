@@ -7,6 +7,11 @@ from naehte import library
 ########################################### 05 ##########################################
 #########################################################################################
 
+T = library.T
+bl = library.bl
+br = library.br
+rhythm = library.rhythm
+
 
 def make_empty_score():
     score = library.make_empty_score()
@@ -45,30 +50,19 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def VC(voice, time_signatures):
-    # 1
-    voice.extend(r"\times 2/3 { c32 [ c c c c c c c c c c c ] } c1")
-    # 2
-    voice.extend(r"c\breve")
-    # 3
-    voice.extend("c4 c c c c c c c c c")
-    # 4
-    voice.extend("c8 c4. c8")
-    # 5
-    voice.extend("c2 c32 [ c c c ]")
-    # 6
-    voice.extend("c2 c8")
-    # 7
-    voice.extend(r"\times 3/5 { c4 c c c c } c1")
-    # 8
-    voice.extend("c2 c8")
-    # 9
-    voice.extend("c2")
-    # 10
-    voice.extend(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
+    rhythm(voice, [T(12 * [1], -4), 32], 32)
+    rhythm(voice, [32])
+    rhythm(voice, 10 * [4])
+    rhythm(voice, [2, 6, 2])
+    rhythm(voice, [16, bl(1), 1, 1, br(1)], 32)
+    rhythm(voice, [8, 2])
+    rhythm(voice, [T([4, 4, 4, 4, 4], -8), 16])
+    rhythm(voice, [8, 2])
+    rhythm(voice, [8])
+    rhythm(voice, T([12, T([2, 2, 2], -2)], -4))
     music = baca.make_mmrests(time_signatures(11), head=voice.name)
     voice.extend(music)
-    # 12
-    voice.extend(r"\times 4/5 { c4. c8 [ c ] }")
+    rhythm(voice, T([6, 2, 2], -2))
     baca.section.append_anchor_note(voice)
 
 

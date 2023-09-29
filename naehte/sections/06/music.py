@@ -1,11 +1,18 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from naehte import library
 
 #########################################################################################
 ########################################### 06 ##########################################
 #########################################################################################
+
+T = library.T
+bl = library.bl
+br = library.br
+rt = library.rt
+rhythm = library.rhythm
 
 
 def make_empty_score():
@@ -52,36 +59,28 @@ def GLOBALS(skips, rests):
 
 
 def VC(voice, time_signatures):
-    # 1
-    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
-    # 2
-    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
-    # 3
-    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
-    # 4
-    voice.extend(r"\times 2/3 { c32 [ c c c c c c c c c c c ] } c2... r16")
-    # 5
-    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
-    # 6
-    voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
-    # 7
-    voice.extend(r"\times 3/4 { c2. \times 2/3 { c8 [ c c ] } }")
+    components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
+    rmakers.beam([components])
+    components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
+    rmakers.beam([components])
+    components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
+    rmakers.beam([components])
+    rhythm(voice, [T(12 * [1], -4), 30, -2], 32)
+    components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
+    rmakers.beam([components])
+    rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
+    rhythm(voice, T([12, T([2, 2, 2], -2)], -4))
     music = baca.make_mmrests(time_signatures(8), head=voice.name)
     voice.extend(music)
-    # 9
-    voice.extend(r"\times 4/5 { c4. c8 \repeatTie [ c \repeatTie ] }")
-    # 10
-    voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
-    # 11
-    voice.extend(r"c4 c8 \repeatTie")
-    leaf = abjad.select.leaf(voice, -1)
+    rhythm(voice, T([6, rt(2), rt(2)], -2))
+    rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
+    components = rhythm(voice, [4, rt(2)])
+    leaf = abjad.select.leaf(components, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    # 12
-    voice.extend("c4 c4.")
+    rhythm(voice, [4, 6])
     music = baca.make_mmrests(time_signatures(13), head=voice.name)
     voice.extend(music)
-    # 14
-    voice.extend("c4 c c c c c c c c c c")
+    rhythm(voice, 11 * [4])
     music = baca.make_mmrests(time_signatures(15), head=voice.name)
     voice.extend(music)
 

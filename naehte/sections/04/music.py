@@ -61,28 +61,17 @@ def VC(voice, time_signatures):
     rhythm(voice, [4, T([2, 2, 2, 2, 2, 2, 2], -2), T([4, 2], -2)])
     rhythm(voice, T([T([2, 2, 2, 2, 2], -2), C([12, 2])], -10))
     rhythm(voice, [16, bl(1), 1, 1, br(1)], 32)
-    # 6
-    voice.extend("c2 c8")
-    # (7, 8)
-    voice.extend(r"\times 6/7 { c2 \times 4/6 { c16 [ c c c c c ] } c1 }")
-    # 9
-    voice.extend("c4.. c16")
+    rhythm(voice, [8, 2])
+    rhythm(voice, T([8, T([1, 1, 1, 1, 1, 1], "6:4"), 16], -4))
+    rhythm(voice, [7, 1])
     music = baca.make_mmrests(time_signatures(10))
     voice.extend(music)
-    # 11
-    voice.extend(
-        r"\times 4/5 { c16 [ c c c c ] } c4 c \times 3/4 { c c \times 2/3 { c c2 } }"
-    )
-    # 12
-    voice.extend("c4 c c c")
-    # 13
-    voice.extend("c4 c c c c c c c c")
-    # 14
-    voice.extend("c4 c c c c c c c c c")
-    # 15
-    voice.extend("c4 c2.. c")
-    # 16
-    voice.extend("c1 c2... r16")
+    rhythm(voice, [T([1, 1, 1, 1, 1], -1), 4, 4, T([4, 4, T([4, 8], -4)], -4)])
+    rhythm(voice, [4, 4, 4, 4])
+    rhythm(voice, 9 * [4])
+    rhythm(voice, 10 * [4])
+    rhythm(voice, [4, 14, 14])
+    rhythm(voice, [16, 15, -1])
 
 
 def vc(cache):
@@ -315,7 +304,7 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(
             o,
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4" " Eb2 B3 F2 A3 G2 F#3",
+            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4 Eb2 B3 F2 A3 G2 F#3",
             allow_repeats=True,
         )
         cache.rebuild()
