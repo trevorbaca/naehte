@@ -38,6 +38,10 @@ def make_empty_score():
     return score
 
 
+def rt(argument):
+    return baca.RepeatTie(argument)
+
+
 def rhythm(voice, items, denominator=16):
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):

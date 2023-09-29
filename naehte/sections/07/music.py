@@ -1,11 +1,16 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from naehte import library
 
 #########################################################################################
 ########################################### 07 ##########################################
 #########################################################################################
+
+T = library.T
+rt = library.rt
+rhythm = library.rhythm
 
 
 def make_empty_score():
@@ -50,36 +55,19 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def VC(voice, time_signatures):
-    # 1
-    voice.extend(r"c4 \times 3/4 { c4 c \times 2/3 { c c c } }")
-    # 2
-    voice.extend("c1 c4")
-    # 3
-    voice.extend(r"c4 c8 \repeatTie")
-    # 4
-    voice.extend("c4 c8")
-    # 5
-    voice.extend("c4 c8")
-    # 6
-    voice.extend(r"c2.. c8 \repeatTie")
-    leaf = abjad.select.leaf(voice, -1)
+    rhythm(voice, [4, T([4, 4, T([4, 4, 4], -4)], -4)])
+    components = rhythm(voice, [16, 4, 4, rt(2), 4, 2, 4, 2, 14, rt(2)])
+    leaf = abjad.select.leaf(components, -1)
     baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    # 7
-    voice.extend(r"c8 [ c c c \times 4/5 { c c c c c ] }")
-    # 8
-    voice.extend(r"\times 6/7 { \times 4/5 { c4 c c c c } c c c }")
-    # 9
-    voice.extend(r"c4 c8 \repeatTie")
-    leaf = abjad.select.leaf(voice, -1)
-    baca.repeat_tie_extra_offset(leaf, (-1.5, 0))
-    # 10
-    voice.extend("c4 c4.")
-    # 11
-    voice.extend(r"\times 7/6 { c2. c2 c4 }")
-    # 12
-    voice.extend(r"c4 c c c c c c c c c")
-    # 13
-    voice.extend(r"c4 c c c c c c c c c c")
+    components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
+    rmakers.beam([components])
+    rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
+    components = rhythm(voice, [4, rt(2)])
+    baca.repeat_tie_extra_offset(components[-1], (-1.5, 0))
+    rhythm(voice, [4, 6])
+    rhythm(voice, T([12, 8, 4], 4))
+    rhythm(voice, 10 * [4])
+    rhythm(voice, 11 * [4])
     music = baca.make_mmrests(time_signatures(14), head=voice.name)
     voice.extend(music)
 

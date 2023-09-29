@@ -7,6 +7,9 @@ from naehte import library
 ########################################### 08 ##########################################
 #########################################################################################
 
+rhythm = library.rhythm
+T = library.T
+
 
 def make_empty_score():
     score = library.make_empty_score()
@@ -50,26 +53,14 @@ def GLOBALS(skips, rests):
 
 
 def VC(voice, time_signatures):
-    # 1
-    voice.extend("c1 c1 c4")
-    # 2
-    voice.extend("c1 c1 c4")
-    # 3
-    voice.extend("c2 c8")
+    rhythm(voice, [16, 16, 4, 16, 16, 4, 8, 2])
     music = baca.make_mmrests(time_signatures(4), head=voice.name)
     voice.extend(music)
-    # 5
-    voice.extend(r"c4 \times 3/4 { c4 c \times 2/3 { c c c } }")
-    # 6
-    voice.extend("c1 c4")
-    # 7
-    voice.extend(r"\times 6/7 { c2. c8 }")
-    # 8
-    voice.extend(r"\times 6/7 { c2. c8 }")
+    rhythm(voice, [4, T([4, 4, T([4, 4, 4], -4)], -4)])
+    rhythm(voice, [16, 4, T([12, 2], -2), T([12, 2], -2)])
     music = baca.make_mmrests(time_signatures(9), head=voice.name)
     voice.extend(music)
-    # (10, 13)
-    voice.extend(r"c2. c2. c2.. c2.")
+    rhythm(voice, [12, 12, 14, 12])
     music = baca.make_mmrests(time_signatures(14), head=voice.name)
     voice.extend(music)
 
