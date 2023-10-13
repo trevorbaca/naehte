@@ -113,8 +113,8 @@ def vc(cache):
             bookend=False,
             lilypond_id=1,
         )
-        baca.tuplet_bracket_staff_padding(o.leaf(2), 2 + 1.25)
-        baca.tuplet_bracket_staff_padding(o.leaf(4), 2)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(2), 2 + 1.25)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(4), 2)
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
@@ -131,10 +131,10 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[2]) as o:
         with baca.scope(o.leaf(0)) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         with baca.scope(o.leaf(2)) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         with baca.scope(o.leaves()[1:4]) as u:
             baca.text_spanner(
@@ -167,7 +167,7 @@ def vc(cache):
         baca.hairpin(o.pleaves(), "ppp <| fff")
         baca.pitch(o, "F#3"),
         with baca.scope(o.leaves()[:2]) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
             baca.text_spanner(
                 u,
@@ -175,7 +175,7 @@ def vc(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
             )
     with baca.scope(m[4]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitches(
             o,
             "<E3 B3>"
@@ -199,7 +199,7 @@ def vc(cache):
         )
     with baca.scope(m[5]) as o:
         baca.finger_pressure_transition(baca.select.rleak(o.leaves()[-1:]))
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<G3 D4>")
         cache.rebuild()
         m = cache["vc"]
@@ -274,9 +274,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(9, 10)) as o:
-        baca.note_head_style_harmonic(o.leaf(0))
-        baca.note_head_style_harmonic_black(o.leaf(1))
-        baca.note_head_style_harmonic(o.leaves()[2:9])
+        baca.override.note_head_style_harmonic(o.leaf(0))
+        baca.override.note_head_style_harmonic_black(o.leaf(1))
+        baca.override.note_head_style_harmonic(o.leaves()[2:9])
         baca.glissando(o.leaves()[1:9])
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
         with baca.scope(o.leaves()[1:7]) as u:
@@ -318,8 +318,8 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[11]) as o:
         baca.finger_pressure_transition(o.leaves())
-        baca.note_head_style_harmonic(o.leaf(0))
-        baca.note_head_style_harmonic_black(o.leaf(1))
+        baca.override.note_head_style_harmonic(o.leaf(0))
+        baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.text_spanner(
             o,
             r"II / III strett. -> larg.",
@@ -347,7 +347,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[13]) as o:
         with baca.scope(o.leaves()[:5]) as u:
-            baca.note_head_style_harmonic(u)
+            baca.override.note_head_style_harmonic(u)
             baca.glissando(u)
             baca.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
@@ -395,8 +395,8 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.tuplet_bracket_staff_padding(o.leaf(-4), 2 + 1.25)
-        baca.tuplet_bracket_staff_padding(o.leaf(-2), 2)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(-4), 2 + 1.25)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(-2), 2)
     with baca.scope(m[14]) as o:
         leaves = o.leaves()[1:]
         baca.hairpin(
@@ -414,10 +414,10 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[14]) as o:
         with baca.scope(o.leaf(0)) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         with baca.scope(o.leaf(2)) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         with baca.scope(o.leaves()[1:4]) as u:
             baca.text_spanner(
@@ -520,7 +520,7 @@ def vc(cache):
         (17, 6),
     ):
         baca.override.dls_staff_padding(m.get(measures_), padding)
-    baca.tuplet_bracket_down(m.leaves()[:-1])
+    baca.override.tuplet_bracket_down(m.leaves()[:-1])
 
 
 @baca.build.timed("make_score")

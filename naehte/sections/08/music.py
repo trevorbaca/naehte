@@ -78,7 +78,7 @@ def vc(cache):
             "ppp > pppp < ppp",
             pieces=baca.select.lparts(o, [1, 2]),
         ),
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
         baca.text_spanner(
             o.leaves()[-2:],
@@ -93,7 +93,7 @@ def vc(cache):
             "ppp > pppp < ppp",
             pieces=baca.select.lparts(o, [1, 2]),
         )
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
         baca.glissando(o.tleaves())
         baca.text_spanner(
@@ -122,17 +122,17 @@ def vc(cache):
             bookend=False,
             pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
         )
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
-        baca.tuplet_bracket_staff_padding(o.leaf(1), 2)
-        baca.tuplet_bracket_staff_padding(o.leaf(3), 2.5)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(1), 2)
+        baca.override.tuplet_bracket_staff_padding(o.leaf(3), 2.5)
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E2")
         baca.breathe(o.pleaf(-1))
         baca.finger_pressure_transition(o)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.hairpin(o, "mp <| fff")
-        baca.note_head_style_harmonic(o.leaf(-1))
+        baca.override.note_head_style_harmonic(o.leaf(-1))
         baca.text_spanner(
             o,
             "RH vib. molto -> NV",
@@ -211,8 +211,8 @@ def vc(cache):
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         with baca.scope(o.leaves()[1:]) as u:
-            baca.note_head_x_extent_zero(u)
-            baca.note_head_transparent(u)
+            baca.override.note_head_x_extent_zero(u)
+            baca.override.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
             baca.override.dots_extra_offset(u, (0.5, 1))
             baca.glissando(
@@ -241,9 +241,9 @@ def vc(cache):
     with baca.scope(m[14]) as o:
         baca.mark(o.rleaf(-1), r"\naehte-colophon-markup")
         with baca.scope(o.rleaf(-1)) as u:
-            baca.rehearsal_mark_down(u)
-            baca.rehearsal_mark_padding(u, 6),
-            baca.rehearsal_mark_self_alignment_x(u, abjad.RIGHT),
+            baca.override.rehearsal_mark_down(u)
+            baca.override.rehearsal_mark_padding(u, 6),
+            baca.override.rehearsal_mark_self_alignment_x(u, abjad.RIGHT),
 
 
 @baca.build.timed("make_score")
