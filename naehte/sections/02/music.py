@@ -87,9 +87,9 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.repeat_tie_extra_offset(o.leaves()[1:3], (-1.5, 0))
+        baca.override.repeat_tie_extra_offset(o.leaves()[1:3], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:3])
-        baca.repeat_tie_up(o.leaves()[1:3])
+        baca.override.repeat_tie_up(o.leaves()[1:3])
         baca.hairpin(
             o,
             "o< f >",
@@ -100,8 +100,8 @@ def vc(cache):
             o.leaf(-1),
             r"\once \override Glissando.bound-details.right.end-on-accidental = ##f",
         )
-        baca.note_head_transparent(o.leaves()[-3:])
-        baca.note_head_x_extent_zero(o.leaves()[-3:])
+        baca.override.note_head_transparent(o.leaves()[-3:])
+        baca.override.note_head_x_extent_zero(o.leaves()[-3:])
         baca.pitches(o, "F#3 B2 G3 A2")
         baca.glissando(o.leaves()[-4:], zero_padding=True)
         baca.glissando(
@@ -132,12 +132,12 @@ def vc(cache):
             "pp < f >o niente",
             pieces=baca.select.lparts(o, [1, 5]),
         )
-        baca.note_head_transparent(o.leaves()[-3:-1])
-        baca.note_head_x_extent_zero(o.leaves()[-3:-1])
+        baca.override.note_head_transparent(o.leaves()[-3:-1])
+        baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
         with baca.scope(o.leaves()[1:3]) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0)),
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0)),
             baca.repeat_tie(u)
-            baca.repeat_tie_up(u)
+            baca.override.repeat_tie_up(u)
 
         baca.pitches(o, "G#3 B3 G2 A3"),
         baca.glissando(o.leaves()[1:-1], zero_padding=True)
@@ -173,9 +173,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(3, 4)) as o:
-        baca.note_head_style_harmonic(o.leaf(0))
-        baca.note_head_style_harmonic_black(o.leaf(1))
-        baca.note_head_style_harmonic(o.leaves()[2:9])
+        baca.override.note_head_style_harmonic(o.leaf(0))
+        baca.override.note_head_style_harmonic_black(o.leaf(1))
+        baca.override.note_head_style_harmonic(o.leaves()[2:9])
         baca.glissando(o.leaves()[1:9])
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
         with baca.scope(o.leaves()[1:7]) as u:
@@ -210,7 +210,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.tuplet_bracket_padding(o.leaf(1), 1.75)
+        baca.override.tuplet_bracket_padding(o.leaf(1), 1.75)
     with baca.scope(m[5]) as o:
         baca.hairpin(o, "ppp < f")
         baca.pitch(o.leaves(), "<D#3 F#3>")
@@ -218,8 +218,8 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[5]) as o:
         baca.finger_pressure_transition(o.leaves())
-        baca.note_head_style_harmonic(o.leaf(0))
-        baca.note_head_style_harmonic_black(o.leaf(1))
+        baca.override.note_head_style_harmonic(o.leaf(0))
+        baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.text_spanner(
             o,
             r"II / III strett. -> larg.",
@@ -246,8 +246,8 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[7]) as o:
-        baca.note_head_style_harmonic(o.leaves()[:-1])
-        baca.note_head_style_harmonic_black(o.leaf(-1))
+        baca.override.note_head_style_harmonic(o.leaves()[:-1])
+        baca.override.note_head_style_harmonic_black(o.leaf(-1))
         baca.finger_pressure_transition(o.leaves()[-2:])
         baca.glissando(o.leaves()[:-1])
         with baca.scope(o.leaves()[:5]) as u:
@@ -283,7 +283,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.tuplet_bracket_padding(o.leaf(0), 1.75)
+        baca.override.tuplet_bracket_padding(o.leaf(0), 1.75)
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
@@ -341,12 +341,12 @@ def vc(cache):
             pieces=baca.select.lparts(o, [1, 5]),
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
-            baca.note_head_transparent(u)
-            baca.note_head_x_extent_zero(u)
+            baca.override.note_head_transparent(u)
+            baca.override.note_head_x_extent_zero(u)
         with baca.scope(o.leaves()[1:3]) as u:
-            baca.repeat_tie_extra_offset(u, (-1.5, 0))
+            baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
-            baca.repeat_tie_up(u)
+            baca.override.repeat_tie_up(u)
         baca.pitches(o, "G#3 B3 G2 A3"),
         baca.glissando(o.leaves()[1:-1], zero_padding=True)
         baca.glissando(
@@ -379,20 +379,20 @@ def vc(cache):
             bookend=False,
             lilypond_id=1,
         )
-        baca.tuplet_bracket_down(o),
-        baca.tuplet_bracket_staff_padding(o, 2.5)
+        baca.override.tuplet_bracket_down(o),
+        baca.override.tuplet_bracket_staff_padding(o, 2.5)
     with baca.scope(m[16]) as o:
         baca.pitch(o, "Db2"),
-        baca.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
+        baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m[17]) as o:
         baca.dynamic(o.phead(0), '"fff"')
         baca.pitch(o, "Db2"),
-        baca.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
+        baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m[18]) as o:
         baca.pitch(o, "Db2")
-        baca.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
+        baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(18, 19)) as o:
         baca.hairpin(o, "fff > pppp"),
@@ -429,7 +429,7 @@ def vc(cache):
     with baca.scope(m.get(16, 19)) as o:
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(1, 15)) as o:
-        baca.stem_down(o.leaves()[:-1])
+        baca.override.stem_down(o.leaves()[:-1])
 
 
 @baca.build.timed("make_score")
