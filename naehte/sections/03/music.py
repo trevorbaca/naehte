@@ -280,7 +280,7 @@ def vc(cache):
         baca.glissando(o.leaves()[1:9])
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
         with baca.scope(o.leaves()[1:7]) as u:
-            baca.beam_positions(u, -5.5)
+            baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.text_spanner(
             o.leaves(),
@@ -349,7 +349,7 @@ def vc(cache):
         with baca.scope(o.leaves()[:5]) as u:
             baca.override.note_head_style_harmonic(u)
             baca.glissando(u)
-            baca.beam_positions(u, -5.5)
+            baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.glissando(o.leaves()[-6:])
         with baca.scope(o.leaves()[:6]) as u:
