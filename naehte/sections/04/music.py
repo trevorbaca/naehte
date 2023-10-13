@@ -435,7 +435,7 @@ def vc(cache):
             )
     with baca.scope(m[14]) as o:
         with baca.scope(o.leaves()[1:]) as u:
-            baca.accidental_stencil_false(u)
+            baca.override.accidental_stencil_false(u)
             baca.pitch(u, "C#3")
         baca.glissando(
             o.rleaves(),
@@ -503,7 +503,7 @@ def vc(cache):
         ((6, 8), 11),
         ((9, 16), 7),
     ):
-        baca.dls_staff_padding(m.get(measures_), padding)
+        baca.override.dls_staff_padding(m.get(measures_), padding)
     with baca.scope(m.leaves()) as o:
         baca.tuplet_bracket_down(o)
 

@@ -88,7 +88,7 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.75)
+        baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.75)
         baca.dynamic(o.phead(0), "p-sempre")
         baca.espressivo(o.pleaves())
         baca.note_head_style_harmonic(o.pleaves())
@@ -185,7 +185,7 @@ def vc(cache):
             "|> ppppp <| p |>o niente",
             pieces=baca.select.lparts(leaves, [1, 1, 4]),
         ),
-        baca.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
+        baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
         baca.literal(
             o.leaf(-3),
@@ -311,7 +311,7 @@ def vc(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
             )
-    baca.dls_staff_padding(m.leaves()[:-1], 6)
+    baca.override.dls_staff_padding(m.leaves()[:-1], 6)
 
 
 @baca.build.timed("make_score")

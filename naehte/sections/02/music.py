@@ -125,7 +125,7 @@ def vc(cache):
             pieces=baca.select.lparts(leaves, [1, 1, 5, 2]),
         )
     with baca.scope(m[2]) as o:
-        baca.accidental_extra_offset(o.leaf(0), (-1, 0))
+        baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1))
         baca.hairpin(
             o,
@@ -333,7 +333,7 @@ def vc(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
     with baca.scope(m[14]) as o:
-        baca.accidental_extra_offset(o.leaf(0), (-1, 0))
+        baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1)),
         baca.hairpin(
             o,
@@ -415,19 +415,19 @@ def vc(cache):
     with baca.scope(m.leaves()) as o:
         pass
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
     with baca.scope(m.get(3)) as o:
-        baca.dls_staff_padding(o, 11)
+        baca.override.dls_staff_padding(o, 11)
     with baca.scope(m.get(5)) as o:
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
     with baca.scope(m.get(6, 7)) as o:
-        baca.dls_staff_padding(o, 9)
+        baca.override.dls_staff_padding(o, 9)
     with baca.scope(m.get(9, 13)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(15)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(16, 19)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(1, 15)) as o:
         baca.stem_down(o.leaves()[:-1])
 

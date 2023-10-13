@@ -519,7 +519,7 @@ def vc(cache):
         ((14, 15), 4),
         (17, 6),
     ):
-        baca.dls_staff_padding(m.get(measures_), padding)
+        baca.override.dls_staff_padding(m.get(measures_), padding)
     baca.tuplet_bracket_down(m.leaves()[:-1])
 
 
