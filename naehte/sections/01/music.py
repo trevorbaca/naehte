@@ -50,7 +50,7 @@ def vc(cache):
             o.leaves(),
             zero_padding=True,
         ),
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
         baca.hairpin(o, "pp <| mf")
         baca.text_spanner(
             o.leaves()[:-1],
@@ -90,7 +90,7 @@ def vc(cache):
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[2]) as o:
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
         baca.hairpin(o.rleaves(count=2), "pp > ppppp")
         baca.pitch(o, "Eb4")
         baca.repeat_tie(o.leaves())
@@ -109,7 +109,7 @@ def vc(cache):
         )
         baca.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[3]) as o:
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
         baca.hairpin(o.leaves()[1:-1], "<| f")
         baca.note_head_style_harmonic(o.leaves()[1:-2])
         baca.pitches(o, "Eb4 G4 A3 G4 F4 G4 A3 G4 Db4 Db4")
@@ -145,10 +145,10 @@ def vc(cache):
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         with baca.scope(baca.select.lleak(o.leaves()[:6])) as u:
             baca.hairpin(u, "ff |> p")
-            baca.dls_staff_padding(u, 7)
+            baca.override.dls_staff_padding(u, 7)
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.hairpin(u, "<| mf")
-            baca.dls_staff_padding(u, 7)
+            baca.override.dls_staff_padding(u, 7)
         baca.note_head_style_harmonic_black(o.leaf(-2))
         baca.text_spanner(
             baca.select.rleak(o.leaves()[-1:], count=2),
@@ -178,7 +178,7 @@ def vc(cache):
                 'p |> pp <| "f" pp <| "f"',
                 pieces=baca.select.lparts(u, [2, 1, 1, 2]),
             ),
-            baca.dls_staff_padding(u, 7)
+            baca.override.dls_staff_padding(u, 7)
         baca.text_spanner(
             baca.select.rleak(o.leaves()[1:]),
             r"\baca-damp-markup =|",
@@ -199,7 +199,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[8]) as o:
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
         baca.hairpin(o.rleaves(), "f |>o niente")
         baca.note_head_style_harmonic(o.pleaves())
         baca.text_spanner(

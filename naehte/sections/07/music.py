@@ -202,7 +202,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[7]) as o:
-        baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.75)
+        baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.75)
         baca.dynamic(o.phead(0), "p-sempre")
         with baca.scope(o.pleaves()) as u:
             baca.espressivo(u)
@@ -336,7 +336,7 @@ def vc(cache):
         (7, 3),
         ((8, 13), 7),
     ):
-        baca.dls_staff_padding(m.get(measures_), padding)
+        baca.override.dls_staff_padding(m.get(measures_), padding)
 
 
 @baca.build.timed("make_score")

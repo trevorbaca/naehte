@@ -272,7 +272,7 @@ def vc(cache):
             o.leaf(0),
             r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)",
         )
-        baca.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
+        baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
         with baca.scope(o.leaf(-3)) as u:
             baca.literal(
@@ -306,7 +306,7 @@ def vc(cache):
         )
         baca.trill_spanner(o.leaves()[:2], alteration="m2")
     with baca.scope(m.leaves()) as o:
-        baca.dls_staff_padding(o, 8)
+        baca.override.dls_staff_padding(o, 8)
 
 
 @baca.build.timed("make_score")

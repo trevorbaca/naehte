@@ -155,7 +155,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[7]) as o:
         baca.dynamic(o.phead(0), "pppp-sempre")
-        baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.5)
+        baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.5)
         baca.text_spanner(
             o,
             r"II / III mod. =|",
@@ -204,7 +204,7 @@ def vc(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
     with baca.scope(m.get(10, 13)) as o:
-        baca.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
+        baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
         baca.hairpin(
             o.rleaves(),
             "appena-udibile -- niente",
@@ -214,7 +214,7 @@ def vc(cache):
             baca.note_head_x_extent_zero(u)
             baca.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
-            baca.dots_extra_offset(u, (0.5, 1))
+            baca.override.dots_extra_offset(u, (0.5, 1))
             baca.glissando(
                 u,
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
@@ -237,7 +237,7 @@ def vc(cache):
         ((10, 14), 3.5),
     ):
         with baca.scope(m.get(measures_)) as o:
-            baca.dls_staff_padding(o.leaves(), padding)
+            baca.override.dls_staff_padding(o.leaves(), padding)
     with baca.scope(m[14]) as o:
         baca.mark(o.rleaf(-1), r"\naehte-colophon-markup")
         with baca.scope(o.rleaf(-1)) as u:
