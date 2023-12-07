@@ -529,6 +529,8 @@ number.4.Rests = {
 number.4.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 7
@@ -537,8 +539,6 @@ number.4.Cello.Music = {
     \override TupletBracket.direction = #down
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     cs!8
       %! REAPPLIED_INSTRUMENT_ALERT
     ^ \baca-reapplied-instrument-markup "(“Cello”)"

@@ -428,6 +428,8 @@ number.8.Rests = {
 number.8.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 6
@@ -436,8 +438,6 @@ number.8.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     d,1
     :32
       %! EXPLICIT_DYNAMIC_COLOR

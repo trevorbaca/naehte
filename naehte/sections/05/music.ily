@@ -434,6 +434,8 @@ number.5.Cello.Music = {
     {
 
         % [Cello.Music measure 1]
+          %! REAPPLIED_CLEF
+        \clef "bass"
         \once \override NoteHead.extra-offset = #'(-1.25 . 0)
           %! REAPPLIED_CLEF_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)
@@ -444,8 +446,6 @@ number.5.Cello.Music = {
         \override TupletBracket.padding = 1.75
           %! REAPPLIED_CLEF
         \set Staff.forceClef = ##t
-          %! REAPPLIED_CLEF
-        \clef "bass"
         f,32
           %! REAPPLIED_INSTRUMENT_ALERT
         ^ \baca-reapplied-instrument-markup "(“Cello”)"

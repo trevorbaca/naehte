@@ -593,6 +593,8 @@ number.3.Rests = {
 number.3.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 8.5
@@ -601,8 +603,6 @@ number.3.Cello.Music = {
     \override TupletBracket.direction = #down
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     ef,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

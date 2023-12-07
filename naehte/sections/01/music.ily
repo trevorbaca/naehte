@@ -273,6 +273,8 @@ number.1.Cello.Music = {
     {
 
         % [Cello.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "bass"
           %! MEASURE_1
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -289,8 +291,6 @@ number.1.Cello.Music = {
         \set Staff.forceClef = ##t
           %! -PARTS
         \set Staff.instrumentName = \naehte-cello-markup
-          %! EXPLICIT_CLEF
-        \clef "bass"
         <g d'>8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
