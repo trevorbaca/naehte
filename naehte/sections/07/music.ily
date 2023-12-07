@@ -504,6 +504,8 @@ number.7.Rests = {
 number.7.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 7
@@ -513,8 +515,6 @@ number.7.Cello.Music = {
     \override TupletBracket.staff-padding = 2
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     f''4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

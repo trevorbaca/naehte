@@ -511,6 +511,8 @@ number.6.Rests = {
 number.6.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
     \once \override DynamicText.self-alignment-X = -0.75
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
@@ -520,8 +522,6 @@ number.6.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     <b fs'!>8
     :32
     - \espressivo

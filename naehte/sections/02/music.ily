@@ -664,6 +664,8 @@ number.2.Rests = {
 number.2.Cello.Music = {
 
     % [Cello.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "bass"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
     \override DynamicLineSpanner.staff-padding = 7
@@ -672,8 +674,6 @@ number.2.Cello.Music = {
     \override Stem.direction = #down
       %! REAPPLIED_CLEF
     \set Staff.forceClef = ##t
-      %! REAPPLIED_CLEF
-    \clef "bass"
     fs!4.
       %! REAPPLIED_INSTRUMENT_ALERT
     ^ \baca-reapplied-instrument-markup "(“Cello”)"
@@ -1317,6 +1317,8 @@ number.2.Cello.Music = {
     >>
 
     % [Cello.Music measure 9]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_17
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1330,8 +1332,6 @@ number.2.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "treble"
     ds''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1444,6 +1444,8 @@ number.2.Cello.Music = {
     >>
 
     % [Cello.Music measure 11]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_19
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -1456,8 +1458,6 @@ number.2.Cello.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "bass"
     <b fs'!>1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
