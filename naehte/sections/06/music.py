@@ -117,7 +117,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
         baca.hairpin(
-            o.leaves(),
+            (),
             "o< pp > ppp < f",
             pieces=baca.select.lparts(o.leaves(), [6, 6, 2]),
         )
@@ -181,7 +181,7 @@ def vc(cache):
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.hairpin(
-            leaves,
+            (),
             "|> ppppp <| p |>o niente",
             pieces=baca.select.lparts(leaves, [1, 1, 4]),
         ),
@@ -212,7 +212,7 @@ def vc(cache):
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "A3"),
             baca.hairpin(
-                u,
+                (),
                 "o<| f |> p",
                 pieces=baca.select.lparts(u, [1, 2]),
             )
@@ -262,7 +262,7 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
         baca.hairpin(
-            o.rleaves(),
+            (),
             "|> p <| ff",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )

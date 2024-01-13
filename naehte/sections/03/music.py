@@ -86,7 +86,7 @@ def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            o,
+            (),
             r"p > ppp <",
             pieces=baca.select.lparts(o, [1, 1, 1, 1, 2]),
         ),
@@ -118,7 +118,7 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             '<| "f" "f" > ppp',
             pieces=baca.select.lparts(leaves, [2, 1, 2]),
         )
@@ -256,7 +256,7 @@ def vc(cache):
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
         baca.hairpin(
-            leaves,
+            (),
             "o< f |> ppp",
             pieces=baca.select.lparts(leaves, [1, 6]),
         )
@@ -334,7 +334,7 @@ def vc(cache):
         )
     with baca.scope(m[13]) as o:
         baca.hairpin(
-            o,
+            (),
             "f |> ppp < p > ppp < p > ppp <|",
             pieces=baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
         ),
@@ -400,7 +400,7 @@ def vc(cache):
     with baca.scope(m[14]) as o:
         leaves = o.leaves()[1:]
         baca.hairpin(
-            leaves,
+            (),
             '"f" "f" >',
             bookend=False,
             pieces=baca.select.lparts(leaves, [1, 2]),

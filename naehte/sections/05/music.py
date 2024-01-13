@@ -70,7 +70,7 @@ def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< pp > ppp < f",
             pieces=baca.select.lparts(o.rleaves(), [6, 6, 2]),
         )
@@ -119,7 +119,7 @@ def vc(cache):
         baca.pitch(o, "C#3"),
         with baca.scope(o.rleaves()) as u:
             baca.hairpin(
-                u,
+                (),
                 'o< "f" >',
                 bookend=False,
                 pieces=baca.select.lparts(u, [1, 3]),
@@ -188,7 +188,7 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.finger_pressure_transition(o.leaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "p > ppp < pp",
             pieces=baca.select.lparts(o.rleaves(), [5, 2]),
         )
@@ -238,7 +238,7 @@ def vc(cache):
             )
     with baca.scope(m[8]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "> pppp < ppp",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -255,7 +255,7 @@ def vc(cache):
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         with baca.scope(o.rleaves()) as u:
             baca.hairpin(
-                u,
+                (),
                 "<| p |>o niente",
                 pieces=baca.select.lparts(u, [2, 3]),
             )
@@ -291,7 +291,7 @@ def vc(cache):
     with baca.scope(m[12]) as o:
         baca.pitch(o, "A3")
         baca.hairpin(
-            o,
+            (),
             "o<| f |> p",
             pieces=baca.select.lparts(o, [1, 2]),
         )
