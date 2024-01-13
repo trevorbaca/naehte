@@ -80,7 +80,7 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.leaves()[1:], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:])
         baca.hairpin(
-            o.rleaves(),
+            (),
             'o< "f" >',
             bookend=False,
             pieces=baca.select.lparts(o.rleaves(), [1, 3]),
@@ -156,7 +156,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             "ff |> p <| mf",
             pieces=baca.select.lparts(leaves, [6, 2]),
         )
@@ -185,7 +185,7 @@ def vc(cache):
             baca.finger_pressure_transition(u)
             leaves = baca.select.lleak(u)
             baca.hairpin(
-                leaves,
+                (),
                 "|> p <| f",
                 pieces=baca.select.lparts(leaves, [1, 2]),
             )
@@ -223,7 +223,7 @@ def vc(cache):
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.hairpin(
-            o,
+            (),
             "p < f |> ppp",
             pieces=baca.select.lparts(o, [1, 7]),
         )
@@ -311,7 +311,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[11]) as o:
         baca.hairpin(
-            o,
+            (),
             "f |> ppp < p > ppp < p > ppp <|",
             pieces=baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
         )
@@ -377,7 +377,7 @@ def vc(cache):
     with baca.scope(m[12]) as o:
         leaves = o.leaves()[1:]
         baca.hairpin(
-            leaves,
+            (),
             '"f" "f" > ppp',
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -494,7 +494,7 @@ def vc(cache):
         baca.breathe(o.leaf(0))
         leaves = o.leaves()[1:]
         baca.hairpin(
-            leaves,
+            (),
             '"mf" > pp < "mf" >o niente',
             pieces=baca.select.lparts(leaves, [1, 1, 3]),
         )

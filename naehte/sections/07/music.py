@@ -78,7 +78,7 @@ def vc(cache):
         baca.pitches(o, "F5 G3 A4 B2 C4 D2"),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o,
+            (),
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
             pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
@@ -109,7 +109,7 @@ def vc(cache):
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             "|> ppp <| p",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -122,7 +122,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             "|> ppp <| fff",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -153,7 +153,7 @@ def vc(cache):
     with baca.scope(m[5]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             "|> ppp <| fff",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -178,7 +178,7 @@ def vc(cache):
         baca.breathe(o.pleaf(-1))
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            leaves,
+            (),
             "|> ppp <| mf",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
@@ -245,7 +245,7 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         baca.pitch(o, "D#3")
         baca.hairpin(
-            o,
+            (),
             "|> p <|",
             bookend=False,
             pieces=baca.select.lparts(o, [1, 1]),
@@ -277,7 +277,7 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.finger_pressure_transition(o.leaves()[-2:])
         baca.hairpin(
-            o,
+            (),
             "ppp <| p |>",
             bookend=False,
             pieces=baca.select.lparts(o, [1, 2]),
@@ -299,7 +299,7 @@ def vc(cache):
             abjad.select.get(o.leaves(), [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pppp -- pppp >o niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             pieces=baca.select.lparts(o.rleaves(), [14, 8]),

@@ -174,7 +174,7 @@ def vc(cache):
         baca.glissando(o.rleaves(), zero_padding=True)
         with baca.scope(baca.select.lleak(o.leaves())) as u:
             baca.hairpin(
-                u,
+                (),
                 'p |> pp <| "f" pp <| "f"',
                 pieces=baca.select.lparts(u, [2, 1, 1, 2]),
             ),
