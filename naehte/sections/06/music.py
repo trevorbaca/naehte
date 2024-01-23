@@ -128,17 +128,19 @@ def vc(cache):
         baca.glissando(o.leaves(), zero_padding=True)
         with baca.scope(o.leaves()[-2:]) as u:
             baca.text_spanner(
-                u,
+                (),
                 "RH vibr. strettiss. -> RH NV",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 7.25"),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 lilypond_id=1,
+                pieces=[u],
             )
             baca.text_spanner(
-                u,
+                (),
                 "no scr. -> scr. poss.",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[u],
             )
         baca.override.tuplet_bracket_padding(o, 1.75)
     with baca.scope(m[5]) as o:
@@ -161,20 +163,26 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(o, "p <| f")
+        baca.hairpin(
+            (),
+            "p <| f",
+            pieces=[o],
+        )
         baca.glissando(o.tleaves())
         baca.text_spanner(
-            baca.select.rleak(o.leaves()[-3:]),
+            (),
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
+            pieces=[baca.select.rleak(o.leaves()[-3:])],
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
@@ -235,20 +243,26 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[10]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(o.rleaves(), "p <| f")
+        baca.hairpin(
+            (),
+            "p <| f",
+            pieces=[o.rleaves()],
+        )
         baca.glissando(o.tleaves())
         baca.text_spanner(
-            baca.select.rleak(o.leaves()[-3:]),
+            (),
             "II / III mod. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
+            pieces=[baca.select.rleak(o.leaves()[-3:])],
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.text_spanner(
@@ -268,30 +282,37 @@ def vc(cache):
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(
-            o,
+            (),
             "vib. molto -> NV",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o],
         )
     with baca.scope(m[12]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpin(o, "|> pp")
+        baca.hairpin(
+            (),
+            "|> pp",
+            pieces=[o],
+        )
         with baca.scope(o.leaves()) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         baca.text_spanner(
-            baca.select.rleak(o.leaves()[-1:]),
+            (),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             lilypond_id=1,
+            pieces=[baca.select.rleak(o.leaves()[-1:])],
         )
     with baca.scope(m[14]) as o:
         baca.pitch(o, "E3")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "ppp -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            pieces=[o.rleaves()],
         )
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.note_head_x_extent_zero(u)
@@ -305,11 +326,12 @@ def vc(cache):
             )
             baca.interpolate_pitches(u, "E3", "E3", allow_hidden=True)
             baca.text_spanner(
-                u,
+                (),
                 r"\baca-circle-very-wide-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[u],
             )
     baca.override.dls_staff_padding(m.leaves()[:-1], 6)
 
