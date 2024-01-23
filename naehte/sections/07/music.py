@@ -98,7 +98,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(o.leaves(), count=3)
         baca.text_spanner(
-            leaves,
+            (),
             "no scr. -> scr. poss. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
@@ -190,7 +190,7 @@ def vc(cache):
             lilypond_id=1,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -235,7 +235,7 @@ def vc(cache):
         )
     with baca.scope(m.get(9, 10)) as o:
         baca.text_spanner(
-            o,
+            (),
             "no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -322,7 +322,7 @@ def vc(cache):
             baca.interpolate_pitches(u, "D2", "D2", allow_hidden=True)
         baca.stem_tremolo(o.leaves())
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 3"),

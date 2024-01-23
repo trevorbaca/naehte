@@ -152,7 +152,7 @@ def vc(cache):
                 lilypond_id=1,
             )
             baca.text_spanner(
-                u,
+                (),
                 "no scr. -> scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
@@ -228,7 +228,7 @@ def vc(cache):
     with baca.scope(m.get(4, 6)) as o:
         leaves = o.leaves()[:-2]
         baca.text_spanner(
-            leaves,
+            (),
             "II / III largo -> strett. -> larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
@@ -283,7 +283,7 @@ def vc(cache):
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.text_spanner(
-            o.leaves(),
+            (),
             r"II / III strett. -> larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
@@ -298,7 +298,7 @@ def vc(cache):
             lilypond_id=2,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"T -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -361,7 +361,7 @@ def vc(cache):
                 lilypond_id=2,
             )
             baca.text_spanner(
-                u,
+                (),
                 r"P -> T =|",
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 bookend=False,
@@ -435,7 +435,7 @@ def vc(cache):
                 lilypond_id=1,
             )
             baca.text_spanner(
-                u,
+                (),
                 "no scr. -> scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
@@ -500,7 +500,7 @@ def vc(cache):
                 lilypond_id=2,
             )
             baca.text_spanner(
-                u,
+                (),
                 "II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
                 abjad.Tweak(r"- \tweak staff-padding 8"),

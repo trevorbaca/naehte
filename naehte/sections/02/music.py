@@ -119,7 +119,7 @@ def vc(cache):
     with baca.scope(m.get(1, 2)) as o:
         leaves = o.leaves()[:-3]
         baca.text_spanner(
-            leaves,
+            (),
             "no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             pieces=baca.select.lparts(leaves, [1, 1, 5, 2]),
@@ -182,7 +182,7 @@ def vc(cache):
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.text_spanner(
-            o.leaves(),
+            (),
             r"II / III strett. -> larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
@@ -197,7 +197,7 @@ def vc(cache):
             lilypond_id=2,
         ),
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"T -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -269,7 +269,7 @@ def vc(cache):
             lilypond_id=2,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"P -> T =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -326,7 +326,7 @@ def vc(cache):
             lilypond_id=1,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"II / III largo -> strett. =| largo -> strett. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -363,7 +363,7 @@ def vc(cache):
         )
         leaves = o.leaves()[:3]
         baca.text_spanner(
-            leaves,
+            (),
             "no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             pieces=baca.select.lparts(leaves, [1, 2]),
@@ -405,7 +405,7 @@ def vc(cache):
         baca.interpolate_pitches(o, "Db2", "Eb2"),
     with baca.scope(m.get(15, 19)) as o:
         baca.text_spanner(
-            o,
+            (),
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.5"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),

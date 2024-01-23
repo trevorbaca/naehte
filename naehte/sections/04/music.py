@@ -102,7 +102,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.text_spanner(
-            leaves,
+            (),
             r"spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -146,7 +146,7 @@ def vc(cache):
         )
         leaves = o.leaves()[1:]
         baca.text_spanner(
-            leaves,
+            (),
             r"no scr. -> scr. ->",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -173,7 +173,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic_black(o.leaf(-1))
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.text_spanner(
-            leaves,
+            (),
             "poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -194,7 +194,7 @@ def vc(cache):
             baca.glissando(u, zero_padding=True)
             baca.override.note_head_style_harmonic(u)
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"RH NV -> RH vib. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -215,7 +215,7 @@ def vc(cache):
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"scr. -> no scr. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
@@ -256,7 +256,7 @@ def vc(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
             )
         baca.text_spanner(
-            o.leaves(),
+            (),
             r"II / III strett. -> larg. =|",
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
@@ -271,7 +271,7 @@ def vc(cache):
             lilypond_id=2,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"T -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -336,7 +336,7 @@ def vc(cache):
                 lilypond_id=2,
             )
             baca.text_spanner(
-                u,
+                (),
                 r"P -> T =|",
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 bookend=False,
@@ -403,7 +403,7 @@ def vc(cache):
                 lilypond_id=1,
             )
             baca.text_spanner(
-                u,
+                (),
                 "no scr. -> scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
@@ -457,7 +457,7 @@ def vc(cache):
     with baca.scope(m[15]) as o:
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
             baca.text_spanner(
-                u,
+                (),
                 r"I / II larg. -> strett. -> larg.",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
                 abjad.Tweak(r"- \tweak staff-padding 9"),
@@ -476,7 +476,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[16]) as o:
         baca.text_spanner(
-            o,
+            (),
             r"trill larg. -> strett. -> larg.",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 9"),

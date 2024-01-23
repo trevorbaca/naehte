@@ -140,7 +140,7 @@ def vc(cache):
             lilypond_id=1,
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "no scr. -> scr. poss. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), 0),
             (abjad.Tweak(r"- \tweak bound-details.left.padding -3.25"), -1),
@@ -177,7 +177,7 @@ def vc(cache):
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"no scr -> scr. -> no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 9"),
@@ -186,7 +186,7 @@ def vc(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"\baca-triple-diamond-parenthesized-top-markup ->"
             r" \baca-damp-markup =|"
             r" \baca-double-diamond-parenthesized-top-markup ->"
