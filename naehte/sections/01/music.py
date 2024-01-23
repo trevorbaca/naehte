@@ -74,7 +74,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.text_spanner(
-            leaves,
+            (),
             r"no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             bookend=False,
@@ -82,7 +82,7 @@ def vc(cache):
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"ord. -> P -> T =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -130,7 +130,7 @@ def vc(cache):
     with baca.scope(m.get(3, 4)) as o:
         leaves = o.leaves()[1:-1]
         baca.text_spanner(
-            leaves,
+            (),
             r"no scr. -> scr. -> poss. -> XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -188,7 +188,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(o.leaves()[1:], count=3)
         baca.text_spanner(
-            leaves,
+            (),
             r"II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),

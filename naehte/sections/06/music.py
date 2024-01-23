@@ -200,7 +200,7 @@ def vc(cache):
         baca.override.stem_down(o.leaves()[-3:])
         baca.override.tuplet_bracket_padding(o.leaf(-3), 1.5)
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"XFB =| \baca-circle-markup =| spz. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
@@ -217,7 +217,7 @@ def vc(cache):
                 pieces=baca.select.lparts(u, [1, 2]),
             )
             baca.text_spanner(
-                u,
+                (),
                 r"no scr. -> scr. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -252,7 +252,7 @@ def vc(cache):
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.text_spanner(
-            o,
+            (),
             "no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,

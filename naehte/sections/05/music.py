@@ -107,7 +107,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.text_spanner(
-            leaves,
+            (),
             "no scr. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.25"), -1),
@@ -142,7 +142,7 @@ def vc(cache):
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.text_spanner(
-            leaves,
+            (),
             r"spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -161,7 +161,7 @@ def vc(cache):
             baca.glissando(u, zero_padding=True)
             baca.override.note_head_style_harmonic(u)
         baca.text_spanner(
-            o.rleaves(),
+            (),
             r"RH NV -> RH vib. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -206,7 +206,7 @@ def vc(cache):
         baca.stem_tremolo(o.leaf(-1))
         leaves = baca.select.rleak(o.leaves()[-1:], count=2)
         baca.text_spanner(
-            leaves,
+            (),
             "I / II mod. -> strett. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
@@ -214,7 +214,7 @@ def vc(cache):
         )
     with baca.scope(m.get(5, 7)) as o:
         baca.text_spanner(
-            o,
+            (),
             "scr. -> no scr. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -260,7 +260,7 @@ def vc(cache):
                 pieces=baca.select.lparts(u, [2, 3]),
             )
             baca.text_spanner(
-                u,
+                (),
                 r"XFB =| \baca-circle-markup =| spz. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
@@ -297,7 +297,7 @@ def vc(cache):
         )
         baca.repeat_tie(o.leaves()[-2:])
         baca.text_spanner(
-            o,
+            (),
             r"no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
