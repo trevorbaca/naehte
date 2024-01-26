@@ -88,10 +88,9 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "E2"),
         baca.finger_pressure_transition(o)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mp <| fff",
-            pieces=[o],
         )
         baca.override.note_head_style_harmonic(o.leaf(-1))
         baca.text_spanner(
@@ -229,10 +228,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[8]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "p <| f",
-            pieces=[o.rleaves()],
         )
         baca.glissando(o.tleaves())
         baca.text_spanner(
@@ -276,11 +274,9 @@ def vc(cache):
         )
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "ff |>",
-            bookend=False,
-            pieces=[o],
         )
         with baca.scope(o.leaves()) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))

@@ -132,10 +132,9 @@ def vc(cache):
         )
         baca.override.tuplet_bracket_staff_padding(o, 1),
     with baca.scope(m[3]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.leaves()[1:-1],
             "ppppp <| f",
-            pieces=[o.leaves()[1:-1]],
         )
         baca.override.note_head_style_harmonic(o.leaves()[1:-2])
         baca.pitches(o, "Eb4 G4 A3 G4 F4 G4 A3 G4 D4 D4")
@@ -211,11 +210,9 @@ def vc(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 5]),
         )
     with baca.scope(m[6]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mf |>",
-            bookend=False,
-            pieces=[o],
         )
         baca.pitch(o, "D3"),
         baca.glissando(
@@ -297,10 +294,9 @@ def vc(cache):
         baca.override.tuplet_bracket_padding(o.leaf(1), 1.75)
         baca.override.tuplet_bracket_staff_padding(o.leaf(0), 4.25)
     with baca.scope(m[9]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "ppp < f",
-            pieces=[o],
         )
         baca.pitch(o, "<D#3 F#3>")
         cache.rebuild()
@@ -444,10 +440,9 @@ def vc(cache):
             alteration="m2",
         )
     with baca.scope(m[13]) as o:
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            baca.select.rleak(baca.select.lleak(o.leaves())),
             "< mp",
-            pieces=[baca.select.rleak(baca.select.lleak(o.leaves()))],
         )
         with baca.scope(o.rleaves()) as u:
             baca.glissando(

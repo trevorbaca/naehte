@@ -107,10 +107,9 @@ def vc(cache):
     with baca.scope(m[3]) as o:
         baca.pitches(o, "C2 B1")
         baca.breathe(o.pleaf(-1))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "p <| mp",
-            pieces=[o],
         )
         baca.glissando(o.tleaves())
         baca.text_spanner(
@@ -138,10 +137,9 @@ def vc(cache):
         baca.breathe(o.pleaf(-1))
         baca.finger_pressure_transition(o)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "mp <| fff",
-            pieces=[o],
         )
         baca.override.note_head_style_harmonic(o.leaf(-1))
         baca.text_spanner(
@@ -219,11 +217,10 @@ def vc(cache):
         )
     with baca.scope(m.get(10, 13)) as o:
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "appena-udibile -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=[o.rleaves()],
         )
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.note_head_x_extent_zero(u)

@@ -163,10 +163,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "p <| f",
-            pieces=[o],
         )
         baca.glissando(o.tleaves())
         baca.text_spanner(
@@ -243,10 +242,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[10]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "p <| f",
-            pieces=[o.rleaves()],
         )
         baca.glissando(o.tleaves())
         baca.text_spanner(
@@ -289,10 +287,9 @@ def vc(cache):
         )
     with baca.scope(m[12]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o,
             "|> pp",
-            pieces=[o],
         )
         with baca.scope(o.leaves()) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
@@ -308,11 +305,10 @@ def vc(cache):
         )
     with baca.scope(m[14]) as o:
         baca.pitch(o, "E3")
-        baca.hairpin(
-            (),
+        baca.spanners.hairpin(
+            o.rleaves(),
             "ppp -- niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=[o.rleaves()],
         )
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.note_head_x_extent_zero(u)
