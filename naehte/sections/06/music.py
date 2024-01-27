@@ -117,9 +117,8 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
         baca.hairpin(
-            (),
+            baca.select.lparts(o.leaves(), [6, 6, 2]),
             "o< pp > ppp < f",
-            pieces=baca.select.lparts(o.leaves(), [6, 6, 2]),
         )
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
@@ -188,9 +187,8 @@ def vc(cache):
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 1, 4]),
             "|> ppppp <| p |>o niente",
-            pieces=baca.select.lparts(leaves, [1, 1, 4]),
         ),
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
@@ -219,9 +217,8 @@ def vc(cache):
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "A3"),
             baca.hairpin(
-                (),
+                baca.select.lparts(u, [1, 2]),
                 "o<| f |> p",
-                pieces=baca.select.lparts(u, [1, 2]),
             )
             baca.text_spanner(
                 (),
@@ -274,9 +271,8 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "|> p <| ff",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(

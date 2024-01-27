@@ -196,9 +196,8 @@ def vc(cache):
         baca.glissando(o.rleaves(), zero_padding=True)
         with baca.scope(baca.select.lleak(o.leaves())) as u:
             baca.hairpin(
-                (),
+                baca.select.lparts(u, [2, 1, 1, 2]),
                 'p |> pp <| "f" pp <| "f"',
-                pieces=baca.select.lparts(u, [2, 1, 1, 2]),
             ),
             baca.override.dls_staff_padding(u, 7)
         baca.text_spanner(

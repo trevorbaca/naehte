@@ -78,10 +78,9 @@ def vc(cache):
         baca.pitches(o, "F5 G3 A4 B2 C4 D2"),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.override.tuplet_bracket_staff_padding(o, 2)
@@ -113,9 +112,8 @@ def vc(cache):
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2]),
             "|> ppp <| p",
-            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.override.note_head_style_harmonic_black(o.leaf(0))
         baca.spanners.trill(o.leaves()[:2], alteration="P1")
@@ -126,9 +124,8 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2]),
             "|> ppp <| fff",
-            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.repeat_tie(o.leaf(-1))
         baca.text_spanner(
@@ -160,9 +157,8 @@ def vc(cache):
     with baca.scope(m[5]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2]),
             "|> ppp <| fff",
-            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.override.note_head_style_harmonic(o.leaf(0))
         baca.repeat_tie(o.leaf(-1))
@@ -187,9 +183,8 @@ def vc(cache):
         baca.breathe(o.pleaf(-1))
         leaves = baca.select.lleak(o.leaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 2]),
             "|> ppp <| mf",
-            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(
@@ -260,10 +255,9 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         baca.pitch(o, "D#3")
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1]),
             "|> p <|",
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 1]),
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.text_spanner(
@@ -297,10 +291,9 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.finger_pressure_transition(o.leaves()[-2:])
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 2]),
             "ppp <| p |>",
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.override.note_head_style_harmonic(o.leaves()[:2])
         baca.override.note_head_style_harmonic_black(o.leaves()[-1:])
@@ -320,10 +313,9 @@ def vc(cache):
             abjad.select.get(o.leaves(), [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
         )
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [14, 8]),
             "pppp -- pppp >o niente",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=baca.select.lparts(o.rleaves(), [14, 8]),
         )
         baca.markup(
             o.pleaf(0),

@@ -70,9 +70,8 @@ def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [6, 6, 2]),
             "o< pp > ppp < f",
-            pieces=baca.select.lparts(o.rleaves(), [6, 6, 2]),
         )
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
@@ -102,10 +101,9 @@ def vc(cache):
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(2, 3)) as o:
         baca.hairpin(
-            (),
+            [o.rleaves()],
             ">o",
             bookend=False,
-            pieces=[o.rleaves()],
         )
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.text_spanner(
@@ -121,10 +119,9 @@ def vc(cache):
         baca.pitch(o, "C#3"),
         with baca.scope(o.rleaves()) as u:
             baca.hairpin(
-                (),
+                baca.select.lparts(u, [1, 3]),
                 'o< "f" >',
                 bookend=False,
-                pieces=baca.select.lparts(u, [1, 3]),
             )
             baca.text_spanner(
                 (),
@@ -198,9 +195,8 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.finger_pressure_transition(o.leaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [5, 2]),
             "p > ppp < pp",
-            pieces=baca.select.lparts(o.rleaves(), [5, 2]),
         )
         baca.literal(
             o.leaf(0),
@@ -249,9 +245,8 @@ def vc(cache):
             )
     with baca.scope(m[8]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 2]),
             "> pppp < ppp",
-            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.stem_tremolo(o.pleaf(0))
     with baca.scope(m[9]) as o:
@@ -270,9 +265,8 @@ def vc(cache):
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         with baca.scope(o.rleaves()) as u:
             baca.hairpin(
-                (),
+                baca.select.lparts(u, [2, 3]),
                 "<| p |>o niente",
-                pieces=baca.select.lparts(u, [2, 3]),
             )
             baca.text_spanner(
                 (),
@@ -306,9 +300,8 @@ def vc(cache):
     with baca.scope(m[12]) as o:
         baca.pitch(o, "A3")
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 2]),
             "o<| f |> p",
-            pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.repeat_tie(o.leaves()[-2:])
         baca.text_spanner(
