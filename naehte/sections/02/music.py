@@ -91,10 +91,9 @@ def vc(cache):
         baca.repeat_tie(o.leaves()[1:3])
         baca.override.repeat_tie_up(o.leaves()[1:3])
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 5]),
             "o< f >",
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 5]),
         )
         baca.literal(
             o.leaf(-1),
@@ -129,9 +128,8 @@ def vc(cache):
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1))
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 5]),
             "pp < f >o niente",
-            pieces=baca.select.lparts(o, [1, 5]),
         )
         baca.override.note_head_transparent(o.leaves()[-3:-1])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -158,9 +156,8 @@ def vc(cache):
     with baca.scope(m.get(3, 4)) as o:
         leaves = o.leaves()[:8]
         baca.hairpin(
-            (),
+            baca.select.lparts(leaves, [1, 6]),
             "o< f |> ppp",
-            pieces=baca.select.lparts(leaves, [1, 6]),
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
         cache.rebuild()
@@ -243,9 +240,8 @@ def vc(cache):
         )
     with baca.scope(m[7]) as o:
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [5, 2]),
             "f |> ppp >o niente",
-            pieces=baca.select.lparts(o, [5, 2]),
         ),
         baca.pitches(
             o,
@@ -321,10 +317,9 @@ def vc(cache):
     with baca.scope(m.get(11, 13)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.hairpin(
-            (),
+            baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             'pp <| "f" > pp <| "f" >',
             bookend=False,
-            pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -350,9 +345,8 @@ def vc(cache):
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1)),
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 5]),
             "pp < f >o niente",
-            pieces=baca.select.lparts(o, [1, 5]),
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.override.note_head_transparent(u)

@@ -74,9 +74,8 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.glissando(o.tleaves())
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 2]),
             "ppp > pppp < ppp",
-            pieces=baca.select.lparts(o, [1, 2]),
         ),
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
@@ -90,9 +89,8 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 2]),
             "ppp > pppp < ppp",
-            pieces=baca.select.lparts(o, [1, 2]),
         )
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
@@ -123,10 +121,9 @@ def vc(cache):
     with baca.scope(m[5]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2")
         baca.hairpin(
-            (),
+            baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp < p > pp < mp > p < mf >",
             bookend=False,
-            pieces=baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
