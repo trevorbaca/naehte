@@ -6,19 +6,19 @@ from abjadext import rmakers
 
 
 def C(items):
-    return baca.Container(items)
+    return baca.rhythm.Container(items)
 
 
 def T(items, extra_counts):
-    return baca.Tuplet(items, extra_counts)
+    return baca.rhythm.Tuplet(items, extra_counts)
 
 
 def bl(argument):
-    return baca.BeamLeft(argument)
+    return baca.rhythm.BeamLeft(argument)
 
 
 def br(argument):
-    return baca.BeamRight(argument)
+    return baca.rhythm.BeamRight(argument)
 
 
 def make_empty_score():
@@ -39,7 +39,7 @@ def make_empty_score():
 
 
 def rt(argument):
-    return baca.RepeatTie(argument)
+    return baca.rhythm.RepeatTie(argument)
 
 
 def rhythm(voice, items, denominator=16):
@@ -63,7 +63,7 @@ def rhythm(voice, items, denominator=16):
 
 
 def t(argument):
-    return baca.Tie(argument)
+    return baca.rhythm.Tie(argument)
 
 
 instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
