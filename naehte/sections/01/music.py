@@ -182,7 +182,6 @@ def vc(cache):
             baca.select.rleak(o.leaves()[-1:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"),
             alteration="D4",
-            with_next_leaf=True,
         )
     with baca.scope(m.get(5, 7)) as o:
         baca.pitches(

@@ -164,7 +164,6 @@ def vc(cache):
         baca.spanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
             alteration="m2",
-            with_next_leaf=True,
         )
     with baca.scope(m[3]) as o:
         baca.breathe(o.pleaf(-1))
@@ -226,7 +225,6 @@ def vc(cache):
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="M2",
-            with_next_leaf=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.spanners.hairpin(
@@ -474,7 +472,6 @@ def vc(cache):
             o.leaves()[-1:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="m2",
-            with_next_leaf=True,
         )
     with baca.scope(m[15]) as o:
         baca.dynamic(
