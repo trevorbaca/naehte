@@ -119,7 +119,6 @@ def vc(cache):
         baca.spanners.trill(
             o.leaves()[:1],
             alteration="P1",
-            with_next_leaf=True,
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o, "<E2 C3> E2", allow_repeats=True)

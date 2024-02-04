@@ -220,7 +220,6 @@ def vc(cache):
             o.leaves()[:1],
             abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
             alteration="P1",
-            with_next_leaf=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.piecewise.text(
@@ -433,7 +432,6 @@ def vc(cache):
             o.leaves()[-1:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="m2",
-            with_next_leaf=True,
         )
     with baca.scope(m[13]) as o:
         baca.spanners.hairpin(
