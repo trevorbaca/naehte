@@ -184,9 +184,10 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
         baca.spanners.trill(
-            o.leaves()[:2],
+            o.leaves()[:1],
             abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
             alteration="P1",
+            with_next_leaf=True,
         )
     with baca.scope(m[7]) as o:
         baca.pitches(o, "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>")
@@ -312,7 +313,11 @@ def vc(cache):
             bookend=False,
             pieces=baca.select.lparts(o, [1, 2]),
         )
-        baca.spanners.trill(o.leaves()[:2], alteration="m2")
+        baca.spanners.trill(
+            o.leaves()[:1],
+            alteration="m2",
+            with_next_leaf=True,
+        )
     with baca.scope(m.leaves()) as o:
         baca.override.dls_staff_padding(o, 8)
 

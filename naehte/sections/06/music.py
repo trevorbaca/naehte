@@ -228,7 +228,11 @@ def vc(cache):
                 bookend=False,
                 pieces=baca.select.lparts(u, [1, 2]),
             )
-        baca.spanners.trill(o.leaves()[:2], alteration="m2")
+        baca.spanners.trill(
+            o.leaves()[:1],
+            alteration="m2",
+            with_next_leaf=True,
+        )
     with baca.scope(m[10]) as o:
         baca.pitches(
             o,

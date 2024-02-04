@@ -217,9 +217,10 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
         baca.spanners.trill(
-            o.leaves()[:2],
+            o.leaves()[:1],
             abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
             alteration="P1",
+            with_next_leaf=True,
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.piecewise.text(
@@ -429,9 +430,10 @@ def vc(cache):
                 pieces=baca.select.lparts(u, [1, 2]),
             )
         baca.spanners.trill(
-            baca.select.rleak(o.leaves()[-1:]),
+            o.leaves()[-1:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="m2",
+            with_next_leaf=True,
         )
     with baca.scope(m[13]) as o:
         baca.spanners.hairpin(
