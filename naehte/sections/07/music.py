@@ -116,7 +116,7 @@ def vc(cache):
             "|> ppp <| p",
         )
         baca.override.note_head_style_harmonic_black(o.leaf(0))
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.leaves()[:1],
             alteration="P1",
         )
