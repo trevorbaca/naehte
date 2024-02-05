@@ -161,7 +161,7 @@ def vc(cache):
                 bookend=False,
                 pieces=baca.select.lparts(u, [1, 2]),
             )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
             alteration="m2",
         )
@@ -221,7 +221,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.glissando(o.tleaves())
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="M2",
@@ -468,7 +468,7 @@ def vc(cache):
                 bookend=False,
                 pieces=baca.select.lparts(u, [1, 2]),
             )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.leaves()[-1:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="m2",

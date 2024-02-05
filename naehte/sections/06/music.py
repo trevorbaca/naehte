@@ -228,7 +228,7 @@ def vc(cache):
                 bookend=False,
                 pieces=baca.select.lparts(u, [1, 2]),
             )
-        baca.spanners.trill(
+        baca.rspanners.trill(
             o.leaves()[:1],
             alteration="m2",
         )
