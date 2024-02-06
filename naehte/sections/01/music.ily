@@ -733,10 +733,8 @@ number.1.Cello.Music = {
             df'!4.
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \p
               %! SPANNER_START
             - \baca-dashed-line-with-hook
@@ -777,10 +775,8 @@ number.1.Cello.Music = {
     <b fs'!>1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pp
       %! SPANNER_STOP
     \stopTextSpan
@@ -822,10 +818,8 @@ number.1.Cello.Music = {
         <c' g'>4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \baca-effort-f
           %! SPANNER_STOP
         \stopTextSpan
@@ -843,10 +837,8 @@ number.1.Cello.Music = {
         <a e'>1
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pp
           %! SPANNER_STOP
         \stopTextSpan
@@ -877,10 +869,8 @@ number.1.Cello.Music = {
     <bf! f'>2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
