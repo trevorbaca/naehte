@@ -740,10 +740,8 @@ number.5.Cello.Music = {
     cs2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \p
       %! SPANNER_STOP
     \stopTextSpan
@@ -834,10 +832,8 @@ number.5.Cello.Music = {
     d2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mf
       %! SPANNER_STOP
     \stopTextSpanOne
