@@ -408,10 +408,8 @@ number.1.Cello.Music = {
             ef'8
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \mf
               %! SPANNER_STOP
             \stopTextSpan
@@ -522,10 +520,8 @@ number.1.Cello.Music = {
         g'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \ppppp
           %! SPANNER_STOP
         \stopTextSpan
@@ -596,10 +592,8 @@ number.1.Cello.Music = {
         df'!4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_STOP
         \stopTextSpan
@@ -688,10 +682,8 @@ number.1.Cello.Music = {
         df'!2
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
           %! SPANNER_STOP
         \stopTextSpan
@@ -728,10 +720,8 @@ number.1.Cello.Music = {
             df'!8
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \mf
               %! SPANNER_STOP
             \stopTextSpan
@@ -995,11 +985,9 @@ number.1.Cello.Music = {
       %! EXPLICIT_DYNAMIC_COLOR
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \!
       %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
