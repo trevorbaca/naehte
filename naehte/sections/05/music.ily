@@ -489,10 +489,8 @@ number.5.Cello.Music = {
         b,32
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pp
         - \abjad-zero-padding-glissando
         \glissando
@@ -532,10 +530,8 @@ number.5.Cello.Music = {
     e,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -576,10 +572,8 @@ number.5.Cello.Music = {
     e,\breve
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! SPANNER_STOP
     \stopTextSpan
@@ -691,10 +685,8 @@ number.5.Cello.Music = {
     cs4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
@@ -879,10 +871,8 @@ number.5.Cello.Music = {
         <f, df!>4
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
         - \tweak arrow-length 2
         - \tweak arrow-width 0.5
@@ -936,10 +926,8 @@ number.5.Cello.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! SPANNER_STOP
     \stopTextSpan
@@ -964,10 +952,8 @@ number.5.Cello.Music = {
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pp
       %! SPANNER_STOP
     \stopTextSpan
@@ -1001,10 +987,8 @@ number.5.Cello.Music = {
     <c' af'!>8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pppp
       %! SPANNER_STOP
     \stopTextSpan
@@ -1035,10 +1019,8 @@ number.5.Cello.Music = {
     <d' bf'!>2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1113,10 +1095,8 @@ number.5.Cello.Music = {
             g'8
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \p
               %! SPANNER_STOP
             \stopTextSpan
@@ -1177,10 +1157,8 @@ number.5.Cello.Music = {
             d1 * 1/4
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \!
               %! DURATION_MULTIPLIER
               %! HIDDEN
@@ -1243,10 +1221,8 @@ number.5.Cello.Music = {
         a8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \f
           %! SPANNER_STOP
         \stopTextSpan
@@ -1280,10 +1256,8 @@ number.5.Cello.Music = {
         a8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \p
           %! SPANNER_STOP
         \stopTextSpan
