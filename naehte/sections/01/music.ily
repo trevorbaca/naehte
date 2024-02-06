@@ -294,10 +294,8 @@ number.1.Cello.Music = {
         <g d'>8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pp
           %! EXPLICIT_INSTRUMENT_ALERT
         ^ \baca-explicit-instrument-markup "(“Cello”)"
@@ -458,10 +456,8 @@ number.1.Cello.Music = {
         ef'2.
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pp
           %! SPANNER_STOP
         \stopTextSpan
@@ -625,10 +621,8 @@ number.1.Cello.Music = {
         df'8
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \ff
           %! SPANNER_STOP
         \stopTextSpan
@@ -918,10 +912,8 @@ number.1.Cello.Music = {
     <g d'>2...
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \f
       %! SPANNER_STOP
     \stopTextSpan

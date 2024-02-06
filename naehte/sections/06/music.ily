@@ -881,10 +881,8 @@ number.6.Cello.Music = {
             <b fs'!>4
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \p
               %! SPANNER_START
             - \baca-dashed-line-with-hook
@@ -1216,10 +1214,8 @@ number.6.Cello.Music = {
             <b fs'!>4
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \p
               %! SPANNER_START
             - \baca-dashed-line-with-hook
@@ -1450,10 +1446,8 @@ number.6.Cello.Music = {
     e4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
     - \abjad-zero-padding-glissando
     \glissando

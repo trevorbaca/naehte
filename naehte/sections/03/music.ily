@@ -852,10 +852,8 @@ number.3.Cello.Music = {
     fs8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -908,10 +906,8 @@ number.3.Cello.Music = {
     <e b>4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
     - \abjad-zero-padding-glissando
     \glissando
@@ -1285,10 +1281,8 @@ number.3.Cello.Music = {
     <ds! fs!>4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! SPANNER_STOP
     \stopTextSpanOne
@@ -1847,10 +1841,8 @@ number.3.Cello.Music = {
         <a e'>2
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
-          %! SPANNER_STOP
         \pppp
           %! SPANNER_STOP
         \stopTextSpanOne

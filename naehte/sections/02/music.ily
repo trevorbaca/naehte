@@ -1057,10 +1057,8 @@ number.2.Cello.Music = {
     <ds! fs!>4..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ppp
       %! SPANNER_STOP
     \stopTextSpanOne
@@ -1335,10 +1333,8 @@ number.2.Cello.Music = {
     ds''!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \pppp
     - \abjad-zero-padding-glissando
     \glissando
@@ -1810,10 +1806,8 @@ number.2.Cello.Music = {
     df,4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \fff
       %! SPANNER_STOP
     \stopTextSpan

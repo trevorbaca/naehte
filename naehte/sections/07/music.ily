@@ -637,10 +637,8 @@ number.7.Cello.Music = {
     e,1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \mp
       %! SPANNER_START
     - \baca-solid-line-with-arrow
@@ -1062,10 +1060,8 @@ number.7.Cello.Music = {
             <b fs'!>4
               %! EXPLICIT_DYNAMIC_COLOR
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
-              %! SPANNER_STOP
             \p
               %! SPANNER_START
             - \baca-dashed-line-with-hook
@@ -1198,10 +1194,8 @@ number.7.Cello.Music = {
     ds4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
-      %! SPANNER_STOP
     \ff
       %! SPANNER_STOP
     \stopTextSpanOne
