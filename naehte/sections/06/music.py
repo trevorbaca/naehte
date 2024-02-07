@@ -188,7 +188,7 @@ def vc(cache):
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1, 4]),
-            "|> ppppp <| p |>o niente",
+            "|> ppppp <| p |>o !",
         ),
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
@@ -306,7 +306,7 @@ def vc(cache):
         baca.pitch(o, "E3")
         baca.spanners.hairpin(
             o.rleaves(),
-            "ppp -- niente",
+            "ppp -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         with baca.scope(o.leaves()[1:]) as u:

@@ -317,7 +317,7 @@ def vc(cache):
         )
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [14, 8]),
-            "pppp -- pppp >o niente",
+            "pppp -- pppp >o !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.markup(

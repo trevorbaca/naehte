@@ -216,7 +216,7 @@ def vc(cache):
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
         baca.spanners.hairpin(
             o.rleaves(),
-            "appena-udibile -- niente",
+            "appena-udibile -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         with baca.scope(o.leaves()[1:]) as u:
