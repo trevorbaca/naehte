@@ -129,7 +129,7 @@ def vc(cache):
         baca.breathe(o.pleaf(-1))
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 5]),
-            "pp < f >o niente",
+            "pp < f >o !",
         )
         baca.override.note_head_transparent(o.leaves()[-3:-1])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -241,7 +241,7 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [5, 2]),
-            "f |> ppp >o niente",
+            "f |> ppp >o !",
         ),
         baca.pitches(
             o,
@@ -296,7 +296,7 @@ def vc(cache):
         baca.clef(o.leaf(0), "treble")
         baca.spanners.hairpin(
             o.rleaves(),
-            "pppp -- niente",
+            "pppp -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
         )
         baca.glissando(
@@ -346,7 +346,7 @@ def vc(cache):
         baca.breathe(o.pleaf(-1)),
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 5]),
-            "pp < f >o niente",
+            "pp < f >o !",
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.override.note_head_transparent(u)

@@ -266,7 +266,7 @@ def vc(cache):
         with baca.scope(o.rleaves()) as u:
             baca.piecewise.hairpin(
                 baca.select.lparts(u, [2, 3]),
-                "<| p |>o niente",
+                "<| p |>o !",
             )
             baca.piecewise.text(
                 (),

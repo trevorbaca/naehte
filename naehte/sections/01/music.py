@@ -224,7 +224,7 @@ def vc(cache):
         baca.override.dls_staff_padding(o, 7)
         baca.spanners.hairpin(
             o.rleaves(),
-            "f |>o niente",
+            "f |>o !",
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.piecewise.text(
