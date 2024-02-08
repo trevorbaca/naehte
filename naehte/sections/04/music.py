@@ -518,7 +518,7 @@ def vc(cache):
         leaves = o.leaves()[1:]
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 1, 3]),
-            '"mf" > pp < "mf" >o niente',
+            '"mf" > pp < "mf" >o !',
         )
     for measures_, padding in (
         ((1, 5), 7),
