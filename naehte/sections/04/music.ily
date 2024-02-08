@@ -1781,10 +1781,7 @@ number.4.Cello.Music = {
     \startTextSpanOne
 
     r16
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-    - \tweak color #blue
-      %! EXPLICIT_DYNAMIC
+      %! SPANNER_STOP
     \!
       %! SPANNER_STOP
     \stopTextSpan
