@@ -58,7 +58,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:-1],
             r"\baca-damp-markup =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=13,
         )
@@ -71,7 +70,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:-1],
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -102,13 +100,11 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:2],
             r"\baca-circle-very-wide-markup =|",
-            bookend=False,
             staff_padding=8,
         )
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:], count=2),
             "spazz. larg. =|",
-            bookend=False,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
@@ -165,7 +161,6 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:], count=2),
             "spazz. strett. =|",
-            bookend=False,
             staff_padding=8,
         )
         baca.rspanners.trill(
@@ -193,7 +188,6 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[1:]),
             r"\baca-damp-markup =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -216,11 +210,9 @@ def vc(cache):
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.mspanners.text(
-            # TOOD: remove bracket?
-            [o.rleaves()],
+            o.rleaves(),
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )

@@ -124,7 +124,6 @@ def vc(cache):
             baca.mspanners.text(
                 u,
                 r"\baca-damp-markup =|",
-                bookend=False,
                 lilypond_id=1,
                 staff_padding=8,
             )
@@ -134,7 +133,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:2],
             r"\baca-circle-markup =|",
-            bookend=False,
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
@@ -230,7 +228,6 @@ def vc(cache):
                 u,
                 r"\baca-damp-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                bookend=False,
                 lilypond_id=1,
                 staff_padding=10.5,
             )
