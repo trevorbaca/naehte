@@ -168,14 +168,12 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o.rleaves(),
             "XFB =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -244,14 +242,12 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o.rleaves(),
             "XFB =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m.get(11, 12)) as o:
@@ -287,7 +283,6 @@ def vc(cache):
             baca.select.rleak(o.leaves()[-1:]),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -313,7 +308,6 @@ def vc(cache):
                 u,
                 r"\baca-circle-very-wide-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                bookend=False,
                 staff_padding=5.5,
             )
     baca.override.dls_staff_padding(m.leaves()[:-1], 6)

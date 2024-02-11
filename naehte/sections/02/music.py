@@ -111,7 +111,6 @@ def vc(cache):
             o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -146,7 +145,6 @@ def vc(cache):
             o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -187,7 +185,6 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:]),
             "XFB =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         ),
@@ -250,9 +247,8 @@ def vc(cache):
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.mspanners.text(
-            [o.leaves()[:6]],
+            o.leaves()[:6],
             "II / III larg. =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -260,7 +256,6 @@ def vc(cache):
             baca.select.rleak(o.leaves()[-2:]),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -297,7 +292,6 @@ def vc(cache):
             o.rleaves(),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m.get(11, 13)) as o:
@@ -315,7 +309,6 @@ def vc(cache):
         baca.mspanners.text(
             o.rleaves(),
             r"\baca-damp-markup =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -349,7 +342,6 @@ def vc(cache):
             o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )
@@ -369,7 +361,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:2],
             r"\baca-damp-markup =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=10.5,
         )

@@ -82,7 +82,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[-2:],
             "I / II larg. =|",
-            bookend=False,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -97,7 +96,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[-2:],
             "½ clt =|",
-            bookend=False,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -112,7 +110,6 @@ def vc(cache):
             o.rleaves(),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
-            bookend=False,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -161,7 +158,6 @@ def vc(cache):
         baca.mspanners.text(
             o,
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=12.5,
         )
@@ -173,7 +169,6 @@ def vc(cache):
         baca.mspanners.text(
             o,
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=12.5,
         )
@@ -227,7 +222,6 @@ def vc(cache):
                 "XFB =|",
                 abjad.Tweak(r"- \tweak bound-details.left.padding -2"),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                bookend=False,
                 staff_padding=3,
             )
     for measures_, padding in (

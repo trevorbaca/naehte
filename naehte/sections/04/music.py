@@ -89,14 +89,12 @@ def vc(cache):
         baca.mspanners.text(
             o.rleaves(),
             r"\baca-damp-markup =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o.leaves()[:2],
             r"\baca-circle-markup =|",
-            bookend=False,
             staff_padding=5.5,
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
@@ -115,13 +113,11 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[:2],
             r"\baca-circle-very-wide-markup =|",
-            bookend=False,
             staff_padding=8,
         )
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:], count=2),
             "spazz. larg. =|",
-            bookend=False,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1),
@@ -262,7 +258,6 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:]),
             "XFB =|",
-            bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -328,7 +323,6 @@ def vc(cache):
             baca.mspanners.text(
                 u,
                 "II / III larg. =|",
-                bookend=False,
                 lilypond_id=2,
                 staff_padding=10.5,
             )
@@ -342,21 +336,18 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[-6:-1],
             r"\baca-circle-very-wide-markup =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o.leaves()[-2:],
             "spz. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:], count=2),
             "(LH) vib. molto =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -384,16 +375,14 @@ def vc(cache):
             baca.repeat_tie(u)
         with baca.scope(o.leaves()[1:4]) as u:
             baca.mspanners.text(
-                [u],
+                u,
                 r"\baca-damp-markup =|",
-                bookend=False,
                 lilypond_id=2,
                 staff_padding=10.5,
             )
             baca.mspanners.text(
                 u,
                 "II / III =|",
-                bookend=False,
                 lilypond_id=1,
                 staff_padding=8,
             )
@@ -424,7 +413,6 @@ def vc(cache):
             baca.mspanners.text(
                 u,
                 "no scr. ->",
-                bookend=False,
                 staff_padding=5.5,
             )
     with baca.scope(m[14]) as o:
@@ -440,7 +428,6 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves(), count=2),
             "scr. poss. =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m[15]) as o:
@@ -460,7 +447,6 @@ def vc(cache):
             baca.mspanners.text(
                 u,
                 r"\baca-damp-markup =|",
-                bookend=False,
                 staff_padding=5.5,
             )
     with baca.scope(m[16]) as o:
@@ -479,7 +465,6 @@ def vc(cache):
             o,
             r"\baca-triple-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m.get(15, 16)) as o:

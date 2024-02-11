@@ -132,20 +132,17 @@ def vc(cache):
         baca.mspanners.text(
             o,
             "I / II str. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o,
             r"\baca-damp-markup =|",
-            bookend=False,
             staff_padding=5.5,
         )
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-1:]),
             "scr. =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
@@ -163,7 +160,6 @@ def vc(cache):
         baca.mspanners.text(
             o,
             "I / II str. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -171,7 +167,6 @@ def vc(cache):
             o,
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m[6]) as o:
@@ -225,14 +220,12 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             o.rleaves(),
             "XFB =|",
-            bookend=False,
             staff_padding=5.5,
         )
     with baca.scope(m.get(9, 10)) as o:
@@ -269,7 +262,6 @@ def vc(cache):
             baca.select.rleak(o.leaves()[-1:]),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -290,7 +282,6 @@ def vc(cache):
         baca.mspanners.text(
             o.leaves()[-2:],
             "I / II larg. =|",
-            bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
