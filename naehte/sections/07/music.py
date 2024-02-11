@@ -168,8 +168,7 @@ def vc(cache):
             staff_padding=8,
         )
         baca.mspanners.text(
-            # TODO: remove bracket?
-            [o],
+            o,
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
             bookend=False,
