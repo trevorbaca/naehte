@@ -82,9 +82,9 @@ def vc(cache):
         baca.mspanners.text(
             (),
             "I / II larg. =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
             pieces=[o.leaves()[-2:]],
+            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
@@ -98,9 +98,9 @@ def vc(cache):
         baca.mspanners.text(
             (),
             "½ clt =|",
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
             pieces=[o.leaves()[-2:]],
+            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.pitches(o, "C2 B1")
@@ -114,9 +114,9 @@ def vc(cache):
             (),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
-            abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
             pieces=[o.rleaves()],
+            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2")
@@ -142,9 +142,9 @@ def vc(cache):
         baca.mspanners.text(
             (),
             "RH vib. molto -> NV",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
             lilypond_id=1,
             pieces=[o],
+            staff_padding=8,
         )
         baca.mspanners.text(
             (),
@@ -152,9 +152,9 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), 0),
             (abjad.Tweak(r"- \tweak bound-details.left.padding -3.25"), -1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "<F3 C4>")
@@ -166,10 +166,10 @@ def vc(cache):
         baca.mspanners.text(
             (),
             r"II / III mod. =|",
-            abjad.Tweak(r"- \tweak staff-padding 12.5"),
             bookend=False,
             lilypond_id=2,
             pieces=[o],
+            staff_padding=12.5,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "<F3 C4>")
@@ -179,20 +179,20 @@ def vc(cache):
         baca.mspanners.text(
             (),
             r"II / III mod. =|",
-            abjad.Tweak(r"- \tweak staff-padding 12.5"),
             bookend=False,
             lilypond_id=2,
             pieces=[o],
+            staff_padding=12.5,
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.mspanners.text(
             (),
             r"no scr -> scr. -> no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            abjad.Tweak(r"- \tweak staff-padding 9"),
             bookend=False,
             lilypond_id=1,
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
+            staff_padding=9,
         )
         baca.mspanners.text(
             (),
@@ -208,9 +208,9 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), 2),
             (abjad.Tweak(r"- \tweak style #'trill"), 2),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
             pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
+            staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
@@ -236,9 +236,9 @@ def vc(cache):
                 "XFB =|",
                 abjad.Tweak(r"- \tweak bound-details.left.padding -2"),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=False,
                 pieces=[u],
+                staff_padding=3,
             )
     for measures_, padding in (
         ((1, 4), 6),
