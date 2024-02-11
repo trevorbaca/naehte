@@ -78,7 +78,7 @@ def vc(cache):
         baca.override.note_head_x_extent_zero(o.pleaves()[:-1])
         baca.pitches(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
         baca.glissando(o.leaves(), zero_padding=True)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "RH vibr. strettiss. -> RH NV",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -106,7 +106,7 @@ def vc(cache):
             bookend=False,
         )
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "no scr. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
@@ -123,7 +123,7 @@ def vc(cache):
                 'o< "f" >',
                 bookend=False,
             )
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 r"\baca-damp-markup =|",
                 abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -134,7 +134,7 @@ def vc(cache):
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"\baca-circle-markup =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -142,7 +142,7 @@ def vc(cache):
             pieces=[o.leaves()[:2]],
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
@@ -164,7 +164,7 @@ def vc(cache):
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
             baca.glissando(u, zero_padding=True)
             baca.override.note_head_style_harmonic(u)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"RH NV -> RH vib. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -211,7 +211,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaf(5))
         baca.stem_tremolo(o.leaf(-1))
         leaves = baca.select.rleak(o.leaves()[-1:], count=2)
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "I / II mod. -> strett. =|",
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -219,7 +219,7 @@ def vc(cache):
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
     with baca.scope(m.get(5, 7)) as o:
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "scr. -> no scr. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
@@ -234,7 +234,7 @@ def vc(cache):
     with baca.scope(m.get(8, 9)) as o:
         with baca.scope(baca.select.rleaves(o)) as u:
             baca.glissando(u)
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 r"\baca-damp-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
@@ -254,7 +254,7 @@ def vc(cache):
             o.rleaves(),
             "> ppppp",
         )
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             "spazz. strett. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5.75"),
@@ -268,7 +268,7 @@ def vc(cache):
                 baca.select.lparts(u, [2, 3]),
                 "<| p |>o !",
             )
-            baca.piecewise.text(
+            baca.mspanners.text(
                 (),
                 r"XFB =| \baca-circle-markup =| spz. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
@@ -304,7 +304,7 @@ def vc(cache):
             "o<| f |> p",
         )
         baca.repeat_tie(o.leaves()[-2:])
-        baca.piecewise.text(
+        baca.mspanners.text(
             (),
             r"no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
