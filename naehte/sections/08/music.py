@@ -80,7 +80,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
         baca.mspanners.text(
-            [o.leaves()[-2:]],
+            o.leaves()[-2:],
             "I / II larg. =|",
             bookend=False,
             staff_padding=3,
@@ -95,7 +95,7 @@ def vc(cache):
         baca.stem_tremolo(o.leaves())
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [o.leaves()[-2:]],
+            o.leaves()[-2:],
             "½ clt =|",
             bookend=False,
             staff_padding=3,
@@ -109,7 +109,7 @@ def vc(cache):
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             bookend=False,
@@ -159,8 +159,8 @@ def vc(cache):
         baca.dynamic(o.phead(0), "pppp-sempre")
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.5)
         baca.mspanners.text(
-            [o],
-            r"II / III mod. =|",
+            o,
+            "II / III mod. =|",
             bookend=False,
             lilypond_id=2,
             staff_padding=12.5,
@@ -171,8 +171,8 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[8]) as o:
         baca.mspanners.text(
-            [o],
-            r"II / III mod. =|",
+            o,
+            "II / III mod. =|",
             bookend=False,
             lilypond_id=2,
             staff_padding=12.5,
@@ -223,7 +223,7 @@ def vc(cache):
             )
             baca.interpolate_pitches(u, "Eb3", "Eb3", allow_hidden=True)
             baca.mspanners.text(
-                [u],
+                u,
                 "XFB =|",
                 abjad.Tweak(r"- \tweak bound-details.left.padding -2"),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),

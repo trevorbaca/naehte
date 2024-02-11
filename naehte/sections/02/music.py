@@ -108,7 +108,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
         baca.mspanners.text(
-            [o.leaves()[-4:]],
+            o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             bookend=False,
@@ -143,7 +143,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
         baca.mspanners.text(
-            [o.leaves()[-4:]],
+            o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             bookend=False,
@@ -185,22 +185,22 @@ def vc(cache):
             staff_padding=10.5,
         )
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-1:])],
-            r"XFB =|",
+            baca.select.rleak(o.leaves()[-1:]),
+            "XFB =|",
             bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         ),
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 6, 2]),
-            r"T -> P -> T =|",
+            "T -> P -> T =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
             [o.leaves()[1:7]],
-            r"trem. -> larg.",
+            "trem. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             staff_padding=5.5,
         )
@@ -219,13 +219,13 @@ def vc(cache):
         baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.mspanners.text(
             [o],
-            r"II / III strett. -> larg.",
+            "II / III strett. -> larg.",
             lilypond_id=2,
             staff_padding=10.5,
         )
         baca.mspanners.text(
             [o],
-            r"(T) -> P",
+            "(T) -> P",
             lilypond_id=1,
             staff_padding=8,
         )
@@ -251,14 +251,14 @@ def vc(cache):
             baca.stem_tremolo(u, tremolo_flags=64)
         baca.mspanners.text(
             [o.leaves()[:6]],
-            r"II / III larg. =|",
+            "II / III larg. =|",
             bookend=False,
             lilypond_id=2,
             staff_padding=10.5,
         )
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-2:])],
-            r"XFB =|",
+            baca.select.rleak(o.leaves()[-2:]),
+            "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
             bookend=False,
             lilypond_id=2,
@@ -266,7 +266,7 @@ def vc(cache):
         )
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [5, 3]),
-            r"P -> T =|",
+            "P -> T =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
             bookend=False,
             lilypond_id=1,
@@ -274,7 +274,7 @@ def vc(cache):
         )
         baca.mspanners.text(
             [o.leaves()[:5]],
-            r"trem. -> larg.",
+            "trem. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             staff_padding=5.5,
         )
@@ -294,8 +294,8 @@ def vc(cache):
         ),
         baca.interpolate_pitches(o, "D#5", "F5"),
         baca.mspanners.text(
-            [o.rleaves()],
-            r"XFB =|",
+            o.rleaves(),
+            "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
             bookend=False,
             staff_padding=5.5,
@@ -313,7 +313,7 @@ def vc(cache):
     with baca.scope(m.get(11, 13)) as o:
         baca.glissando(o.rleaves(), zero_padding=True)
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             r"\baca-damp-markup =|",
             bookend=False,
             lilypond_id=1,
@@ -321,7 +321,7 @@ def vc(cache):
         )
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
-            r"II / III largo -> strett. =| largo -> strett. =|",
+            "II / III largo -> strett. =| largo -> strett. =|",
             bookend=False,
             staff_padding=8,
         )
@@ -346,7 +346,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
         baca.mspanners.text(
-            [o.leaves()[-4:]],
+            o.leaves()[-4:],
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             bookend=False,
@@ -367,7 +367,7 @@ def vc(cache):
         baca.pitches(o, "C5 Db2"),
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [o.leaves()[:2]],
+            o.leaves()[:2],
             r"\baca-damp-markup =|",
             bookend=False,
             lilypond_id=1,
