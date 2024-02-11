@@ -422,8 +422,7 @@ def vc(cache):
             )
             baca.interpolate_pitches(u, "D3", "C#3")
             baca.mspanners.text(
-                # TODO: remove brackets?
-                [u],
+                u,
                 "no scr. ->",
                 bookend=False,
                 staff_padding=5.5,
@@ -477,8 +476,7 @@ def vc(cache):
             staff_padding=9,
         )
         baca.mspanners.text(
-            # TODO: remove brackets?
-            [o],
+            o,
             r"\baca-triple-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
             bookend=False,
