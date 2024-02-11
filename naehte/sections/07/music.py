@@ -130,21 +130,21 @@ def vc(cache):
         )
         baca.repeat_tie(o.leaf(-1))
         baca.mspanners.text(
-            [o],
+            o,
             "I / II str. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
-            [o],
+            o,
             r"\baca-damp-markup =|",
             bookend=False,
             staff_padding=5.5,
         )
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-1:])],
-            r"scr. =|",
+            baca.select.rleak(o.leaves()[-1:]),
+            "scr. =|",
             bookend=False,
             staff_padding=5.5,
         )
@@ -161,13 +161,14 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaf(0))
         baca.repeat_tie(o.leaf(-1))
         baca.mspanners.text(
-            [o],
+            o,
             "I / II str. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
+            # TODO: remove bracket?
             [o],
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
@@ -223,14 +224,14 @@ def vc(cache):
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-3:])],
+            baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             "XFB =|",
             bookend=False,
             staff_padding=5.5,
@@ -266,7 +267,7 @@ def vc(cache):
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-1:])],
+            baca.select.rleak(o.leaves()[-1:]),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
             bookend=False,
@@ -288,7 +289,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic_black(o.leaves()[-1:])
         baca.stem_tremolo(o.leaf(-1))
         baca.mspanners.text(
-            [o.leaves()[-2:]],
+            o.leaves()[-2:],
             "I / II larg. =|",
             bookend=False,
             lilypond_id=1,

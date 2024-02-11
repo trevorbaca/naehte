@@ -122,7 +122,7 @@ def vc(cache):
                 bookend=False,
             )
             baca.mspanners.text(
-                [u],
+                u,
                 r"\baca-damp-markup =|",
                 bookend=False,
                 lilypond_id=1,
@@ -132,7 +132,7 @@ def vc(cache):
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         baca.mspanners.text(
-            [o.leaves()[:2]],
+            o.leaves()[:2],
             r"\baca-circle-markup =|",
             bookend=False,
             staff_padding=5.5,
@@ -161,7 +161,7 @@ def vc(cache):
             baca.override.note_head_style_harmonic(u)
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 5]),
-            r"RH NV -> RH vib. =|",
+            "RH NV -> RH vib. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
@@ -227,7 +227,7 @@ def vc(cache):
         with baca.scope(baca.select.rleaves(o)) as u:
             baca.glissando(u)
             baca.mspanners.text(
-                [u],
+                u,
                 r"\baca-damp-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
                 bookend=False,
@@ -295,7 +295,7 @@ def vc(cache):
         baca.repeat_tie(o.leaves()[-2:])
         baca.mspanners.text(
             baca.select.lparts(o, [1, 2]),
-            r"no scr. -> scr. =|",
+            "no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
             bookend=False,
             staff_padding=5.5,

@@ -166,14 +166,14 @@ def vc(cache):
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-3:])],
+            baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             "XFB =|",
             bookend=False,
             staff_padding=5.5,
@@ -217,7 +217,7 @@ def vc(cache):
             )
             baca.mspanners.text(
                 baca.select.lparts(u, [1, 2]),
-                r"no scr. -> scr. =|",
+                "no scr. -> scr. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
                 bookend=False,
                 staff_padding=5.5,
@@ -242,14 +242,14 @@ def vc(cache):
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-3:])],
+            baca.select.rleak(o.leaves()[-3:]),
             "II / III mod. =|",
             bookend=False,
             lilypond_id=1,
             staff_padding=8,
         )
         baca.mspanners.text(
-            [o.rleaves()],
+            o.rleaves(),
             "XFB =|",
             bookend=False,
             staff_padding=5.5,
@@ -284,7 +284,7 @@ def vc(cache):
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
         baca.mspanners.text(
-            [baca.select.rleak(o.leaves()[-1:])],
+            baca.select.rleak(o.leaves()[-1:]),
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
             bookend=False,
@@ -310,7 +310,7 @@ def vc(cache):
             )
             baca.interpolate_pitches(u, "E3", "E3", allow_hidden=True)
             baca.mspanners.text(
-                [u],
+                u,
                 r"\baca-circle-very-wide-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
                 bookend=False,
