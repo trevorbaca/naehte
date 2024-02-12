@@ -102,7 +102,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             [o.rleaves()],
             ">o",
-            bookend=False,
+            do_not_bookend=True,
         )
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.mspanners.text(
@@ -110,7 +110,7 @@ def vc(cache):
             "no scr. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[4]) as o:
@@ -119,7 +119,7 @@ def vc(cache):
             baca.piecewise.hairpin(
                 baca.select.lparts(u, [1, 3]),
                 'o< "f" >',
-                bookend=False,
+                do_not_bookend=True,
             )
             baca.mspanners.text(
                 u,
@@ -140,7 +140,7 @@ def vc(cache):
             baca.select.lparts(leaves, [1, 2]),
             r"spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[5]) as o:
@@ -160,7 +160,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 5]),
             "RH NV -> RH vib. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -206,7 +206,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [1, 2]),
             "I / II mod. -> strett. =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
     with baca.scope(m.get(5, 7)) as o:
@@ -214,7 +214,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 5, 7]),
             "scr. -> no scr. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(8, 9)) as o:
@@ -260,7 +260,7 @@ def vc(cache):
                 r"XFB =| \baca-circle-markup =| spz. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
         baca.literal(
@@ -294,7 +294,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 2]),
             "no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
         baca.rspanners.trill(

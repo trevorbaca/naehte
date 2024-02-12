@@ -93,7 +93,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 5]),
             "o< f >",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.literal(
             o.leaf(-1),
@@ -178,7 +178,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.leaves(), [1, 7]),
             r"II / III strett. -> larg. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -191,7 +191,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 6, 2]),
             "T -> P -> T =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -263,7 +263,7 @@ def vc(cache):
             baca.select.lparts(o.rleaves(), [5, 3]),
             "P -> T =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -299,7 +299,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             'pp <| "f" > pp <| "f" >',
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -315,7 +315,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             "II / III largo -> strett. =| largo -> strett. =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
     with baca.scope(m[14]) as o:
@@ -396,7 +396,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 2, 1, 6, 4]),
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.5"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
     with baca.scope(m.leaves()) as o:

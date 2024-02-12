@@ -77,14 +77,14 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [1, 2]),
             "no scr. -> scr. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=10.5,
         )
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [6, 1, 2]),
             "ord. -> P -> T =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
@@ -135,7 +135,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [7, 1, 6, 2]),
             "no scr. -> scr. -> poss. -> XFB =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
     with baca.scope(m[4]) as o:

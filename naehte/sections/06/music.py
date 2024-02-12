@@ -203,7 +203,7 @@ def vc(cache):
             r"XFB =| \baca-circle-markup =| spz. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -217,7 +217,7 @@ def vc(cache):
                 baca.select.lparts(u, [1, 2]),
                 "no scr. -> scr. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
         baca.rspanners.trill(
@@ -254,7 +254,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o, [2, 2]),
             "no scr. -> scr. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )

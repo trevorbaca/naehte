@@ -80,7 +80,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp < p > pp < mp > p < mf >",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.override.tuplet_bracket_staff_padding(o, 2)
@@ -102,7 +102,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [1, 1, 3]),
             "no scr. -> scr. poss. -> XFB =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[3]) as o:
@@ -188,7 +188,7 @@ def vc(cache):
             baca.select.lparts(o.rleaves(), [1, 2]),
             "no scr. -> scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -232,7 +232,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o, [2, 2]),
             "no scr. -> scr. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -241,7 +241,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1]),
             "|> p <|",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
@@ -274,7 +274,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp <| p |>",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.override.note_head_style_harmonic(o.leaves()[:2])
         baca.override.note_head_style_harmonic_black(o.leaves()[-1:])
@@ -317,7 +317,7 @@ def vc(cache):
             baca.select.lparts(o.rleaves(), [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 5]),
             "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=3,
         )
     for measures_, padding in (
