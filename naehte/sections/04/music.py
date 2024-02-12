@@ -82,7 +82,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o.rleaves(), [1, 3]),
             'o< "f" >',
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.pitch(o, "C#3")
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
@@ -102,7 +102,7 @@ def vc(cache):
             baca.select.lparts(leaves, [1, 2]),
             "spz. larg. -> str. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1"), 0),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[2]) as o:
@@ -145,7 +145,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [7, 2]),
             "no scr. -> scr. ->",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
@@ -172,7 +172,7 @@ def vc(cache):
             "poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"), -1),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            bookend=False,
+            do_not_bookend=True,
         )
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves()[:2]) as u:
@@ -189,7 +189,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 5]),
             "RH NV -> RH vib. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -212,7 +212,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 5, 2]),
             "scr. -> no scr. -> XFB =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
@@ -251,7 +251,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.leaves(), [1, 7]),
             "II / III strett. -> larg. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -264,7 +264,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 6, 2]),
             "T -> P -> T =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -329,7 +329,7 @@ def vc(cache):
             baca.mspanners.text(
                 baca.select.lparts(u, [2, 4]),
                 "P -> T =|",
-                bookend=False,
+                do_not_bookend=True,
                 lilypond_id=1,
                 staff_padding=8,
             )
@@ -389,7 +389,7 @@ def vc(cache):
             baca.mspanners.text(
                 baca.select.lparts(u, [1, 2]),
                 "no scr. -> scr. =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
         baca.rspanners.trill(

@@ -147,7 +147,7 @@ def vc(cache):
             baca.mspanners.text(
                 baca.select.lparts(u, [1, 2]),
                 "no scr. -> scr. =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
         baca.rspanners.trill(
@@ -230,7 +230,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(leaves, [9, 1, 3]),
             "II / III largo -> strett. -> larg. =|",
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[8]) as o:
@@ -283,7 +283,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.leaves(), [1, 7]),
             "II / III strett. -> larg. =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=2,
             staff_padding=10.5,
         )
@@ -296,7 +296,7 @@ def vc(cache):
         baca.mspanners.text(
             baca.select.lparts(o.rleaves(), [1, 6, 2]),
             "T -> P -> T =|",
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=8,
         )
@@ -359,7 +359,7 @@ def vc(cache):
             baca.mspanners.text(
                 baca.select.lparts(u, [2, 4]),
                 "P -> T =|",
-                bookend=False,
+                do_not_bookend=True,
                 lilypond_id=1,
                 staff_padding=8,
             )
@@ -394,7 +394,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             '"f" "f" >',
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.pitches(
             o,
@@ -426,7 +426,7 @@ def vc(cache):
             baca.mspanners.text(
                 baca.select.lparts(u, [1, 2]),
                 "no scr. -> scr. =|",
-                bookend=False,
+                do_not_bookend=True,
                 staff_padding=5.5,
             )
         baca.rspanners.trill(
@@ -490,7 +490,7 @@ def vc(cache):
                 baca.select.lparts(u, [4, 7, 1, 4, 7, 2]),
                 "II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
-                bookend=False,
+                do_not_bookend=True,
                 lilypond_id=1,
                 staff_padding=8,
             )

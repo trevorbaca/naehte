@@ -117,7 +117,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp < p > pp < mp > p < mf >",
-            bookend=False,
+            do_not_bookend=True,
         )
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
@@ -145,7 +145,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), 0),
             (abjad.Tweak(r"- \tweak bound-details.left.padding -3.25"), -1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -177,7 +177,7 @@ def vc(cache):
             baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             r"no scr -> scr. -> no scr. -> scr. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             lilypond_id=1,
             staff_padding=9,
         )
@@ -195,7 +195,7 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), 2),
             (abjad.Tweak(r"- \tweak style #'trill"), 2),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
-            bookend=False,
+            do_not_bookend=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
