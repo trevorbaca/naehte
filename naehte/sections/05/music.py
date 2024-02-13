@@ -70,8 +70,9 @@ def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [6, 6, 2]),
+            baca.select.lparts(o, [6, 6, 1]),
             "o< pp > ppp < f",
+            rleak=True,
         )
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
@@ -100,9 +101,10 @@ def vc(cache):
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(2, 3)) as o:
         baca.piecewise.hairpin(
-            [o.rleaves()],
+            [o],
             ">o",
             do_not_bookend=True,
+            rleak=True,
         )
         leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.mspanners.text(
@@ -187,8 +189,9 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.finger_pressure_transition(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [5, 2]),
+            baca.select.lparts(o, [5, 1]),
             "p > ppp < pp",
+            rleak=True,
         )
         baca.literal(
             o.leaf(0),
@@ -232,14 +235,16 @@ def vc(cache):
             )
     with baca.scope(m[8]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             "> pppp < ppp",
+            rleak=True,
         )
         baca.stem_tremolo(o.pleaf(0))
     with baca.scope(m[9]) as o:
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "> ppppp",
+            rleak=True,
         )
         baca.mspanners.text(
             [baca.select.lleak(o)],

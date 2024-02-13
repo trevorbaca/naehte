@@ -108,9 +108,8 @@ def vc(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "E2")
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp <| p",
         )
         baca.override.note_head_style_harmonic_black(o.leaf(0))
@@ -123,9 +122,8 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[4]) as o:
-        leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp <| fff",
         )
         baca.repeat_tie(o.leaf(-1))
@@ -150,9 +148,8 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[5]) as o:
-        leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp <| fff",
         )
         baca.override.note_head_style_harmonic(o.leaf(0))
@@ -172,9 +169,8 @@ def vc(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Eb2")
         baca.breathe(o.pleaf(-1))
-        leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp <| mf",
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
@@ -214,8 +210,9 @@ def vc(cache):
     with baca.scope(m[8]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "p <| f",
+            rleak=True,
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
@@ -294,9 +291,10 @@ def vc(cache):
             abjad.select.get(o.leaves(), [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [14, 8]),
+            baca.select.lparts(o, [14, 7]),
             "pppp -- pppp >o !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            rleak=True,
         )
         baca.markup(
             o.pleaf(0),

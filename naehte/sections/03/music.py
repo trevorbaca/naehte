@@ -478,8 +478,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[17]) as o:
         baca.spanners.hairpin(
-            baca.select.rleak(o.leaves()[-1:]),
+            o[-1:],
             "pppp >o !",
+            rleak=True,
         )
         baca.glissando(o.tleaves())
     with baca.scope(m.get(16, 17)) as o:

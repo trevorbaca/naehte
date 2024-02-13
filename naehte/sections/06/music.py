@@ -117,7 +117,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
         baca.piecewise.hairpin(
-            baca.select.lparts(o.leaves(), [6, 6, 2]),
+            baca.select.lparts(o, [6, 6, 2]),
             "o< pp > ppp < f",
         )
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
@@ -179,10 +179,10 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        leaves = baca.select.rleak(baca.select.lleak(o.leaves()))
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 1, 4]),
+            baca.select.lparts(baca.select.lleak(o), [1, 1, 3]),
             "|> ppppp <| p |>o !",
+            rleak=True,
         ),
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
@@ -235,8 +235,9 @@ def vc(cache):
     with baca.scope(m[10]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "p <| f",
+            rleak=True,
         )
         baca.glissando(o.tleaves())
         baca.mspanners.text(
@@ -261,8 +262,9 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 2]),
+            baca.select.lparts(o, [1, 1]),
             "|> p <| ff",
+            rleak=True,
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
@@ -290,9 +292,10 @@ def vc(cache):
     with baca.scope(m[14]) as o:
         baca.pitch(o, "E3")
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "ppp -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            rleak=True,
         )
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.note_head_x_extent_zero(u)
