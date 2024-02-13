@@ -112,14 +112,12 @@ def vc(cache):
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             lilypond_id=1,
-            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.mspanners.text(
             baca.select.lparts(o[:-2], [1, 1, 5, 1]),
             "no scr. -> scr. ->",
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[2]) as o:
@@ -147,7 +145,6 @@ def vc(cache):
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             lilypond_id=1,
-            rleak=True,
             staff_padding=10.5,
         )
     with baca.scope(m.get(3, 4)) as o:
@@ -182,14 +179,12 @@ def vc(cache):
             r"II / III strett. -> larg. =|",
             do_not_bookend=True,
             lilypond_id=2,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.mspanners.text(
             o[-1:],
             "XFB =|",
             lilypond_id=2,
-            rleak=True,
             staff_padding=10.5,
         ),
         baca.mspanners.text(
@@ -197,14 +192,12 @@ def vc(cache):
             "T -> P -> T =|",
             do_not_bookend=True,
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
         baca.mspanners.text(
             [o[1:6]],
             "trem. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
-            rleak=True,
             staff_padding=5.5,
         )
         baca.override.tuplet_bracket_padding(o.leaf(1), 1.75)
@@ -258,7 +251,6 @@ def vc(cache):
             o.leaves()[:5],
             "II / III larg. =|",
             lilypond_id=2,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.mspanners.text(
@@ -266,7 +258,6 @@ def vc(cache):
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
             lilypond_id=2,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.mspanners.text(
@@ -275,14 +266,12 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
             do_not_bookend=True,
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
         baca.mspanners.text(
             [o[:4]],
             "trem. -> larg.",
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-            rleak=True,
             staff_padding=5.5,
         )
         baca.override.tuplet_bracket_padding(o.leaf(0), 1.75)
@@ -304,7 +293,6 @@ def vc(cache):
             o,
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(11, 13)) as o:
@@ -323,14 +311,12 @@ def vc(cache):
             o,
             r"\baca-damp-markup =|",
             lilypond_id=1,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.mspanners.text(
             baca.select.lparts(o, [1, 1, 1, 1]),
             "II / III largo -> strett. =| largo -> strett. =|",
             do_not_bookend=True,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[14]) as o:
@@ -358,13 +344,11 @@ def vc(cache):
             "RH vib. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
             lilypond_id=1,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.mspanners.text(
             baca.select.lparts(o[:3], [1, 1]),
             "no scr. -> scr. ->",
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[15]) as o:
@@ -378,7 +362,6 @@ def vc(cache):
             o[:1],
             r"\baca-damp-markup =|",
             lilypond_id=1,
-            rleak=True,
             staff_padding=10.5,
         )
         baca.override.tuplet_bracket_down(o),
@@ -414,7 +397,6 @@ def vc(cache):
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding -4.5"), -1),
             do_not_bookend=True,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m.leaves()) as o:
