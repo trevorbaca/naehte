@@ -202,9 +202,10 @@ def vc(cache):
     with baca.scope(m.get(10, 13)) as o:
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "appena-udibile -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            rleak=True,
         )
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.note_head_x_extent_zero(u)

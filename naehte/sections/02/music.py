@@ -148,9 +148,8 @@ def vc(cache):
             staff_padding=10.5,
         )
     with baca.scope(m.get(3, 4)) as o:
-        leaves = o.leaves()[:8]
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 6]),
+            baca.select.lparts(o[:8], [1, 6]),
             "o< f |> ppp",
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
@@ -278,9 +277,10 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.spanners.hairpin(
-            o.rleaves(),
+            o,
             "pppp -- !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
+            rleak=True,
         )
         baca.glissando(
             o.tleaves(),
@@ -298,9 +298,10 @@ def vc(cache):
     with baca.scope(m.get(11, 13)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
+            baca.select.lparts(o, [1, 1, 1, 1]),
             'pp <| "f" > pp <| "f" >',
             do_not_bookend=True,
+            rleak=True,
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -353,7 +354,7 @@ def vc(cache):
         )
     with baca.scope(m[15]) as o:
         baca.spanners.hairpin(
-            o.leaves()[:2],
+            o[:2],
             "o<| fff",
         )
         baca.pitches(o, "C5 Db2"),

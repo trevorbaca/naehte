@@ -80,9 +80,10 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.leaves()[1:], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:])
         baca.piecewise.hairpin(
-            baca.select.lparts(o.rleaves(), [1, 3]),
+            baca.select.lparts(o, [1, 2]),
             'o< "f" >',
             do_not_bookend=True,
+            rleak=True,
         )
         baca.pitch(o, "C#3")
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
@@ -124,7 +125,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o, 1),
     with baca.scope(m[3]) as o:
         baca.spanners.hairpin(
-            o.leaves()[1:-1],
+            o[1:-1],
             "ppppp <| f",
         )
         baca.override.note_head_style_harmonic(o.leaves()[1:-2])
@@ -406,8 +407,9 @@ def vc(cache):
         )
     with baca.scope(m[13]) as o:
         baca.spanners.hairpin(
-            baca.select.rleak(baca.select.lleak(o.leaves())),
+            baca.select.lleak(o),
             "< mp",
+            rleak=True,
         )
         with baca.scope(o.rleaves()) as u:
             baca.glissando(
@@ -478,9 +480,8 @@ def vc(cache):
         )
     with baca.scope(m.get(15, 16)) as o:
         baca.breathe(o.leaf(0))
-        leaves = o.leaves()[1:]
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 1, 3]),
+            baca.select.lparts(o[1:], [1, 1, 3]),
             '"mf" > pp < "mf" >o !',
         )
     for measures_, padding in (
