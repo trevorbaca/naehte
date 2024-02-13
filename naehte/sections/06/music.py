@@ -131,14 +131,12 @@ def vc(cache):
                 "RH vibr. strettiss. -> RH NV",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 7.25"),
                 lilypond_id=1,
-                rleak=True,
                 staff_padding=8,
             )
             baca.mspanners.text(
                 [u],
                 "no scr. -> scr. poss.",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"),
-                rleak=True,
                 staff_padding=5.5,
             )
         baca.override.tuplet_bracket_padding(o, 1.75)
@@ -171,13 +169,11 @@ def vc(cache):
             o[-3:],
             "II / III mod. =|",
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
         baca.mspanners.text(
             o,
             "XFB =|",
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -208,7 +204,6 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
             do_not_bookend=True,
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[9]) as o:
@@ -223,7 +218,6 @@ def vc(cache):
                 "no scr. -> scr. =|",
                 (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
                 do_not_bookend=True,
-                rleak=True,
                 staff_padding=5.5,
             )
         baca.rspanners.trill(
@@ -249,11 +243,10 @@ def vc(cache):
             o[-3:],
             "II / III mod. =|",
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
         baca.mspanners.text(
-            o.rleaves(),
+            o,
             "XFB =|",
             staff_padding=5.5,
         )
@@ -263,7 +256,6 @@ def vc(cache):
             "no scr. -> scr. =|",
             do_not_bookend=True,
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[11]) as o:
@@ -293,7 +285,6 @@ def vc(cache):
             r"\baca-circle-very-wide-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
             lilypond_id=1,
-            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[14]) as o:
@@ -318,7 +309,6 @@ def vc(cache):
                 u[:-1],
                 r"\baca-circle-very-wide-markup =|",
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                rleak=True,
                 staff_padding=5.5,
             )
     baca.override.dls_staff_padding(m.leaves()[:-1], 6)

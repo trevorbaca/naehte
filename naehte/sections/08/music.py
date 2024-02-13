@@ -82,7 +82,6 @@ def vc(cache):
         baca.mspanners.text(
             o[-2:-1],
             "I / II larg. =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[2]) as o:
@@ -97,7 +96,6 @@ def vc(cache):
         baca.mspanners.text(
             o[-2:-1],
             "½ clt =|",
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[3]) as o:
@@ -112,7 +110,6 @@ def vc(cache):
             o,
             "XFB =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
-            rleak=True,
             staff_padding=3,
         )
     with baca.scope(m[5]) as o:
@@ -150,7 +147,6 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.left.padding -3.25"), -1),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
             do_not_bookend=True,
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
@@ -164,7 +160,6 @@ def vc(cache):
             o[:-1],
             "II / III mod. =|",
             lilypond_id=2,
-            rleak=True,
             staff_padding=12.5,
         )
     with baca.scope(m[8]) as o:
@@ -176,7 +171,6 @@ def vc(cache):
             o[:-1],
             "II / III mod. =|",
             lilypond_id=2,
-            rleak=True,
             staff_padding=12.5,
         )
     with baca.scope(m.get(7, 8)) as o:
@@ -186,7 +180,6 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             do_not_bookend=True,
             lilypond_id=1,
-            rleak=True,
             staff_padding=9,
         )
         baca.mspanners.text(
@@ -204,7 +197,6 @@ def vc(cache):
             (abjad.Tweak(r"- \tweak style #'trill"), 2),
             (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
             do_not_bookend=True,
-            rleak=True,
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
@@ -231,7 +223,6 @@ def vc(cache):
                 "XFB =|",
                 abjad.Tweak(r"- \tweak bound-details.left.padding -2"),
                 abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
-                rleak=True,
                 staff_padding=3,
             )
     for measures_, padding in (
