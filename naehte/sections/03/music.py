@@ -87,7 +87,8 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 2]),
-            r"p > ppp <",
+            "p > ppp <",
+            cyclic=True,
         ),
         baca.pitches(o, "Eb2 B3 F2 A3 G2 F#3")
         baca.glissando(o.tleaves())
@@ -114,7 +115,7 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [2, 1, 2]),
+            baca.select.lparts(leaves, [2, 1, 1, 1]),
             '<| "f" "f" > ppp',
         )
         baca.pitches(
@@ -258,7 +259,7 @@ def vc(cache):
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 6]),
+            baca.select.lparts(leaves, [1, 5, 1]),
             "o< f |> ppp",
         )
         with baca.scope(o.leaves()[:2]) as u:

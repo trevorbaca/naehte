@@ -155,7 +155,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [6, 2]),
+            baca.select.lparts(leaves, [6, 1, 1]),
             "ff |> p <| mf",
         )
         baca.pitches(
@@ -183,7 +183,7 @@ def vc(cache):
             baca.finger_pressure_transition(u)
             leaves = baca.select.lleak(u)
             baca.piecewise.hairpin(
-                baca.select.lparts(leaves, [1, 2]),
+                baca.select.lparts(leaves, [1, 1, 1]),
                 "|> p <| f",
             )
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
@@ -221,7 +221,7 @@ def vc(cache):
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [1, 7]),
+            baca.select.lparts(o, [1, 6, 1]),
             "p < f |> ppp",
         )
         with baca.scope(o.leaves()[:2]) as u:
@@ -372,7 +372,7 @@ def vc(cache):
     with baca.scope(m[12]) as o:
         leaves = o.leaves()[1:]
         baca.piecewise.hairpin(
-            baca.select.lparts(leaves, [1, 2]),
+            baca.select.lparts(leaves, [1, 1, 1]),
             '"f" "f" > ppp',
         )
         with baca.scope(o.leaf(0)) as u:
@@ -481,7 +481,7 @@ def vc(cache):
     with baca.scope(m.get(15, 16)) as o:
         baca.breathe(o.leaf(0))
         baca.piecewise.hairpin(
-            baca.select.lparts(o[1:], [1, 1, 3]),
+            baca.select.lparts(o[1:], [1, 1, 2, 1]),
             '"mf" > pp < "mf" >o !',
         )
     for measures_, padding in (
