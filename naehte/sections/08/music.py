@@ -74,7 +74,7 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.glissando(o.tleaves())
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [1, 2]),
+            baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
         ),
         baca.override.note_head_style_harmonic_black(o.pleaves())
@@ -87,7 +87,7 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [1, 2]),
+            baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
         )
         baca.override.note_head_style_harmonic_black(o.pleaves())

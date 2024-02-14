@@ -178,9 +178,9 @@ def vc(cache):
         baca.repeat_tie(o.pleaf(0))
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.glissando(o.rleaves(), zero_padding=True)
-        with baca.scope(baca.select.lleak(o.leaves())) as u:
+        with baca.scope(baca.select.lleak(o)) as u:
             baca.piecewise.hairpin(
-                baca.select.lparts(u, [2, 1, 1, 2]),
+                baca.select.lparts(u, [2, 1, 1, 1, 1]),
                 'p |> pp <| "f" pp <| "f"',
             ),
             baca.override.dls_staff_padding(u, 7)

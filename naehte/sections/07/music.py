@@ -109,7 +109,7 @@ def vc(cache):
         baca.pitch(o, "E2")
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.lleak(o), [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 1, 1]),
             "|> ppp <| p",
         )
         baca.override.note_head_style_harmonic_black(o.leaf(0))
@@ -123,7 +123,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[4]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.lleak(o), [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 1, 1]),
             "|> ppp <| fff",
         )
         baca.repeat_tie(o.leaf(-1))
@@ -149,7 +149,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[5]) as o:
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.lleak(o), [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 1, 1]),
             "|> ppp <| fff",
         )
         baca.override.note_head_style_harmonic(o.leaf(0))
@@ -170,7 +170,7 @@ def vc(cache):
         baca.pitch(o, "Eb2")
         baca.breathe(o.pleaf(-1))
         baca.piecewise.hairpin(
-            baca.select.lparts(baca.select.lleak(o), [1, 2]),
+            baca.select.lparts(baca.select.lleak(o), [1, 1, 1]),
             "|> ppp <| mf",
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
@@ -291,10 +291,9 @@ def vc(cache):
             abjad.select.get(o.leaves(), [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
         )
         baca.piecewise.hairpin(
-            baca.select.lparts(o, [14, 7]),
+            baca.select.lparts(baca.select.rleak(o), [14, 7, 1]),
             "pppp -- pppp >o !",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            rleak=True,
         )
         baca.markup(
             o.pleaf(0),
