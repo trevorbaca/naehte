@@ -1019,9 +1019,6 @@ number.6.Cello.Music = {
             - \tweak color #blue
               %! EXPLICIT_DYNAMIC
               %! SPANNER_START
-            - \tweak to-barline ##t
-              %! EXPLICIT_DYNAMIC
-              %! SPANNER_START
             \>
 
             \once \override Glissando.bound-details.right.end-on-accidental = ##f

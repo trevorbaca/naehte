@@ -1819,9 +1819,6 @@ number.3.Cello.Music = {
         - \tweak color #blue
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
         \>
         \revert DynamicLineSpanner.staff-padding
         \revert TupletBracket.direction
