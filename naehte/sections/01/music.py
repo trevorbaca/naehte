@@ -179,7 +179,7 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.glissando(o.rleaves(), zero_padding=True)
         with baca.scope(baca.select.lleak(o)) as u:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(u, [2, 1, 1, 1, 1]),
                 'p |> pp <| "f" pp <| "f"',
                 do_not_bookend=True,
