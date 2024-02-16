@@ -69,7 +69,7 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(baca.select.rleak(o), [6, 6, 1, 1]),
             "o< pp > ppp < f",
             do_not_bookend=True,
@@ -100,7 +100,7 @@ def vc(cache):
             baca.interpolate_pitches(u, "E2", "C#3")
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(2, 3)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             [o],
             ">o",
             do_not_bookend=True,
@@ -118,7 +118,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "C#3"),
         with baca.scope(o.leaves()) as u:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(u, [1, 2]),
                 'o< "f" >',
                 do_not_bookend=True,
@@ -188,7 +188,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[7]) as o:
         baca.finger_pressure_transition(o.leaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(baca.select.rleak(o), [5, 1, 1]),
             "p > ppp < pp",
             do_not_bookend=True,
@@ -234,7 +234,7 @@ def vc(cache):
                 staff_padding=10.5,
             )
     with baca.scope(m[8]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(baca.select.rleak(o), [1, 1, 1]),
             "> pppp < ppp",
             do_not_bookend=True,
@@ -255,7 +255,7 @@ def vc(cache):
     with baca.scope(m[10]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         with baca.scope(o.leaves()) as u:
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(baca.select.rleak(u), [2, 2, 1]),
                 "<| p |>o !",
                 do_not_bookend=True,
@@ -290,7 +290,7 @@ def vc(cache):
         baca.override.stem_down(o.leaves()[-3:])
     with baca.scope(m[12]) as o:
         baca.pitch(o, "A3")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1]),
             "o<| f |> p",
             do_not_bookend=True,

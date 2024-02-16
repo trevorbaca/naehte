@@ -116,7 +116,7 @@ def vc(cache):
             baca.stem_tremolo(u)
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [6, 6, 1, 1]),
             "o< pp > ppp < f",
             do_not_bookend=True,
@@ -180,7 +180,7 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(baca.select.lleak(o.rleaves()), [1, 1, 3, 1]),
             "|> ppppp <| p |>o !",
             do_not_bookend=True,
@@ -210,7 +210,7 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "A3"),
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(u, [1, 1, 1]),
                 "o<| f |> p",
                 do_not_bookend=True,
@@ -263,7 +263,7 @@ def vc(cache):
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(baca.select.rleak(o), [1, 1, 1]),
             "|> p <| ff",
             do_not_bookend=True,

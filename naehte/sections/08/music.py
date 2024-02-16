@@ -73,7 +73,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.glissando(o.tleaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
             do_not_bookend=True,
@@ -87,7 +87,7 @@ def vc(cache):
         )
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
             do_not_bookend=True,
@@ -116,7 +116,7 @@ def vc(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2")
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp < p > pp < mp > p < mf >",
             do_not_bookend=True,

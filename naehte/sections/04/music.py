@@ -79,7 +79,7 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.override.repeat_tie_extra_offset(o.leaves()[1:], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:])
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 2]),
             'o< "f" >',
             do_not_bookend=True,
@@ -154,7 +154,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [6, 1, 1]),
             "ff |> p <| mf",
             do_not_bookend=True,
@@ -183,7 +183,7 @@ def vc(cache):
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
             leaves = baca.select.lleak(u)
-            baca.piecewise.hairpin(
+            baca.hairpinlib.hairpin(
                 baca.select.lparts(leaves, [1, 1, 1]),
                 "|> p <| f",
                 do_not_bookend=True,
@@ -222,7 +222,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 6, 1]),
             "p < f |> ppp",
             do_not_bookend=True,
@@ -313,7 +313,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[11]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
             "f |> ppp < p > ppp < p > ppp <|",
             do_not_bookend=True,
@@ -375,7 +375,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[12]) as o:
         leaves = o.leaves()[1:]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [1, 1, 1]),
             '"f" "f" > ppp',
             do_not_bookend=True,
@@ -485,7 +485,7 @@ def vc(cache):
         )
     with baca.scope(m.get(15, 16)) as o:
         baca.breathe(o.leaf(0))
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o[1:], [1, 1, 2, 1]),
             '"mf" > pp < "mf" >o !',
             do_not_bookend=True,

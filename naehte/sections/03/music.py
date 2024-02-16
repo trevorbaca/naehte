@@ -85,7 +85,7 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 2]),
             "p > ppp <",
             cyclic=True,
@@ -114,7 +114,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(4), 2)
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [2, 1, 1, 1]),
             '<| "f" "f" > ppp',
             do_not_bookend=True,
@@ -259,7 +259,7 @@ def vc(cache):
         )
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [1, 5, 1]),
             "o< f |> ppp",
             do_not_bookend=True,
@@ -339,7 +339,7 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[13]) as o:
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
             "f |> ppp < p > ppp < p > ppp <|",
             do_not_bookend=True,
@@ -400,7 +400,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(-2), 2)
     with baca.scope(m[14]) as o:
         leaves = o.leaves()[1:]
-        baca.piecewise.hairpin(
+        baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             '"f" "f" >',
             do_not_bookend=True,
