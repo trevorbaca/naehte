@@ -126,6 +126,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 4, 1]),
             "pp < f >o !",
+            do_not_bookend=True,
         )
         baca.override.note_head_transparent(o.leaves()[-3:-1])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -151,6 +152,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o[:8], [1, 5, 1]),
             "o< f |> ppp",
+            do_not_bookend=True,
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
         cache.rebuild()
@@ -230,6 +232,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [5, 1, 1]),
             "f |> ppp >o !",
+            do_not_bookend=True,
         ),
         baca.pitches(
             o,
@@ -326,6 +329,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 4, 1]),
             "pp < f >o !",
+            do_not_bookend=True,
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.override.note_head_transparent(u)

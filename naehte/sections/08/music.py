@@ -76,6 +76,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
+            do_not_bookend=True,
         ),
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
@@ -89,6 +90,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [1, 1, 1]),
             "ppp > pppp < ppp",
+            do_not_bookend=True,
         )
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())

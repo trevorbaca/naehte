@@ -117,6 +117,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [2, 1, 1, 1]),
             '<| "f" "f" > ppp',
+            do_not_bookend=True,
         )
         baca.pitches(
             o,
@@ -261,6 +262,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(leaves, [1, 5, 1]),
             "o< f |> ppp",
+            do_not_bookend=True,
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
@@ -340,6 +342,7 @@ def vc(cache):
         baca.piecewise.hairpin(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
             "f |> ppp < p > ppp < p > ppp <|",
+            do_not_bookend=True,
         ),
         baca.pitches(
             o,
