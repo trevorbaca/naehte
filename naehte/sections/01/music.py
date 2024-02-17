@@ -182,7 +182,6 @@ def vc(cache):
             baca.hairpinlib.hairpin(
                 baca.select.lparts(u, [2, 1, 1, 1, 1]),
                 'p |> pp <| "f" pp <| "f"',
-                do_not_bookend=True,
             ),
             baca.override.dls_staff_padding(u, 7)
         baca.mspanners.text(
