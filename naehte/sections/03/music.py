@@ -85,10 +85,9 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpinlib.cyclic(
             baca.select.lparts(o, [1, 1, 1, 1, 2]),
             "p > ppp <",
-            cyclic=True,
         ),
         baca.pitches(o, "Eb2 B3 F2 A3 G2 F#3")
         baca.glissando(o.tleaves())
