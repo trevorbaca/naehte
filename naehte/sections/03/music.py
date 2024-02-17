@@ -115,9 +115,9 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
         baca.hairpinlib.hairpin(
-            baca.select.lparts(leaves, [2, 1, 1, 1]),
+            baca.select.lparts(leaves, [2, 1, 2]),
             '<| "f" "f" > ppp',
-            do_not_bookend=True,
+            glue=True,
         )
         baca.pitches(
             o,
@@ -260,9 +260,9 @@ def vc(cache):
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
         baca.hairpinlib.hairpin(
-            baca.select.lparts(leaves, [1, 5, 1]),
+            baca.select.lparts(leaves, [1, 6]),
             "o< f |> ppp",
-            do_not_bookend=True,
+            glue=True,
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
@@ -342,7 +342,6 @@ def vc(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
             "f |> ppp < p > ppp < p > ppp <|",
-            do_not_bookend=True,
         ),
         baca.pitches(
             o,
@@ -403,7 +402,6 @@ def vc(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             '"f" "f" >',
-            do_not_bookend=True,
         )
         baca.pitches(
             o,

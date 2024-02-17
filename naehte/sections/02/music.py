@@ -93,7 +93,6 @@ def vc(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 5]),
             "o< f >",
-            do_not_bookend=True,
         )
         baca.literal(
             o.leaf(-1),
@@ -124,9 +123,9 @@ def vc(cache):
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1))
         baca.hairpinlib.hairpin(
-            baca.select.lparts(o, [1, 4, 1]),
+            baca.select.lparts(o, [1, 5]),
             "pp < f >o !",
-            do_not_bookend=True,
+            glue=True,
         )
         baca.override.note_head_transparent(o.leaves()[-3:-1])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -150,9 +149,9 @@ def vc(cache):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.hairpinlib.hairpin(
-            baca.select.lparts(o[:8], [1, 5, 1]),
+            baca.select.lparts(o[:8], [1, 6]),
             "o< f |> ppp",
-            do_not_bookend=True,
+            glue=True,
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
         cache.rebuild()
@@ -230,9 +229,9 @@ def vc(cache):
         )
     with baca.scope(m[7]) as o:
         baca.hairpinlib.hairpin(
-            baca.select.lparts(o, [5, 1, 1]),
+            baca.select.lparts(o, [5, 2]),
             "f |> ppp >o !",
-            do_not_bookend=True,
+            glue=True,
         ),
         baca.pitches(
             o,
@@ -303,8 +302,6 @@ def vc(cache):
         baca.hairpinlib.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1]),
             'pp <| "f" > pp <| "f" >',
-            do_not_bookend=True,
-            rleak=True,
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -327,9 +324,9 @@ def vc(cache):
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1)),
         baca.hairpinlib.hairpin(
-            baca.select.lparts(o, [1, 4, 1]),
+            baca.select.lparts(o, [1, 5]),
             "pp < f >o !",
-            do_not_bookend=True,
+            glue=True,
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.override.note_head_transparent(u)
