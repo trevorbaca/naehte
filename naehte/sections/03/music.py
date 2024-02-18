@@ -157,9 +157,9 @@ def vc(cache):
         )
     with baca.scope(m[3]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o.pleaves(),
-            "ppp <| fff",
+            "ppp<|fff",
         )
         baca.pitch(o, "F#3"),
         with baca.scope(o[:2]) as u:
@@ -202,9 +202,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "|> p",
+            "|>p",
         )
         baca.pitches(o, "<A2 E3> <F3 C4> <G2 D3> Ab2", allow_repeats=True)
         cache.rebuild()
@@ -217,9 +217,9 @@ def vc(cache):
             alteration="M2",
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "ppp <| fff",
+            "ppp<|fff",
             rleak=True,
         )
         baca.mspanners.text(
@@ -312,9 +312,9 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[11]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "ppp < f",
+            "ppp<f",
         )
         baca.pitch(o, "<D#3 F#3>")
         cache.rebuild()
@@ -478,9 +478,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[17]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[-1:],
-            "pppp >o !",
+            "pppp>o!",
             rleak=True,
         )
         baca.glissando(o.tleaves())
