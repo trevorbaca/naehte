@@ -69,7 +69,7 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(baca.select.rleak(o), [6, 6, 2]),
             "o< pp > ppp < f",
             glue=True,
@@ -100,7 +100,7 @@ def vc(cache):
             baca.interpolate_pitches(u, "E2", "C#3")
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(2, 3)) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             [o],
             ">o",
             rleak=True,
@@ -117,7 +117,7 @@ def vc(cache):
     with baca.scope(m[4]) as o:
         baca.pitch(o, "C#3"),
         with baca.scope(o.leaves()) as u:
-            baca.hairpinlib.hairpin(
+            baca.hairpins.hairpin(
                 baca.select.lparts(u, [1, 2]),
                 'o< "f" >',
             )
@@ -146,7 +146,7 @@ def vc(cache):
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "p<|f",
             )
@@ -166,7 +166,7 @@ def vc(cache):
     with baca.scope(m[6]) as o:
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "D3")
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "mf|>",
             )
@@ -185,7 +185,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[7]) as o:
         baca.finger_pressure_transition(o.leaves())
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(baca.select.rleak(o), [5, 2]),
             "p > ppp < pp",
             glue=True,
@@ -231,14 +231,14 @@ def vc(cache):
                 staff_padding=10.5,
             )
     with baca.scope(m[8]) as o:
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(baca.select.rleak(o), [1, 2]),
             "> pppp < ppp",
             glue=True,
         )
         baca.stem_tremolo(o.pleaf(0))
     with baca.scope(m[9]) as o:
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o,
             ">ppppp",
             rleak=True,
@@ -252,7 +252,7 @@ def vc(cache):
     with baca.scope(m[10]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         with baca.scope(o.leaves()) as u:
-            baca.hairpinlib.hairpin(
+            baca.hairpins.hairpin(
                 baca.select.lparts(baca.select.rleak(u), [2, 3]),
                 "<| p |>o !",
                 glue=True,
@@ -287,7 +287,7 @@ def vc(cache):
         baca.override.stem_down(o.leaves()[-3:])
     with baca.scope(m[12]) as o:
         baca.pitch(o, "A3")
-        baca.hairpinlib.hairpin(
+        baca.hairpins.hairpin(
             baca.select.lparts(o, [1, 2]),
             "o<| f |> p",
             glue=True,

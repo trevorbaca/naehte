@@ -51,7 +51,7 @@ def vc(cache):
             zero_padding=True,
         ),
         baca.override.dls_staff_padding(o, 7)
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o,
             "pp<|mf",
         )
@@ -89,7 +89,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[2]) as o:
         baca.override.dls_staff_padding(o, 7)
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             baca.select.rleak(o),
             "pp>ppppp",
             rleak=True,
@@ -110,7 +110,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[3]) as o:
         baca.override.dls_staff_padding(o, 5)
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o[1:-1],
             "<|f",
         )
@@ -145,13 +145,13 @@ def vc(cache):
         baca.glissando(o.leaves()[:5], zero_padding=True)
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         with baca.scope(baca.select.lleak(o.leaves()[:6])) as u:
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "ff|>p",
             )
             baca.override.dls_staff_padding(u, 7)
         with baca.scope(o.leaves()[-3:-1]) as u:
-            baca.hairpinlib.exact(
+            baca.hairpins.exact(
                 u,
                 "<|mf",
             )
@@ -179,7 +179,7 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.glissando(o.rleaves(), zero_padding=True)
         with baca.scope(baca.select.lleak(o)) as u:
-            baca.hairpinlib.hairpin(
+            baca.hairpins.hairpin(
                 baca.select.lparts(u, [2, 1, 1, 1, 1]),
                 'p |> pp <| "f" pp <| "f"',
             ),
@@ -202,7 +202,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[8]) as o:
         baca.override.dls_staff_padding(o, 7)
-        baca.hairpinlib.exact(
+        baca.hairpins.exact(
             o,
             "f|>o!",
             rleak=True,
