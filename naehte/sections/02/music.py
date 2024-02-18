@@ -202,9 +202,9 @@ def vc(cache):
         )
         baca.override.tuplet_bracket_padding(o.leaf(1), 1.75)
     with baca.scope(m[5]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "ppp < f",
+            "ppp<f",
         )
         baca.pitch(o.leaves(), "<D#3 F#3>")
         cache.rebuild()
@@ -278,9 +278,9 @@ def vc(cache):
         baca.override.tuplet_bracket_padding(o.leaf(0), 1.75)
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "pppp -- !",
+            "pppp--!",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             rleak=True,
         )
@@ -354,9 +354,9 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[15]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o[:2],
-            "o<| fff",
+            "o<|fff",
         )
         baca.pitches(o, "C5 Db2"),
         baca.glissando(o.tleaves())
@@ -382,9 +382,9 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(18, 19)) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "fff > pppp",
+            "fff>pppp",
         ),
         baca.glissando(
             o.tleaves(),

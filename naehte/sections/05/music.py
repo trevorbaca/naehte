@@ -146,9 +146,9 @@ def vc(cache):
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 u,
-                "p <| f",
+                "p<|f",
             )
         with baca.scope(o.pleaf(0)) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
@@ -166,9 +166,9 @@ def vc(cache):
     with baca.scope(m[6]) as o:
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "D3")
-            baca.spanners.hairpin(
+            baca.hairpinlib.exact(
                 u,
-                "mf |>",
+                "mf|>",
             )
         baca.glissando(
             baca.select.rleak(o.leaves()[1:]),
@@ -238,9 +238,9 @@ def vc(cache):
         )
         baca.stem_tremolo(o.pleaf(0))
     with baca.scope(m[9]) as o:
-        baca.spanners.hairpin(
+        baca.hairpinlib.exact(
             o,
-            "> ppppp",
+            ">ppppp",
             rleak=True,
         )
         baca.mspanners.text(
