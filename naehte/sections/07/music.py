@@ -77,7 +77,7 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2"),
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp< p> pp< mp> p< mf>",
         )
@@ -86,7 +86,7 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         baca.pitch(o, "E2"),
         baca.finger_pressure_transition(o)
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mp<|fff",
         )
@@ -107,7 +107,7 @@ def vc(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "E2")
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|p",
         )
@@ -121,7 +121,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[4]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|fff",
         )
@@ -147,7 +147,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[5]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|fff",
         )
@@ -168,7 +168,7 @@ def vc(cache):
     with baca.scope(m[6]) as o:
         baca.pitch(o, "Eb2")
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|mf",
         )
@@ -208,7 +208,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[8]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p<|f",
             rleak=True,
@@ -235,7 +235,7 @@ def vc(cache):
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1]),
             "|> p<|",
         )
@@ -248,7 +248,7 @@ def vc(cache):
         )
     with baca.scope(m[10]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "ff|>",
         )
@@ -268,7 +268,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[11]) as o:
         baca.finger_pressure_transition(o.leaves()[-2:])
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp<| p|>",
         )
@@ -287,7 +287,7 @@ def vc(cache):
         baca.accent(
             abjad.select.get(o.leaves(), [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17])
         )
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.rleak(o), [14, 8]),
             "pppp-- pppp>o!",
             abjad.Tweak(r"- \tweak to-barline ##t"),
