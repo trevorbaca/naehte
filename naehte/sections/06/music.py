@@ -116,7 +116,7 @@ def vc(cache):
             baca.stem_tremolo(u)
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [6, 6, 2]),
             "o< pp> ppp<f",
         )
@@ -160,7 +160,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p<|f",
         )
@@ -179,7 +179,7 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.lleak(o.rleaves()), [1, 1, 4]),
             "|> ppppp<| p|>o!",
         ),
@@ -208,7 +208,7 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "A3"),
-            baca.hairpins.exact(
+            baca.hairpin(
                 baca.select.lparts(u, [1, 2]),
                 "o<| f|>p",
             )
@@ -233,7 +233,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[10]) as o:
         baca.finger_pressure_transition(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p<|f",
             rleak=True,
@@ -260,7 +260,7 @@ def vc(cache):
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(baca.select.rleak(o), [1, 2]),
             "|> p<|ff",
         )
@@ -273,7 +273,7 @@ def vc(cache):
         )
     with baca.scope(m[12]) as o:
         baca.pitch(o, "D#3")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "|>pp",
         )
@@ -289,7 +289,7 @@ def vc(cache):
         )
     with baca.scope(m[14]) as o:
         baca.pitch(o, "E3")
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "ppp--!",
             abjad.Tweak(r"- \tweak to-barline ##t"),

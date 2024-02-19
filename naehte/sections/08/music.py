@@ -73,7 +73,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.glissando(o.tleaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp> pppp<ppp",
         ),
@@ -86,7 +86,7 @@ def vc(cache):
         )
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp> pppp<ppp",
         )
@@ -101,7 +101,7 @@ def vc(cache):
     with baca.scope(m[3]) as o:
         baca.pitches(o, "C2 B1")
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "p<|mp",
         )
@@ -114,7 +114,7 @@ def vc(cache):
         )
     with baca.scope(m[5]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2")
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp< p> pp< mp> p< mf>",
         )
@@ -127,7 +127,7 @@ def vc(cache):
         baca.breathe(o.pleaf(-1))
         baca.finger_pressure_transition(o)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "mp<|fff",
         )
@@ -200,7 +200,7 @@ def vc(cache):
         )
     with baca.scope(m.get(10, 13)) as o:
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "appena-udibile--!",
             abjad.Tweak(r"- \tweak to-barline ##t"),

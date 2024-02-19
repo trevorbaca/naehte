@@ -113,7 +113,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(4), 2)
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(leaves, [2, 1, 2]),
             '<| "f" "f">ppp',
         )
@@ -156,7 +156,7 @@ def vc(cache):
         )
     with baca.scope(m[3]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.exact(
+        baca.hairpin(
             o.pleaves(),
             "ppp<|fff",
         )
@@ -201,7 +201,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[6]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "|>p",
         )
@@ -216,7 +216,7 @@ def vc(cache):
             alteration="M2",
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "ppp<|fff",
             rleak=True,
@@ -257,7 +257,7 @@ def vc(cache):
         )
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(leaves, [1, 6]),
             "o< f|>ppp",
         )
@@ -310,7 +310,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[11]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o,
             "ppp<f",
         )
@@ -336,7 +336,7 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[13]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
             "f|> ppp< p> ppp< p> ppp<|",
         ),
@@ -396,7 +396,7 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(-2), 2)
     with baca.scope(m[14]) as o:
         leaves = o.leaves()[1:]
-        baca.hairpins.exact(
+        baca.hairpin(
             baca.select.lparts(leaves, [1, 2]),
             '"f" "f">',
         )
@@ -476,7 +476,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[17]) as o:
-        baca.hairpins.exact(
+        baca.hairpin(
             o[-1:],
             "pppp>o!",
             rleak=True,
