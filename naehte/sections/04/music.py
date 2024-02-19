@@ -79,9 +79,9 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.override.repeat_tie_extra_offset(o.leaves()[1:], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:])
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 2]),
-            'o< "f" >',
+            'o< "f">',
         )
         baca.pitch(o, "C#3")
         baca.glissando(baca.select.rleak(o.leaves()[-1:]))
@@ -152,10 +152,9 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m[4]) as o:
         leaves = baca.select.lleak(o.leaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [6, 2]),
-            "ff |> p <| mf",
-            glue=True,
+            "ff|> p<|mf",
         )
         baca.pitches(
             o,
@@ -181,10 +180,9 @@ def vc(cache):
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
             leaves = baca.select.lleak(u)
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(leaves, [1, 2]),
-                "|> p <| f",
-                glue=True,
+                "|> p<|f",
             )
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
@@ -220,10 +218,9 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(7, 8)) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 7]),
-            "p < f |> ppp",
-            glue=True,
+            "p< f|>ppp",
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
@@ -311,9 +308,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[11]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
-            "f |> ppp < p > ppp < p > ppp <|",
+            "f|> ppp< p> ppp< p> ppp<|",
         )
         with baca.scope(o[:5]) as u:
             baca.override.note_head_style_harmonic(u)
@@ -372,10 +369,9 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[12]) as o:
         leaves = o.leaves()[1:]
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [1, 2]),
-            '"f" "f" > ppp',
-            glue=True,
+            '"f" "f">ppp',
         )
         with baca.scope(o.leaf(0)) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
@@ -482,10 +478,9 @@ def vc(cache):
         )
     with baca.scope(m.get(15, 16)) as o:
         baca.breathe(o.leaf(0))
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o[1:], [1, 1, 3]),
-            '"mf" > pp < "mf" >o !',
-            glue=True,
+            '"mf"> pp< "mf">o!',
         )
     for measures_, padding in (
         ((1, 5), 7),

@@ -113,10 +113,9 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(4), 2)
     with baca.scope(m[2]) as o:
         leaves = baca.select.lleak(o.leaves())
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [2, 1, 2]),
-            '<| "f" "f" > ppp',
-            glue=True,
+            '<| "f" "f">ppp',
         )
         baca.pitches(
             o,
@@ -258,10 +257,9 @@ def vc(cache):
         )
     with baca.scope(m.get(9, 10)) as o:
         leaves = o.leaves()[:8]
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [1, 6]),
-            "o< f |> ppp",
-            glue=True,
+            "o< f|>ppp",
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
@@ -338,9 +336,9 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[13]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [6, 1, 1, 1, 1, 1]),
-            "f |> ppp < p > ppp < p > ppp <|",
+            "f|> ppp< p> ppp< p> ppp<|",
         ),
         baca.pitches(
             o,
@@ -398,9 +396,9 @@ def vc(cache):
         baca.override.tuplet_bracket_staff_padding(o.leaf(-2), 2)
     with baca.scope(m[14]) as o:
         leaves = o.leaves()[1:]
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(leaves, [1, 2]),
-            '"f" "f" >',
+            '"f" "f">',
         )
         baca.pitches(
             o,
