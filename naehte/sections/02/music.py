@@ -90,9 +90,9 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.leaves()[1:3], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:3])
         baca.override.repeat_tie_up(o.leaves()[1:3])
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 5]),
-            "o< f >",
+            "o< f>",
         )
         baca.literal(
             o.leaf(-1),
@@ -122,10 +122,9 @@ def vc(cache):
     with baca.scope(m[2]) as o:
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 5]),
-            "pp < f >o !",
-            glue=True,
+            "pp< f>o!",
         )
         baca.override.note_head_transparent(o.leaves()[-3:-1])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:-1])
@@ -148,10 +147,9 @@ def vc(cache):
             staff_padding=10.5,
         )
     with baca.scope(m.get(3, 4)) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o[:8], [1, 6]),
-            "o< f |> ppp",
-            glue=True,
+            "o< f|>ppp",
         )
         baca.pitch(o.leaves()[:2], "<F3 A3>")
         cache.rebuild()
@@ -228,10 +226,9 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[7]) as o:
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [5, 2]),
-            "f |> ppp >o !",
-            glue=True,
+            "f|> ppp>o!",
         ),
         baca.pitches(
             o,
@@ -299,9 +296,9 @@ def vc(cache):
         )
     with baca.scope(m.get(11, 13)) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 1, 1, 1]),
-            'pp <| "f" > pp <| "f" >',
+            'pp<| "f"> pp<| "f">',
         )
         baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
         cache.rebuild()
@@ -323,10 +320,9 @@ def vc(cache):
     with baca.scope(m[14]) as o:
         baca.override.accidental_extra_offset(o.leaf(0), (-1, 0))
         baca.breathe(o.pleaf(-1)),
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [1, 5]),
-            "pp < f >o !",
-            glue=True,
+            "pp< f>o!",
         )
         with baca.scope(o.leaves()[-3:-1]) as u:
             baca.override.note_head_transparent(u)

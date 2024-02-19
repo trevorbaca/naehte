@@ -116,10 +116,9 @@ def vc(cache):
             baca.stem_tremolo(u)
     with baca.scope(m[4]) as o:
         baca.breathe(o.pleaf(-1))
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(o, [6, 6, 2]),
-            "o< pp > ppp < f",
-            glue=True,
+            "o< pp> ppp<f",
         )
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
@@ -180,10 +179,9 @@ def vc(cache):
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(baca.select.lleak(o.rleaves()), [1, 1, 4]),
-            "|> ppppp <| p |>o !",
-            glue=True,
+            "|> ppppp<| p|>o!",
         ),
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
         baca.glissando(o.leaves()[-3:], zero_padding=True)
@@ -210,10 +208,9 @@ def vc(cache):
     with baca.scope(m[9]) as o:
         with baca.scope(o.leaves()) as u:
             baca.pitch(u, "A3"),
-            baca.hairpins.hairpin(
+            baca.hairpins.exact(
                 baca.select.lparts(u, [1, 2]),
-                "o<| f |> p",
-                glue=True,
+                "o<| f|>p",
             )
             baca.mspanners.text(
                 baca.select.lparts(u, [1, 1]),
@@ -263,10 +260,9 @@ def vc(cache):
         )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D#3"),
-        baca.hairpins.hairpin(
+        baca.hairpins.exact(
             baca.select.lparts(baca.select.rleak(o), [1, 2]),
-            "|> p <| ff",
-            glue=True,
+            "|> p<|ff",
         )
         baca.glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
