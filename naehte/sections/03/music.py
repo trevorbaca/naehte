@@ -463,7 +463,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[16]) as o:
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_allow_repeats=True)
     with baca.scope(m[17]) as o:
         baca.pitches(
             o,
@@ -481,7 +481,7 @@ def vc(cache):
             "pppp>o!",
             rleak=True,
         )
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_allow_repeats=True)
     with baca.scope(m.get(16, 17)) as o:
         with baca.scope(o.leaves()) as u:
             baca.mspanners.text(
