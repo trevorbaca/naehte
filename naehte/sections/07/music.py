@@ -297,16 +297,10 @@ def vc(cache):
             r"\naehte-degrees-of-ponticello-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        with baca.scope(o.leaves()[1:]) as u:
-            baca.override.note_head_x_extent_zero(u)
-            baca.override.note_head_transparent(u)
-        with baca.scope(o.rleaves()) as u:
-            baca.basic_glissando(
-                u,
-                (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
-                zero_padding=True,
-            )
-            baca.interpolate_pitches(u, "D2", "D2", allow_hidden=True)
+        baca.flat_glissando(
+            o,
+            "D2",
+        )
         baca.stem_tremolo(o.leaves())
         baca.mspanners.text(
             baca.select.lparts(o, [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 4]),

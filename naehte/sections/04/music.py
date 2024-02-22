@@ -410,12 +410,10 @@ def vc(cache):
             rleak=True,
         )
         with baca.scope(o.rleaves()) as u:
-            baca.basic_glissando(
+            baca.flat_glissando(
                 u,
-                hide_middle_note_heads=True,
-                zero_padding=True,
+                "D3 C#3",
             )
-            baca.interpolate_pitches(u, "D3", "C#3")
             baca.mspanners.text(
                 u,
                 "no scr. ->",
