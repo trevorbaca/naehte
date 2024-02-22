@@ -281,7 +281,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak to-barline ##t"),
             rleak=True,
         )
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "D#5 F5",
         ),
@@ -379,7 +379,7 @@ def vc(cache):
             o,
             "fff>pppp",
         ),
-        baca.flat_glissando(
+        baca.multistage_glissando(
             o.tleaves(),
             "Db2 Eb2",
         )

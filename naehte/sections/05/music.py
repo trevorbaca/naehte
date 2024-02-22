@@ -90,7 +90,7 @@ def vc(cache):
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m[3]) as o:
         with baca.scope(o.rleaves()) as u:
-            baca.flat_glissando(
+            baca.multistage_glissando(
                 u,
                 "E2 C#3",
             )
