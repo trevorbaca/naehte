@@ -84,7 +84,7 @@ def vc(cache):
             'o< "f">',
         )
         baca.pitch(o, "C#3")
-        baca.glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
         baca.mspanners.text(
             o,
             r"\baca-damp-markup =|",
@@ -132,7 +132,7 @@ def vc(cache):
             baca.repeat_tie(u)
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
         baca.repeat_tie(o.leaf(-1))
-        baca.glissando(o.leaves()[1:-2])
+        baca.basic_glissando(o.leaves()[1:-2])
         baca.finger_pressure_transition(o.leaves()[:2])
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         baca.mspanners.text(
@@ -162,7 +162,7 @@ def vc(cache):
             allow_repeats=True,
         )
         baca.repeat_tie(o.pleaf(0))
-        baca.glissando(o.leaves()[:5], zero_padding=True)
+        baca.basic_glissando(o.leaves()[:5], zero_padding=True)
         baca.finger_pressure_transition(
             baca.select.rleak(o.leaves()[-2:]),
         )
@@ -186,7 +186,7 @@ def vc(cache):
             )
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
-            baca.glissando(u, zero_padding=True)
+            baca.basic_glissando(u, zero_padding=True)
             baca.override.note_head_style_harmonic(u)
         baca.mspanners.text(
             baca.select.lparts(o, [1, 4]),
@@ -201,7 +201,7 @@ def vc(cache):
             "mf|>",
         )
         baca.pitch(o, "D3"),
-        baca.glissando(
+        baca.basic_glissando(
             baca.select.rleak(o.leaves()[-1:]),
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
@@ -239,8 +239,8 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaf(0))
         baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.override.note_head_style_harmonic(o.leaves()[2:9])
-        baca.glissando(o.leaves()[1:9])
-        baca.glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.basic_glissando(o.leaves()[1:9])
+        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
         with baca.scope(o.leaves()[1:7]) as u:
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
@@ -314,7 +314,7 @@ def vc(cache):
         )
         with baca.scope(o[:5]) as u:
             baca.override.note_head_style_harmonic(u)
-            baca.glissando(u)
+            baca.basic_glissando(u)
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
             baca.mspanners.text(
@@ -324,7 +324,7 @@ def vc(cache):
                 do_not_rleak=True,
                 staff_padding=5.5,
             )
-        baca.glissando(o.leaves()[-6:])
+        baca.basic_glissando(o.leaves()[-6:])
         with baca.scope(o[:5]) as u:
             baca.mspanners.text(
                 u,
@@ -410,7 +410,7 @@ def vc(cache):
             rleak=True,
         )
         with baca.scope(o.rleaves()) as u:
-            baca.glissando(
+            baca.basic_glissando(
                 u,
                 allow_repeats=True,
                 hide_middle_note_heads=True,
@@ -427,7 +427,7 @@ def vc(cache):
         with baca.scope(o.leaves()[1:]) as u:
             baca.override.accidental_stencil_false(u)
             baca.pitch(u, "C#3")
-        baca.glissando(
+        baca.basic_glissando(
             o.rleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
