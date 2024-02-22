@@ -1570,8 +1570,6 @@ number.4.Cello.Music = {
     d4
       %! SPANNER_STOP
     \stopTrillSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1580,6 +1578,7 @@ number.4.Cello.Music = {
     - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
+    \glissando
 
     \hide NoteHead
     \override Accidental.stencil = ##f

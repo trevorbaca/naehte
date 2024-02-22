@@ -90,12 +90,10 @@ def vc(cache):
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m[3]) as o:
         with baca.scope(o.rleaves()) as u:
-            baca.basic_glissando(
+            baca.flat_glissando(
                 u,
-                hide_middle_note_heads=True,
-                zero_padding=True,
+                "E2 C#3",
             )
-            baca.interpolate_pitches(u, "E2", "C#3")
         baca.repeat_tie(o.pleaf(0))
     with baca.scope(m.get(2, 3)) as o:
         baca.hairpin(

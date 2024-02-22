@@ -1283,8 +1283,6 @@ number.7.Cello.Music = {
     \pppp
     - \tweak staff-padding 8
     ^ \naehte-degrees-of-ponticello-markup
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1306,21 +1304,20 @@ number.7.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
 
-    \override NoteHead.X-extent = #'(0 . 0)
-    \override NoteHead.transparent = ##t
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1335,8 +1332,6 @@ number.7.Cello.Music = {
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1348,16 +1343,12 @@ number.7.Cello.Music = {
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1372,8 +1363,6 @@ number.7.Cello.Music = {
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1385,16 +1374,12 @@ number.7.Cello.Music = {
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1409,8 +1394,6 @@ number.7.Cello.Music = {
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1423,16 +1406,12 @@ number.7.Cello.Music = {
     % [Cello.Music measure 13]
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1447,8 +1426,6 @@ number.7.Cello.Music = {
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1460,8 +1437,6 @@ number.7.Cello.Music = {
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
@@ -1473,8 +1448,6 @@ number.7.Cello.Music = {
     \pppp
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1502,8 +1475,6 @@ number.7.Cello.Music = {
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1515,16 +1486,12 @@ number.7.Cello.Music = {
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
     - \accent
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -1538,22 +1505,17 @@ number.7.Cello.Music = {
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    \glissando
 
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
     d,4
     :32
-    - \abjad-zero-padding-glissando
-    - \tweak bound-details.right.padding 2.75
-    \glissando
     \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.X-extent
-    \revert NoteHead.transparent
 
     <<
 
@@ -1571,7 +1533,7 @@ number.7.Cello.Music = {
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-            d,1 * 1/4
+            d1 * 1/4
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE

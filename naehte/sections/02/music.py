@@ -281,12 +281,10 @@ def vc(cache):
             abjad.Tweak(r"- \tweak to-barline ##t"),
             rleak=True,
         )
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
-            zero_padding=True,
+            "D#5 F5",
         ),
-        baca.interpolate_pitches(o, "D#5", "F5"),
         baca.mspanners.text(
             o,
             "XFB =|",
@@ -381,12 +379,10 @@ def vc(cache):
             o,
             "fff>pppp",
         ),
-        baca.basic_glissando(
+        baca.flat_glissando(
             o.tleaves(),
-            hide_middle_note_heads=True,
-            zero_padding=True,
+            "Db2 Eb2",
         )
-        baca.interpolate_pitches(o, "Db2", "Eb2"),
     with baca.scope(m.get(15, 19)) as o:
         baca.mspanners.text(
             baca.select.lparts(o, [1, 2, 1, 6, 3]),

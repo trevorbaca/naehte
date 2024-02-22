@@ -199,6 +199,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
+        baca.flat_glissando(o, "Eb3")
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
         baca.hairpin(
             o,
@@ -211,12 +212,6 @@ def vc(cache):
             baca.override.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
             baca.override.dots_extra_offset(u, (0.5, 1))
-            baca.basic_glissando(
-                u,
-                (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
-                zero_padding=True,
-            )
-            baca.interpolate_pitches(u, "Eb3", "Eb3", allow_hidden=True)
             baca.mspanners.text(
                 u[:-1],
                 "XFB =|",

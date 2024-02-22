@@ -1006,8 +1006,6 @@ number.8.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-appena-udibile
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -1033,24 +1031,26 @@ number.8.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
 
     % [Cello.Music measure 11]
+    \hide NoteHead
+    \override Accidental.stencil = ##f
+    \override NoteColumn.glissando-skip = ##t
+    \override NoteHead.no-ledgers = ##t
     \override NoteHead.X-extent = #'(0 . 0)
     \override NoteHead.transparent = ##t
-    e2.
-    - \abjad-zero-padding-glissando
-    \glissando
+    ef!2.
 
     % [Cello.Music measure 12]
-    e2..
-    - \abjad-zero-padding-glissando
-    \glissando
+    ef!2..
 
     % [Cello.Music measure 13]
-    e2.
-    - \abjad-zero-padding-glissando
-    - \tweak bound-details.right.padding 1.25
-    \glissando
+    \revert Accidental.stencil
+    \revert NoteColumn.glissando-skip
+    \revert NoteHead.no-ledgers
+    \undo \hide NoteHead
+    ef!2.
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.X-extent
     \revert NoteHead.transparent
@@ -1075,7 +1075,7 @@ number.8.Cello.Music = {
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-            ef!1 * 1/4
+            d1 * 1/4
               %! DURATION_MULTIPLIER
               %! HIDDEN
               %! NOTE

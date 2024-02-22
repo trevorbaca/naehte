@@ -1304,8 +1304,6 @@ number.2.Cello.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \pppp
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -1329,6 +1327,7 @@ number.2.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
@@ -1738,13 +1737,11 @@ number.2.Cello.Music = {
     - \tweak staff-padding 8
       %! SPANNER_START
     \startTextSpan
-    - \tweak stencil ##f
-    ~
     \repeatTie
 
     % [Cello.Music measure 18]
     \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
-    df,4
+    df,!4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -1752,8 +1749,6 @@ number.2.Cello.Music = {
     \fff
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START
@@ -1769,13 +1764,13 @@ number.2.Cello.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
+    \glissando
 
     \hide NoteHead
     \override Accidental.stencil = ##f
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
-    df,!4
+    d,4
 
     d,4
 

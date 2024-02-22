@@ -605,8 +605,6 @@ number.5.Cello.Music = {
     e,4
       %! SPANNER_STOP
     \stopTextSpan
-    - \abjad-zero-padding-glissando
-    \glissando
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -617,6 +615,7 @@ number.5.Cello.Music = {
     - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
+    \glissando
     \repeatTie
 
     \hide NoteHead
