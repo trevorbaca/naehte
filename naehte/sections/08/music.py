@@ -72,7 +72,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp> pppp<ppp",
@@ -92,7 +92,7 @@ def vc(cache):
         )
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.mspanners.text(
             o[-2:-1],
             "½ clt =|",
@@ -105,7 +105,7 @@ def vc(cache):
             o,
             "p<|mp",
         )
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.mspanners.text(
             o,
             "XFB =|",
@@ -119,14 +119,14 @@ def vc(cache):
             "ppp< p> pp< mp> p< mf>",
         )
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.override.tuplet_bracket_staff_padding(o.leaf(1), 2)
         baca.override.tuplet_bracket_staff_padding(o.leaf(3), 2.5)
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E2")
         baca.breathe(o.pleaf(-1))
         baca.finger_pressure_transition(o)
-        baca.glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.hairpin(
             o,
             "mp<|fff",
@@ -211,7 +211,7 @@ def vc(cache):
             baca.override.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
             baca.override.dots_extra_offset(u, (0.5, 1))
-            baca.glissando(
+            baca.basic_glissando(
                 u,
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), -1),
                 allow_repeats=True,

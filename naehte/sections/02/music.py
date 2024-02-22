@@ -101,8 +101,8 @@ def vc(cache):
         baca.override.note_head_transparent(o.leaves()[-3:])
         baca.override.note_head_x_extent_zero(o.leaves()[-3:])
         baca.pitches(o, "F#3 B2 G3 A2")
-        baca.glissando(o.leaves()[-4:], zero_padding=True)
-        baca.glissando(
+        baca.basic_glissando(o.leaves()[-4:], zero_padding=True)
+        baca.basic_glissando(
             baca.select.rleak(o.leaves()[-1:]),
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
@@ -134,8 +134,8 @@ def vc(cache):
             baca.override.repeat_tie_up(u)
 
         baca.pitches(o, "G#3 B3 G2 A3"),
-        baca.glissando(o.leaves()[1:-1], zero_padding=True)
-        baca.glissando(
+        baca.basic_glissando(o.leaves()[1:-1], zero_padding=True)
+        baca.basic_glissando(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
@@ -167,8 +167,8 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaf(0))
         baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.override.note_head_style_harmonic(o.leaves()[2:9])
-        baca.glissando(o.leaves()[1:9])
-        baca.glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.basic_glissando(o.leaves()[1:9])
+        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
         with baca.scope(o.leaves()[1:7]) as u:
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
@@ -241,7 +241,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaves()[:-1])
         baca.override.note_head_style_harmonic_black(o.leaf(-1))
         baca.finger_pressure_transition(o.leaves()[-2:])
-        baca.glissando(o.leaves()[:-1])
+        baca.basic_glissando(o.leaves()[:-1])
         with baca.scope(o.leaves()[:5]) as u:
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
@@ -281,7 +281,7 @@ def vc(cache):
             abjad.Tweak(r"- \tweak to-barline ##t"),
             rleak=True,
         )
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -304,7 +304,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(11, 13)) as o:
-        baca.glissando(o.rleaves(), zero_padding=True)
+        baca.basic_glissando(o.rleaves(), zero_padding=True)
         baca.mspanners.text(
             o,
             r"\baca-damp-markup =|",
@@ -332,8 +332,8 @@ def vc(cache):
             baca.repeat_tie(u)
             baca.override.repeat_tie_up(u)
         baca.pitches(o, "G#3 B3 G2 A3"),
-        baca.glissando(o.leaves()[1:-1], zero_padding=True)
-        baca.glissando(
+        baca.basic_glissando(o.leaves()[1:-1], zero_padding=True)
+        baca.basic_glissando(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
         )
@@ -355,7 +355,7 @@ def vc(cache):
             "o<|fff",
         )
         baca.pitches(o, "C5 Db2"),
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.mspanners.text(
             o[:1],
             r"\baca-damp-markup =|",
@@ -382,7 +382,7 @@ def vc(cache):
             o,
             "fff>pppp",
         ),
-        baca.glissando(
+        baca.basic_glissando(
             o.tleaves(),
             allow_repeats=True,
             hide_middle_note_heads=True,

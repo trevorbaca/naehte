@@ -76,7 +76,7 @@ def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2"),
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp< p> pp< mp> p< mf>",
@@ -172,7 +172,7 @@ def vc(cache):
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|mf",
         )
-        baca.glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
             [o],
             "RH vib. poss. -> NV",
@@ -213,7 +213,7 @@ def vc(cache):
             "p<|f",
             rleak=True,
         )
-        baca.glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves())
         baca.mspanners.text(
             o[-3:],
             "II / III mod. =|",
@@ -239,7 +239,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 1]),
             "|> p<|",
         )
-        baca.glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
             [o],
             "vib. -> NV",
@@ -301,7 +301,7 @@ def vc(cache):
             baca.override.note_head_x_extent_zero(u)
             baca.override.note_head_transparent(u)
         with baca.scope(o.rleaves()) as u:
-            baca.glissando(
+            baca.basic_glissando(
                 u,
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
                 allow_repeats=True,
