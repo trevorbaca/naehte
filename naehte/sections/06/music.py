@@ -302,7 +302,6 @@ def vc(cache):
             baca.basic_glissando(
                 u,
                 (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
-                allow_repeats=True,
                 zero_padding=True,
             )
             baca.interpolate_pitches(u, "E3", "E3", allow_hidden=True)

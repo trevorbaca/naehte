@@ -283,7 +283,6 @@ def vc(cache):
         )
         baca.basic_glissando(
             o.tleaves(),
-            allow_repeats=True,
             hide_middle_note_heads=True,
             zero_padding=True,
         ),
@@ -384,7 +383,6 @@ def vc(cache):
         ),
         baca.basic_glissando(
             o.tleaves(),
-            allow_repeats=True,
             hide_middle_note_heads=True,
             zero_padding=True,
         )

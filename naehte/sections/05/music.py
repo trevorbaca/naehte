@@ -92,7 +92,6 @@ def vc(cache):
         with baca.scope(o.rleaves()) as u:
             baca.basic_glissando(
                 u,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
                 zero_padding=True,
             )
