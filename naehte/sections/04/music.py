@@ -412,7 +412,6 @@ def vc(cache):
         with baca.scope(o.rleaves()) as u:
             baca.basic_glissando(
                 u,
-                allow_repeats=True,
                 hide_middle_note_heads=True,
                 zero_padding=True,
             )
@@ -429,7 +428,6 @@ def vc(cache):
             baca.pitch(u, "C#3")
         baca.basic_glissando(
             o.rleaves(),
-            allow_repeats=True,
             hide_middle_note_heads=True,
             zero_padding=True,
         )
