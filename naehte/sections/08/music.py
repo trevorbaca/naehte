@@ -199,7 +199,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
-        baca.flat_glissando(o, "Eb3")
+        baca.multistage_glissando(o, "Eb3")
         baca.override.dynamic_text_self_alignment_x(o.pleaf(0), -0.45)
         baca.hairpin(
             o,
