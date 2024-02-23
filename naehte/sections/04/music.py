@@ -410,7 +410,7 @@ def vc(cache):
             rleak=True,
         )
         with baca.scope(o.rleaves()) as u:
-            baca.multistage_glissando(
+            baca.glissando(
                 u,
                 "D3 C#3",
             )

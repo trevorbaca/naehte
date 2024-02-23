@@ -297,7 +297,7 @@ def vc(cache):
             r"\naehte-degrees-of-ponticello-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
-        baca.multistage_glissando(
+        baca.glissando(
             o,
             "D2",
         )

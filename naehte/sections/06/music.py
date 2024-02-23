@@ -288,7 +288,7 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[14]) as o:
-        baca.multistage_glissando(o, "E3")
+        baca.glissando(o, "E3")
         baca.hairpin(
             o,
             "ppp--!",
