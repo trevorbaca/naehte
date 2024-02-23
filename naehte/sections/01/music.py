@@ -48,6 +48,7 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.basic_glissando(
             o.leaves(),
+            do_not_untie=True,
             zero_padding=True,
         ),
         baca.override.dls_staff_padding(o, 7)
@@ -120,7 +121,7 @@ def vc(cache):
         baca.override.repeat_tie_extra_offset(o.leaf(0), (-1.5, 0))
         baca.repeat_tie(o.leaf(-1))
         baca.override.repeat_tie_extra_offset(o.leaf(-1), (-1.5, 0))
-        baca.basic_glissando(o.leaves()[1:-2])
+        baca.basic_glissando(o.leaves()[1:-2], do_not_untie=True)
         baca.finger_pressure_transition(o.leaves()[:2])
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         baca.mspanners.text(
@@ -142,7 +143,7 @@ def vc(cache):
         baca.pitch(o.leaves()[-2:], "Db4")
         baca.repeat_tie(o.leaf(0))
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
-        baca.basic_glissando(o.leaves()[:5], zero_padding=True)
+        baca.basic_glissando(o.leaves()[:5], do_not_untie=True, zero_padding=True)
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         with baca.scope(baca.select.lleak(o.leaves()[:6])) as u:
             baca.hairpin(
@@ -177,7 +178,7 @@ def vc(cache):
     with baca.scope(m.get(5, 7)) as o:
         baca.repeat_tie(o.pleaf(0))
         baca.override.repeat_tie_extra_offset(o.pleaf(0), (-1.5, 0))
-        baca.basic_glissando(o.rleaves(), zero_padding=True)
+        baca.basic_glissando(o.rleaves(), do_not_untie=True, zero_padding=True)
         with baca.scope(baca.select.lleak(o)) as u:
             baca.hairpin(
                 baca.select.lparts(u, [2, 1, 1, 1, 1]),

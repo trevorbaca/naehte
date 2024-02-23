@@ -172,7 +172,7 @@ def vc(cache):
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|mf",
         )
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
+        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]), do_not_untie=True)
         baca.mspanners.text(
             [o],
             "RH vib. poss. -> NV",
