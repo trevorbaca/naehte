@@ -844,6 +844,8 @@ number.5.Cello.Music = {
     \stopTextSpan
       %! SPANNER_STOP
     \stopTrillSpan
+    - \abjad-zero-padding-glissando
+    \glissando
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
@@ -854,8 +856,6 @@ number.5.Cello.Music = {
     - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
-    - \tweak bound-details.left.padding 0
-    \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 3/5

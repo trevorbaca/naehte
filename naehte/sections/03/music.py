@@ -89,8 +89,10 @@ def vc(cache):
             baca.select.lparts(o, [1, 1, 1, 1, 2]),
             "p > ppp <",
         ),
-        baca.pitches(o, "Eb2 B3 F2 A3 G2 F#3")
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            "Eb2 B3 F2 A3 G2 F#3",
+        )
         baca.mspanners.text(
             o[:4],
             r"\baca-circle-very-wide-markup =|",
@@ -187,9 +189,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[4]) as o:
-        baca.basic_glissando(
-            o.rleaves(),
-            hide_middle_note_heads=True,
+        baca.glissando(
+            o,
+            rleak=True,
             zero_padding=True,
         )
     with baca.scope(m[5]) as o:
@@ -208,7 +210,11 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[6]) as o:
-        baca.basic_glissando(o.tleaves(), do_not_untie=True)
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+            do_not_untie=True,
+        )
         baca.rspanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
@@ -277,8 +283,11 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.leaf(0))
         baca.override.note_head_style_harmonic_black(o.leaf(1))
         baca.override.note_head_style_harmonic(o.leaves()[2:9])
-        baca.basic_glissando(o.leaves()[1:9])
-        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.glissando(
+            o[1:],
+            do_not_hide_middle_note_heads=True,
+            rleak=True,
+        )
         with baca.scope(o.leaves()[1:7]) as u:
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
@@ -349,10 +358,16 @@ def vc(cache):
     with baca.scope(m[13]) as o:
         with baca.scope(o.leaves()[:5]) as u:
             baca.override.note_head_style_harmonic(u)
-            baca.basic_glissando(u)
+            baca.glissando(
+                u,
+                do_not_hide_middle_note_heads=True,
+            )
             baca.override.beam_positions(u, -5.5)
             baca.stem_tremolo(u, tremolo_flags=64)
-        baca.basic_glissando(o.leaves()[-6:])
+        baca.glissando(
+            o[-6:],
+            do_not_hide_middle_note_heads=True,
+        )
         with baca.scope(o[:5]) as u:
             baca.mspanners.text(
                 u,
@@ -444,7 +459,10 @@ def vc(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
         )
         baca.pitch(o, "A2"),
-        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.glissando(
+            o[-1:],
+            rleak=True,
+        )
         baca.mspanners.text(
             [o],
             "scr. poss. -> no scr.",
@@ -463,7 +481,7 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m[16]) as o:
         baca.glissando(
-            o.tleaves(),
+            o,
             do_not_allow_repeats=True,
             do_not_hide_middle_note_heads=True,
         )
@@ -485,7 +503,7 @@ def vc(cache):
             rleak=True,
         )
         baca.glissando(
-            o.tleaves(),
+            o,
             do_not_allow_repeats=True,
             do_not_hide_middle_note_heads=True,
         )
