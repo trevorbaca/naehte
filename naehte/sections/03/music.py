@@ -208,7 +208,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[6]) as o:
-        baca.basic_glissando(o.tleaves())
+        baca.basic_glissando(o.tleaves(), do_not_untie=True)
         baca.rspanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),

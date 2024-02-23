@@ -84,7 +84,7 @@ def vc(cache):
             'o< "f">',
         )
         baca.pitch(o, "C#3")
-        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]))
+        baca.basic_glissando(baca.select.rleak(o.leaves()[-1:]), do_not_untie=True)
         baca.mspanners.text(
             o,
             r"\baca-damp-markup =|",
@@ -132,7 +132,7 @@ def vc(cache):
             baca.repeat_tie(u)
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
         baca.repeat_tie(o.leaf(-1))
-        baca.basic_glissando(o.leaves()[1:-2])
+        baca.basic_glissando(o.leaves()[1:-2], do_not_untie=True)
         baca.finger_pressure_transition(o.leaves()[:2])
         baca.finger_pressure_transition(o.leaves()[-3:-1])
         baca.mspanners.text(
@@ -162,7 +162,7 @@ def vc(cache):
             allow_repeats=True,
         )
         baca.repeat_tie(o.pleaf(0))
-        baca.basic_glissando(o.leaves()[:5], zero_padding=True)
+        baca.basic_glissando(o.leaves()[:5], do_not_untie=True, zero_padding=True)
         baca.finger_pressure_transition(
             baca.select.rleak(o.leaves()[-2:]),
         )
@@ -186,7 +186,7 @@ def vc(cache):
             )
         baca.pitches(o, "C#3 C#3 E4 D3 E3", allow_repeats=True)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
-            baca.basic_glissando(u, zero_padding=True)
+            baca.basic_glissando(u, do_not_untie=True, zero_padding=True)
             baca.override.note_head_style_harmonic(u)
         baca.mspanners.text(
             baca.select.lparts(o, [1, 4]),
