@@ -462,7 +462,7 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[16]) as o:
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             do_not_allow_repeats=True,
             do_not_hide_middle_note_heads=True,
@@ -484,7 +484,7 @@ def vc(cache):
             "pppp>o!",
             rleak=True,
         )
-        baca.multistage_glissando(
+        baca.glissando(
             o.tleaves(),
             do_not_allow_repeats=True,
             do_not_hide_middle_note_heads=True,
