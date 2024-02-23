@@ -46,8 +46,9 @@ def vc(cache):
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.basic_glissando(
-            o.leaves(),
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
             do_not_untie=True,
             zero_padding=True,
         ),
