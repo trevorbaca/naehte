@@ -76,8 +76,12 @@ def vc(cache):
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_x_extent_zero(o.pleaves()[:-1])
-        baca.pitches(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
-        baca.basic_glissando(o.leaves(), zero_padding=True)
+        baca.glissando(
+            o,
+            "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
+            do_not_hide_middle_note_heads=True,
+            zero_padding=True,
+        )
         baca.mspanners.text(
             [o[-1:]],
             "RH vibr. strettiss. -> RH NV",
@@ -149,8 +153,12 @@ def vc(cache):
         with baca.scope(o.pleaf(0)) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
-        with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
-            baca.basic_glissando(u, zero_padding=True)
+        with baca.scope(baca.select.rleak(o[1:])) as u:
+            baca.glissando(
+                u,
+                do_not_hide_middle_note_heads=True,
+                zero_padding=True,
+            )
             baca.override.note_head_style_harmonic(u)
         baca.mspanners.text(
             baca.select.lparts(o, [1, 4]),
@@ -166,9 +174,10 @@ def vc(cache):
                 u,
                 "mf|>",
             )
-        baca.basic_glissando(
-            baca.select.rleak(o.leaves()[1:]),
-            abjad.Tweak(r"- \tweak bound-details.left.padding 0"),
+        baca.glissando(
+            o[-1:],
+            rleak=True,
+            zero_padding=True,
         )
         baca.rspanners.trill(
             o.leaves()[:1],
@@ -217,7 +226,11 @@ def vc(cache):
         m = cache["vc"]
     with baca.scope(m.get(8, 9)) as o:
         with baca.scope(o.leaves()) as u:
-            baca.basic_glissando(baca.select.rleak(u))
+            baca.glissando(
+                u,
+                do_not_hide_middle_note_heads=True,
+                rleak=True,
+            )
             baca.mspanners.text(
                 u,
                 r"\baca-damp-markup =|",
@@ -263,7 +276,11 @@ def vc(cache):
             r"\once \override Staff.BarLine.extra-offset = #'(1 . 0)",
         )
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
-        baca.basic_glissando(o.leaves()[-3:], zero_padding=True)
+        baca.glissando(
+            o[-3:],
+            do_not_hide_middle_note_heads=True,
+            zero_padding=True,
+        )
         with baca.scope(o.leaf(-3)) as u:
             baca.literal(
                 u,

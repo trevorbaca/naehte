@@ -772,7 +772,7 @@ number.2.Cello.Music = {
       %! SPANNER_STOP
     \stopTextSpanOne
     ]
-    - \tweak bound-details.left.padding 0
+    - \abjad-zero-padding-glissando
     \glissando
     \revert NoteHead.X-extent
     \revert NoteHead.transparent
@@ -860,7 +860,7 @@ number.2.Cello.Music = {
     \glissando
 
     g,32
-    - \tweak bound-details.left.padding 0
+    - \abjad-zero-padding-glissando
     \glissando
     \revert NoteHead.X-extent
     \revert NoteHead.transparent
@@ -1637,7 +1637,7 @@ number.2.Cello.Music = {
     \glissando
 
     g,32
-    - \tweak bound-details.left.padding 0
+    - \abjad-zero-padding-glissando
     \glissando
     \revert NoteHead.X-extent
     \revert NoteHead.transparent

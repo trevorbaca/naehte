@@ -852,8 +852,6 @@ number.7.Cello.Music = {
     - \tweak style #'trill
       %! SPANNER_START
     \startTextSpan
-    - \tweak stencil ##f
-    ~
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -886,10 +884,9 @@ number.7.Cello.Music = {
       %! SPANNER_START
     \>
     \glissando
-    \repeatTie
 
     % [Cello.Music measure 6]
-    ef,!2..
+    ds,!2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue
@@ -933,7 +930,7 @@ number.7.Cello.Music = {
     \<
 
     \once \override RepeatTie.extra-offset = #'(-1.5 . 0)
-    ef,8
+    ds,8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
     - \tweak color #blue

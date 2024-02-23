@@ -68,11 +68,14 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.pitches(o, "D2 <Db2 A2> D2")
+        baca.pitches(o, "D2 <C#2 A2> D2")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+        )
         baca.hairpin(
             baca.select.lparts(o, [1, 2]),
             "ppp> pppp<ppp",
@@ -92,7 +95,10 @@ def vc(cache):
         )
         baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.stem_tremolo(o.leaves())
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+        )
         baca.mspanners.text(
             o[-2:-1],
             "½ clt =|",
@@ -105,7 +111,7 @@ def vc(cache):
             o,
             "p<|mp",
         )
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(o)
         baca.mspanners.text(
             o,
             "XFB =|",
@@ -119,14 +125,17 @@ def vc(cache):
             "ppp< p> pp< mp> p< mf>",
         )
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+            rleak=True,
+        )
         baca.override.tuplet_bracket_staff_padding(o.leaf(1), 2)
         baca.override.tuplet_bracket_staff_padding(o.leaf(3), 2.5)
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E2")
         baca.breathe(o.pleaf(-1))
         baca.finger_pressure_transition(o)
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.hairpin(
             o,
             "mp<|fff",

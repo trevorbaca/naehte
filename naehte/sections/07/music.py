@@ -75,8 +75,10 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.pitches(o, "F5 G3 A4 B2 C4 D2"),
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            "F5 G3 A4 B2 C4 D2",
+        )
         baca.hairpin(
             baca.select.lparts(o, [1, 1, 1, 1, 1, 1]),
             "ppp< p> pp< mp> p< mf>",
@@ -165,14 +167,14 @@ def vc(cache):
             abjad.Tweak(r"- \tweak style #'trill"),
             staff_padding=5.5,
         )
+        baca.glissando(o[-1:], rleak=True)
     with baca.scope(m[6]) as o:
-        baca.pitch(o, "Eb2")
+        baca.pitch(o, "D#2")
         baca.breathe(o.pleaf(-1))
         baca.hairpin(
             baca.select.lparts(baca.select.lleak(o), [1, 2]),
             "|> ppp<|mf",
         )
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]), do_not_untie=True)
         baca.mspanners.text(
             [o],
             "RH vib. poss. -> NV",
@@ -213,7 +215,11 @@ def vc(cache):
             "p<|f",
             rleak=True,
         )
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+            rleak=True,
+        )
         baca.mspanners.text(
             o[-3:],
             "II / III mod. =|",
@@ -239,7 +245,6 @@ def vc(cache):
             baca.select.lparts(o, [1, 1]),
             "|> p<|",
         )
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
             [o],
             "vib. -> NV",

@@ -123,8 +123,12 @@ def vc(cache):
         baca.override.note_head_extra_offset(o.pleaf(0), (-1.25, 0))
         baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.override.note_head_x_extent_zero(o.pleaves()[:-1])
-        baca.pitches(o, "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2")
-        baca.basic_glissando(o.leaves(), zero_padding=True)
+        baca.glissando(
+            o,
+            "F2 A2 G2 B2 A2 C3 B2 D3 C3 E3 D3 F3 E2",
+            do_not_hide_middle_note_heads=True,
+            zero_padding=True,
+        )
         with baca.scope(o[-2:-1]) as u:
             baca.mspanners.text(
                 [u],
@@ -164,7 +168,11 @@ def vc(cache):
             o,
             "p<|f",
         )
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+            rleak=True,
+        )
         baca.mspanners.text(
             o[-3:],
             "II / III mod. =|",
@@ -178,13 +186,16 @@ def vc(cache):
         )
     with baca.scope(m[7]) as o:
         baca.pitches(o, "Gb2 Gb2 G4 Gb2", allow_repeats=True)
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.hairpin(
             baca.select.lparts(baca.select.lleak(o.rleaves()), [1, 1, 4]),
             "|> ppppp<| p|>o!",
         ),
         baca.override.accidental_extra_offset(o.leaf(-1), (-0.25, 0))
-        baca.basic_glissando(o.leaves()[-3:], zero_padding=True)
+        baca.glissando(
+            o[-3:],
+            do_not_hide_middle_note_heads=True,
+            zero_padding=True,
+        )
         baca.literal(
             o.leaf(-3),
             r"\once \override Glissando.bound-details.left.X-offset = 4",
@@ -238,7 +249,11 @@ def vc(cache):
             "p<|f",
             rleak=True,
         )
-        baca.basic_glissando(o.tleaves())
+        baca.glissando(
+            o,
+            do_not_hide_middle_note_heads=True,
+            rleak=True,
+        )
         baca.mspanners.text(
             o[-3:],
             "II / III mod. =|",
@@ -264,7 +279,6 @@ def vc(cache):
             baca.select.lparts(baca.select.rleak(o), [1, 2]),
             "|> p<|ff",
         )
-        baca.basic_glissando(baca.select.lleak(o.leaves()[:1]))
         baca.mspanners.text(
             [o],
             "vib. molto -> NV",
