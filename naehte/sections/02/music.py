@@ -154,7 +154,7 @@ def vc(cache):
             baca.select.lparts(o[:8], [1, 6]),
             "o< f|>ppp",
         )
-        baca.pitch(o.leaves()[:2], "<F3 A3>")
+        baca.pitch(o.leaves()[:2], "F3:A3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(3, 4)) as o:
@@ -210,7 +210,7 @@ def vc(cache):
             o,
             "ppp<f",
         )
-        baca.pitch(o.leaves(), "<D#3 F#3>")
+        baca.pitch(o.leaves(), "D#3:F#3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[5]) as o:
@@ -306,7 +306,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 1, 1, 1]),
             'pp<| "f"> pp<| "f">',
         )
-        baca.pitches(o, "<B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>")
+        baca.pitches(o, "B3:F#4 C4:G4 A3:E4 Bb3:F4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(11, 13)) as o:
