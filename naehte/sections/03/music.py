@@ -197,7 +197,7 @@ def vc(cache):
     with baca.scope(m[5]) as o:
         baca.finger_pressure_transition(baca.select.rleak(o.leaves()[-1:]))
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.pitch(o, "<G3 D4>")
+        baca.pitch(o, "G3:D4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[6]) as o:
@@ -206,7 +206,7 @@ def vc(cache):
             o,
             "|>p",
         )
-        baca.pitches(o, "<A2 E3> <F3 C4> <G2 D3> Ab2", allow_repeats=True)
+        baca.pitches(o, "A2:E3 F3:C4 G2:D3 Ab2", allow_repeats=True)
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[6]) as o:
@@ -268,7 +268,7 @@ def vc(cache):
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
-            baca.pitch(u, "<F3 A3>")
+            baca.pitch(u, "F3:A3")
             cache.rebuild()
             m = cache["vc"]
     with baca.scope(m.get(9, 10)) as o:
@@ -322,7 +322,7 @@ def vc(cache):
             o,
             "ppp<f",
         )
-        baca.pitch(o, "<D#3 F#3>")
+        baca.pitch(o, "D#3:F#3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[11]) as o:

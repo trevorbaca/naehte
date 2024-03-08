@@ -185,7 +185,7 @@ def vc(cache):
             alteration="P1",
         )
     with baca.scope(m[7]) as o:
-        baca.pitches(o, "<F2 Db3> <E3 C4> <B2 G3> <A3 F4> <E3 C4> <D4 Bb4>")
+        baca.pitches(o, "F2:Db3 E3:C4 B2:G3 A3:F4 E3:C4 D4:Bb4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[7]) as o:
@@ -221,7 +221,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m.get(8, 9)) as o:
-        baca.pitches(o, "<D4 Bb4> <C4 Ab4>", allow_repeats=True)
+        baca.pitches(o, "D4:Bb4 C4:Ab4", allow_repeats=True)
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m.get(8, 9)) as o:

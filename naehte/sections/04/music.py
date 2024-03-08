@@ -239,7 +239,7 @@ def vc(cache):
         )
         with baca.scope(o.leaves()[:2]) as u:
             baca.finger_pressure_transition(u)
-            baca.pitch(u, "<F3 A3>")
+            baca.pitch(u, "F3:A3")
             cache.rebuild()
             m = cache["vc"]
     with baca.scope(m.get(7, 8)) as o:
@@ -296,7 +296,7 @@ def vc(cache):
             o,
             "ppp<f",
         )
-        baca.pitch(o, "<D#3 F#3>")
+        baca.pitch(o, "D#3:F#3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[9]) as o:
@@ -460,7 +460,7 @@ def vc(cache):
         )
     with baca.scope(m[15]) as o:
         baca.pitch(o.leaf(0), "C#3")
-        baca.pitch(o.leaves()[1:], "<C#3 A3>")
+        baca.pitch(o.leaves()[1:], "C#3:A3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[15]) as o:
@@ -478,7 +478,7 @@ def vc(cache):
                 staff_padding=5.5,
             )
     with baca.scope(m[16]) as o:
-        baca.pitch(o, "<C#3 A3>")
+        baca.pitch(o, "C#3:A3")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[16]) as o:

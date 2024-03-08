@@ -93,11 +93,11 @@ def vc(cache):
         baca.espressivo(o.pleaves())
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.stem_tremolo(o.pleaves())
-        baca.pitch(o, "<B3 F#4>")
+        baca.pitch(o, "B3:F#4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[2]) as o:
-        baca.pitch(o, "<B3 F#4>")
+        baca.pitch(o, "B3:F#4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[2]) as o:
@@ -106,7 +106,7 @@ def vc(cache):
             baca.override.note_head_style_harmonic(u)
             baca.stem_tremolo(u)
     with baca.scope(m[3]) as o:
-        baca.pitch(o, "<B3 F#4>")
+        baca.pitch(o, "B3:F#4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[3]) as o:
@@ -145,7 +145,7 @@ def vc(cache):
             )
         baca.override.tuplet_bracket_padding(o, 1.75)
     with baca.scope(m[5]) as o:
-        baca.pitch(o, "<B3 F#4>")
+        baca.pitch(o, "B3:F#4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[5]) as o:
@@ -157,7 +157,7 @@ def vc(cache):
     with baca.scope(m[6]) as o:
         baca.pitches(
             o,
-            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
+            "B3:F#4 E4:B4 Ab3:Eb4 D4:A4 F3:C4 Bb3:F4 E3:B3 G3:D4",
             allow_repeats=True,
         )
         cache.rebuild()

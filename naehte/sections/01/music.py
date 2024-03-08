@@ -42,7 +42,7 @@ def vc(cache):
         baca.clef(o.leaf(0), "bass")
         baca.repeat_tie(o.leaf(-1))
         baca.override.repeat_tie_extra_offset(o.leaf(-1), (-1.5, 0))
-        baca.pitches(o, "<G3 D4> <A3 E4> <C3 G3> <E3 B3> <D3 A3> <E4 B4> Eb4")
+        baca.pitches(o, "G3:D4 A3:E4 C3:G3 E3:B3 D3:A3 E4:B4 Eb4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
@@ -214,7 +214,7 @@ def vc(cache):
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
-        baca.pitch(o, "<G3 D4>")
+        baca.pitch(o, "G3:D4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[8]) as o:

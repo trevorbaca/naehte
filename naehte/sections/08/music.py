@@ -68,7 +68,7 @@ def VC(voice, time_signatures):
 def vc(cache):
     m = cache["vc"]
     with baca.scope(m[1]) as o:
-        baca.pitches(o, "D2 <C#2 A2> D2")
+        baca.pitches(o, "D2 C#2:A2 D2")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[1]) as o:
@@ -158,7 +158,7 @@ def vc(cache):
             staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
-        baca.pitch(o, "<F3 C4>")
+        baca.pitch(o, "F3:C4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[7]) as o:
@@ -171,7 +171,7 @@ def vc(cache):
             staff_padding=12.5,
         )
     with baca.scope(m[8]) as o:
-        baca.pitch(o, "<F3 C4>")
+        baca.pitch(o, "F3:C4")
         cache.rebuild()
         m = cache["vc"]
     with baca.scope(m[8]) as o:
