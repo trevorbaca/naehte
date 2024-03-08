@@ -245,7 +245,7 @@ def vc(cache):
     with baca.scope(m.get(7, 8)) as o:
         baca.pitches(
             o.leaves()[2:8],
-            "<D3 F3> <F3 A3> <D3 F3> <F3 A3> A2 E3",
+            "D3:F3 F3:A3 D3:F3 F3:A3 A2 E3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -320,7 +320,7 @@ def vc(cache):
     with baca.scope(m[11]) as o:
         baca.pitches(
             o,
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4 Eb2 B3 F2 A3 G2 F#3",
+            "D#3:F#3 B2:D3 D3:F3 B2:D3 E4 Eb2 B3 F2 A3 G2 F#3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -386,7 +386,7 @@ def vc(cache):
     with baca.scope(m[12]) as o:
         baca.pitches(
             o,
-            "F#3 <F#3 C#4> F#3 F#3",
+            "F#3 F#3:C#4 F#3 F#3",
             allow_repeats=True,
         )
         cache.rebuild()

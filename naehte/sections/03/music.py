@@ -121,7 +121,7 @@ def vc(cache):
         )
         baca.pitches(
             o,
-            "F#3 <F#3 C#4> F#3 F#3",
+            "F#3 F#3:C#4 F#3 F#3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -176,14 +176,7 @@ def vc(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitches(
             o,
-            "<E3 B3>"
-            " <E3 B3>"
-            " <E3 B3>"
-            " <F3 C4>"
-            " <F3 C4>"
-            " <F3 C4>"
-            " <G3 D4>"
-            " <G3 D4>",
+            "E3:B3 E3:B3 E3:B3 F3:C4 F3:C4 F3:C4 G3:D4 G3:D4",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -274,7 +267,7 @@ def vc(cache):
     with baca.scope(m.get(9, 10)) as o:
         baca.pitches(
             o.leaves()[2:8],
-            "<D3 F3> <F3 A3> <D3 F3> <F3 A3> A2 E3",
+            "D3:F3 F3:A3 D3:F3 F3:A3 A2 E3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -350,7 +343,7 @@ def vc(cache):
         ),
         baca.pitches(
             o,
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4" " Eb2 B3 F2 A3 G2 F#3",
+            "D#3:F#3 B2:D3 D3:F3 B2:D3 E4 Eb2 B3 F2 A3 G2 F#3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -416,7 +409,7 @@ def vc(cache):
         )
         baca.pitches(
             o,
-            "F#3 <F#3 C#4> F#3 F#3",
+            "F#3 F#3:C#4 F#3 F#3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -471,10 +464,8 @@ def vc(cache):
     with baca.scope(m[16]) as o:
         baca.pitches(
             o,
-            " <B3 F#4> <B3 F#4> <C3 G3>"
-            " <B3 F#4> <B3 F#4> <E3 B3> <B3 F#4> <D3 A3>"
-            " <B3 F#4> <B3 F#4> <C3 G3>"
-            " <B3 F#4>",
+            " B3:F#4 B3:F#4 C3:G3 B3:F#4 B3:F#4 E3:B3 B3:F#4 D3:A3"
+            " B3:F#4 B3:F#4 C3:G3 B3:F#4",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -488,10 +479,7 @@ def vc(cache):
     with baca.scope(m[17]) as o:
         baca.pitches(
             o,
-            " <A3 E4> <A3 E4> <C3 G3>"
-            " <A3 E4> <A3 E4> <E3 B3> <A3 E4> <D3 A3>"
-            " <A3 E4> <A3 E4> <C3 G3>"
-            " <A3 E4>",
+            "A3:E4 A3:E4 C3:G3 A3:E4 A3:E4 E3:B3 A3:E4 D3:A3 A3:E4 A3:E4 C3:G3 A3:E4",
             allow_repeats=True,
         ),
         cache.rebuild()

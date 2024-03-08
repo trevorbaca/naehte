@@ -181,7 +181,7 @@ def vc(cache):
     with baca.scope(m.get(5, 7)) as o:
         baca.pitches(
             o,
-            "Db4 <B3 F#4> <C4 G4> <A3 E4> <Bb3 F4>",
+            "Db4 B3:F#4 C4:G4 A3:E4 Bb3:F4",
         )
         cache.rebuild()
         m = cache["vc"]
