@@ -237,7 +237,7 @@ def vc(cache):
     with baca.scope(m[10]) as o:
         baca.pitches(
             o,
-            "<B3 F#4> <E4 B4> <Ab3 Eb4> <D4 A4> <F3 C4>" " <Bb3 F4> <E3 B3> <G3 D4>",
+            "B3:F#4 E4:B4 Ab3:Eb4 D4:A4 F3:C4 Bb3:F4 E3:B3 G3:D4",
             allow_repeats=True,
         )
         cache.rebuild()

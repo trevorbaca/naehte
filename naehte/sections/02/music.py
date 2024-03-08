@@ -161,7 +161,7 @@ def vc(cache):
         baca.finger_pressure_transition(o.leaves()[:2])
         baca.pitches(
             o.leaves()[2:8],
-            "<D3 F3> <F3 A3> <D3 F3> <F3 A3> A2 E3",
+            "D3:F3 F3:A3 D3:F3 F3:A3 A2 E3",
             allow_repeats=True,
         )
         cache.rebuild()
@@ -238,7 +238,7 @@ def vc(cache):
         ),
         baca.pitches(
             o,
-            "<D#3 F#3> <B2 D3> <D3 F3> <B2 D3> E4 C3 D5",
+            "D#3:F#3 B2:D3 D3:F3 B2:D3 E4 C3 D5",
             allow_repeats=True,
         )
         cache.rebuild()
