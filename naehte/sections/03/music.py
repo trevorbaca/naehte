@@ -524,7 +524,7 @@ def vc(cache):
         (17, 6),
     ):
         baca.override.dls_staff_padding(m.get(measures_), padding)
-    baca.override.tuplet_bracket_down(m.leaves()[:-1])
+    baca.override.tuplet_bracket_direction_down(m.leaves()[:-1])
 
 
 @baca.build.timed("make_score")

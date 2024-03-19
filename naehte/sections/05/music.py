@@ -294,7 +294,7 @@ def vc(cache):
             )
             baca.override.note_head_transparent(u)
         baca.override.note_head_x_extent_zero(o.leaves()[-2:-1])
-        baca.override.stem_down(o.leaves()[-3:])
+        baca.override.stem_direction_down(o.leaves()[-3:])
     with baca.scope(m[12]) as o:
         baca.pitch(o, "A3")
         baca.hairpin(

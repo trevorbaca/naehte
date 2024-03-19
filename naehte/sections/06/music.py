@@ -206,7 +206,7 @@ def vc(cache):
         )
         baca.override.note_head_transparent(o.leaf(-2))
         baca.override.note_head_x_extent_zero(o.leaves()[-2:-1])
-        baca.override.stem_down(o.leaves()[-3:])
+        baca.override.stem_direction_down(o.leaves()[-3:])
         baca.override.tuplet_bracket_padding(o.leaf(-3), 1.5)
         baca.mspanners.text(
             baca.select.lparts(o, [1, 1, 2]),

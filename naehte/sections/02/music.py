@@ -89,7 +89,7 @@ def vc(cache):
     with baca.scope(m[1]) as o:
         baca.override.repeat_tie_extra_offset(o.leaves()[1:3], (-1.5, 0))
         baca.repeat_tie(o.leaves()[1:3])
-        baca.override.repeat_tie_up(o.leaves()[1:3])
+        baca.override.repeat_tie_direction_up(o.leaves()[1:3])
         baca.hairpin(
             baca.select.lparts(o, [1, 5]),
             "o< f>",
@@ -133,7 +133,7 @@ def vc(cache):
         with baca.scope(o.leaves()[1:3]) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0)),
             baca.repeat_tie(u)
-            baca.override.repeat_tie_up(u)
+            baca.override.repeat_tie_direction_up(u)
 
         baca.pitches(o, "G#3 B3 G2 A3"),
         baca.glissando(
@@ -342,7 +342,7 @@ def vc(cache):
         with baca.scope(o.leaves()[1:3]) as u:
             baca.override.repeat_tie_extra_offset(u, (-1.5, 0))
             baca.repeat_tie(u)
-            baca.override.repeat_tie_up(u)
+            baca.override.repeat_tie_direction_up(u)
         baca.pitches(o, "G#3 B3 G2 A3"),
         baca.glissando(
             o[-4:],
@@ -375,7 +375,7 @@ def vc(cache):
             lilypond_id=1,
             staff_padding=10.5,
         )
-        baca.override.tuplet_bracket_down(o),
+        baca.override.tuplet_bracket_direction_down(o),
         baca.override.tuplet_bracket_staff_padding(o, 2.5)
     with baca.scope(m[16]) as o:
         baca.pitch(o, "Db2"),
@@ -424,7 +424,7 @@ def vc(cache):
     with baca.scope(m.get(16, 19)) as o:
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(1, 15)) as o:
-        baca.override.stem_down(o.leaves()[:-1])
+        baca.override.stem_direction_down(o.leaves()[:-1])
 
 
 @baca.build.timed("make_score")
