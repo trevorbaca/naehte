@@ -239,7 +239,7 @@ def vc(cache):
     with baca.scope(m[14]) as o:
         baca.mark(o.rleaf(-1), r"\naehte-colophon-markup")
         with baca.scope(o.rleaf(-1)) as u:
-            baca.override.rehearsal_mark_down(u)
+            baca.override.rehearsal_mark_direction_down(u)
             baca.override.rehearsal_mark_padding(u, 6),
             baca.override.rehearsal_mark_self_alignment_x(u, abjad.RIGHT),
 
