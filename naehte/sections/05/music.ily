@@ -448,7 +448,7 @@ number.5.Cello.Music = {
         \set Staff.forceClef = ##t
         f,32
           %! REAPPLIED_INSTRUMENT_ALERT
-        ^ \baca-reapplied-instrument-markup "(“Cello”)"
+        %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
         [
         - \abjad-zero-padding-glissando
         \glissando

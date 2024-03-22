@@ -610,7 +610,7 @@ number.3.Cello.Music = {
       %! EXPLICIT_DYNAMIC
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
-    ^ \baca-reapplied-instrument-markup "(“Cello”)"
+    %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
