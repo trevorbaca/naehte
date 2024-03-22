@@ -676,7 +676,7 @@ number.2.Cello.Music = {
     \set Staff.forceClef = ##t
     fs!4.
       %! REAPPLIED_INSTRUMENT_ALERT
-    ^ \baca-reapplied-instrument-markup "(“Cello”)"
+    %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! SPANNER_START
     - \baca-solid-line-with-arrow
       %! SPANNER_START

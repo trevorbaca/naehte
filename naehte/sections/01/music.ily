@@ -298,7 +298,7 @@ number.1.Cello.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
           %! EXPLICIT_INSTRUMENT_ALERT
-        ^ \baca-explicit-instrument-markup "(“Cello”)"
+        %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
         [
         - \abjad-zero-padding-glissando
         \glissando
