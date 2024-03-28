@@ -230,9 +230,10 @@ def vc(cache):
                 do_not_bookend=True,
                 staff_padding=5.5,
             )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.leaves()[:1],
             alteration="m2",
+            rleak=True,
         )
     with baca.scope(m[10]) as o:
         baca.pitches(

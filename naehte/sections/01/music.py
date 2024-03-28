@@ -173,10 +173,11 @@ def vc(cache):
             "spazz. strett. =|",
             staff_padding=8,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"),
             alteration="D4",
+            rleak=True,
         )
     with baca.scope(m.get(5, 7)) as o:
         baca.pitches(
