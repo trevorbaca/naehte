@@ -152,9 +152,10 @@ def vc(cache):
                 do_not_bookend=True,
                 staff_padding=5.5,
             )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
             alteration="m2",
+            rleak=True,
         )
     with baca.scope(m[3]) as o:
         baca.breathe(o.pleaf(-1))
@@ -208,10 +209,11 @@ def vc(cache):
             do_not_hide_middle_note_heads=True,
             do_not_untie=True,
         )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.leaves()[-2:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="M2",
+            rleak=True,
         )
     with baca.scope(m.get(4, 5)) as o:
         baca.hairpin(
@@ -440,10 +442,11 @@ def vc(cache):
                 do_not_bookend=True,
                 staff_padding=5.5,
             )
-        baca.rspanners.trill(
+        baca.spanners.trill(
             o.leaves()[-1:],
             abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
             alteration="m2",
+            rleak=True,
         )
     with baca.scope(m[15]) as o:
         baca.dynamic(
