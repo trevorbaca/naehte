@@ -57,35 +57,40 @@ def vc(cache):
             o,
             "pp<|mf",
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             o[:-2],
             r"\baca-damp-markup =|",
             lilypond_id=2,
+            rleak=True,
             staff_padding=13,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             [o[-2:-1]],
             r"vib. molto -> NV",
             lilypond_id=2,
+            rleak=True,
             staff_padding=13,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             o[:-2],
             "II / III mod. =|",
             lilypond_id=1,
+            rleak=True,
             staff_padding=10.5,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.lparts(o[-2:], [1, 1]),
             "no scr. -> scr. =|",
             do_not_bookend=True,
             lilypond_id=1,
+            rleak=True,
             staff_padding=10.5,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.lparts(o, [6, 1, 1]),
             "ord. -> P -> T =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
@@ -99,14 +104,16 @@ def vc(cache):
         baca.pitch(o, "Eb4")
         baca.repeat_tie(o.leaves())
         baca.override.repeat_tie_extra_offset(o.leaves(), (-1.5, 0))
-        baca.mspanners.text(
+        baca.spanners.text(
             o[:1],
             r"\baca-circle-very-wide-markup =|",
+            rleak=True,
             staff_padding=8,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.rleak(o[-1:]),
             "spazz. larg. =|",
+            rleak=True,
             staff_padding=8,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
@@ -129,18 +136,20 @@ def vc(cache):
         )
         baca.finger_pressure_transition(o.leaves()[:2])
         baca.finger_pressure_transition(o.leaves()[-3:-1])
-        baca.mspanners.text(
+        baca.spanners.text(
             [o[1:-2]],
             "RH vib. molto -> NV",
             lilypond_id=1,
+            rleak=True,
             staff_padding=10.5,
         )
         baca.override.tuplet_bracket_staff_padding(o, 1)
     with baca.scope(m.get(3, 4)) as o:
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.lparts(o[1:-2], [7, 1, 6, 1]),
             "no scr. -> scr. -> poss. -> XFB =|",
             do_not_bookend=True,
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[4]) as o:
@@ -168,9 +177,10 @@ def vc(cache):
             )
             baca.override.dls_staff_padding(u, 7)
         baca.override.note_head_style_harmonic_black(o.leaf(-2))
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.rleak(o[-1:]),
             "spazz. strett. =|",
+            rleak=True,
             staff_padding=8,
         )
         baca.spanners.trill(
@@ -202,16 +212,18 @@ def vc(cache):
                 'p|> pp<| "f" pp<| "f"',
             ),
             baca.override.dls_staff_padding(u, 7)
-        baca.mspanners.text(
+        baca.spanners.text(
             o[1:],
             r"\baca-damp-markup =|",
             lilypond_id=1,
+            rleak=True,
             staff_padding=10.5,
         )
-        baca.mspanners.text(
+        baca.spanners.text(
             baca.select.lparts(baca.select.rleak(o[1:], count=2), [1, 1, 1, 1, 1]),
             "II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
+            rleak=True,
             staff_padding=8,
         )
     with baca.scope(m[8]) as o:
@@ -226,11 +238,12 @@ def vc(cache):
             rleak=True,
         )
         baca.override.note_head_style_harmonic(o.pleaves())
-        baca.mspanners.text(
+        baca.spanners.text(
             o,
             r"\baca-double-diamond-parenthesized-top-markup ->",
             abjad.Tweak(r"- \tweak style #'trill"),
             lilypond_id=1,
+            rleak=True,
             staff_padding=10.5,
         )
 
