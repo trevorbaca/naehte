@@ -19,8 +19,8 @@ def nonfirst_y_offset(system_number):
 
 def main():
     distances = (16,)
-    layout = baca.layout.layout(
-        baca.layout.page(
+    layout = baca.layout.Layout(
+        baca.layout.Page(
             1,
             baca.layout.System(
                 measure=1,
@@ -33,7 +33,7 @@ def main():
             baca.layout.System(17, y_offset=first_y_offset(5), distances=distances),
             baca.layout.System(20, y_offset=first_y_offset(6), distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             2,
             baca.layout.System(24, y_offset=nonfirst_y_offset(1), distances=distances),
             baca.layout.System(28, y_offset=nonfirst_y_offset(2), distances=distances),
@@ -43,7 +43,7 @@ def main():
             baca.layout.System(43, y_offset=nonfirst_y_offset(6), distances=distances),
             baca.layout.System(46, y_offset=nonfirst_y_offset(7), distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             3,
             baca.layout.System(49, y_offset=nonfirst_y_offset(1), distances=distances),
             baca.layout.System(53, y_offset=nonfirst_y_offset(2), distances=distances),
@@ -53,7 +53,7 @@ def main():
             baca.layout.System(65, y_offset=nonfirst_y_offset(6), distances=distances),
             baca.layout.System(68, y_offset=nonfirst_y_offset(7), distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             4,
             baca.layout.System(71, y_offset=nonfirst_y_offset(1), distances=distances),
             baca.layout.System(74, y_offset=nonfirst_y_offset(2), distances=distances),
@@ -63,7 +63,7 @@ def main():
             baca.layout.System(89, y_offset=nonfirst_y_offset(6), distances=distances),
             baca.layout.System(92, y_offset=nonfirst_y_offset(7), distances=distances),
         ),
-        baca.layout.page(
+        baca.layout.Page(
             5,
             baca.layout.System(96, y_offset=nonfirst_y_offset(1), distances=distances),
             baca.layout.System(
