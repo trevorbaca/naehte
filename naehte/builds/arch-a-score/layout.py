@@ -19,7 +19,7 @@ def nonfirst_y_offset(system_number):
 
 def main():
     distances = (16,)
-    spacing = baca.make_layout(
+    layout = baca.make_layout(
         baca.page(
             1,
             baca.system(
@@ -127,7 +127,7 @@ def main():
             baca.region((112, 115), (1, 24)),
         ),
     )
-    baca.section.make_layout_ly(spacing)
+    baca.section.make_layout_ly(layout)
 
 
 if __name__ == "__main__":
