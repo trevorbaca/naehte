@@ -308,7 +308,7 @@ def make_layout():
             baca.layout.Override(4, (1, 48)),
         ),
     )
-    baca.section.write_layout_ly(layout)
+    baca.build.write_layout_ly(layout)
 
 
 def main():
