@@ -577,25 +577,25 @@ def persist_score(score, environment):
 
 def make_layout():
     distances = (16,)
-    layout = baca.make_layout(
-        baca.page(
+    layout = baca.layout.layout(
+        baca.layout.page(
             1,
-            baca.system(measure=1, y_offset=30 + 0 * (35 + 16), distances=distances),
-            baca.system(measure=4, y_offset=30 + 1 * (35 + 16), distances=distances),
-            baca.system(measure=8, y_offset=30 + 2 * (35 + 16), distances=distances),
-            baca.system(measure=12, y_offset=30 + 3 * (35 + 16), distances=distances),
-            baca.system(measure=15, y_offset=30 + 4 * (35 + 16), distances=distances),
+            baca.layout.System(1, y_offset=30 + 0 * (35 + 16), distances=distances),
+            baca.layout.System(4, y_offset=30 + 1 * (35 + 16), distances=distances),
+            baca.layout.System(8, y_offset=30 + 2 * (35 + 16), distances=distances),
+            baca.layout.System(12, y_offset=30 + 3 * (35 + 16), distances=distances),
+            baca.layout.System(15, y_offset=30 + 4 * (35 + 16), distances=distances),
         ),
-        spacing=(1, 32),
-        overrides=(
-            baca.region(5, (1, 56)),
-            baca.region(6, (1, 24)),
-            baca.region(7, (1, 48)),
-            baca.region((13, 14), (1, 12)),
-            baca.region((15, 16), (1, 24)),
+        default_spacing=(1, 32),
+        spacing_overrides=(
+            baca.layout.Override(5, (1, 56)),
+            baca.layout.Override(6, (1, 24)),
+            baca.layout.Override(7, (1, 48)),
+            baca.layout.Override((13, 14), (1, 12)),
+            baca.layout.Override((15, 16), (1, 24)),
         ),
     )
-    baca.section.make_layout_ly(layout)
+    baca.section.write_layout_ly(layout)
 
 
 def main():
