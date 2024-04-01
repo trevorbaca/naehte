@@ -20,7 +20,7 @@
               %! BREAK
             \baca-lbsd #90 #'(16)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #48
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \pageBreak
             s1 * 7/8
@@ -31,7 +31,7 @@
 
             % [PageLayout measure 2]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 6/8
@@ -44,7 +44,7 @@
 
             % [PageLayout measure 3]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #768
+            \baca-new-strict-spacing-section #35 #768
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -59,7 +59,7 @@
               %! BREAK
             \baca-lbsd #156 #'(16)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #48
+            \baca-new-strict-spacing-section #1 #48
               %! BREAK
             \break
             s1 * 6/8
@@ -72,7 +72,7 @@
 
             % [PageLayout measure 5]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 5/4
@@ -85,7 +85,7 @@
 
             % [PageLayout measure 6]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #35 #768
+            \baca-new-strict-spacing-section #35 #768
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -100,7 +100,7 @@
               %! BREAK
             \baca-lbsd #222 #'(16)
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \break
             s1 * 2/4
@@ -113,7 +113,7 @@
 
             % [PageLayout measure 8]
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #32
+            \baca-new-strict-spacing-section #1 #32
               %! BREAK
             \noBreak
             s1 * 4/4
@@ -128,7 +128,7 @@
             % [anchor skip]
               %! ANCHOR_SKIP
               %! SPACING_COMMAND
-            \baca-new-spacing-section #1 #4
+            \baca-new-strict-spacing-section #1 #4
               %! ANCHOR_SKIP
             \baca-time-signature-transparent
               %! ANCHOR_SKIP
