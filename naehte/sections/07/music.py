@@ -305,7 +305,7 @@ def vc(cache):
         baca.hairpin(
             baca.select.lparts(baca.select.rleak(o), [14, 8]),
             "pppp-- pppp>o!",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
         )
         baca.markup(
             o.pleaf(0),
