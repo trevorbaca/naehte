@@ -141,7 +141,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "no scr. -> scr. poss.",
-                abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"),
+                baca.postevent.bound_details_right_padding(8.25),
                 rleak=True,
                 staff_padding=5.5,
             )
@@ -216,7 +216,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 1, 2]),
             r"XFB =| \baca-circle-markup =| spz. =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), -1),
+            (baca.postevent.bound_details_right_padding(4.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -306,7 +306,7 @@ def vc(cache):
         baca.spanners.text(
             o[-1:],
             r"\baca-circle-very-wide-markup =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"),
+            baca.postevent.bound_details_right_padding(4.25),
             lilypond_id=1,
             rleak=True,
             staff_padding=8,
@@ -326,7 +326,7 @@ def vc(cache):
             baca.spanners.text(
                 u[:-1],
                 r"\baca-circle-very-wide-markup =|",
-                abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
+                baca.postevent.bound_details_right_padding(3.25),
                 rleak=True,
                 staff_padding=5.5,
             )

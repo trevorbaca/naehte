@@ -117,7 +117,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             "XFB =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"),
+            baca.postevent.bound_details_right_padding(6.25),
             rleak=True,
             staff_padding=3,
         )
@@ -153,9 +153,9 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "no scr. -> scr. poss. =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 4.25"), 0),
+            (baca.postevent.bound_details_right_padding(4.25), 0),
             (abjad.Tweak(r"- \tweak bound-details.left.padding -3.25"), -1),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 5.25"), -1),
+            (baca.postevent.bound_details_right_padding(5.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -190,7 +190,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 1, 1]),
             r"no scr -> scr. -> no scr. -> scr. =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
+            (baca.postevent.bound_details_right_padding(3.25), -1),
             do_not_bookend=True,
             lilypond_id=1,
             rleak=True,
@@ -203,13 +203,13 @@ def vc(cache):
             r" \baca-double-diamond-parenthesized-top-markup ->"
             r" \baca-double-diamond-markup =|",
             (abjad.Tweak(r"- \tweak bound-details.left.padding -0.5"), 0),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), 0),
+            (baca.postevent.bound_details_right_padding(1.25), 0),
             (abjad.Tweak(r"- \tweak style #'trill"), 0),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 2"), 1),
+            (baca.postevent.bound_details_right_padding(2), 1),
             (abjad.Tweak(r"- \tweak bound-details.left.padding -0.5"), 2),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"), 2),
+            (baca.postevent.bound_details_right_padding(1.25), 2),
             (abjad.Tweak(r"- \tweak style #'trill"), 2),
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"), -1),
+            (baca.postevent.bound_details_right_padding(3.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -232,7 +232,7 @@ def vc(cache):
                 u[:-1],
                 "XFB =|",
                 abjad.Tweak(r"- \tweak bound-details.left.padding -2"),
-                abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
+                baca.postevent.bound_details_right_padding(3.25),
                 rleak=True,
                 staff_padding=3,
             )
