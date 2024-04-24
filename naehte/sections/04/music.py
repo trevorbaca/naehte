@@ -181,7 +181,7 @@ def vc(cache):
             baca.select.lparts(leaves, [6, 3]),
             "poss. -> XFB =|",
             (abjad.Tweak(r"- \tweak bound-details.right.padding 8.25"), -1),
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
             do_not_bookend=True,
         )
     with baca.scope(m[5]) as o:

@@ -310,7 +310,7 @@ def vc(cache):
         baca.markup(
             o.pleaf(0),
             r"\naehte-degrees-of-ponticello-markup",
-            abjad.Tweak(r"- \tweak staff-padding 8"),
+            baca.postevent.staff_padding(8),
         )
         baca.glissando(
             o,
