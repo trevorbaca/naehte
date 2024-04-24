@@ -111,7 +111,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
+            baca.postevent.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,
@@ -147,7 +147,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
+            baca.postevent.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,
@@ -207,7 +207,7 @@ def vc(cache):
         baca.spanners.text(
             [o[1:6]],
             "trem. -> larg.",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
+            baca.postevent.bound_details_right_padding(2.5),
             rleak=True,
             staff_padding=5.5,
         )
@@ -269,7 +269,7 @@ def vc(cache):
         baca.spanners.text(
             o[-2:],
             "XFB =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
+            baca.postevent.bound_details_right_padding(2.75),
             lilypond_id=2,
             rleak=True,
             staff_padding=10.5,
@@ -277,7 +277,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [5, 2]),
             "P -> T =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"), -1),
+            (baca.postevent.bound_details_right_padding(2.75), -1),
             do_not_bookend=True,
             lilypond_id=1,
             rleak=True,
@@ -286,7 +286,7 @@ def vc(cache):
         baca.spanners.text(
             [o[:4]],
             "trem. -> larg.",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            baca.postevent.bound_details_right_padding(2),
             rleak=True,
             staff_padding=5.5,
         )
@@ -306,7 +306,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             "XFB =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 3.25"),
+            baca.postevent.bound_details_right_padding(3.25),
             rleak=True,
             staff_padding=5.5,
         )
@@ -365,7 +365,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding -2"),
+            baca.postevent.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,

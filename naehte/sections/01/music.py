@@ -185,7 +185,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
-            abjad.Tweak(r"- \tweak bound-details.right.padding 1.25"),
+            baca.postevent.bound_details_right_padding(1.25),
             alteration="D4",
             rleak=True,
         )
@@ -222,7 +222,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(baca.select.rleak(o[1:], count=2), [1, 1, 1, 1, 1]),
             "II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 6.25"), -1),
+            (baca.postevent.bound_details_right_padding(6.25), -1),
             rleak=True,
             staff_padding=8,
         )
