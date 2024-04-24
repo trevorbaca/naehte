@@ -220,7 +220,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "appena-udibile--!",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
             rleak=True,
         )
         with baca.scope(o.leaves()[1:]) as u:

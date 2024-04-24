@@ -296,7 +296,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "pppp--!",
-            abjad.Tweak(r"- \tweak to-barline ##t"),
+            baca.postevent.to_bar_line_true(),
             rleak=True,
         )
         baca.glissando(
