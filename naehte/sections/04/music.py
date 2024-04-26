@@ -102,7 +102,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(leaves, [1, 2]),
             "spz. larg. -> str. =|",
-            (baca.postevent.bound_details_right_padding(1), 0),
+            (baca.tweak.bound_details_right_padding(1), 0),
             do_not_bookend=True,
             staff_padding=5.5,
         )
@@ -180,8 +180,8 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(leaves, [6, 3]),
             "poss. -> XFB =|",
-            (baca.postevent.bound_details_right_padding(8.25), -1),
-            baca.postevent.staff_padding(8),
+            (baca.tweak.bound_details_right_padding(8.25), -1),
+            baca.tweak.staff_padding(8),
             do_not_bookend=True,
         )
     with baca.scope(m[5]) as o:
@@ -223,7 +223,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             o.leaves()[:1],
-            baca.postevent.bound_details_right_padding(0.5),
+            baca.tweak.bound_details_right_padding(0.5),
             alteration="P1",
             rleak=True,
         )
@@ -268,7 +268,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "trem. -> larg.",
-                baca.postevent.bound_details_right_padding(2.5),
+                baca.tweak.bound_details_right_padding(2.5),
                 staff_padding=5.5,
             )
         baca.spanners.text(
@@ -344,7 +344,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "trem. -> larg.",
-                baca.postevent.bound_details_right_padding(2),
+                baca.tweak.bound_details_right_padding(2),
                 staff_padding=5.5,
             )
         baca.glissando(
@@ -434,7 +434,7 @@ def vc(cache):
             )
         baca.spanners.trill(
             o.leaves()[-1:],
-            baca.postevent.bound_details_right_padding(6.25),
+            baca.tweak.bound_details_right_padding(6.25),
             alteration="m2",
             rleak=True,
         )
@@ -479,7 +479,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1]),
                 "I / II larg. -> strett. -> larg.",
-                (baca.postevent.bound_details_right_padding(6.25), -1),
+                (baca.tweak.bound_details_right_padding(6.25), -1),
                 lilypond_id=1,
                 rleak=True,
                 staff_padding=9,
@@ -498,7 +498,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "trill larg. -> strett. -> larg.",
-            (baca.postevent.bound_details_right_padding(5.25), -1),
+            (baca.tweak.bound_details_right_padding(5.25), -1),
             lilypond_id=1,
             rleak=True,
             staff_padding=9,
@@ -506,7 +506,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             r"\baca-triple-diamond-parenthesized-top-markup ->",
-            baca.postevent.style_trill(),
+            baca.tweak.style_trill(),
             staff_padding=5.5,
         )
     with baca.scope(m.get(15, 16)) as o:

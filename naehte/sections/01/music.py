@@ -185,7 +185,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             baca.select.rleak(o.leaves()[-1:]),
-            baca.postevent.bound_details_right_padding(1.25),
+            baca.tweak.bound_details_right_padding(1.25),
             alteration="D4",
             rleak=True,
         )
@@ -222,7 +222,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(baca.select.rleak(o[1:], count=2), [1, 1, 1, 1, 1]),
             "II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
-            (baca.postevent.bound_details_right_padding(6.25), -1),
+            (baca.tweak.bound_details_right_padding(6.25), -1),
             rleak=True,
             staff_padding=8,
         )
@@ -241,7 +241,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             r"\baca-double-diamond-parenthesized-top-markup ->",
-            baca.postevent.style_trill(),
+            baca.tweak.style_trill(),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,

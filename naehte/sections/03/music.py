@@ -216,7 +216,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             o.leaves()[-2:],
-            baca.postevent.bound_details_right_padding(6.25),
+            baca.tweak.bound_details_right_padding(6.25),
             alteration="M2",
             rleak=True,
         )
@@ -245,7 +245,7 @@ def vc(cache):
         baca.dynamic(
             o.leaf(0),
             "pppp-sempre",
-            baca.postevent.self_alignment_x(-0.675),
+            baca.tweak.self_alignment_x(-0.675),
         )
         baca.pitch(o, "A2"),
         baca.repeat_tie(o.leaf(-1))
@@ -317,7 +317,7 @@ def vc(cache):
         baca.spanners.text(
             [o[1:6]],
             "trem. -> larg.",
-            baca.postevent.bound_details_right_padding(2.5),
+            baca.tweak.bound_details_right_padding(2.5),
             rleak=True,
             staff_padding=5.5,
         )
@@ -410,7 +410,7 @@ def vc(cache):
         baca.spanners.text(
             [o[:4]],
             "trem. -> larg.",
-            baca.postevent.bound_details_right_padding(2),
+            baca.tweak.bound_details_right_padding(2),
             rleak=True,
             staff_padding=5.5,
         )
@@ -460,7 +460,7 @@ def vc(cache):
             )
         baca.spanners.trill(
             o.leaves()[-1:],
-            baca.postevent.bound_details_right_padding(6.25),
+            baca.tweak.bound_details_right_padding(6.25),
             alteration="m2",
             rleak=True,
         )
@@ -468,7 +468,7 @@ def vc(cache):
         baca.dynamic(
             o.leaf(0),
             "pppp-sempre",
-            baca.postevent.self_alignment_x(-0.675),
+            baca.tweak.self_alignment_x(-0.675),
         )
         baca.pitch(o, "A2"),
         baca.glissando(
@@ -520,7 +520,7 @@ def vc(cache):
             baca.spanners.text(
                 u,
                 r"\baca-damp-markup =|",
-                baca.postevent.bound_details_right_padding(2.75),
+                baca.tweak.bound_details_right_padding(2.75),
                 lilypond_id=2,
                 rleak=True,
                 staff_padding=10.5,
@@ -528,7 +528,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [4, 7, 1, 4, 7, 1]),
                 "II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|",
-                (baca.postevent.bound_details_right_padding(2.75), -1),
+                (baca.tweak.bound_details_right_padding(2.75), -1),
                 do_not_bookend=True,
                 lilypond_id=1,
                 rleak=True,
