@@ -187,7 +187,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             o.leaves()[:1],
-            abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
+            baca.postevent.bound_details_right_padding(0.5),
             alteration="P1",
             rleak=True,
         )
@@ -263,7 +263,7 @@ def vc(cache):
         baca.spanners.text(
             [baca.select.lleak(o)],
             "spazz. strett. -> larg.",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 5.75"),
+            baca.postevent.bound_details_right_padding(5.75),
             rleak=True,
             staff_padding=8,
         )
@@ -277,7 +277,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1, 2]),
                 r"XFB =| \baca-circle-markup =| spz. =|",
-                (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
+                baca.postevent.bound_details_right_padding(0.5, index=1),
                 (baca.postevent.bound_details_right_padding(4.25), -1),
                 do_not_bookend=True,
                 rleak=True,
@@ -317,7 +317,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "no scr. -> scr. =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
+            baca.postevent.bound_details_right_padding(-4.25, index=-1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,

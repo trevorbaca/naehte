@@ -133,7 +133,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "RH vibr. strettiss. -> RH NV",
-                abjad.Tweak(r"- \tweak bound-details.right.padding 7.25"),
+                baca.postevent.bound_details_right_padding(7.25),
                 lilypond_id=1,
                 rleak=True,
                 staff_padding=8,
@@ -215,7 +215,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 2]),
             r"XFB =| \baca-circle-markup =| spz. =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"), 1),
+            baca.postevent.bound_details_right_padding(0.5, index=1),
             (baca.postevent.bound_details_right_padding(4.25), -1),
             do_not_bookend=True,
             rleak=True,
@@ -231,7 +231,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1]),
                 "no scr. -> scr. =|",
-                (abjad.Tweak(r"- \tweak bound-details.right.padding -4.25"), -1),
+                baca.postevent.bound_details_right_padding(-4.25, index=-1),
                 do_not_bookend=True,
                 rleak=True,
                 staff_padding=5.5,

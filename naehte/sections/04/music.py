@@ -223,7 +223,7 @@ def vc(cache):
         )
         baca.spanners.trill(
             o.leaves()[:1],
-            abjad.Tweak(r"- \tweak bound-details.right.padding 0.5"),
+            baca.postevent.bound_details_right_padding(0.5),
             alteration="P1",
             rleak=True,
         )
@@ -506,7 +506,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             r"\baca-triple-diamond-parenthesized-top-markup ->",
-            abjad.Tweak(r"- \tweak style #'trill"),
+            baca.postevent.style_trill(),
             staff_padding=5.5,
         )
     with baca.scope(m.get(15, 16)) as o:

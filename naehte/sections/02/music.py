@@ -418,7 +418,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 2, 1, 6, 3]),
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
-            (abjad.Tweak(r"- \tweak bound-details.right.padding -4.5"), -1),
+            baca.postevent.bound_details_right_padding(-4.5, index=-1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=8,
