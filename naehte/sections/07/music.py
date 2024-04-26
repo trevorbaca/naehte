@@ -169,7 +169,7 @@ def vc(cache):
         baca.spanners.text(
             o[:-1],
             r"\baca-double-diamond-parenthesized-top-markup ->",
-            baca.postevent.style_trill(),
+            baca.tweak.style_trill(),
             rleak=True,
             staff_padding=5.5,
         )
@@ -190,7 +190,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "no scr. -> scr. =|",
-            baca.postevent.bound_details_right_padding(2.75),
+            baca.tweak.bound_details_right_padding(2.75),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -271,7 +271,7 @@ def vc(cache):
         baca.spanners.text(
             o[-1:],
             r"\baca-circle-very-wide-markup =|",
-            baca.postevent.bound_details_right_padding(4.25),
+            baca.tweak.bound_details_right_padding(4.25),
             lilypond_id=1,
             rleak=True,
             staff_padding=8,
@@ -305,12 +305,12 @@ def vc(cache):
         baca.hairpin(
             baca.select.lparts(baca.select.rleak(o), [14, 8]),
             "pppp-- pppp>o!",
-            baca.postevent.to_bar_line_true(),
+            baca.tweak.to_bar_line_true(),
         )
         baca.markup(
             o.pleaf(0),
             r"\naehte-degrees-of-ponticello-markup",
-            baca.postevent.staff_padding(8),
+            baca.tweak.staff_padding(8),
         )
         baca.glissando(
             o,
@@ -320,7 +320,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 4]),
             "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
-            (baca.postevent.bound_details_right_padding(3.25), -1),
+            (baca.tweak.bound_details_right_padding(3.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=3,

@@ -117,7 +117,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             "XFB =|",
-            baca.postevent.bound_details_right_padding(6.25),
+            baca.tweak.bound_details_right_padding(6.25),
             rleak=True,
             staff_padding=3,
         )
@@ -153,9 +153,9 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "no scr. -> scr. poss. =|",
-            (baca.postevent.bound_details_right_padding(4.25), 0),
-            baca.postevent.bound_details_left_padding(-3.25, index=-1),
-            (baca.postevent.bound_details_right_padding(5.25), -1),
+            (baca.tweak.bound_details_right_padding(4.25), 0),
+            baca.tweak.bound_details_left_padding(-3.25, index=-1),
+            (baca.tweak.bound_details_right_padding(5.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -190,7 +190,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 1, 1]),
             r"no scr -> scr. -> no scr. -> scr. =|",
-            (baca.postevent.bound_details_right_padding(3.25), -1),
+            (baca.tweak.bound_details_right_padding(3.25), -1),
             do_not_bookend=True,
             lilypond_id=1,
             rleak=True,
@@ -202,14 +202,14 @@ def vc(cache):
             r" \baca-damp-markup =|"
             r" \baca-double-diamond-parenthesized-top-markup ->"
             r" \baca-double-diamond-markup =|",
-            baca.postevent.bound_details_left_padding(-0.5, index=0),
-            (baca.postevent.bound_details_right_padding(1.25), 0),
-            baca.postevent.style_trill(index=0),
-            (baca.postevent.bound_details_right_padding(2), 1),
-            baca.postevent.bound_details_left_padding(-0.5, index=2),
-            (baca.postevent.bound_details_right_padding(1.25), 2),
-            baca.postevent.style_trill(index=2),
-            (baca.postevent.bound_details_right_padding(3.25), -1),
+            baca.tweak.bound_details_left_padding(-0.5, index=0),
+            (baca.tweak.bound_details_right_padding(1.25), 0),
+            baca.tweak.style_trill(index=0),
+            (baca.tweak.bound_details_right_padding(2), 1),
+            baca.tweak.bound_details_left_padding(-0.5, index=2),
+            (baca.tweak.bound_details_right_padding(1.25), 2),
+            baca.tweak.style_trill(index=2),
+            (baca.tweak.bound_details_right_padding(3.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -220,7 +220,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "appena-udibile--!",
-            baca.postevent.to_bar_line_true(),
+            baca.tweak.to_bar_line_true(),
             rleak=True,
         )
         with baca.scope(o.leaves()[1:]) as u:
@@ -231,8 +231,8 @@ def vc(cache):
             baca.spanners.text(
                 u[:-1],
                 "XFB =|",
-                baca.postevent.bound_details_left_padding(-2),
-                baca.postevent.bound_details_right_padding(3.25),
+                baca.tweak.bound_details_left_padding(-2),
+                baca.tweak.bound_details_right_padding(3.25),
                 rleak=True,
                 staff_padding=3,
             )

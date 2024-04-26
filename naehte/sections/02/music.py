@@ -111,7 +111,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            baca.postevent.bound_details_right_padding(-2),
+            baca.tweak.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,
@@ -147,7 +147,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            baca.postevent.bound_details_right_padding(-2),
+            baca.tweak.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,
@@ -207,7 +207,7 @@ def vc(cache):
         baca.spanners.text(
             [o[1:6]],
             "trem. -> larg.",
-            baca.postevent.bound_details_right_padding(2.5),
+            baca.tweak.bound_details_right_padding(2.5),
             rleak=True,
             staff_padding=5.5,
         )
@@ -269,7 +269,7 @@ def vc(cache):
         baca.spanners.text(
             o[-2:],
             "XFB =|",
-            baca.postevent.bound_details_right_padding(2.75),
+            baca.tweak.bound_details_right_padding(2.75),
             lilypond_id=2,
             rleak=True,
             staff_padding=10.5,
@@ -277,7 +277,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [5, 2]),
             "P -> T =|",
-            (baca.postevent.bound_details_right_padding(2.75), -1),
+            (baca.tweak.bound_details_right_padding(2.75), -1),
             do_not_bookend=True,
             lilypond_id=1,
             rleak=True,
@@ -286,7 +286,7 @@ def vc(cache):
         baca.spanners.text(
             [o[:4]],
             "trem. -> larg.",
-            baca.postevent.bound_details_right_padding(2),
+            baca.tweak.bound_details_right_padding(2),
             rleak=True,
             staff_padding=5.5,
         )
@@ -296,7 +296,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "pppp--!",
-            baca.postevent.to_bar_line_true(),
+            baca.tweak.to_bar_line_true(),
             rleak=True,
         )
         baca.glissando(
@@ -306,7 +306,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             "XFB =|",
-            baca.postevent.bound_details_right_padding(3.25),
+            baca.tweak.bound_details_right_padding(3.25),
             rleak=True,
             staff_padding=5.5,
         )
@@ -365,7 +365,7 @@ def vc(cache):
         baca.spanners.text(
             o[-4:-1],
             "RH vib. =|",
-            baca.postevent.bound_details_right_padding(-2),
+            baca.tweak.bound_details_right_padding(-2),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,
@@ -418,7 +418,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 2, 1, 6, 3]),
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
-            baca.postevent.bound_details_right_padding(-4.5, index=-1),
+            baca.tweak.bound_details_right_padding(-4.5, index=-1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=8,

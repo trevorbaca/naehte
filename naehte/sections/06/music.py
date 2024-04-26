@@ -133,7 +133,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "RH vibr. strettiss. -> RH NV",
-                baca.postevent.bound_details_right_padding(7.25),
+                baca.tweak.bound_details_right_padding(7.25),
                 lilypond_id=1,
                 rleak=True,
                 staff_padding=8,
@@ -141,7 +141,7 @@ def vc(cache):
             baca.spanners.text(
                 [u],
                 "no scr. -> scr. poss.",
-                baca.postevent.bound_details_right_padding(8.25),
+                baca.tweak.bound_details_right_padding(8.25),
                 rleak=True,
                 staff_padding=5.5,
             )
@@ -215,8 +215,8 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 2]),
             r"XFB =| \baca-circle-markup =| spz. =|",
-            baca.postevent.bound_details_right_padding(0.5, index=1),
-            (baca.postevent.bound_details_right_padding(4.25), -1),
+            baca.tweak.bound_details_right_padding(0.5, index=1),
+            (baca.tweak.bound_details_right_padding(4.25), -1),
             do_not_bookend=True,
             rleak=True,
             staff_padding=5.5,
@@ -231,7 +231,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1]),
                 "no scr. -> scr. =|",
-                baca.postevent.bound_details_right_padding(-4.25, index=-1),
+                baca.tweak.bound_details_right_padding(-4.25, index=-1),
                 do_not_bookend=True,
                 rleak=True,
                 staff_padding=5.5,
@@ -306,7 +306,7 @@ def vc(cache):
         baca.spanners.text(
             o[-1:],
             r"\baca-circle-very-wide-markup =|",
-            baca.postevent.bound_details_right_padding(4.25),
+            baca.tweak.bound_details_right_padding(4.25),
             lilypond_id=1,
             rleak=True,
             staff_padding=8,
@@ -316,7 +316,7 @@ def vc(cache):
         baca.hairpin(
             o,
             "ppp--!",
-            baca.postevent.to_bar_line_true(),
+            baca.tweak.to_bar_line_true(),
             rleak=True,
         )
         with baca.scope(o.leaves()[1:]) as u:
@@ -326,7 +326,7 @@ def vc(cache):
             baca.spanners.text(
                 u[:-1],
                 r"\baca-circle-very-wide-markup =|",
-                baca.postevent.bound_details_right_padding(3.25),
+                baca.tweak.bound_details_right_padding(3.25),
                 rleak=True,
                 staff_padding=5.5,
             )
