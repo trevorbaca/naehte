@@ -241,7 +241,7 @@ def vc(cache):
         baca.spanners.text(
             o,
             r"\baca-double-diamond-parenthesized-top-markup ->",
-            abjad.Tweak(r"- \tweak style #'trill"),
+            baca.postevent.style_trill(),
             lilypond_id=1,
             rleak=True,
             staff_padding=10.5,

@@ -245,7 +245,7 @@ def vc(cache):
         baca.dynamic(
             o.leaf(0),
             "pppp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
+            baca.postevent.self_alignment_x(-0.675),
         )
         baca.pitch(o, "A2"),
         baca.repeat_tie(o.leaf(-1))
@@ -468,7 +468,7 @@ def vc(cache):
         baca.dynamic(
             o.leaf(0),
             "pppp-sempre",
-            abjad.Tweak(r"- \tweak self-alignment-X -0.675"),
+            baca.postevent.self_alignment_x(-0.675),
         )
         baca.pitch(o, "A2"),
         baca.glissando(
