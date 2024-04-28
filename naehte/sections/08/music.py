@@ -85,8 +85,8 @@ def vc(cache):
         baca.spanners.text(
             o[-2:-1],
             "I / II larg. =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[2]) as o:
         baca.pitches(o, "Db2 C2 Db2")
@@ -103,8 +103,8 @@ def vc(cache):
         baca.spanners.text(
             o[-2:-1],
             "½ clt =|",
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[3]) as o:
         baca.pitches(o, "C2 B1")
@@ -118,8 +118,8 @@ def vc(cache):
             o,
             "XFB =|",
             baca.tweak.bound_details_right_padding(6.25),
+            baca.tweak.staff_padding(3),
             rleak=True,
-            staff_padding=3,
         )
     with baca.scope(m[5]) as o:
         baca.pitches(o, "F5 G3 A4 B2 C4 D2")
@@ -147,8 +147,8 @@ def vc(cache):
         baca.spanners.text(
             [o],
             "RH vib. molto -> NV",
+            baca.tweak.staff_padding(8),
             lilypond_id=1,
-            staff_padding=8,
         )
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
@@ -156,9 +156,9 @@ def vc(cache):
             (baca.tweak.bound_details_right_padding(4.25), 0),
             baca.tweak.bound_details_left_padding(-3.25, index=-1),
             (baca.tweak.bound_details_right_padding(5.25), -1),
+            baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3:C4")
@@ -170,9 +170,9 @@ def vc(cache):
         baca.spanners.text(
             o[:-1],
             "II / III mod. =|",
+            baca.tweak.staff_padding(12.5),
             lilypond_id=2,
             rleak=True,
-            staff_padding=12.5,
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F3:C4")
@@ -182,19 +182,19 @@ def vc(cache):
         baca.spanners.text(
             o[:-1],
             "II / III mod. =|",
+            baca.tweak.staff_padding(12.5),
             lilypond_id=2,
             rleak=True,
-            staff_padding=12.5,
         )
     with baca.scope(m.get(7, 8)) as o:
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 1, 1]),
             r"no scr -> scr. -> no scr. -> scr. =|",
             (baca.tweak.bound_details_right_padding(3.25), -1),
+            baca.tweak.staff_padding(9),
             do_not_bookend=True,
             lilypond_id=1,
             rleak=True,
-            staff_padding=9,
         )
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 1, 1]),
@@ -210,9 +210,9 @@ def vc(cache):
             (baca.tweak.bound_details_right_padding(1.25), 2),
             baca.tweak.style_trill(index=2),
             (baca.tweak.bound_details_right_padding(3.25), -1),
+            baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
             rleak=True,
-            staff_padding=5.5,
         )
     with baca.scope(m.get(10, 13)) as o:
         baca.glissando(o, "Eb3")
@@ -233,8 +233,8 @@ def vc(cache):
                 "XFB =|",
                 baca.tweak.bound_details_left_padding(-2),
                 baca.tweak.bound_details_right_padding(3.25),
+                baca.tweak.staff_padding(3),
                 rleak=True,
-                staff_padding=3,
             )
     for measures_, padding in (
         ((1, 4), 6),
