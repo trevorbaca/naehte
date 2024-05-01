@@ -101,7 +101,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(leaves, [1, 2]),
             "spz. larg. -> str. =|",
-            (baca.tweak.bound_details_right_padding(1), 0),
+            baca.tweak.bound_details_right_padding(1, index=0),
             baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
         )
@@ -179,7 +179,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(leaves, [6, 3]),
             "poss. -> XFB =|",
-            (baca.tweak.bound_details_right_padding(8.25), -1),
+            baca.tweak.bound_details_right_padding(8.25, index=-1),
             baca.tweak.staff_padding(8),
             do_not_bookend=True,
         )
@@ -478,7 +478,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1]),
                 "I / II larg. -> strett. -> larg.",
-                (baca.tweak.bound_details_right_padding(6.25), -1),
+                baca.tweak.bound_details_right_padding(6.25, index=-1),
                 baca.tweak.staff_padding(9),
                 lilypond_id=1,
                 rleak=True,
@@ -497,7 +497,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1]),
             "trill larg. -> strett. -> larg.",
-            (baca.tweak.bound_details_right_padding(5.25), -1),
+            baca.tweak.bound_details_right_padding(5.25, index=-1),
             baca.tweak.staff_padding(9),
             lilypond_id=1,
             rleak=True,

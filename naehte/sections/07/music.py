@@ -320,7 +320,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 4]),
             "0 -> 2 -> 1 -> 3 -> 2 -> 4 -> 3 -> DZ -> 4 -> OB -> DZ -> OB =|",
-            (baca.tweak.bound_details_right_padding(3.25), -1),
+            baca.tweak.bound_details_right_padding(3.25, index=-1),
             baca.tweak.staff_padding(3),
             do_not_bookend=True,
             rleak=True,

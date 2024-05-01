@@ -221,7 +221,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(baca.select.rleak(o[1:], count=2), [1, 1, 1, 1, 1]),
             "II / III largo -> strett. =| largo -> strett. =| largo -> strett.",
-            (baca.tweak.bound_details_right_padding(6.25), -1),
+            baca.tweak.bound_details_right_padding(6.25, index=-1),
             baca.tweak.staff_padding(8),
             rleak=True,
         )

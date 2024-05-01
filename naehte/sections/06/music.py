@@ -216,7 +216,7 @@ def vc(cache):
             baca.select.lparts(o, [1, 1, 2]),
             r"XFB =| \baca-circle-markup =| spz. =|",
             baca.tweak.bound_details_right_padding(0.5, index=1),
-            (baca.tweak.bound_details_right_padding(4.25), -1),
+            baca.tweak.bound_details_right_padding(4.25, index=-1),
             baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
             rleak=True,
