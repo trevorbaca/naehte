@@ -277,7 +277,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [5, 2]),
             "P -> T =|",
-            baca.tweak.bound_details_right_padding(2.75, index=-1),
+            baca.tweak.bound_details_right_padding(2.75, i=-1),
             baca.tweak.staff_padding(8),
             do_not_bookend=True,
             lilypond_id=1,
@@ -418,7 +418,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 2, 1, 6, 3]),
             "no scr. -> scr. poss. -> 1-2 clicks / sec. -> scr. poss. -> XFB =|",
-            baca.tweak.bound_details_right_padding(-4.5, index=-1),
+            baca.tweak.bound_details_right_padding(-4.5, i=-1),
             baca.tweak.staff_padding(8),
             do_not_bookend=True,
             rleak=True,
