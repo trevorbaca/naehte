@@ -277,7 +277,7 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [5, 2]),
             "P -> T =|",
-            (baca.tweak.bound_details_right_padding(2.75), -1),
+            baca.tweak.bound_details_right_padding(2.75, index=-1),
             baca.tweak.staff_padding(8),
             do_not_bookend=True,
             lilypond_id=1,
