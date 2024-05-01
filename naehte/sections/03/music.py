@@ -527,7 +527,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [4, 7, 1, 4, 7, 1]),
                 "II / III mod. -> strett. -> mod. -> strett. -> mod. -> strett. =|",
-                baca.tweak.bound_details_right_padding(2.75, index=-1),
+                baca.tweak.bound_details_right_padding(2.75, i=-1),
                 baca.tweak.staff_padding(8),
                 do_not_bookend=True,
                 lilypond_id=1,

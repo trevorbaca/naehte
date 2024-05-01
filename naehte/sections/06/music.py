@@ -215,8 +215,8 @@ def vc(cache):
         baca.spanners.text(
             baca.select.lparts(o, [1, 1, 2]),
             r"XFB =| \baca-circle-markup =| spz. =|",
-            baca.tweak.bound_details_right_padding(0.5, index=1),
-            baca.tweak.bound_details_right_padding(4.25, index=-1),
+            baca.tweak.bound_details_right_padding(0.5, i=1),
+            baca.tweak.bound_details_right_padding(4.25, i=-1),
             baca.tweak.staff_padding(5.5),
             do_not_bookend=True,
             rleak=True,
@@ -231,7 +231,7 @@ def vc(cache):
             baca.spanners.text(
                 baca.select.lparts(u, [1, 1]),
                 "no scr. -> scr. =|",
-                baca.tweak.bound_details_right_padding(-4.25, index=-1),
+                baca.tweak.bound_details_right_padding(-4.25, i=-1),
                 baca.tweak.staff_padding(5.5),
                 do_not_bookend=True,
                 rleak=True,
