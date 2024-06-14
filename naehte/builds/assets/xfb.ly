@@ -1,11 +1,11 @@
-\version "2.19.82"
+\version "2.25.13"
 \include "../../stylesheet.ily"
 
 
 \new Staff {
     \override Staff.Clef.stencil = ##f
     \override Staff.TimeSignature.stencil = ##f
-    \set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
+    \set Score.proportionalNotationDuration = \musicLength 16
 
     s2.
     - \abjad-dashed-line-with-hook

@@ -1,4 +1,4 @@
-\version "2.19.82"
+\version "2.25.13"
 \include "../../markups.ily"
 \include "stylesheet.ily"
 
@@ -10,7 +10,7 @@
     \override Staff.TimeSignature.stencil = ##f
     \override TupletBracket.staff-padding = #1.5
     \override TupletNumber.text = #tuplet-number::calc-fraction-text
-    \set Score.proportionalNotationDuration = #(ly:make-moment 1 16)
+    \set Score.proportionalNotationDuration = \musicLength 16
     \set tupletFullLength = ##t
 
     \once \override NoteHead.style = #'harmonic
