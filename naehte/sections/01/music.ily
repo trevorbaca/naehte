@@ -271,7 +271,7 @@ number.1.Rests = {
 number.1.Cello.Music = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/9
+    \tuplet 9/7
     {
 
         % [Cello.Music measure 1]
@@ -363,7 +363,7 @@ number.1.Cello.Music = {
         \glissando
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4
+        \tuplet 4/3
         {
 
             ef'!4.
@@ -446,7 +446,7 @@ number.1.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 2]
@@ -515,7 +515,7 @@ number.1.Cello.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         \override NoteHead.style = #'harmonic
@@ -588,7 +588,7 @@ number.1.Cello.Music = {
 
     }
 
-    \times 2/3
+    \tuplet 3/2
     {
 
         df'!4
@@ -649,10 +649,10 @@ number.1.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11
+    \tuplet 11/6
     {
 
-        \times 4/5
+        \tuplet 5/4
         {
 
             % [Cello.Music measure 4]
@@ -715,7 +715,7 @@ number.1.Cello.Music = {
         \revert DynamicLineSpanner.staff-padding
 
         \tweak text #tuplet-number::calc-fraction-text
-        \times 3/4
+        \tuplet 4/3
         {
 
             \once \override NoteHead.style = #'harmonic-black
@@ -813,7 +813,7 @@ number.1.Cello.Music = {
       %! SPANNER_START
     \<
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 6]

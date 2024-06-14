@@ -648,7 +648,7 @@ number.3.Cello.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         \once \override TupletBracket.staff-padding = 3.25
@@ -682,7 +682,7 @@ number.3.Cello.Music = {
         \<
         \glissando
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             \once \override TupletBracket.staff-padding = 2
@@ -939,7 +939,7 @@ number.3.Cello.Music = {
     <g d'>4
     \revert NoteHead.style
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 5]
@@ -974,7 +974,7 @@ number.3.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         % [Cello.Music measure 6]
@@ -1092,7 +1092,7 @@ number.3.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 9]
@@ -1131,7 +1131,7 @@ number.3.Cello.Music = {
           %! SPANNER_START
         \<
 
-        \times 4/6
+        \tuplet 6/4
         {
 
             \once \override NoteHead.style = #'harmonic-black
@@ -1321,7 +1321,7 @@ number.3.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 13]
@@ -1441,7 +1441,7 @@ number.3.Cello.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         \once \override TupletBracket.staff-padding = 3.25
@@ -1475,7 +1475,7 @@ number.3.Cello.Music = {
         \<
         \glissando
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             \once \override TupletBracket.staff-padding = 2
@@ -1648,7 +1648,7 @@ number.3.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/8
+    \tuplet 8/7
     {
 
         % [Cello.Music measure 16]
@@ -1733,7 +1733,7 @@ number.3.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/8
+    \tuplet 8/7
     {
 
         % [Cello.Music measure 17]

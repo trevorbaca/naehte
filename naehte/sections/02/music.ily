@@ -877,7 +877,7 @@ number.2.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 3]
@@ -916,7 +916,7 @@ number.2.Cello.Music = {
           %! SPANNER_START
         \<
 
-        \times 4/6
+        \tuplet 6/4
         {
 
             \once \override NoteHead.style = #'harmonic-black
@@ -1108,7 +1108,7 @@ number.2.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 7]
@@ -1455,7 +1455,7 @@ number.2.Cello.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 12]

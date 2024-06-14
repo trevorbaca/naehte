@@ -647,7 +647,7 @@ number.8.Cello.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         \once \override TupletBracket.staff-padding = 2
@@ -681,7 +681,7 @@ number.8.Cello.Music = {
         \<
         \glissando
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             \once \override TupletBracket.staff-padding = 2.5
@@ -809,7 +809,7 @@ number.8.Cello.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 7]
@@ -883,7 +883,7 @@ number.8.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 8]

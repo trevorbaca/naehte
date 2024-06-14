@@ -432,7 +432,7 @@ number.5.Rests = {
 
 number.5.Cello.Music = {
 
-    \times 2/3
+    \tuplet 3/2
     {
 
         % [Cello.Music measure 1]
@@ -860,7 +860,7 @@ number.5.Cello.Music = {
     \startTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5
+    \tuplet 5/3
     {
 
         % [Cello.Music measure 7]
@@ -1030,7 +1030,7 @@ number.5.Cello.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         % [Cello.Music measure 10]
@@ -1064,7 +1064,7 @@ number.5.Cello.Music = {
           %! SPANNER_START
         \<
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             \once \override Glissando.bound-details.left.X-offset = 4
@@ -1177,7 +1177,7 @@ number.5.Cello.Music = {
 
     >>
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 12]
