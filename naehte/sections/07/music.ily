@@ -537,7 +537,7 @@ number.7.Cello.Music = {
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         g4
@@ -570,7 +570,7 @@ number.7.Cello.Music = {
         \<
         \glissando
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             b,4
@@ -984,7 +984,7 @@ number.7.Cello.Music = {
     :32
     - \espressivo
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         <b fs'!>8
@@ -1018,10 +1018,10 @@ number.7.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
-        \times 4/5
+        \tuplet 5/4
         {
 
             % [Cello.Music measure 8]
@@ -1203,7 +1203,7 @@ number.7.Cello.Music = {
     \revert RepeatTie.extra-offset
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 7/6
+    \tuplet 6/7
     {
 
         % [Cello.Music measure 11]

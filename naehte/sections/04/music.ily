@@ -621,7 +621,7 @@ number.4.Cello.Music = {
     \revert RepeatTie.extra-offset
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 2]
@@ -673,7 +673,7 @@ number.4.Cello.Music = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         \override NoteHead.style = #'harmonic
@@ -746,7 +746,7 @@ number.4.Cello.Music = {
 
     }
 
-    \times 2/3
+    \tuplet 3/2
     {
 
         d'4
@@ -804,10 +804,10 @@ number.4.Cello.Music = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11
+    \tuplet 11/6
     {
 
-        \times 4/5
+        \tuplet 5/4
         {
 
             % [Cello.Music measure 4]
@@ -1028,7 +1028,7 @@ number.4.Cello.Music = {
     \startTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7
+    \tuplet 7/6
     {
 
         % [Cello.Music measure 7]
@@ -1071,7 +1071,7 @@ number.4.Cello.Music = {
           %! SPANNER_START
         \<
 
-        \times 4/6
+        \tuplet 6/4
         {
 
             \once \override NoteHead.style = #'harmonic-black
@@ -1261,7 +1261,7 @@ number.4.Cello.Music = {
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
-    \times 4/5
+    \tuplet 5/4
     {
 
         % [Cello.Music measure 11]
@@ -1380,7 +1380,7 @@ number.4.Cello.Music = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4
+    \tuplet 4/3
     {
 
         \once \override TupletBracket.staff-padding = 3.25
@@ -1414,7 +1414,7 @@ number.4.Cello.Music = {
         \<
         \glissando
 
-        \times 2/3
+        \tuplet 3/2
         {
 
             \once \override TupletBracket.staff-padding = 2
