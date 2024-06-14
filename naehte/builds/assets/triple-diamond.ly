@@ -13,7 +13,7 @@
     \set Score.proportionalNotationDuration = \musicLength 16
     \set tupletFullLength = ##t
 
-    \times 4/5 {
+    \tuplet 5/4 {
 
         %c''4
         s4
