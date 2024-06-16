@@ -1,3 +1,4 @@
+\version "2.25.13"
 #(set-default-paper-size "arch a")
 #(set-global-staff-size 12)
 
@@ -132,6 +133,7 @@
     % prevents LilyPond cyclic chain in pure-Y-offset callbacks warning:
     \consists Staff_collecting_engraver
     \accepts GlobalSkips
+    \defaultchild GlobalSkips
     \accepts GlobalRests
     \accepts PageLayout
 
