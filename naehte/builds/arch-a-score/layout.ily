@@ -1,4 +1,3 @@
-\version "2.25.13"
 % page_count = 5
 % measure_count = 116
 % time_signatures = [
