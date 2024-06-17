@@ -382,7 +382,7 @@ def persist_score(score, environment):
     )
 
 
-def make_layout():
+def make_layout(environment):
     distances = (16,)
     breaks = baca.layout.Breaks(
         baca.layout.Page(
@@ -404,7 +404,12 @@ def make_layout():
             baca.layout.Override(14, (1, 24)),
         ),
     )
-    baca.build.write_layout_ily(breaks, spacing)
+    baca.build.write_layout_ily(
+        breaks,
+        environment.metadata["time_signatures"],
+        spacing,
+        first_measure_number=environment.first_measure_number,
+    )
 
 
 def main():
@@ -417,7 +422,7 @@ def main():
         )
         persist_score(score, environment)
     if environment.arguments.layout:
-        make_layout()
+        make_layout(environment)
 
 
 if __name__ == "__main__":
