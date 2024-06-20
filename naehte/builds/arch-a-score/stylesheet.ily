@@ -6,9 +6,9 @@
 \paper
 {
   top-markup-spacing = #'(
-      (basic-distance . 0)
-      (minimum-distance . 10)
-      (padding . 0)
-      (stretchability . 0)
-      )
+    (basic-distance . 0)
+    (minimum-distance . 10)
+    (padding . 0)
+    (stretchability . 0)
+    )
 }
