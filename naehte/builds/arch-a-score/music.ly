@@ -13,7 +13,6 @@
 \include "_sections/07.ily"
 \include "_sections/08.ily"
 
-
 \score
 {
   <<
