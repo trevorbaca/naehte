@@ -3,1274 +3,352 @@
 PageLayout = {
 
     % [PageLayout measure 1]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 7/8
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 2]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 3]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 4]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 5]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #16
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/16]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 6]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 7]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #8
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/8]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 8]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #288
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 9]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #56
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/56]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 10]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #56
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/56]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 11]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #1152
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 12]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 13]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 14]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 15]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 16]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 17]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 10/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 18]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 19]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 20]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 21]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 22]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #56
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/56]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 23]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 7/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 24]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #14
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/14]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 25]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #14
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/14]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 26]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #14
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/14]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 27]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #336
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/14 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 28]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 29]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 30]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 31]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #12
     s1 * 8/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 32]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #16
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/16]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 33]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 34]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 35]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #288
     s1 * 8/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 36]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 37]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 38]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 39]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 40]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #40
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/40]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 41]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 42]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #576
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 43]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 7/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 44]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 7/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 45]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 46]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 47]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 48]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 49]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 50]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #56
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/56]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 51]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 52]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #1152
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 53]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 54]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 2/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 55]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 56]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 57]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 58]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #12
     s1 * 9/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/12]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 59]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #288
     s1 * 10/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 60]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 8/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 61]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #576
     s1 * 8/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 62]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 63]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #8
     s1 * 8/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/8]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 64]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #288
     s1 * 10/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 65]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 66]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #64
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/64]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 67]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #1152
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 68]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 7/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 69]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 70]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 4/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 71]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 72]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 73]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 4/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 74]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 75]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 76]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #672
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/28 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 77]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 78]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 79]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #576
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 80]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 81]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 82]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 83]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #576
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 84]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 85]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 86]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 87]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 11/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 88]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 89]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 90]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 91]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #1152
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 92]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 93]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #48
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/48]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 94]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 95]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #768
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 96]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 6/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 97]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 3/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 98]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 99]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #384
     s1 * 7/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/16 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 100]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #20
     s1 * 10/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/20]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 101]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #20
     s1 * 11/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/20]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 102]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 103]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 9/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 104]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #576
     s1 * 9/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 105]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 5/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 106]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 107]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #32
     s1 * 4/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/32]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 108]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #20
     s1 * 5/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/20]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 109]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #864
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[[1/36 * 35/24]]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 110]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #36
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/36]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 111]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #4
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/4]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 112]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 113]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 114]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 7/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 115]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #1 #24
     s1 * 6/8
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
-      %! SPACING
-    %@% - \baca-start-spm-left-only "[1/24]"
-      %! SPACING
-    %@% \bacaStartTextSpanSPM
 
     % [PageLayout measure 116]
-      %! SPACING_COMMAND
-    \baca-new-strict-spacing-section #35 #96
     s1 * 1/4
-      %! SPACING
-    %@% \bacaStopTextSpanSPM
 
 }
 
@@ -1777,6 +855,1634 @@ Breaks = {
 }
 
 
+SpacingCommands = {
+
+    % [SpacingCommands measure 1]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 7/8
+
+    % [SpacingCommands measure 2]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 6/8
+
+    % [SpacingCommands measure 3]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 5/4
+
+    % [SpacingCommands measure 4]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 6/8
+
+    % [SpacingCommands measure 5]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #16
+    s1 * 5/4
+
+    % [SpacingCommands measure 6]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 7]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #8
+    s1 * 2/4
+
+    % [SpacingCommands measure 8]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #288
+    s1 * 4/4
+
+    % [SpacingCommands measure 9]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #56
+    s1 * 5/8
+
+    % [SpacingCommands measure 10]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #56
+    s1 * 5/8
+
+    % [SpacingCommands measure 11]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #1152
+    s1 * 3/4
+
+    % [SpacingCommands measure 12]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 13]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 2/4
+
+    % [SpacingCommands measure 14]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 15]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 5/4
+
+    % [SpacingCommands measure 16]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+    % [SpacingCommands measure 17]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 10/4
+
+    % [SpacingCommands measure 18]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 19]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 4/4
+
+    % [SpacingCommands measure 20]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 21]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 2/4
+
+    % [SpacingCommands measure 22]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #56
+    s1 * 5/8
+
+    % [SpacingCommands measure 23]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 7/8
+
+    % [SpacingCommands measure 24]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #14
+    s1 * 4/4
+
+    % [SpacingCommands measure 25]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #14
+    s1 * 6/4
+
+    % [SpacingCommands measure 26]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #14
+    s1 * 6/4
+
+    % [SpacingCommands measure 27]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #336
+    s1 * 4/4
+
+    % [SpacingCommands measure 28]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/4
+
+    % [SpacingCommands measure 29]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 30]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 3/8
+
+    % [SpacingCommands measure 31]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #12
+    s1 * 8/4
+
+    % [SpacingCommands measure 32]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #16
+    s1 * 4/4
+
+    % [SpacingCommands measure 33]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/8
+
+    % [SpacingCommands measure 34]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 35]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #288
+    s1 * 8/4
+
+    % [SpacingCommands measure 36]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/4
+
+    % [SpacingCommands measure 37]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/4
+
+    % [SpacingCommands measure 38]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 2/4
+
+    % [SpacingCommands measure 39]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+    % [SpacingCommands measure 40]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #40
+    s1 * 6/4
+
+    % [SpacingCommands measure 41]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 42]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #576
+    s1 * 2/4
+
+    % [SpacingCommands measure 43]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 7/4
+
+    % [SpacingCommands measure 44]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 7/4
+
+    % [SpacingCommands measure 45]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+    % [SpacingCommands measure 46]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/8
+
+    % [SpacingCommands measure 47]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 6/8
+
+    % [SpacingCommands measure 48]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 5/4
+
+    % [SpacingCommands measure 49]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 6/8
+
+    % [SpacingCommands measure 50]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #56
+    s1 * 5/8
+
+    % [SpacingCommands measure 51]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 5/8
+
+    % [SpacingCommands measure 52]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #1152
+    s1 * 3/4
+
+    % [SpacingCommands measure 53]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 3/4
+
+    % [SpacingCommands measure 54]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 2/4
+
+    % [SpacingCommands measure 55]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 56]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 6/4
+
+    % [SpacingCommands measure 57]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 58]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #12
+    s1 * 9/4
+
+    % [SpacingCommands measure 59]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #288
+    s1 * 10/4
+
+    % [SpacingCommands measure 60]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 8/4
+
+    % [SpacingCommands measure 61]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #576
+    s1 * 8/4
+
+    % [SpacingCommands measure 62]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 5/4
+
+    % [SpacingCommands measure 63]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #8
+    s1 * 8/4
+
+    % [SpacingCommands measure 64]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #288
+    s1 * 10/4
+
+    % [SpacingCommands measure 65]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 5/8
+
+    % [SpacingCommands measure 66]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #64
+    s1 * 5/8
+
+    % [SpacingCommands measure 67]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #1152
+    s1 * 5/8
+
+    % [SpacingCommands measure 68]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 7/4
+
+    % [SpacingCommands measure 69]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/8
+
+    % [SpacingCommands measure 70]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 4/8
+
+    % [SpacingCommands measure 71]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/4
+
+    % [SpacingCommands measure 72]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 73]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 4/8
+
+    % [SpacingCommands measure 74]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 75]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 76]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #672
+    s1 * 4/4
+
+    % [SpacingCommands measure 77]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/4
+
+    % [SpacingCommands measure 78]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 79]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #576
+    s1 * 6/4
+
+    % [SpacingCommands measure 80]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/4
+
+    % [SpacingCommands measure 81]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 82]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/8
+
+    % [SpacingCommands measure 83]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #576
+    s1 * 6/4
+
+    % [SpacingCommands measure 84]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/8
+
+    % [SpacingCommands measure 85]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/8
+
+    % [SpacingCommands measure 86]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 87]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 11/4
+
+    % [SpacingCommands measure 88]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+    % [SpacingCommands measure 89]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 90]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/4
+
+    % [SpacingCommands measure 91]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #1152
+    s1 * 3/8
+
+    % [SpacingCommands measure 92]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/8
+
+    % [SpacingCommands measure 93]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #48
+    s1 * 3/8
+
+    % [SpacingCommands measure 94]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 95]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #768
+    s1 * 4/4
+
+    % [SpacingCommands measure 96]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 6/4
+
+    % [SpacingCommands measure 97]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 3/8
+
+    % [SpacingCommands measure 98]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/8
+
+    % [SpacingCommands measure 99]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #384
+    s1 * 7/4
+
+    % [SpacingCommands measure 100]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #20
+    s1 * 10/4
+
+    % [SpacingCommands measure 101]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #20
+    s1 * 11/4
+
+    % [SpacingCommands measure 102]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+    % [SpacingCommands measure 103]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 9/4
+
+    % [SpacingCommands measure 104]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #576
+    s1 * 9/4
+
+    % [SpacingCommands measure 105]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 5/8
+
+    % [SpacingCommands measure 106]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 107]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #32
+    s1 * 4/4
+
+    % [SpacingCommands measure 108]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #20
+    s1 * 5/4
+
+    % [SpacingCommands measure 109]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #864
+    s1 * 6/8
+
+    % [SpacingCommands measure 110]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #36
+    s1 * 6/8
+
+    % [SpacingCommands measure 111]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #4
+    s1 * 1/4
+
+    % [SpacingCommands measure 112]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 6/8
+
+    % [SpacingCommands measure 113]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 6/8
+
+    % [SpacingCommands measure 114]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 7/8
+
+    % [SpacingCommands measure 115]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #1 #24
+    s1 * 6/8
+
+    % [SpacingCommands measure 116]
+      %! SPACING_COMMAND
+    \baca-new-strict-spacing-section #35 #96
+    s1 * 1/4
+
+}
+
+
+SpacingAnnotations = {
+
+    % [SpacingAnnotations measure 1]
+    s1 * 7/8
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 2]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 3]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 4]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 5]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/16]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 6]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 7]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/8]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 8]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 9]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/56]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 10]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/56]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 11]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 12]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 13]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 14]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 15]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 16]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 17]
+    s1 * 10/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 18]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 19]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 20]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 21]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 22]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/56]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 23]
+    s1 * 7/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 24]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/14]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 25]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/14]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 26]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/14]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 27]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/14 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 28]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 29]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 30]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 31]
+    s1 * 8/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/12]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 32]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/16]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 33]
+    s1 * 4/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 34]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 35]
+    s1 * 8/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 36]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 37]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 38]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 39]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 40]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/40]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 41]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 42]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 43]
+    s1 * 7/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 44]
+    s1 * 7/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 45]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 46]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 47]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 48]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 49]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 50]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/56]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 51]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 52]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 53]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 54]
+    s1 * 2/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 55]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 56]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 57]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 58]
+    s1 * 9/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/12]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 59]
+    s1 * 10/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 60]
+    s1 * 8/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 61]
+    s1 * 8/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 62]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 63]
+    s1 * 8/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/8]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 64]
+    s1 * 10/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/12 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 65]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 66]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/64]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 67]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 68]
+    s1 * 7/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 69]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 70]
+    s1 * 4/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 71]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 72]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 73]
+    s1 * 4/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 74]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 75]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 76]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/28 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 77]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 78]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 79]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 80]
+    s1 * 3/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 81]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 82]
+    s1 * 4/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 83]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 84]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 85]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 86]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 87]
+    s1 * 11/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 88]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 89]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 90]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 91]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/48 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 92]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 93]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/48]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 94]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 95]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/32 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 96]
+    s1 * 6/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 97]
+    s1 * 3/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 98]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 99]
+    s1 * 7/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/16 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 100]
+    s1 * 10/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/20]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 101]
+    s1 * 11/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/20]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 102]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 103]
+    s1 * 9/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 104]
+    s1 * 9/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/24 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 105]
+    s1 * 5/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 106]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 107]
+    s1 * 4/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/32]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 108]
+    s1 * 5/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/20]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 109]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[[1/36 * 35/24]]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 110]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/36]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 111]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/4]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 112]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 113]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 114]
+    s1 * 7/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 115]
+    s1 * 6/8
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+      %! SPACING
+    %@% - \baca-start-spm-left-only "[1/24]"
+      %! SPACING
+    %@% \bacaStartTextSpanSPM
+
+    % [SpacingAnnotations measure 116]
+    s1 * 1/4
+      %! SPACING
+    %@% \bacaStopTextSpanSPM
+
+}
+
+
 page-layout-score = \context Score = "Score"
 <<
 
@@ -1788,6 +2494,12 @@ page-layout-score = \context Score = "Score"
 
         \context GlobalSkips = "Breaks"
         { \Breaks }
+
+        \context GlobalSkips = "SpacingCommands"
+        { \SpacingCommands }
+
+        \context GlobalSkips = "SpacingAnnotations"
+        { \SpacingAnnotations }
 
     >>
 
