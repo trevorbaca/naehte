@@ -1278,648 +1278,499 @@ PageLayout = {
 Breaks = {
 
     % [Breaks measure 1]
-      %! BREAK
     \autoPageBreaksOff
-      %! BREAK
     \baca-lbsd #68 #'(18 16)
-      %! BREAK
     \pageBreak
     s1 * 7/8
 
     % [Breaks measure 2]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 3]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 4]
-      %! BREAK
     \baca-lbsd #106 #'(16)
-      %! BREAK
     \break
     s1 * 6/8
 
     % [Breaks measure 5]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 6]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 7]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 8]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 9]
-      %! BREAK
     \baca-lbsd #142 #'(16)
-      %! BREAK
     \break
     s1 * 5/8
 
     % [Breaks measure 10]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 11]
-      %! BREAK
     \noBreak
     s1 * 3/4
 
     % [Breaks measure 12]
-      %! BREAK
     \baca-lbsd #178 #'(16)
-      %! BREAK
     \break
     s1 * 3/4
 
     % [Breaks measure 13]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 14]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 15]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 16]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 17]
-      %! BREAK
     \baca-lbsd #214 #'(16)
-      %! BREAK
     \break
     s1 * 10/4
 
     % [Breaks measure 18]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 19]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 20]
-      %! BREAK
     \baca-lbsd #250 #'(16)
-      %! BREAK
     \break
     s1 * 4/4
 
     % [Breaks measure 21]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 22]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 23]
-      %! BREAK
     \noBreak
     s1 * 7/8
 
     % [Breaks measure 24]
-      %! BREAK
     \baca-lbsd #10 #'(16)
-      %! BREAK
     \pageBreak
     s1 * 4/4
 
     % [Breaks measure 25]
-      %! BREAK
     \noBreak
     s1 * 6/4
 
     % [Breaks measure 26]
-      %! BREAK
     \noBreak
     s1 * 6/4
 
     % [Breaks measure 27]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 28]
-      %! BREAK
     \baca-lbsd #49 #'(16)
-      %! BREAK
     \break
     s1 * 5/4
 
     % [Breaks measure 29]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 30]
-      %! BREAK
     \noBreak
     s1 * 3/8
 
     % [Breaks measure 31]
-      %! BREAK
     \baca-lbsd #88 #'(16)
-      %! BREAK
     \break
     s1 * 8/4
 
     % [Breaks measure 32]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 33]
-      %! BREAK
     \noBreak
     s1 * 4/8
 
     % [Breaks measure 34]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 35]
-      %! BREAK
     \noBreak
     s1 * 8/4
 
     % [Breaks measure 36]
-      %! BREAK
     \baca-lbsd #127 #'(16)
-      %! BREAK
     \break
     s1 * 3/4
 
     % [Breaks measure 37]
-      %! BREAK
     \noBreak
     s1 * 3/4
 
     % [Breaks measure 38]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 39]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 40]
-      %! BREAK
     \baca-lbsd #166 #'(16)
-      %! BREAK
     \break
     s1 * 6/4
 
     % [Breaks measure 41]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 42]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 43]
-      %! BREAK
     \baca-lbsd #205 #'(16)
-      %! BREAK
     \break
     s1 * 7/4
 
     % [Breaks measure 44]
-      %! BREAK
     \noBreak
     s1 * 7/4
 
     % [Breaks measure 45]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 46]
-      %! BREAK
     \baca-lbsd #244 #'(16)
-      %! BREAK
     \break
     s1 * 5/8
 
     % [Breaks measure 47]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 48]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 49]
-      %! BREAK
     \baca-lbsd #10 #'(16)
-      %! BREAK
     \pageBreak
     s1 * 6/8
 
     % [Breaks measure 50]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 51]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 52]
-      %! BREAK
     \noBreak
     s1 * 3/4
 
     % [Breaks measure 53]
-      %! BREAK
     \baca-lbsd #49 #'(16)
-      %! BREAK
     \break
     s1 * 3/4
 
     % [Breaks measure 54]
-      %! BREAK
     \noBreak
     s1 * 2/4
 
     % [Breaks measure 55]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 56]
-      %! BREAK
     \noBreak
     s1 * 6/4
 
     % [Breaks measure 57]
-      %! BREAK
     \baca-lbsd #88 #'(16)
-      %! BREAK
     \break
     s1 * 4/4
 
     % [Breaks measure 58]
-      %! BREAK
     \noBreak
     s1 * 9/4
 
     % [Breaks measure 59]
-      %! BREAK
     \noBreak
     s1 * 10/4
 
     % [Breaks measure 60]
-      %! BREAK
     \baca-lbsd #127 #'(16)
-      %! BREAK
     \break
     s1 * 8/4
 
     % [Breaks measure 61]
-      %! BREAK
     \noBreak
     s1 * 8/4
 
     % [Breaks measure 62]
-      %! BREAK
     \baca-lbsd #166 #'(16)
-      %! BREAK
     \break
     s1 * 5/4
 
     % [Breaks measure 63]
-      %! BREAK
     \noBreak
     s1 * 8/4
 
     % [Breaks measure 64]
-      %! BREAK
     \noBreak
     s1 * 10/4
 
     % [Breaks measure 65]
-      %! BREAK
     \baca-lbsd #205 #'(16)
-      %! BREAK
     \break
     s1 * 5/8
 
     % [Breaks measure 66]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 67]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 68]
-      %! BREAK
     \baca-lbsd #244 #'(16)
-      %! BREAK
     \break
     s1 * 7/4
 
     % [Breaks measure 69]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 70]
-      %! BREAK
     \noBreak
     s1 * 4/8
 
     % [Breaks measure 71]
-      %! BREAK
     \baca-lbsd #10 #'(16)
-      %! BREAK
     \pageBreak
     s1 * 3/4
 
     % [Breaks measure 72]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 73]
-      %! BREAK
     \noBreak
     s1 * 4/8
 
     % [Breaks measure 74]
-      %! BREAK
     \baca-lbsd #49 #'(16)
-      %! BREAK
     \break
     s1 * 4/4
 
     % [Breaks measure 75]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 76]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 77]
-      %! BREAK
     \baca-lbsd #88 #'(16)
-      %! BREAK
     \break
     s1 * 5/4
 
     % [Breaks measure 78]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 79]
-      %! BREAK
     \noBreak
     s1 * 6/4
 
     % [Breaks measure 80]
-      %! BREAK
     \baca-lbsd #127 #'(16)
-      %! BREAK
     \break
     s1 * 3/4
 
     % [Breaks measure 81]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 82]
-      %! BREAK
     \noBreak
     s1 * 4/8
 
     % [Breaks measure 83]
-      %! BREAK
     \noBreak
     s1 * 6/4
 
     % [Breaks measure 84]
-      %! BREAK
     \baca-lbsd #166 #'(16)
-      %! BREAK
     \break
     s1 * 3/8
 
     % [Breaks measure 85]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 86]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 87]
-      %! BREAK
     \noBreak
     s1 * 11/4
 
     % [Breaks measure 88]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 89]
-      %! BREAK
     \baca-lbsd #205 #'(16)
-      %! BREAK
     \break
     s1 * 4/4
 
     % [Breaks measure 90]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 91]
-      %! BREAK
     \noBreak
     s1 * 3/8
 
     % [Breaks measure 92]
-      %! BREAK
     \baca-lbsd #244 #'(16)
-      %! BREAK
     \break
     s1 * 3/8
 
     % [Breaks measure 93]
-      %! BREAK
     \noBreak
     s1 * 3/8
 
     % [Breaks measure 94]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 95]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 96]
-      %! BREAK
     \baca-lbsd #10 #'(16)
-      %! BREAK
     \pageBreak
     s1 * 6/4
 
     % [Breaks measure 97]
-      %! BREAK
     \noBreak
     s1 * 3/8
 
     % [Breaks measure 98]
-      %! BREAK
     \noBreak
     s1 * 5/8
 
     % [Breaks measure 99]
-      %! BREAK
     \noBreak
     s1 * 7/4
 
     % [Breaks measure 100]
-      %! BREAK
     \baca-lbsd #49 #'(16)
-      %! BREAK
     \break
     s1 * 10/4
 
     % [Breaks measure 101]
-      %! BREAK
     \noBreak
     s1 * 11/4
 
     % [Breaks measure 102]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 103]
-      %! BREAK
     \baca-lbsd #88 #'(16)
-      %! BREAK
     \break
     s1 * 9/4
 
     % [Breaks measure 104]
-      %! BREAK
     \noBreak
     s1 * 9/4
 
     % [Breaks measure 105]
-      %! BREAK
     \baca-lbsd #127 #'(16)
-      %! BREAK
     \break
     s1 * 5/8
 
     % [Breaks measure 106]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 107]
-      %! BREAK
     \noBreak
     s1 * 4/4
 
     % [Breaks measure 108]
-      %! BREAK
     \noBreak
     s1 * 5/4
 
     % [Breaks measure 109]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 110]
-      %! BREAK
     \baca-lbsd #166 #'(16)
-      %! BREAK
     \break
     s1 * 6/8
 
     % [Breaks measure 111]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
     % [Breaks measure 112]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 113]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 114]
-      %! BREAK
     \noBreak
     s1 * 7/8
 
     % [Breaks measure 115]
-      %! BREAK
     \noBreak
     s1 * 6/8
 
     % [Breaks measure 116]
-      %! BREAK
     \noBreak
     s1 * 1/4
 
