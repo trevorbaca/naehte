@@ -176,12 +176,8 @@
     \override StemTremolo.beam-width = 1.5
     \override StemTremolo.flag-count = 4
     \override StemTremolo.slope = 0.5
-    \override TextScript.font-name = #"Palatino"
-    % DISCOVERY: overriding TextScript.X-extent = ##f
-    %      makes LilyPond ignore self-alignment-X tweaks;
-    %      probably should never be done at stylesheet level.
-    % NOTE:    may be best to override NO text script properties.
     \override TextSpanner.to-barline = ##t
+    \override TrillPitchAccidental.avoid-slur = #'ignore
     \override TupletBracket.full-length-to-extent = ##f
     \override TupletNumber.font-size = 1
     \override TupletNumber.text = #tuplet-number::calc-fraction-text
