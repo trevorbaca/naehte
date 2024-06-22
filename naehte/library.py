@@ -23,7 +23,7 @@ def br(argument):
 
 def make_empty_score():
     tag = baca.helpers.function_name(inspect.currentframe())
-    global_context = baca.score.make_global_context()
+    global_context = baca.score.make_global_context(make_time_signatures_context=True)
     cello_music_voice = abjad.Voice(name="Cello.Music", tag=tag)
     cello_music_staff = abjad.Staff([cello_music_voice], name="Cello.Staff", tag=tag)
     music_context = abjad.Context(
