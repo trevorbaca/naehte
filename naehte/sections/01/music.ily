@@ -4,6 +4,8 @@ number.1.Skips = {
 
     % [Skips measure 1]
     \override TextSpanner.staff-padding = 10
+      %! EXPLICIT_METRONOME_MARK
+    \tempo 4=117
     s1 * 7/8
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-invisible-line
