@@ -1,6 +1,7 @@
 \version "2.25.24"
 
-number.6.Skips = {
+number.6.Skips =
+{
 
     % [Skips measure 1]
       %! RED_START_BAR
@@ -416,7 +417,8 @@ number.6.Skips = {
 }
 
 
-number.6.TimeSignatures = {
+number.6.TimeSignatures =
+{
 
     % [TimeSignatures measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
@@ -518,7 +520,8 @@ number.6.TimeSignatures = {
 }
 
 
-number.6.Rests = {
+number.6.Rests =
+{
 
     % [Rests measure 1]
     R1 * 4/4
@@ -574,7 +577,8 @@ number.6.Rests = {
 }
 
 
-number.6.Cello.Music = {
+number.6.Cello.Music =
+{
 
     % [Cello.Music measure 1]
       %! REAPPLIED_CLEF
@@ -1588,12 +1592,17 @@ number.6.Cello.Music = {
 }
 
 
-number.6.Cello.Staff = <<
+number.6.Cello.Staff =
+<<
 
     \context GlobalRests = "Rests"
-    { \number.6.Rests }
+    {
+        \number.6.Rests
+    }
 
     \context Voice = "Cello.Music"
-    { \number.6.Cello.Music }
+    {
+        \number.6.Cello.Music
+    }
 
 >>

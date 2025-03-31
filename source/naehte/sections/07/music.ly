@@ -18,10 +18,14 @@
             <<
 
                 \context GlobalSkips = "Skips"
-                { \number.7.Skips }
+                {
+                    \number.7.Skips
+                }
 
                 \context GlobalSkips = "TimeSignatures"
-                { \number.7.TimeSignatures }
+                {
+                    \number.7.TimeSignatures
+                }
 
             >>
 
@@ -29,7 +33,9 @@
             {
 
                 \context Staff = "Cello.Staff"
-                { \number.7.Cello.Staff }
+                {
+                    \number.7.Cello.Staff
+                }
 
             }
 
