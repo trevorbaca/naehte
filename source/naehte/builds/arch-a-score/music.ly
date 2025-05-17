@@ -1,6 +1,6 @@
 % Nähte (2018) for cello
 
-\version "2.25.25"
+\version "2.25.26"
 
 \include "stylesheet.ily"
 \include "layout.ily"
