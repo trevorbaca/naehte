@@ -59,7 +59,7 @@ def VC(voice, time_signatures):
     rhythm(voice, [8, 2])
     rhythm(voice, [8])
     rhythm(voice, T([12, T([2, 2, 2], -2)], -4))
-    music = baca.make_mmrests(time_signatures(11), head=voice.name)
+    music = baca.make_mmrests(time_signatures(11), head=voice.get_name())
     voice.extend(music)
     rhythm(voice, T([6, 2, 2], -2))
     baca.section.append_anchor_note(voice)

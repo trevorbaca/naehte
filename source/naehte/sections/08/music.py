@@ -54,14 +54,14 @@ def GLOBALS(skips, rests):
 
 def VC(voice, time_signatures):
     rhythm(voice, [16, 16, 4, 16, 16, 4, 8, 2])
-    music = baca.make_mmrests(time_signatures(4), head=voice.name)
+    music = baca.make_mmrests(time_signatures(4), head=voice.get_name())
     voice.extend(music)
     rhythm(voice, [4, T([4, 4, T([4, 4, 4], -4)], -4)])
     rhythm(voice, [16, 4, T([12, 2], -2), T([12, 2], -2)])
-    music = baca.make_mmrests(time_signatures(9), head=voice.name)
+    music = baca.make_mmrests(time_signatures(9), head=voice.get_name())
     voice.extend(music)
     rhythm(voice, [12, 12, 14, 12])
-    music = baca.make_mmrests(time_signatures(14), head=voice.name)
+    music = baca.make_mmrests(time_signatures(14), head=voice.get_name())
     voice.extend(music)
 
 
