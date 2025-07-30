@@ -70,7 +70,7 @@ def VC(voice, time_signatures):
     rmakers.beam([components])
     rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
     rhythm(voice, T([12, T([2, 2, 2], -2)], -4))
-    music = baca.make_mmrests(time_signatures(8), head=voice.get_name())
+    music = baca.make_mmrests(time_signatures(8), head=voice.name())
     voice.extend(music)
     rhythm(voice, T([6, rt(2), rt(2)], -2))
     rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
@@ -78,10 +78,10 @@ def VC(voice, time_signatures):
     leaf = abjad.select.leaf(components, -1)
     baca.override.repeat_tie_extra_offset(leaf, (-1.5, 0))
     rhythm(voice, [4, 6])
-    music = baca.make_mmrests(time_signatures(13), head=voice.get_name())
+    music = baca.make_mmrests(time_signatures(13), head=voice.name())
     voice.extend(music)
     rhythm(voice, 11 * [4])
-    music = baca.make_mmrests(time_signatures(15), head=voice.get_name())
+    music = baca.make_mmrests(time_signatures(15), head=voice.name())
     voice.extend(music)
 
 

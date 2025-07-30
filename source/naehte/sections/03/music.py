@@ -77,7 +77,7 @@ def VC(voice, time_signatures):
     rhythm(voice, [4, 4, 4, 4, 8])
     rhythm(voice, T([4, 2, 2, 4, 1, 1, 1, 1, 4, 2, 2, 8], -4))
     rhythm(voice, T([4, 2, 2, 4, 1, 1, 1, 1, 4, 2, 2, 8], -4))
-    music = baca.make_mmrests(time_signatures(18), head=voice.get_name())
+    music = baca.make_mmrests(time_signatures(18), head=voice.name())
     voice.extend(music)
 
 
