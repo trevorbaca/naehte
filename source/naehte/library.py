@@ -56,7 +56,7 @@ def rhythm(voice, items, denominator=16):
         tag=tag,
     )
     rmakers.beam(voice_, do_not_unbeam=True)
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
