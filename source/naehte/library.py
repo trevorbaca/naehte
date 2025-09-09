@@ -56,7 +56,7 @@ def rhythm(voice, items, denominator=16):
         tag=tag,
     )
     rmakers.beam(voice_, do_not_unbeam=True)
-    rmakers.force_repeat_tie(voice_, threshold=abjad.ValueDuration(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice_, threshold=abjad.Duration(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
@@ -70,10 +70,10 @@ instruments = {"Cello": abjad.Cello(pitch_range=abjad.PitchRange("[B1, +inf]"))}
 
 
 metronome_marks = {
-    "39": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 39),
-    "52": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 52),
-    "91": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 91),
-    "117": abjad.MetronomeMark(abjad.ValueDuration(1, 4), 117),
+    "39": abjad.MetronomeMark(abjad.Duration(1, 4), 39),
+    "52": abjad.MetronomeMark(abjad.Duration(1, 4), 52),
+    "91": abjad.MetronomeMark(abjad.Duration(1, 4), 91),
+    "117": abjad.MetronomeMark(abjad.Duration(1, 4), 117),
 }
 
 
