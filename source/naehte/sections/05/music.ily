@@ -843,7 +843,6 @@ number.5.Cello.Music =
     \stopTextSpan
       %! SPANNER_STOP
     \stopTextSpanOne
-    [
     - \abjad-zero-padding-glissando
     \glissando
       %! SPANNER_START
@@ -872,7 +871,6 @@ number.5.Cello.Music =
     \glissando
 
     e32
-    ]
     - \abjad-zero-padding-glissando
     \glissando
 
