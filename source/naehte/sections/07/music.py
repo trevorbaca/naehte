@@ -61,7 +61,7 @@ def VC(voice, time_signatures):
     baca.override.repeat_tie_extra_offset(leaf, (-1.5, 0))
     components = rhythm(voice, [2, 2, 2, 2, T([2, 2, 2, 2, 2], -2)])
     leaves = abjad.select.leaves(components)
-    rmakers.beam([leaves])
+    rmakers.beam_runs([leaves])
     rhythm(voice, T([T([4, 4, 4, 4, 4], -4), 4, 4, 4], -4))
     components = rhythm(voice, [4, rt(2)])
     baca.override.repeat_tie_extra_offset(components[-1], (-1.5, 0))
