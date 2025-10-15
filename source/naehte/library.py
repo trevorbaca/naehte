@@ -59,7 +59,9 @@ def rhythm(voice, items, denominator=16):
         leaves = abjad.select.leaves(item)
         rmakers.beam_runs([leaves])
     leaves = abjad.select.leaves(voice_)
-    rmakers.force_repeat_tie(leaves, threshold=abjad.Duration(1, 8), tag=tag)
+    rmakers.replace_ties_with_repeat_ties(
+        leaves, threshold=abjad.Duration(1, 8), tag=tag
+    )
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
